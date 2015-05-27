@@ -535,14 +535,6 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">commissions</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">A relation between two entities where the first entity formally requests a third party to create or execute the second entity.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">a commissions b, iff a does not participate in the creation or execution of b and participates in a legal agreement that c participates on the creation or execution of b and c getting something in exchange for that participation.</obo:IAO_0000115>
-        <rdfs:domain>
-            <Class>
-                <unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
-                    <rdf:Description rdf:about="&obo;OBI_0000245"/>
-                </unionOf>
-            </Class>
-        </rdfs:domain>
         <rdfs:range>
             <Class>
                 <unionOf rdf:parseType="Collection">
@@ -552,6 +544,14 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
                 </unionOf>
             </Class>
         </rdfs:range>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
+                    <rdf:Description rdf:about="&obo;OBI_0000245"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
     </ObjectProperty>
     
 
@@ -1161,21 +1161,21 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
         <oboInOwl:hasRelatedSynonym>
             <rdf:Description/>
         </oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>
             <rdf:Description/>
         </oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
     </ObjectProperty>
     
 
@@ -8388,6 +8388,144 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     
 
 
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000382 -->
+
+    <Class rdf:about="&obo;APOLLO_SV_00000382">
+        <rdfs:label xml:lang="en">specificity of treatment detection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;STATO_0000134"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">specificityOfTreatmentDetection</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000115 xml:lang="en">The specificity of a system that classifies organisms into the binary categories of having received a particular treatment and not having received a particular treatment.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">The specificity of the process or system that detects organisms that have undergone a particular treatment.</obo:IAO_0000600>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000383 -->
+
+    <Class rdf:about="&obo;APOLLO_SV_00000383">
+        <rdfs:label xml:lang="en">sensitivity of treatment detection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;STATO_0000233"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">sensitivityOfTreatmentDetection</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000115 xml:lang="en">The sensitivity of a system that classifies organisms into the binary categories of having received a particular treatment and not having received a particular treatment.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">The sensitivity of the process or system that detects organisms that have undergone a particular treatment.</obo:IAO_0000600>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000384 -->
+
+    <Class rdf:about="&obo;APOLLO_SV_00000384">
+        <rdfs:label xml:lang="en">fixed duration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000243"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">FixedDuration</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000115 xml:lang="en">A duration that is specified as a single number.</obo:IAO_0000115>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000385 -->
+
+    <Class rdf:about="&obo;APOLLO_SV_00000385">
+        <rdfs:label xml:lang="en">real time span category definition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000242"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">RealTimeSpanCategoryDefinition</apollo_sv:APOLLO_SV_0000040>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000386 -->
+
+    <Class rdf:about="&obo;APOLLO_SV_00000386">
+        <rdfs:label xml:lang="en">real date span category definition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000242"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">RealDateSpanCategoryDefinition</apollo_sv:APOLLO_SV_0000040>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000387 -->
+
+    <Class rdf:about="&obo;APOLLO_SV_00000387">
+        <rdfs:label xml:lang="en">census objective specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000005"/>
+        <obo:IAO_0000115 xml:lang="en">An objective specification to observe all the organisms of a particular taxon in a particular geographical region or place and create a data set about them.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000388 -->
+
+    <Class rdf:about="&obo;APOLLO_SV_00000388">
+        <rdfs:label xml:lang="en">census plan specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000104"/>
+        <obo:IAO_0000115 xml:lang="en">A plan specification with a census objective specification.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000389 -->
+
+    <Class rdf:about="&obo;APOLLO_SV_00000389">
+        <rdfs:label xml:lang="en">census taking</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
+        <obo:IAO_0000115 xml:lang="en">A planned process that realizes a census plan specification.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000390 -->
+
+    <Class rdf:about="&obo;APOLLO_SV_00000390">
+        <rdfs:label xml:lang="en">Wolbachia vector control strategy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000308"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">WolbachiaControlStrategy</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000115 xml:lang="en">A vector control strategy that is realized by releasing individuals of the vector population infected with bacteria of the taxon Wolbachia to inhibit reproduction of individuals in the vector population.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000391 -->
+
+    <Class rdf:about="&obo;APOLLO_SV_00000391">
+        <rdfs:label xml:lang="en">indoor residual spraying vector control strategy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000308"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">IndoorResidualSprayingVectorControlStrategy</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000115 xml:lang="en">A vector control strategy that is realized by spraying chemicals in a place to kill individuals of the vector population.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000392 -->
+
+    <Class rdf:about="&obo;APOLLO_SV_00000392">
+        <rdfs:label xml:lang="en">container reduction vector control strategy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000308"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">ContainerReductionControlStrategy</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000115 xml:lang="en">A vector control strategy for mosquitoes that is realized by reducing the number of water-containing vessels in which mosquitoes can lay eggs.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000393 -->
+
+    <Class rdf:about="&obo;APOLLO_SV_00000393">
+        <rdfs:label xml:lang="en">treatment system logistics</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">TreatmentSystemLogistics</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000115 xml:lang="en">Information about how many doses or courses of treatment, per a particular unit of time (typically one day), can be supplied for a given geographical region and/or how many of those doses or courses can subsequently be administered.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+    </Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00001008 -->
 
     <Class rdf:about="&obo;APOLLO_SV_00001008">
@@ -11657,6 +11795,8 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <rdfs:label xml:lang="en">specificity of treatment detection</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;STATO_0000134"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">specificityOfTreatmentDetection</apollo_sv:APOLLO_SV_0000040>
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <rdfs:comment xml:lang="en">Deprecated due to malformed URI and created anew.</rdfs:comment>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">the specificity of a system that classifies organisms into the binary categories of having received a particular treatment and not having received a particular treatment</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">the specificity of the process or system that detects organisms that have undergone a particular treatment</obo:IAO_0000600>
@@ -11670,40 +11810,11 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <rdfs:label xml:lang="en">sensitivity of treatment detection</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;STATO_0000233"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">sensitivityOfTreatmentDetection</apollo_sv:APOLLO_SV_0000040>
+        <deprecated rdf:datatype="&xsd;boolean">true</deprecated>
+        <rdfs:comment xml:lang="en">Deprecated due to malformed URI and created anew.</rdfs:comment>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">the sensitivity of a system that classifies organisms into the binary categories of having received a particular treatment and not having received a particular treatment</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">the sensitivity of the process or system that detects organisms that have undergone a particular treatment</obo:IAO_0000600>
-    </Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/apollo_sv/dev/apollo_sv.owl/fixed_duration -->
-
-    <Class rdf:about="&obo;apollo_sv/dev/apollo_sv.owl/fixed_duration">
-        <rdfs:label xml:lang="en">fixed duration</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000243"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">FixedDuration</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000115 xml:lang="en">A duration that is specified as a single number.</obo:IAO_0000115>
-    </Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/apollo_sv/dev/apollo_sv.owl/real_date_span_category_definition -->
-
-    <Class rdf:about="&obo;apollo_sv/dev/apollo_sv.owl/real_date_span_category_definition">
-        <rdfs:label xml:lang="en">real date span category definition</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000242"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">RealDateSpanCategoryDefinition</apollo_sv:APOLLO_SV_0000040>
-    </Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/apollo_sv/dev/apollo_sv.owl/real_time_span_category_definition -->
-
-    <Class rdf:about="&obo;apollo_sv/dev/apollo_sv.owl/real_time_span_category_definition">
-        <rdfs:label xml:lang="en">real time span category definition</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000242"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">RealTimeSpanCategoryDefinition</apollo_sv:APOLLO_SV_0000040>
     </Class>
     
 
@@ -11739,12 +11850,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasDbXref>
             <rdf:Description/>
         </oboInOwl:hasDbXref>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
     </Class>
     
 
@@ -11777,12 +11888,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasAlternativeId>GO:0016280</oboInOwl:hasAlternativeId>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_generic"/>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
@@ -11805,15 +11916,15 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDbXref>
             <rdf:Description/>
         </oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
@@ -11840,12 +11951,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="&GO;GO_0033057"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasBroadSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>
             <rdf:Description/>
         </oboInOwl:hasDbXref>
+        <oboInOwl:hasBroadSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>
             <rdf:Description/>
         </oboInOwl:hasBroadSynonym>
@@ -11863,12 +11974,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="&GO;GO_0007610"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
     </Class>
     
 
@@ -11900,12 +12011,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="&GO;GO_0019098"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
     </Class>
     
 
@@ -12009,12 +12120,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasOBONamespace>unit.ontology</oboInOwl:hasOBONamespace>
         <obo:IAO_0000115 xml:lang="en">A dimensionless ratio unit which denotes numbers as fractions of 100.</obo:IAO_0000115>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#unit_slim"/>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
     </Class>
     
 
@@ -12291,26 +12402,26 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&obo;IAO_0000225">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000105">
-        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000589">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000105">
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
+    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000220">
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000222">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000101">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000222">
+    <rdf:Description rdf:about="&obo;IAO_0000223">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
     <rdf:Description rdf:about="&dc;publisher">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000223">
-        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/obo/owl/PATO#PATO_0000125">
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/PATO"/>
@@ -12327,11 +12438,11 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&obo;IAO_0000185">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000065">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000186">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000065">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000180">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
@@ -12449,6 +12560,9 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&obo;IAO_0000330">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000573">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/obo/owl/PATO#PATO_0001025">
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#attribute_slim"/>
         <oboInOwl:hasDefinition>
@@ -12475,9 +12589,6 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000573">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000574">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
@@ -12634,14 +12745,11 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&obo;IAO_0000320">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000321">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000442">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000047">
-        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
+    <rdf:Description rdf:about="&obo;IAO_0000321">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000322">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
@@ -12651,6 +12759,9 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000443">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000047">
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;OBI_0000066">
         <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
@@ -12710,11 +12821,11 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&obo;IAO_0000307">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000429">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000308">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000429">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000301">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
@@ -12795,11 +12906,11 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&obo;IAO_0000024">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000025">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000300">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000025">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000140">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
@@ -12884,11 +12995,11 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&dc;rights">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000415">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000019">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000415">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000417">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
@@ -12896,20 +13007,20 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&obo;IAO_0000418">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;PATO_0000122">
-        <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/PATO"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000015">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;PATO_0000122">
+        <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/PATO"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000017">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000018">
-        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000226"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000414">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000018">
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000226"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000132">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
@@ -13039,21 +13150,21 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000006">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
+    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000402">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000006">
+    <rdf:Description rdf:about="&obo;IAO_0000403">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000128">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000121"/>
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000226"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000403">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;BFO_0000156">
         <rdfs:label xml:lang="en">has temporal occupant</rdfs:label>
@@ -13065,46 +13176,9 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <rdfs:label xml:lang="en">occupies temporal region</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="&ro;derives_from">
-        <oboInOwl:hasDefinition>
-            <rdf:Description>
-                <oboInOwl:hasDbXref>
-                    <rdf:Description/>
-                </oboInOwl:hasDbXref>
-            </rdf:Description>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description>
-                <oboInOwl:hasDbXref>
-                    <rdf:Description/>
-                </oboInOwl:hasDbXref>
-            </rdf:Description>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description>
-                <oboInOwl:hasDbXref>
-                    <rdf:Description/>
-                </oboInOwl:hasDbXref>
-            </rdf:Description>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description>
-                <oboInOwl:hasDbXref>
-                    <rdf:Description/>
-                </oboInOwl:hasDbXref>
-            </rdf:Description>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
@@ -13142,6 +13216,43 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
