@@ -25,6 +25,7 @@
     <Prefix name="bfo" IRI="http://www.ifomis.org/bfo/1.1#"/>
     <Prefix name="geo" IRI="http://purl.obolibrary.org/obo/geo.owl#"/>
     <Prefix name="obo" IRI="http://purl.obolibrary.org/obo/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="DOID" IRI="http://purl.org/obo/owl/DOID#"/>
@@ -38,7 +39,6 @@
     <Prefix name="NCBITaxon" IRI="http://purl.org/obo/owl/NCBITaxon#"/>
     <Prefix name="apollo_sv" IRI="http://purl.obolibrary.org/obo/apollo_sv.owl/"/>
     <Prefix name="apollo_sv2" IRI="http://purl.obolibrary.org/obo/apollo_sv.owl#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Import>http://purl.obolibrary.org/obo/geo/dev/geo.owl</Import>
     <Import>http://purl.obolibrary.org/obo/iao/pno.owl</Import>
     <Annotation>
@@ -1254,6 +1254,18 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="obo:APOLLO_SV_00000404"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:APOLLO_SV_00000405"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:APOLLO_SV_00000406"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:APOLLO_SV_00000407"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:APOLLO_SV_00000408"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="obo:APOLLO_SV_00001008"/>
@@ -3228,6 +3240,40 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class abbreviatedIRI="obo:APOLLO_SV_00000162"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="obo:IAO_0000030"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="obo:APOLLO_SV_00000097"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="obo:BFO_0000111"/>
+                        <ObjectIntersectionOf>
+                            <Class abbreviatedIRI="obo:APOLLO_SV_00000104"/>
+                            <ObjectSomeValuesFrom>
+                                <ObjectProperty abbreviatedIRI="obo:BFO_0000111"/>
+                                <Class abbreviatedIRI="obo:APOLLO_SV_00000154"/>
+                            </ObjectSomeValuesFrom>
+                            <ObjectSomeValuesFrom>
+                                <ObjectProperty abbreviatedIRI="obo:BFO_0000111"/>
+                                <Class abbreviatedIRI="obo:APOLLO_SV_00000156"/>
+                            </ObjectSomeValuesFrom>
+                            <ObjectSomeValuesFrom>
+                                <ObjectProperty abbreviatedIRI="obo:BFO_0000111"/>
+                                <Class abbreviatedIRI="obo:APOLLO_SV_00000234"/>
+                            </ObjectSomeValuesFrom>
+                            <ObjectSomeValuesFrom>
+                                <ObjectProperty abbreviatedIRI="obo:BFO_0000111"/>
+                                <Class abbreviatedIRI="obo:APOLLO_SV_00000235"/>
+                            </ObjectSomeValuesFrom>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class abbreviatedIRI="obo:APOLLO_SV_00000165"/>
         <ObjectIntersectionOf>
             <Class abbreviatedIRI="obo:APOLLO_SV_00000173"/>
@@ -3766,6 +3812,26 @@
                 <ObjectProperty abbreviatedIRI="obo:BFO_0000054"/>
                 <Class abbreviatedIRI="obo:APOLLO_SV_00000114"/>
             </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="obo:APOLLO_SV_00000406"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="snap:Role"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="obo:BFO_0000054"/>
+                <Class abbreviatedIRI="obo:APOLLO_SV_00000405"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="obo:APOLLO_SV_00000407"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="obo:OBI_0100026"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="obo:BFO_0000053"/>
+                <Class abbreviatedIRI="obo:APOLLO_SV_00000406"/>
+            </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -4874,23 +4940,6 @@
         <Class abbreviatedIRI="obo:IAO_0000030"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="obo:APOLLO_SV_00000162"/>
-        <ObjectIntersectionOf>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-                <Class abbreviatedIRI="obo:APOLLO_SV_00000161"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty abbreviatedIRI="ro:has_part"/>
-                <Class abbreviatedIRI="obo:APOLLO_SV_00000157"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty abbreviatedIRI="ro:has_part"/>
-                <Class abbreviatedIRI="obo:APOLLO_SV_00000165"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="obo:APOLLO_SV_00000163"/>
         <Class abbreviatedIRI="obo:PCO_0000001"/>
     </SubClassOf>
@@ -5989,6 +6038,44 @@
     <SubClassOf>
         <Class abbreviatedIRI="obo:APOLLO_SV_00000404"/>
         <Class abbreviatedIRI="snap:Disposition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:APOLLO_SV_00000405"/>
+        <Class abbreviatedIRI="GO:GO_0008150"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:APOLLO_SV_00000405"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="GO:GO_0008150"/>
+            <ObjectUnionOf>
+                <ObjectIntersectionOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="obo:BFO_0000057"/>
+                        <Class abbreviatedIRI="obo:APOLLO_SV_00000166"/>
+                    </ObjectSomeValuesFrom>
+                    <ObjectExactCardinality cardinality="1">
+                        <ObjectProperty abbreviatedIRI="obo:BFO_0000057"/>
+                        <Class abbreviatedIRI="obo:OBI_0100026"/>
+                    </ObjectExactCardinality>
+                </ObjectIntersectionOf>
+                <ObjectExactCardinality cardinality="2">
+                    <ObjectProperty abbreviatedIRI="obo:BFO_0000057"/>
+                    <Class abbreviatedIRI="obo:OBI_0100026"/>
+                </ObjectExactCardinality>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:APOLLO_SV_00000406"/>
+        <Class abbreviatedIRI="snap:Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:APOLLO_SV_00000407"/>
+        <Class abbreviatedIRI="obo:OBI_0100026"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:APOLLO_SV_00000408"/>
+        <Class abbreviatedIRI="obo:IAO_0000030"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:APOLLO_SV_00001008"/>
@@ -10595,6 +10682,11 @@ I checked because an infection and immunity census would involve two different c
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">MIDAS scenario</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000161</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
         <AbbreviatedIRI>obo:APOLLO_SV_00000162</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An information content entity that is about a MIDAS scenario and contains population disease census data.</Literal>
@@ -10603,6 +10695,11 @@ I checked because an infection and immunity census would involve two different c
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
         <AbbreviatedIRI>obo:APOLLO_SV_00000162</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Mathias Brochhausen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000162</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">need to change the text definition.  need to change label to be more consistent with current Apollo terminology (possibly &apos;infectious disease scenario&apos;.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -15406,6 +15503,116 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</Literal>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">infectiousness</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000405</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">potentially infectious contact process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000405</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A biological process that brings the organism into sufficiently close physical proximity to a pathogen population, either in or on a contaminated thing or an infectious host, such that the organism is likely but not certain to acquire an infection with the pathogen.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000405</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">William R. Hogan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000118"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000405</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">potentially infectious contact</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000405</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">potentially infectious contacting</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000406</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">potentially infectous contact role</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000406</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A role borne by an organism that is realized in a potentially infectious contact process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000406</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">William R. Hogan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000118"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000406</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">contact role</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000118"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000406</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">infectious contact role</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000406</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The organism bearing this role is the organism at risk for acquiring an infection when the role is realized.  Also, this role differentiates participants in a process when there are two organisms participating, so it only begins to exist during its realization, justifying its existential restriction.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000406</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">potentially infectious contact role</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000407</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">potentially infectious contact organism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000407</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An organism that is the bearer of a potentially infectious contact role during a potentially infectious contact process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000407</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">William R. Hogan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000600"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000407</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An organism that has been exposed to a pathogen by coming into close physical proximity with either an infectious host or a contaminated thing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000407</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">contacted organism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000408</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">potentially infectious contact definition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000408</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An information content entity that specifies which kinds of processes involving an interaction between a given organism and either (1) another, potentially infectious organism or (2) a contaminated environment have a sufficiently high probability of resultling in an infection acquisition by the organism to be of interest to an outbreak investigation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000408</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">William R. Hogan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="apollo_sv:APOLLO_SV_0000040"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000408</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">ContactDefinition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:APOLLO_SV_00000408</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">contact definition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:APOLLO_SV_00001008</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">TODO</Literal>
@@ -20145,6 +20352,11 @@ See vaccination and antiviral treatment.
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000412"/>
         <AbbreviatedIRI>obo:OGMS_0000092</AbbreviatedIRI>
         <Literal datatypeIRI="&xsd;string">http://purl.obolibrary.org/obo/ogms.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="apollo_sv:APOLLO_SV_0000040"/>
+        <AbbreviatedIRI>obo:OGMS_0000092</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">IndividualLifeCycle</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
