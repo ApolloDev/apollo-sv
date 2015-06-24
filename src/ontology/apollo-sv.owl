@@ -58,6 +58,10 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Mike Wagner</Literal>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">v3.0</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:contributor"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">William R. Hogan</Literal>
     </Annotation>
@@ -80,10 +84,6 @@
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:contributor"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">Amanda Hicks</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">(development) see svn repository for details</Literal>
     </Annotation>
     <Declaration>
         <Class IRI="http://purl.obolibrary.obo/obo/NCBITaxon_7160"/>
