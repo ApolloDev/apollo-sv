@@ -55,6 +55,7 @@
         <dc:contributor>Amanda Hicks</dc:contributor>
         <dc:contributor>William R. Hogan</dc:contributor>
         <dc:contributor>Mike Wagner</dc:contributor>
+        <dc:contributor>Matt Diller</dc:contributor>
         <dc:contributor>Josh Hanna</dc:contributor>
         <dc:contributor>John Levander</dc:contributor>
         <dc:contributor>Shawn T. Brown</dc:contributor>
@@ -1164,21 +1165,21 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
         <oboInOwl:hasOBONamespace>relationship</oboInOwl:hasOBONamespace>
         <oboInOwl:hasAlternativeId>OBO_REL:realized_as</oboInOwl:hasAlternativeId>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>
             <rdf:Description/>
         </oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>
             <rdf:Description/>
         </oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
@@ -9074,13 +9075,13 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="&ro;has_part"/>
-                <someValuesFrom rdf:resource="&obo;IAO_0000007"/>
+                <someValuesFrom rdf:resource="&obo;IAO_0000005"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="&ro;has_part"/>
-                <someValuesFrom rdf:resource="&obo;IAO_0000005"/>
+                <someValuesFrom rdf:resource="&obo;IAO_0000007"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">2/3/2009 Comment from OBI review.
@@ -12199,12 +12200,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDbXref>
             <rdf:Description/>
         </oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
     </Class>
     
 
@@ -12237,15 +12238,15 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasAlternativeId>GO:0016280</oboInOwl:hasAlternativeId>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_generic"/>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDbXref>
             <rdf:Description/>
         </oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
     </Class>
     
 
@@ -12265,15 +12266,15 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDbXref>
             <rdf:Description/>
         </oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
@@ -12303,15 +12304,15 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasBroadSynonym>
             <rdf:Description/>
         </oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
         <oboInOwl:hasBroadSynonym>
             <rdf:Description/>
         </oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
     </Class>
     
 
@@ -12343,12 +12344,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_aspergillus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_pir"/>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gosubset_prok"/>
-        <oboInOwl:hasNarrowSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasNarrowSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasNarrowSynonym>
     </Class>
     
 
@@ -12360,12 +12361,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="&GO;GO_0019098"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
     </Class>
     
 
@@ -12469,12 +12470,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasOBONamespace>unit.ontology</oboInOwl:hasOBONamespace>
         <obo:IAO_0000115 xml:lang="en">A dimensionless ratio unit which denotes numbers as fractions of 100.</obo:IAO_0000115>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#unit_slim"/>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
     </Class>
     
 
@@ -13831,18 +13832,6 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
@@ -13855,9 +13844,9 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
             <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
@@ -13870,6 +13859,18 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
