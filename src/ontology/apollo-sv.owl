@@ -43,7 +43,7 @@
         <owl:imports rdf:resource="&obo;iao.owl"/>
         <owl:imports rdf:resource="&obo;bfo/2014-05-03/classes-only.owl"/>
         <owl:imports rdf:resource="&obo;geo/bfo2/geo.owl"/>
-        <owl:imports rdf:resource="&obo;iao/pno/bfo2/pno..owl"/>
+        <owl:imports rdf:resource="&obo;iao/pno/bfo2/pno.owl"/>
         <owl:imports rdf:resource="&obo;ro/releases/2015-02-11/core.owl"/>
     </owl:Ontology>
     
