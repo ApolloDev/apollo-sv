@@ -1505,7 +1505,6 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     <owl:Class rdf:about="&obo;APOLLO_SV_00000001">
         <rdfs:label xml:lang="en">epidemic model</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000174"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">epidemic model</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000117>William Hogan and Michael Wagner</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A disease transmission model whose concretization is realized as a simulation of infectious disease epidemic or infectious disease pandemic.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An algorithm the concretizations of which models the transmission of transmissible disease.</obo:IAO_0000600>
@@ -1728,7 +1727,6 @@ Please consider this advise to hold for all usages of the term &quot;concept&quo
                 <owl:someValuesFrom rdf:resource="&obo;APOLLO_SV_00000054"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">simulatorIdentification</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">An identifier that refers to all version of a specific simulator.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An identifier that refers to all versions of a specific simulator, such as “FRED”.  We intend that it uniquely identify a simulator when combined with simulator developer.  For example, the combination www.psc.edu/FRED would differentiate the FRED simulator created by a Pittsburgh organization from another “FRED” simulator maintained elsewhere. The implementation of namespace control for simulator name (i.e., making sure that they don’t use “FRED” twice) is the responsibility of simulator developer.</obo:IAO_0000600>
     </owl:Class>
@@ -2583,7 +2581,6 @@ MB: This issue will need to be taken care of in the axiomatization of simulated 
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">complete simulator identifier</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An identifier that refers to a specific simulator.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">MB: I am not 100% happy with the elucidation. Can&apos;t we just say that this is the full identifier identifying the simulator with both its name and its version number?</rdfs:comment>
@@ -3587,7 +3584,6 @@ The concept derives from the epidemiological notion of ‘herd immunity,’ whic
                 <owl:someValuesFrom rdf:resource="&obo;APOLLO_SV_00000054"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">SoftwareIdentification</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">An identifier that refers to all version of a specific software.</obo:IAO_0000115>
     </owl:Class>
     
@@ -3652,7 +3648,6 @@ The concept derives from the epidemiological notion of ‘herd immunity,’ whic
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">school closure target facilities</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">An information content entity about educational institutions that is part of the action sepcification of a school closure control measure.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">The specification of which facilities to target in a school closure control measure.</obo:IAO_0000600>
     </owl:Class>
@@ -3835,7 +3830,6 @@ An infection is acquired from an infectious organism or a contaminated thing.
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0000033"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">vaccination ID</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115>a unique identifier that refers to a protocol for vaccinating one person</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A unique identifier for a vaccination protocol (the process of vaccinating one person)</obo:IAO_0000600>
     </owl:Class>
@@ -3910,7 +3904,6 @@ An infection is acquired from an infectious organism or a contaminated thing.
     <owl:Class rdf:about="&obo;APOLLO_SV_00000125">
         <rdfs:label xml:lang="en">school calendar</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">school calendar</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">The time steps that a school will be in session.</obo:IAO_0000600>
     </owl:Class>
     
@@ -5856,7 +5849,7 @@ Note that the infected and sucseptible organisms may be of different species.</o
     <owl:Class rdf:about="&obo;APOLLO_SV_00000214">
         <rdfs:label xml:lang="en">vaccination efficacy for simulator configuration</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">vaccination efficacy for simulator configuration</apollo_sv:APOLLO_SV_0000040>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">VaccinationEfficacyForSimulatorConfiguration</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">An information content entity that specifies the vaccination efficacy that is part of a simulator configuration.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
@@ -5880,7 +5873,6 @@ Note that the infected and sucseptible organisms may be of different species.</o
     <owl:Class rdf:about="&obo;APOLLO_SV_00000216">
         <rdfs:label xml:lang="en">discrete probability distribution</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000215"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">discrete probability distribution</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">a probability distribution over a discrete random variable</obo:IAO_0000115>
     </owl:Class>
     
@@ -6343,7 +6335,6 @@ can&apos;t recall whether we should use process or processual_entity for future 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000244">
         <rdfs:label xml:lang="en">disease identifier</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">diseaseId</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">A unique identifier that refers to a particular type of disease.</obo:IAO_0000600>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
         <rdfs:comment xml:lang="en">We still need to decide which coding schema to adopt.-MB</rdfs:comment>
