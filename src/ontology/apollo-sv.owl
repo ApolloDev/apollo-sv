@@ -527,6 +527,14 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">commissions</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">A relation between two entities where the first entity formally requests a third party to create or execute the second entity.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">a commissions b, iff a does not participate in the creation or execution of b and participates in a legal agreement that c participates on the creation or execution of b and c getting something in exchange for that participation.</obo:IAO_0000115>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
+                    <rdf:Description rdf:about="&obo;OBI_0000245"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -536,14 +544,6 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
-                    <rdf:Description rdf:about="&obo;OBI_0000245"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1325,6 +1325,12 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
@@ -1334,12 +1340,6 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
         <oboInOwl:hasRelatedSynonym>
             <rdf:Description/>
         </oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
     </owl:ObjectProperty>
     
 
@@ -1870,7 +1870,6 @@ Note that the susceptible and infectious organisms can be of different species.<
             </owl:Restriction>
         </rdfs:subClassOf>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">latentPeriodDuration</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:comment xml:lang="en">MB: In order to get the temporal occupation relations I added properties that I renamed with BFO2 URIs</rdfs:comment>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A duration of the time interval between the host acquiring an infection and the host bearing a contagiousness disposition during the same disease course within a population of hosts.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A period during which an organism of a particular species, who is infected with a particular pathogen, is not yet able to infect susceptible organisms of a particular species.  
@@ -1878,6 +1877,7 @@ Note that the susceptible and infectious organisms can be of different species.<
 Note that the susceptible and infected organisms can be of different species.
 
 </obo:IAO_0000600>
+        <rdfs:comment xml:lang="en">MB: In order to get the temporal occupation relations I added properties that I renamed with BFO2 URIs</rdfs:comment>
         <rdfs:comment xml:lang="en">The duration of the period between when an organism becomes infected and when it becomes infectious.</rdfs:comment>
     </owl:Class>
     
@@ -3214,7 +3214,7 @@ simulation run length</rdfs:comment>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000104"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">InfectiousDiseaseControlStrategy</apollo_sv:APOLLO_SV_0000040>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">InfectiousDiseaseControlMeasure</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">A plan specification whose objective specification is an infectious disease control objective specification.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A plan with the goal of preventing or mitigating the effects of infections in a population due to one or more pathogens.</obo:IAO_0000600>
         <rdfs:comment xml:lang="en">The essential goal of an infectious disease control strategy is to protect the susceptible organisms in a population.</rdfs:comment>
@@ -3955,7 +3955,7 @@ An infection is acquired from an infectious organism or a contaminated thing.
     <owl:Class rdf:about="&obo;APOLLO_SV_00000127">
         <rdfs:label xml:lang="en">control strategy target populations and prioritization</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00001008"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">ControlStrategyTargetPopulationsAndPrioritization</apollo_sv:APOLLO_SV_0000040>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">ControlMeasureTargetPopulationsAndPrioritization</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">A simulated population that is the target of a control strategy and its priority under triage conditions</obo:IAO_0000600>
     </owl:Class>
     
@@ -3990,7 +3990,7 @@ An infection is acquired from an infectious organism or a contaminated thing.
     <owl:Class rdf:about="&obo;APOLLO_SV_00000130">
         <rdfs:label xml:lang="en">reactive control strategy test</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000001"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">reactiveControlStrategyTest</apollo_sv:APOLLO_SV_0000040>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">reactiveControlMeasureTest</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">An event in the ecosystem that triggers the starting or stopping of a control strategy.</obo:IAO_0000600>
     </owl:Class>
     
@@ -4001,7 +4001,7 @@ An infection is acquired from an infectious organism or a contaminated thing.
     <owl:Class rdf:about="&obo;APOLLO_SV_00000131">
         <rdfs:label xml:lang="en">reactive control strategy threshold</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">reactiveControlStrategyThreshold</apollo_sv:APOLLO_SV_0000040>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">reactiveControlMeasureThreshold</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">A fraction of the population known to have undergone a specific event that results in starting or stopping an infectious disease control strategy.
 
 The event could be infection acquisition, vaccination, antiviral treatment, etc.
@@ -4061,7 +4061,7 @@ The event could be infection acquisition, vaccination, antiviral treatment, etc.
     <owl:Class rdf:about="&obo;APOLLO_SV_00000133">
         <rdfs:label xml:lang="en">control strategy response delay</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000109"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">controlStrategyResponseDelay</apollo_sv:APOLLO_SV_0000040>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">controlMeasureResponseDelay</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">A measurement datum of the time interval from the decision to implement an infectious disease control strategy to the start of the control strategy expressed in number of time intervals.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A period from the initiation of a control strategy until its disease-controlling actions actually begin.
 
@@ -4219,7 +4219,7 @@ For example, once a vaccination control strategy starts, individual vaccinations
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;BFO_0000055"/>
+                        <owl:onProperty rdf:resource="&obo;OBI_0000308"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;RO_0000059"/>
@@ -4272,7 +4272,7 @@ For example, once a vaccination control strategy starts, individual vaccinations
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;OBI_0000308"/>
+                        <owl:onProperty rdf:resource="&obo;BFO_0000055"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;RO_0000059"/>
@@ -5605,7 +5605,7 @@ Note that the infected and susceptible organisms may be of different species.</o
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">IndividualTreatmentControlStrategy</apollo_sv:APOLLO_SV_0000040>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">IndividualTreatmentControlMeasure</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">An infectious disease control strategy that immediately targets individuals.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An infectious disease control strategy that immediately targets individuals.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
@@ -5818,7 +5818,7 @@ So I am comfortable with disease outcome as a process.  It is also consistent wi
     <owl:Class rdf:about="&obo;APOLLO_SV_00000208">
         <rdfs:label xml:lang="en">control strategy start time information</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">controlStrategyStartTime</apollo_sv:APOLLO_SV_0000040>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">controlMeasureStartTime</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">A specification of when an infectious disease control strategy starts.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An information content entity that specifies the start time of the implementation of a infectious disease control strategy.</obo:IAO_0000115>
     </owl:Class>
@@ -6117,7 +6117,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000228">
         <rdfs:label xml:lang="en">border control strategy</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000086"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">BorderControlStrategy</apollo_sv:APOLLO_SV_0000040>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">BorderControlMeasure</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">an infectious disease control strategy that has an action specification that is realized in restricting movement of organisms across international borders.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">an infectious disease control strategy that has an action specification that is realized in restricting movement of organisms across international borders.</obo:IAO_0000600>
@@ -6130,7 +6130,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000229">
         <rdfs:label xml:lang="en">place closure control strategy</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000086"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">PlaceClosureControlStrategy</apollo_sv:APOLLO_SV_0000040>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">PlaceClosureControlMeasure</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An infectious disease control strategy that attempts to prevent infection of susceptible host organisms in a population by preventing potentially infectious contacts (for a particular pathogen) among the organisms in the population.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">an infectious disease control strategy that has an action specification that is realized in closing facilities where organisms congregate during times when the facilities normally would be open.</obo:IAO_0000115>
@@ -6143,7 +6143,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000230">
         <rdfs:label xml:lang="en">case isolation control strategy</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000086"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">CaseQuarantineControlStrategy</apollo_sv:APOLLO_SV_0000040>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">CaseQuarantineControlMeasure</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">An infectious disease control strategy that isolates infected and/or infectious individuals in a population from most or all potentially infectious contacts with susceptible individuals.</obo:IAO_0000600>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">an infectious disease control strategy that has an action specification that is realized in isolating organsims who are infectious.</obo:IAO_0000115>
@@ -6156,7 +6156,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000231">
         <rdfs:label xml:lang="en">travel restriction control strategy</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000086"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">TravelRestrictionControlStrategy</apollo_sv:APOLLO_SV_0000040>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">TravelRestrictionControlMeasure</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">an infectious disease control strategy whose action specification is realized in restricting travel of organims from one geographical region to another</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">an infectious disease control strategy whose action specification is realized in restricting travel of organims from one geographical region to another</obo:IAO_0000600>
@@ -6619,7 +6619,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000260">
         <rdfs:label xml:lang="en">control strategy stop time information</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">controlStrategyStopTime</apollo_sv:APOLLO_SV_0000040>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">controlMeasureStopTime</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">An information content entity that specifies the time at which an infectious disease control strategy ends.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An information content entity that specifies the time at which an infectious disease control strategy ends.</obo:IAO_0000600>
         <dc:creator xml:lang="en">William R. Hogan</dc:creator>
@@ -6657,7 +6657,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000263">
         <rdfs:label xml:lang="en">control strategy stand-down delay</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000109"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">controlStrategyStandDownDelay</apollo_sv:APOLLO_SV_0000040>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">controlMeasureStandDownDelay</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">A measurement datum of the time interval from the decision to cease an infectious disease control strategy to the time the control strategy ends expressed in number of time intervals.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A period from the conclusion of a control strategy until its disease-controlling activities actually end.
 
@@ -7350,7 +7350,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000086"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">VectorControlStrategy</apollo_sv:APOLLO_SV_0000040>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">VectorControlMeasure</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">An infectious disease control strategy that attempts to reduce infections in a population of a particular host species by limiting infection acquisitions from a second host species, called the &apos;vector&apos;.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An infectious disease control strategy that has a vector control action specification as part.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Typically, the strategy is to limit the population of the second host species, which is called the &quot;vector&quot; for the infection.</rdfs:comment>
@@ -7645,7 +7645,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000328">
         <rdfs:label xml:lang="en">larvicide control strategy</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000308"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">LarvicideControlStrategy</apollo_sv:APOLLO_SV_0000040>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">LarvicideControlMeasure</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">A vector control strategy that kills larval-stage vector organisms</obo:IAO_0000600>
         <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
     </owl:Class>
@@ -7724,7 +7724,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000333">
         <rdfs:label xml:lang="en">decolonization control strategy</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000194"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">DecolonizationControlStrategy</apollo_sv:APOLLO_SV_0000040>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">DecolonizationControlMeasure</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">an indivdiual treatment control strategy that prevents infectious disease by treating indivdiuals colonized with a pathogen of a particular species to limit or end the colonization</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">an indivdiual treatment control strategy that prevents infectious disease by treating indivdiuals colonized with a pathogen of a particular species to limit or end the colonization</obo:IAO_0000115>
@@ -8571,7 +8571,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000391">
         <rdfs:label xml:lang="en">indoor residual spraying vector control strategy</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000308"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">IndoorResidualSprayingVectorControlStrategy</apollo_sv:APOLLO_SV_0000040>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">IndoorResidualSprayingVectorControlMeasure</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">A vector control strategy that is realized by spraying chemicals in a place to kill individuals of the vector population.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">A vector control strategy that is realized by spraying chemicals in a place to kill individuals of the vector population.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
@@ -8584,7 +8584,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000392">
         <rdfs:label xml:lang="en">container reduction vector control strategy</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000308"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">ContainerReductionControlStrategy</apollo_sv:APOLLO_SV_0000040>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">ContainerReductionControlMeasure</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">A vector control strategy for mosquitoes that is realized by reducing the number of water-containing vessels in which mosquitoes can lay eggs.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A vector control strategy for mosquitoes that is realized by reducing the number of water-containing vessels in which mosquitoes can lay eggs.</obo:IAO_0000600>
         <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
@@ -8846,7 +8846,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000409">
         <rdfs:label xml:lang="en">ring individual treatment control strategy</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000194"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">RingIndividualTreatmentControlStrategy</apollo_sv:APOLLO_SV_0000040>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">RingIndividualTreatmentControlMeasure</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">An individual treatment control strategy that immediately targets individuals in the population who are at the perimeter of an epidemic.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An individual treatment control strategy that immediately targets individuals in the population who are at the perimeter of an epidemic.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
@@ -9592,13 +9592,13 @@ Previous. An information content entity is a non-realizable information entity t
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000109"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000039"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000004"/>
                 <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000004"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000039"/>
                 <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -11815,8 +11815,8 @@ See vaccination and antiviral treatment.
     <owl:Class rdf:about="&obo;OMRSE_00000007">
         <rdfs:label xml:lang="en">gender role</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000023"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">gender</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">sex</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">A human social role borne by a human being being realized in behaviour which is considered socially appropriate for individuals of a specific sex in the context of a specific culture.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">http://en.wikipedia.org/wiki/Gender_role</obo:IAO_0000119>
@@ -12839,15 +12839,15 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_pir"/>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_plant"/>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gosubset_prok"/>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
     </owl:Class>
     
 
@@ -12880,15 +12880,15 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasAlternativeId>GO:0016280</oboInOwl:hasAlternativeId>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_generic"/>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasDbXref>
             <rdf:Description/>
         </oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
     </owl:Class>
     
 
@@ -12908,18 +12908,18 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
     </owl:Class>
     
 
@@ -12943,12 +12943,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0033057"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasBroadSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasBroadSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>
             <rdf:Description/>
         </oboInOwl:hasBroadSynonym>
@@ -12986,12 +12986,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_aspergillus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_pir"/>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gosubset_prok"/>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasNarrowSynonym>
             <rdf:Description/>
         </oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
     </owl:Class>
     
 
@@ -13003,12 +13003,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0019098"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
     </owl:Class>
     
 
@@ -13112,12 +13112,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasOBONamespace>unit.ontology</oboInOwl:hasOBONamespace>
         <obo:IAO_0000115 xml:lang="en">A dimensionless ratio unit which denotes numbers as fractions of 100.</obo:IAO_0000115>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#unit_slim"/>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
     </owl:Class>
     
 
@@ -14332,6 +14332,18 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
@@ -14347,24 +14359,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
