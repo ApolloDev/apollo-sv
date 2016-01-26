@@ -517,6 +517,14 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">commissions</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">A relation between two entities where the first entity formally requests a third party to create or execute the second entity.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">a commissions b, iff a does not participate in the creation or execution of b and participates in a legal agreement that c participates on the creation or execution of b and c getting something in exchange for that participation.</obo:IAO_0000115>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
+                    <rdf:Description rdf:about="&obo;OBI_0000245"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -526,14 +534,6 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
-                    <rdf:Description rdf:about="&obo;OBI_0000245"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1326,9 +1326,9 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
         <oboInOwl:hasOBONamespace>relationship</oboInOwl:hasOBONamespace>
         <oboInOwl:hasAlternativeId>OBO_REL:realized_as</oboInOwl:hasAlternativeId>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
-        <oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
             <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasRelatedSynonym>
             <rdf:Description/>
         </oboInOwl:hasRelatedSynonym>
@@ -1341,9 +1341,9 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
             <rdf:Description/>
-        </oboInOwl:hasDefinition>
+        </oboInOwl:hasExactSynonym>
     </owl:ObjectProperty>
     
 
@@ -4223,7 +4223,7 @@ For example, once a vaccination control strategy starts, individual vaccinations
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;BFO_0000055"/>
+                        <owl:onProperty rdf:resource="&obo;OBI_0000308"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;RO_0000059"/>
@@ -4276,7 +4276,7 @@ For example, once a vaccination control strategy starts, individual vaccinations
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;OBI_0000308"/>
+                        <owl:onProperty rdf:resource="&obo;BFO_0000055"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;RO_0000059"/>
@@ -4477,7 +4477,7 @@ Somehow, it&apos;s not innate and it&apos;s temporary, ie, the body will eventua
                                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#negatively_regulates"/>
                                         <owl:someValuesFrom>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&obo;OBI_0000308"/>
+                                                <owl:onProperty rdf:resource="&obo;BFO_0000055"/>
                                                 <owl:someValuesFrom rdf:resource="&obo;APOLLO_SV_00000172"/>
                                             </owl:Restriction>
                                         </owl:someValuesFrom>
@@ -4506,7 +4506,7 @@ Somehow, it&apos;s not innate and it&apos;s temporary, ie, the body will eventua
                                         <owl:onProperty rdf:resource="http://purl.org/obo/owl/OBO_REL#negatively_regulates"/>
                                         <owl:someValuesFrom>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&obo;BFO_0000055"/>
+                                                <owl:onProperty rdf:resource="&obo;OBI_0000308"/>
                                                 <owl:someValuesFrom rdf:resource="&obo;APOLLO_SV_00000172"/>
                                             </owl:Restriction>
                                         </owl:someValuesFrom>
@@ -7553,7 +7553,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&obo;BFO_0000015"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&obo;OBI_0000308"/>
+                                <owl:onProperty rdf:resource="&obo;BFO_0000055"/>
                                 <owl:someValuesFrom rdf:resource="&obo;APOLLO_SV_00000239"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -7569,7 +7569,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&obo;BFO_0000015"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&obo;BFO_0000055"/>
+                                <owl:onProperty rdf:resource="&obo;OBI_0000308"/>
                                 <owl:someValuesFrom rdf:resource="&obo;APOLLO_SV_00000239"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -7661,9 +7661,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">larvicide control strategy</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000308"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">LarvicideControlMeasure</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000115 xml:lang="en">A vector control strategy that has an action specification that is realized by reducing the number of larval-stage organisms of a vector population.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A vector control strategy that kills larval-stage vector organisms</obo:IAO_0000600>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A vector control strategy that has an action specification that is realized by reducing the number of larval-stage organisms of a vector population.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -7891,10 +7892,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000337">
         <rdfs:label xml:lang="en">ectosymbiosis</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;GO_0044403"/>
-        <obo:IAO_0000600 xml:lang="en">A symbiosis where the two organisms that are interacting remain physically external to one another.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">A symbiosis where the two organisms that are interacting remain physically external to one another.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">It includes situations where one organism lives on the surface of the other organism.</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">A symbiosis where the two organisms that are interacting remain physically external to one another.</obo:IAO_0000600>
     </owl:Class>
     
 
@@ -7904,10 +7906,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000338">
         <rdfs:label xml:lang="en">antagonism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000337"/>
+        <rdfs:comment xml:lang="en">Example: competition between lions and hyenas for food</rdfs:comment>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An ectosymbiosis that results in harm to both organisms.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An ectosymbiosis that results in harm to both organisms.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">Example: competition between lions and hyenas for food</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -7917,10 +7920,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000339">
         <rdfs:label xml:lang="en">amensalism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000337"/>
-        <obo:IAO_0000600 xml:lang="en">An ectosymbiosis that results in harm to one of the organisms but neither harms nor benefits the other organism.</obo:IAO_0000600>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An ectosymbiosis that results in harm to one of the organisms but neither harms nor benefits the other organism.</obo:IAO_0000115>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">An ectosymbiosis that results in harm to one of the organisms but neither harms nor benefits the other organism.</obo:IAO_0000600>
         <rdfs:comment xml:lang="en">Example: Spanish ibex and weevils of the genus Timarcha</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -7932,7 +7936,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000337"/>
         <obo:IAO_0000600 xml:lang="en">An ectosymbiosis that results in harm to one of the organisms and benefit to the other organism.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An ectosymbiosis that results in harm to one of the organisms and benefit to the other organism.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -7942,9 +7947,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000341">
         <rdfs:label xml:lang="en">intimate agonism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000340"/>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An agonism where the two organisms, although physically external to one another, nevertheless have close and persistent physical contact for most or all of the interaction.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An agonism where the two organisms, although physically external to one another, nevertheless have close and persistent physical contact for most or all of the interaction.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -7954,10 +7960,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000342">
         <rdfs:label xml:lang="en">ectosymbiotic parasitism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000341"/>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An intimate agonism in which the harm is not fatal to the host.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An intimate agonism in which the harm is not fatal to the host.</obo:IAO_0000115>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <rdfs:comment xml:lang="en">Example: Temnocephala chilensis and various marine wildlife</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">ectoparasitism</obo:IAO_0000118>
     </owl:Class>
     
@@ -7968,10 +7975,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000343">
         <rdfs:label xml:lang="en">facultative ectosymbiotic parasitism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000342"/>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An ectosymbiotic parasitism that realizes a disposition of the parasite that is not one of its biological functions.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An ectosymbiotic parasitism that realizes a disposition of the parasite that is not one of its biological functions.</obo:IAO_0000600>
         <rdfs:comment xml:lang="en">Example: Armillaria (type of wood fungus) and trees</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">facultative ectoparasitism</obo:IAO_0000118>
     </owl:Class>
     
@@ -7982,10 +7990,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000344">
         <rdfs:label xml:lang="en">obligatory ectosymbiotic parasitism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000342"/>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An ectosymbiotic parasitism that realizes a biological function of the parasite.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An ectosymbiotic parasitism that realizes a biological function of the parasite.</obo:IAO_0000600>
         <rdfs:comment xml:lang="en">Example: European common cuckoo and other bird species (brood parasitism)</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">obligatory ectoparasitism</obo:IAO_0000118>
     </owl:Class>
     
@@ -7996,9 +8005,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000345">
         <rdfs:label xml:lang="en">ectosymbiotic parasitoidism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000341"/>
-        <obo:IAO_0000600 xml:lang="en">An intimate agonism in which the harm is fatal to the host.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An intimate agonism in which the harm is fatal to the host.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">An intimate agonism in which the harm is fatal to the host.</obo:IAO_0000600>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">ectoparasitoidism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8009,10 +8019,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000346">
         <rdfs:label xml:lang="en">facultative ectosymbiotic parasitoidism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000345"/>
-        <obo:IAO_0000115 xml:lang="en">An ectosymbiotic parasitoidism that realizes a disposition of the parasitoid that is not one of its biological functions.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An ectosymbiotic parasitoidism that realizes a disposition of the parasitoid that is not one of its biological functions.</obo:IAO_0000600>
         <rdfs:comment xml:lang="en">Example: Pachycrepoideus dubius and Ceratitis capitata</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An ectosymbiotic parasitoidism that realizes a disposition of the parasitoid that is not one of its biological functions.</obo:IAO_0000115>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">facultative ectoparasitoidism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8023,10 +8034,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000347">
         <rdfs:label xml:lang="en">obligatory ectosymbiotic parasitoidism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000345"/>
-        <obo:IAO_0000115 xml:lang="en">An ectosymbiotic parasitism that realizes a biological function of the parasitoid.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An ectosymbiotic parasitism that realizes a biological function of the parasitoid.</obo:IAO_0000600>
         <rdfs:comment xml:lang="en">Example: Mutillidae (family of wasps) and other wasps/ants</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An ectosymbiotic parasitism that realizes a biological function of the parasitoid.</obo:IAO_0000115>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">obligatory ectoparasitoidism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8037,9 +8049,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000348">
         <rdfs:label xml:lang="en">ectosymbiotic commensalism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000337"/>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An ectosymbiosis that results in benefit to one organism and neither harm nor benefit to the other organism.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An ectosymbiosis that results in benefit to one organism and neither harm nor benefit to the other organism.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">ectocommensalism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8052,8 +8065,9 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000348"/>
         <obo:IAO_0000115 xml:lang="en">An ectosymbiotic commensalism that realizes a dispostion of the organism that benefits that is not one of its biological functions.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An ectosymbiotic commensalism that realizes a dispostion of the organism that benefits that is not one of its biological functions.</obo:IAO_0000600>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <rdfs:comment xml:lang="en">Example: Ophiodromus pugettensis and Patiria miniata</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">facultative ectocommensalism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8064,10 +8078,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000350">
         <rdfs:label xml:lang="en">obligatory ectosymbiotic commensalism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000348"/>
-        <obo:IAO_0000600 xml:lang="en">An ectosymbiotic commensalism that realizes a biological function of the organism that benefits.</obo:IAO_0000600>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An ectosymbiotic commensalism that realizes a biological function of the organism that benefits.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Example: Basicladia algae and sea turtles</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">An ectosymbiotic commensalism that realizes a biological function of the organism that benefits.</obo:IAO_0000600>
         <obo:IAO_0000118 xml:lang="en">obligatory ectocommensalism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8078,9 +8093,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000351">
         <rdfs:label xml:lang="en">ectosymbiotic mutualism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000337"/>
-        <obo:IAO_0000600 xml:lang="en">An ectosymbiosis that results in benefit to both organisms.</obo:IAO_0000600>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An ectosymbiosis that results in benefit to both organisms.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">An ectosymbiosis that results in benefit to both organisms.</obo:IAO_0000600>
         <obo:IAO_0000118 xml:lang="en">ectomutualism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8091,10 +8107,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000352">
         <rdfs:label xml:lang="en">facultative ectosymbiotic mutualism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000351"/>
-        <obo:IAO_0000115 xml:lang="en">An ectosymbiotic mutualism that realizes one or more dispositions of one or both organisms and these dispostions are not biological functions of either organism.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An ectosymbiotic mutualism that realizes one or more dispositions of one or both organisms and these dispostions are not biological functions of either organism.</obo:IAO_0000600>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An ectosymbiotic mutualism that realizes one or more dispositions of one or both organisms and these dispostions are not biological functions of either organism.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Example: ants that feed off of honeydew from aphids, and in turn protect the aphids</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">facultative ectomutualism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8105,10 +8122,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000353">
         <rdfs:label xml:lang="en">obligatory ectosymbiotic mutualism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000351"/>
-        <obo:IAO_0000115 xml:lang="en">An ectosymbiotic mutualism that realizes a biological function of at least one of the organisms participating.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An ectosymbiotic mutualism that realizes a biological function of at least one of the organisms participating.</obo:IAO_0000600>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An ectosymbiotic mutualism that realizes a biological function of at least one of the organisms participating.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Example: bees and flowers</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">obligatory ectomutualism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8119,9 +8137,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000354">
         <rdfs:label xml:lang="en">endosymbiosis</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;GO_0044403"/>
-        <obo:IAO_0000600 xml:lang="en">A symbiosis where one organism is physically contained within the other organism (called the &apos;host&apos;).</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">A symbiosis where one organism is physically contained within the other organism (called the &apos;host&apos;).</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">A symbiosis where one organism is physically contained within the other organism (called the &apos;host&apos;).</obo:IAO_0000600>
     </owl:Class>
     
 
@@ -8131,9 +8150,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000355">
         <rdfs:label xml:lang="en">endosymbiotic parasitism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000354"/>
-        <obo:IAO_0000115 xml:lang="en">An endosymbiosis that results in benefit to the parasite and harm to the host.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An endosymbiosis that results in benefit to the parasite and harm to the host.</obo:IAO_0000600>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An endosymbiosis that results in benefit to the parasite and harm to the host.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">endoparasitism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8144,9 +8164,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000356">
         <rdfs:label xml:lang="en">non-intimate agonism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000340"/>
-        <obo:IAO_0000600 xml:lang="en">An agonism where the two organisms maintain significant physical separation from one another through most or all of the interaction.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An agonism where the two organisms maintain significant physical separation from one another through most or all of the interaction.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">An agonism where the two organisms maintain significant physical separation from one another through most or all of the interaction.</obo:IAO_0000600>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8156,10 +8177,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000357">
         <rdfs:label xml:lang="en">predation</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000356"/>
-        <obo:IAO_0000600 xml:lang="en">A non-intimate agonism in which the harm is fatal.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">A non-intimate agonism in which the harm is fatal.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Example: lion and gazel</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">A non-intimate agonism in which the harm is fatal.</obo:IAO_0000600>
     </owl:Class>
     
 
@@ -8169,10 +8191,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000358">
         <rdfs:label xml:lang="en">grazing</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000356"/>
-        <obo:IAO_0000600 xml:lang="en">A non-intimate agonism in which the harm is not fatal.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">A non-intimate agonism in which the harm is not fatal.</obo:IAO_0000115>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">A non-intimate agonism in which the harm is not fatal.</obo:IAO_0000600>
         <rdfs:comment xml:lang="en">Example: Giant panda and bamboo</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8182,10 +8205,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000359">
         <rdfs:label xml:lang="en">facultative endosymbiotic parasitism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000355"/>
-        <obo:IAO_0000115 xml:lang="en">An endosymbiotic parasitism that realizes a disposition of the parasite that is not one of its biological functions.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An endosymbiotic parasitism that realizes a disposition of the parasite that is not one of its biological functions.</obo:IAO_0000600>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An endosymbiotic parasitism that realizes a disposition of the parasite that is not one of its biological functions.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Example: Strongyloides stercoralis (roundworm) and humans</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">facultative endoparasitism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8196,10 +8220,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000360">
         <rdfs:label xml:lang="en">obligatory endosymbiotic parasitism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000355"/>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An endosymbiotic parasitism that realizes a biological function of the parasite.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An endosymbiotic parasitism that realizes a biological function of the parasite.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Example: Necator americanus (hookworm) and humans</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">obligatory endoparasitism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8212,7 +8237,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000354"/>
         <obo:IAO_0000600 xml:lang="en">An endosymbiosis that results in benefit to the parasitoid and is fatal to the host.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An endosymbiosis that results in benefit to the parasitoid and is fatal to the host.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">endoparasitoidism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8223,10 +8249,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000362">
         <rdfs:label xml:lang="en">facultative endosymbiotic parasitoidism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000361"/>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An endosymbiotic parasitoidism that realizes a disposition of the parasitoid that is not one of its biological functions.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An endosymbiotic parasitoidism that realizes a disposition of the parasitoid that is not one of its biological functions.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Example: Naegleria fowleri (brain-eating amoeba) and humans</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">facultative endoparasitoidism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8237,10 +8264,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000363">
         <rdfs:label xml:lang="en">obligatory endosymbiotic parasitoidism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000361"/>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An endosymbiotic parasitoidism that realizes a biological function of the parasitoid.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An endosymbiotic parasitoidism that realizes a biological function of the parasitoid.</obo:IAO_0000600>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <rdfs:comment xml:lang="en">Example: Ichneumon eumerus (wasp) and Phengaris rebeli (butterfly caterpillar)</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">obligatory endoparasitoidism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8251,9 +8279,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000364">
         <rdfs:label xml:lang="en">endosymbiotic commensalism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000354"/>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An endosymbiosis that results in benefit to one organism and neither harm nor benefit to the other organism.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An endosymbiosis that results in benefit to one organism and neither harm nor benefit to the other organism.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">endocommensalism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8264,10 +8293,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000365">
         <rdfs:label xml:lang="en">facultative endosymbiotic commensalism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000364"/>
-        <obo:IAO_0000600 xml:lang="en">An endosymbiotic commensalism that realizes a dispostion of the non-host organism that benefits that is not one of its biological functions.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An endosymbiotic commensalism that realizes a dispostion of the non-host organism that benefits that is not one of its biological functions.</obo:IAO_0000115>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">An endosymbiotic commensalism that realizes a dispostion of the non-host organism that benefits that is not one of its biological functions.</obo:IAO_0000600>
         <rdfs:comment xml:lang="en">Example: Malaria and mosquito vector</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">facultative endocommensalism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8281,7 +8311,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <obo:IAO_0000600 xml:lang="en">An ectosymbiotic commensalism that realizes a biological function of the non-host organism that benefits.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An ectosymbiotic commensalism that realizes a biological function of the non-host organism that benefits.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Example: Passalurus ambiguus (nematode) and rabbits</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">obligatory endocommensalism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8292,9 +8323,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000367">
         <rdfs:label xml:lang="en">endosymbiotic mutualism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000354"/>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An endosymbiosis that results in benefit to both organisms.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An endosymbiosis that results in benefit to both organisms.</obo:IAO_0000600>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">endomutualism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8305,10 +8337,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000368">
         <rdfs:label xml:lang="en">facultative endosymbiotic mutualism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000367"/>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An endosymbiotic mutualism that realizes one or more dispositions of one or both organisms and these dispostions are not biological functions of either organism.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An endosymbiotic mutualism that realizes one or more dispositions of one or both organisms and these dispostions are not biological functions of either organism.</obo:IAO_0000600>
         <rdfs:comment xml:lang="en">Example: Hamiltonella defensa and aphids</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">facultative endomutualism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8319,10 +8352,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000369">
         <rdfs:label xml:lang="en">obligatory endosymbiotic mutualism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000367"/>
-        <obo:IAO_0000115 xml:lang="en">An endosymbiotic mutualism that realizes a biological function of at least one of the organisms participating.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An endosymbiotic mutualism that realizes a biological function of at least one of the organisms participating.</obo:IAO_0000600>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An endosymbiotic mutualism that realizes a biological function of at least one of the organisms participating.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Example: marine worms of genus Riftia and their endosymbiotic bacteria</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">obligatory endomutualism</obo:IAO_0000118>
     </owl:Class>
     
@@ -8335,7 +8369,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000016"/>
         <obo:IAO_0000115 xml:lang="en">A disposition of the whole organism (or of some causally relatively isolated part of the organism, such as a single cell) to regulate its bodily processes in such a way as (1) to maintain bodily qualities within a certain range or profile and (2) to respond successfully to departures from this range caused by internal influences or environmental influences such as poisoning.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A disposition of the whole organism (or of some causally relatively isolated part of the organism, such as a single cell) to regulate its bodily processes in such a way as (1) to maintain bodily qualities within a certain range or profile and (2) to respond successfully to departures from this range caused by internal influences or environmental influences such as poisoning.</obo:IAO_0000600>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8345,9 +8380,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000371">
         <rdfs:label xml:lang="en">bodily harm</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
-        <obo:IAO_0000600 xml:lang="en">A process that has as output a material entity that is the material basis for an abnormal homeostasis dispostion.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">A process that has as output a material entity that is the material basis for an abnormal homeostasis dispostion.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">A process that has as output a material entity that is the material basis for an abnormal homeostasis dispostion.</obo:IAO_0000600>
     </owl:Class>
     
 
@@ -8359,7 +8395,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
         <obo:IAO_0000115 xml:lang="en">A process that facilitates the realization of one or more normal homeostasis dispositions borne by an organism and/or one or more causally relatively isolated parts of the organism.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A process that facilitates the realization of one or more normal homeostasis dispositions borne by an organism and/or one or more causally relatively isolated parts of the organism.</obo:IAO_0000600>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8369,9 +8406,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000373">
         <rdfs:label xml:lang="en">parasite</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0100026"/>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An organism participating in an ectosymbiotic or endosymbiotic parasitism as the organism that benefits.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An organism participating in an ectosymbiotic or endosymbiotic parasitism as the organism that benefits.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8381,9 +8419,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000374">
         <rdfs:label xml:lang="en">parasitoid</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0100026"/>
-        <obo:IAO_0000115 xml:lang="en">An organism participating in an ectosymbiotic or endosymbiotic parasitoidism as the organism that benefits.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An organism participating in an ectosymbiotic or endosymbiotic parasitoidism as the organism that benefits.</obo:IAO_0000600>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An organism participating in an ectosymbiotic or endosymbiotic parasitoidism as the organism that benefits.</obo:IAO_0000115>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8547,9 +8586,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000387">
         <rdfs:label xml:lang="en">census objective specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000005"/>
-        <obo:IAO_0000600 xml:lang="en">An objective specification to observe all the organisms of a particular taxon in a particular geographical region or place and create a data set about them.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An objective specification to observe all the organisms of a particular taxon in a particular geographical region or place and create a data set about them.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">An objective specification to observe all the organisms of a particular taxon in a particular geographical region or place and create a data set about them.</obo:IAO_0000600>
     </owl:Class>
     
 
@@ -8561,7 +8601,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000104"/>
         <obo:IAO_0000600 xml:lang="en">A plan specification with a census objective specification.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">A plan specification with a census objective specification.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8572,9 +8613,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">census taking</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">Census</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000115 xml:lang="en">A planned process that realizes a census plan specification.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A planned process that realizes a census plan specification.</obo:IAO_0000600>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A planned process that realizes a census plan specification.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -8585,10 +8627,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">Wolbachia vector control strategy</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000308"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">WolbachiaControlStrategy</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000600 xml:lang="en">A vector control strategy that is realized by releasing individuals of the vector population infected with bacteria of the taxon Wolbachia to inhibit reproduction of individuals in the vector population.</obo:IAO_0000600>
-        <obo:IAO_0000117>Matt Diller</obo:IAO_0000117>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A vector control strategy that is realized by releasing individuals of the vector population infected with bacteria of the taxon Wolbachia to inhibit reproduction of individuals in the vector population.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">A vector control strategy that is realized by releasing individuals of the vector population infected with bacteria of the taxon Wolbachia to inhibit reproduction of individuals in the vector population.</obo:IAO_0000600>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8599,9 +8641,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">indoor residual spraying vector control strategy</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000308"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">IndoorResidualSprayingVectorControlMeasure</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">A vector control strategy that is realized by spraying chemicals in a place to kill individuals of the vector population.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">A vector control strategy that is realized by spraying chemicals in a place to kill individuals of the vector population.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8614,8 +8657,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">ContainerReductionControlMeasure</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">A vector control strategy for mosquitoes that is realized by reducing the number of water-containing vessels in which mosquitoes can lay eggs.</obo:IAO_0000600>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000117>Matt Diller</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A vector control strategy for mosquitoes that is realized by reducing the number of water-containing vessels in which mosquitoes can lay eggs.</obo:IAO_0000115>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8626,9 +8669,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">treatment system logistics</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">TreatmentSystemLogistics</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An information content entity that specifies how many doses or courses of treatment, per a particular unit of time (typically one day), can be supplied for a given geographical region and/or how many of those doses or courses can subsequently be administered.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An information content entity that specifies how many doses or courses of treatment, per a particular unit of time (typically one day), can be supplied for a given geographical region and/or how many of those doses or courses can subsequently be administered.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8639,9 +8683,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">treatment surveillance capability</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000016"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">TreatmentSurveillanceCapability</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A disposition of a treatment surveillance infrastructure to detect individuals who have received treatment in the geographical region the infrastructure aims to cover.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A disposition of a treatment surveillance infrastructure to detect individuals who have received treatment in the geographical region the infrastructure aims to cover.</obo:IAO_0000600>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8663,7 +8708,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">PopulationSerologySurvey</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">A population survey that assesses the presence (plus or minus quantity) of antibody to a particular antigen in individuals in a population.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">A population survey that assesses the presence (plus or minus quantity) of antibody to a particular antigen in individuals in a population.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8674,9 +8720,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">infection case list</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000100"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">CaseList</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">A data set that is a collection of case records.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">A data set that is a collection of case records.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8687,9 +8734,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">infection case record</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000100"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">CaseRecord</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A data set whose data items are about a host and its participation in an infection and potentially other activities occuring in the same time interval as the infection.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A data set whose data items are about a host and its participation in an infection and potentially other activities occuring in the same time interval as the infection.</obo:IAO_0000600>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8700,9 +8748,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">infection case count</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">CaseCount</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000600 xml:lang="en">A count of individuals in a population who meet an infection case definition during a particular time interval.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">A count of individuals in a population who meet an infection case definition during a particular time interval.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">A count of individuals in a population who meet an infection case definition during a particular time interval.</obo:IAO_0000600>
     </owl:Class>
     
 
@@ -8713,7 +8762,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">epidemic interval</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000038"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">EpidemicPeriod</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">The temporal interval occupied by an epidemic.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">The temporal interval occupied by an epidemic.</obo:IAO_0000600>
     </owl:Class>
@@ -8726,9 +8775,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">individual mosquito behavior</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;GO_0007610"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">MosquitoBehavior</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An individual behavior of a mosquito (organism of family Culicidae).</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An individual behavior of a mosquito (organism of family Culicidae).</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8739,9 +8789,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">individual human behavior</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;GO_0007610"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">HumanBehavior</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An individual behavior of a human being.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An individual behavior of a human being.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8752,10 +8803,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">transmission tree</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000658"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">TransmissionTree</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">A data structure that represents, for a particular epidemic, a subset of infected organisms and for each infected organism in the subset except the first one infected temporally, its infection acquisition from an infected host as a machine-readable link to that infected host.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">A data structure that represents, for a particular epidemic, a subset of infected organisms and for each infected organism in the subset except the first one infected temporally, its infection acquisition from an infected host as a machine-readable link to that infected host.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Because a set A is a subset of itself, we capture the possibility that all infected organisms in the epidemic are represented in the tree.</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
         <rdfs:comment xml:lang="en">This definition allows for multiple trees in an epidemic because we did not require that the first case infected temporally be the index case, although the ideal situation is that there is one tree for the epidemic that includes the index case.</rdfs:comment>
     </owl:Class>
     
@@ -8875,9 +8927,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">ring individual treatment control strategy</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000194"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">RingIndividualTreatmentControlMeasure</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000600 xml:lang="en">An individual treatment control strategy that immediately targets individuals in the population who are at the perimeter of an epidemic.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An individual treatment control strategy that immediately targets individuals in the population who are at the perimeter of an epidemic.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">An individual treatment control strategy that immediately targets individuals in the population who are at the perimeter of an epidemic.</obo:IAO_0000600>
     </owl:Class>
     
 
@@ -8890,7 +8943,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">wolbachiaReleaseSites</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">A site that is the bearer of a role which is realized by the release of Wolbachia-infected mosquitos.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A site that is the bearer of a role which is realized by the release of Wolbachia-infected mosquitos.</obo:IAO_0000600>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8901,9 +8955,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">Wolbachia every nth site release action specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000310"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">wolbachiaSitesEveryNth</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000600 xml:lang="en">A vector control action specification that specifies the location of Wolbachia release sites according to some predetermined spatial interval.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">A vector control action specification that specifies the location of Wolbachia release sites according to some predetermined spatial interval.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">A vector control action specification that specifies the location of Wolbachia release sites according to some predetermined spatial interval.</obo:IAO_0000600>
     </owl:Class>
     
 
@@ -8914,9 +8969,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">leakage rate of Wolbachia infection in mosquito population infected with Wolbachia</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/UO#UO_0000280"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">wolbachiaEffectOnLeakageRate</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">The rate at which offspring of the Wolbachia-infected female mosquito subpopulation (of the overall mosquito population) are not infected with Wolbachia.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">The rate at which offspring of the Wolbachia-infected female mosquito subpopulation (of the overall mosquito population) are not infected with Wolbachia.</obo:IAO_0000115>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8927,7 +8983,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">transmission rate of pathogen to human from Wolbachia-infected mosquito bites</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/UO#UO_0000280"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">wolbachiaEffectOnVectorialCapacity</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">The rate at which bites of mosquitoes infected with both Wolbachia and a particular pathogen such as dengue result in an infection in a susceptible human host.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">The rate at which bites of mosquitoes infected with both Wolbachia and a particular pathogen such as dengue result in an infection in a susceptible human host.</obo:IAO_0000115>
     </owl:Class>
@@ -8939,9 +8996,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000414">
         <rdfs:label xml:lang="en">adult vector control strategy</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000308"/>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">A vector control strategy that is realized by reducing the number of adults in a vector population.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">A vector control strategy that is realized by reducing the number of adults in a vector population.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8952,9 +9010,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">Wolbachia prerelease adult vector control strategy</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000414"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">wolbachiaPreReleaseAdultSuppressionEfficacy</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An adult vector control strategy that is used prior to a Wolbachia vector control strategy to increase the percentage of the adult population that gets infected with Wolbachia.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An adult vector control strategy that is used prior to a Wolbachia vector control strategy to increase the percentage of the adult population that gets infected with Wolbachia.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8981,7 +9040,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">LifeStageWithDurationAndMortality</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">A data structure that refers to (1) a subpopulation of a population based on life stage, (2) the rate of mortality of that subpopulation, and (3) the average duration of time that the individuals in the subpopulation spend in that life stage.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A data structure that refers to (1) a subpopulation of a population based on life stage, (2) the rate of mortality of that subpopulation, and (3) the average duration of time that the individuals in the subpopulation spend in that life stage.</obo:IAO_0000600>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8992,9 +9052,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">Wolbachia effect on egg mortality rate in mosquito population</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;GO_0051701"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">wolbachiaEffectOnEggMortalityRate</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000600 xml:lang="en">A process of change in the egg mortality rate of a mosquito population that is the outcome of an infection in that population by a Wolbachia bacteria population.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">A process of change in the egg mortality rate of a mosquito population that is the outcome of an infection in that population by a Wolbachia bacteria population.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">A process of change in the egg mortality rate of a mosquito population that is the outcome of an infection in that population by a Wolbachia bacteria population.</obo:IAO_0000600>
     </owl:Class>
     
 
@@ -9007,7 +9068,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">wolbachiaEffectOnAdultMortalityRate</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">A process of change in the adult mortality rate of a mosquito population that is the outcome of an infection in that population by a Wolbachia bacteria population.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A process of change in the adult mortality rate of a mosquito population that is the outcome of an infection in that population by a Wolbachia bacteria population.</obo:IAO_0000600>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -9018,9 +9080,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">Wolbachia effect on larval mortality rate in mosquito population</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;GO_0051701"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">wolbachiaEffectOnLarvalMortalityRate</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A process of change in the larval mortality rate of a mosquito population that is the outcome of an infection in that population by a Wolbachia bacteria population.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A process of change in the larval mortality rate of a mosquito population that is the outcome of an infection in that population by a Wolbachia bacteria population.</obo:IAO_0000600>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -9033,7 +9096,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">wolbachiaEffectOnFecundity</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">A process of change in fecundity of females in a mosquito population that is the outcome of an infection in that population with a Wolbachia bacteria population.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">A process of change in fecundity of females in a mosquito population that is the outcome of an infection in that population with a Wolbachia bacteria population.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -9043,8 +9107,9 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="&obo;APOLLO_SV_00000422">
         <rdfs:label xml:lang="en">confidence interval</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A data item that specifies both an interval estimate centered around some sample statistic, and the probability that the process/method of obtaining the interval estimate&apos;s range of values will generate an interval that contains some unobserved population parameter of interest.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -9055,8 +9120,9 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">Wolbachia release interval</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000310"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">wolbachiaReleaseInterval</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A vector control action specification that is realized by releasing Wolbachia at the specified time intervals.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -9067,8 +9133,9 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">mean with confidence interval</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000658"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">MeanWithConfidenceInterval</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A data structure that specifies both the sample mean and the confidence interval generated by the measurement process.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -9079,8 +9146,9 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">mean with standard deviation</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000658"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">MeanWithStandardDeviation</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A data structure that specifies both the sample mean and the standard deviation generated by the measurement process.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -9091,7 +9159,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">number of Wolbachia-infected mosquitoes released per house</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000310"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">wolbachiaSeedAdultsPerHouse</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000117>Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A vector control action specification that specifies the number of Wolbachia-infected adult mosquitoes to be released at each household.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A vector control action specification that specifies the number of Wolbachia-infected adult mosquitoes to be released at each household.</obo:IAO_0000600>
     </owl:Class>
@@ -9106,8 +9175,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">clearWolbachiaOnMigration</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">An epidemic simulator action specification that when set to true, results in the simuator clearing each simulated Wolbachia-infected mosquito of its simulated Wolbachia infection whenever it migrates out of the simulated population location.</obo:IAO_0000600>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An epidemic simulator action specification that when set to true, results in the simuator clearing each simulated Wolbachia-infected mosquito of its simulated Wolbachia infection whenever it migrates out of the simulated population location.</obo:IAO_0000115>
-        <obo:IAO_0000117>Matt Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -9118,7 +9187,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">disease outcome with probability</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0302867"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">DiseaseOutcomeWithProbability</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000117>Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A predicted data item expressing the probability that a disease outcome occurs during the disease course of an organism.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A predicted data item expressing the probability that a disease outcome occurs during the disease course of an organism.</obo:IAO_0000600>
     </owl:Class>
@@ -9131,9 +9201,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">date</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000395"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">date</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000115 xml:lang="en">A name of a temporal region that is systematized according to a particular calendar system, such as the Gregorian calendar.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A name of a temporal region that is systematized according to a particular calendar system, such as the Gregorian calendar.</obo:IAO_0000600>
-        <obo:IAO_0000117>Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A name of a temporal region that is systematized according to a particular calendar system, such as the Gregorian calendar.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -9144,9 +9215,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">ring diameter in meters</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0001933"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">ringDiameterInMeters</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000117>Matt Diller</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">A scalar value specification that gives the diameter in meters of the circular area around which all organisms in a population are living will receive a vaccination as part of a ring vaccination control measure.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">A scalar value specification that gives the diameter in meters of the circular area around which all organisms in a population are living will receive a vaccination as part of a ring vaccination control measure.</obo:IAO_0000115>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">A scalar value specification that gives the diameter in meters of the circular area around which all organisms in a population are living will receive a vaccination as part of a ring vaccination control measure.</obo:IAO_0000600>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -9158,7 +9230,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000793"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">wolbachiaEffectOnMatingProbability</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">An epidemic simulator actions specification that specifies the factor by which to multiply the mating probability of a male mosquito if it is infected with a Wolbachia bacterium.</obo:IAO_0000600>
-        <obo:IAO_0000117>Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An epidemic simulator actions specification that specifies the factor by which to multiply the mating probability of a male mosquito if it is infected with a Wolbachia bacterium.</obo:IAO_0000115>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
     </owl:Class>
@@ -9172,9 +9244,9 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">minimumValue</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000117>Matt Diller</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A data item that specifies the smallest numerical value in a data set of scalar measurement data items.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A data item that specifies the smallest numerical value in a data set of scalar measurement data items.</obo:IAO_0000600>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -9185,10 +9257,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">maximum value</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">maximumValue</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000600 xml:lang="en">A data item that specifies the largest numerical value in a data set of scalar measurement data itmes.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">A data item that specifies the largest numerical value in a data set of scalar measurement data itmes.</obo:IAO_0000115>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">A data item that specifies the largest numerical value in a data set of scalar measurement data itmes.</obo:IAO_0000600>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000117>Matt Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -11499,7 +11571,8 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
     <owl:Class rdf:about="&obo;NCBITaxon_33630">
         <rdfs:label xml:lang="en">Alveolata</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/NCBITaxon#NCBITaxon_2759"/>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">alveolates</obo:IAO_0000118>
     </owl:Class>
     
@@ -11549,7 +11622,7 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
     <owl:Class rdf:about="&obo;NCBITaxon_36330">
         <rdfs:label xml:lang="en">Plasmodium ovale</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;NCBITaxon_418103"/>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">malaria parasite p. ovale</obo:IAO_0000118>
     </owl:Class>
     
@@ -11569,7 +11642,7 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
     <owl:Class rdf:about="&obo;NCBITaxon_418103">
         <rdfs:label xml:lang="en">Plasmodium (Plasmodium)</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;NCBITaxon_5820"/>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">plasmodium</obo:IAO_0000118>
     </owl:Class>
     
@@ -11580,7 +11653,7 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
     <owl:Class rdf:about="&obo;NCBITaxon_418107">
         <rdfs:label xml:lang="en">Plasmodium (Laverania)</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;NCBITaxon_5820"/>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">laverania</obo:IAO_0000118>
     </owl:Class>
     
@@ -11600,7 +11673,8 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
     <owl:Class rdf:about="&obo;NCBITaxon_422676">
         <rdfs:label xml:lang="en">Aconoidasida</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;NCBITaxon_5794"/>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">hematozoa</obo:IAO_0000118>
     </owl:Class>
     
@@ -11684,7 +11758,8 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
     <owl:Class rdf:about="&obo;NCBITaxon_5794">
         <rdfs:label xml:lang="en">Apicomplexa</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;NCBITaxon_33630"/>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">apicomplexans</obo:IAO_0000118>
     </owl:Class>
     
@@ -11695,7 +11770,8 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
     <owl:Class rdf:about="&obo;NCBITaxon_5819">
         <rdfs:label xml:lang="en">Haemosporida</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;NCBITaxon_422676"/>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">haemosporidians</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">haemosporina</obo:IAO_0000118>
     </owl:Class>
@@ -11707,7 +11783,7 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
     <owl:Class rdf:about="&obo;NCBITaxon_5820">
         <rdfs:label xml:lang="en">Plasmodium</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;NCBITaxon_5819"/>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -11717,7 +11793,7 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
     <owl:Class rdf:about="&obo;NCBITaxon_5833">
         <rdfs:label xml:lang="en">Plasmodium falciparum</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;NCBITaxon_418107"/>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">plasmodium (laverania) falciparum</obo:IAO_0000118>
     </owl:Class>
     
@@ -11728,7 +11804,7 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
     <owl:Class rdf:about="&obo;NCBITaxon_5855">
         <rdfs:label xml:lang="en">Plasmodium vivax</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;NCBITaxon_418103"/>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">malaria parasite p. vivax</obo:IAO_0000118>
     </owl:Class>
     
@@ -11739,7 +11815,7 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
     <owl:Class rdf:about="&obo;NCBITaxon_5858">
         <rdfs:label xml:lang="en">Plasmodium malariae</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;NCBITaxon_418103"/>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -11971,7 +12047,7 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <rdfs:label xml:lang="en">planned process</rdfs:label>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000308"/>
+                <owl:onProperty rdf:resource="&obo;BFO_0000055"/>
                 <owl:someValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;RO_0000059"/>
@@ -11992,7 +12068,7 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000055"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000308"/>
                 <owl:someValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;RO_0000059"/>
@@ -13690,15 +13766,15 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_pir"/>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_plant"/>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gosubset_prok"/>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
     </owl:Class>
     
 
@@ -13734,12 +13810,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasDbXref>
             <rdf:Description/>
         </oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
     </owl:Class>
     
 
@@ -13763,18 +13839,18 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0033057"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasBroadSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>
             <rdf:Description/>
         </oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>
             <rdf:Description/>
         </oboInOwl:hasDbXref>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasBroadSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasBroadSynonym>
     </owl:Class>
     
 
@@ -13823,12 +13899,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0019098"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
     </owl:Class>
     
 
@@ -13946,12 +14022,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasOBONamespace>unit.ontology</oboInOwl:hasOBONamespace>
         <obo:IAO_0000115 xml:lang="en">A dimensionless ratio unit which denotes numbers as fractions of 100.</obo:IAO_0000115>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#unit_slim"/>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
     </owl:Class>
     
 
@@ -14645,20 +14721,20 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&obo;IAO_0000220">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000101">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000222">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000101">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </rdf:Description>
     <rdf:Description rdf:about="&dc;publisher">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/obo/owl/PATO#PATO_0000125">
-        <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/PATO"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000223">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/obo/owl/PATO#PATO_0000125">
+        <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/PATO"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000183">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
@@ -14734,19 +14810,20 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;GEO_000000372">
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">Location</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A site designated by some relative spatial orientation.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An arbitrary part of the Earth defined by human-made boundaries and/or natural features such as rivers.</obo:IAO_0000600>
-        <obo:IAO_0000117 xml:lang="en">Matt Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;iao/dev/obsolete.owl">
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/information-artifact-ontology/"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000576">
-        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000059">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000576">
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000577">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
@@ -14758,11 +14835,14 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000330">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000572">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000330">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+    <rdf:Description rdf:about="&obo;IAO_0000573">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/obo/owl/PATO#PATO_0001025">
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#attribute_slim"/>
@@ -14790,9 +14870,6 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000573">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000574">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
@@ -14865,17 +14942,17 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&obo;IAO_0000321">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000443">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;iao/dev/iao.owl">
+        <rdfs:seeAlso rdf:resource="http://code.google.com/p/information-artifact-ontology/"/>
+    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000322">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000047">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;iao/dev/iao.owl">
-        <rdfs:seeAlso rdf:resource="http://code.google.com/p/information-artifact-ontology/"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000443">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;OBI_0000066">
         <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
@@ -14892,17 +14969,17 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&obo;IAO_0000319">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000312">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000037">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000002"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000038">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    <rdf:Description rdf:about="&obo;IAO_0000312">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000313">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000038">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000314">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
@@ -14935,18 +15012,18 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&obo;IAO_0000307">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000429">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000308">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000429">
+    <rdf:Description rdf:about="&obo;IAO_0000422">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000301">
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">Reference</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000422">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000302">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
@@ -15055,20 +15132,20 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&obo;IAO_0000418">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000015">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;PATO_0000122">
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/PATO"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000015">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000017">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000414">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000018">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000226"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000414">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000132">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
@@ -15087,12 +15164,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&dc;relation">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&Ontology1317751904226;IAO_0000117">
-        <rdfs:label>bad_pno_import_3</rdfs:label>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000096">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&Ontology1317751904226;IAO_0000117">
+        <rdfs:label>bad_pno_import_3</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000097">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000002"/>
@@ -15109,14 +15186,11 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&dc;language">
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000093">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;OBI_0001620">
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">Latitude</apollo_sv:APOLLO_SV_0000040>
+    <rdf:Description rdf:about="&dc;language">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.obofoundry.org/ro/ro.owl#relationship">
         <oboInOwl:hasDefinition>
@@ -15144,6 +15218,9 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
     </rdf:Description>
+    <rdf:Description rdf:about="&obo;OBI_0001620">
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">Latitude</apollo_sv:APOLLO_SV_0000040>
+    </rdf:Description>
     <rdf:Description rdf:about="&obo;OBI_0001621">
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">Longitude</apollo_sv:APOLLO_SV_0000040>
     </rdf:Description>
@@ -15151,36 +15228,6 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;RO_0001000">
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
@@ -15190,12 +15237,42 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
@@ -15221,13 +15298,13 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000128">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000121"/>
-        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000226"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000403">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000128">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000121"/>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000226"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000088">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
