@@ -9982,6 +9982,19 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     
 
 
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000487 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000487">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000486"/>
+        <obo:IAO_0000111 xml:lang="en">travel recommendation infectious disease control strategy</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">A travel-related infectious disease control strategy that has an action specification that is realized by making recommendations to travelers to either (1) avoid travel to an ecosystem with an ongoing infection such as an epidemic, (2) take precautions when traveling to such an ecosystem, (3) receive certain vaccinations prior to traveling to such an ecosystem, or (4) take certain medications when traveling to such an ecosystem</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">A travel-related infectious disease control strategy that recommends to travelers to either (1) avoid travel to a region with an ongoing infection such as an epidemic, (2) take precautions when traveling to such a region, (3) receive certain vaccinations prior to traveling to such a region, or (4) take certain medications when traveling to such a region</obo:IAO_0000600>
+        <rdfs:label xml:lang="en">travel recommendation control strategy</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000793 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000793">
