@@ -9977,6 +9977,9 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000486">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000086"/>
         <obo:IAO_0000111 xml:lang="en">infectious disease control strategy to prevent infection acquisition by individuals traveling from one ecosystem to another ecosystem</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">An infectious disease control strategy that has an objective specification of preventing infection acquisition by organisms traveling from one ecosystem to another ecosystem.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">An infectious disease control strategy that has an objective specification of preventing infection acquisition by organisms traveling from one ecosystem to another ecosystem.</obo:IAO_0000600>
         <rdfs:label xml:lang="en">travel-related infectious disease control strategy</rdfs:label>
     </owl:Class>
     
