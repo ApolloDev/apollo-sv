@@ -6102,10 +6102,10 @@ can&apos;t recall whether we should use process or processual_entity for future 
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000228 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000228">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000086"/>
-        <obo:IAO_0000115 xml:lang="en">an infectious disease control strategy that has an action specification that is realized in restricting movement of organisms across international borders.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000486"/>
+        <obo:IAO_0000115 xml:lang="en">A travel-related infectious disease control strategy that has an action specification that is realized in restricting movement of organisms across international borders.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">an infectious disease control strategy that has an action specification that is realized in restricting movement of organisms across international borders.</obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">A travel-related infectious disease control strategy that has an action specification that is realized in restricting movement of organisms across international borders.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BorderControlMeasure</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">border control strategy</rdfs:label>
     </owl:Class>
@@ -6141,10 +6141,10 @@ can&apos;t recall whether we should use process or processual_entity for future 
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000231 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000231">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000086"/>
-        <obo:IAO_0000115 xml:lang="en">an infectious disease control strategy whose action specification is realized in restricting travel of organims from one geographical region to another</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000486"/>
+        <obo:IAO_0000115 xml:lang="en">A travel-related infectious disease control strategy whose action specification is realized in restricting travel of organims from one ecosystem to another ecosystem</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">an infectious disease control strategy whose action specification is realized in restricting travel of organims from one geographical region to another</obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">A travel-related infectious disease control strategy whose action specification is realized in restricting travel of organims from one geographical region to another</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TravelRestrictionControlMeasure</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">travel restriction control strategy</rdfs:label>
     </owl:Class>
@@ -9968,6 +9968,16 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <obo:IAO_0000600 xml:lang="en">An identifier curated by the NCBI taxonomy database that has been used to identify the species of some organism that meets a case definition.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speciesOfCase</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">identifier for species of case</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000486 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000486">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000086"/>
+        <obo:IAO_0000111 xml:lang="en">infectious disease control strategy to prevent infection acquisition by individuals traveling from one ecosystem to another ecosystem</obo:IAO_0000111>
+        <rdfs:label xml:lang="en">travel-related infectious disease control strategy</rdfs:label>
     </owl:Class>
     
 
@@ -15009,9 +15019,9 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
             <rdf:Description/>
-        </oboInOwl:hasDefinition>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
@@ -15021,9 +15031,9 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
             <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
