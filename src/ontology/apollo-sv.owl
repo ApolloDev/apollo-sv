@@ -119,6 +119,7 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000488">
         <obo:IAO_0000111 xml:lang="en">source code version control repository URL</obo:IAO_0000111>
+        <obo:IAO_0000117 xml:lang="en">WIlliam R. Hogan</obo:IAO_0000117>
         <rdfs:comment xml:lang="en">This annotation is intended for annotating instances of software application, software module, ontology (artifact), etc. with a uniform resource locator that points to the source code version control repository where they are managed.  Note that for OWL individuals that reference a particular version of the software or ontology, this URL should point to the place in the repository where that version is located, rather than the general main page of the repository.</rdfs:comment>
         <rdfs:label xml:lang="en">source code repository URL</rdfs:label>
     </owl:AnnotationProperty>
