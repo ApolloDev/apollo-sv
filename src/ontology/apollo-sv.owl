@@ -10034,6 +10034,90 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     
 
 
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000489 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000489">
+        <rdfs:label xml:lang="en">contact isolation control measure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000230"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">ContactIsolationControlMeasure</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A case isolation control measure that has an action specification that is realized in preventing one or more infectious organisms from having physical contact with other organisms.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">A case isolation control measure that has an action specification that is realized in preventing one or more infectious organisms from having physical contact with other organisms.</obo:IAO_0000600>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000490 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000490">
+        <rdfs:label xml:lang="en">colonization duration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000243"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">colonizationDuration</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000600 xml:lang="en">A duration that measures the temporal interval occupied by some colonization.</obo:IAO_0000600>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A duration that measures the temporal interval occupied by some colonization.</obo:IAO_0000115>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000491 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000491">
+        <rdfs:label xml:lang="en">identifier of species of population</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">populationSpecies</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000115 xml:lang="en">An identifier curated by the National Center for Biotechnology Information that specifies the taxonomic classification of some population of organisms.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">An identifier curated by the National Center for Biotechnology Information that specifies the taxonomic classification of some population of organisms.</obo:IAO_0000600>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000492 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000492">
+        <rdfs:label xml:lang="en">RxNorm drug concept identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">RxNormId</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000600 xml:lang="en">An identifier curated by the National Library of Medicine as a unique string of integer numerals to be used as a standard way of denoting each concept in the RxNorm terminology.</obo:IAO_0000600>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An identifier curated by the National Library of Medicine as a unique string of integer numerals to be used as a standard way of denoting each concept in the RxNorm terminology.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000493 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000493">
+        <rdfs:label xml:lang="en">LOINC identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">LoincId</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An identifier curated by the Regenstrief Institute to be used as a standard way of denoting each term in the LOINC database.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">An identifier curated by the Regenstrief Institute to be used as a standard way of denoting each term in the LOINC database.</obo:IAO_0000600>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000494 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000494">
+        <rdfs:label xml:lang="en">laboratory test LOINC identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000493"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">testLoincId</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">A LOINC identifier that refers to some clinical laboratory test conducted in a particular context..</obo:IAO_0000600>
+        <obo:IAO_0000115 xml:lang="en">A LOINC identifier that refers to some clinical laboratory test conducted in a particular context..</obo:IAO_0000115>
+        <obo:IAO_0000117>Willliam R. Hogan</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000793 -->
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000793">
