@@ -172,6 +172,7 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
 
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000111">
         <rdfs:label>editor preferred term</rdfs:label>
+        <rdfs:label>editor preferred term~editor preferred label</rdfs:label>
         <rdfs:label xml:lang="en">editor preferred label</rdfs:label>
         <rdfs:label xml:lang="en">editor preferred term</rdfs:label>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
@@ -224,6 +225,7 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
 
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000117">
+        <rdfs:label rdf:datatype="&xsd;string">definition editor</rdfs:label>
         <rdfs:label>term editor</rdfs:label>
         <rdfs:label>definition editor</rdfs:label>
         <rdfs:label xml:lang="en">definition editor</rdfs:label>
@@ -12284,6 +12286,22 @@ for now.</obo:IAO_0000116>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBI_0000674 -->
+
+    <owl:Class rdf:about="&obo;OBI_0000674">
+        <rdfs:label xml:lang="en">center value</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: James Malone</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Monnie McGee</obo:IAO_0000117>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
+        <obo:IAO_0000118 rdf:datatype="&xsd;string">median</obo:IAO_0000118>
+        <obo:IAO_0000115 xml:lang="en">A data item that is produced as the output of a center calculation data transformation and represents the center value of the input data.</obo:IAO_0000115>
+        <obo:IAO_0000111 xml:lang="en">center value</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0000679 -->
 
     <owl:Class rdf:about="&obo;OBI_0000679">
@@ -13261,6 +13279,29 @@ school facility
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">secondarySchool</apollo_sv:APOLLO_SV_0000040>
         <rdfs:comment xml:lang="en">Key motivating use case was Synthia synthetic population data.</rdfs:comment>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMRSE_00000078 -->
+
+    <owl:Class rdf:about="&obo;OMRSE_00000078">
+        <rdfs:label xml:lang="en">workplace facility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OMRSE_00000062"/>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
+        <obo:IAO_0000117 xml:lang="en">Amanda Hicks</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMRSE_00000079 -->
+
+    <owl:Class rdf:about="&obo;OMRSE_00000079">
+        <rdfs:label xml:lang="en">workplace function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000034"/>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
+        <obo:IAO_0000117 xml:lang="en">Amanda Hicks</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">a function inhering in a material entity that is realized by that material entity being the site where the work of some organization is carried out</obo:IAO_0000115>
     </owl:Class>
     
 
