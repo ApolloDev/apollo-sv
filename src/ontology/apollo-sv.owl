@@ -12295,6 +12295,7 @@ for now.</obo:IAO_0000116>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Monnie McGee</obo:IAO_0000117>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
         <obo:IAO_0000118 rdf:datatype="&xsd;string">median</obo:IAO_0000118>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">median</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">A data item that is produced as the output of a center calculation data transformation and represents the center value of the input data.</obo:IAO_0000115>
         <obo:IAO_0000111 xml:lang="en">center value</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
@@ -13289,6 +13290,7 @@ school facility
         <rdfs:label xml:lang="en">workplace facility</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OMRSE_00000062"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">workplace</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000117 xml:lang="en">Amanda Hicks</obo:IAO_0000117>
     </owl:Class>
     
