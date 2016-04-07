@@ -1,4 +1,19 @@
 <?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
+    <!ENTITY apollo_sv "http://purl.obolibrary.org/obo/apollo_sv.owl/" >
+    <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
+    <!ENTITY Ontology1317751904226 "http://www.semanticweb.org/ontologies/2011/9/Ontology1317751904226.owl#" >
+]>
+
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/apollo_sv/dev/apollo_sv.owl#"
      xml:base="http://purl.obolibrary.org/obo/apollo_sv/dev/apollo_sv.owl"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
