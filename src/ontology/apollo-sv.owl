@@ -1520,21 +1520,21 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
         <oboInOwl:hasRelatedSynonym>
             <rdf:Description/>
         </oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasRelatedSynonym>
             <rdf:Description/>
         </oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
     </owl:ObjectProperty>
     
 
@@ -2080,6 +2080,7 @@ Note that the susceptible and infectious organisms can be of different species.<
             </owl:Restriction>
         </rdfs:subClassOf>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">latentPeriodDuration</apollo_sv:APOLLO_SV_0000040>
+        <rdfs:comment xml:lang="en">MB: In order to get the temporal occupation relations I added properties that I renamed with BFO2 URIs</rdfs:comment>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A duration of the time interval between the host acquiring an infection and the host bearing a contagiousness disposition during the same disease course within a population of hosts.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A period during which an organism of a particular species, who is infected with a particular pathogen, is not yet able to infect susceptible organisms of a particular species.  
@@ -2087,7 +2088,6 @@ Note that the susceptible and infectious organisms can be of different species.<
 Note that the susceptible and infected organisms can be of different species.
 
 </obo:IAO_0000600>
-        <rdfs:comment xml:lang="en">MB: In order to get the temporal occupation relations I added properties that I renamed with BFO2 URIs</rdfs:comment>
         <rdfs:comment xml:lang="en">The duration of the period between when an organism becomes infected and when it becomes infectious.</rdfs:comment>
     </owl:Class>
     
@@ -3925,10 +3925,6 @@ The concept derives from the epidemiological notion of ‘herd immunity,’ whic
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&obo;GO_0044409"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;APOLLO_SV_00000116"/>
-                        <owl:someValuesFrom rdf:resource="&obo;APOLLO_SV_00000114"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;BFO_0000066"/>
                         <owl:someValuesFrom>
                             <owl:Class>
@@ -3960,6 +3956,10 @@ The concept derives from the epidemiological notion of ‘herd immunity,’ whic
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;RO_0002411"/>
+                        <owl:someValuesFrom rdf:resource="&obo;APOLLO_SV_00000114"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -6420,11 +6420,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
                                 <owl:intersectionOf rdf:parseType="Collection">
                                     <rdf:Description rdf:about="&obo;OGMS_0000063"/>
                                     <owl:Restriction>
-                                        <owl:onProperty>
-                                            <rdf:Description>
-                                                <owl:inverseOf rdf:resource="&obo;APOLLO_SV_00000116"/>
-                                            </rdf:Description>
-                                        </owl:onProperty>
+                                        <owl:onProperty rdf:resource="&obo;RO_0002404"/>
                                         <owl:someValuesFrom rdf:resource="&obo;APOLLO_SV_00000114"/>
                                     </owl:Restriction>
                                 </owl:intersectionOf>
@@ -6783,10 +6779,6 @@ For example, it may take time to communicate to workers to stop vaccinating and 
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&obo;GO_0044409"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;APOLLO_SV_00000116"/>
-                        <owl:someValuesFrom rdf:resource="&obo;APOLLO_SV_00000114"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;BFO_0000066"/>
                         <owl:someValuesFrom>
                             <owl:Class>
@@ -6803,6 +6795,10 @@ For example, it may take time to communicate to workers to stop vaccinating and 
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;RO_0000057"/>
                         <owl:someValuesFrom rdf:resource="&obo;APOLLO_SV_00000166"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;RO_0002411"/>
+                        <owl:someValuesFrom rdf:resource="&obo;APOLLO_SV_00000114"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -6824,10 +6820,6 @@ For example, it may take time to communicate to workers to stop vaccinating and 
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&obo;GO_0044409"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;APOLLO_SV_00000116"/>
-                        <owl:someValuesFrom rdf:resource="&obo;APOLLO_SV_00000114"/>
-                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;BFO_0000066"/>
                         <owl:someValuesFrom>
@@ -6855,6 +6847,10 @@ For example, it may take time to communicate to workers to stop vaccinating and 
                                 </owl:intersectionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;RO_0002411"/>
+                        <owl:someValuesFrom rdf:resource="&obo;APOLLO_SV_00000114"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -10813,13 +10809,13 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000005"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000007"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000005"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">2/3/2009 Comment from OBI review.
@@ -14055,15 +14051,15 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_pir"/>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_plant"/>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gosubset_prok"/>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
     </owl:Class>
     
 
@@ -14077,12 +14073,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <obo:IAO_0000115 xml:lang="en">The emergence of an adult insect from a pupa case.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
     </owl:Class>
     
 
@@ -14096,15 +14092,15 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasAlternativeId>GO:0016280</oboInOwl:hasAlternativeId>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_generic"/>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
         <oboInOwl:hasDbXref>
             <rdf:Description/>
         </oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
     </owl:Class>
     
 
@@ -14131,12 +14127,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
         <oboInOwl:hasBroadSynonym>
             <rdf:Description/>
         </oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
         <oboInOwl:hasBroadSynonym>
             <rdf:Description/>
         </oboInOwl:hasBroadSynonym>
@@ -14171,12 +14167,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_aspergillus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_pir"/>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gosubset_prok"/>
-        <oboInOwl:hasNarrowSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasNarrowSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasNarrowSynonym>
     </owl:Class>
     
 
@@ -14188,12 +14184,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0019098"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
     </owl:Class>
     
 
@@ -15520,6 +15516,15 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
@@ -15535,21 +15540,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
