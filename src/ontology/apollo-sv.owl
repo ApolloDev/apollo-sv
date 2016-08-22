@@ -570,6 +570,14 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">commissions</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">A relation between two entities where the first entity formally requests a third party to create or execute the second entity.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">a commissions b, iff a does not participate in the creation or execution of b and participates in a legal agreement that c participates on the creation or execution of b and c getting something in exchange for that participation.</obo:IAO_0000115>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
+                    <rdf:Description rdf:about="&obo;OBI_0000245"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -579,14 +587,6 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
-                    <rdf:Description rdf:about="&obo;OBI_0000245"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1574,12 +1574,15 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
         <oboInOwl:hasOBONamespace>relationship</oboInOwl:hasOBONamespace>
         <oboInOwl:hasAlternativeId>OBO_REL:realized_as</oboInOwl:hasAlternativeId>
         <rdfs:subPropertyOf rdf:resource="&oboInOwl;ObsoleteProperty"/>
-        <oboInOwl:hasRelatedSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
@@ -1589,9 +1592,6 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
         <oboInOwl:hasRelatedSynonym>
             <rdf:Description/>
         </oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
     </owl:ObjectProperty>
     
 
@@ -1858,6 +1858,18 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
         <obo:IAO_0000600 xml:lang="en">An identifier that denotes an organism included in some infection case count.</obo:IAO_0000600>
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_00000511 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_00000511">
+        <rdfs:label xml:lang="en">infection acquisition through sexual activity with infectious host</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000265"/>
+        <obo:IAO_0000115 xml:lang="en">An infection acquistion from infectious host that is causally downstream of some potentially infectious sexual contacting</obo:IAO_0000115>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <rdfs:comment xml:lang="en">Note that infections that are acquired in this manner do not fall within the class of sexually transmitted infections (STI&apos;s), ipso facto. This type of transmission can also occur with non-STI pathogens--such as meningitis and Zika.</rdfs:comment>
     </owl:Class>
     
 
@@ -5971,7 +5983,7 @@ Note that the infected and susceptible organisms may be of different species.</o
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000203">
         <rdfs:label xml:lang="en">NCBI taxon identifier</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_00000509"/>
         <obo:IAO_0000600 rdf:datatype="&xsd;string">An identifier curated by the National Center for Biotechnology Information (NCBI) that designates a particular biological taxon (e.g., Homo sapiens).</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">NcbiTaxonId</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">An identifier curated by the NCBI Taxonomy that designates a biological taxon.</obo:IAO_0000115>
@@ -6436,7 +6448,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000232">
         <rdfs:label xml:lang="en">clade name</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_00000509"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">cladeName</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">A reference to a group or groups of organisms that are based on common ancestry.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An identifier that denotes a group of organisms or groups of organisms based on common ancestors.</obo:IAO_0000115>
@@ -6734,9 +6746,10 @@ can&apos;t recall whether we should use process or processual_entity for future 
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000248 -->
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000248">
-        <rdfs:label xml:lang="en">parametric probability distribution</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete parametric probability distribution</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000247"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">ParametricProbabilityDistribution</apollo_sv:APOLLO_SV_0000040>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
     
@@ -6757,7 +6770,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000250">
         <rdfs:label xml:lang="en">discrete parametric probability distribution</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000248"/>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000477"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">DiscreteParametricProbabilityDistribution</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
@@ -6768,7 +6781,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000251">
         <rdfs:label xml:lang="en">continuous parametric probability distribution</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000248"/>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000477"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">ContinuousParametricProbabilityDistribution</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
@@ -9890,7 +9903,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000460">
         <rdfs:label xml:lang="en">species of treated organism</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_00000509"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">speciesOfTreatedOrganism</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An identifier curated by the NCBI taxonomy database that specifies the taxonomic classification of some organism that is the recipient of some treatment.</obo:IAO_0000600>
@@ -10222,7 +10235,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000484">
         <rdfs:label xml:lang="en">identifier of species of diseased organism</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_00000509"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">speciesWithDiseasae</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">An identifier curated by the NCBI taxonomy database that has been used to specify the species of some organism in which some disease has been realized.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An identifier curated by the NCBI taxonomy database that has been used to specify the species of some organism in which some disease has been realized.</obo:IAO_0000115>
@@ -10236,7 +10249,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000485">
         <rdfs:label xml:lang="en">identifier for species of case</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_00000509"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">speciesOfCase</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
@@ -10304,11 +10317,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000491">
         <rdfs:label xml:lang="en">identifier of species of population</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_00000509"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">populationSpecies</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000115 xml:lang="en">An identifier curated by the National Center for Biotechnology Information that specifies the taxonomic classification of some population of organisms.</obo:IAO_0000115>
-        <obo:IAO_0000600 xml:lang="en">An identifier curated by the National Center for Biotechnology Information that specifies the taxonomic classification of some population of organisms.</obo:IAO_0000600>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A taxonomy identifier curated by the National Center for Biotechnology Information that specifies the taxonomic classification of some population of organisms.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">An identifier curated by the National Center for Biotechnology Information that specifies the taxonomic classification of some population of organisms.</obo:IAO_0000600>
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
     </owl:Class>
     
@@ -10908,6 +10921,84 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0010941 -->
+
+    <owl:Class rdf:about="&obo;GO_0010941">
+        <rdfs:label rdf:datatype="&xsd;string">regulation of cell death</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GO_0050794"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Any process that modulates the rate or frequency of cell death. Cell death is the specific activation or halting of processes within a cell so that its vital functions markedly cease, rather than simply deteriorating gradually over time, which culminates in cell death.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0010941</oboInOwl:id>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0019048 -->
+
+    <owl:Class rdf:about="&obo;GO_0019048">
+        <rdfs:label rdf:datatype="&xsd;string">modulation by virus of host morphology or physiology</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GO_0044003"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0019048</oboInOwl:id>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">GO:0044792</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Reactome:REACT_6323</oboInOwl:hasDbXref>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">The process in which a virus effects a change in the structure or processes of its host organism.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">VZ:886</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">host-virus interaction</oboInOwl:hasExactSynonym>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">modulation by virus of host anatomical structure or process</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">modulation by virus of host anatomy or process</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">viral interaction with host</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">viral-host process</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasBroadSynonym rdf:datatype="&xsd;string">virus-host interaction</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">virus-host process</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset rdf:resource="&obo;go#goslim_virus"/>
+        <oboInOwl:inSubset rdf:resource="&obo;go#virus_checked"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0019051 -->
+
+    <owl:Class rdf:about="&obo;GO_0019051">
+        <rdfs:label rdf:datatype="&xsd;string">induction by virus of host apoptotic process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GO_0060139"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0019051</oboInOwl:id>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">The set of viral processes that induce an apoptotic process in infected host cells, facilitating release and spread of progeny virions.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">activation by virus of host apoptosis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">activation by virus of host apoptotic programmed cell death</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">activation of apoptosis in host by virus</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">induction by virus of host apoptosis</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">induction by virus of host apoptotic programmed cell death</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">induction of apoptosis in host by virus</oboInOwl:hasExactSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0019054 -->
+
+    <owl:Class rdf:about="&obo;GO_0019054">
+        <rdfs:label rdf:datatype="&xsd;string">modulation by virus of host process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GO_0019048"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0019054</oboInOwl:id>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Reactome:REACT_6222</oboInOwl:hasDbXref>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">The process in which a virus effects a change in the processes and activities of its host organism.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">modification by virus of host cellular process</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">modulation of cellular process in host by virus</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">regulation by virus of host cellular process</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">regulation of cellular process in host by virus</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">regulation of host cellular process by virus</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">viral host cell process manipulation</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset rdf:resource="&obo;go#virus_checked"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0022414 -->
 
     <owl:Class rdf:about="&obo;GO_0022414">
@@ -10931,6 +11022,71 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <obo:IAO_0000115 rdf:datatype="&xsd;string">The biological process in which new individuals are produced by one or two multicellular organisms. The new individuals inherit some proportion of their genetic material from the parent or parents.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0035821 -->
+
+    <owl:Class rdf:about="&obo;GO_0035821">
+        <rdfs:label rdf:datatype="&xsd;string">modification of morphology or physiology of other organism</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GO_0065008"/>
+        <oboInOwl:creation_date rdf:datatype="&xsd;string">2011-04-21T01:31:51Z</oboInOwl:creation_date>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0035821</oboInOwl:id>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">The process in which an organism effects a change in the structure or processes of a second organism.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">regulation of morphology of other organism</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">regulation of morphology or physiology of other organism</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">regulation of physiological process of other organism</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">regulation of physiology of other organism</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:created_by rdf:datatype="&xsd;string">rfoulger</oboInOwl:created_by>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0039651 -->
+
+    <owl:Class rdf:about="&obo;GO_0039651">
+        <rdfs:label rdf:datatype="&xsd;string">induction by virus of host cysteine-type endopeptidase activity involved in apoptotic process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GO_0019051"/>
+        <oboInOwl:creation_date rdf:datatype="&xsd;string">2012-10-09T15:44:29Z</oboInOwl:creation_date>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Any process in which a virus increases the frequency, rate or extent of host cysteine-type endopeptidase activity (also called caspase activity) which contributes to the apoptotic process.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0039651</oboInOwl:id>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">activation of host caspases by virus</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">induction by virus of host caspase activity</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:created_by rdf:datatype="&xsd;string">rfoulger</oboInOwl:created_by>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0043067 -->
+
+    <owl:Class rdf:about="&obo;GO_0043067">
+        <rdfs:label rdf:datatype="&xsd;string">regulation of programmed cell death</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GO_0010941"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Any process that modulates the frequency, rate or extent of programmed cell death, cell death resulting from activation of endogenous cellular processes.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0043067</oboInOwl:id>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">GO:0043070</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">regulation of non-apoptotic programmed cell death</oboInOwl:hasNarrowSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0044003 -->
+
+    <owl:Class rdf:about="&obo;GO_0044003">
+        <rdfs:label rdf:datatype="&xsd;string">modification by symbiont of host morphology or physiology</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GO_0051817"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0044003</oboInOwl:id>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">The process in which a symbiont organism effects a change in the structure or processes of its host organism.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <oboInOwl:inSubset rdf:resource="&obo;go#gosubset_prok"/>
     </owl:Class>
     
 
@@ -10962,6 +11118,21 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">interspecies interaction between organisms</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;GO_0051704"/>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">Any process in which an organism has an effect on an organism of a different species.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0044531 -->
+
+    <owl:Class rdf:about="&obo;GO_0044531">
+        <rdfs:label rdf:datatype="&xsd;string">modulation of programmed cell death in other organism</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GO_0043067"/>
+        <oboInOwl:creation_date rdf:datatype="&xsd;string">2012-03-20T04:48:41Z</oboInOwl:creation_date>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A process in which an organism modulates the frequency, rate or extent of programmed cell death in a second organism.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0044531</oboInOwl:id>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <oboInOwl:created_by rdf:datatype="&xsd;string">janelomax</oboInOwl:created_by>
     </owl:Class>
     
 
@@ -11011,6 +11182,40 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0050789 -->
+
+    <owl:Class rdf:about="&obo;GO_0050789">
+        <rdfs:label rdf:datatype="&xsd;string">regulation of biological process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GO_0065007"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Any process that modulates the frequency, rate or extent of a biological process. Biological processes are regulated by many means; examples include the control of gene expression, protein modification or interaction with a protein or substrate molecule.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0050789</oboInOwl:id>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">GO:0050791</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">regulation of physiological process</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset rdf:resource="&obo;go#goslim_aspergillus"/>
+        <oboInOwl:inSubset rdf:resource="&obo;go#goslim_candida"/>
+        <oboInOwl:inSubset rdf:resource="&obo;go#gosubset_prok"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0050794 -->
+
+    <owl:Class rdf:about="&obo;GO_0050794">
+        <rdfs:label rdf:datatype="&xsd;string">regulation of cellular process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GO_0050789"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Any process that modulates the frequency, rate or extent of a cellular process, any of those that are carried out at the cellular level, but are not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0050794</oboInOwl:id>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">GO:0051244</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">regulation of cellular physiological process</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset rdf:resource="&obo;go#gosubset_prok"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0050896 -->
 
     <owl:Class rdf:about="&obo;GO_0050896">
@@ -11050,6 +11255,218 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:label xml:lang="en">multi-organism process</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">A biological process which involves another organism of the same or different species.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0051817 -->
+
+    <owl:Class rdf:about="&obo;GO_0051817">
+        <rdfs:label rdf:datatype="&xsd;string">modification of morphology or physiology of other organism involved in symbiotic interaction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GO_0035821"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0051817</oboInOwl:id>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">The process in which an organism effects a change in the structure or processes of a second organism, where the two organisms are in a symbiotic interaction.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">modification of morphology or physiology of other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">modulation of morphology or physiology of other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">regulation of morphology of other organism during symbiotic interaction</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">regulation of morphology or physiology of other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">regulation of physiological process in other organism during symbiotic interaction</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">regulation of physiology of other organism during symbiotic interaction</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset rdf:resource="&obo;go#gosubset_prok"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0052040 -->
+
+    <owl:Class rdf:about="&obo;GO_0052040">
+        <rdfs:label rdf:datatype="&xsd;string">modulation by symbiont of host programmed cell death</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GO_0052248"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Any process in which an organism modulates the frequency, rate or extent of programmed cell death in the host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0052040</oboInOwl:id>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">GO:0052152</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">modulation by symbiont of host non-apoptotic programmed cell death</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">modulation of host PCD</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset rdf:resource="&obo;go#gosubset_prok"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0052042 -->
+
+    <owl:Class rdf:about="&obo;GO_0052042">
+        <rdfs:label rdf:datatype="&xsd;string">positive regulation by symbiont of host programmed cell death</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GO_0052040"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Any process in which an organism activates, maintains or increases the frequency, rate or extent of programmed cell death in the host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">GO:0012504</oboInOwl:hasAlternativeId>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0052042</oboInOwl:id>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">GO:0052044</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">GO:0052045</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">GO:0052153</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">GO:0052397</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">GO:0052400</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">activation by organism of host programmed cell death</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">activation by organism of non-apoptotic programmed cell death in other organism</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">activation by organism of programmed cell death in other organism during symbiotic interaction</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">activation by symbiont of host programmed cell death</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">enhancement of host programmed cell death</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">enhancement of host programmed cell death by organism</oboInOwl:hasExactSynonym>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">induction by organism of non-apoptotic programmed cell death in other organism during symbiotic interaction</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">induction by organism of programmed cell death in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">induction by organism of programmed cell death in other organism involved in symbiotic interaction</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">induction by symbiont of host programmed cell death</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">induction of non-apoptotic programmed cell death by other organism</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">positive regulation by symbiont of host non-apoptotic programmed cell death</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">stimulation by symbiont of host programmed cell death</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">upregulation by symbiont of host programmed cell death</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset rdf:resource="&obo;go#gosubset_prok"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0052151 -->
+
+    <owl:Class rdf:about="&obo;GO_0052151">
+        <rdfs:label rdf:datatype="&xsd;string">positive regulation by symbiont of host apoptotic process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GO_0052501"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Any process in which an organism activates, maintains or increases the frequency, rate or extent of programmed cell death in the host, where programmed cell death proceeds by apoptosis. The host is defined as the larger of the organisms involved in a symbiotic interaction.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">GO:0033669</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">GO:0052030</oboInOwl:hasAlternativeId>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0052151</oboInOwl:id>
+        <rdfs:comment rdf:datatype="&xsd;string">Note that term is to be used to annotate gene products in the symbiont. To annotate host gene products, consider the biological process term &apos;positive regulation of apoptosis ; GO:0043065&apos;.</rdfs:comment>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">activation by organism of host apoptosis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">activation by organism of host apoptotic programmed cell death</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">activation by symbiont of host apoptosis</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">induction by organism of host apoptotic programmed cell death</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">induction by symbiont of host apoptosis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">positive regulation by organism of host apoptotic programmed cell death</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">positive regulation by symbiont of host apoptosis</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">stimulation by symbiont of host apoptosis</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">up regulation by organism of host apoptotic programmed cell death</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">up regulation by symbiont of host apoptosis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">up-regulation by organism of host apoptotic programmed cell death</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">up-regulation by symbiont of host apoptosis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">upregulation by organism of host apoptotic programmed cell death</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">upregulation by symbiont of host apoptosis</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset rdf:resource="&obo;go#gosubset_prok"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0052248 -->
+
+    <owl:Class rdf:about="&obo;GO_0052248">
+        <rdfs:label rdf:datatype="&xsd;string">modulation of programmed cell death in other organism involved in symbiotic interaction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GO_0044531"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Any process in which an organism modulates the frequency, rate or extent of programmed cell death in a second organism, where the two organisms are in a symbiotic interaction.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0052248</oboInOwl:id>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">GO:0052459</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">modulation by organism of non-apoptotic programmed cell death in other organism during symbiotic interaction</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">modulation of programmed cell death in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:inSubset rdf:resource="&obo;go#gosubset_prok"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0052501 -->
+
+    <owl:Class rdf:about="&obo;GO_0052501">
+        <rdfs:label rdf:datatype="&xsd;string">positive regulation by organism of apoptotic process in other organism involved in symbiotic interaction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GO_0052042"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Any process in which an organism activates, maintains or increases the frequency, rate or extent of programmed cell death by apoptosis in a second organism, where the two organisms are in a symbiotic interaction.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">GO:0052388</oboInOwl:hasAlternativeId>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0052501</oboInOwl:id>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">activation by organism of apoptosis in other organism during symbiotic interaction</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">activation by organism of apoptotic programmed cell death in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">induction by organism of apoptosis in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">induction by organism of apoptosis in other organism involved in symbiotic interaction</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">induction by organism of apoptotic programmed cell death in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">positive regulation by organism of apoptosis in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">positive regulation by organism of apoptosis in other organism involved in symbiotic interaction</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">positive regulation by organism of apoptotic process in other organism involved in symbiotic interaction</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">positive regulation by organism of apoptotic programmed cell death in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">stimulation by organism of apoptosis in other organism during symbiotic interaction</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">up regulation by organism of apoptosis in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">up-regulation by organism of apoptosis in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">upregulation by organism of apoptosis in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:inSubset rdf:resource="&obo;go#gosubset_prok"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0060139 -->
+
+    <owl:Class rdf:about="&obo;GO_0060139">
+        <rdfs:label rdf:datatype="&xsd;string">positive regulation of apoptotic process by virus</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GO_0052151"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Any viral process that activates or increases the frequency, rate or extent of cell death by apoptotic process.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0060139</oboInOwl:id>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">positive regulation of apoptosis by virus</oboInOwl:hasNarrowSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0060153 -->
+
+    <owl:Class rdf:about="&obo;GO_0060153">
+        <rdfs:label rdf:datatype="&xsd;string">modulation by virus of host cell cycle</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GO_0019054"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Any viral process that modulates the rate or extent of progression through the cell cycle.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0060153</oboInOwl:id>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">VZ:1636</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">modulation of host cell cycle by virus</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">regulation by virus of host cell cycle</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">regulation of host cell cycle by virus</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">viral process regulating host cell cycle</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset rdf:resource="&obo;go#goslim_virus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0065007 -->
+
+    <owl:Class rdf:about="&obo;GO_0065007">
+        <rdfs:label rdf:datatype="&xsd;string">biological regulation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Any process that modulates a measurable attribute of any biological process, quality or function.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0065007</oboInOwl:id>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <oboInOwl:hasBroadSynonym rdf:datatype="&xsd;string">regulation</oboInOwl:hasBroadSynonym>
+        <oboInOwl:inSubset rdf:resource="&obo;go#goslim_pir"/>
+        <oboInOwl:inSubset rdf:resource="&obo;go#gosubset_prok"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0065008 -->
+
+    <owl:Class rdf:about="&obo;GO_0065008">
+        <rdfs:label rdf:datatype="&xsd;string">regulation of biological quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GO_0065007"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Any process that modulates a qualitative or quantitative trait of a biological quality. A biological quality is a measurable attribute of an organism or part of an organism, such as size, mass, shape, color, etc.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">GO:0065008</oboInOwl:id>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">biological_process</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">regulation of biological attribute</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">regulation of biological characteristic</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset rdf:resource="&obo;go#gosubset_prok"/>
     </owl:Class>
     
 
@@ -11232,13 +11649,13 @@ Previous. An information content entity is a non-realizable information entity t
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000109"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000004"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000039"/>
                 <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000039"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000004"/>
                 <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -14686,15 +15103,15 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasAlternativeId>GO:0016280</oboInOwl:hasAlternativeId>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_generic"/>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDbXref>
             <rdf:Description/>
         </oboInOwl:hasDbXref>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
     </owl:Class>
     
 
@@ -14718,6 +15135,9 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0019098"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
         <oboInOwl:hasBroadSynonym>
             <rdf:Description/>
         </oboInOwl:hasBroadSynonym>
@@ -14727,9 +15147,6 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasBroadSynonym>
             <rdf:Description/>
         </oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
     </owl:Class>
     
 
@@ -14779,12 +15196,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0019098"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
     </owl:Class>
     
 
@@ -14902,12 +15319,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasOBONamespace>unit.ontology</oboInOwl:hasOBONamespace>
         <obo:IAO_0000115 xml:lang="en">A dimensionless ratio unit which denotes numbers as fractions of 100.</obo:IAO_0000115>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#unit_slim"/>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
     </owl:Class>
     
 
@@ -15568,11 +15985,11 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&obo;IAO_0000590">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0100001">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000591">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0100001">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000592">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
@@ -15598,11 +16015,11 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&obo;IAO_0000220">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000222">
-        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000101">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000222">
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
     <rdf:Description rdf:about="&dc;publisher">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
@@ -15616,11 +16033,11 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&obo;IAO_0000183">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000580">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000184">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000580">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000185">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
@@ -15754,11 +16171,11 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&obo;IAO_0000057">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000002"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000575">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000179">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000575">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&dc;type">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
@@ -15813,17 +16230,17 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&obo;IAO_0000320">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000321">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000442">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000047">
-        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
+    <rdf:Description rdf:about="&obo;IAO_0000321">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000322">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000047">
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;iao/dev/iao.owl">
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/information-artifact-ontology/"/>
@@ -15846,11 +16263,11 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&obo;IAO_0000319">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000312">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000037">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000002"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000312">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000038">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
@@ -15889,18 +16306,18 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&obo;IAO_0000307">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000429">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000308">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000429">
+    <rdf:Description rdf:about="&obo;IAO_0000422">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000301">
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">Reference</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000422">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000302">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
@@ -15910,9 +16327,6 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000304">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000144">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.obofoundry.org/ro/ro.owl#improper_part_of">
         <oboInOwl:hasDefinition>
@@ -15940,6 +16354,9 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
     </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000144">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000024">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
@@ -15957,6 +16374,9 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
     <rdf:Description rdf:about="&dc;date">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;subject">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.obofoundry.org/ro/ro.owl#integral_part_of">
@@ -15984,9 +16404,6 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-    </rdf:Description>
-    <rdf:Description rdf:about="&dc;subject">
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;iao/dev/iao-main.owl">
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/information-artifact-ontology/"/>
@@ -16041,12 +16458,12 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
     <rdf:Description rdf:about="&dc;relation">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&Ontology1317751904226;IAO_0000117">
+        <rdfs:label>bad_pno_import_3</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000096">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="&Ontology1317751904226;IAO_0000117">
-        <rdfs:label>bad_pno_import_3</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000097">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000002"/>
@@ -16063,11 +16480,14 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&dc;language">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000093">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&dc;language">
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    <rdf:Description rdf:about="&obo;OBI_0001620">
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">Latitude</apollo_sv:APOLLO_SV_0000040>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.obofoundry.org/ro/ro.owl#relationship">
         <oboInOwl:hasDefinition>
@@ -16095,9 +16515,6 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;OBI_0001620">
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">Latitude</apollo_sv:APOLLO_SV_0000040>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;OBI_0001621">
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">Longitude</apollo_sv:APOLLO_SV_0000040>
     </rdf:Description>
@@ -16111,27 +16528,6 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
@@ -16147,9 +16543,30 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
@@ -16175,13 +16592,13 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000403">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000128">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000121"/>
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000226"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000403">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000088">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
