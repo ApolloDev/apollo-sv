@@ -314,13 +314,6 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     </rdf:Description>
     
 
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002222 -->
-
-    <owl:AnnotationProperty rdf:about="&obo;RO_0002222"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/STATO_0000032 -->
 
     <owl:AnnotationProperty rdf:about="&obo;STATO_0000032">
