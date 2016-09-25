@@ -1744,9 +1744,9 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/APOLLO_00000503 -->
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000503 -->
 
-    <owl:Class rdf:about="&obo;APOLLO_00000503">
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000503">
         <rdfs:label xml:lang="en">latitude and longitude coordinate pair</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;GEO_000000788"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">LatLongPair</apollo_sv:APOLLO_SV_0000040>
@@ -1758,9 +1758,9 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/APOLLO_00000504 -->
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000504 -->
 
-    <owl:Class rdf:about="&obo;APOLLO_00000504">
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000504">
         <rdfs:label xml:lang="en">age in years datum</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000416"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">ageInYears</apollo_sv:APOLLO_SV_0000040>
@@ -1772,9 +1772,9 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/APOLLO_00000505 -->
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000505 -->
 
-    <owl:Class rdf:about="&obo;APOLLO_00000505">
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000505">
         <rdfs:label xml:lang="en">contamination period duration</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000243"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">contaminationDuration</apollo_sv:APOLLO_SV_0000040>
@@ -1786,11 +1786,11 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/APOLLO_00000506 -->
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000506 -->
 
-    <owl:Class rdf:about="&obo;APOLLO_00000506">
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000506">
         <rdfs:label xml:lang="en">healthcare facility identifier</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;APOLLO_00000508"/>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000508"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">healthcareFacilityId</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">A healthcare facility identifier that refers to some architectural structure that is the bearer of some healthcare function.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A healthcare facility identifier that refers to some architectural structure that is the bearer of some healthcare function.</obo:IAO_0000600>
@@ -1800,9 +1800,9 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/APOLLO_00000507 -->
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000507 -->
 
-    <owl:Class rdf:about="&obo;APOLLO_00000507">
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000507">
         <rdfs:label xml:lang="en">disease transmission model identifier</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">modelId</apollo_sv:APOLLO_SV_0000040>
@@ -1814,9 +1814,9 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/APOLLO_00000508 -->
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000508 -->
 
-    <owl:Class rdf:about="&obo;APOLLO_00000508">
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000508">
         <rdfs:label xml:lang="en">facility identifier</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">FacilityId</apollo_sv:APOLLO_SV_0000040>
@@ -1828,9 +1828,9 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/APOLLO_00000509 -->
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000509 -->
 
-    <owl:Class rdf:about="&obo;APOLLO_00000509">
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000509">
         <rdfs:label xml:lang="en">taxonomy identifier</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">taxonId</apollo_sv:APOLLO_SV_0000040>
@@ -1841,9 +1841,9 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/APOLLO_00000510 -->
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000510 -->
 
-    <owl:Class rdf:about="&obo;APOLLO_00000510">
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000510">
         <rdfs:label xml:lang="en">disease case identifier</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">caseId</apollo_sv:APOLLO_SV_0000040>
@@ -1855,9 +1855,9 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/APOLLO_00000511 -->
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000511 -->
 
-    <owl:Class rdf:about="&obo;APOLLO_00000511">
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000511">
         <rdfs:label xml:lang="en">infection acquisition through sexual activity with infectious host</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000265"/>
         <obo:IAO_0000115 xml:lang="en">An infection acquistion from infectious host that is causally downstream of some potentially infectious sexual contacting</obo:IAO_0000115>
@@ -1867,9 +1867,9 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/APOLLO_00000512 -->
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000512 -->
 
-    <owl:Class rdf:about="&obo;APOLLO_00000512">
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000512">
         <rdfs:label xml:lang="en">rate of hydrological precipitation</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0001554"/>
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
@@ -1879,9 +1879,9 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/APOLLO_00000513 -->
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000513 -->
 
-    <owl:Class rdf:about="&obo;APOLLO_00000513">
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000513">
         <rdfs:label xml:lang="en">mean rate of hydrological precipitation</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000679"/>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
@@ -1891,9 +1891,9 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/APOLLO_00000514 -->
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000514 -->
 
-    <owl:Class rdf:about="&obo;APOLLO_00000514">
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000514">
         <rdfs:label xml:lang="en">mean air temperature</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000679"/>
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
@@ -1903,9 +1903,9 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/APOLLO_00000515 -->
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000515 -->
 
-    <owl:Class rdf:about="&obo;APOLLO_00000515">
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000515">
         <rdfs:label xml:lang="en">potentially infectious sexual contacting</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;NBO_0000034"/>
         <obo:IAO_0000115 xml:lang="en">A sexual activity with at least one infectious host as participant where the infectious host(s) are infected with a pathogen that has a disposition to infect the tissues of the non-infected host that came into physical contact with the infectious host during the activity.</obo:IAO_0000115>
@@ -6024,7 +6024,7 @@ Note that the infected and susceptible organisms may be of different species.</o
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000203">
         <rdfs:label xml:lang="en">NCBI taxon identifier</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;APOLLO_00000509"/>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000509"/>
         <obo:IAO_0000600 rdf:datatype="&xsd;string">An identifier curated by the National Center for Biotechnology Information (NCBI) that designates a particular biological taxon (e.g., Homo sapiens).</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">NcbiTaxonId</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">An identifier curated by the NCBI Taxonomy that designates a biological taxon.</obo:IAO_0000115>
@@ -6489,7 +6489,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000232">
         <rdfs:label xml:lang="en">clade name</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;APOLLO_00000509"/>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000509"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">cladeName</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">A reference to a group or groups of organisms that are based on common ancestry.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An identifier that denotes a group of organisms or groups of organisms based on common ancestors.</obo:IAO_0000115>
@@ -9944,7 +9944,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000460">
         <rdfs:label xml:lang="en">species of treated organism</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;APOLLO_00000509"/>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000509"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">speciesOfTreatedOrganism</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An identifier curated by the NCBI taxonomy database that specifies the taxonomic classification of some organism that is the recipient of some treatment.</obo:IAO_0000600>
@@ -10276,7 +10276,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000484">
         <rdfs:label xml:lang="en">identifier of species of diseased organism</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;APOLLO_00000509"/>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000509"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">speciesWithDiseasae</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">An identifier curated by the NCBI taxonomy database that has been used to specify the species of some organism in which some disease has been realized.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An identifier curated by the NCBI taxonomy database that has been used to specify the species of some organism in which some disease has been realized.</obo:IAO_0000115>
@@ -10290,7 +10290,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000485">
         <rdfs:label xml:lang="en">identifier for species of case</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;APOLLO_00000509"/>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000509"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">speciesOfCase</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
@@ -10358,7 +10358,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000491">
         <rdfs:label xml:lang="en">identifier of species of population</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;APOLLO_00000509"/>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000509"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">populationSpecies</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A taxonomy identifier curated by the National Center for Biotechnology Information that specifies the taxonomic classification of some population of organisms.</obo:IAO_0000115>
