@@ -1934,207 +1934,6 @@ Even in the case of a simulated disaster scenario where actual ambulances, fire 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_0000000517 -->
-
-    <owl:Class rdf:about="&obo;APOLLO_SV_0000000517">
-        <rdfs:label xml:lang="en">prioritization scheme for control measure</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000007"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">controlMeasureNamedPrioritizationScheme</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">An action specification that is part of an infectious disease control strategy that has at least one rule pertaining to some control measure.</obo:IAO_0000600>
-        <obo:IAO_0000115 xml:lang="en">An action specification that is part of an infectious disease control strategy that has at least one rule pertaining to some control measure.</obo:IAO_0000115>
-        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_0000000518 -->
-
-    <owl:Class rdf:about="&obo;APOLLO_SV_0000000518">
-        <rdfs:label xml:lang="en">one-way sensitivity analysis of a continuous variable</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0200000"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">OneWaySensitivityAnalysisOfContinousVariable</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">A data transformation that takes as its input exactly one continuous variable as a value and assesses whether any statistically significant change to that variable will produce some change to the model&apos;s output.</obo:IAO_0000600>
-        <obo:IAO_0000115 xml:lang="en">A data transformation that takes as its input exactly one continuous variable as a value and assesses whether any statistically significant change to that variable will produce some change to the model&apos;s output.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_0000000519 -->
-
-    <owl:Class rdf:about="&obo;APOLLO_SV_0000000519">
-        <rdfs:label xml:lang="en">citation identifier</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">referenceId</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000115 xml:lang="en">An identifier that is an integer numeral that denotes some citation.</obo:IAO_0000115>
-        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">An identifier that is an integer numeral that denotes some citation.</obo:IAO_0000600>
-        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_0000000520 -->
-
-    <owl:Class rdf:about="&obo;APOLLO_SV_0000000520">
-        <rdfs:label xml:lang="en">location of sampling process</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;GEO_000000372"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">whereSampled</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">A geographic region that contains a sampling process.</obo:IAO_0000600>
-        <obo:IAO_0000115 xml:lang="en">A geographic region that contains a sampling process.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_0000000529 -->
-
-    <owl:Class rdf:about="&obo;APOLLO_SV_0000000529">
-        <rdfs:label xml:lang="en">conditional probability</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000470"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">conditionalProbability</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">A probability whose value is dependent upon the occurrence, known or presumed, of some process.</obo:IAO_0000600>
-        <obo:IAO_0000115 xml:lang="en">A probability whose value is dependent upon the occurrence, known or presumed, of some process.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_0000000530 -->
-
-    <owl:Class rdf:about="&obo;APOLLO_SV_0000000530">
-        <rdfs:label xml:lang="en">probability of infection over time</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_0000000529"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">probabilityOfInfectionOverTime</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A conditional probability whose value is dependent upon the duration of some colonization or infection.</obo:IAO_0000115>
-        <obo:IAO_0000600 xml:lang="en">A conditional probability whose value is dependent upon the duration of some colonization or infection.</obo:IAO_0000600>
-        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_0000000531 -->
-
-    <owl:Class rdf:about="&obo;APOLLO_SV_0000000531">
-        <rdfs:label xml:lang="en">epidemic threshold</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
-        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A data item that specifies the number of susceptible organisms necessary for an epidemic to occur within a population.</obo:IAO_0000115>
-        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_0000000532 -->
-
-    <owl:Class rdf:about="&obo;APOLLO_SV_0000000532">
-        <rdfs:label xml:lang="en">human travel</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000480"/>
-        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A geographical migration of an organism belonging to the species Homo sapiens.</obo:IAO_0000115>
-        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_0000000533 -->
-
-    <owl:Class rdf:about="&obo;APOLLO_SV_0000000533">
-        <rdfs:label xml:lang="en">human air travel</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_0000000532"/>
-        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">Human travel that involves 1) movement from one geographical region to another through the air as a temporal proper part, and 2) the use of some processed material (e.g., airplane, hang glider) for propulsion that has some function of mechanical flight.</obo:IAO_0000115>
-        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_0000000534 -->
-
-    <owl:Class rdf:about="&obo;APOLLO_SV_0000000534">
-        <rdfs:label xml:lang="en">human mobility data item</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
-        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A data item that is about one or more instances of human travel, and that specifies the geographical start location, geographical end location, and the geographical regions visited throughout the process.</obo:IAO_0000115>
-        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_0000000535 -->
-
-    <owl:Class rdf:about="&obo;APOLLO_SV_0000000535">
-        <rdfs:label xml:lang="en">software license</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000310"/>
-        <obo:IAO_0000115 xml:lang="en">A document that is about some software and contains one or more conditional specifications that specify the use and redistribution of the software.</obo:IAO_0000115>
-        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">A document that is about some software and contains one or more conditional specifications that specify the use and redistribution of the software.</obo:IAO_0000600>
-        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_0000000536 -->
-
-    <owl:Class rdf:about="&obo;APOLLO_SV_0000000536">
-        <rdfs:label xml:lang="en">complete software license identifier</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">SoftwareLicenseIdentification</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An identifier that refers to a specific software license.</obo:IAO_0000115>
-        <obo:IAO_0000600 xml:lang="en">An identifier that refers to a specific software license.</obo:IAO_0000600>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_0000000537 -->
-
-    <owl:Class rdf:about="&obo;APOLLO_SV_0000000537">
-        <rdfs:label xml:lang="en">software license version identifier</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">licenseVersion</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">An identifier that, as part of a complete software license identifier, refers to one specific version of the software license.</obo:IAO_0000600>
-        <obo:IAO_0000115 xml:lang="en">An identifier that, as part of a complete software license identifier, refers to one specific version of the software license.</obo:IAO_0000115>
-        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_0000000538 -->
-
-    <owl:Class rdf:about="&obo;APOLLO_SV_0000000538">
-        <rdfs:label xml:lang="en">software license identifier</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">licenseName</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000600 xml:lang="en">An identifier that refers to all versions of a specific software license.</obo:IAO_0000600>
-        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An identifier that refers to all versions of a specific software license.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_0000000539 -->
-
-    <owl:Class rdf:about="&obo;APOLLO_SV_0000000539">
-        <rdfs:label xml:lang="en">software license URL</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000019"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">licenseLocation</apollo_sv:APOLLO_SV_0000040>
-        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
-        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">A unique resource locator that constitutes a reference to some software license.</obo:IAO_0000600>
-        <obo:IAO_0000115 xml:lang="en">A unique resource locator that constitutes a reference to some software license.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000006 -->
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000006">
@@ -10833,7 +10632,63 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <obo:IAO_0000111 xml:lang="en">host population</obo:IAO_0000111>
         <obo:IAO_0000118 xml:lang="en">population of host organisms</obo:IAO_0000118>
     </owl:Class>
+
+
+
+   <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000517 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000517">
+        <rdfs:label xml:lang="en">prioritization scheme for control measure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000007"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">controlMeasureNamedPrioritizationScheme</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">An action specification that is part of an infectious disease control strategy that has at least one rule pertaining to some control measure.</obo:IAO_0000600>
+        <obo:IAO_0000115 xml:lang="en">An action specification that is part of an infectious disease control strategy that has at least one rule pertaining to some control measure.</obo:IAO_0000115>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+    </owl:Class>
     
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000518 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000518">
+        <rdfs:label xml:lang="en">one-way sensitivity analysis of a continuous variable</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0200000"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">OneWaySensitivityAnalysisOfContinousVariable</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">A data transformation that takes as its input exactly one continuous variable as a value and assesses whether any statistically significant change to that variable will produce some change to the model&apos;s output.</obo:IAO_0000600>
+        <obo:IAO_0000115 xml:lang="en">A data transformation that takes as its input exactly one continuous variable as a value and assesses whether any statistically significant change to that variable will produce some change to the model&apos;s output.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000519 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000519">
+        <rdfs:label xml:lang="en">citation identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">referenceId</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000115 xml:lang="en">An identifier that is an integer numeral that denotes some citation.</obo:IAO_0000115>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">An identifier that is an integer numeral that denotes some citation.</obo:IAO_0000600>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000520 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000520">
+        <rdfs:label xml:lang="en">location of sampling process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;GEO_000000372"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">whereSampled</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">A geographic region that contains a sampling process.</obo:IAO_0000600>
+        <obo:IAO_0000115 xml:lang="en">A geographic region that contains a sampling process.</obo:IAO_0000115>
+    </owl:Class> 
+
 
 
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000521 -->
@@ -10885,7 +10740,152 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <rdfs:comment xml:lang="en">The interactions between each organism as they move between these facilities may also be included in the data set.</rdfs:comment>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
     </owl:Class>
+
     
+    
+<!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000529 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000529">
+        <rdfs:label xml:lang="en">conditional probability</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000470"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">conditionalProbability</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">A probability whose value is dependent upon the occurrence, known or presumed, of some process.</obo:IAO_0000600>
+        <obo:IAO_0000115 xml:lang="en">A probability whose value is dependent upon the occurrence, known or presumed, of some process.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000530 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000530">
+        <rdfs:label xml:lang="en">probability of infection over time</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000529"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">probabilityOfInfectionOverTime</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A conditional probability whose value is dependent upon the duration of some colonization or infection.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">A conditional probability whose value is dependent upon the duration of some colonization or infection.</obo:IAO_0000600>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000531 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000531">
+        <rdfs:label xml:lang="en">epidemic threshold</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A data item that specifies the number of susceptible organisms necessary for an epidemic to occur within a population.</obo:IAO_0000115>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000532 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000532">
+        <rdfs:label xml:lang="en">human travel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000480"/>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A geographical migration of an organism belonging to the species Homo sapiens.</obo:IAO_0000115>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000533 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000533">
+        <rdfs:label xml:lang="en">human air travel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000532"/>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">Human travel that involves 1) movement from one geographical region to another through the air as a temporal proper part, and 2) the use of some processed material (e.g., airplane, hang glider) for propulsion that has some function of mechanical flight.</obo:IAO_0000115>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000534 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000534">
+        <rdfs:label xml:lang="en">human mobility data item</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A data item that is about one or more instances of human travel, and that specifies the geographical start location, geographical end location, and the geographical regions visited throughout the process.</obo:IAO_0000115>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000535 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000535">
+        <rdfs:label xml:lang="en">software license</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000310"/>
+        <obo:IAO_0000115 xml:lang="en">A document that is about some software and contains one or more conditional specifications that specify the use and redistribution of the software.</obo:IAO_0000115>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">A document that is about some software and contains one or more conditional specifications that specify the use and redistribution of the software.</obo:IAO_0000600>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000536 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000536">
+        <rdfs:label xml:lang="en">complete software license identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">SoftwareLicenseIdentification</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An identifier that refers to a specific software license.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">An identifier that refers to a specific software license.</obo:IAO_0000600>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000537 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000537">
+        <rdfs:label xml:lang="en">software license version identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">licenseVersion</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">An identifier that, as part of a complete software license identifier, refers to one specific version of the software license.</obo:IAO_0000600>
+        <obo:IAO_0000115 xml:lang="en">An identifier that, as part of a complete software license identifier, refers to one specific version of the software license.</obo:IAO_0000115>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000538 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000538">
+        <rdfs:label xml:lang="en">software license identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">licenseName</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000600 xml:lang="en">An identifier that refers to all versions of a specific software license.</obo:IAO_0000600>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An identifier that refers to all versions of a specific software license.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000539 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000539">
+        <rdfs:label xml:lang="en">software license URL</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000019"/>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">licenseLocation</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">A unique resource locator that constitutes a reference to some software license.</obo:IAO_0000600>
+        <obo:IAO_0000115 xml:lang="en">A unique resource locator that constitutes a reference to some software license.</obo:IAO_0000115>
+    </owl:Class>
+
 
 
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000793 -->
