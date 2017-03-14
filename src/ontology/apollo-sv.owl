@@ -1,32 +1,25 @@
 <?xml version="1.0"?>
-
-<!DOCTYPE rdf:RDF [
-    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
-    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
-    <!ENTITY apollo_sv "http://purl.obolibrary.org/obo/apollo_sv.owl/" >
-    <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
-    <!ENTITY Ontology1317751904226 "http://www.semanticweb.org/ontologies/2011/9/Ontology1317751904226.owl#" >
-]>
-
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/apollo_sv/dev/apollo_sv.owl#"
-     xml:base="http://purl.obolibrary.org/obo/apollo_sv/dev/apollo_sv.owl"
-     xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/apollo_sv/dev/apollo_sv.owl/"
+     xml:base="http://purl.obolibrary.org/obo/apollo_sv/dev/apollo_sv.owl/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:apollo_sv="http://purl.obolibrary.org/obo/apollo_sv.owl/"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:Ontology1317751904226="http://www.semanticweb.org/ontologies/2011/9/Ontology1317751904226.owl#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/apollo_sv/dev/apollo_sv.owl">
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/geo/dev/geo.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo/2014-05-03/classes-only.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ro/core.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/pno.owl"/>
         <dc:title xml:lang="en">Apollo Structured Vocabulary (Apollo-SV)</dc:title>
         <dc:contributor>Amanda Hicks</dc:contributor>
         <dc:contributor>Matt Diller</dc:contributor>
@@ -39,11 +32,6 @@
         <dc:contributor>Josh Hanna</dc:contributor>
         <rdfs:comment xml:lang="en">When citing Apollo-SV, use the permanent URL of the ontology: http://purl.obolibrary.org/obo/apollo_sv.owl.  When referencing a specific component of the Apollo-SV such as a class, object property, annotation property, or individual, use the component&apos;s Uniform Resource Identifier (URI).</rdfs:comment>
         <dc:contributor>Shawn T. Brown</dc:contributor>
-        <owl:imports rdf:resource="&obo;iao.owl"/>
-        <owl:imports rdf:resource="&obo;bfo/2014-05-03/classes-only.owl"/>
-        <owl:imports rdf:resource="&obo;geo/dev/geo.owl"/>
-        <owl:imports rdf:resource="&obo;iao/pno.owl"/>
-        <owl:imports rdf:resource="&obo;ro/core.owl"/>
     </owl:Ontology>
     
 
@@ -853,7 +841,6 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/BFO_0000066 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000066">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <obo:IAO_0000118 xml:lang="en">occurs_in</obo:IAO_0000118>
         <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/ido.owl</obo:IAO_0000412>
         <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
@@ -7774,6 +7761,12 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000114"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000118"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000115"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000111 xml:lang="en">infection in an ecosystem</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">A process comprised of numerous infections and infection acquisitions with a particular pathogen in one or more populations of hosts.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
@@ -11295,9 +11288,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <!-- http://purl.obolibrary.org/obo/BFO_0000003 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10239"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000003"/>
     
 
 
@@ -13760,7 +13751,7 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_12814 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_12814">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_352162"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_11245"/>
         <obo:IAO_0000117 xml:lang="en">Mirela L Vasconcelos</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">respiratory syncytial virus RS</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">respiratory syncytial virus RS virus</obo:IAO_0000118>
@@ -14710,16 +14701,6 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <obo:IAO_0000117 xml:lang="en">Mirela L Vasconcelos</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">Euglenozoans</obo:IAO_0000118>
         <rdfs:label xml:lang="en">Euglenozoa</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCBITaxon_352162 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_352162">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_11245"/>
-        <obo:IAO_0000117 xml:lang="en">Mirela L Vasconcelos</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">unclassified Pneumovirus</rdfs:label>
     </owl:Class>
     
 
@@ -17184,7 +17165,6 @@ t justified by any of the individual, prior studies. Many systematic reviews als
     <!-- http://purl.obolibrary.org/obo/OBI_0100026 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0100026">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
         <obo:IAO_0000111 xml:lang="en">organism</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000121"/>
         <obo:IAO_0000115 xml:lang="en">A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs.</obo:IAO_0000115>
@@ -20790,45 +20770,6 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Longitude</apollo_sv:APOLLO_SV_0000040>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0001000">
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
@@ -20844,9 +20785,21 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
@@ -20868,6 +20821,18 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
@@ -20877,15 +20842,30 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
             <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0001018">
         <oboInOwl:hasDefinition>
@@ -21267,5 +21247,5 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
 
 
 
-<!-- Generated by the OWL API (version 4.2.6) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
 
