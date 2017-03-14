@@ -3015,7 +3015,7 @@ Preventable outcomes include but are not limited to infection, infectiousness, s
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000049">
         <rdfs:label xml:lang="en">antiviral efficacy delay</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000416"/>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000243"/>
         <obo:IAO_0000600 xml:lang="en">The duration of time (expressed in time steps) between initiation of a particular antiviral treatment to an organism and when the organism becomes non infectious or, if the antiviral is being administered prophylactically, protected from infection. </obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">The value of the time interval between an organism&apos;s taking antivirals against a specific infectious agent and the organism’s losing its infectious agent host role. </obo:IAO_0000115>
     </owl:Class>
@@ -4437,6 +4437,7 @@ An infection is acquired from an infectious organism or a contaminated thing.
     <owl:Class rdf:about="&obo;APOLLO_SV_00000125">
         <rdfs:label xml:lang="en">school calendar</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
         <obo:IAO_0000600 xml:lang="en">The time steps that a school will be in session.</obo:IAO_0000600>
     </owl:Class>
     
@@ -4866,6 +4867,7 @@ Somehow, it&apos;s not innate and it&apos;s temporary, ie, the body will eventua
     <owl:Class rdf:about="&obo;APOLLO_SV_00000148">
         <rdfs:label xml:lang="en">random number seed</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000033"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
         <obo:IAO_0000600 xml:lang="en">random number seed</obo:IAO_0000600>
     </owl:Class>
     
@@ -5964,7 +5966,7 @@ Note that the infected and susceptible organisms may be of different species.</o
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000191">
         <rdfs:label xml:lang="en">transmission coefficient</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0001554"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">beta</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">An information content entity that represents the rate that an infection moves from infected individuals to susceptible individuals in a population.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An information content entity that represents the rate that an infection moves from infected individuals to susceptible individuals in a population.</obo:IAO_0000600>
@@ -6071,6 +6073,7 @@ Note that the infected and susceptible organisms may be of different species.</o
     <owl:Class rdf:about="&obo;APOLLO_SV_00000198">
         <rdfs:label xml:lang="en">agent model ecosystem census description</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
         <rdfs:comment xml:lang="en">At present, this class corresponds with an XSD type that contains authentication plus information needed to generate a Synthia synthetic population dataset including (1) geographical location and (2) a list of household characteristics.</rdfs:comment>
     </owl:Class>
     
@@ -6081,7 +6084,7 @@ Note that the infected and susceptible organisms may be of different species.</o
     <owl:Class rdf:about="&obo;APOLLO_SV_00000199">
         <rdfs:label xml:lang="en">compartment model population and environment census</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000173"/>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">CompartmentalModelPopulationAndEnvironmentCensus</apollo_sv:APOLLO_SV_0000040>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
         <rdfs:comment xml:lang="en">The Apollo XSD allows us to specify counts of certain subpopulations and abiotic ecosystem elements for a compartmental model (vs. specifying each individual in the population as in agent model population and environment census).</rdfs:comment>
     </owl:Class>
     
@@ -6250,7 +6253,6 @@ So I am comfortable with disease outcome as a process.  It is also consistent wi
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000209">
         <rdfs:label xml:lang="en">infected organism</rdfs:label>
-        <rdfs:label xml:lang="en">organism in latent period of infection</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -6273,6 +6275,7 @@ So I am comfortable with disease outcome as a process.  It is also consistent wi
 Note that the infected and sucseptible organisms may be of different species.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An infectious agent host who is NOT able to transmit the infection to another organism of the same species.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000111 xml:lang="en">organism in latent period of infection</obo:IAO_0000111>
     </owl:Class>
     
 
@@ -6394,7 +6397,7 @@ Note that the infected and sucseptible organisms may be of different species.</o
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000219">
         <rdfs:label xml:lang="en">Apollo pathogen code</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">ApolloPathogenCode</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">An identifier that represents the taxonomy of a pathogen by a required NCBI Taxonomy identifier AND an optional clade name.
 
@@ -6784,7 +6787,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000241">
         <rdfs:label xml:lang="en">age range category</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0001931"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">AgeRangeCategoryDefinition</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">An information content entity specifying the upper and lower limit of a range of ages of continuants.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An information content entity specifying the upper and lower limit of a range of ages of continuants.</obo:IAO_0000600>
@@ -9392,7 +9395,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000412">
         <rdfs:label xml:lang="en">leakage rate of Wolbachia infection in mosquito population infected with Wolbachia</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/UO#UO_0000280"/>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0001554"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">wolbachiaEffectOnLeakageRate</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">The rate at which offspring of the Wolbachia-infected female mosquito subpopulation (of the overall mosquito population) are not infected with Wolbachia.</obo:IAO_0000600>
@@ -9406,7 +9409,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000413">
         <rdfs:label xml:lang="en">transmission rate of pathogen to human from Wolbachia-infected mosquito bites</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/UO#UO_0000280"/>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0001554"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">wolbachiaEffectOnVectorialCapacity</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
@@ -9639,7 +9642,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000430">
         <rdfs:label xml:lang="en">ring diameter in meters</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0001933"/>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0001931"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">ringDiameterInMeters</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">A scalar value specification that gives the diameter in meters of the circular area around which all organisms in a population are living will receive a vaccination as part of a ring vaccination control measure.</obo:IAO_0000115>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
@@ -9821,7 +9824,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000443">
         <rdfs:label xml:lang="en">shade affinity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000470"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">shadeAffinity</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000115 xml:lang="en">An information content entity that specifies the probability that a given mosquito will realize a disposition to seek out a shaded environment when it isn&apos;t seeking a host or ovisite.</obo:IAO_0000115>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
@@ -9933,7 +9936,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000451">
         <rdfs:label xml:lang="en">affinity for buildings</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+        <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000470"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">buildingAffinity</apollo_sv:APOLLO_SV_0000040>
         <obo:IAO_0000600 xml:lang="en">An information content entity that specifies the probability that a given mosquito realizes some disposition to seek out a building if it isn&apos;t seeking a host or ovisite.</obo:IAO_0000600>
         <obo:IAO_0000115 xml:lang="en">An information content entity that specifies the probability that a given mosquito realizes some disposition to seek out a building if it isn&apos;t seeking a host or ovisite.</obo:IAO_0000115>
@@ -11231,6 +11234,45 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">A Susceptible-Infected-Resistant model that represents exactly two infections in ecosystem by exactly two pathogens.</obo:IAO_0000600>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000554 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000554">
+        <rdfs:label xml:lang="en">disease surveillance data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000100"/>
+        <obo:IAO_0000115 xml:lang="en">A data set that is about some disease surveillance.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">A data set that is about some disease surveillance.</obo:IAO_0000600>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000555 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000555">
+        <rdfs:label xml:lang="en">disease transmission tree estimator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000064"/>
+        <obo:IAO_0000600 xml:lang="en">An algorithm that has specified output some transmission tree.</obo:IAO_0000600>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An algorithm that has specified output some transmission tree.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000556 -->
+
+    <owl:Class rdf:about="&obo;APOLLO_SV_00000556">
+        <rdfs:label xml:lang="en">mechanical flight function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000034"/>
+        <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A function inhering in some device that is realized by some movement process in the atmosphere in which the device is participant in.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">A function inhering in some device that is realized by some movement process in the atmosphere in which the device is participant in.</obo:IAO_0000600>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
     </owl:Class>
     
 
