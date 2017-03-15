@@ -1746,6 +1746,9 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
         <oboInOwl:hasOBONamespace>relationship</oboInOwl:hasOBONamespace>
         <oboInOwl:hasAlternativeId>OBO_REL:realized_as</oboInOwl:hasAlternativeId>
         <rdfs:subPropertyOf rdf:resource="&oboInOwl;ObsoleteProperty"/>
+        <oboInOwl:hasRelatedSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
@@ -1755,30 +1758,27 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>
             <rdf:Description/>
         </oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasRelatedSynonym>
             <rdf:Description/>
         </oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
             <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
@@ -3735,7 +3735,7 @@ simulation run length</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000088 -->
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000088">
-        <rdfs:label xml:lang="en">count of exposed population</rdfs:label>
+        <rdfs:label xml:lang="en">count of contacted population</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000032"/>
         <obo:IAO_0000115>The count of individuals in an exposed population (empirical or virtual).</obo:IAO_0000115>
         <obo:IAO_0000600>The count of individuals in an exposed population (empirical or virtual).</obo:IAO_0000600>
@@ -5120,7 +5120,7 @@ I checked because an infection and immunity census would involve two different c
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000156 -->
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000156">
-        <rdfs:label xml:lang="en">infectious population</rdfs:label>
+        <rdfs:label xml:lang="en">contagious population</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000516"/>
         <obo:IAO_0000115 xml:lang="en">A population of host organisms undergoing infection that are contagious.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A population of host organisms undergoing infection that are contagious.</obo:IAO_0000600>
@@ -5940,7 +5940,7 @@ I checked because an infection and immunity census would involve two different c
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000190 -->
 
     <owl:Class rdf:about="&obo;APOLLO_SV_00000190">
-        <rdfs:label xml:lang="en">infectious organism</rdfs:label>
+        <rdfs:label xml:lang="en">contagious organism</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -5954,10 +5954,10 @@ I checked because an infection and immunity census would involve two different c
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000238"/>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="&xsd;string">infectious</apollo_sv:APOLLO_SV_0000040>
+        <obo:IAO_0000115 xml:lang="en">A host who is able to transmit some infection to another organism.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An infected organism of a particular species who is able to transmit the infection to a susceptible organism of a particular species.
 
 Note that the infected and susceptible organisms may be of different species.</obo:IAO_0000600>
-        <obo:IAO_0000115 xml:lang="en">An infectious agent host who is able to transmit the infection to another organism.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -12533,13 +12533,13 @@ Previous. An information content entity is a non-realizable information entity t
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000109"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000004"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000039"/>
                 <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000039"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000004"/>
                 <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -12640,13 +12640,13 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000005"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000007"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000005"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">2/3/2009 Comment from OBI review.
@@ -12983,16 +12983,16 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <ncbitaxon:has_rank rdf:resource="&obo;NCBITaxon_genus"/>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">Alphaviridae</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_11019"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="&xsd;string">arboviruses group A</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_11019"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#genbank_common_name"/>
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Alphaviridae</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_11019"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
     </owl:Axiom>
     
 
@@ -13010,6 +13010,12 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <ncbitaxon:has_rank rdf:resource="&obo;NCBITaxon_species"/>
     </owl:Class>
     <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">eastern equine encephalomyelitis EEE</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_11021"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="&xsd;string">eastern equine encephalomyelitis virus EEEV</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_11021"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
@@ -13017,12 +13023,6 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="&xsd;string">Eastern equine encephalomyelitis virus</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_11021"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">eastern equine encephalomyelitis EEE</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_11021"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
@@ -13181,6 +13181,12 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <ncbitaxon:has_rank rdf:resource="&obo;NCBITaxon_species"/>
     </owl:Class>
     <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">yellow fever virus YFV</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_11089"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="&xsd;string">YFV</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_11089"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#genbank_acronym"/>
@@ -13188,12 +13194,6 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="&xsd;string">Flavivirus febricis</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_11089"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">yellow fever virus YFV</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_11089"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
@@ -14031,16 +14031,16 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">Galloanseri</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_1549675"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="&xsd;string">ducks, geese, chickens, fowl, quail, currasows and allies</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_1549675"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#equivalent_name"/>
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Galloanseri</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_1549675"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
     </owl:Axiom>
     
 
@@ -14588,16 +14588,16 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">Diapsida</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_32561"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="&xsd;string">diapsids</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_32561"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#genbank_common_name"/>
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Diapsida</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_32561"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
     </owl:Axiom>
     
 
@@ -14709,14 +14709,14 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="&xsd;string">carnivores</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_33554"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#blast_name"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#genbank_common_name"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="&xsd;string">carnivores</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_33554"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#genbank_common_name"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#blast_name"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
     </owl:Axiom>
     
 
@@ -14844,16 +14844,16 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <ncbitaxon:has_rank rdf:resource="&obo;NCBITaxon_subgenus"/>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">Equus subg. Equus</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_35510"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="&xsd;string">Equus</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_35510"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#scientific_name"/>
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Equus subg. Equus</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_35510"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
     </owl:Axiom>
     
 
@@ -16111,19 +16111,7 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">bantam</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9031"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#common_name"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="&xsd;string">Gallus gallus domesticus</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9031"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#misnomer"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">Gallus domesticus</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9031"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#misnomer"/>
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
@@ -16133,6 +16121,18 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9031"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#common_name"/>
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">bantam</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9031"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#common_name"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Gallus domesticus</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9031"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#misnomer"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
     </owl:Axiom>
     
 
@@ -16219,15 +16219,15 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">wild turkey</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9103"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#common_name"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="&xsd;string">turkey</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9103"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#genbank_common_name"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">wild turkey</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9103"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#common_name"/>
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
     </owl:Axiom>
     
@@ -16269,16 +16269,16 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">whales, hippos, ruminants, pigs, camels etc.</oboInOwl:hasExactSynonym>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">even-toed ungulates</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_91561"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#blast_name"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="&xsd;string">whales, hippos, ruminants, pigs, camels etc.</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_91561"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#genbank_common_name"/>
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">even-toed ungulates</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_91561"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#blast_name"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
     </owl:Axiom>
     
 
@@ -16414,15 +16414,15 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <ncbitaxon:has_rank rdf:resource="&obo;NCBITaxon_species"/>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">grey wolf</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9612"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#common_name"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="&xsd;string">gray wolf</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9612"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#genbank_common_name"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">grey wolf</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9612"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#common_name"/>
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
     </owl:Axiom>
     
@@ -16443,13 +16443,13 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <ncbitaxon:has_rank rdf:resource="&obo;NCBITaxon_subspecies"/>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">dogs</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Canis familiaris</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9615"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#common_name"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">Canis familiaris</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Canis canis</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9615"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
@@ -16461,16 +16461,16 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
     </owl:Axiom>
     <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">dogs</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9615"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#common_name"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="&xsd;string">dog</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9615"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#genbank_common_name"/>
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">Canis canis</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9615"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
     </owl:Axiom>
     
 
@@ -16560,6 +16560,18 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
     </owl:Axiom>
     <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">horse</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9796"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#genbank_common_name"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Equus ferus caballus</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9796"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="&xsd;string">domestic horse</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9796"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#common_name"/>
@@ -16570,18 +16582,6 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9796"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">Equus ferus caballus</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9796"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">horse</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9796"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#genbank_common_name"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
     </owl:Axiom>
     
 
@@ -16599,15 +16599,15 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <ncbitaxon:has_rank rdf:resource="&obo;NCBITaxon_family"/>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">boars</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9821"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#common_name"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="&xsd;string">pigs</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9821"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#genbank_common_name"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">boars</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9821"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#common_name"/>
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
     </owl:Axiom>
     
@@ -16640,15 +16640,9 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <ncbitaxon:has_rank rdf:resource="&obo;NCBITaxon_species"/>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">Sus scrofus</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">pig</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9823"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#misspelling"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">pigs</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9823"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#common_name"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#genbank_common_name"/>
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -16658,9 +16652,9 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">pig</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">pigs</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9823"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#genbank_common_name"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#common_name"/>
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -16668,6 +16662,12 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9823"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#common_name"/>
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Sus scrofus</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9823"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#misspelling"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
     </owl:Axiom>
     
 
@@ -16739,10 +16739,28 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
     </owl:Axiom>
     <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">lambs</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9940"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#common_name"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="&xsd;string">sheep</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9940"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#genbank_common_name"/>
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">domestic sheep</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9940"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#common_name"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Ovis orientalis aries</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9940"/>
+        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="&xsd;string">wild sheep</owl:annotatedTarget>
@@ -16755,24 +16773,6 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9940"/>
         <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
         <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">Ovis orientalis aries</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9940"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#synonym"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">lambs</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9940"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#common_name"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="&xsd;string">domestic sheep</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="&obo;NCBITaxon_9940"/>
-        <oboInOwl:hasSynonymType rdf:resource="&obo;ncbitaxon#common_name"/>
-        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
     </owl:Axiom>
     
 
@@ -18922,24 +18922,24 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_pir"/>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_plant"/>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gosubset_prok"/>
-        <oboInOwl:hasDefinition>
+        <oboInOwl:hasDbXref>
             <rdf:Description/>
-        </oboInOwl:hasDefinition>
+        </oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDbXref>
             <rdf:Description/>
         </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
+        <oboInOwl:hasDefinition>
             <rdf:Description/>
-        </oboInOwl:hasDbXref>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
     </owl:Class>
     
 
@@ -18953,15 +18953,15 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <obo:IAO_0000115 xml:lang="en">The emergence of an adult insect from a pupa case.</obo:IAO_0000115>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasDbXref>
             <rdf:Description/>
         </oboInOwl:hasDbXref>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasDbXref>
             <rdf:Description/>
         </oboInOwl:hasDbXref>
@@ -18978,21 +18978,21 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
         <oboInOwl:hasAlternativeId>GO:0016280</oboInOwl:hasAlternativeId>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_generic"/>
-        <oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
             <rdf:Description/>
-        </oboInOwl:hasDefinition>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
         <oboInOwl:hasDbXref>
             <rdf:Description/>
         </oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
             <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasDbXref>
             <rdf:Description/>
         </oboInOwl:hasDbXref>
@@ -19019,27 +19019,27 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0019098"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasBroadSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
+        <oboInOwl:hasBroadSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
+        <oboInOwl:hasBroadSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasBroadSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasBroadSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasBroadSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasBroadSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
@@ -19055,15 +19055,15 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
         <rdfs:subClassOf rdf:resource="&obo;GO_0048609"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
@@ -19081,18 +19081,18 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_aspergillus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_pir"/>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gosubset_prok"/>
-        <oboInOwl:hasNarrowSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
         <oboInOwl:hasNarrowSynonym>
             <rdf:Description/>
         </oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
     </owl:Class>
     
 
@@ -19104,18 +19104,18 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
         <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/GO#GO_0019098"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
             <rdf:Description/>
-        </oboInOwl:hasDefinition>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
             <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
+        </oboInOwl:hasDefinition>
     </owl:Class>
     
 
@@ -19302,15 +19302,15 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
         <oboInOwl:hasOBONamespace>unit.ontology</oboInOwl:hasOBONamespace>
         <obo:IAO_0000115 xml:lang="en">A dimensionless ratio unit which denotes numbers as fractions of 100.</obo:IAO_0000115>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#unit_slim"/>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
@@ -21139,15 +21139,6 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;RO_0001000">
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
@@ -21160,9 +21151,9 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
             <rdf:Description/>
-        </oboInOwl:hasDefinition>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
@@ -21187,6 +21178,18 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
@@ -21214,15 +21217,9 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
             <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
@@ -21235,6 +21232,9 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000008">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
