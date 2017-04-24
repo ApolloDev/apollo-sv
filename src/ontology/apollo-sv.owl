@@ -11540,6 +11540,20 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     
 
 
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000567 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000567">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000010"/>
+        <obo:IAO_0000111 xml:lang="en">synthetic ecosystem constructor software</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">A software that when compiled and run, has specified output of an agent-level ecosystem data set.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">software for creating a synthetic ecosystem dataset</obo:IAO_0000118>
+        <rdfs:comment xml:lang="en">example: Synthia, SPEW</rdfs:comment>
+        <rdfs:label xml:lang="en">synthetic ecosystem constructor</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000793 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000793">
