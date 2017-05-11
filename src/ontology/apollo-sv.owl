@@ -11612,12 +11612,24 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000797 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000797">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000011"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000798"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
-        <obo:IAO_0000111 xml:lang="en">creating a software license</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">A planned process that has a software license as its specified output.</obo:IAO_0000115>
+        <obo:IAO_0000111 xml:lang="en">creating a copyright license</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">A planned process that has a copyright license as its specified output.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">software license creation</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">creating a software license</rdfs:label>
+        <obo:IAO_0000118 xml:lang="en">copyright license creation</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">Note: for less than 24 hours, this class was a bit more specific to software licenses, but it did not have the equivalent class axiom during that time.</rdfs:label>
+        <rdfs:label xml:lang="en">creating a copyright license</rdfs:label>
     </owl:Class>
     
 
