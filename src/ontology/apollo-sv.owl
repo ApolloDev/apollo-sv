@@ -11131,11 +11131,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000535 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000535">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
-        <obo:IAO_0000115 xml:lang="en">A document that is about some software and contains one or more conditional specifications that specify the use and redistribution of the software.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000798"/>
+        <obo:IAO_0000115 xml:lang="en">A copyright license that is about some software and contains one or more conditional specifications that specify the use and redistribution of the software.</obo:IAO_0000115>
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">A document that is about some software and contains one or more conditional specifications that specify the use and redistribution of the software.</obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">A copyright license that is about some software and contains one or more conditional specifications that specify the use and redistribution of the software.</obo:IAO_0000600>
         <rdfs:label xml:lang="en">software license</rdfs:label>
     </owl:Class>
     
@@ -11618,6 +11618,19 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">software license creation</obo:IAO_0000118>
         <rdfs:label xml:lang="en">creating a software license</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000798 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000798">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
+        <obo:IAO_0000111 xml:lang="en">copyright license for a creative work</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">A document that is about the legal rights, claims, and obligations of a legal person (person or organization) under copyright law, and how that legal person intends for those rights, claims, and obligations to be handled/managed by users of the creative work to which this document is attached.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <rdfs:comment xml:lang="en">Can be for any creative work including fiction.  But the license itself is an ICE, and refers to real claims and obligations.</rdfs:comment>
+        <rdfs:label xml:lang="en">copyright license</rdfs:label>
     </owl:Class>
     
 
