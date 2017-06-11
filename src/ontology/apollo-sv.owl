@@ -5909,14 +5909,14 @@ I checked because an infection and immunity census would involve two different c
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000184 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000184">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000097"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">An information content entity that represents an ecosystem in a particular location at a particular point in time.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An data set that represents an ecosystem in a particular location at a particular point in time.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">Information about an ecosystem at a specific location and point in time.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InfectiousDiseaseScenario</apollo_sv:APOLLO_SV_0000040>
