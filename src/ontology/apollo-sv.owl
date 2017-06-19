@@ -2418,7 +2418,7 @@ For example, if the time step is 6 hours, then this value is 6.
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000014 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000014">
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/UO#UO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UO_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A time unit that is part of a simulation time step action specification.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A unit of time for each time step of a simulation, such as “hours” or “days”.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unitOfTimeForSimulatorTimeStep</apollo_sv:APOLLO_SV_0000040>
@@ -6898,7 +6898,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/UO#UO_0000003"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000003"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">An information content entity that specifies a time span on a specified time scale by giving a start time and a duration.</obo:IAO_0000115>
@@ -7638,7 +7638,7 @@ For example, the trigger could occur once the incidence or prevalence of the inf
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000292 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000292">
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/UO#UO_0000000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UO_0000000"/>
         <obo:IAO_0000115 xml:lang="en">The unit of measure for the supply schedule of an individual treatment.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">The unit of measure for the supply schedule of an individual treatment.
@@ -7654,7 +7654,7 @@ For example, &apos;daily dose&apos;.
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000293 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000293">
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/UO#UO_0000000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UO_0000000"/>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">The unit of measure for the administration capacity of an individual treatment.
 
@@ -7679,7 +7679,7 @@ For example, &apos;daily dose&apos;.</obo:IAO_0000600>
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000295 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000295">
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/UO#UO_0000000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UO_0000000"/>
         <obo:IAO_0000115 xml:lang="en">A unit of measure for a threshold in a reactive infectious disease control strategy.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">A unit of measure for a threshold in a reactive infectious disease control strategy.</obo:IAO_0000600>
@@ -22641,6 +22641,30 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
     
 
 
+    <!-- http://purl.obolibrary.org/obo/UO_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000003"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/UO"/>
+        <apollo_sv:APOLLO_SV_0000040>unitOfTime</apollo_sv:APOLLO_SV_0000040>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000280 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000280">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000003"/>
+        <obo:IAO_0000115 xml:lang="en">A unit which represents a standard measurement occurrence of a process per unit time.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.org/obo/owl/unit</obo:IAO_0000412>
+        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rate</apollo_sv:APOLLO_SV_0000040>
+        <oboInOwl:hasOBONamespace>unit.ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#unit_group_slim"/>
+        <rdfs:label xml:lang="en">rate unit</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/VO_0000001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/VO_0000001">
@@ -23117,9 +23141,9 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
     
 
 
-    <!-- http://purl.org/obo/owl/UO#UO_0000000 -->
+    <!-- http://purl.obolibrary.org/obo/UO_0000000 -->
 
-    <owl:Class rdf:about="http://purl.org/obo/owl/UO#UO_0000000">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000000">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.org/obo/owl/unit</obo:IAO_0000412>
         <oboInOwl:hasDefinition>
@@ -23134,22 +23158,9 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
     
 
 
-    <!-- http://purl.org/obo/owl/UO#UO_0000003 -->
+    <!-- http://purl.obolibrary.org/obo/UO_0000186 -->
 
-    <owl:Class rdf:about="http://purl.org/obo/owl/UO#UO_0000003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000003"/>
-        <obo:IAO_0000111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time unit</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">A unit which is a standard measure of the dimension in which events occur in sequence.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/UO"/>
-        <apollo_sv:APOLLO_SV_0000040>unitOfTime</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time unit</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/obo/owl/UO#UO_0000186 -->
-
-    <owl:Class rdf:about="http://purl.org/obo/owl/UO#UO_0000186">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000186">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000003"/>
         <obo:IAO_0000115 xml:lang="en">A unit which is a standard measure of physical quantity consisting of only a numerical number without any units.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.org/obo/owl/unit</obo:IAO_0000412>
@@ -23167,10 +23178,10 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
     
 
 
-    <!-- http://purl.org/obo/owl/UO#UO_0000187 -->
+    <!-- http://purl.obolibrary.org/obo/UO_0000187 -->
 
-    <owl:Class rdf:about="http://purl.org/obo/owl/UO#UO_0000187">
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/UO#UO_0000190"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000187">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UO_0000190"/>
         <obo:IAO_0000115 xml:lang="en">A dimensionless ratio unit which denotes numbers as fractions of 100.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.org/obo/owl/unit</obo:IAO_0000412>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Percent</apollo_sv:APOLLO_SV_0000040>
@@ -23193,10 +23204,10 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
     
 
 
-    <!-- http://purl.org/obo/owl/UO#UO_0000190 -->
+    <!-- http://purl.obolibrary.org/obo/UO_0000190 -->
 
-    <owl:Class rdf:about="http://purl.org/obo/owl/UO#UO_0000190">
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/UO#UO_0000186"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000190">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UO_0000186"/>
         <obo:IAO_0000115 xml:lang="en">A dimensionless unit which denotes an amount or magnitude of one quantity relative to another.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.org/obo/owl/unit</obo:IAO_0000412>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ratio</apollo_sv:APOLLO_SV_0000040>
@@ -23213,10 +23224,10 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
     
 
 
-    <!-- http://purl.org/obo/owl/UO#UO_0000191 -->
+    <!-- http://purl.obolibrary.org/obo/UO_0000191 -->
 
-    <owl:Class rdf:about="http://purl.org/obo/owl/UO#UO_0000191">
-        <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/UO#UO_0000190"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000191">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UO_0000190"/>
         <obo:IAO_0000115 xml:lang="en">A dimensionless ratio unit which relates the part (the numerator) to the whole (the denominator).</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.org/obo/owl/unit</obo:IAO_0000412>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fraction</apollo_sv:APOLLO_SV_0000040>
@@ -23229,26 +23240,6 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
         <oboInOwl:hasOBONamespace>unit.ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#unit_slim"/>
         <rdfs:label xml:lang="en">fraction</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/obo/owl/UO#UO_0000280 -->
-
-    <owl:Class rdf:about="http://purl.org/obo/owl/UO#UO_0000280">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000003"/>
-        <obo:IAO_0000115 xml:lang="en">A unit which represents a standard measurement occurrence of a process per unit time.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.org/obo/owl/unit</obo:IAO_0000412>
-        <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rate</apollo_sv:APOLLO_SV_0000040>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasOBONamespace>unit.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#unit_group_slim"/>
-        <rdfs:label xml:lang="en">rate unit</rdfs:label>
     </owl:Class>
     
 
@@ -24932,9 +24923,6 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000002">
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/UO"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000003">
-        <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/UO"/>
-    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/iao/dev/iao-main.owl">
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/information-artifact-ontology/"/>
     </rdf:Description>
@@ -24983,10 +24971,10 @@ http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1
     <rdf:Description rdf:about="http://purl.org/obo/owl/PATO#PATO_0000125">
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/PATO"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/obo/owl/UO#UO_0000001">
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000001">
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/UO"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/obo/owl/UO#UO_0000002">
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000002">
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/UO"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.obofoundry.org/ro/ro.owl#improper_part_of">
