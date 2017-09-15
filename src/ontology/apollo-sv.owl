@@ -28,7 +28,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:doap="http://usefulinc.com/ns/doap#">
     <owl:Ontology rdf:about="&obo;apollo_sv/dev/apollo_sv.owl">
         <dc:contributor>Amanda Hicks</dc:contributor>
         <dc:contributor>William R. Hogan</dc:contributor>
@@ -22983,6 +22984,31 @@ http://mathworld.wolfram.com/Sensitivity.html</obo:IAO_0000119>
 and from Oxford English Dictionary:
 http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1</obo:IAO_0000119>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </owl:Class>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000398 -->
+
+    <owl:Class rdf:about="&obo;STATO_0000398">
+        <rdfs:label xml:lang="en">weighted arithmetic mean</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000679"/>
+        <obo:STATO_0000041 xml:lang="en"></obo:STATO_0000041>
+        <obo:IAO_0000117 xml:lang="en">Orlaith Burke</obo:IAO_0000117>
+        <obo:STATO_0000391>https://docs.scipy.org/doc/numpy/reference/generated/numpy.average.html
+
+np.average(range(1,11), weights=range(10,0,-1))</obo:STATO_0000391>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Matthew Diller</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">The weighted arithmetic mean is a measure of central tendency that is the sum of the products of each observed value and their respective non-negative weights, divided by the sum of the weights, such that the contribution of each observed value to the mean may defer according to its respective weight. It is defined by the formula: A = sum(vi*wi)/sum(wi), where &apos;i&apos; ranges from 1 to n, &apos;vi&apos; is the value of each observation, and &apos;wi&apos; is the value of the respective weight for each observed value.
+
+The weighted arithmetic mean is a kind of mean similar to an ordinary arithmetic mean (the most common type of average), except that instead of each of the data points contributing equally to the final average, some data points are weighted, meaning they contribute more than others. 
+
+The weighted arithmetic mean is often used if one wants to combine average values from samples of the same population with different sample sizes.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Weighted_arithmetic_mean</obo:IAO_0000119>
+        <doap:bug-database xml:lang="en">https://github.com/ISA-tools/stato/issues/59</doap:bug-database>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </owl:Class>
     
 
