@@ -23794,6 +23794,15 @@ np.average(range(1,11), weights=range(10,0,-1))</obo:STATO_0000391>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000107"/>
         <rdfs:label xml:lang="en">atmosphere of the Earth</rdfs:label>
     </owl:NamedIndividual>
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000034 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000034">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/UO_0000003"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">week</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;A time unit which is equal to 7 days.&quot; [Wikipedia:Wikipedia]</rdfs:comment>
+    </owl:NamedIndividual>
+    
     <rdf:Description>
         <oboInOwl:hasDbXref>
             <rdf:Description/>
