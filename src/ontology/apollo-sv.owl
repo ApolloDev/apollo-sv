@@ -11815,6 +11815,29 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     
 
 
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000590 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000590">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBcv_0000667"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000111"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000667"/>
+        <obo:IAO_0000111 xml:lang="en">website that has data as a part</obo:IAO_0000111>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <rdfs:comment xml:lang="en">This class was created for use case for MIDAS Digital Repository to index websites that have useful data in them, albeit rarely as machine-interpretable, downloadable datasets.  Much of the data are locked in PDF or other text-based formats.</rdfs:comment>
+        <rdfs:label xml:lang="en">website with data</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000793 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000793">
@@ -23794,15 +23817,16 @@ np.average(range(1,11), weights=range(10,0,-1))</obo:STATO_0000391>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000107"/>
         <rdfs:label xml:lang="en">atmosphere of the Earth</rdfs:label>
     </owl:NamedIndividual>
+    
+
 
     <!-- http://purl.obolibrary.org/obo/UO_0000034 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000034">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/UO_0000003"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">week</rdfs:label>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;A time unit which is equal to 7 days.&quot; [Wikipedia:Wikipedia]</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">week</rdfs:label>
     </owl:NamedIndividual>
-    
     <rdf:Description>
         <oboInOwl:hasDbXref>
             <rdf:Description/>
@@ -25201,48 +25225,9 @@ np.average(range(1,11), weights=range(10,0,-1))</obo:STATO_0000391>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
@@ -25261,9 +25246,39 @@ np.average(range(1,11), weights=range(10,0,-1))</obo:STATO_0000391>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
@@ -25276,15 +25291,24 @@ np.average(range(1,11), weights=range(10,0,-1))</obo:STATO_0000391>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
             <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
