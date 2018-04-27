@@ -2082,7 +2082,14 @@ For example, the disposition of a piece of glass to bend light and the lattice s
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+    <!-- http://www.ebi.ac.uk/efo/EFO_0004600 -->
+
+    <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0004600">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
+        <obo:IAO_0000115>Genomic data is data about the genomes of an organism.</obo:IAO_0000115>
+        <obo:IAO_0000117>James Malone</obo:IAO_0000117>
+        <rdfs:label>genomic data</rdfs:label>
+    </owl:Class>
 
 
     <!-- http://purl.obolibrary.obo/obo/NCBITaxon_7160 -->
