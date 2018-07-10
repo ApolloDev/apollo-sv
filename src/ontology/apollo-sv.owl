@@ -11,6 +11,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:doap="http://usefulinc.com/ns/doap#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:www="http://www.referent-tracking.com/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
@@ -19,17 +20,20 @@
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo/2014-05-03/classes-only.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ro/core.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/pno/dev/pno.owl"/>
+        <owl:imports rdf:resource="http://www.referent-tracking.com/rts-owl/1.0"/>
         <dc:title xml:lang="en">Apollo Structured Vocabulary (Apollo-SV)</dc:title>
         <dc:contributor>Amanda Hicks</dc:contributor>
         <dc:contributor>Matt Diller</dc:contributor>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v4.1</owl:versionInfo>
         <dc:license xml:lang="en">https://creativecommons.org/licenses/by/3.0/</dc:license>
         <dc:contributor>John Levander</dc:contributor>
         <dc:contributor>Mike Wagner</dc:contributor>
         <dc:contributor>William R. Hogan</dc:contributor>
-        <owl:versionInfo xml:lang="en">v4.0.1</owl:versionInfo>
         <dc:creator>Mathias Brochhausen</dc:creator>
         <dc:contributor>Josh Hanna</dc:contributor>
         <rdfs:comment xml:lang="en">When citing Apollo-SV, use the permanent URL of the ontology: http://purl.obolibrary.org/obo/apollo_sv.owl.  When referencing a specific component of the Apollo-SV such as a class, object property, annotation property, or individual, use the component&apos;s Uniform Resource Identifier (URI).</rdfs:comment>
+        <www:RTS_00000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C87985BA-6A8A-483A-A6B6-63975101F672</www:RTS_00000001>
+        <www:RTS_00000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A256326F-3E44-4ECE-80D9-4E9C92660BAF</www:RTS_00000002>
         <dc:contributor>Shawn T. Brown</dc:contributor>
     </owl:Ontology>
     
@@ -18535,7 +18539,7 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_439488"/>
         <rdfs:label xml:lang="en">ssRNA negative-strand virus</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_35305 -->
@@ -27410,51 +27414,6 @@ np.average(range(1,11), weights=range(10,0,-1))</obo:STATO_0000391>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Longitude</apollo_sv:APOLLO_SV_0000040>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0001000">
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
@@ -27476,9 +27435,6 @@ np.average(range(1,11), weights=range(10,0,-1))</obo:STATO_0000391>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
@@ -27491,12 +27447,60 @@ np.average(range(1,11), weights=range(10,0,-1))</obo:STATO_0000391>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
