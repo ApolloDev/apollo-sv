@@ -11908,8 +11908,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000516">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000001"/>
         <obo:IAO_0000111 xml:lang="en">host population</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">A population of organisms some of which were susceptible to infection with a particular pathogen at some point in their lives.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">A population of organisms some of which were susceptible to infection with a particular pathogen at some point in their lives.</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">population of host organisms</obo:IAO_0000118>
         <rdfs:label xml:lang="en">host population</rdfs:label>
     </owl:Class>
@@ -13147,7 +13147,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <obo:IAO_0000115 xml:lang="en">A planned process that has a copyright license as its specified output.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">copyright license creation</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">Note: for less than 24 hours, this class was a bit more specific to software licenses, but it did not have the equivalent class axiom during that time.</rdfs:label>
+        <rdfs:comment xml:lang="en">Note: for less than 24 hours, this class was a bit more specific to software licenses, but it did not have the equivalent class axiom during that time.</rdfs:comment>
         <rdfs:label xml:lang="en">creating a copyright license</rdfs:label>
     </owl:Class>
     
@@ -29019,9 +29019,6 @@ np.average(range(1,11), weights=range(10,0,-1))</obo:STATO_0000391>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
@@ -29046,6 +29043,15 @@ np.average(range(1,11), weights=range(10,0,-1))</obo:STATO_0000391>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
@@ -29070,12 +29076,6 @@ np.average(range(1,11), weights=range(10,0,-1))</obo:STATO_0000391>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
