@@ -2368,12 +2368,12 @@ Even in the case of a simulated disaster scenario where actual ambulances, fire 
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000007 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000007">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000010"/>
-        <obo:IAO_0000115 xml:lang="en">A software that provides a model of a real phenomenon based on a set of mathematical formulas.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000594"/>
+        <obo:IAO_0000115 xml:lang="en">A software application that provides a model of a real phenomenon based on a set of mathematical formulas.</obo:IAO_0000115>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Simulation_software</obo:IAO_0000119>
-        <obo:IAO_0000600 xml:lang="en">A software that provides a model of a real phenomenon based on a set of mathematical formulas.</obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">A software application that provides a model of a real phenomenon based on a set of mathematical formulas.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">simulator</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:label xml:lang="en">simulation software</rdfs:label>
+        <rdfs:label xml:lang="en">simulation software application</rdfs:label>
     </owl:Class>
     
 
@@ -12213,8 +12213,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000540">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000007"/>
-        <obo:IAO_0000111 xml:lang="en">model of population dynamics</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">An algorithm that simulates changes in the size and life stage distribution of a population or populations of organisms of a particular biological taxon.</obo:IAO_0000115>
+        <obo:IAO_0000111 xml:lang="en">model of population dynamics software application</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">An simulation software application that when realized simulates changes in the size and life stage distribution of a population or populations of organisms of a particular biological taxon.</obo:IAO_0000115>
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An algorithm that simulates changes in the size and life stage distribution of a population or populations of organisms of a particular biological taxon.</obo:IAO_0000600>
@@ -12255,8 +12255,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000544">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000007"/>
-        <obo:IAO_0000111 xml:lang="en">pathogen evolution model software</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">Simulation software that simulates the evolution over time of a particular pathogen of a particular biological taxon.</obo:IAO_0000115>
+        <obo:IAO_0000111 xml:lang="en">pathogen evolution model software application</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">A simulation software application that simulates the evolution over time of a particular pathogen of a particular biological taxon.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">Simulation software that simulates the evolution over time of a particular pathogen of a particular biological taxon.</obo:IAO_0000600>
@@ -12398,8 +12398,9 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000555 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000555">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000010"/>
-        <obo:IAO_0000115 xml:lang="en">An algorithm that has specified output some transmission tree.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000594"/>
+        <obo:IAO_0000111 xml:lang="en">disease transmission tree estimator software application</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">A software application that implements an algorithm that has specified output some transmission tree.</obo:IAO_0000115>
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An algorithm that has specified output some transmission tree.</obo:IAO_0000600>
@@ -12425,13 +12426,13 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000557">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000007"/>
-        <obo:IAO_0000111 xml:lang="en">software that forecasts disease transmission</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">Simulation software that has as output one or more predicted count data items that are about a host population and that predict how many infections will occur at or will have occurred at some temporal region relative to when the data items are created.</obo:IAO_0000115>
+        <obo:IAO_0000111 xml:lang="en">software application that forecasts disease transmission</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">A simulation software application that has as output one or more predicted count data items that are about a host population and that predict how many infections will occur at or will have occurred at some temporal region relative to when the data items are created.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">disease forecasting</obo:IAO_0000118>
-        <obo:IAO_0000118 xml:lang="en">disease transmission forecasting</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">infectious disease forecasting software</rdfs:label>
+        <obo:IAO_0000118 xml:lang="en">disease forecasting software</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">infectious disease forecaster</rdfs:label>
+        <rdfs:label xml:lang="en">infectious disease forecasting software application</rdfs:label>
     </owl:Class>
     
 
@@ -12480,6 +12481,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000561">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000007"/>
+        <obo:IAO_0000111>disease transmission model software application</obo:IAO_0000111>
         <obo:IAO_0000117 xml:lang="en">Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <rdfs:label xml:lang="en">disease transmission model software</rdfs:label>
@@ -12490,8 +12492,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000562 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000562">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000010"/>
-        <obo:IAO_0000111 xml:lang="en">data format converter software</obo:IAO_0000111>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000594"/>
+        <obo:IAO_0000111 xml:lang="en">data format converter software application</obo:IAO_0000111>
         <obo:IAO_0000117 xml:lang="en">Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <rdfs:label xml:lang="en">data format converter</rdfs:label>
@@ -12502,8 +12504,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000563 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000563">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000010"/>
-        <rdfs:label xml:lang="en">phylogenetic tree constructor software</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000594"/>
+        <obo:IAO_0000111 xml:lang="en">phylogenetic tree constructor software application</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">A software application that implements an algorithm that has specified output a phylogenetic tree</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">phylogenetic tree constructor</rdfs:label>
     </owl:Class>
     
 
@@ -12511,11 +12516,12 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000564 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000564">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000010"/>
-        <obo:IAO_0000115 xml:lang="en">A planned process that has some data visualizer software objective specification as part.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000594"/>
+        <obo:IAO_0000111 xml:lang="en">data visualizer software application</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">A software application that implements an algorithm that has some data visualizer software objective specification as part.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">data visualizer software</rdfs:label>
+        <rdfs:label xml:lang="en">data visualizer</rdfs:label>
     </owl:Class>
     
 
@@ -12523,7 +12529,8 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000565 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000565">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000010"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000594"/>
+        <obo:IAO_0000111>computational modeling toolkit software application</obo:IAO_0000111>
         <obo:IAO_0000117 xml:lang="en">Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <rdfs:label xml:lang="en">computational modeling toolkit</rdfs:label>
@@ -12765,10 +12772,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000583">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000557"/>
-        <obo:IAO_0000115 xml:lang="en">Infectious disease forecasting software that predicts how many infections are occurring within the same temporal interval that the data items are being estimated.</obo:IAO_0000115>
+        <obo:IAO_0000111 xml:lang="en">infectious disease nowcasting software application</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">An infectious disease forecasting software application that predicts how many infections are occurring within the same temporal interval that the data items are being estimated.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">infectious disease nowcasting software</rdfs:label>
+        <rdfs:label xml:lang="en">infectious disease nowcaster</rdfs:label>
     </owl:Class>
     
 
@@ -12912,11 +12920,11 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000592 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000592">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000010"/>
-        <obo:IAO_0000111 xml:lang="en">metagenomics analysis software</obo:IAO_0000111>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000594"/>
+        <obo:IAO_0000111 xml:lang="en">metagenomics analysis software application</obo:IAO_0000111>
         <obo:IAO_0000117 xml:lang="en">Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">A software that has as part an objective specification that is achieved by only a metagenomics analysis.</rdfs:label>
+        <rdfs:label xml:lang="en">A software application that has as part an objective specification that is achieved by only a metagenomics analysis.</rdfs:label>
         <rdfs:label xml:lang="en">metagenomics analysis software</rdfs:label>
     </owl:Class>
     
@@ -13061,9 +13069,9 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000597 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000597">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000010"/>
-        <obo:IAO_0000111 xml:lang="en">data format validator software</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">A software that takes a data set as input and outputs a determination of whether the dataset is in compliance with one or more given data format specifications.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000594"/>
+        <obo:IAO_0000111 xml:lang="en">data format validator software application</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">A software application that takes a data set as input and outputs a determination of whether the dataset is in compliance with one or more given data format specifications.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <rdfs:label xml:lang="en">data format validator</rdfs:label>
     </owl:Class>
@@ -13169,9 +13177,9 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000799 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000799">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000010"/>
-        <obo:IAO_0000111 xml:lang="en">data service software</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">A software that implements a data service.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000594"/>
+        <obo:IAO_0000111 xml:lang="en">data service software application</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">A software application that implements a data service.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <rdfs:label xml:lang="en">data service software</rdfs:label>
     </owl:Class>
