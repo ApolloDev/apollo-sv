@@ -5212,8 +5212,8 @@ Somehow, it&apos;s not innate and it&apos;s temporary, ie, the body will eventua
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000173"/>
-        <obo:IAO_0000115 xml:lang="en">The outcome of a population survey.</obo:IAO_0000115>
-        <obo:IAO_0000600 xml:lang="en">The outcome of a population survey.</obo:IAO_0000600>
+        <obo:IAO_0000115 xml:lang="en">A census that is the outcome of a population survey.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">A census that is the outcome of a population survey.</obo:IAO_0000600>
         <rdfs:label xml:lang="en">population census</rdfs:label>
     </owl:Class>
     
@@ -5369,7 +5369,7 @@ I checked because an infection and immunity census would involve two different c
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000173"/>
-        <obo:IAO_0000115 xml:lang="en">A data set that is the result of a population infection survey and a population immunity survey.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A census that is the result of a population infection survey and a population immunity survey.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">PII Census</obo:IAO_0000118>
         <obo:IAO_0000600 xml:lang="en">A census of the infection status (e.g., susceptible, infected, infectious, and immune/resistant) of organisms in a population, with respect to a particular pathogen.</obo:IAO_0000600>
@@ -5407,9 +5407,9 @@ I checked because an infection and immunity census would involve two different c
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000173"/>
-        <obo:IAO_0000115 xml:lang="en">A data set that is the specific outcome of a population demographic survey.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A census that is the specific outcome of a population demographic survey.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">A data set that is the specific outcome of a population demographic survey.</obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">A census that is the specific outcome of a population demographic survey.</obo:IAO_0000600>
         <rdfs:label xml:lang="en">population demographic census</rdfs:label>
     </owl:Class>
     
@@ -5591,9 +5591,9 @@ I checked because an infection and immunity census would involve two different c
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000173"/>
-        <obo:IAO_0000115 xml:lang="en">A data set that is the specified output of a agent-level ecosystem data generation that had census data as an input.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A census that is the specified output of a agent-level ecosystem data generation that had census data as an input.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">A data set that is the specified output of a agent-level ecosystem data generation that had census data as an input.</obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">A census that is the specified output of a agent-level ecosystem data generation that had census data as an input.</obo:IAO_0000600>
         <rdfs:label xml:lang="en">agent-level ecosystem census</rdfs:label>
     </owl:Class>
     
@@ -5843,9 +5843,9 @@ I checked because an infection and immunity census would involve two different c
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">The count of a specific entity in a specified region at a specified time.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A data set of a specific entity in a specified region at a specified time.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">The count of a specific entity in a specified region at a specified time.</obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">A data set of a specific entity in a specified region at a specified time.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CensusData</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">census</rdfs:label>
     </owl:Class>
@@ -6047,7 +6047,7 @@ The infectious disease scenario typically also includes a lot of additional data
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000185">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
-        <obo:IAO_0000115 xml:lang="en">An information content entity that refers to a real date corresponding to simulator time zero. </obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An identifier that denotes a real date corresponding to simulator time zero.</obo:IAO_0000115>
         <obo:IAO_0000600>A reference to the date that corresponds to simulator time zero.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scenarioDate</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">scenario date</rdfs:label>
@@ -6337,7 +6337,7 @@ Note that the infected and susceptible organisms may be of different species.</o
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000203">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000509"/>
-        <obo:IAO_0000115 xml:lang="en">An identifier curated by the NCBI Taxonomy that designates a biological taxon.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A taxonomy identifier curated by the NCBI Taxonomy that designates a biological taxon.</obo:IAO_0000115>
         <obo:IAO_0000600 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An identifier curated by the National Center for Biotechnology Information (NCBI) that designates a particular biological taxon (e.g., Homo sapiens).</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NcbiTaxonId</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">NCBI taxon identifier</rdfs:label>
@@ -6802,7 +6802,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000232">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000509"/>
-        <obo:IAO_0000115 xml:lang="en">An identifier that denotes a group of organisms or groups of organisms based on common ancestors.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A taxonomy identifier that denotes a group of organisms or groups of organisms based on common ancestors.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">A reference to a group or groups of organisms that are based on common ancestry.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cladeName</apollo_sv:APOLLO_SV_0000040>
@@ -7016,7 +7016,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000003"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">An information content entity that specifies a time span on a specified time scale by giving a start time and a duration.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A name of temporal region that specifies a time span on a specified time scale by giving a start time and a duration.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An information content entity that specifies a time span on a specified time scale by giving a start time and a duration.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TimeSpanCategoryDefinition</apollo_sv:APOLLO_SV_0000040>
@@ -7205,10 +7205,9 @@ can&apos;t recall whether we should use process or processual_entity for future 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000256">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000251"/>
-        <obo:IAO_0000115 xml:lang="en">The Weibull distribution gives the distribution of lifetimes of objects. It was originally proposed to quantify fatigue data, but it is also used in analysis of systems involving a &quot;weakest link.&quot;</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A continuous parametric probability distribution that gives the distribution of lifetimes of objects. It was originally proposed to quantify fatigue data, but it is also used in analysis of systems involving a &quot;weakest link.&quot;</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">The Weibull distribution gives the distribution of lifetimes of objects. It was originally proposed to quantify fatigue data, but it is also used in analysis of systems involving a &quot;weakest link.&quot;</obo:IAO_0000119>
-        <obo:IAO_0000600 xml:lang="en">The Weibull distribution gives the distribution of lifetimes of objects. It was originally proposed to quantify fatigue data, but it is also used in analysis of systems involving a &quot;weakest link.&quot;</obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">A continuous parametric probability distribution that gives the distribution of lifetimes of objects. It was originally proposed to quantify fatigue data, but it is also used in analysis of systems involving a &quot;weakest link.&quot;</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WeibullDistribution</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">Weibull Distribution</rdfs:label>
     </owl:Class>
@@ -7557,9 +7556,9 @@ For example, the trigger could occur once the incidence or prevalence of the inf
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000278">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000470"/>
-        <obo:IAO_0000115 xml:lang="en">An information content entity specifying the probability that entry is denied as part of a border control strategy.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">The probability that entry is denied as part of a border control strategy.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">An information content entity specifying the probability that entry is denied as part of a border control strategy.</obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">The probability that entry is denied as part of a border control strategy.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">probabilityEntryDenied</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">probability of entry into a country is denied</rdfs:label>
     </owl:Class>
@@ -7570,9 +7569,9 @@ For example, the trigger could occur once the incidence or prevalence of the inf
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000279">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000470"/>
-        <obo:IAO_0000115 xml:lang="en">An information content entity specifying the probability that exit is denied as part of a border control strategy.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">The probability that exit is denied as part of a border control strategy.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">An information content entity specifying the probability that exit is denied as part of a border control strategy.</obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">The probability that exit is denied as part of a border control strategy.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">probabilityExitDenied</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">probability of exit from a country is denied</rdfs:label>
     </owl:Class>
@@ -7696,8 +7695,8 @@ For example, the trigger could occur once the incidence or prevalence of the inf
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000287">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000243"/>
+        <obo:IAO_0000115 xml:lang="en">The duration from the closure of a place until the time when it is reopened.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">A period from the closure of a place until the time when it is reopened.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">closurePeriod</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">place closure period</rdfs:label>
     </owl:Class>
@@ -8141,7 +8140,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000243"/>
-        <obo:IAO_0000115 xml:lang="en">A time measurement datum of the length of the temporal interval occupied by a gonotropic period.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">The duration of the temporal interval occupied by a gonotropic period.</obo:IAO_0000115>
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">The duration of the gonotrophic cycle in a female mosquito.</obo:IAO_0000600>
@@ -9964,7 +9963,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000376">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000395"/>
-        <obo:IAO_0000115 xml:lang="en">An information content entity that designates a temporal boundary</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A name of temporal region that designates a temporal boundary</obo:IAO_0000115>
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An information content entity that designates a temporal boundary</obo:IAO_0000600>
@@ -11020,10 +11019,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000449">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000243"/>
-        <obo:IAO_0000115 xml:lang="en">A temporal region occupied by some process wherein one or more potentially infectious contact organisms (i.e., contacted organisms) are under physical isolation from other organisms within a population.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">The duration of some process wherein one or more potentially infectious contact organisms (i.e., contacted organisms) are under physical isolation from other organisms within a population.</obo:IAO_0000115>
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">A temporal region occupied by some process wherein one or more potentially infectious contact organisms (i.e., contacted organisms) are under physical isolation from other organisms within a population.</obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">The duration of some process wherein one or more potentially infectious contact organisms (i.e., contacted organisms) are under physical isolation from other organisms within a population.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quarantinePeriod</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">quarantine period</rdfs:label>
     </owl:Class>
@@ -11034,10 +11033,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000450">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000470"/>
-        <obo:IAO_0000115 xml:lang="en">An information content entity that specifies the probability that some male mosquito and some female mosquito within a certain distance of each other realize some disposition to reproduce with one another.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">The probability that some male mosquito and some female mosquito within a certain distance of each other realize some disposition to reproduce with one another.</obo:IAO_0000115>
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">An information content entity that specifies the probability that some male mosquito and some female mosquito within a certain distance of each other realize some disposition to reproduce with one another.</obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">The probability that some male mosquito and some female mosquito within a certain distance of each other realize some disposition to reproduce with one another.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">matingProbability</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">mosquito mating probability</rdfs:label>
     </owl:Class>
@@ -11132,10 +11131,10 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000457">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000470"/>
-        <obo:IAO_0000115 xml:lang="en">A predicted data item that specifies the frequency with which a female mosquito feeds on or probes the host given an interaction between the mosquito and the host that brings them within a certain proximity (the bite radius).</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">The probablity that a female mosquito feeds on or probes the host given an interaction between the mosquito and the host that brings them within a certain proximity (the bite radius).</obo:IAO_0000115>
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">A predicted data item that specifies the frequency with which a female mosquito feeds on or probes the host given an interaction between the mosquito and the host that brings them within a certain proximity (the bite radius).</obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">The probability that a female mosquito feeds on or probes the host given an interaction between the mosquito and the host that brings them within a certain proximity (the bite radius).</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biteProbability</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">vector bite probability</rdfs:label>
     </owl:Class>
@@ -11174,7 +11173,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000460">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000509"/>
-        <obo:IAO_0000115 xml:lang="en">An identifier curated by the NCBI taxonomy database that specifies the taxonomic classification of some organism that is the recipient of some treatment.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A taxonomy identifier curated by the NCBI taxonomy database that specifies the taxonomic classification of some organism that is the recipient of some treatment.</obo:IAO_0000115>
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An identifier curated by the NCBI taxonomy database that specifies the taxonomic classification of some organism that is the recipient of some treatment.</obo:IAO_0000600>
@@ -11506,7 +11505,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000484">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000509"/>
-        <obo:IAO_0000115 xml:lang="en">An identifier curated by the NCBI taxonomy database that has been used to specify the species of some organism in which some disease has been realized.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A taxonomy identifier curated by the NCBI taxonomy database that has been used to specify the species of some organism in which some disease has been realized.</obo:IAO_0000115>
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An identifier curated by the NCBI taxonomy database that has been used to specify the species of some organism in which some disease has been realized.</obo:IAO_0000600>
@@ -11520,7 +11519,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000485">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000509"/>
-        <obo:IAO_0000115 xml:lang="en">An identifier curated by the NCBI taxonomy database that has been used to identify the species of some organism that meets a case definition.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A taxonomy identifier curated by the NCBI taxonomy database that has been used to identify the species of some organism that meets a case definition.</obo:IAO_0000115>
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An identifier curated by the NCBI taxonomy database that has been used to identify the species of some organism that meets a case definition.</obo:IAO_0000600>
