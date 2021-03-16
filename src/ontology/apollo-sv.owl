@@ -13208,6 +13208,46 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     
 
 
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000601 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000601">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000402"/>
+        <obo:IAO_0000111 xml:lang="en">human daily movement behavior</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">an individual human behavior that is the movements from one location to another throughout the day (e.g., work, home, stores, church, relatives&apos; homes) in the areas adjacent to where the human lives at the time.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-9881-1017"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-16T16:29:53Z</dc:date>
+        <rdfs:label xml:lang="en">human daily movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000602 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000602">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000100"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000601"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
+        <obo:IAO_0000111 xml:lang="en">human daily movement behavior data set</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">https://www.google.com/covid19/mobility/</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a data set that is about the human daily movement behavior of the individual huamns in a given population.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-9881-1017"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-16T16:32:39Z</dc:date>
+        <rdfs:label xml:lang="en">human daily movement data set</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000793 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000793">
