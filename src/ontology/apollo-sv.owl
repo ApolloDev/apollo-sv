@@ -13190,6 +13190,24 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     
 
 
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000600 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000600">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
+        <obo:IAO_0000111 xml:lang="en">dataset about hospital stays</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">The datasets at this link are rdf:type this class: https://www.opendataphilly.org/dataset/covid-hospitalizations</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a dataset that is about two or more hospital stays involving two or more patients.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">hospital discharge dataset</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">hospitalization dataset</obo:IAO_0000118>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-9881-1017"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-16T16:20:48Z</dc:date>
+        <rdfs:comment xml:lang="en">The dataset may be limited to stays in one hospital, but hospital discharge datasets as compiled by state departments of health typically contain stays from multiple hospitals (typically every hospital) in the geographical region over which they have jurisdiction</rdfs:comment>
+        <rdfs:label xml:lang="en">hospital stay dataset</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000793 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000793">
