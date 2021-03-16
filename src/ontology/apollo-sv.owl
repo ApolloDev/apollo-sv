@@ -13163,6 +13163,33 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
     
 
 
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000599 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000599">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000100"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000115"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
+        <obo:IAO_0000111 xml:lang="en">dataset about infectious disease acquisitions</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">The dataset at this link is rdf:type this class: https://figshare.com/articles/dataset/COVID19_settings_of_transmission_-_collected_reports_database/12173343</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a dataset that is about infectious disease acquisitions at particular times and particular places.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-9881-1017"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-16T16:16:26Z</dc:date>
+        <rdfs:comment xml:lang="en">The dataset may include sites (e.g. types of facilities, rooms), events (e.g., church service whether in or outdoors), dates, times, geographical regions, etc. in which the sites/events are located, and so on.</rdfs:comment>
+        <rdfs:label xml:lang="en">infection acquisition dataset</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000793 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000793">
