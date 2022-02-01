@@ -12682,11 +12682,36 @@ has specified input some case definition.</obo:IAO_0000115>
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000569 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000569">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
-        <obo:IAO_0000115 xml:lang="en">A data item that is the output of some infection case count.</obo:IAO_0000115>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000032"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000155"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000032"/>
+        <obo:IAO_0000115 xml:lang="en">A count of the total number of diseased indivduals in a population during a particular time interval.</obo:IAO_0000115>
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">A data item that is the output of some infection case count.</obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">The total number of diseased individuals in a population at a point in time.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">totalCaseCount</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">total disease cases</rdfs:label>
     </owl:Class>
