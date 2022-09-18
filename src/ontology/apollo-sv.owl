@@ -13525,6 +13525,46 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     
 
 
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000611 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000611">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000064"/>
+        <obo:IAO_0000111 xml:lang="en">model for disease transmission parameter estimation</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">An algoirthm that is used to estimate the &quot;true&quot; values of certain parameters of disease transmission and/or forecasting.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <dc:date xml:lang="en">2022-09-18T17:51:00</dc:date>
+        <rdfs:comment xml:lang="en">Examples of parameters estimated include R0, transmissibility, infectious period.</rdfs:comment>
+        <rdfs:label xml:lang="en">parameter estimation model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000612 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000612">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000064"/>
+        <obo:IAO_0000115 xml:lang="en">An algorithm that operates on a representation of some portion of reality and that representation has a structure with nodes that stand for certain entities and edges that state some direct or indirect relationship between pairs of entities.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <dc:date xml:lang="en">2022-09-18T18:00:00</dc:date>
+        <rdfs:comment xml:lang="en">The algorithm might involve also generating or creating the network structure in addition to operating on it.</rdfs:comment>
+        <rdfs:label xml:lang="en">network model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000613 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000613">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000007"/>
+        <obo:IAO_0000111 xml:lang="en">laboratory testing capacity action specification</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">An action specification giving the number of laboratory tests of a certain type that it is possible to perform in a given population during a specific time interval.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <dc:date>2022-09-18T18:21</dc:date>
+        <rdfs:label xml:lang="en">laboratory testing capacity</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000793 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000793">
@@ -29483,9 +29523,6 @@ np.average(range(1,11), weights=range(10,0,-1))</obo:STATO_0000391>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
@@ -29510,9 +29547,9 @@ np.average(range(1,11), weights=range(10,0,-1))</obo:STATO_0000391>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
             <rdf:Description/>
-        </oboInOwl:hasDefinition>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
@@ -29534,6 +29571,9 @@ np.average(range(1,11), weights=range(10,0,-1))</obo:STATO_0000391>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
