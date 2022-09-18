@@ -492,6 +492,15 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/type -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/type">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dc:type</rdfs:label>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.org/dc/terms/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
@@ -586,7 +595,9 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
 
     <!-- http://www.geneontology.org/formats/oboInOwl#id -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -634,6 +645,7 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
         <rdfs:label>label</rdfs:label>
+        <rdfs:label xml:lang="en">label</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -13929,6 +13941,30 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:12206</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dengue hemorrhagic fever</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_3292 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3292">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000239"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A viral infectious disease that results in infection of primates, rodents and humans, located in skin, has_material_basis_in Monkeypox virus, which is transmitted by contact with the animal&apos;s blood, body fluids, rash, or with the body fluids of a sick person, transmitted by fomites, and transmitted by respiratory droplets. The infection has symptom fever, has symptom muscle ache, has symptom headache, and has symptom lymphadenopathy.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/doid/releases/2022-08-29/doid.owl</obo:IAO_0000412>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/ECO_0007637"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GARD:10722</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD10CM:B04</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:059.01</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D045908</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C128421</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_US_2021_09_01:240466002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI:C0276180</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.cdc.gov/ncidod/monkeypox/factsheet2.htm</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3292</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#NCIthesaurus"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/doid#zoonotic_infectious_disease"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">monkeypox</rdfs:label>
     </owl:Class>
     
 
@@ -29592,9 +29628,54 @@ np.average(range(1,11), weights=range(10,0,-1))</obo:STATO_0000391>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Longitude</apollo_sv:APOLLO_SV_0000040>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0001000">
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
@@ -29616,48 +29697,6 @@ np.average(range(1,11), weights=range(10,0,-1))</obo:STATO_0000391>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
@@ -29673,21 +29712,18 @@ np.average(range(1,11), weights=range(10,0,-1))</obo:STATO_0000391>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
             <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description/>
-        </oboInOwl:hasDefinition>
+        </oboInOwl:hasExactSynonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0001018">
         <oboInOwl:hasDefinition>
@@ -29830,9 +29866,6 @@ np.average(range(1,11), weights=range(10,0,-1))</obo:STATO_0000391>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/subject">
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/type">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/obo/owl/PATO#PATO_0000122">
