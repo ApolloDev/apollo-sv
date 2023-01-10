@@ -115,7 +115,7 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
         <obo:IAO_0000111 xml:lang="en">author list</obo:IAO_0000111>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <rdfs:comment xml:lang="en">an annotation property for capturing the list of authors on the publication or other document to which the entity to which the annotation is attached refers.  That is, this annotation should be attached only to individuals that represent information content entities, and its values must denote the people that authored the ICE.</rdfs:comment>
-        <rdfs:label xml:lang="en">author list</rdfs:label>
+        <rdfs:label xml:lang="en">author list &lt;annotation&gt;</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -14880,7 +14880,6 @@ of a plan  towards which the realization of the plan is directed.&quot;</obo:IAO
         <obo:IAO_0000116 xml:lang="en">http://www.golovchenko.org/cgi-bin/wnsearch?q=label#4n</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">GROUP: IAO</obo:IAO_0000117>
         <apollo_sv:APOLLO_SV_0000040 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">label</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:label xml:lang="en">label</rdfs:label>
     </owl:Class>
     
 
@@ -17364,7 +17363,7 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1335626">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_694002"/>
-        <rdfs:label xml:lang="en"> Middle East respiratory syndrome coronavirus</rdfs:label>
+        <rdfs:label xml:lang="en">Middle East respiratory syndrome coronavirus</rdfs:label>
     </owl:Class>
     
 
@@ -18370,7 +18369,7 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_201174"/>
         <obo:IAO_0000118 xml:lang="en">Actinomycetes</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">High GC gram-positive bacteria</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">Actinobacteria</rdfs:label>
+        <rdfs:label xml:lang="en">Actinobacteria &lt;class&gt;</rdfs:label>
     </owl:Class>
     
 
@@ -18893,7 +18892,7 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1783272"/>
         <obo:IAO_0000118 xml:lang="en">&apos;Actinobacteria&apos;</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">not Actinobacteria Cavalier-Smith 2002</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">Actinobacteria</rdfs:label>
+        <rdfs:label xml:lang="en">Actinobacteria &lt;phylum&gt;</rdfs:label>
     </owl:Class>
     
 
