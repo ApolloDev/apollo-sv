@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/apollo_sv.owl#"
-     xml:base="http://purl.obolibrary.org/obo/apollo_sv.owl"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/apollo_sv/apollo_sv-full.owl#"
+     xml:base="http://purl.obolibrary.org/obo/apollo_sv/apollo_sv-full.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:uo="http://purl.obolibrary.org/obo/uo#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
@@ -23,8 +23,8 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:apollo_sv="http://purl.obolibrary.org/obo/apollo_sv.owl/"
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/apollo_sv.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/apollo_sv/releases/2023-02-19/apollo_sv.owl"/>
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/apollo_sv/apollo_sv-full.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/apollo_sv/releases/2023-02-19/apollo_sv-full.owl"/>
         <dc:contributor>Amanda Hicks</dc:contributor>
         <dc:contributor>John Levander</dc:contributor>
         <dc:contributor>Josh Hanna</dc:contributor>
