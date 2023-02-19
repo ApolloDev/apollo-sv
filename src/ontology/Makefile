@@ -43,12 +43,12 @@ SCRIPTSDIR=                 ../scripts
 UPDATEREPODIR=              target
 SPARQLDIR =                 ../sparql
 COMPONENTSDIR =             components
-REPORT_FAIL_ON =            None
-REPORT_LABEL =              -l true
+REPORT_FAIL_ON =            ERROR
+REPORT_LABEL =              
 REPORT_PROFILE_OPTS =       
 OBO_FORMAT_OPTIONS =        
-SPARQL_VALIDATION_CHECKS =  owldef-self-reference iri-range label-with-iri multiple-replaced_by 
-SPARQL_EXPORTS =            basic-report class-count-by-prefix edges xrefs obsoletes synonyms 
+SPARQL_VALIDATION_CHECKS =  owldef-self-reference iri-range 
+SPARQL_EXPORTS =            basic-report 
 ODK_VERSION_MAKEFILE =      v1.4
 
 TODAY ?=                    $(shell date +%Y-%m-%d)
@@ -154,7 +154,7 @@ all_mappings: $(MAPPING_FILES)
 # QC Reports & Utilities
 # ----------------------------------------
 
-OBO_REPORT =  $(SRC)-obo-report
+OBO_REPORT =  $(SRC)-obo-report apollo_sv-base.owl-obo-report
 REPORTS = $(OBO_REPORT)
 REPORT_FILES = $(patsubst %, $(REPORTDIR)/%.tsv, $(REPORTS))
 
@@ -186,10 +186,12 @@ validate_profile_%: $(REPORTDIR)/validate_profile_owl2dl_%.txt
 
 SPARQL_VALIDATION_QUERIES = $(foreach V,$(SPARQL_VALIDATION_CHECKS),$(SPARQLDIR)/$(V)-violation.sparql)
 
-sparql_test:  $(EDIT_PREPROCESSED) catalog-v001.xml | $(REPORTDIR)
+sparql_test:  $(EDIT_PREPROCESSED) apollo_sv-base.owl catalog-v001.xml | $(REPORTDIR)
 ifneq ($(SPARQL_VALIDATION_QUERIES),)
   
 	$(ROBOT) verify  --catalog catalog-v001.xml -i $(EDIT_PREPROCESSED) --queries $(SPARQL_VALIDATION_QUERIES) -O $(REPORTDIR)
+  
+	$(ROBOT) verify  --catalog catalog-v001.xml -i apollo_sv-base.owl --queries $(SPARQL_VALIDATION_QUERIES) -O $(REPORTDIR)
 endif
 
 # ----------------------------------------

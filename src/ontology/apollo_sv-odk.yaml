@@ -45,3 +45,19 @@ custom_makefile_header: |
 create_obo_metadata: FALSE
 documentation:
   documentation_system: mkdocs
+robot_report:
+  use_base_iris: True
+  release_reports: False
+  fail_on : ERROR
+  use_labels : False
+  report_on :
+    - edit
+    - apollo_sv-base.owl
+  sparql_test_on:
+    - edit
+    - apollo_sv-base.owl
+  custom_sparql_checks :
+    - owldef-self-reference
+    - iri-range
+  custom_sparql_exports : 
+    - basic-report
