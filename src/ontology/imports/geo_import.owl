@@ -2687,7 +2687,7 @@ AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GEO_000000006> 
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GEO_000000006> "geopolitical dependency"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/GEO_000000006> <http://purl.obolibrary.org/obo/GEO_000000004>)
 
-# Class: <http://purl.obolibrary.org/obo/GEO_000000007> (group of major administrative subdivisions)
+# Class: <http://purl.obolibrary.org/obo/GEO_000000007> (aggregate of major administrative subdivisions)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GEO_000000007> "An aggregate of governmental organizations that is not itself a major administrative subdivision and whose members are only major administrative subdivisions that have some feature in common."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/GEO_000000007> "Amanda Hicks"@en)
