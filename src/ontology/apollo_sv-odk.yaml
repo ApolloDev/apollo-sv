@@ -1,0 +1,63 @@
+id: apollo_sv
+title: "Apollo Structured Vocabulary"
+github_org: ApolloDev
+repo: apollo-sv
+report_fail_on: ERROR
+export_formats:
+  - owl
+  - obo
+  - json
+release_artefacts: 
+  - base
+  - full
+import_group:
+  module_type: filter
+  annotation_properties:
+    - rdfs:label
+    - IAO:0000115
+    - IAO:0000116
+    - IAO:0000111
+    - oboInOwl:hasDbXref
+    - rdfs:comment
+  products:
+    - id: ro
+      module_type: slme
+      slme_individuals: exclude
+    - id: pno
+      mirror_from: http://purl.obolibrary.org/obo/iao/pno/dev/pno.owl
+      module_type: mirror
+      # URI different from what is used in OMRSE
+    - id: geo
+      mirror_from: http://purl.obolibrary.org/obo/geo/dev/geo.owl
+      module_type: mirror
+use_custom_import_module: TRUE
+robot_java_args: '-Xmx8G'
+custom_makefile_header: |
+  ### Workflow
+  #
+  # Tasks to edit and release OMRSE.
+  #
+  # #### Edit
+  #
+  # 1. [Prepare release](prepare_release)
+  # 2. [Refresh imports](all_imports)
+  # 3. [Update repo to latest ODK](update_repo)
+create_obo_metadata: FALSE
+documentation:
+  documentation_system: mkdocs
+robot_report:
+  use_base_iris: True
+  release_reports: False
+  fail_on : ERROR
+  use_labels : False
+  report_on :
+    - edit
+    - apollo_sv-base.owl
+  sparql_test_on:
+    - edit
+    - apollo_sv-base.owl
+  custom_sparql_checks :
+    - owldef-self-reference
+    - iri-range
+  custom_sparql_exports : 
+    - basic-report
