@@ -16,7 +16,7 @@
      xmlns:apollo_sv="http://purl.obolibrary.org/obo/apollo_sv.owl/"
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/apollo_sv/apollo_sv-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/apollo_sv/releases/2023-02-19/apollo_sv-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/apollo_sv/releases/2023-05-05/apollo_sv-base.owl"/>
         <dc:contributor>Amanda Hicks</dc:contributor>
         <dc:contributor>John Levander</dc:contributor>
         <dc:contributor>Josh Hanna</dc:contributor>
@@ -27,13 +27,13 @@
         <dc:creator>Mathias Brochhausen</dc:creator>
         <dc:title xml:lang="en">Apollo Structured Vocabulary (Apollo-SV)</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
-        <terms:description xml:lang="en">An ontology of geographical entities implemented in Web Ontology Language 2 (OWL2) and based on Basic Formal Ontology (BFO). The developers aim to adhere to the OBO Foundry principles.</terms:description>
+        <terms:description xml:lang="en">An OWL2 ontology of phenomena in infectious disease epidemiology and population biology for use in epidemic simulation.</terms:description>
         <terms:license>https://creativecommons.org/licenses/by/4.0/</terms:license>
         <www:RTS_00000001>C87985BA-6A8A-483A-A6B6-63975101F672</www:RTS_00000001>
         <www:RTS_00000002>082D5D78-D916-457E-B4FD-365F86F45B30</www:RTS_00000002>
         <rdfs:comment xml:lang="en">When citing Apollo-SV, use the permanent URL of the ontology: http://purl.obolibrary.org/obo/apollo_sv.owl.  When referencing a specific component of the Apollo-SV such as a class, object property, annotation property, or individual, use the component&apos;s Uniform Resource Identifier (URI).</rdfs:comment>
         <owl:versionInfo>2023-01-10</owl:versionInfo>
-        <owl:versionInfo>2023-02-19</owl:versionInfo>
+        <owl:versionInfo>2023-05-05</owl:versionInfo>
     </owl:Ontology>
     
 

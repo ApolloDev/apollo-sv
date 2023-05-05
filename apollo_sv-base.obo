@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: apollo_sv/releases/2023-02-19/apollo_sv-base.owl
+data-version: apollo_sv/releases/2023-05-05/apollo_sv-base.owl
 remark: When citing Apollo-SV, use the permanent URL of the ontology: http://purl.obolibrary.org/obo/apollo_sv.owl.  When referencing a specific component of the Apollo-SV such as a class, object property, annotation property, or individual, use the component's Uniform Resource Identifier (URI).
 ontology: apollo_sv/apollo_sv-base
 property_value: http://purl.org/dc/elements/1.1/contributor "Amanda Hicks" xsd:string
@@ -12,10 +12,10 @@ property_value: http://purl.org/dc/elements/1.1/contributor "William R. Hogan" x
 property_value: http://purl.org/dc/elements/1.1/creator "Mathias Brochhausen" xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Apollo Structured Vocabulary (Apollo-SV)" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
-property_value: http://purl.org/dc/terms/description "An ontology of geographical entities implemented in Web Ontology Language 2 (OWL2) and based on Basic Formal Ontology (BFO). The developers aim to adhere to the OBO Foundry principles." xsd:string
+property_value: http://purl.org/dc/terms/description "An OWL2 ontology of phenomena in infectious disease epidemiology and population biology for use in epidemic simulation." xsd:string
 property_value: http://purl.org/dc/terms/license "https://creativecommons.org/licenses/by/4.0/" xsd:string
 property_value: owl:versionInfo "2023-01-10" xsd:string
-property_value: owl:versionInfo "2023-02-19" xsd:string
+property_value: owl:versionInfo "2023-05-05" xsd:string
 property_value: RTS:00000001 "C87985BA-6A8A-483A-A6B6-63975101F672" xsd:string
 property_value: RTS:00000002 "082D5D78-D916-457E-B4FD-365F86F45B30" xsd:string
 
