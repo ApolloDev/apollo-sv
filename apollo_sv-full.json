@@ -31,7 +31,7 @@
         "val" : "Apollo Structured Vocabulary (Apollo-SV)"
       }, {
         "pred" : "http://purl.org/dc/terms/description",
-        "val" : "An ontology of geographical entities implemented in Web Ontology Language 2 (OWL2) and based on Basic Formal Ontology (BFO). The developers aim to adhere to the OBO Foundry principles."
+        "val" : "An OWL2 ontology of phenomena in infectious disease epidemiology and population biology for use in epidemic simulation."
       }, {
         "pred" : "http://purl.org/dc/terms/license",
         "val" : "https://creativecommons.org/licenses/by/4.0/"
@@ -49,9 +49,9 @@
         "val" : "2023-01-10"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2023-02-19"
+        "val" : "2023-05-05"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/apollo_sv/releases/2023-02-19/apollo_sv-full.json"
+      "version" : "http://purl.obolibrary.org/obo/apollo_sv/releases/2023-05-05/apollo_sv-full.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000113",
@@ -263,9 +263,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "ready for release"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
-          "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
         } ]
       }
     }, {
@@ -305,9 +302,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "pending final vetting"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
-          "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
         } ]
       }
     }, {
@@ -468,9 +462,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "requires discussion"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
-          "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Alan Ruttenberg"
@@ -15490,15 +15481,16 @@
       "lbl" : "molecular_function",
       "type" : "CLASS",
       "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000589",
-          "val" : "molecular process"
+        "definition" : {
+          "val" : "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process.",
+          "xrefs" : [ "GOC:pdt" ]
+        },
+        "comments" : [ "Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex." ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "molecular function"
         } ]
       }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GO_0003824",
-      "lbl" : "catalytic activity",
-      "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0006950",
       "lbl" : "response to stress",
@@ -15732,12 +15724,35 @@
         "definition" : {
           "val" : "Any process specifically pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms. A process is a collection of molecular events with a defined beginning and end."
         },
+        "comments" : [ "Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this." ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "biological process"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "physiological process"
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "single organism process"
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "single-organism process"
+        } ],
+        "xrefs" : [ {
+          "val" : "Wikipedia:Biological_process"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "biological_process"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
           "val" : "http://purl.obolibrary.org/obo/ido.owl"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "jl"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2012-09-19T15:05:24Z"
         } ]
       }
     }, {
@@ -15775,15 +15790,23 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0016301",
       "lbl" : "kinase activity",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GO_0016740",
-      "lbl" : "transferase activity",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GO_0016772",
-      "lbl" : "transferase activity, transferring phosphorus-containing groups",
-      "type" : "CLASS"
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Catalysis of the transfer of a phosphate group, usually from ATP, to a substrate molecule.",
+          "xrefs" : [ "ISBN:0198506732" ]
+        },
+        "comments" : [ "Note that this term encompasses all activities that transfer a single phosphate group; although ATP is by far the most common phosphate donor, reactions using other phosphate donors are included in this term." ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "phosphokinase activity"
+        } ],
+        "xrefs" : [ {
+          "val" : "Reactome:R-HSA-6788855"
+        }, {
+          "val" : "Reactome:R-HSA-6788867"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0018991",
       "lbl" : "oviposition",
@@ -36428,10 +36451,10 @@
       "lbl" : "quality",
       "type" : "CLASS",
       "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000589",
-          "val" : "quality (PATO)"
-        } ]
+        "definition" : {
+          "val" : "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities",
+          "xrefs" : [ "PATOC:GVG" ]
+        }
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000040",
@@ -36667,7 +36690,7 @@
         "subsets" : [ "http://purl.org/obo/owl/obo#attribute_slim" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasDefinition",
-          "val" : "_:genid2147486883"
+          "val" : "_:genid2147486889"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -37371,9 +37394,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
           "val" : "http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "https://oborel.github.io/obo-relations/temporal-semantics/"
         } ]
       }
     }, {
@@ -37381,7 +37401,7 @@
       "lbl" : "axiom holds for all times",
       "meta" : {
         "definition" : {
-          "val" : "\n\n## Elucidation\n\nThis is used when the statement/axiom is assumed to hold true 'eternally'\n\n## How to interpret (informal)\n\nFirst the \"atemporal\" FOL is derived from the OWL using the standard\ninterpretation. This axiom is temporalized by embedding the axiom\nwithin a for-all-times quantified sentence. The t argument is added to\nall instantiation predicates and predicates that use this relation.\n\n## Example\n\n    Class: nucleus\n    SubClassOf: part_of some cell\n\n    forall t :\n      forall n :\n        instance_of(n,Nucleus,t)\n         implies\n        exists c :\n          instance_of(c,Cell,t)\n          part_of(n,c,t)\n\n## Notes\n\nThis interpretation is *not* the same as an at-all-times relation\n\n"
+          "val" : "## Elucidation\n\nThis is used when the statement/axiom is assumed to hold true &apos;eternally&apos;\n\n## How to interpret (informal)\n\nFirst the &quot;atemporal&quot; FOL is derived from the OWL using the standard\ninterpretation. This axiom is temporalized by embedding the axiom\nwithin a for-all-times quantified sentence. The t argument is added to\nall instantiation predicates and predicates that use this relation.\n\n## Example\n\n    Class: nucleus\n    SubClassOf: part_of some cell\n\n    forall t :\n      forall n :\n        instance_of(n,Nucleus,t)\n         implies\n        exists c :\n          instance_of(c,Cell,t)\n          part_of(n,c,t)\n\n## Notes\n\nThis interpretation is *not* the same as an at-all-times relation"
         }
       }
     }, {
@@ -37672,6 +37692,9 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/ro/subsets#ro-eco" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0000-0002-7073-9172"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "David Osumi-Sutherland"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
@@ -37739,6 +37762,9 @@
           "val" : "There are two ways to encode this as a shortcut relation. The other possibility to use an annotation assertion between two classes, and expand this to a disjointness axiom. "
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0000-0002-6601-2165"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -37800,13 +37826,13 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension", "http://purl.obolibrary.org/obo/valid_for_go_ontology", "http://purl.obolibrary.org/obo/valid_for_gocam" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0001-7476-6306"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "David Hill"
+          "val" : "https://orcid.org/0000-0002-3837-8864"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Tanya Berardini"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "http://purl.obolibrary.org/obo/ro/docs/causal-relations"
@@ -37838,6 +37864,9 @@
           "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0000-0002-6601-2165"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -37864,7 +37893,7 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension", "http://purl.obolibrary.org/obo/valid_for_go_ontology", "http://purl.obolibrary.org/obo/valid_for_gocam" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "http://purl.obolibrary.org/obo/ro/docs/causal-relations"
@@ -37893,7 +37922,7 @@
           "val" : "osteoclast SubClassOf 'capable of' some 'bone resorption'"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "has function realized in"
@@ -37918,7 +37947,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "has function in"
@@ -37945,6 +37974,9 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
           "val" : "This may be obsoleted and replaced by the original 'has agent' relation"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
@@ -37989,6 +38021,9 @@
           "val" : "This relation acts as a join point with BSPO"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0000-0002-6601-2165"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
@@ -38016,7 +38051,7 @@
           "val" : "move to BFO?"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "https://en.wikipedia.org/wiki/Allen%27s_interval_algebra"
@@ -38048,6 +38083,9 @@
           "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0000-0002-6601-2165"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -38069,6 +38107,9 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
           "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
@@ -38094,6 +38135,9 @@
           "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0000-0002-6601-2165"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
         }, {
           "pred" : "http://purl.org/dc/elements/1.1/source",
@@ -38112,6 +38156,9 @@
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
           "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
@@ -38140,7 +38187,7 @@
           "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "starts with process that occurs in"
@@ -38160,7 +38207,7 @@
           "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "ends with process that occurs in"
@@ -38180,7 +38227,7 @@
           "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "consumes"
@@ -38239,7 +38286,7 @@
           "val" : "http://purl.obolibrary.org/obo/RO_0002411"
         }, {
           "pred" : "http://purl.org/dc/terms/creator",
-          "val" : "cjm"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         } ]
       }
     }, {
@@ -38256,7 +38303,7 @@
           "val" : "http://purl.obolibrary.org/obo/RO_0002411"
         }, {
           "pred" : "http://purl.org/dc/terms/creator",
-          "val" : "cjm"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         } ]
       }
     }, {
@@ -38272,7 +38319,7 @@
           "val" : "Because part_of is transitive, inheres in is a sub-relation of characteristic of part of"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "inheres in part of"
@@ -38297,7 +38344,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000232",
           "val" : "Do not use this relation directly. It is ended as a grouping for a diverse set of relations, all involving parthood or connectivity relationships"
@@ -38320,6 +38367,9 @@
           "val" : "Clp1p relocalizes from the nucleolus to the spindle and site of cell division; i.e. it is associated transiently with the spindle pole body and the contractile ring (evidence from GFP fusion). Clp1p colocalizes_with spindle pole body (GO:0005816) and contractile ring (GO:0005826)"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0000-0002-6601-2165"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -38332,9 +38382,6 @@
           "val" : "http://purl.obolibrary.org/obo/ro/releases/2019-02-02/ro.owl"
         }, {
           "pred" : "http://purl.org/dc/elements/1.1/creator",
-          "val" : "Gene Ontology Consortium"
-        }, {
-          "pred" : "http://purl.org/dc/terms/creator",
           "val" : "Gene Ontology Consortium"
         } ]
       }
@@ -38352,7 +38399,7 @@
           "val" : "a particular instances of akt-2 enables some instance of protein kinase activity"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "catalyzes"
@@ -38383,7 +38430,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000232",
           "val" : "This is a grouping relation that collects relations used for the purpose of connecting structure and function"
@@ -38399,7 +38446,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "false"
@@ -38415,7 +38462,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "actively involved in"
@@ -38438,7 +38485,7 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/valid_for_gocam" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         } ]
       }
     }, {
@@ -38452,7 +38499,7 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/RO_0002259" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000589",
           "val" : "regulated by (processual)"
@@ -38469,7 +38516,7 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/RO_0002259" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         } ]
       }
     }, {
@@ -38483,7 +38530,7 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/RO_0002259" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         } ]
       }
     }, {
@@ -38538,7 +38585,7 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/RO_0002259", "http://purl.obolibrary.org/obo/ro/subsets#ro-eco" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         } ]
       }
     }, {
@@ -38554,7 +38601,7 @@
           "val" : "A lump of clay and a statue"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000232",
           "val" : "This relation is added for formal completeness. It is unlikely to be used in many practical scenarios"
@@ -38573,6 +38620,9 @@
           "val" : "http://purl.obolibrary.org/obo/IAO_0000428"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0000-0002-6601-2165"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
@@ -38589,7 +38639,7 @@
           "val" : "http://purl.obolibrary.org/obo/IAO_0000428"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         } ]
       }
     }, {
@@ -38602,7 +38652,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "indirectly activates"
@@ -38621,7 +38671,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "indirectly inhibits"
@@ -38644,7 +38694,7 @@
           "val" : "This branch of the ontology deals with causal relations between entities. It is divided into two branches: causal relations between occurrents/processes, and causal relations between material entities. We take an 'activity flow-centric approach', with the former as primary, and define causal relations between material entities in terms of causal relations between occurrents.\n\nTo define causal relations in an activity-flow type network, we make use of 3 primitives:\n\n * Temporal: how do the intervals of the two occurrents relate? \n * Is the causal relation regulatory?\n * Is the influence positive or negative?\n\nThe first of these can be formalized in terms of the Allen Interval Algebra. Informally, the 3 bins we care about are 'direct', 'indirect' or overlapping. Note that all causal relations should be classified under a RO temporal relation (see the branch under 'temporally related to'). Note that all causal relations are temporal, but not all temporal relations are causal. Two occurrents can be related in time without being causally connected. We take causal influence to be primitive, elucidated as being such that has the upstream changed, some qualities of the donwstream would necessarily be modified.\n\nFor the second, we consider a relationship to be regulatory if the system in which the activities occur is capable of altering the relationship to achieve some objective. This could include changing the rate of production of a molecule.\n\nFor the third, we consider the effect of the upstream process on the output(s) of the downstream process. If the level of output is increased, or the rate of production of the output is increased, then the direction is increased. Direction can be positive, negative or neutral or capable of either direction. Two positives in succession yield a positive, two negatives in succession yield a positive, otherwise the default assumption is that the net effect is canceled and the influence is neutral.\n\nEach of these 3 primitives can be composed to yield a cross-product of different relation types."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000232",
           "val" : "Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect."
@@ -38664,6 +38714,9 @@
           "val" : "http://purl.obolibrary.org/obo/IAO_0000428"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0000-0002-6601-2165"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
@@ -38680,7 +38733,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/RO_0002575",
           "val" : "http://purl.obolibrary.org/obo/RO_0002411"
@@ -38703,7 +38756,7 @@
           "val" : "We would like to make this disjoint with 'preceded by', but this is prohibited in OWL2"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "influences (processual)"
@@ -38720,7 +38773,7 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/RO_0002259" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "http://purl.obolibrary.org/obo/ro/docs/causal-relations"
@@ -38736,7 +38789,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         } ]
       }
     }, {
@@ -38749,7 +38802,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/RO_0004049",
           "val" : "http://purl.obolibrary.org/obo/RO_0002428"
@@ -38765,7 +38818,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/RO_0004050",
           "val" : "http://purl.obolibrary.org/obo/RO_0002428"
@@ -38784,7 +38837,7 @@
           "val" : "OWL does not allow defining object properties via a Union"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "involved in or reguates"
@@ -38809,7 +38862,7 @@
           "val" : "A protein that enables activity in a cytosol."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "executes activity in"
@@ -38836,7 +38889,7 @@
           "val" : "Considering relabeling as 'pairwise interacts with'"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000232",
           "val" : "Note that this relationship type, and sub-relationship types may be redundant with process terms from other ontologies. For example, the symbiotic relationship hierarchy parallels GO. The relations are provided as a convenient shortcut. Consider using the more expressive processual form to capture your data. In the future, these relations will be linked to their cognate processes through rules."
@@ -38858,7 +38911,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "binds"
@@ -38883,7 +38936,7 @@
           "val" : "Axiomatization to GO to be added later"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "An interaction relation between x and y in which x catalyzes a reaction in which a phosphate group is added to y."
@@ -38903,10 +38956,10 @@
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Vasundra Touré"
+          "val" : "https://orcid.org/0000-0003-4639-4431"
         } ]
       }
     }, {
@@ -38923,10 +38976,10 @@
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Vasundra Touré"
+          "val" : "https://orcid.org/0000-0003-4639-4431"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "directly inhibits"
@@ -38946,10 +38999,10 @@
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Vasundra Touré"
+          "val" : "https://orcid.org/0000-0003-4639-4431"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "directly activates"
@@ -38962,7 +39015,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000232",
           "val" : "This property or its subproperties is not to be used directly. These properties exist as helper properties that are used to support OWL reasoning."
@@ -38979,7 +39032,7 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/ro/subsets#ro-eco" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         } ]
       }
     }, {
@@ -38989,7 +39042,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         } ]
       }
     }, {
@@ -39015,6 +39068,9 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "https://orcid.org/0000-0002-6601-2165"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -39034,7 +39090,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
           "val" : "http://purl.obolibrary.org/obo/BFO_0000169"
@@ -39050,7 +39106,7 @@
           "val" : "The intent is that the process branch of the causal property hierarchy is primary (causal relations hold between occurrents/processes), and that the material branch is defined in terms of the process branch"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "http://purl.obolibrary.org/obo/ro/docs/causal-relations"
@@ -39066,7 +39122,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "http://purl.obolibrary.org/obo/ro/docs/causal-relations"
@@ -39082,7 +39138,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
           "val" : "http://ontologydesignpatterns.org/wiki/Submissions:N-Ary_Relation_Pattern_%28OWL_2%29"
@@ -39098,7 +39154,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         } ]
       }
     }, {
@@ -39111,10 +39167,10 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Vasundra Touré"
+          "val" : "https://orcid.org/0000-0003-4639-4431"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "http://purl.obolibrary.org/obo/ro/docs/causal-relations"
@@ -39134,7 +39190,7 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension", "http://purl.obolibrary.org/obo/valid_for_go_ontology", "http://purl.obolibrary.org/obo/valid_for_gocam" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "http://purl.obolibrary.org/obo/ro/docs/causal-relations"
@@ -39177,7 +39233,7 @@
           "val" : "gland SubClassOf 'has part structure that is capable of' some 'secretion by cell'"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         } ]
       }
     }, {
@@ -39193,7 +39249,7 @@
           "val" : "Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "http://purl.obolibrary.org/obo/ro/docs/causal-relations"
@@ -39307,7 +39363,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "cjm"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2017-12-26T19:45:49Z"
@@ -39323,7 +39379,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "cjm"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-01-25T23:20:13Z"
@@ -39340,7 +39396,7 @@
           "val" : "http://purl.obolibrary.org/obo/RO_0002264"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "cjm"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-01-26T23:49:30Z"
@@ -39360,7 +39416,7 @@
           "val" : "http://purl.obolibrary.org/obo/RO_0002264"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "cjm"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-01-26T23:49:51Z"
@@ -39380,7 +39436,7 @@
           "val" : "http://purl.obolibrary.org/obo/RO_0002263"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "cjm"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-01-26T23:53:14Z"
@@ -39403,7 +39459,7 @@
           "val" : "http://purl.obolibrary.org/obo/RO_0002263"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "cjm"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-01-26T23:53:22Z"
@@ -39422,7 +39478,7 @@
           "val" : "http://purl.obolibrary.org/obo/RO_0002418"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "cjm"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-03-13T23:55:05Z"
@@ -39438,7 +39494,7 @@
           "val" : "http://purl.obolibrary.org/obo/RO_0002418"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "cjm"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-03-13T23:55:19Z"
@@ -39483,16 +39539,16 @@
           "val" : "Environmental polymorphism in butterflies: These butterflies have a 'responsivity to day length trait' that is realized in response to the duration of the day, and is realized in developmental processes that lead to increased or decreased pigmentation in the adult morph."
         }, {
           "pred" : "http://purl.org/dc/terms/contributor",
-          "val" : "Austin Meier"
+          "val" : "https://orcid.org/0000-0001-6996-0040"
         }, {
           "pred" : "http://purl.org/dc/terms/contributor",
-          "val" : "Chris Mungall"
+          "val" : "https://orcid.org/0000-0002-6601-2165"
         }, {
           "pred" : "http://purl.org/dc/terms/contributor",
-          "val" : "David Osumi-Sutherland"
+          "val" : "https://orcid.org/0000-0002-7073-9172"
         }, {
           "pred" : "http://purl.org/dc/terms/contributor",
-          "val" : "Marie Angelique Laporte"
+          "val" : "https://orcid.org/0000-0002-8461-9745"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
           "val" : "https://docs.google.com/document/d/1KWhZxVBhIPkV6_daHta0h6UyHbjY2eIrnON1WIRGgdY/edit"
@@ -39562,7 +39618,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Vasundra Touré"
+          "val" : "https://orcid.org/0000-0003-4639-4431"
         } ]
       }
     }, {
@@ -40912,7 +40968,7 @@
           "val" : "http://www.geneontology.org/formats/oboInOwl"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasDefinition",
-          "val" : "_:genid2147486864"
+          "val" : "_:genid2147486870"
         } ]
       }
     }, {
@@ -44220,14 +44276,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0008150"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0003674",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0003824",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0003674"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0006950",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0050896"
@@ -44278,15 +44326,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0016301",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0016772"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0016740",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0003824"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0016772",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0016740"
+      "obj" : "http://purl.obolibrary.org/obo/GO_0003674"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0018991",
       "pred" : "is_a",
@@ -48251,10 +48291,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001241",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001241",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001323",
       "pred" : "is_a",
