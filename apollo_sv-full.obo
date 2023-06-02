@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: apollo_sv/releases/2023-05-05/apollo_sv-full.owl
+data-version: apollo_sv/releases/2023-06-02/apollo_sv-full.owl
 subsetdef: attribute_slim ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -24,7 +24,7 @@ property_value: http://purl.org/dc/elements/1.1/title "Apollo Structured Vocabul
 property_value: http://purl.org/dc/terms/description "An OWL2 ontology of phenomena in infectious disease epidemiology and population biology for use in epidemic simulation." xsd:string
 property_value: http://purl.org/dc/terms/license "https://creativecommons.org/licenses/by/4.0/" xsd:string
 property_value: owl:versionInfo "2023-01-10" xsd:string
-property_value: owl:versionInfo "2023-05-05" xsd:string
+property_value: owl:versionInfo "2023-06-02" xsd:string
 property_value: RTS:00000001 "C87985BA-6A8A-483A-A6B6-63975101F672" xsd:string
 property_value: RTS:00000002 "082D5D78-D916-457E-B4FD-365F86F45B30" xsd:string
 
@@ -5527,10 +5527,54 @@ property_value: IAO:0000111 "monkeypox disease inhering in a human being" xsd:st
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
 [Term]
+id: APOLLO_SV:00000616
+name: wastewater disease surveillance
+def: "A disease surveillance that detects evidence of the presence of pathogens in sewage." []
+comment: See the CDC's explanation of wastewater surveillance, and how it uses the term 'wastewater' synonymously with 'sewage', here: https://www.cdc.gov/nwss/wastewater-surveillance.html.
+is_a: APOLLO_SV:00000545 ! disease surveillance
+property_value: http://purl.org/dc/elements/1.1/contributor "William R. Hogan" xsd:string
+property_value: IAO:0000117 "Matthew Diller" xsd:string
+property_value: IAO:0000118 "sewage disease surveillance" xsd:string
+
+[Term]
 id: APOLLO_SV:00000617
 name: population count
 def: "A count of simulated or physical individuals in a population." []
 is_a: APOLLO_SV:00000032 ! count
+property_value: IAO:0000117 "Matthew Diller" xsd:string
+
+[Term]
+id: APOLLO_SV:00000618
+name: wastewater surveillance data set
+def: "A disease surveillance data set that is about some wastewater disease surveillance." []
+is_a: APOLLO_SV:00000554 ! disease surveillance data
+property_value: http://purl.org/dc/elements/1.1/contributor "William R. Hogan" xsd:string
+property_value: IAO:0000117 "Matthew Diller" xsd:string
+property_value: IAO:0000118 "sewage surveillance data" xsd:string
+
+[Term]
+id: APOLLO_SV:00000619
+name: population density datum
+def: "A scalar measurement datum that is about some population and is normalized by unit land area in a particular geographical region." []
+is_a: IAO:0000032 ! scalar measurement datum
+property_value: http://purl.org/dc/elements/1.1/contributor "William R. Hogan" xsd:string
+property_value: IAO:0000117 "Matthew Diller" xsd:string
+
+[Term]
+id: APOLLO_SV:00000620
+name: physical distancing infectious disease control measure
+def: "An individual treatment control strategy in which individuals maintain a certain distance from other individuals during a social act." []
+is_a: APOLLO_SV:00000194 ! individual treatment control strategy
+property_value: http://purl.org/dc/elements/1.1/contributor "William R. Hogan" xsd:string
+property_value: IAO:0000117 "Matthew Diller" xsd:string
+
+[Term]
+id: APOLLO_SV:00000621
+name: lockdown infectious disease control measure
+def: "A place closure control strategy in which only selected places in a geographical region are permitted to stay open and travel is permitted only for people employed by certain organizations." []
+comment: The places that are allowed to stay open are typically selected by the local or state government, and often include hospitals, many healthcare facilities, food stores and food banks, and law enforcement and emergency services.
+is_a: APOLLO_SV:00000229 ! place closure control strategy
+property_value: http://purl.org/dc/elements/1.1/contributor "William R. Hogan" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 
 [Term]
