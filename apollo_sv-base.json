@@ -52,9 +52,9 @@
         "val" : "2023-01-10"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2023-05-05"
+        "val" : "2023-06-02"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/apollo_sv/releases/2023-05-05/apollo_sv-base.json"
+      "version" : "http://purl.obolibrary.org/obo/apollo_sv/releases/2023-06-02/apollo_sv-base.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000113",
@@ -11035,6 +11035,26 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000616",
+      "lbl" : "wastewater disease surveillance",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A disease surveillance that detects evidence of the presence of pathogens in sewage."
+        },
+        "comments" : [ "See the CDC's explanation of wastewater surveillance, and how it uses the term 'wastewater' synonymously with 'sewage', here: https://www.cdc.gov/nwss/wastewater-surveillance.html." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Matthew Diller"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "sewage disease surveillance"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/contributor",
+          "val" : "William R. Hogan"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000617",
       "lbl" : "population count",
       "type" : "CLASS",
@@ -11045,6 +11065,74 @@
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Matthew Diller"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000618",
+      "lbl" : "wastewater surveillance data set",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A disease surveillance data set that is about some wastewater disease surveillance."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Matthew Diller"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "sewage surveillance data"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/contributor",
+          "val" : "William R. Hogan"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000619",
+      "lbl" : "population density datum",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A scalar measurement datum that is about some population and is normalized by unit land area in a particular geographical region."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Matthew Diller"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/contributor",
+          "val" : "William R. Hogan"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000620",
+      "lbl" : "physical distancing infectious disease control measure",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An individual treatment control strategy in which individuals maintain a certain distance from other individuals during a social act."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Matthew Diller"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/contributor",
+          "val" : "William R. Hogan"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000621",
+      "lbl" : "lockdown infectious disease control measure",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A place closure control strategy in which only selected places in a geographical region are permitted to stay open and travel is permitted only for people employed by certain organizations."
+        },
+        "comments" : [ "The places that are allowed to stay open are typically selected by the local or state government, and often include hospitals, many healthcare facilities, food stores and food banks, and law enforcement and emergency services." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Matthew Diller"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/contributor",
+          "val" : "William R. Hogan"
         } ]
       }
     }, {
@@ -31288,9 +31376,29 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DOID_3292"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000616",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000545"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000617",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000032"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000618",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000554"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000619",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000032"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000620",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000194"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000621",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000229"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000793",
       "pred" : "is_a",
