@@ -33,6 +33,9 @@ import_group:
     - id: ido
       module_type: slme
       slme_individuals: exclude
+    - id: mf
+      module_type: slme
+      slme_individuals: exclude
 use_custom_import_module: TRUE
 robot_java_args: '-Xmx8G'
 custom_makefile_header: |

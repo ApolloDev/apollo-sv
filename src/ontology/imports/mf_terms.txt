@@ -1,0 +1,3 @@
+http://purl.obolibrary.org/obo/MF_0000073
+http://purl.obolibrary.org/obo/MF_0000075
+http://purl.obolibrary.org/obo/MF_0000074
