@@ -13304,6 +13304,17 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     
 
 
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000639 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000639">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000142"/>
+        <obo:IAO_0000115 xml:lang="en">A vaccination against respiratory syncytial virus via the administration of the monoclonal antibody nirsevimab.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">vaccination with nirsevimab</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000793 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000793">
