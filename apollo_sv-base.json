@@ -52,9 +52,9 @@
         "val" : "2023-01-10"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2023-06-02"
+        "val" : "2024-02-23"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/apollo_sv/releases/2023-06-02/apollo_sv-base.json"
+      "version" : "http://purl.obolibrary.org/obo/apollo_sv/releases/2024-02-23/apollo_sv-base.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000113",
@@ -8334,7 +8334,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000480",
-      "lbl" : "geographical migration of organism",
+      "lbl" : "geographical movement of organism",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -11132,6 +11132,279 @@
           "val" : "Matthew Diller"
         }, {
           "pred" : "http://purl.org/dc/elements/1.1/contributor",
+          "val" : "William R. Hogan"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000622",
+      "lbl" : "cumulative epidemic case count",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A count of cases in an epidemic that is about the entire temporal interval occupied by the epidemic."
+        },
+        "comments" : [ "The count is also nearly always geographically localized, for example, the case count for the state of Pennsylvania or the case count for Waukesha County, Wisconsin." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
+          "val" : "A count of cases from the beginning of the epidemic until recently."
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000623",
+      "lbl" : "incident epidemic case count",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A count of cases in an epidemic that is about a proper part of the temporal interval occupied by the epidemic."
+        },
+        "comments" : [ "Incident case counts are measured according to regular intervals, typically day or week.", "The count is also nearly always geographically localized, for example, the case count for the state of Pennsylvania or the case count for Waukesha County, Wisconsin." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
+          "val" : "A count of cases in an epidemic that spans a shorter interval, such as a particular day or a week."
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000624",
+      "lbl" : "count of events occurring in a population",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A count of processes in which a population and/or its members participate during a given temporal region."
+        },
+        "comments" : [ "As the population is typically geographically defined (among other ways), the count is most often constrained to particular location in addition to a given time." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
+          "val" : "A count of certain type of event that occurs within a population, such as deaths, infections, births, and so on during a particular time."
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000625",
+      "lbl" : "count of deaths in a population",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A count of death events that occurred in a population in a given temporal region."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "population death count"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000626",
+      "lbl" : "count of vaccinations in a population",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A count of vaccination events that occurred in a population during a temporal region."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "population vaccination count"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
+          "val" : "A count of vaccinations in a population during a particular time."
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000627",
+      "lbl" : "count of hospital stays in a population",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A count of hospital stays in a population during a temporal region."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "population hospitalization count"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
+          "val" : "A count of hospitalizations in a population during a particular time."
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000628",
+      "lbl" : "count of infections in a population",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A count of infections (process) that occurred in a population in a given temporal region."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "population infection count"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
+          "val" : "A count of infections in a population during a particular time."
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000629",
+      "lbl" : "cumulative epidemic infection count",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A count of infections in a population where the infections are an occurrent part of the same epidemic, and the temporal region over which the count is made is the region occupied by the entire epidemic."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000630",
+      "lbl" : "incident epidemic infection count",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A count of infections in a population where the infections are an occurrent part of the same epidemic, and the temporal region over which the count is made is a proper part of the region occupied by the entire epidemic."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000631",
+      "lbl" : "cumulative epidemic death count",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A count of deaths in a population where the deaths are an occurrent part of the same epidemic, the deaths are attributed to the epidemic disease, and the temporal region over which the count is made is the region occupied by the entire epidemic."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000632",
+      "lbl" : "incident epidemic death count",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A count of deaths in a population where the deaths are an occurrent part of the same epidemic, the deaths are attributed to the epidemic disease, and the temporal region over which the count is made is a proper part of the region occupied by the entire epidemic."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000633",
+      "lbl" : "cumulative epidemic hospitalization count",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A count of hospitalizations in a population where the hospitalizations are an occurrent part of the same epidemic, the hospitalizations are attributed to the epidemic disease, and the temporal region over which the count is made is the region occupied by the entire epidemic."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000634",
+      "lbl" : "incident epidemic hospitalization count",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A count of hospitalizations in a population where the hospitalizations are an occurrent part of the same epidemic, the hospitalizations are attributed to the epidemic disease, and the temporal region over which the count is made is a proper part of the region occupied by the entire epidemic."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000635",
+      "lbl" : "cumulative epidemic vaccination count",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A count of vaccinations in a population where the vaccinations are an occurrent part of the same epidemic, the vaccinations are against the type of pathogen causing the epidemic, and the temporal region over which the count is made is the region occupied by the entire epidemic."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000636",
+      "lbl" : "incident epidemic vaccination count",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A count of vaccinations in a population where the vaccinations are an occurrent part of the same epidemic, the vaccinations are against the type of pathogen causing the epidemic, and the temporal region over which the count is made is a proper part of the region occupied by the entire epidemic."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000637",
+      "lbl" : "intent to be vaccinated",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An intentionality directed at future participation in a vaccination as the recipient of a vaccine or other immunization."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
+          "val" : "An intent to be vaccinated in the future."
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000638",
+      "lbl" : "intent to vaccinate",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An intentionality directed at future participation in a vaccination as the administrator of a vaccine or other immunization to an organism with an immune system."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
+          "val" : "An intention to give a vaccine to someone or an animal."
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000639",
+      "lbl" : "vaccination with nirsevimab",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A vaccination against respiratory syncytial virus via the administration of the monoclonal antibody nirsevimab."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "William R. Hogan"
         } ]
       }
@@ -31399,6 +31672,78 @@
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000621",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000229"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000622",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000498"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000623",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000498"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000624",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000032"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000625",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000624"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000626",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000624"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000627",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000624"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000628",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000624"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000629",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000628"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000630",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000628"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000631",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000625"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000632",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000625"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000633",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000627"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000634",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000627"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000635",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000626"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000636",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000626"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000637",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MF_0000073"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000638",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MF_0000073"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000639",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000142"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000793",
       "pred" : "is_a",

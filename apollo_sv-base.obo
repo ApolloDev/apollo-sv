@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: apollo_sv/releases/2023-06-02/apollo_sv-base.owl
+data-version: apollo_sv/releases/2024-02-23/apollo_sv-base.owl
 remark: When citing Apollo-SV, use the permanent URL of the ontology: http://purl.obolibrary.org/obo/apollo_sv.owl.  When referencing a specific component of the Apollo-SV such as a class, object property, annotation property, or individual, use the component's Uniform Resource Identifier (URI).
 ontology: apollo_sv/apollo_sv-base
 property_value: http://purl.org/dc/elements/1.1/contributor "Amanda Hicks" xsd:string
@@ -15,7 +15,7 @@ property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/description "An OWL2 ontology of phenomena in infectious disease epidemiology and population biology for use in epidemic simulation." xsd:string
 property_value: http://purl.org/dc/terms/license "https://creativecommons.org/licenses/by/4.0/" xsd:string
 property_value: owl:versionInfo "2023-01-10" xsd:string
-property_value: owl:versionInfo "2023-06-02" xsd:string
+property_value: owl:versionInfo "2024-02-23" xsd:string
 property_value: RTS:00000001 "C87985BA-6A8A-483A-A6B6-63975101F672" xsd:string
 property_value: RTS:00000002 "082D5D78-D916-457E-B4FD-365F86F45B30" xsd:string
 
@@ -4158,7 +4158,7 @@ property_value: IAO:0000600 "A predicted data item that is the maximum value of 
 
 [Term]
 id: APOLLO_SV:00000480
-name: geographical migration of organism
+name: geographical movement of organism
 def: "A behavior of one or more organisms that is characterized by the displacement from one geographic region to some target geographic region, and is the realization of either a biological function or (a concretization of) an objective specification." []
 is_a: GO:0007610 ! behavior
 property_value: IAO:0000117 "Matthew Diller" xsd:string
@@ -4632,7 +4632,7 @@ property_value: IAO:0000117 "William R. Hogan" xsd:string
 id: APOLLO_SV:00000532
 name: human travel
 def: "A geographical migration of an organism belonging to the species Homo sapiens." []
-is_a: APOLLO_SV:00000480 ! geographical migration of organism
+is_a: APOLLO_SV:00000480 ! geographical movement of organism
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
@@ -5488,6 +5488,148 @@ property_value: http://purl.org/dc/elements/1.1/contributor "William R. Hogan" x
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 
 [Term]
+id: APOLLO_SV:00000622
+name: cumulative epidemic case count
+def: "A count of cases in an epidemic that is about the entire temporal interval occupied by the epidemic." []
+comment: The count is also nearly always geographically localized, for example, the case count for the state of Pennsylvania or the case count for Waukesha County, Wisconsin.
+is_a: APOLLO_SV:00000498 ! count of cases in an epidemic
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: IAO:0000600 "A count of cases from the beginning of the epidemic until recently." xsd:string
+
+[Term]
+id: APOLLO_SV:00000623
+name: incident epidemic case count
+def: "A count of cases in an epidemic that is about a proper part of the temporal interval occupied by the epidemic." []
+comment: Incident case counts are measured according to regular intervals, typically day or week.
+comment: The count is also nearly always geographically localized, for example, the case count for the state of Pennsylvania or the case count for Waukesha County, Wisconsin.
+is_a: APOLLO_SV:00000498 ! count of cases in an epidemic
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: IAO:0000600 "A count of cases in an epidemic that spans a shorter interval, such as a particular day or a week." xsd:string
+
+[Term]
+id: APOLLO_SV:00000624
+name: count of events occurring in a population
+def: "A count of processes in which a population and/or its members participate during a given temporal region." []
+comment: As the population is typically geographically defined (among other ways), the count is most often constrained to particular location in addition to a given time.
+is_a: APOLLO_SV:00000032 ! count
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: IAO:0000600 "A count of certain type of event that occurs within a population, such as deaths, infections, births, and so on during a particular time." xsd:string
+
+[Term]
+id: APOLLO_SV:00000625
+name: count of deaths in a population
+def: "A count of death events that occurred in a population in a given temporal region." []
+is_a: APOLLO_SV:00000624 ! count of events occurring in a population
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: IAO:0000118 "population death count" xsd:string
+
+[Term]
+id: APOLLO_SV:00000626
+name: count of vaccinations in a population
+def: "A count of vaccination events that occurred in a population during a temporal region." []
+is_a: APOLLO_SV:00000624 ! count of events occurring in a population
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: IAO:0000118 "population vaccination count" xsd:string
+property_value: IAO:0000600 "A count of vaccinations in a population during a particular time." xsd:string
+
+[Term]
+id: APOLLO_SV:00000627
+name: count of hospital stays in a population
+def: "A count of hospital stays in a population during a temporal region." []
+is_a: APOLLO_SV:00000624 ! count of events occurring in a population
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: IAO:0000118 "population hospitalization count" xsd:string
+property_value: IAO:0000600 "A count of hospitalizations in a population during a particular time." xsd:string
+
+[Term]
+id: APOLLO_SV:00000628
+name: count of infections in a population
+def: "A count of infections (process) that occurred in a population in a given temporal region." []
+is_a: APOLLO_SV:00000624 ! count of events occurring in a population
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: IAO:0000118 "population infection count" xsd:string
+property_value: IAO:0000600 "A count of infections in a population during a particular time." xsd:string
+
+[Term]
+id: APOLLO_SV:00000629
+name: cumulative epidemic infection count
+def: "A count of infections in a population where the infections are an occurrent part of the same epidemic, and the temporal region over which the count is made is the region occupied by the entire epidemic." []
+is_a: APOLLO_SV:00000628 ! count of infections in a population
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
+id: APOLLO_SV:00000630
+name: incident epidemic infection count
+def: "A count of infections in a population where the infections are an occurrent part of the same epidemic, and the temporal region over which the count is made is a proper part of the region occupied by the entire epidemic." []
+is_a: APOLLO_SV:00000628 ! count of infections in a population
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
+id: APOLLO_SV:00000631
+name: cumulative epidemic death count
+def: "A count of deaths in a population where the deaths are an occurrent part of the same epidemic, the deaths are attributed to the epidemic disease, and the temporal region over which the count is made is the region occupied by the entire epidemic." []
+is_a: APOLLO_SV:00000625 ! count of deaths in a population
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
+id: APOLLO_SV:00000632
+name: incident epidemic death count
+def: "A count of deaths in a population where the deaths are an occurrent part of the same epidemic, the deaths are attributed to the epidemic disease, and the temporal region over which the count is made is a proper part of the region occupied by the entire epidemic." []
+is_a: APOLLO_SV:00000625 ! count of deaths in a population
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
+id: APOLLO_SV:00000633
+name: cumulative epidemic hospitalization count
+def: "A count of hospitalizations in a population where the hospitalizations are an occurrent part of the same epidemic, the hospitalizations are attributed to the epidemic disease, and the temporal region over which the count is made is the region occupied by the entire epidemic." []
+is_a: APOLLO_SV:00000627 ! count of hospital stays in a population
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
+id: APOLLO_SV:00000634
+name: incident epidemic hospitalization count
+def: "A count of hospitalizations in a population where the hospitalizations are an occurrent part of the same epidemic, the hospitalizations are attributed to the epidemic disease, and the temporal region over which the count is made is a proper part of the region occupied by the entire epidemic." []
+is_a: APOLLO_SV:00000627 ! count of hospital stays in a population
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
+id: APOLLO_SV:00000635
+name: cumulative epidemic vaccination count
+def: "A count of vaccinations in a population where the vaccinations are an occurrent part of the same epidemic, the vaccinations are against the type of pathogen causing the epidemic, and the temporal region over which the count is made is the region occupied by the entire epidemic." []
+is_a: APOLLO_SV:00000626 ! count of vaccinations in a population
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
+id: APOLLO_SV:00000636
+name: incident epidemic vaccination count
+def: "A count of vaccinations in a population where the vaccinations are an occurrent part of the same epidemic, the vaccinations are against the type of pathogen causing the epidemic, and the temporal region over which the count is made is a proper part of the region occupied by the entire epidemic." []
+is_a: APOLLO_SV:00000626 ! count of vaccinations in a population
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
+id: APOLLO_SV:00000637
+name: intent to be vaccinated
+def: "An intentionality directed at future participation in a vaccination as the recipient of a vaccine or other immunization." []
+is_a: MF:0000073
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: IAO:0000600 "An intent to be vaccinated in the future." xsd:string
+
+[Term]
+id: APOLLO_SV:00000638
+name: intent to vaccinate
+def: "An intentionality directed at future participation in a vaccination as the administrator of a vaccine or other immunization to an organism with an immune system." []
+is_a: MF:0000073
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: IAO:0000600 "An intention to give a vaccine to someone or an animal." xsd:string
+
+[Term]
+id: APOLLO_SV:00000639
+name: vaccination with nirsevimab
+def: "A vaccination against respiratory syncytial virus via the administration of the monoclonal antibody nirsevimab." []
+is_a: APOLLO_SV:00000142 ! vaccination
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
 id: APOLLO_SV:00000793
 name: epidemic simulator action specification
 is_a: IAO:0000007 ! action specification
@@ -5968,8 +6110,8 @@ name: eclose
 name: eclosion
 namespace: biological_process
 def: "The emergence of an adult insect from a pupa case." []
-xref: _:genid2147485523
-xref: _:genid2147485524
+xref: _:genid2147485547
+xref: _:genid2147485548
 is_a: GO:0071684 ! organism emergence from protective structure
 property_value: IAO:0000412 "http://purl.org/obo/owl/gene_ontology" xsd:string
 
@@ -6001,10 +6143,10 @@ name: aging
 namespace: biological_process
 alt_id: GO:0016280
 subset: goslim_generic
-synonym: "_:genid2147485525" EXACT []
-synonym: "_:genid2147485526" EXACT []
-xref: _:genid2147485527
-xref: _:genid2147485528
+synonym: "_:genid2147485549" EXACT []
+synonym: "_:genid2147485550" EXACT []
+xref: _:genid2147485551
+xref: _:genid2147485552
 is_a: GO:0032502 ! developmental process
 property_value: IAO:0000412 "http://purl.org/obo/owl/gene_ontology" xsd:string
 
@@ -6063,12 +6205,12 @@ property_value: IAO:0000412 "http://purl.obolibrary.org/obo/go.owl" xsd:string
 id: GO:0018991
 name: oviposition
 namespace: biological_process
-synonym: "_:genid2147485517" BROAD []
-synonym: "_:genid2147485518" BROAD []
-synonym: "_:genid2147485519" BROAD []
-synonym: "_:genid2147485520" BROAD []
-xref: _:genid2147485521
-xref: _:genid2147485522
+synonym: "_:genid2147485541" BROAD []
+synonym: "_:genid2147485542" BROAD []
+synonym: "_:genid2147485543" BROAD []
+synonym: "_:genid2147485544" BROAD []
+xref: _:genid2147485545
+xref: _:genid2147485546
 is_a: GO:0019098 ! reproductive behavior
 property_value: IAO:0000412 "http://purl.org/obo/owl/gene_ontology" xsd:string
 
@@ -6126,8 +6268,8 @@ property_value: IAO:0000412 "http://purl.obolibrary.org/obo/go.owl" xsd:string
 id: GO:0019098
 name: reproductive behavior
 namespace: biological_process
-synonym: "_:genid2147485531" EXACT []
-synonym: "_:genid2147485532" EXACT []
+synonym: "_:genid2147485555" EXACT []
+synonym: "_:genid2147485556" EXACT []
 is_a: GO:0007610 ! behavior
 is_a: GO:0048609 ! multicellular organismal reproductive process
 property_value: IAO:0000412 "http://purl.org/obo/owl/gene_ontology" xsd:string
@@ -6148,8 +6290,8 @@ namespace: biological_process
 subset: goslim_aspergillus
 subset: goslim_pir
 subset: gosubset_prok
-synonym: "_:genid2147485529" NARROW []
-synonym: "_:genid2147485530" NARROW []
+synonym: "_:genid2147485553" NARROW []
+synonym: "_:genid2147485554" NARROW []
 is_a: GO:0008150 ! biological process
 property_value: IAO:0000412 "http://purl.org/obo/owl/gene_ontology" xsd:string
 
@@ -6165,8 +6307,8 @@ property_value: IAO:0000412 "http://purl.obolibrary.org/obo/go.owl" xsd:string
 id: GO:0033057
 name: multicellular organismal reproductive behavior
 namespace: biological_process
-synonym: "_:genid2147485515" EXACT []
-synonym: "_:genid2147485516" EXACT []
+synonym: "_:genid2147485539" EXACT []
+synonym: "_:genid2147485540" EXACT []
 is_a: GO:0019098 ! reproductive behavior
 property_value: IAO:0000412 "http://purl.org/obo/owl/gene_ontology" xsd:string
 

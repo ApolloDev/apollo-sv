@@ -1,0 +1,12 @@
+http://purl.obolibrary.org/obo/IDO_0000488
+http://purl.obolibrary.org/obo/IDO_0000480
+http://purl.obolibrary.org/obo/IDO_0000482
+http://purl.obolibrary.org/obo/IDO_0000484
+http://purl.obolibrary.org/obo/IDO_0000486
+http://purl.obolibrary.org/obo/IDO_0000479
+http://purl.obolibrary.org/obo/IDO_0000481
+http://purl.obolibrary.org/obo/IDO_0000483
+http://purl.obolibrary.org/obo/IDO_0000487
+http://purl.obolibrary.org/obo/IDO_0000489
+http://purl.obolibrary.org/obo/IDO_0000485
+
