@@ -13071,7 +13071,7 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A count of processes in which a population and/or its members participate during a given temporal region.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">A count of certain type of event that occurs within a population, such as deaths, infections, births, and so on. during a particular time.</obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">A count of certain type of event that occurs within a population, such as deaths, infections, births, and so on during a particular time.</obo:IAO_0000600>
         <rdfs:comment xml:lang="en">As the population is typically geographically defined (among other ways), the count is most often constrained to particular location in addition to a given time.</rdfs:comment>
         <rdfs:label xml:lang="en">count of events occurring in a population</rdfs:label>
     </owl:Class>
