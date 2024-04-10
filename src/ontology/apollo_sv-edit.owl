@@ -13017,10 +13017,11 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     
 
 
-    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000622 -->
+     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000622 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000622">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000498"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000648"/>
         <obo:IAO_0000115 xml:lang="en">A count of cases in an epidemic that is about the entire temporal interval occupied by the epidemic.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">A count of cases from the beginning of the epidemic until recently.</obo:IAO_0000600>
@@ -13034,6 +13035,7 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000623">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000498"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000649"/>
         <obo:IAO_0000115 xml:lang="en">A count of cases in an epidemic that is about a proper part of the temporal interval occupied by the epidemic.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">A count of cases in an epidemic that spans a shorter interval, such as a particular day or a week.</obo:IAO_0000600>
@@ -13195,8 +13197,8 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000629 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000629">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000628"/>
-        <obo:IAO_0000115 xml:lang="en">A count of infections in a population where the infections are an occurrent part of the same epidemic, and the temporal region over which the count is made is the region occupied by the entire epidemic.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000642"/>
+        <obo:IAO_0000115 xml:lang="en">A cumulative infection count where the infections are an occurrent part of the same epidemic, and the reference interval is the interval occupied by the entire epidemic.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <rdfs:label xml:lang="en">cumulative epidemic infection count</rdfs:label>
     </owl:Class>
@@ -13206,8 +13208,29 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000630 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000630">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000628"/>
-        <obo:IAO_0000115 xml:lang="en">A count of infections in a population where the infections are an occurrent part of the same epidemic, and the temporal region over which the count is made is a proper part of the region occupied by the entire epidemic.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000643"/>
+        <obo:IAO_0000115 xml:lang="en">An incident infection count where the infections are an occurrent part of the same epidemic, and the temporal interval over which the count is made is a proper part of the reference interval.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">incident epidemic infection count</rdfs:label>
+    </owl:Class>
+    
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000629 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000629">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000642"/>
+        <obo:IAO_0000115 xml:lang="en">A cumulative infection count where the infections are an occurrent part of the same epidemic, and the reference interval is the interval occupied by the entire epidemic.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">cumulative epidemic infection count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000630 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000630">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000643"/>
+        <obo:IAO_0000115 xml:lang="en">An incident infection count where the infections are an occurrent part of the same epidemic, and the temporal interval over which the count is made is a proper part of the reference interval.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <rdfs:label xml:lang="en">incident epidemic infection count</rdfs:label>
     </owl:Class>
@@ -13217,8 +13240,8 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000631 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000631">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000625"/>
-        <obo:IAO_0000115>A count of deaths in a population where the deaths are an occurrent part of the same epidemic, the deaths are attributed to the epidemic disease, and the temporal region over which the count is made is the region occupied by the entire epidemic.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000646"/>
+        <obo:IAO_0000115 xml:lang="en">A cumulative death count where the deaths are an occurrent part of the same epidemic, the deaths are attributed to the epidemic disease, and the reference interval is the interval occupied by the entire epidemic.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <rdfs:label xml:lang="en">cumulative epidemic death count</rdfs:label>
     </owl:Class>
@@ -13228,8 +13251,8 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000632 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000632">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000625"/>
-        <obo:IAO_0000115 xml:lang="en">A count of deaths in a population where the deaths are an occurrent part of the same epidemic, the deaths are attributed to the epidemic disease, and the temporal region over which the count is made is a proper part of the region occupied by the entire epidemic.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000647"/>
+        <obo:IAO_0000115 xml:lang="en">An incident death count where the deaths are an occurrent part of the same epidemic, the deaths are attributed to the epidemic disease, and the temporal interval over which the count is made is a proper part of the reference interval.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <rdfs:label xml:lang="en">incident epidemic death count</rdfs:label>
     </owl:Class>
@@ -13239,8 +13262,8 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000633 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000633">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000627"/>
-        <obo:IAO_0000115>A count of hospitalizations in a population where the hospitalizations are an occurrent part of the same epidemic, the hospitalizations are attributed to the epidemic disease, and the temporal region over which the count is made is the region occupied by the entire epidemic.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000644"/>
+        <obo:IAO_0000115>A cumulative hospitalization count where the hospitalizations are an occurrent part of the same epidemic, the hospitalizations are attributed to the epidemic disease, and the reference interval is the interval occupied by the entire epidemic.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <rdfs:label xml:lang="en">cumulative epidemic hospitalization count</rdfs:label>
     </owl:Class>
@@ -13250,8 +13273,8 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000634 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000634">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000627"/>
-        <obo:IAO_0000115>A count of hospitalizations in a population where the hospitalizations are an occurrent part of the same epidemic, the hospitalizations are attributed to the epidemic disease, and the temporal region over which the count is made is a proper part of the region occupied by the entire epidemic.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000645"/>
+        <obo:IAO_0000115>An incident hospitalization count where the hospitalizations are an occurrent part of the same epidemic, the hospitalizations are attributed to the epidemic disease, and the temporal interval over which the count is made is a proper part of the reference interval.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <rdfs:label xml:lang="en">incident epidemic hospitalization count</rdfs:label>
     </owl:Class>
@@ -13261,8 +13284,8 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000635 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000635">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000626"/>
-        <obo:IAO_0000115>A count of vaccinations in a population where the vaccinations are an occurrent part of the same epidemic, the vaccinations are against the type of pathogen causing the epidemic, and the temporal region over which the count is made is the region occupied by the entire epidemic.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000640"/>
+        <obo:IAO_0000115 xml:lang="en">A cumulative vaccination count where the vaccinations are an occurrent part of the same epidemic, the vaccinations are against the type of pathogen causing the epidemic, and the reference interval is the temporal interval occupied by the entire epidemic.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <rdfs:label xml:lang="en">cumulative epidemic vaccination count</rdfs:label>
     </owl:Class>
@@ -13272,13 +13295,12 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000636 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000636">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000626"/>
-        <obo:IAO_0000115 xml:lang="en">A count of vaccinations in a population where the vaccinations are an occurrent part of the same epidemic, the vaccinations are against the type of pathogen causing the epidemic, and the temporal region over which the count is made is a proper part of the region occupied by the entire epidemic.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000641"/>
+        <obo:IAO_0000115 xml:lang="en">An incident vaccination count where the vaccinations are an occurrent part of the same epidemic, the vaccinations are against the type of pathogen causing the epidemic, and the temporal region over which the count is made is a proper part of the reference interval.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <rdfs:label xml:lang="en">incident epidemic vaccination count</rdfs:label>
     </owl:Class>
     
-
 
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000637 -->
 
@@ -13314,6 +13336,124 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     </owl:Class>
     
 
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000640 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000640">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000626"/>
+        <obo:IAO_0000115>A count of vaccinations in a population that is the total number of a given type of vaccines administered during a reference temporal interval.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <rdfs:comment>The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic or vaccination campaign, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive &quot;epidemiological weeks&quot; as defined by CDC or another national or subnational public health organization.</rdfs:comment>
+        <rdfs:label xml:lang="en">cumulative vaccination count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000641 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000641">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000626"/>
+        <obo:IAO_0000115 xml:lang="en">A count of vaccinations in a population that is the number of a given type of vaccines administered during a proper occurrent part of a reference temporal interval.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">William R. Hogan</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The interval over which the count is made is typically either one calendar day or one calendar week. The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic, vaccination campaign, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive &quot;epidemiological weeks&quot; as defined by CDC or another national or subnational public health organization.</rdfs:comment>
+        <rdfs:label xml:lang="en">incident vaccination count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000642 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000642">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000628"/>
+        <obo:IAO_0000115 xml:lang="en">A count of infections in a population that is the total number of infections that occur during a reference temporal interval.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <rdfs:comment xml:lang="en">The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive &quot;epidemiological weeks&quot; as defined by CDC or another national or subnational public health organization.</rdfs:comment>
+        <rdfs:label xml:lang="en">cumulative infection count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000643 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000643">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000628"/>
+        <obo:IAO_0000115 xml:lang="en">A count of infections in a population that is the number of infections of a given type that occurred during a proper occurrent part of a reference temporal interval.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <rdfs:comment xml:lang="en">The interval over which the count is made is typically either one calendar day or one calendar week. The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive &quot;epidemiological weeks&quot; as defined by CDC or another national or subnational public health organization.</rdfs:comment>
+        <rdfs:label xml:lang="en">incident infection count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000644 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000644">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000627"/>
+        <obo:IAO_0000115 xml:lang="en">A count of hospital stays in a population that is the total number of hospitalizations that occur during a reference temporal interval.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <rdfs:comment xml:lang="en">The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive &quot;epidemiological weeks&quot; as defined by CDC or another national or subnational public health organization.</rdfs:comment>
+        <rdfs:label xml:lang="en">cumulative hospitalization count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000645 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000645">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000627"/>
+        <obo:IAO_0000115 xml:lang="en">A count of hospital stays in a population that is the number of hospital stays that occurred during a proper part of a reference temporal interval.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <rdfs:comment xml:lang="en">The interval over which the count is made is typically either one calendar day or one calendar week. The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive &quot;epidemiological weeks&quot; as defined by CDC or another national or subnational public health organization.</rdfs:comment>
+        <rdfs:label xml:lang="en">incident hospitalization count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000646 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000646">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000625"/>
+        <obo:IAO_0000115 xml:lang="en">A count of deaths in a population that is the total number of deaths that occur during a reference temporal interval.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <rdfs:comment xml:lang="en">The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive &quot;epidemiological weeks&quot; as defined by CDC or another national or subnational public health organization.</rdfs:comment>
+        <rdfs:label xml:lang="en">cumulative death count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000647 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000647">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000625"/>
+        <obo:IAO_0000115 xml:lang="en">A count of deaths in a population that is the number of deaths that occurred during a proper part of a reference temporal interval.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <rdfs:comment xml:lang="en">The interval over which the count is made is typically either one calendar day or one calendar week. The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive &quot;epidemiological weeks&quot; as defined by CDC or another national or subnational public health organization.</rdfs:comment>
+        <rdfs:label xml:lang="en">incident death count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000648 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000648">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000497"/>
+        <obo:IAO_0000115 xml:lang="en">A count of disease cases that is the total number of individuals who come to meet the criteria of some case definition during a reference temporal interval.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <rdfs:comment>The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive &quot;epidemiological weeks&quot; as defined by CDC or another national or subnational public health organization.</rdfs:comment>
+        <rdfs:label xml:lang="en">cumulative case count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000649 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000649">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000497"/>
+        <obo:IAO_0000115 xml:lang="en">A count of cases in a population that is the number of individuals who come to meet the criteria of some case definition during a proper part of a reference temporal interval.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <rdfs:comment xml:lang="en">The interval over which the count is made is typically either one calendar day or one calendar week. The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive &quot;epidemiological weeks&quot; as defined by CDC or another national or subnational public health organization.</rdfs:comment>
+        <rdfs:label xml:lang="en">incident case count</rdfs:label>
+    </owl:Class>
+    
 
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000793 -->
 
