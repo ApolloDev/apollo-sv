@@ -13017,7 +13017,7 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     
 
 
-     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000622 -->
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000622 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000622">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000498"/>
@@ -13215,27 +13215,6 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     </owl:Class>
     
 
-    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000629 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000629">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000642"/>
-        <obo:IAO_0000115 xml:lang="en">A cumulative infection count where the infections are an occurrent part of the same epidemic, and the reference interval is the interval occupied by the entire epidemic.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">cumulative epidemic infection count</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000630 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000630">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000643"/>
-        <obo:IAO_0000115 xml:lang="en">An incident infection count where the infections are an occurrent part of the same epidemic, and the temporal interval over which the count is made is a proper part of the reference interval.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">incident epidemic infection count</rdfs:label>
-    </owl:Class>
-    
-
 
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000631 -->
 
@@ -13302,6 +13281,7 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     </owl:Class>
     
 
+
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000637 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000637">
@@ -13336,6 +13316,7 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     </owl:Class>
     
 
+
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000640 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000640">
@@ -13353,7 +13334,7 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000641">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000626"/>
         <obo:IAO_0000115 xml:lang="en">A count of vaccinations in a population that is the number of a given type of vaccines administered during a proper occurrent part of a reference temporal interval.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">William R. Hogan</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <rdfs:comment xml:lang="en">The interval over which the count is made is typically either one calendar day or one calendar week. The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic, vaccination campaign, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive &quot;epidemiological weeks&quot; as defined by CDC or another national or subnational public health organization.</rdfs:comment>
         <rdfs:label xml:lang="en">incident vaccination count</rdfs:label>
     </owl:Class>
@@ -13454,6 +13435,7 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
         <rdfs:label xml:lang="en">incident case count</rdfs:label>
     </owl:Class>
     
+
 
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000793 -->
 
