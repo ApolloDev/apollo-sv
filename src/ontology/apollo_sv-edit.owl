@@ -6469,7 +6469,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
         <obo:IAO_0000115 xml:lang="en">An organism of a particular biological taxon that is the site of reproduction of an organism of a different taxon.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An organism of a particular biological taxon that is the site of reproduction of an organism of a different taxon.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040 xml:lang="en">host</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:label xml:lang="en">host</rdfs:label>
+        <rdfs:label xml:lang="en">host organism</rdfs:label>
     </owl:Class>
     
 
@@ -13433,6 +13433,33 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <rdfs:comment xml:lang="en">The interval over which the count is made is typically either one calendar day or one calendar week. The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive &quot;epidemiological weeks&quot; as defined by CDC or another national or subnational public health organization.</rdfs:comment>
         <rdfs:label xml:lang="en">incident case count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000650 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000650">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000073"/>
+        <obo:IAO_0000111 xml:lang="en">guardian&apos;s intent to have a ward under their care vaccinated</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">An intentionality inhering in a person bearing a guardian role and that is directed at their future participation in an authorization for the vaccination or other immunization of a person under their care and who bears a ward role.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Legally, this covers the situation of a parent intending to have their child vaccinated. That is because the parent(s) is(are) the natural gaurdian of the child. Other individuals appointed by a court as guardian are legal guardians. If the specific case of parent / child is required, we could create a subclass of this one where the guardian = parent of the ward, and ward = child. However, that could get into issues of adoption, etc.  At the current time we do not have guardian role and ward role classes in OMRSE.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">The intent of a guardian to have a ward under their care vaccinated in the near future.</obo:IAO_0000600>
+        <rdfs:label xml:lang="en">intent to have a ward vaccinated</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000652 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000652">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000650"/>
+        <obo:IAO_0000115 xml:lang="en">An intent to have a ward vaccinated where the guardian is a parent (natural or adoptive) and the ward is a child (natural or adopted) of that parent, and the parent has not otherwise been legally barred from making healthcare decisions for the child.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000600 xml:lang="en">Intent to have one&apos;s child vaccinated.</obo:IAO_0000600>
+        <rdfs:comment xml:lang="en">The case of adult children is eliminated through the use of guardian and ward roles in the definition. The parent no longer has a guardian role, and the child no longer has a ward role, once the child is of legal age to make their own decisions. That is, those roles cease to exist.</rdfs:comment>
+        <rdfs:label xml:lang="en">intent to have a child vaccinated</rdfs:label>
     </owl:Class>
     
 
