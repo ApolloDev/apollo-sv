@@ -13443,9 +13443,9 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000073"/>
         <obo:IAO_0000111 xml:lang="en">guardian&apos;s intent to have a ward under their care vaccinated</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">An intentionality inhering in a person bearing a guardian role and that is directed at their future participation in an authorization for the vaccination or other immunization of a person under their care and who bears a ward role.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">Legally, this covers the situation of a parent intending to have their child vaccinated. That is because the parent(s) is(are) the natural gaurdian of the child. Other individuals appointed by a court as guardian are legal guardians. If the specific case of parent / child is required, we could create a subclass of this one where the guardian = parent of the ward, and ward = child. However, that could get into issues of adoption, etc.  At the current time we do not have guardian role and ward role classes in OMRSE.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">The intent of a guardian to have a ward under their care vaccinated in the near future.</obo:IAO_0000600>
+        <rdfs:comment xml:lang="en">Legally, this covers the situation of a parent intending to have their child vaccinated. That is because the parent(s) is(are) the natural gaurdian of the child. Other individuals appointed by a court as guardian are legal guardians. If the specific case of parent / child is required, we could create a subclass of this one where the guardian = parent of the ward, and ward = child. However, that could get into issues of adoption, etc.  At the current time we do not have guardian role and ward role classes in OMRSE.</rdfs:comment>
         <rdfs:label xml:lang="en">intent to have a ward vaccinated</rdfs:label>
     </owl:Class>
     
