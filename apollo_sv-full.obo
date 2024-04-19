@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: apollo_sv/releases/2024-02-23/apollo_sv-full.owl
+data-version: apollo_sv/releases/2024-04-19/apollo_sv-full.owl
 subsetdef: attribute_slim ""
 subsetdef: common_anatomy ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
@@ -26,7 +26,7 @@ property_value: http://purl.org/dc/elements/1.1/title "Apollo Structured Vocabul
 property_value: http://purl.org/dc/terms/description "An OWL2 ontology of phenomena in infectious disease epidemiology and population biology for use in epidemic simulation." xsd:string
 property_value: http://purl.org/dc/terms/license "https://creativecommons.org/licenses/by/4.0/" xsd:string
 property_value: owl:versionInfo "2023-01-10" xsd:string
-property_value: owl:versionInfo "2024-02-23" xsd:string
+property_value: owl:versionInfo "2024-04-19" xsd:string
 property_value: RTS:00000001 "C87985BA-6A8A-483A-A6B6-63975101F672" xsd:string
 property_value: RTS:00000002 "082D5D78-D916-457E-B4FD-365F86F45B30" xsd:string
 
@@ -1563,8 +1563,8 @@ property_value: IAO:0000600 "A census that is the outcome of assessing control-s
 id: APOLLO_SV:00000190
 name: contagious organism
 def: "A host who is able to transmit some infection to another organism." []
-is_a: APOLLO_SV:00000238 ! host
-intersection_of: APOLLO_SV:00000238 ! host
+is_a: APOLLO_SV:00000238 ! host organism
+intersection_of: APOLLO_SV:00000238 ! host organism
 intersection_of: RO:0000053 APOLLO_SV:00000182 ! is bearer of contagiousness
 relationship: RO:0000053 APOLLO_SV:00000182 ! is bearer of contagiousness
 property_value: APOLLO_SV:0000040 "infectious" xsd:string
@@ -1720,7 +1720,7 @@ property_value: IAO:0000600 "A specification of when an infectious disease contr
 id: APOLLO_SV:00000209
 name: infected organism
 def: "An infectious agent host who is NOT able to transmit the infection to another organism of the same species." []
-is_a: APOLLO_SV:00000238 ! host
+is_a: APOLLO_SV:00000238 ! host organism
 property_value: APOLLO_SV:0000040 "infected" xsd:string
 property_value: IAO:0000111 "organism in latent period of infection" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -1955,7 +1955,7 @@ property_value: IAO:0000600 "A population of organisms that are all immune." xsd
 [Term]
 id: APOLLO_SV:00000236
 name: asymptomatic host
-is_a: APOLLO_SV:00000238 ! host
+is_a: APOLLO_SV:00000238 ! host organism
 
 [Term]
 id: APOLLO_SV:00000237
@@ -1970,7 +1970,7 @@ property_value: IAO:0000600 "An organism, virus, or prion that can infect anothe
 
 [Term]
 id: APOLLO_SV:00000238
-name: host
+name: host organism
 def: "An organism of a particular biological taxon that is the site of reproduction of an organism of a different taxon." []
 is_a: OBI:0100026 ! organism
 intersection_of: OBI:0100026 ! organism
@@ -5585,6 +5585,7 @@ name: cumulative epidemic case count
 def: "A count of cases in an epidemic that is about the entire temporal interval occupied by the epidemic." []
 comment: The count is also nearly always geographically localized, for example, the case count for the state of Pennsylvania or the case count for Waukesha County, Wisconsin.
 is_a: APOLLO_SV:00000498 ! count of cases in an epidemic
+is_a: APOLLO_SV:00000648 ! cumulative case count
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000600 "A count of cases from the beginning of the epidemic until recently." xsd:string
 
@@ -5595,6 +5596,7 @@ def: "A count of cases in an epidemic that is about a proper part of the tempora
 comment: Incident case counts are measured according to regular intervals, typically day or week.
 comment: The count is also nearly always geographically localized, for example, the case count for the state of Pennsylvania or the case count for Waukesha County, Wisconsin.
 is_a: APOLLO_SV:00000498 ! count of cases in an epidemic
+is_a: APOLLO_SV:00000649 ! incident case count
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000600 "A count of cases in an epidemic that spans a shorter interval, such as a particular day or a week." xsd:string
 
@@ -5645,57 +5647,57 @@ property_value: IAO:0000600 "A count of infections in a population during a part
 [Term]
 id: APOLLO_SV:00000629
 name: cumulative epidemic infection count
-def: "A count of infections in a population where the infections are an occurrent part of the same epidemic, and the temporal region over which the count is made is the region occupied by the entire epidemic." []
-is_a: APOLLO_SV:00000628 ! count of infections in a population
+def: "A cumulative infection count where the infections are an occurrent part of the same epidemic, and the reference interval is the interval occupied by the entire epidemic." []
+is_a: APOLLO_SV:00000642 ! cumulative infection count
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
 [Term]
 id: APOLLO_SV:00000630
 name: incident epidemic infection count
-def: "A count of infections in a population where the infections are an occurrent part of the same epidemic, and the temporal region over which the count is made is a proper part of the region occupied by the entire epidemic." []
-is_a: APOLLO_SV:00000628 ! count of infections in a population
+def: "An incident infection count where the infections are an occurrent part of the same epidemic, and the temporal interval over which the count is made is a proper part of the reference interval." []
+is_a: APOLLO_SV:00000643 ! incident infection count
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
 [Term]
 id: APOLLO_SV:00000631
 name: cumulative epidemic death count
-def: "A count of deaths in a population where the deaths are an occurrent part of the same epidemic, the deaths are attributed to the epidemic disease, and the temporal region over which the count is made is the region occupied by the entire epidemic." []
-is_a: APOLLO_SV:00000625 ! count of deaths in a population
+def: "A cumulative death count where the deaths are an occurrent part of the same epidemic, the deaths are attributed to the epidemic disease, and the reference interval is the interval occupied by the entire epidemic." []
+is_a: APOLLO_SV:00000646 ! cumulative death count
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
 [Term]
 id: APOLLO_SV:00000632
 name: incident epidemic death count
-def: "A count of deaths in a population where the deaths are an occurrent part of the same epidemic, the deaths are attributed to the epidemic disease, and the temporal region over which the count is made is a proper part of the region occupied by the entire epidemic." []
-is_a: APOLLO_SV:00000625 ! count of deaths in a population
+def: "An incident death count where the deaths are an occurrent part of the same epidemic, the deaths are attributed to the epidemic disease, and the temporal interval over which the count is made is a proper part of the reference interval." []
+is_a: APOLLO_SV:00000647 ! incident death count
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
 [Term]
 id: APOLLO_SV:00000633
 name: cumulative epidemic hospitalization count
-def: "A count of hospitalizations in a population where the hospitalizations are an occurrent part of the same epidemic, the hospitalizations are attributed to the epidemic disease, and the temporal region over which the count is made is the region occupied by the entire epidemic." []
-is_a: APOLLO_SV:00000627 ! count of hospital stays in a population
+def: "A cumulative hospitalization count where the hospitalizations are an occurrent part of the same epidemic, the hospitalizations are attributed to the epidemic disease, and the reference interval is the interval occupied by the entire epidemic." []
+is_a: APOLLO_SV:00000644 ! cumulative hospitalization count
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
 [Term]
 id: APOLLO_SV:00000634
 name: incident epidemic hospitalization count
-def: "A count of hospitalizations in a population where the hospitalizations are an occurrent part of the same epidemic, the hospitalizations are attributed to the epidemic disease, and the temporal region over which the count is made is a proper part of the region occupied by the entire epidemic." []
-is_a: APOLLO_SV:00000627 ! count of hospital stays in a population
+def: "An incident hospitalization count where the hospitalizations are an occurrent part of the same epidemic, the hospitalizations are attributed to the epidemic disease, and the temporal interval over which the count is made is a proper part of the reference interval." []
+is_a: APOLLO_SV:00000645 ! incident hospitalization count
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
 [Term]
 id: APOLLO_SV:00000635
 name: cumulative epidemic vaccination count
-def: "A count of vaccinations in a population where the vaccinations are an occurrent part of the same epidemic, the vaccinations are against the type of pathogen causing the epidemic, and the temporal region over which the count is made is the region occupied by the entire epidemic." []
-is_a: APOLLO_SV:00000626 ! count of vaccinations in a population
+def: "A cumulative vaccination count where the vaccinations are an occurrent part of the same epidemic, the vaccinations are against the type of pathogen causing the epidemic, and the reference interval is the temporal interval occupied by the entire epidemic." []
+is_a: APOLLO_SV:00000640 ! cumulative vaccination count
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
 [Term]
 id: APOLLO_SV:00000636
 name: incident epidemic vaccination count
-def: "A count of vaccinations in a population where the vaccinations are an occurrent part of the same epidemic, the vaccinations are against the type of pathogen causing the epidemic, and the temporal region over which the count is made is a proper part of the region occupied by the entire epidemic." []
-is_a: APOLLO_SV:00000626 ! count of vaccinations in a population
+def: "An incident vaccination count where the vaccinations are an occurrent part of the same epidemic, the vaccinations are against the type of pathogen causing the epidemic, and the temporal region over which the count is made is a proper part of the reference interval." []
+is_a: APOLLO_SV:00000641 ! incident vaccination count
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
 [Term]
@@ -5720,6 +5722,105 @@ name: vaccination with nirsevimab
 def: "A vaccination against respiratory syncytial virus via the administration of the monoclonal antibody nirsevimab." []
 is_a: APOLLO_SV:00000142 ! vaccination
 property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
+id: APOLLO_SV:00000640
+name: cumulative vaccination count
+def: "A count of vaccinations in a population that is the total number of a given type of vaccines administered during a reference temporal interval." []
+comment: The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic or vaccination campaign, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive "epidemiological weeks" as defined by CDC or another national or subnational public health organization.
+is_a: APOLLO_SV:00000626 ! count of vaccinations in a population
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
+id: APOLLO_SV:00000641
+name: incident vaccination count
+def: "A count of vaccinations in a population that is the number of a given type of vaccines administered during a proper occurrent part of a reference temporal interval." []
+comment: The interval over which the count is made is typically either one calendar day or one calendar week. The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic, vaccination campaign, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive "epidemiological weeks" as defined by CDC or another national or subnational public health organization.
+is_a: APOLLO_SV:00000626 ! count of vaccinations in a population
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
+id: APOLLO_SV:00000642
+name: cumulative infection count
+def: "A count of infections in a population that is the total number of infections that occur during a reference temporal interval." []
+comment: The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive "epidemiological weeks" as defined by CDC or another national or subnational public health organization.
+is_a: APOLLO_SV:00000628 ! count of infections in a population
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
+id: APOLLO_SV:00000643
+name: incident infection count
+def: "A count of infections in a population that is the number of infections of a given type that occurred during a proper occurrent part of a reference temporal interval." []
+comment: The interval over which the count is made is typically either one calendar day or one calendar week. The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive "epidemiological weeks" as defined by CDC or another national or subnational public health organization.
+is_a: APOLLO_SV:00000628 ! count of infections in a population
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
+id: APOLLO_SV:00000644
+name: cumulative hospitalization count
+def: "A count of hospital stays in a population that is the total number of hospitalizations that occur during a reference temporal interval." []
+comment: The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive "epidemiological weeks" as defined by CDC or another national or subnational public health organization.
+is_a: APOLLO_SV:00000627 ! count of hospital stays in a population
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
+id: APOLLO_SV:00000645
+name: incident hospitalization count
+def: "A count of hospital stays in a population that is the number of hospital stays that occurred during a proper part of a reference temporal interval." []
+comment: The interval over which the count is made is typically either one calendar day or one calendar week. The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive "epidemiological weeks" as defined by CDC or another national or subnational public health organization.
+is_a: APOLLO_SV:00000627 ! count of hospital stays in a population
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
+id: APOLLO_SV:00000646
+name: cumulative death count
+def: "A count of deaths in a population that is the total number of deaths that occur during a reference temporal interval." []
+comment: The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive "epidemiological weeks" as defined by CDC or another national or subnational public health organization.
+is_a: APOLLO_SV:00000625 ! count of deaths in a population
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
+id: APOLLO_SV:00000647
+name: incident death count
+def: "A count of deaths in a population that is the number of deaths that occurred during a proper part of a reference temporal interval." []
+comment: The interval over which the count is made is typically either one calendar day or one calendar week. The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive "epidemiological weeks" as defined by CDC or another national or subnational public health organization.
+is_a: APOLLO_SV:00000625 ! count of deaths in a population
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
+id: APOLLO_SV:00000648
+name: cumulative case count
+def: "A count of disease cases that is the total number of individuals who come to meet the criteria of some case definition during a reference temporal interval." []
+comment: The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive "epidemiological weeks" as defined by CDC or another national or subnational public health organization.
+is_a: APOLLO_SV:00000497 ! count of disease cases
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
+id: APOLLO_SV:00000649
+name: incident case count
+def: "A count of cases in a population that is the number of individuals who come to meet the criteria of some case definition during a proper part of a reference temporal interval." []
+comment: The interval over which the count is made is typically either one calendar day or one calendar week. The reference interval is usually relative to (i.e., occupied by) a major event like an epidemic, or it is a specific calendar-defined interval like a given calendar year or a set of consecutive "epidemiological weeks" as defined by CDC or another national or subnational public health organization.
+is_a: APOLLO_SV:00000497 ! count of disease cases
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
+id: APOLLO_SV:00000650
+name: intent to have a ward vaccinated
+def: "An intentionality inhering in a person bearing a guardian role and that is directed at their future participation in an authorization for the vaccination or other immunization of a person under their care and who bears a ward role." []
+comment: Legally, this covers the situation of a parent intending to have their child vaccinated. That is because the parent(s) is(are) the natural gaurdian of the child. Other individuals appointed by a court as guardian are legal guardians. If the specific case of parent / child is required, we could create a subclass of this one where the guardian = parent of the ward, and ward = child. However, that could get into issues of adoption, etc.  At the current time we do not have guardian role and ward role classes in OMRSE.
+is_a: MF:0000073 ! intentionality
+property_value: IAO:0000111 "guardian's intent to have a ward under their care vaccinated" xsd:string
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: IAO:0000600 "The intent of a guardian to have a ward under their care vaccinated in the near future." xsd:string
+
+[Term]
+id: APOLLO_SV:00000652
+name: intent to have a child vaccinated
+def: "An intent to have a ward vaccinated where the guardian is a parent (natural or adoptive) and the ward is a child (natural or adopted) of that parent, and the parent has not otherwise been legally barred from making healthcare decisions for the child." []
+comment: The case of adult children is eliminated through the use of guardian and ward roles in the definition. The parent no longer has a guardian role, and the child no longer has a ward role, once the child is of legal age to make their own decisions. That is, those roles cease to exist.
+is_a: APOLLO_SV:00000650 ! intent to have a ward vaccinated
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: IAO:0000600 "Intent to have one's child vaccinated." xsd:string
 
 [Term]
 id: APOLLO_SV:00000793
@@ -7239,8 +7340,8 @@ xref: Wikipedia:Behavior
 is_a: GO:0008150 ! biological_process
 is_a: OGMS:0000060 ! bodily process
 property_value: APOLLO_SV:0000040 "Behavior" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/go.owl" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+property_value: IAO:0000412 "http://purl.obolibrary.org/obo/go.owl" xsd:string
 
 [Term]
 id: GO:0007617
