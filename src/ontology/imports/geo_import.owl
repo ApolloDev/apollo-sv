@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/apollo_sv/imports/geo_import.owl>
-<http://purl.obolibrary.org/obo/apollo_sv/releases/2024-04-19/imports/geo_import.owl>
-Annotation(owl:versionInfo "2024-04-19")
+<http://purl.obolibrary.org/obo/apollo_sv/releases/2024-08-12/imports/geo_import.owl>
+Annotation(owl:versionInfo "2024-08-12")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/APOLLO_SV_00000008>))
 Declaration(Class(<http://purl.obolibrary.org/obo/APOLLO_SV_00000032>))

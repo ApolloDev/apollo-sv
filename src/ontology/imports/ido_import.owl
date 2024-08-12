@@ -7,9 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/apollo_sv/imports/ido_import.owl>
-<http://purl.obolibrary.org/obo/apollo_sv/releases/2024-04-19/imports/ido_import.owl>
+<http://purl.obolibrary.org/obo/apollo_sv/releases/2024-08-12/imports/ido_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/ido/2017-11-03/ido.owl>)
-Annotation(owl:versionInfo "2024-04-19")
+Annotation(owl:versionInfo "2024-08-12")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
@@ -37,14 +37,11 @@ Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000140>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000141>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000144>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000182>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0000003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006955>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0008150>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0032502>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0044409>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0051234>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0051704>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0065007>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000027>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000030>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000078>))
@@ -1206,13 +1203,6 @@ AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/BFO_0000182
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000182> "history"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000182> <http://purl.obolibrary.org/obo/BFO_0000015>)
 
-# Class: <http://purl.obolibrary.org/obo/GO_0000003> (reproduction)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0000003> "The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/GO_0000003> <http://purl.obolibrary.org/obo/go.owl>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0000003> "reproduction")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0000003> <http://purl.obolibrary.org/obo/GO_0008150>)
-
 # Class: <http://purl.obolibrary.org/obo/GO_0006955> (immune response)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0006955> "Any immune system process that functions in the calibrated response of an organism to a potential internal or invasive threat.")
@@ -1226,13 +1216,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/GO_0008150> <http://purl.obolibrary.org/obo/go.owl>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0008150> "biological_process")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0008150> <http://purl.obolibrary.org/obo/BFO_0000015>)
-
-# Class: <http://purl.obolibrary.org/obo/GO_0032502> (developmental process)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0032502> "A biological process whose specific outcome is the progression of an integrated living unit: an anatomical structure (which may be a subcellular structure, cell, tissue, or organ), or organism over time from an initial condition to a later condition.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/GO_0032502> <http://purl.obolibrary.org/obo/go.owl>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0032502> "developmental process")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0032502> <http://purl.obolibrary.org/obo/GO_0008150>)
 
 # Class: <http://purl.obolibrary.org/obo/GO_0044409> (entry into host)
 
@@ -1255,13 +1238,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/GO_0051704> <http://purl.obolibrary.org/obo/go.owl>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0051704> "multi-organism process")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0051704> <http://purl.obolibrary.org/obo/GO_0008150>)
-
-# Class: <http://purl.obolibrary.org/obo/GO_0065007> (biological regulation)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0065007> "Any process that modulates a measurable attribute of any biological process, quality or function.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/GO_0065007> <http://purl.obolibrary.org/obo/go.owl>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0065007> "biological regulation")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0065007> <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0000027> (data item)
 
