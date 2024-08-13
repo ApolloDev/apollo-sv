@@ -5183,10 +5183,6 @@ I checked because an infection and immunity census would involve two different c
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000166"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000237"/>
                     </owl:Restriction>
@@ -5197,6 +5193,10 @@ I checked because an infection and immunity census would involve two different c
                                 <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000166"/>
                             </owl:Class>
                         </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000166"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
