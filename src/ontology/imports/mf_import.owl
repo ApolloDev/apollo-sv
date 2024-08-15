@@ -7,9 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/apollo_sv/imports/mf_import.owl>
-<http://purl.obolibrary.org/obo/apollo_sv/releases/2024-04-19/imports/mf_import.owl>
+<http://purl.obolibrary.org/obo/apollo_sv/releases/2024-08-13/imports/mf_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/MF/2022-07-19/MF.owl>)
-Annotation(owl:versionInfo "2024-04-19")
+Annotation(owl:versionInfo "2024-08-13")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
@@ -35,14 +35,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000141>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000144>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000182>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007610>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007617>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0018991>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0019098>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0035176>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0044705>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0045297>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0051705>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0060403>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000027>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000030>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000078>))
@@ -876,63 +869,12 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.ob
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0007610> "behavior")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0007610> <http://purl.obolibrary.org/obo/OGMS_0000060>)
 
-# Class: <http://purl.obolibrary.org/obo/GO_0007617> (mating behavior)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0007617> "The behavioral interactions between organisms for the purpose of mating, or sexual reproduction resulting in the formation of zygotes.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/GO_0007617> <http://purl.obolibrary.org/obo/go.owl>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0007617> "mating behavior")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0007617> <http://purl.obolibrary.org/obo/GO_0019098>)
-
-# Class: <http://purl.obolibrary.org/obo/GO_0018991> (oviposition)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0018991> "The deposition of eggs (either fertilized or not) upon a surface or into a medium such as water.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/GO_0018991> <http://purl.obolibrary.org/obo/go.owl>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0018991> "oviposition")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0018991> <http://purl.obolibrary.org/obo/GO_0019098>)
-
 # Class: <http://purl.obolibrary.org/obo/GO_0019098> (reproductive behavior)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0019098> "The specific behavior of an organism that is associated with reproduction.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/GO_0019098> <http://purl.obolibrary.org/obo/go.owl>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0019098> "reproductive behavior")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0019098> <http://purl.obolibrary.org/obo/GO_0007610>)
-
-# Class: <http://purl.obolibrary.org/obo/GO_0035176> (social behavior)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0035176> "Behavior directed towards society, or taking place between members of the same species. Occurs predominantly, or only, in individuals that are part of a group.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/GO_0035176> <http://purl.obolibrary.org/obo/go.owl>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0035176> "social behavior")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0035176> <http://purl.obolibrary.org/obo/GO_0051705>)
-
-# Class: <http://purl.obolibrary.org/obo/GO_0044705> (multi-organism reproductive behavior)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0044705> "The specific behavior of an organism that is associated with reproduction involving another organism of the same or different species.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/GO_0044705> <http://purl.obolibrary.org/obo/go.owl>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0044705> "multi-organism reproductive behavior")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0044705> <http://purl.obolibrary.org/obo/GO_0019098>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0044705> <http://purl.obolibrary.org/obo/GO_0051705>)
-
-# Class: <http://purl.obolibrary.org/obo/GO_0045297> (post-mating behavior)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0045297> "The specific behavior of an organism following mating.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/GO_0045297> <http://purl.obolibrary.org/obo/go.owl>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0045297> "post-mating behavior")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0045297> <http://purl.obolibrary.org/obo/GO_0019098>)
-
-# Class: <http://purl.obolibrary.org/obo/GO_0051705> (multi-organism behavior)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0051705> "Any process in which an organism has a behavioral effect on another organism of the same or different species.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/GO_0051705> <http://purl.obolibrary.org/obo/go.owl>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0051705> "multi-organism behavior")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0051705> <http://purl.obolibrary.org/obo/GO_0007610>)
-
-# Class: <http://purl.obolibrary.org/obo/GO_0060403> (post-mating oviposition)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0060403> "The deposition of eggs, either fertilized or not, upon a surface or into a medium, following mating.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/GO_0060403> <http://purl.obolibrary.org/obo/go.owl>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0060403> "post-mating oviposition")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0060403> <http://purl.obolibrary.org/obo/GO_0018991>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0060403> <http://purl.obolibrary.org/obo/GO_0045297>)
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0000027> (data item)
 
