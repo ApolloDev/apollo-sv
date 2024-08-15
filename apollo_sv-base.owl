@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/apollo_sv/apollo_sv-base.owl#"
      xml:base="http://purl.obolibrary.org/obo/apollo_sv/apollo_sv-base.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:go="http://purl.obolibrary.org/obo/go#"
      xmlns:uo="http://purl.obolibrary.org/obo/uo#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -24,7 +25,7 @@
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#"
      xmlns:ace_lexicon="http://attempto.ifi.uzh.ch/ace_lexicon#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/apollo_sv/apollo_sv-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/apollo_sv/releases/2024-04-19/apollo_sv-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/apollo_sv/releases/2024-08-15/apollo_sv-base.owl"/>
         <dc:contributor>Amanda Hicks</dc:contributor>
         <dc:contributor>John Levander</dc:contributor>
         <dc:contributor>Josh Hanna</dc:contributor>
@@ -41,7 +42,7 @@
         <www:RTS_00000002>082D5D78-D916-457E-B4FD-365F86F45B30</www:RTS_00000002>
         <rdfs:comment xml:lang="en">When citing Apollo-SV, use the permanent URL of the ontology: http://purl.obolibrary.org/obo/apollo_sv.owl.  When referencing a specific component of the Apollo-SV such as a class, object property, annotation property, or individual, use the component&apos;s Uniform Resource Identifier (URI).</rdfs:comment>
         <owl:versionInfo>2023-01-10</owl:versionInfo>
-        <owl:versionInfo>2024-04-19</owl:versionInfo>
+        <owl:versionInfo>2024-08-15</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -144,6 +145,7 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
         <obo:IAO_0000115 xml:lang="en">A comment that summarizes the most relevant or salient features and history of the entity for human readers.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <rdfs:label xml:lang="en">human readable synopsis</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
     </owl:AnnotationProperty>
     
 
@@ -303,6 +305,25 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000037 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000037">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000245"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000030"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <obo:IAO_0000115 xml:lang="en">a commissions b, iff a does not participate in the creation or execution of b and participates in a legal agreement that c participates on the creation or execution of b and c getting something in exchange for that participation.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A relation between two entities where the first entity formally requests a third party to create or execute the second entity.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>commissions</apollo_sv:APOLLO_SV_0000040>
@@ -314,6 +335,9 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000057 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000057">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <obo:IAO_0000115 xml:lang="en">A relation between to particulars such that aRb where b can be any kind of entity while the second is a universal. b instantiates a at some times. </obo:IAO_0000115>
         <rdfs:comment>Barry Smith, Waclaw Kusnierczyk, Daniel Schober, Werner Ceusters, “Towards a Reference Terminology for Ontology Research and Development in the Biomedical Domain”, O. Bodenreider, ed., Proceedings of KR-MED, 2006, 57-66. Also available online at: http://ceur-ws.org/Vol-222.</rdfs:comment>
         <rdfs:label xml:lang="en">instantiates</rdfs:label>
@@ -324,6 +348,10 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000067 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000067">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000070"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <obo:IAO_0000115 xml:lang="en">a simulates b, iff a is a purely intentional entity that is representing a fictional individual or fact b and a participates in a simulating.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">simulates</rdfs:label>
     </owl:ObjectProperty>
@@ -354,6 +382,8 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000543 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000543">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
         <obo:IAO_0000111 xml:lang="en">has basis in quality</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">(Q is_a Quality ⋀ D is_a Disposition ⋀ Q base of D) ® ∀q (q instance_of Q ® b (q inheres_in b ⋀ d (d instance_of D ⋀ d inheres_in b)))</obo:IAO_0000115>
         <obo:IAO_0000119 xml:lang="en">Representing dispositions
@@ -578,6 +608,18 @@ For example, the disposition of a piece of glass to bend light and the lattice s
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0002233 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002233"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002234 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002234"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0002350 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002350"/>
@@ -622,6 +664,7 @@ For example, the disposition of a piece of glass to bend light and the lattice s
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000102 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000102">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
         <rdfs:label xml:lang="en">is expressed as</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -3099,7 +3142,7 @@ The concept derives from the epidemiological notion of ‘herd immunity,’ whic
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0000003"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
                         <owl:someValuesFrom>
@@ -3117,7 +3160,7 @@ The concept derives from the epidemiological notion of ‘herd immunity,’ whic
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
@@ -4639,26 +4682,19 @@ I checked because an infection and immunity census would involve two different c
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000237"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
                             <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <owl:Class>
-                                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000166"/>
-                                    </owl:Class>
-                                    <owl:Class>
-                                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000237"/>
-                                    </owl:Class>
-                                </owl:unionOf>
+                                <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000166"/>
                             </owl:Class>
                         </owl:someValuesFrom>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000166"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -4666,33 +4702,25 @@ I checked because an infection and immunity census would involve two different c
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000186"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044409"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000237"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                 <owl:someValuesFrom>
                     <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Class>
-                                <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000166"/>
-                            </owl:Class>
-                            <owl:Class>
-                                <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000237"/>
-                            </owl:Class>
-                        </owl:unionOf>
+                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000166"/>
                     </owl:Class>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000166"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -5116,7 +5144,7 @@ The infectious disease scenario typically also includes a lot of additional data
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0000003"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
                                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000237"/>
@@ -6014,7 +6042,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000067"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0000003"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -6023,7 +6051,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000067"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0000003"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">An organism of a particular biological taxon that is the site of reproduction of an organism of a different taxon.</obo:IAO_0000115>
@@ -7248,7 +7276,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0032504"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002218"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7157"/>
@@ -7256,6 +7284,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032504"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -7484,7 +7513,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0000003"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
                         <owl:someValuesFrom>
@@ -7504,7 +7533,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
@@ -13929,6 +13958,28 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     
 
 
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000651 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000651">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0019058"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0019953"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0019954"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+        <obo:IAO_0000111 xml:lang="en">organism reproduction</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">The process by which new organisms are created from existing ones.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <apollo_sv:APOLLO_SV_0000040>Reproduction</apollo_sv:APOLLO_SV_0000040>
+        <rdfs:label xml:lang="en">reproduction</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000652 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000652">
@@ -14112,6 +14163,12 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/BFO_0000023 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
@@ -14226,12 +14283,6 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0000003 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0000003"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0007610 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007610"/>
@@ -14241,6 +14292,24 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     <!-- http://purl.obolibrary.org/obo/GO_0008150 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0019058 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0019058"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0019953 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0019953"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0019954 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0019954"/>
     
 
 
@@ -14753,5 +14822,5 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
 
 
 
-<!-- Generated by the OWL API (version 4.5.26) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
 

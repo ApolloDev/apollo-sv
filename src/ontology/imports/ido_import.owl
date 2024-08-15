@@ -7,9 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/apollo_sv/imports/ido_import.owl>
-<http://purl.obolibrary.org/obo/apollo_sv/releases/2024-08-13/imports/ido_import.owl>
+<http://purl.obolibrary.org/obo/apollo_sv/releases/2024-08-15/imports/ido_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/ido/2017-11-03/ido.owl>)
-Annotation(owl:versionInfo "2024-08-13")
+Annotation(owl:versionInfo "2024-08-15")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
@@ -122,6 +122,7 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0001015>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0001025>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002211>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002212>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002234>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002297>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002350>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002351>))
@@ -686,6 +687,15 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000589> <http://purl.obolibrary.org/obo/RO_0002212> "negatively regulates (process to process)")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002212> "negatively regulates"@en)
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002212> <http://purl.obolibrary.org/obo/RO_0002211>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002234> (has output)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/RO_0002234> <http://purl.obolibrary.org/obo/IAO_0000125>)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002234> "p has output c iff c is a participant in p, c is present at the end of p, and c is not present at the beginning of p.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002234> "Chris Mungall")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0002234> "produces")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002234> "has output"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002234> <http://purl.obolibrary.org/obo/RO_0000057>)
 
 # Object Property: <http://purl.obolibrary.org/obo/RO_0002297> (results in formation of)
 

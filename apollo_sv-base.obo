@@ -1,23 +1,33 @@
 format-version: 1.2
-data-version: apollo_sv/releases/2024-04-19/apollo_sv-base.owl
+data-version: apollo_sv/releases/2024-08-15/apollo_sv-base.owl
+idspace: ace_lexicon http://attempto.ifi.uzh.ch/ace_lexicon# 
+idspace: dc http://purl.org/dc/elements/1.1/ 
+idspace: doap http://usefulinc.com/ns/doap# 
+idspace: foaf http://xmlns.com/foaf/0.1/ 
+idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
+idspace: protege http://protege.stanford.edu/plugins/owl/protege# 
+idspace: skos http://www.w3.org/2004/02/skos/core# 
+idspace: swrla http://swrl.stanford.edu/ontologies/3.3/swrla.owl# 
+idspace: terms http://purl.org/dc/terms/ 
+idspace: www http://www.referent-tracking.com/ 
 remark: When citing Apollo-SV, use the permanent URL of the ontology: http://purl.obolibrary.org/obo/apollo_sv.owl.  When referencing a specific component of the Apollo-SV such as a class, object property, annotation property, or individual, use the component's Uniform Resource Identifier (URI).
 ontology: apollo_sv/apollo_sv-base
-property_value: http://purl.org/dc/elements/1.1/contributor "Amanda Hicks" xsd:string
-property_value: http://purl.org/dc/elements/1.1/contributor "John Levander" xsd:string
-property_value: http://purl.org/dc/elements/1.1/contributor "Josh Hanna" xsd:string
-property_value: http://purl.org/dc/elements/1.1/contributor "Matt Diller" xsd:string
-property_value: http://purl.org/dc/elements/1.1/contributor "Mike Wagner" xsd:string
-property_value: http://purl.org/dc/elements/1.1/contributor "Shawn T. Brown" xsd:string
-property_value: http://purl.org/dc/elements/1.1/contributor "William R. Hogan" xsd:string
-property_value: http://purl.org/dc/elements/1.1/creator "Mathias Brochhausen" xsd:string
-property_value: http://purl.org/dc/elements/1.1/title "Apollo Structured Vocabulary (Apollo-SV)" xsd:string
-property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
-property_value: http://purl.org/dc/terms/description "An OWL2 ontology of phenomena in infectious disease epidemiology and population biology for use in epidemic simulation." xsd:string
-property_value: http://purl.org/dc/terms/license "https://creativecommons.org/licenses/by/4.0/" xsd:string
+property_value: dc:contributor "Amanda Hicks" xsd:string
+property_value: dc:contributor "John Levander" xsd:string
+property_value: dc:contributor "Josh Hanna" xsd:string
+property_value: dc:contributor "Matt Diller" xsd:string
+property_value: dc:contributor "Mike Wagner" xsd:string
+property_value: dc:contributor "Shawn T. Brown" xsd:string
+property_value: dc:contributor "William R. Hogan" xsd:string
+property_value: dc:creator "Mathias Brochhausen" xsd:string
+property_value: dc:title "Apollo Structured Vocabulary (Apollo-SV)" xsd:string
+property_value: dc:type IAO:8000001
 property_value: owl:versionInfo "2023-01-10" xsd:string
-property_value: owl:versionInfo "2024-04-19" xsd:string
-property_value: RTS:00000001 "C87985BA-6A8A-483A-A6B6-63975101F672" xsd:string
-property_value: RTS:00000002 "082D5D78-D916-457E-B4FD-365F86F45B30" xsd:string
+property_value: owl:versionInfo "2024-08-15" xsd:string
+property_value: terms:description "An OWL2 ontology of phenomena in infectious disease epidemiology and population biology for use in epidemic simulation." xsd:string
+property_value: terms:license "https://creativecommons.org/licenses/by/4.0/" xsd:string
+property_value: www:RTS_00000001 "C87985BA-6A8A-483A-A6B6-63975101F672" xsd:string
+property_value: www:RTS_00000002 "082D5D78-D916-457E-B4FD-365F86F45B30" xsd:string
 
 [Term]
 id: APOLLO_SV:00000000
@@ -25,11 +35,11 @@ name: purely intentional entity
 def: "A generically dependent continuant which derives its existence and its entire endowment from an intending experience of consciousness (an \"act\") that is laden with determinate, uniformily structured content." []
 comment: MB: Right now we represent 'purely intentional entities' as siblings to 'information content entities'. Given their nature I am not entirly sure that this is correct. It seems that both 'information content entity' and 'simulation' are subclass to 'purely intentional entity'.
 is_a: BFO:0000031
-property_value: http://purl.org/dc/elements/1.1/source "Ingarden, R. (1964) Der Streit um die Existenz der Welt I. Existentalontologie. Max Niemeyer, Tübingen." xsd:string
-property_value: http://purl.org/dc/elements/1.1/source "Ingarden, R. (1965a) Das literarische Kunstwerk. 3. Auflage. Max Niemeyer, Tübingen." xsd:string
-property_value: http://purl.org/dc/elements/1.1/source "Ingarden, R. (1965b) Der Streit um die Existenz der Welt II/1. Formalontologie 1. Teil. Max Niemeyer, Tübingen." xsd:string
-property_value: http://purl.org/dc/elements/1.1/source "Johansson I. (2009) Proof of the existence of universals – and Roman Ingarden's Ontology. Metaphysica. International Journal for Ontology & Metaphysics. 10, 65-87" xsd:string
-property_value: http://purl.org/dc/elements/1.1/source "Thomasson AL. \"Ingarden and the Ontology of Cultural Objects.\" In: Chrudziminski A (ed.): Existence, Culture, and Person. The Ontology of Roman Ingarden. Frankfurt: ontos, 2005, 115-136." xsd:string
+property_value: dc:source "Ingarden, R. (1964) Der Streit um die Existenz der Welt I. Existentalontologie. Max Niemeyer, Tübingen." xsd:string
+property_value: dc:source "Ingarden, R. (1965a) Das literarische Kunstwerk. 3. Auflage. Max Niemeyer, Tübingen." xsd:string
+property_value: dc:source "Ingarden, R. (1965b) Der Streit um die Existenz der Welt II/1. Formalontologie 1. Teil. Max Niemeyer, Tübingen." xsd:string
+property_value: dc:source "Johansson I. (2009) Proof of the existence of universals – and Roman Ingarden's Ontology. Metaphysica. International Journal for Ontology & Metaphysics. 10, 65-87" xsd:string
+property_value: dc:source "Thomasson AL. \"Ingarden and the Ontology of Cultural Objects.\" In: Chrudziminski A (ed.): Existence, Culture, and Person. The Ontology of Roman Ingarden. Frankfurt: ontos, 2005, 115-136." xsd:string
 property_value: IAO:0000600 "A generically dependent continuant which derives its existence and its entire endowment from an intending experience of consciousness (an \"act\") that is laden with determinate, uniformily structured content." xsd:string
 
 [Term]
@@ -378,7 +388,7 @@ property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 id: APOLLO_SV:00000045
 name: obsolete asymptomatic infection fraction
 def: "The fraction given to express the probability that an organism will become infected, but stay asymptomatic." []
-is_a: ObsoleteClass
+is_a: oboInOwl:ObsoleteClass
 property_value: APOLLO_SV:0000040 "asymptomatic infection fraction" xsd:string
 property_value: IAO:0000600 "The fraction of infectious individuals who do not develop symptoms during the course of their infections." xsd:string
 is_obsolete: true
@@ -589,7 +599,7 @@ property_value: IAO:0000600 "A purely intentional entity that simulates an entit
 id: APOLLO_SV:00000071
 name: obsolete simulation of population location
 def: "The simulation of geographical location in which a  population is assumed to be located." []
-is_a: ObsoleteClass
+is_a: oboInOwl:ObsoleteClass
 property_value: APOLLO_SV:0000040 "simulated population location" xsd:string
 property_value: IAO:0000600 "An identifier referring to geographical location of a simulated population.  Our intent is for the location identifiers to be INCITS codes." xsd:string
 is_obsolete: true
@@ -629,7 +639,7 @@ property_value: IAO:0000600 "an objective of achieving satisfactory control of e
 [Term]
 id: APOLLO_SV:00000076
 name: μ
-is_a: ObsoleteClass
+is_a: oboInOwl:ObsoleteClass
 property_value: APOLLO_SV:0000040 "μ" xsd:string
 property_value: IAO:0000600 "the mean or expectation of a distribution" xsd:string
 is_obsolete: true
@@ -637,7 +647,7 @@ is_obsolete: true
 [Term]
 id: APOLLO_SV:00000077
 name: σ
-is_a: ObsoleteClass
+is_a: oboInOwl:ObsoleteClass
 property_value: APOLLO_SV:0000040 "sigma" xsd:string
 property_value: IAO:0000600 "standard deviation" xsd:string
 is_obsolete: true
@@ -652,7 +662,7 @@ property_value: IAO:0000600 "A continuous probability distribution whose charact
 [Term]
 id: APOLLO_SV:00000079
 name: deprecated log normal distribution
-is_a: ObsoleteClass
+is_a: oboInOwl:ObsoleteClass
 property_value: IAO:0000600 "a continuous probability distribution over variable X whose parameters denoted μ and σ are, respectively, the mean and standard deviation of the variable’s natural logarithm" xsd:string
 is_obsolete: true
 
@@ -751,7 +761,7 @@ property_value: IAO:0000600 "an experiment that measures vaccination efficacy fr
 [Term]
 id: APOLLO_SV:00000091
 name: obsolete immune
-is_a: ObsoleteClass
+is_a: oboInOwl:ObsoleteClass
 property_value: APOLLO_SV:0000040 "immune" xsd:string
 property_value: IAO:0000600 "an organism that has the property of being immune to a specific disease agent" xsd:string
 is_obsolete: true
@@ -776,13 +786,13 @@ name: community
 def: "Two or more distinct populations that are part of the same biotic ecosystem." []
 is_a: BFO:0000027
 property_value: APOLLO_SV:0000040 "community" xsd:string
-property_value: http://purl.org/dc/elements/1.1/creator "William R. Hogan" xsd:string
+property_value: dc:creator "William R. Hogan" xsd:string
 property_value: IAO:0000600 "Two or more distinct populations that are part of the same biotic ecosystem." xsd:string
 
 [Term]
 id: APOLLO_SV:00000095
 name: deprecated discrete probability distribution
-is_a: ObsoleteClass
+is_a: oboInOwl:ObsoleteClass
 property_value: APOLLO_SV:0000040 "discrete probability distribution" xsd:string
 property_value: IAO:0000600 "a probability distribution over a discrete random variable" xsd:string
 is_obsolete: true
@@ -799,7 +809,7 @@ name: ecosystem
 def: "The sum of all biotic and abiotic entities in a geographical region. " []
 is_a: BFO:0000040
 property_value: APOLLO_SV:0000040 "Ecosystem" xsd:string
-property_value: http://purl.org/dc/elements/1.1/creator "William R. Hogan" xsd:string
+property_value: dc:creator "William R. Hogan" xsd:string
 property_value: IAO:0000600 "The sum of all biotic and abiotic entities in a geographical region. " xsd:string
 
 [Term]
@@ -822,7 +832,7 @@ name: abiotic ecosystem
 def: "The abiotic ecosystem is the sum total of all continuants in a geographical region that are not organisms, parts of organisms, or dependent continuants that inhere in organisms." []
 is_a: BFO:0000040
 property_value: APOLLO_SV:0000040 "AbioticEcosystem" xsd:string
-property_value: http://purl.org/dc/elements/1.1/creator "William R. Hogan" xsd:string
+property_value: dc:creator "William R. Hogan" xsd:string
 property_value: IAO:0000600 "The abiotic ecosystem is the sum total of all continuants in a geographical region that are not organisms, parts of organisms, or dependent continuants that inhere in organisms." xsd:string
 
 [Term]
@@ -848,7 +858,7 @@ name: biotic ecosystem
 def: "The biotic ecosystem is the sum total of all organism populations in a particular geographical region." []
 is_a: BFO:0000040
 property_value: APOLLO_SV:0000040 "BioticEcosystem" xsd:string
-property_value: http://purl.org/dc/elements/1.1/creator "William R. Hogan" xsd:string
+property_value: dc:creator "William R. Hogan" xsd:string
 property_value: IAO:0000600 "The biotic ecosystem is the sum total of all organism populations in a particular geographical region." xsd:string
 
 [Term]
@@ -877,7 +887,7 @@ def: "a fiat object part that is in gaseous phase and that is the outer layer of
 comment: atmosphere of Earth, Earth's moon, Saturn, Titan, etc.
 comment: outer, gaseous layers of exoplanets are called extraterrestrial atmosphere.
 is_a: BFO:0000024
-property_value: http://purl.org/dc/elements/1.1/creator "William R. Hogan" xsd:string
+property_value: dc:creator "William R. Hogan" xsd:string
 property_value: IAO:0000600 "a fiat object part that is in gaseous phase and that is the outer layer of an object in space and is held to the object by gravitational force" xsd:string
 
 [Term]
@@ -910,7 +920,7 @@ is_a: GEO:000000371
 id: APOLLO_SV:00000111
 name: obsolete educational institution
 def: "An educational institution is an place organization which provides the necessary system for people of different ages gain an education. It includes (among others) preschools, childcare, elementary schools, and universities." []
-is_a: ObsoleteClass
+is_a: oboInOwl:ObsoleteClass
 property_value: IAO:0000119 "http://en.wikipedia.org/wiki/Types_of_educational_institutions (amended)" xsd:string
 property_value: IAO:0000600 "An educational institution is an place organization which provides the necessary system for people of different ages gain an education. It includes (among others) preschools, childcare, elementary schools, and universities." xsd:string
 is_obsolete: true
@@ -927,9 +937,9 @@ id: APOLLO_SV:00000114
 name: infection
 def: "A reproduction of a pathogen organism of a particular biological taxon in a tissue of a host organism from another taxon." []
 comment: infection is reproduction of a pathogen inside some tissue of a host.  By associating infection with the classes latent period and infectious period, which are associated with specific pathogen species and host species, Apollo-SV defines infection further as reproduction of a particular pathogen taxon inside some tissue of a particular host taxon.
-is_a: GO:0000003
+is_a: APOLLO_SV:00000651 ! reproduction
 relationship: RO:0002087 APOLLO_SV:00000115 ! infection acquisition
-property_value: http://purl.org/dc/elements/1.1/creator "M. Brochhausen" xsd:string
+property_value: dc:creator "M. Brochhausen" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000118 "infection process" xsd:string
 property_value: IAO:0000118 "process of infection" xsd:string
@@ -1039,7 +1049,7 @@ property_value: IAO:0000600 "Fraction of organisms in a target population that a
 id: APOLLO_SV:00000129
 name: obsolete Reactive control measure
 def: "an epidemic control measure plan specification that has a conditional specification as part" []
-is_a: ObsoleteClass
+is_a: oboInOwl:ObsoleteClass
 property_value: APOLLO_SV:0000040 "Reactive control measure" xsd:string
 property_value: IAO:0000600 "a control measure (program) that is initiated or modified by an epidemic-related event (or if you prefer, an event occurring within/during the simulation)" xsd:string
 is_obsolete: true
@@ -1291,7 +1301,7 @@ property_value: IAO:0000600 "A census that is the specific outcome of a populati
 [Term]
 id: APOLLO_SV:00000160
 name: obsolete contamination
-is_a: ObsoleteClass
+is_a: oboInOwl:ObsoleteClass
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 is_obsolete: true
 
@@ -1356,9 +1366,8 @@ name: contamination acquisition
 def: "A biological process whereby an entity that is not in contact with a pathogen of a particular biological taxon begins to undergo contamination with that pathogen." []
 is_a: APOLLO_SV:00000186 ! contamination
 is_a: GO:0044409
-is_a: OBI:0000011
-relationship: OBI:0000293 APOLLO_SV:00000237 ! pathogen
-relationship: OBI:0000299 APOLLO_SV:00000166 ! contaminated thing
+relationship: RO:0002233 APOLLO_SV:00000237 ! pathogen
+relationship: RO:0002234 APOLLO_SV:00000166 ! contaminated thing
 property_value: APOLLO_SV:0000040 "ContaminationAcquisition" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -1430,7 +1439,7 @@ property_value: IAO:0000600 "An algorithm that models the progress of a transmis
 id: APOLLO_SV:00000175
 name: obsolete school organization
 def: "An organization created with the purpose of providing education to those of its members that are bearer of student role." []
-is_a: ObsoleteClass
+is_a: oboInOwl:ObsoleteClass
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000600 "An organization created with the purpose of providing education to those of its members that are bearer of student role." xsd:string
 is_obsolete: true
@@ -1466,7 +1475,7 @@ property_value: IAO:0000600 "An information content entity that contains everyth
 id: APOLLO_SV:00000180
 name: obsolete student role
 def: "A human social role that is realized by attending a school to receive formal education." []
-is_a: ObsoleteClass
+is_a: oboInOwl:ObsoleteClass
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000600 "A human social role that is realized by attending a school to receive formal education." xsd:string
 is_obsolete: true
@@ -1963,8 +1972,8 @@ name: host organism
 def: "An organism of a particular biological taxon that is the site of reproduction of an organism of a different taxon." []
 is_a: OBI:0100026
 intersection_of: OBI:0100026
-intersection_of: BFO:0000067 GO:0000003
-relationship: BFO:0000067 GO:0000003
+intersection_of: BFO:0000067 APOLLO_SV:00000651 ! reproduction
+relationship: BFO:0000067 APOLLO_SV:00000651 ! reproduction
 property_value: APOLLO_SV:0000040 "host" xsd:string
 property_value: IAO:0000600 "An organism of a particular biological taxon that is the site of reproduction of an organism of a different taxon." xsd:string
 
@@ -2148,7 +2157,7 @@ name: apollo location code
 def: "An identifier that refers to a particular geographical region and that is constructed per guidelines of the Apollo project." []
 is_a: IAO:0020000
 property_value: APOLLO_SV:0000040 "ApolloLocationCode" xsd:string
-property_value: http://purl.org/dc/elements/1.1/creator "William R. Hogan" xsd:string
+property_value: dc:creator "William R. Hogan" xsd:string
 property_value: IAO:0000600 "A hierarchical identifier beginning with an ISO 2-letter nation code (e.g., US) and that represents one partition of an exclusive and exhaustive partitioning of that nation (including the trivial case of just representing the entire region of the nation)." xsd:string
 
 [Term]
@@ -2157,7 +2166,7 @@ name: control strategy stop time information
 def: "An information content entity that specifies the time at which an infectious disease control strategy ends." []
 is_a: IAO:0000030
 property_value: APOLLO_SV:0000040 "controlMeasureStopTime" xsd:string
-property_value: http://purl.org/dc/elements/1.1/creator "William R. Hogan" xsd:string
+property_value: dc:creator "William R. Hogan" xsd:string
 property_value: IAO:0000600 "An information content entity that specifies the time at which an infectious disease control strategy ends." xsd:string
 
 [Term]
@@ -2166,7 +2175,7 @@ name: infectious disease control strategy trigger definition
 def: "A rule that specifies the event that, when it occurs, is the trigger to either start or stop an infectious disease control strategy." []
 is_a: IAO:0000055
 property_value: APOLLO_SV:0000040 "TriggerDefinition" xsd:string
-property_value: http://purl.org/dc/elements/1.1/creator "William R. Hogan" xsd:string
+property_value: dc:creator "William R. Hogan" xsd:string
 property_value: IAO:0000600 "A rule that says when to start or stop a control strategy.  It can be either the passage of time, a disease surveillance result (exceeding the threshold of a certain fraction of the population that is infected), or a treatment surveillance result (reaching a certain fraction of the population that has received an antiviral or vaccination)." xsd:string
 
 [Term]
@@ -2174,7 +2183,7 @@ id: APOLLO_SV:00000262
 name: contamination probability
 def: "The probability of the occurence of a contamination acquisition from either an infected organism or another contaminated thing." []
 is_a: APOLLO_SV:00000470 ! probability
-property_value: http://purl.org/dc/elements/1.1/creator "William R. Hogan" xsd:string
+property_value: dc:creator "William R. Hogan" xsd:string
 property_value: IAO:0000600 "The probability of the occurence of a contamination acquisition from either an infected organism or another contaminated thing." xsd:string
 
 [Term]
@@ -2183,7 +2192,7 @@ name: control strategy stand-down delay
 def: "A measurement datum of the time interval from the decision to cease an infectious disease control strategy to the time the control strategy ends expressed in number of time intervals." []
 is_a: IAO:0000109
 property_value: APOLLO_SV:0000040 "controlMeasureStandDownDelay" xsd:string
-property_value: http://purl.org/dc/elements/1.1/creator "William R. Hogan" xsd:string
+property_value: dc:creator "William R. Hogan" xsd:string
 property_value: IAO:0000600 "A period from the conclusion of a control strategy until its disease-controlling activities actually end.\n\nFor example, it may take time to communicate to workers to stop vaccinating and thus they keep vaccinating for some time after the control strategy is concluded." xsd:string
 
 [Term]
@@ -2601,8 +2610,9 @@ property_value: IAO:0000600 "The average number of containers positive (for pres
 id: APOLLO_SV:00000312
 name: individual mosquito reproduction
 def: "A multicellular organism reproduction that has as its agent a mosquito (taxon Culicidae, ID 7157)" []
+is_a: APOLLO_SV:00000651 ! reproduction
 is_a: GO:0032504
-intersection_of: GO:0032504
+intersection_of: APOLLO_SV:00000651 ! reproduction
 intersection_of: RO:0002218 NCBITaxon:7157
 relationship: RO:0002218 NCBITaxon:7157
 property_value: APOLLO_SV:0000040 "MosquitoReproduction" xsd:string
@@ -2714,7 +2724,7 @@ id: APOLLO_SV:00000330
 name: colonization
 def: "a reproduction of a pathogen of a particular biological taxon inside a host organism of another taxon, without invasion of the tissues of the host." []
 comment: Primary use case is colonization of humans, animals with Staph aureus, but it also covers bacteriuria, transient bactermia, and normal gut flora.
-is_a: GO:0000003
+is_a: APOLLO_SV:00000651 ! reproduction
 property_value: APOLLO_SV:0000040 "Colonization" xsd:string
 property_value: IAO:0000111 "biological colonization" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -5306,9 +5316,9 @@ is_a: IAO:0020000
 intersection_of: IAO:0020000
 intersection_of: IAO:0000219 OGMS:0000031
 relationship: IAO:0000219 OGMS:0000031
-property_value: http://purl.org/dc/elements/1.1/contributor "Mathias Brochhausen" xsd:string
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-9881-1017
-property_value: http://purl.org/dc/elements/1.1/date "2021-03-16T16:01:41Z" xsd:dateTime
+property_value: dc:contributor "Mathias Brochhausen" xsd:string
+property_value: dc:creator http://orcid.org/0000-0002-9881-1017
+property_value: dc:date "2021-03-16T16:01:41Z" xsd:dateTime
 property_value: IAO:0000111 "disease identifier" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
@@ -5321,8 +5331,8 @@ is_a: IAO:0000100
 intersection_of: IAO:0000100
 intersection_of: IAO:0000136 APOLLO_SV:00000115 ! infection acquisition
 relationship: IAO:0000136 APOLLO_SV:00000115 ! infection acquisition
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-9881-1017
-property_value: http://purl.org/dc/elements/1.1/date "2021-03-16T16:16:26Z" xsd:dateTime
+property_value: dc:creator http://orcid.org/0000-0002-9881-1017
+property_value: dc:date "2021-03-16T16:16:26Z" xsd:dateTime
 property_value: IAO:0000111 "dataset about infectious disease acquisitions" xsd:string
 property_value: IAO:0000112 "The dataset at this link is rdf:type this class: https://figshare.com/articles/dataset/COVID19_settings_of_transmission_-_collected_reports_database/12173343" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -5333,8 +5343,8 @@ name: hospital stay dataset
 def: "a dataset that is about two or more hospital stays involving two or more patients." []
 comment: The dataset may be limited to stays in one hospital, but hospital discharge datasets as compiled by state departments of health typically contain stays from multiple hospitals (typically every hospital) in the geographical region over which they have jurisdiction
 is_a: IAO:0000100
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-9881-1017
-property_value: http://purl.org/dc/elements/1.1/date "2021-03-16T16:20:48Z" xsd:dateTime
+property_value: dc:creator http://orcid.org/0000-0002-9881-1017
+property_value: dc:date "2021-03-16T16:20:48Z" xsd:dateTime
 property_value: IAO:0000111 "dataset about hospital stays" xsd:string
 property_value: IAO:0000112 "The datasets at this link are rdf:type this class: https://www.opendataphilly.org/dataset/covid-hospitalizations" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -5346,8 +5356,8 @@ id: APOLLO_SV:00000601
 name: human daily movement
 def: "an individual human behavior that is the movements from one location to another throughout the day (e.g., work, home, stores, church, relatives' homes) in the areas adjacent to where the human lives at the time." []
 is_a: APOLLO_SV:00000402 ! individual human behavior
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-9881-1017
-property_value: http://purl.org/dc/elements/1.1/date "2021-03-16T16:29:53Z" xsd:dateTime
+property_value: dc:creator http://orcid.org/0000-0002-9881-1017
+property_value: dc:date "2021-03-16T16:29:53Z" xsd:dateTime
 property_value: IAO:0000111 "human daily movement behavior" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
@@ -5359,8 +5369,8 @@ is_a: IAO:0000100
 intersection_of: IAO:0000100
 intersection_of: IAO:0000136 APOLLO_SV:00000601 ! human daily movement
 relationship: IAO:0000136 APOLLO_SV:00000601 ! human daily movement
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-9881-1017
-property_value: http://purl.org/dc/elements/1.1/date "2021-03-16T16:32:39Z" xsd:dateTime
+property_value: dc:creator http://orcid.org/0000-0002-9881-1017
+property_value: dc:date "2021-03-16T16:32:39Z" xsd:dateTime
 property_value: IAO:0000111 "human daily movement behavior data set" xsd:string
 property_value: IAO:0000112 "https://www.google.com/covid19/mobility/" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -5373,8 +5383,8 @@ is_a: IAO:0000100
 intersection_of: IAO:0000100
 intersection_of: IAO:0000136 APOLLO_SV:00000405 ! potentially infectious contacting
 relationship: IAO:0000136 APOLLO_SV:00000405 ! potentially infectious contacting
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-9881-1017
-property_value: http://purl.org/dc/elements/1.1/date "2021-03-16T16:39:24Z" xsd:dateTime
+property_value: dc:creator http://orcid.org/0000-0002-9881-1017
+property_value: dc:date "2021-03-16T16:39:24Z" xsd:dateTime
 property_value: IAO:0000111 "potentially infectious contact process data set in a population" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000118 "contact data set" xsd:string
@@ -5387,8 +5397,8 @@ is_a: APOLLO_SV:00000173 ! census
 intersection_of: APOLLO_SV:00000173 ! census
 intersection_of: IAO:0000136 APOLLO_SV:00000086 ! infectious disease control strategy
 relationship: IAO:0000136 APOLLO_SV:00000086 ! infectious disease control strategy
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-9881-1017
-property_value: http://purl.org/dc/elements/1.1/date "2021-03-16T16:43:04Z" xsd:dateTime
+property_value: dc:creator http://orcid.org/0000-0002-9881-1017
+property_value: dc:date "2021-03-16T16:43:04Z" xsd:dateTime
 property_value: IAO:0000111 "infectious disease control strategy census" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
@@ -5401,8 +5411,8 @@ is_a: APOLLO_SV:00000604 ! control strategy census
 intersection_of: APOLLO_SV:00000604 ! control strategy census
 intersection_of: IAO:0000136 APOLLO_SV:00000123 ! school closure control strategy
 relationship: IAO:0000136 APOLLO_SV:00000123 ! school closure control strategy
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-9881-1017
-property_value: http://purl.org/dc/elements/1.1/date "2021-03-16T16:44:03Z" xsd:dateTime
+property_value: dc:creator http://orcid.org/0000-0002-9881-1017
+property_value: dc:date "2021-03-16T16:44:03Z" xsd:dateTime
 property_value: IAO:0000111 "school closure infectious disease control strategy census" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
@@ -5414,8 +5424,8 @@ is_a: APOLLO_SV:00000604 ! control strategy census
 intersection_of: APOLLO_SV:00000604 ! control strategy census
 intersection_of: IAO:0000136 APOLLO_SV:00000136 ! vaccination control strategy
 relationship: IAO:0000136 APOLLO_SV:00000136 ! vaccination control strategy
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-9881-1017
-property_value: http://purl.org/dc/elements/1.1/date "2021-03-16T16:47:09Z" xsd:dateTime
+property_value: dc:creator http://orcid.org/0000-0002-9881-1017
+property_value: dc:date "2021-03-16T16:47:09Z" xsd:dateTime
 property_value: IAO:0000111 "vaccination infectious disease control strategy census" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
@@ -5427,8 +5437,8 @@ is_a: APOLLO_SV:00000187 ! population treatment census
 intersection_of: APOLLO_SV:00000187 ! population treatment census
 intersection_of: IAO:0000136 APOLLO_SV:00000142 ! vaccination
 relationship: IAO:0000136 APOLLO_SV:00000142 ! vaccination
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-9881-1017
-property_value: http://purl.org/dc/elements/1.1/date "2021-03-16T16:48:42Z" xsd:dateTime
+property_value: dc:creator http://orcid.org/0000-0002-9881-1017
+property_value: dc:date "2021-03-16T16:48:42Z" xsd:dateTime
 property_value: IAO:0000111 "population vaccination census" xsd:string
 property_value: IAO:0000112 "vaccine / immunization registry data, vaccination / immunization records extracted from an EHR" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -5449,8 +5459,8 @@ name: census of vaccination supplies
 def: "A control strategy inventory census that counts available vaccine doses of one or more similar vaccines." []
 comment: Motivated my MIDAS coordination center indexing of COVID-19 data, software, etc.\n\nBy "similar vaccines" we typically mean same pathogen, but could be similar in other ways (requiring refrigeration of a certain kind).
 is_a: APOLLO_SV:00000189 ! control strategy inventory census
-property_value: http://purl.org/dc/elements/1.1/creator "https://orcid.org/0000-0002-9881-1017" xsd:string
-property_value: http://purl.org/dc/elements/1.1/date "2022-02-01T00:03:00Z" xsd:dateTime
+property_value: dc:creator "https://orcid.org/0000-0002-9881-1017" xsd:string
+property_value: dc:date "2022-02-01T00:03:00Z" xsd:dateTime
 property_value: IAO:0000111 "census of supplies of vaccine products" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000118 "vaccine availability" xsd:string
@@ -5461,8 +5471,8 @@ name: laboratory testing facility census
 def: "A census of facilities that conduct clinical laboratory testing." []
 comment: The census might also include information about each facility such as operating hours, address, accessibility, and so on.
 is_a: APOLLO_SV:00000173 ! census
-property_value: http://purl.org/dc/elements/1.1/creator "https://orcid.org/0000-0002-9881-1017" xsd:string
-property_value: http://purl.org/dc/elements/1.1/date "2022-02-01T00:10:00Z" xsd:string
+property_value: dc:creator "https://orcid.org/0000-0002-9881-1017" xsd:string
+property_value: dc:date "2022-02-01T00:10:00Z" xsd:string
 property_value: IAO:0000111 "census of facilities that conduct clinical laboratory tests" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000118 "testing availability" xsd:string
@@ -5473,7 +5483,7 @@ name: parameter estimation model
 def: "An algoirthm that is used to estimate the \"true\" values of certain parameters of disease transmission and/or forecasting." []
 comment: Examples of parameters estimated include R0, transmissibility, infectious period.
 is_a: IAO:0000064
-property_value: http://purl.org/dc/elements/1.1/date "2022-09-18T17:51:00" xsd:string
+property_value: dc:date "2022-09-18T17:51:00" xsd:string
 property_value: IAO:0000111 "model for disease transmission parameter estimation" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
@@ -5483,7 +5493,7 @@ name: network model
 def: "An algorithm that operates on a representation of some portion of reality and that representation has a structure with nodes that stand for certain entities and edges that state some direct or indirect relationship between pairs of entities." []
 comment: The algorithm might involve also generating or creating the network structure in addition to operating on it.
 is_a: IAO:0000064
-property_value: http://purl.org/dc/elements/1.1/date "2022-09-18T18:00:00" xsd:string
+property_value: dc:date "2022-09-18T18:00:00" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
 [Term]
@@ -5491,7 +5501,7 @@ id: APOLLO_SV:00000613
 name: laboratory testing capacity
 def: "An action specification giving the number of laboratory tests of a certain type that it is possible to perform in a given population during a specific time interval." []
 is_a: IAO:0000007
-property_value: http://purl.org/dc/elements/1.1/date "2022-09-18T18:21" xsd:string
+property_value: dc:date "2022-09-18T18:21" xsd:string
 property_value: IAO:0000111 "laboratory testing capacity action specification" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
@@ -5500,7 +5510,7 @@ id: APOLLO_SV:00000614
 name: weather data set
 def: "A data set about the Earth's atmospheric weather" []
 is_a: IAO:0000100
-property_value: http://purl.org/dc/elements/1.1/date "2022-09-18T18:34:00" xsd:string
+property_value: dc:date "2022-09-18T18:34:00" xsd:string
 property_value: IAO:0000111 "data set about Earth's atmospheric weather" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
@@ -5513,7 +5523,7 @@ is_a: DOID:3292
 intersection_of: DOID:3292
 intersection_of: RO:0000052 NCBITaxon:9606
 relationship: RO:0000052 NCBITaxon:9606
-property_value: http://purl.org/dc/elements/1.1/date "2022-09-18T18:51:00" xsd:dateTime
+property_value: dc:date "2022-09-18T18:51:00" xsd:dateTime
 property_value: IAO:0000111 "monkeypox disease inhering in a human being" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
@@ -5523,7 +5533,7 @@ name: wastewater disease surveillance
 def: "A disease surveillance that detects evidence of the presence of pathogens in sewage." []
 comment: See the CDC's explanation of wastewater surveillance, and how it uses the term 'wastewater' synonymously with 'sewage', here: https://www.cdc.gov/nwss/wastewater-surveillance.html.
 is_a: APOLLO_SV:00000545 ! disease surveillance
-property_value: http://purl.org/dc/elements/1.1/contributor "William R. Hogan" xsd:string
+property_value: dc:contributor "William R. Hogan" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000118 "sewage disease surveillance" xsd:string
 
@@ -5539,7 +5549,7 @@ id: APOLLO_SV:00000618
 name: wastewater surveillance data set
 def: "A disease surveillance data set that is about some wastewater disease surveillance." []
 is_a: APOLLO_SV:00000554 ! disease surveillance data
-property_value: http://purl.org/dc/elements/1.1/contributor "William R. Hogan" xsd:string
+property_value: dc:contributor "William R. Hogan" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000118 "sewage surveillance data" xsd:string
 
@@ -5548,7 +5558,7 @@ id: APOLLO_SV:00000619
 name: population density datum
 def: "A scalar measurement datum that is about some population and is normalized by unit land area in a particular geographical region." []
 is_a: IAO:0000032
-property_value: http://purl.org/dc/elements/1.1/contributor "William R. Hogan" xsd:string
+property_value: dc:contributor "William R. Hogan" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 
 [Term]
@@ -5556,7 +5566,7 @@ id: APOLLO_SV:00000620
 name: physical distancing infectious disease control measure
 def: "An individual treatment control strategy in which individuals maintain a certain distance from other individuals during a social act." []
 is_a: APOLLO_SV:00000194 ! individual treatment control strategy
-property_value: http://purl.org/dc/elements/1.1/contributor "William R. Hogan" xsd:string
+property_value: dc:contributor "William R. Hogan" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 
 [Term]
@@ -5565,7 +5575,7 @@ name: lockdown infectious disease control measure
 def: "A place closure control strategy in which only selected places in a geographical region are permitted to stay open and travel is permitted only for people employed by certain organizations." []
 comment: The places that are allowed to stay open are typically selected by the local or state government, and often include hospitals, many healthcare facilities, food stores and food banks, and law enforcement and emergency services.
 is_a: APOLLO_SV:00000229 ! place closure control strategy
-property_value: http://purl.org/dc/elements/1.1/contributor "William R. Hogan" xsd:string
+property_value: dc:contributor "William R. Hogan" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 
 [Term]
@@ -5803,6 +5813,18 @@ property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000600 "The intent of a guardian to have a ward under their care vaccinated in the near future." xsd:string
 
 [Term]
+id: APOLLO_SV:00000651
+name: reproduction
+def: "The process by which new organisms are created from existing ones." []
+is_a: GO:0008150
+union_of: GO:0019058
+union_of: GO:0019953
+union_of: GO:0019954
+property_value: APOLLO_SV:0000040 "Reproduction" xsd:string
+property_value: IAO:0000111 "organism reproduction" xsd:string
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+
+[Term]
 id: APOLLO_SV:00000652
 name: intent to have a child vaccinated
 def: "An intent to have a ward vaccinated where the guardian is a parent (natural or adoptive) and the ward is a child (natural or adopted) of that parent, and the parent has not otherwise been legally barred from making healthcare decisions for the child." []
@@ -5890,14 +5912,14 @@ property_value: IAO:0000111 "facultative role" xsd:string
 [Typedef]
 id: APOLLO_SV:00000004
 name: basis of
-is_a: ObsoleteProperty
+is_a: oboInOwl:ObsoleteProperty
 is_obsolete: true
 
 [Typedef]
 id: APOLLO_SV:00000028
 name: obsolete is based on
 comment: p is based on e, if p is a purely intentional entity, e is an entity and p assumption/simulation that e exists regardless of the truth of this assumption. 
-is_a: ObsoleteProperty
+is_a: oboInOwl:ObsoleteProperty
 is_obsolete: true
 
 [Typedef]
@@ -5906,29 +5928,35 @@ name: commissions
 def: "a commissions b, iff a does not participate in the creation or execution of b and participates in a legal agreement that c participates on the creation or execution of b and c getting something in exchange for that participation." []
 property_value: APOLLO_SV:0000040 "commissions" xsd:string
 property_value: IAO:0000600 "A relation between two entities where the first entity formally requests a third party to create or execute the second entity." xsd:string
+is_asymmetric: true
 
 [Typedef]
 id: APOLLO_SV:00000057
 name: instantiates
 def: "A relation between to particulars such that aRb where b can be any kind of entity while the second is a universal. b instantiates a at some times. " []
 comment: Barry Smith, Waclaw Kusnierczyk, Daniel Schober, Werner Ceusters, “Towards a Reference Terminology for Ontology Research and Development in the Biomedical Domain”, O. Bodenreider, ed., Proceedings of KR-MED, 2006, 57-66. Also available online at: http://ceur-ws.org/Vol-222.
+domain: BFO:0000001
+is_asymmetric: true
 
 [Typedef]
 id: APOLLO_SV:00000067
 name: simulates
 def: "a simulates b, iff a is a purely intentional entity that is representing a fictional individual or fact b and a participates in a simulating." []
+domain: APOLLO_SV:00000070 ! simulation
+range: BFO:0000001
+is_asymmetric: true
 
 [Typedef]
 id: APOLLO_SV:00000116
 name: causally_precedes
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-is_a: ObsoleteProperty
+is_a: oboInOwl:ObsoleteProperty
 is_obsolete: true
 
 [Typedef]
 id: APOLLO_SV:00000177
 name: obsoleted_administrated by
-is_a: ObsoleteProperty
+is_a: oboInOwl:ObsoleteProperty
 is_obsolete: true
 
 [Typedef]
@@ -5938,4 +5966,6 @@ def: "(Q is_a Quality ⋀ D is_a Disposition ⋀ Q base of D) ® ∀q (q instanc
 comment: The relationship between a disposition and the quality that confers the disposition on the material entity in which they both inhere.\n\nFor example, the disposition of a piece of glass to bend light and the lattice structure of the glass (quality) that results in the bending of the light.
 property_value: IAO:0000111 "has basis in quality" xsd:string
 property_value: IAO:0000119 "Representing dispositions\nJohannes Röhl and Ludger Jansen\nJournal of Biomedical Semantics 2011 2(Suppl 4):S4\nDOI: 10.1186/2041-1480-2-S4-S4" xsd:string
+domain: BFO:0000016
+range: BFO:0000019
 

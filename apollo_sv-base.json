@@ -52,32 +52,11 @@
         "val" : "2023-01-10"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2024-04-19"
+        "val" : "2024-08-15"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/apollo_sv/releases/2024-04-19/apollo_sv-base.json"
+      "version" : "http://purl.obolibrary.org/obo/apollo_sv/releases/2024-08-15/apollo_sv-base.json"
     },
     "nodes" : [ {
-      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000113",
-      "lbl" : "atmosphere of the Earth",
-      "type" : "INDIVIDUAL"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000107",
-      "lbl" : "atmosphere",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "a fiat object part that is in gaseous phase and that is the outer layer of an object in space and is held to the object by gravitational force"
-        },
-        "comments" : [ "atmosphere of Earth, Earth's moon, Saturn, Titan, etc.", "outer, gaseous layers of exoplanets are called extraterrestrial atmosphere." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "a fiat object part that is in gaseous phase and that is the outer layer of an object in space and is held to the object by gravitational force"
-        }, {
-          "pred" : "http://purl.org/dc/elements/1.1/creator",
-          "val" : "William R. Hogan"
-        } ]
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000000",
       "lbl" : "purely intentional entity",
       "type" : "CLASS",
@@ -158,13 +137,6 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
           "val" : "A population survey that assesses the level of immunity against a particular pathogen in a specified population."
         } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000004",
-      "lbl" : "basis of",
-      "type" : "PROPERTY",
-      "meta" : {
-        "deprecated" : true
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000005",
@@ -508,14 +480,6 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000028",
-      "lbl" : "obsolete is based on",
-      "type" : "PROPERTY",
-      "meta" : {
-        "comments" : [ "p is based on e, if p is a purely intentional entity, e is an entity and p assumption/simulation that e exists regardless of the truth of this assumption. " ],
-        "deprecated" : true
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000029",
       "lbl" : "infectious disease control strategy execution",
       "type" : "CLASS",
@@ -604,10 +568,6 @@
         "comments" : [ "a simulation that is about an organism" ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000035",
-      "lbl" : "organism population universal",
-      "type" : "INDIVIDUAL"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000036",
       "lbl" : "normal distribution",
       "type" : "CLASS",
@@ -621,22 +581,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "NormalDistribution"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000037",
-      "lbl" : "commissions",
-      "type" : "PROPERTY",
-      "meta" : {
-        "definition" : {
-          "val" : "a commissions b, iff a does not participate in the creation or execution of b and participates in a legal agreement that c participates on the creation or execution of b and c getting something in exchange for that participation."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "A relation between two entities where the first entity formally requests a third party to create or execute the second entity."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
-          "val" : "commissions"
         } ]
       }
     }, {
@@ -921,16 +865,6 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000057",
-      "lbl" : "instantiates",
-      "type" : "PROPERTY",
-      "meta" : {
-        "definition" : {
-          "val" : "A relation between to particulars such that aRb where b can be any kind of entity while the second is a universal. b instantiates a at some times. "
-        },
-        "comments" : [ "Barry Smith, Waclaw Kusnierczyk, Daniel Schober, Werner Ceusters, “Towards a Reference Terminology for Ontology Research and Development in the Biomedical Domain”, O. Bodenreider, ed., Proceedings of KR-MED, 2006, 57-66. Also available online at: http://ceur-ws.org/Vol-222." ]
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000058",
       "lbl" : "simulation of organism not awaiting control measure",
       "type" : "CLASS",
@@ -1053,15 +987,6 @@
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "simulation time step"
         } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000067",
-      "lbl" : "simulates",
-      "type" : "PROPERTY",
-      "meta" : {
-        "definition" : {
-          "val" : "a simulates b, iff a is a purely intentional entity that is representing a fictional individual or fact b and a participates in a simulating."
-        }
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000068",
@@ -1556,10 +1481,6 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000102",
-      "lbl" : "is expressed as",
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000103",
       "lbl" : "control strategy reactive endpoint fraction",
       "type" : "CLASS",
@@ -1624,6 +1545,23 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "SoftwareIdentification"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000107",
+      "lbl" : "atmosphere",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "a fiat object part that is in gaseous phase and that is the outer layer of an object in space and is held to the object by gravitational force"
+        },
+        "comments" : [ "atmosphere of Earth, Earth's moon, Saturn, Titan, etc.", "outer, gaseous layers of exoplanets are called extraterrestrial atmosphere." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
+          "val" : "a fiat object part that is in gaseous phase and that is the outer layer of an object in space and is held to the object by gravitational force"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/creator",
+          "val" : "William R. Hogan"
         } ]
       }
     }, {
@@ -1737,17 +1675,6 @@
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "InfectionAcquisition"
         } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000116",
-      "lbl" : "causally_precedes",
-      "type" : "PROPERTY",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Mathias Brochhausen"
-        } ],
-        "deprecated" : true
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000117",
@@ -2594,13 +2521,6 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Mathias Brochhausen"
         } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000177",
-      "lbl" : "obsoleted_administrated by",
-      "type" : "PROPERTY",
-      "meta" : {
-        "deprecated" : true
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000178",
@@ -4969,42 +4889,6 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000319",
-      "lbl" : "NLM ID",
-      "type" : "PROPERTY",
-      "meta" : {
-        "comments" : [ "This identifier is the one that the National Library of Medicine uses to identify journals uniquely in PubMed." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
-          "val" : "National Library of Medicine Identifier\n"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000320",
-      "lbl" : "ISSN Linking",
-      "type" : "PROPERTY",
-      "meta" : {
-        "comments" : [ "The linking ISSN is a single number assigned to all formats of a journal.  The online and print versions of a journal, for example, are typically different.  The linking ISSN refers to the journal regardless of format." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "linking ISSN"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
-          "val" : "International Standard Serial Number, Linking"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000321",
-      "lbl" : "ISO Title Abbreviation",
-      "type" : "PROPERTY",
-      "meta" : {
-        "comments" : [ "ISO Abbreviations are constructed at NLM to assist NCBI in linking from GenBank to PubMed." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
-          "val" : "Iso Abbr"
-        } ]
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000322",
       "lbl" : "voluntary household quarantine control strategy",
       "type" : "CLASS",
@@ -5040,27 +4924,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "LiberalSickLeaveControlMeasure"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000324",
-      "lbl" : "NLM Title Abbreviation",
-      "type" : "PROPERTY",
-      "meta" : {
-        "comments" : [ "The abbreviated journal title assigned by the National Library of Medicine.  Typically, it's the ISO title abbreviation without periods." ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000325",
-      "lbl" : "URI creation date",
-      "type" : "PROPERTY",
-      "meta" : {
-        "definition" : {
-          "val" : "The date on which a URI annotated with this property was created."
-        },
-        "comments" : [ "This is the date that you created the URI that represents something, NOT the date that the thing referenced by the URI was created.\n\nFor example, if you create a URI on 2014-09-24 to represent a book published on 1982-10-17, then this annotation property should have the value 2014-09-24.\n\nIn other words, this annotation refers to the representation, not the represented thing.\n\nFor the 1982-10-17 date, we suggest the dc:created annotation." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "William R. Hogan"
         } ]
       }
     }, {
@@ -5115,20 +4978,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "LarvicideControlMeasure"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000329",
-      "lbl" : "author list <annotation>",
-      "type" : "PROPERTY",
-      "meta" : {
-        "comments" : [ "an annotation property for capturing the list of authors on the publication or other document to which the entity to which the annotation is attached refers.  That is, this annotation should be attached only to individuals that represent information content entities, and its values must denote the people that authored the ICE." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "author list"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "William R. Hogan"
         } ]
       }
     }, {
@@ -8478,20 +8327,6 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000488",
-      "lbl" : "source code repository URL",
-      "type" : "PROPERTY",
-      "meta" : {
-        "comments" : [ "This annotation is intended for annotating instances of software application, software module, ontology (artifact), etc. with a uniform resource locator that points to the source code version control repository where they are managed.  Note that for OWL individuals that reference a particular version of the software or ontology, this URL should point to the place in the repository where that version is located, rather than the general main page of the repository." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "source code version control repository URL"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "WIlliam R. Hogan"
-        } ]
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000489",
       "lbl" : "contact isolation control measure",
       "type" : "CLASS",
@@ -9203,22 +9038,6 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000523",
-      "lbl" : "human readable synopsis",
-      "type" : "PROPERTY",
-      "meta" : {
-        "definition" : {
-          "val" : "A comment that summarizes the most relevant or salient features and history of the entity for human readers."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "human readable synopsis"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "William R. Hogan"
-        } ]
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000524",
       "lbl" : "compiling software",
       "type" : "CLASS",
@@ -9582,23 +9401,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
           "val" : "A data set that is about either some mortality rate or the death events themselves of some individuals of a given population of a particular biological taxon."
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000543",
-      "lbl" : "has basis in",
-      "type" : "PROPERTY",
-      "meta" : {
-        "definition" : {
-          "val" : "(Q is_a Quality ⋀ D is_a Disposition ⋀ Q base of D) ® ∀q (q instance_of Q ® b (q inheres_in b ⋀ d (d instance_of D ⋀ d inheres_in b)))"
-        },
-        "comments" : [ "The relationship between a disposition and the quality that confers the disposition on the material entity in which they both inhere.\n\nFor example, the disposition of a piece of glass to bend light and the lattice structure of the glass (quality) that results in the bending of the light." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "has basis in quality"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
-          "val" : "Representing dispositions\nJohannes Röhl and Ludger Jansen\nJournal of Biomedical Semantics 2011 2(Suppl 4):S4\nDOI: 10.1186/2041-1480-2-S4-S4"
         } ]
       }
     }, {
@@ -11572,6 +11374,25 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000651",
+      "lbl" : "reproduction",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The process by which new organisms are created from existing ones."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "organism reproduction"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
+          "val" : "Reproduction"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000652",
       "lbl" : "intent to have a child vaccinated",
       "type" : "CLASS",
@@ -11719,6 +11540,799 @@
           "val" : "facultative role"
         } ]
       }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000001",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000002",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000004",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000015",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000016",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000019",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000023",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000024",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000027",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000029",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000031",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000034",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000038",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000040",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000144",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000182",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBI_36044",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DOID_3292",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DRON_00000005",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001079",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_02500000",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0000667",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GEO_000000371",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GEO_000000372",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GEO_000000788",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0007610",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0008150",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0019058",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0019953",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0019954",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0032504",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0044409",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0044419",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0051701",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000001",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000005",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000007",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000010",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000027",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000029",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000030",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000032",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000033",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000055",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000064",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000096",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000100",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000104",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000109",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000300",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000310",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000408",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000416",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000584",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000594",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0020000",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0020010",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MF_0000073",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/NBO_0000034",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/NCBITaxon_33208",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/NCBITaxon_7157",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OAE_0000055",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000011",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000066",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000245",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000471",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000576",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000658",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000679",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000714",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0001293",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0001554",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0001931",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0100026",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0200000",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0302867",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0500000",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OGMS_0000027",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OGMS_0000031",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OGMS_0000032",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OGMS_0000063",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OGMS_0000090",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OGMS_0000098",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OGMS_0000100",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMIABIS_0000019",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMRSE_00000011",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMRSE_00000023",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMRSE_00000056",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMRSE_00000057",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMRSE_00000058",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMRSE_00000059",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMRSE_00000060",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMRSE_00000062",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMRSE_00000064",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMRSE_00000065",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PCO_0000000",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PCO_0000001",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/STATO_0000134",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/STATO_0000233",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/STATO_0000321",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/UBERON_0000061",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/UBERON_0000479",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/UBERON_0002405",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/UBERON_0035944",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/UO_0000000",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/UO_0000003",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/VO_0000001",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/VO_0000278",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000004",
+      "lbl" : "basis of",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "deprecated" : true
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000028",
+      "lbl" : "obsolete is based on",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "comments" : [ "p is based on e, if p is a purely intentional entity, e is an entity and p assumption/simulation that e exists regardless of the truth of this assumption. " ],
+        "deprecated" : true
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000037",
+      "lbl" : "commissions",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "a commissions b, iff a does not participate in the creation or execution of b and participates in a legal agreement that c participates on the creation or execution of b and c getting something in exchange for that participation."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
+          "val" : "A relation between two entities where the first entity formally requests a third party to create or execute the second entity."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
+          "val" : "commissions"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000057",
+      "lbl" : "instantiates",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "A relation between to particulars such that aRb where b can be any kind of entity while the second is a universal. b instantiates a at some times. "
+        },
+        "comments" : [ "Barry Smith, Waclaw Kusnierczyk, Daniel Schober, Werner Ceusters, “Towards a Reference Terminology for Ontology Research and Development in the Biomedical Domain”, O. Bodenreider, ed., Proceedings of KR-MED, 2006, 57-66. Also available online at: http://ceur-ws.org/Vol-222." ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000067",
+      "lbl" : "simulates",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "a simulates b, iff a is a purely intentional entity that is representing a fictional individual or fact b and a participates in a simulating."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000116",
+      "lbl" : "causally_precedes",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Mathias Brochhausen"
+        } ],
+        "deprecated" : true
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000177",
+      "lbl" : "obsoleted_administrated by",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "deprecated" : true
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000543",
+      "lbl" : "has basis in",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "(Q is_a Quality ⋀ D is_a Disposition ⋀ Q base of D) ® ∀q (q instance_of Q ® b (q inheres_in b ⋀ d (d instance_of D ⋀ d inheres_in b)))"
+        },
+        "comments" : [ "The relationship between a disposition and the quality that confers the disposition on the material entity in which they both inhere.\n\nFor example, the disposition of a piece of glass to bend light and the lattice structure of the glass (quality) that results in the bending of the light." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "has basis in quality"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "Representing dispositions\nJohannes Röhl and Ludger Jansen\nJournal of Biomedical Semantics 2011 2(Suppl 4):S4\nDOI: 10.1186/2041-1480-2-S4-S4"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000051",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000054",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000055",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000066",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000067",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000108",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000111",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000113",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000117",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000118",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000137",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000139",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000156",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000136",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000219",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000293",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000299",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0000312",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0001938",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMRSE_00000070",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMRSE_00000071",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000052",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000053",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000056",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000057",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000059",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000091",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0001015",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0001025",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002087",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002090",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002163",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002212",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002218",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002233",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002234",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002350",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002404",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002411",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000102",
+      "lbl" : "is expressed as",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000035",
+      "lbl" : "organism population universal",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000113",
+      "lbl" : "atmosphere of the Earth",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000319",
+      "lbl" : "NLM ID",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "comments" : [ "This identifier is the one that the National Library of Medicine uses to identify journals uniquely in PubMed." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "National Library of Medicine Identifier\n"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000320",
+      "lbl" : "ISSN Linking",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "comments" : [ "The linking ISSN is a single number assigned to all formats of a journal.  The online and print versions of a journal, for example, are typically different.  The linking ISSN refers to the journal regardless of format." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "linking ISSN"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "International Standard Serial Number, Linking"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000321",
+      "lbl" : "ISO Title Abbreviation",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "comments" : [ "ISO Abbreviations are constructed at NLM to assist NCBI in linking from GenBank to PubMed." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "Iso Abbr"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000324",
+      "lbl" : "NLM Title Abbreviation",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "comments" : [ "The abbreviated journal title assigned by the National Library of Medicine.  Typically, it's the ISO title abbreviation without periods." ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000325",
+      "lbl" : "URI creation date",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "The date on which a URI annotated with this property was created."
+        },
+        "comments" : [ "This is the date that you created the URI that represents something, NOT the date that the thing referenced by the URI was created.\n\nFor example, if you create a URI on 2014-09-24 to represent a book published on 1982-10-17, then this annotation property should have the value 2014-09-24.\n\nIn other words, this annotation refers to the representation, not the represented thing.\n\nFor the 1982-10-17 date, we suggest the dc:created annotation." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000329",
+      "lbl" : "author list <annotation>",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "comments" : [ "an annotation property for capturing the list of authors on the publication or other document to which the entity to which the annotation is attached refers.  That is, this annotation should be attached only to individuals that represent information content entities, and its values must denote the people that authored the ICE." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "author list"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000488",
+      "lbl" : "source code repository URL",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "comments" : [ "This annotation is intended for annotating instances of software application, software module, ontology (artifact), etc. with a uniform resource locator that points to the source code version control repository where they are managed.  Note that for OWL individuals that reference a particular version of the software or ontology, this URL should point to the place in the repository where that version is located, rather than the general main page of the repository." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "source code version control repository URL"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "WIlliam R. Hogan"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000523",
+      "lbl" : "human readable synopsis",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "A comment that summarizes the most relevant or salient features and history of the entity for human readers."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "human readable synopsis"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000111",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000112",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000115",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000117",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000118",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000119",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000232",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000600",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0100001",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/contributor",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/creator",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/date",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/source",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/title",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/type",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/description",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/license",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.referent-tracking.com/RTS_00000001",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.referent-tracking.com/RTS_00000002",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     } ],
     "edges" : [ {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000000",
@@ -12227,7 +12841,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000114",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0000003"
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000651"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000114",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002087",
@@ -12478,15 +13092,11 @@
       "obj" : "http://purl.obolibrary.org/obo/GO_0044409"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000167",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000167",
-      "pred" : "http://purl.obolibrary.org/obo/OBI_0000293",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002233",
       "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000237"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000167",
-      "pred" : "http://purl.obolibrary.org/obo/OBI_0000299",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002234",
       "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000166"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000168",
@@ -12799,7 +13409,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000238",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000067",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0000003"
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000651"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000239",
       "pred" : "is_a",
@@ -13111,6 +13721,10 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000312",
       "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000651"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000312",
+      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0032504"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000312",
@@ -13163,7 +13777,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000330",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0000003"
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000651"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000331",
       "pred" : "is_a",
@@ -14517,6 +15131,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MF_0000073"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000651",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0008150"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000652",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000650"
@@ -14704,7 +15322,7 @@
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000114",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0000003" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/APOLLO_SV_00000651" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000115",
       "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0044409" ],
@@ -14748,10 +15366,10 @@
       "definedClassId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000167",
       "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
       "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/OBI_0000293",
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002233",
         "fillerId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000237"
       }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/OBI_0000299",
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002234",
         "fillerId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000166"
       } ]
     }, {
@@ -14829,7 +15447,7 @@
       "genusIds" : [ "http://purl.obolibrary.org/obo/OBI_0100026" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000067",
-        "fillerId" : "http://purl.obolibrary.org/obo/GO_0000003"
+        "fillerId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000651"
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000264",
@@ -14867,7 +15485,7 @@
       "genusIds" : [ "http://purl.obolibrary.org/obo/IAO_0000100" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000312",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0032504" ],
+      "genusIds" : [ "http://purl.obolibrary.org/obo/APOLLO_SV_00000651" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002218",
         "fillerId" : "http://purl.obolibrary.org/obo/NCBITaxon_7157"
@@ -14881,7 +15499,7 @@
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000330",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0000003" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/APOLLO_SV_00000651" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000334",
       "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ]
@@ -15071,6 +15689,18 @@
         "propertyId" : "http://purl.obolibrary.org/obo/OBI_0000299",
         "fillerId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000798"
       } ]
+    } ],
+    "domainRangeAxioms" : [ {
+      "predicateId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000057",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000001" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000067",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/APOLLO_SV_00000070" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000001" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000543",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000016" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000019" ]
     } ]
   } ]
 }

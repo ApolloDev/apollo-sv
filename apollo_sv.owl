@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/apollo_sv.owl#"
      xml:base="http://purl.obolibrary.org/obo/apollo_sv.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:go="http://purl.obolibrary.org/obo/go#"
      xmlns:uo="http://purl.obolibrary.org/obo/uo#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -26,7 +27,7 @@
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#"
      xmlns:ace_lexicon="http://attempto.ifi.uzh.ch/ace_lexicon#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/apollo_sv.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/apollo_sv/releases/2024-04-19/apollo_sv.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/apollo_sv/releases/2024-08-15/apollo_sv.owl"/>
         <dc:contributor>Amanda Hicks</dc:contributor>
         <dc:contributor>John Levander</dc:contributor>
         <dc:contributor>Josh Hanna</dc:contributor>
@@ -42,7 +43,7 @@
         <www:RTS_00000002>082D5D78-D916-457E-B4FD-365F86F45B30</www:RTS_00000002>
         <rdfs:comment xml:lang="en">When citing Apollo-SV, use the permanent URL of the ontology: http://purl.obolibrary.org/obo/apollo_sv.owl.  When referencing a specific component of the Apollo-SV such as a class, object property, annotation property, or individual, use the component&apos;s Uniform Resource Identifier (URI).</rdfs:comment>
         <owl:versionInfo>2023-01-10</owl:versionInfo>
-        <owl:versionInfo>2024-04-19</owl:versionInfo>
+        <owl:versionInfo>2024-08-15</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -846,6 +847,7 @@ EquivalentTo: xsd:integer[&gt; 2151 , &lt;= 2300]
         <obo:IAO_0000117 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000119>
         <rdfs:comment xml:lang="en">Add as annotation triples in the granting ontology</rdfs:comment>
+        <rdfs:label>term replaced by</rdfs:label>
         <rdfs:label xml:lang="en">term replaced by</rdfs:label>
     </owl:AnnotationProperty>
     
@@ -917,6 +919,12 @@ EquivalentTo: xsd:integer[&gt; 2151 , &lt;= 2300]
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"/>
         <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/oborel/obo-relations/wiki/ROAndTime</foaf:page>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002161 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002161"/>
     
 
 
@@ -1085,6 +1093,118 @@ EquivalentTo: xsd:integer[&gt; 2151 , &lt;= 2300]
         <obo:IAO_0000115>This annotation property gives the unique label of all Apollo_SV entities that are refered to in the schema. The UAL is the denotator for the Apollo_SV class in the schema. There can at all times only be ONE value of UAL for each class.</obo:IAO_0000115>
         <obo:IAO_0000118>UAL</obo:IAO_0000118>
         <rdfs:label xml:lang="en">Unique Apollo Label</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/go#goslim_agr -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_agr">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/go#goslim_candida -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_candida">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/go#goslim_chembl -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_chembl">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/go#goslim_drosophila -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_drosophila">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/go#goslim_generic -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_generic">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/go#goslim_metagenomics -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_metagenomics">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/go#goslim_pir -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_pir">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/go#goslim_plant -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_plant">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/go#goslim_plant_ribbon -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_plant_ribbon">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/go#goslim_pombe -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_pombe">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/go#goslim_virus -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_virus">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/go#goslim_yeast -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_yeast">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
 
@@ -1348,6 +1468,12 @@ EquivalentTo: xsd:integer[&gt; 2151 , &lt;= 2300]
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#default-namespace -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#default-namespace"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId">
@@ -1414,6 +1540,12 @@ EquivalentTo: xsd:integer[&gt; 2151 , &lt;= 2300]
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace">
@@ -1438,7 +1570,9 @@ EquivalentTo: xsd:integer[&gt; 2151 , &lt;= 2300]
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasSynonymType -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonymType"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonymType">
+        <rdfs:label>has_synonym_type</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -1696,10 +1830,14 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <oboInOwl:hasDbXref>BFO:0000050</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>part_of</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
+        <oboInOwl:shorthand>part_of</oboInOwl:shorthand>
         <rdfs:label>part of</rdfs:label>
         <rdfs:label xml:lang="en">part of</rdfs:label>
         <rdfs:label xml:lang="en">part_of</rdfs:label>
@@ -1731,9 +1869,13 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 A continuant cannot have an occurrent as part: use &apos;participates in&apos;. An occurrent cannot have a continuant as part: use &apos;has participant&apos;. An immaterial entity cannot have a material entity as part: use &apos;location of&apos;. An independent continuant cannot have a specifically dependent continuant as part: use &apos;bearer of&apos;. A specifically dependent continuant cannot have an independent continuant as part: use &apos;inheres in&apos;.</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">has_part</obo:IAO_0000118>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <oboInOwl:hasDbXref>BFO:0000051</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>has_part</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
+        <oboInOwl:shorthand>has_part</oboInOwl:shorthand>
         <rdfs:label>has part</rdfs:label>
         <rdfs:label xml:lang="en">has part</rdfs:label>
     </owl:ObjectProperty>
@@ -1851,7 +1993,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000066">
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000067"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
@@ -1868,10 +2009,14 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000118 xml:lang="en">unfolds_in</obo:IAO_0000118>
         <obo:IAO_0000412>http://purl.obolibrary.org/obo/ido.owl</obo:IAO_0000412>
         <obo:IAO_0000412>http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>BFO:0000066</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>relationship</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>occurs_in</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
+        <oboInOwl:shorthand>occurs_in</oboInOwl:shorthand>
         <rdfs:comment>Example: oocyte axis determination : The establishment, maintenance and elaboration of an axis in the oocyte. This process unfolds_in the oocyte</rdfs:comment>
         <rdfs:comment>Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
@@ -3053,10 +3198,8 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
         <rdfs:label xml:lang="en">bearer of</rdfs:label>
         <rdfs:label xml:lang="en">bearer_of</rdfs:label>
-        <rdfs:label>has characteristic</rdfs:label>
         <rdfs:label xml:lang="en">has characteristic</rdfs:label>
         <rdfs:label xml:lang="en">is bearer of</rdfs:label>
-        <rdfs:seeAlso>https://github.com/oborel/obo-relations/pull/284</rdfs:seeAlso>
     </owl:ObjectProperty>
     
 
@@ -3085,7 +3228,6 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000057">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -3107,7 +3249,6 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
         <obo:IAO_0000412>http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
         <dc:source>http://www.obofoundry.org/ro/#OBO_REL:has_participant</dc:source>
         <terms:source>http://www.obofoundry.org/ro/#OBO_REL:has_participant</terms:source>
-        <rdfs:label>has participant</rdfs:label>
         <rdfs:label xml:lang="en">has participant</rdfs:label>
         <rdfs:label>has_participant</rdfs:label>
         <rdfs:label xml:lang="en">has_participant</rdfs:label>
@@ -3641,8 +3782,13 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
         <obo:IAO_0000117>David Osumi-Sutherland</obo:IAO_0000117>
         <obo:IAO_0000118>o</obo:IAO_0000118>
         <obo:IAO_0000118>overlaps</obo:IAO_0000118>
+        <oboInOwl:hasDbXref>RO:0002093</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ends_during</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
+        <oboInOwl:shorthand>ends_during</oboInOwl:shorthand>
         <rdfs:comment xml:lang="en">X ends_during Y iff: ((start(Y) before_or_simultaneous_with end(X)) AND end(X) before_or_simultaneous_with end(Y). </rdfs:comment>
+        <rdfs:label>ends during</rdfs:label>
         <rdfs:label xml:lang="en">ends during</rdfs:label>
     </owl:ObjectProperty>
     
@@ -3764,9 +3910,14 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
         <obo:IAO_0000232>Regulation precludes parthood; the regulatory process may not be within the regulated process.</obo:IAO_0000232>
         <obo:IAO_0000589>regulates (processual)</obo:IAO_0000589>
         <obo:IAO_0000600 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</obo:IAO_0000600>
+        <oboInOwl:hasDbXref>RO:0002211</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>regulates</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
+        <oboInOwl:shorthand>regulates</oboInOwl:shorthand>
+        <rdfs:label>regulates</rdfs:label>
         <rdfs:label xml:lang="en">regulates</rdfs:label>
     </owl:ObjectProperty>
     
@@ -3792,9 +3943,14 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
         <obo:IAO_0000412>http://purl.obolibrary.org/obo/ro.owl</obo:IAO_0000412>
         <obo:IAO_0000589>negatively regulates (process to process)</obo:IAO_0000589>
         <obo:RO_0004050 rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
+        <oboInOwl:hasDbXref>RO:0002212</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>negatively_regulates</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
+        <oboInOwl:shorthand>negatively_regulates</oboInOwl:shorthand>
+        <rdfs:label>negatively regulates</rdfs:label>
         <rdfs:label xml:lang="en">negatively regulates</rdfs:label>
     </owl:ObjectProperty>
     
@@ -3820,9 +3976,14 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
         <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/ro/docs/causal-relations"/>
         <obo:IAO_0000589>positively regulates (process to process)</obo:IAO_0000589>
         <obo:RO_0004049 rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
+        <oboInOwl:hasDbXref>RO:0002213</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>positively_regulates</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
+        <oboInOwl:shorthand>positively_regulates</oboInOwl:shorthand>
+        <rdfs:label>positively regulates</rdfs:label>
         <rdfs:label xml:lang="en">positively regulates</rdfs:label>
     </owl:ObjectProperty>
     
@@ -4089,6 +4250,31 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0002234 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002234">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002353"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002230"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002234"/>
+        </owl:propertyChainAxiom>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>p has output c iff c is a participant in p, c is present at the end of p, and c is not present at the beginning of p.</obo:IAO_0000115>
+        <obo:IAO_0000115>p has output c iff c is a participant in p, c is present at the end of p, and c is not present in the same state at the beginning of p.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000118>produces</obo:IAO_0000118>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
+        <rdfs:label xml:lang="en">has output</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://wiki.geneontology.org/Has_output</rdfs:seeAlso>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0002263 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002263">
@@ -4334,7 +4520,6 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
         <obo:IAO_0000115>inverse of enables</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <rdfs:label>enabled by</rdfs:label>
         <rdfs:label xml:lang="en">enabled by</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://wiki.geneontology.org/Enabled_by</rdfs:seeAlso>
     </owl:ObjectProperty>
@@ -4420,6 +4605,20 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/RO_0002259"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">input of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002353 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002353">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
+        <obo:IAO_0000115>inverse of has output</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/RO_0002259"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
+        <rdfs:label xml:lang="en">output of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -5162,6 +5361,42 @@ For example, A and B may be gene products and binding of B by A positively regul
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0003000 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0003000">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0003001"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002234"/>
+        </owl:propertyChainAxiom>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>a produces b if some process that occurs_in a has_output b, where a and b are material entities. Examples: hybridoma cell line produces monoclonal antibody reagent; chondroblast produces avascular GAG-rich matrix.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-9114-8737"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
+        <rdfs:comment>Note that this definition doesn&apos;t quite distinguish the output of a transformation process from a production process, which is related to the identity/granularity issue.</rdfs:comment>
+        <rdfs:label xml:lang="en">produces</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0003001 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0003001">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>a produced_by b iff some process that occurs_in b has_output a.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-9114-8737"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
+        <rdfs:label xml:lang="en">produced by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0004028 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0004028">
@@ -5437,10 +5672,10 @@ For example, A and B may be gene products and binding of B by A positively regul
         </owl:propertyChainAxiom>
         <obo:IAO_0000112>A diagnostic testing device utilizes a specimen.</obo:IAO_0000112>
         <obo:IAO_0000115>X device utilizes material Y means X and Y are material entities, and X is capable of some process P that has input Y.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-9625-1899"/>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0003-2620-0345"/>
         <obo:IAO_0000232>A diagnostic testing device utilizes a specimen means that the diagnostic testing device is capable of an assay, and this assay a specimen as its input.</obo:IAO_0000232>
         <obo:IAO_0000232>See github ticket https://github.com/oborel/obo-relations/issues/497</obo:IAO_0000232>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0001-9625-1899"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-2620-0345"/>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-11-08T12:00:00Z</oboInOwl:creation_date>
         <oboInOwl:hasBroadSynonym>utilizes</oboInOwl:hasBroadSynonym>
         <rdfs:label xml:lang="en">device utilizes material</rdfs:label>
@@ -8163,7 +8398,7 @@ The concept derives from the epidemiological notion of ‘herd immunity,’ whic
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0000003"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
                         <owl:someValuesFrom>
@@ -8181,7 +8416,7 @@ The concept derives from the epidemiological notion of ‘herd immunity,’ whic
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
@@ -9703,26 +9938,19 @@ I checked because an infection and immunity census would involve two different c
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000237"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                         <owl:someValuesFrom>
                             <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <owl:Class>
-                                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000166"/>
-                                    </owl:Class>
-                                    <owl:Class>
-                                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000237"/>
-                                    </owl:Class>
-                                </owl:unionOf>
+                                <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000166"/>
                             </owl:Class>
                         </owl:someValuesFrom>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000166"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -9730,33 +9958,25 @@ I checked because an infection and immunity census would involve two different c
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000186"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044409"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000237"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                 <owl:someValuesFrom>
                     <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Class>
-                                <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000166"/>
-                            </owl:Class>
-                            <owl:Class>
-                                <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000237"/>
-                            </owl:Class>
-                        </owl:unionOf>
+                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000166"/>
                     </owl:Class>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000166"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -10180,7 +10400,7 @@ The infectious disease scenario typically also includes a lot of additional data
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0000003"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
                                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000237"/>
@@ -11078,7 +11298,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000067"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0000003"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -11087,7 +11307,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000067"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0000003"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">An organism of a particular biological taxon that is the site of reproduction of an organism of a different taxon.</obo:IAO_0000115>
@@ -12312,7 +12532,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0032504"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002218"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7157"/>
@@ -12320,6 +12540,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032504"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -12548,7 +12769,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0000003"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
                         <owl:someValuesFrom>
@@ -12568,7 +12789,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
@@ -18993,6 +19214,28 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     
 
 
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000651 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000651">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0019058"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0019953"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0019954"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+        <obo:IAO_0000111 xml:lang="en">organism reproduction</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">The process by which new organisms are created from existing ones.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <apollo_sv:APOLLO_SV_0000040>Reproduction</apollo_sv:APOLLO_SV_0000040>
+        <rdfs:label xml:lang="en">reproduction</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000652 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000652">
@@ -19655,12 +19898,6 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:BFO_0000179>process</obo:BFO_0000179>
         <obo:BFO_0000180>Process</obo:BFO_0000180>
         <obo:IAO_0000112 xml:lang="en">a process of cell-division, \ a beating of the heart</obo:IAO_0000112>
@@ -19879,12 +20116,6 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -21888,29 +22119,6 @@ Date accessed: 2015-04-13</obo:IAO_0000119>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0000003 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0000003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
-        <obo:IAO_0000115 xml:lang="en">The production by an organism of new individuals that contain some portion of their genetic material inherited from that organism.</obo:IAO_0000115>
-        <obo:IAO_0000115>The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
-        <obo:IAO_0000412>http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
-        <obo:IAO_0000600 xml:lang="en">The production by an organism of new individuals that contain some portion of their genetic material inherited from that organism.</obo:IAO_0000600>
-        <apollo_sv:APOLLO_SV_0000040>Reproduction</apollo_sv:APOLLO_SV_0000040>
-        <oboInOwl:hasAlternativeId>GO:0019952</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>GO:0050876</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_generic"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_pir"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_plant"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gosubset_prok"/>
-        <rdfs:label>reproduction</rdfs:label>
-        <rdfs:label xml:lang="en">reproduction</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0003674 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0003674">
@@ -21933,66 +22141,6 @@ Date accessed: 2015-04-13</obo:IAO_0000119>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0006950 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006950">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050896"/>
-        <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a disturbance in organismal or cellular homeostasis, usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation).</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>response to abiotic stress</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>response to biotic stress</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>GO:0006950</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_aspergillus"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_candida"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_metagenomics"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gosubset_prok"/>
-        <rdfs:comment>Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.</rdfs:comment>
-        <rdfs:label>response to stress</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0006952 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006952">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006950"/>
-        <obo:IAO_0000115>Reactions, triggered in response to the presence of a foreign body or the occurrence of an injury, which result in restriction of damage to the organism attacked or prevention/recovery from the infection caused by the attack.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasAlternativeId>GO:0002217</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>GO:0042829</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasExactSynonym>defence response</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>physiological defense response</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>antimicrobial peptide activity</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>defense/immunity protein activity</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>GO:0006952</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gosubset_prok"/>
-        <rdfs:label>defense response</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0006954 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006954">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006952"/>
-        <obo:IAO_0000115>The immediate defensive reaction (by vertebrate tissue) to infection or injury caused by chemical or physical agents. The process is characterized by local vasodilation, extravasation of plasma into intercellular spaces and accumulation of white blood cells and macrophages.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasBroadSynonym>Inflammation</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasDbXref>Wikipedia:Inflammation</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0006954</oboInOwl:id>
-        <rdfs:comment>This term was improved by GO_REF:0000022. It was moved.</rdfs:comment>
-        <rdfs:label>inflammatory response</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0006955 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006955">
@@ -22004,120 +22152,41 @@ Date accessed: 2015-04-13</obo:IAO_0000119>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0007562 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007562">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071684"/>
-        <obo:IAO_0000115 xml:lang="en">The emergence of an adult insect from a pupa case.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">eclose</rdfs:label>
-        <rdfs:label xml:lang="en">eclosion</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0007565 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007565">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044703"/>
-        <obo:IAO_0000115>The set of physiological processes that allow an embryo or foetus to develop within the body of a female animal. It covers the time from fertilization of a female ovum by a male spermatozoon until birth.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>Wikipedia:Gestation</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>gestation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>carrying of young</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>GO:0007565</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
-        <rdfs:label>female pregnancy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0007567 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007567">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044703"/>
-        <obo:IAO_0000115>The reproductive process in which the parent is separated from its offspring either by giving birth to live young or by laying eggs.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasExactSynonym>giving birth</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>egg laying</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0007567</oboInOwl:id>
-        <rdfs:label>parturition</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0007568 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007568">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032502"/>
-        <obo:IAO_0000412>http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
-        <oboInOwl:hasAlternativeId>GO:0016280</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_generic"/>
-        <rdfs:label xml:lang="en">aging</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0007610 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007610">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032501"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000060"/>
         <obo:IAO_0000115>The internally coordinated responses (actions or inactions) of animals (individuals or groups) to internal or external stimuli, via a mechanism that involves nervous system activity.</obo:IAO_0000115>
-        <obo:IAO_0000115>The internally coordinated responses (actions or inactions) of whole living organisms (individuals or groups) to internal or external stimuli.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <apollo_sv:APOLLO_SV_0000040>Behavior</apollo_sv:APOLLO_SV_0000040>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
+        <oboInOwl:creation_date>2012-09-20T14:06:08Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>GO:0023032</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044708</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044709</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>Wikipedia:Behavior</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>behavioral response to stimulus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>behaviour</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>behavioural response to stimulus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>single-organism behavior</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0007610</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gosubset_prok"/>
-        <rdfs:comment>Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.</rdfs:comment>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_agr"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon"/>
+        <rdfs:comment>1. Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation reviews.
+2. While a broader definition of behavior encompassing plants and single cell organisms would be justified on the basis of some usage (see PMID:20160973 for discussion), GO uses a tight definition that limits behavior to animals and to responses involving the nervous system, excluding plant responses that GO classifies under development, and responses of unicellular organisms that has general classifications for covering the responses of cells in multicellular organisms (e.g. cell chemotaxis).</rdfs:comment>
         <rdfs:label>behavior</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0007617 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007617">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044705"/>
-        <obo:IAO_0000115>The behavioral interactions between organisms for the purpose of mating, or sexual reproduction resulting in the formation of zygotes.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>Wikipedia:Mating_behaviour</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>mating behaviour</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0007617</oboInOwl:id>
-        <rdfs:label>mating behavior</rdfs:label>
-    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007610"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The internally coordinated responses (actions or inactions) of animals (individuals or groups) to internal or external stimuli, via a mechanism that involves nervous system activity.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:ems</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:jl</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0395448956</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:20160973</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -22125,28 +22194,33 @@ Date accessed: 2015-04-13</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008150">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0003674"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000111 xml:lang="en">biological_process</obo:IAO_0000111>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <obo:IAO_0000115>A biological process is the execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.</obo:IAO_0000115>
         <obo:IAO_0000115>A process that emerges from two or more causally-connected macromolecular activities and has evolved to achieve a biological objective.</obo:IAO_0000115>
         <obo:IAO_0000115>Any process specifically pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms. A process is a collection of molecular events with a defined beginning and end.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">Any process specifically pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms. A process is a collection of molecular events with a defined beginning and end.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/24968</obo:IAO_0000233>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/ido.owl</obo:IAO_0000412>
         <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-19T15:05:24Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>GO:0000004</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0007582</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044699</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>Wikipedia:Biological_process</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>biological process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>physiological process</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>single organism process</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>single-organism process</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0008150</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_candida"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_metagenomics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pombe"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
         <rdfs:comment>A biological process is an evolved process</rdfs:comment>
+        <rdfs:comment>Note that, in addition to forming the root of the biological process ontology, this term is recommended for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code &apos;no data&apos; (ND), is used to indicate this.</rdfs:comment>
         <rdfs:comment>Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code &apos;no data&apos; (ND), is used to indicate this.</rdfs:comment>
         <rdfs:label xml:lang="en">biological process</rdfs:label>
         <rdfs:label>biological_process</rdfs:label>
@@ -22160,29 +22234,40 @@ Date accessed: 2015-04-13</obo:IAO_0000119>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0010259 -->
+    <!-- http://purl.obolibrary.org/obo/GO_0016032 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0010259">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007568"/>
-        <obo:IAO_0000115>An aging process that has as participant a whole multicellular organism. Multicellular organism aging includes loss of functions such as resistance to disease, homeostasis, and fertility, as well as wear and tear. Multicellular organisms aging includes processes like cellular senescence and organ senescence, but is more inclusive. May precede death (GO:0016265) of an organism and may succeed developmental maturation (GO:0021700).</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016032">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+        <obo:IAO_0000115>A multi-organism process in which a virus is a participant. The other participant is the host. Includes infection of a host cell, replication of the viral genome, and assembly of progeny virus particles. In some cases the viral genetic material may integrate into the host genome and only subsequently, under particular circumstances, &apos;complete&apos; its life cycle.</obo:IAO_0000115>
+        <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4896"/>
+        <oboInOwl:hasAlternativeId>GO:0022415</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>Wikipedia:Viral_life_cycle</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>virus process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0010259</oboInOwl:id>
-        <rdfs:label>multicellular organismal aging</rdfs:label>
+        <oboInOwl:hasRelatedSynonym>viral infection</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>virulence</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0016032</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_metagenomics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_virus"/>
+        <rdfs:comment>See also the biological process terms &apos;viral infectious cycle ; GO:0019058&apos; and &apos;lysogeny ; GO:0030069&apos;.</rdfs:comment>
+        <rdfs:label>viral process</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0010941 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0010941">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050794"/>
-        <obo:IAO_0000115>Any process that modulates the rate or frequency of cell death. Cell death is the specific activation or halting of processes within a cell so that its vital functions markedly cease, rather than simply deteriorating gradually over time, which culminates in cell death.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0010941</oboInOwl:id>
-        <rdfs:label>regulation of cell death</rdfs:label>
-    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016032"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A multi-organism process in which a virus is a participant. The other participant is the host. Includes infection of a host cell, replication of the viral genome, and assembly of progeny virus particles. In some cases the viral genetic material may integrate into the host genome and only subsequently, under particular circumstances, &apos;complete&apos; its life cycle.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:bf</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:jl</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016032"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>virus process</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:bf</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:jl</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -22225,121 +22310,142 @@ Date accessed: 2015-04-13</obo:IAO_0000119>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0018991 -->
+    <!-- http://purl.obolibrary.org/obo/GO_0019058 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0018991">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019098"/>
-        <obo:IAO_0000115>The deposition of eggs (either fertilized or not) upon a surface or into a medium such as water.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
-        <obo:IAO_0000412>http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
-        <oboInOwl:hasBroadSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasBroadSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasBroadSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasBroadSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0019058">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016032"/>
+        <obo:IAO_0000115>A set of processes which all viruses follow to ensure survival; includes attachment and entry of the virus particle, decoding of genome information, translation of viral mRNA by host ribosomes, genome replication, and assembly and release of viral particles containing the genome.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>GO:0019067</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasNarrowSynonym>viral assembly, maturation, egress, and release</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <rdfs:label>oviposition</rdfs:label>
-        <rdfs:label xml:lang="en">oviposition</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0019048 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0019048">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044003"/>
-        <obo:IAO_0000115>The process in which a virus effects a change in the structure or processes of its host organism.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasAlternativeId>GO:0044792</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasBroadSynonym>virus-host interaction</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasDbXref>Reactome:REACT_6323</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>VZ:886</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>host-virus interaction</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>modulation by virus of host anatomical structure or process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>modulation by virus of host anatomy or process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>viral interaction with host</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>viral-host process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>virus-host process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0019048</oboInOwl:id>
+        <oboInOwl:hasRelatedSynonym>lytic viral life cycle</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>viral infectious cycle</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>viral replication</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0019058</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_virus"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#virus_checked"/>
-        <rdfs:label>modulation by virus of host morphology or physiology</rdfs:label>
+        <rdfs:label>viral life cycle</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0019051 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0019051">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0060139"/>
-        <obo:IAO_0000115>The set of viral processes that induce an apoptotic process in infected host cells, facilitating release and spread of progeny virions.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasExactSynonym>activation by virus of host apoptosis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>activation by virus of host apoptotic programmed cell death</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>activation of apoptosis in host by virus</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>induction by virus of host apoptotic programmed cell death</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>induction of apoptosis in host by virus</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>induction by virus of host apoptosis</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0019051</oboInOwl:id>
-        <rdfs:label>induction by virus of host apoptotic process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0019054 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0019054">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019048"/>
-        <obo:IAO_0000115>The process in which a virus effects a change in the processes and activities of its host organism.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>Reactome:REACT_6222</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>modification by virus of host cellular process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>regulation by virus of host cellular process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>regulation of cellular process in host by virus</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>regulation of host cellular process by virus</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>viral host cell process manipulation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>modulation of cellular process in host by virus</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>GO:0019054</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#virus_checked"/>
-        <rdfs:label>modulation by virus of host process</rdfs:label>
-    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0019058"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A set of processes which all viruses follow to ensure survival; includes attachment and entry of the virus particle, decoding of genome information, translation of viral mRNA by host ribosomes, genome replication, and assembly and release of viral particles containing the genome.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ISBN:1555811272</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0019058"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>viral assembly, maturation, egress, and release</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:bf</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:jl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0019058"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>viral infectious cycle</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:bf</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:jl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0019058"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>viral replication</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:bf</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:jl</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/GO_0019098 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0019098">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0007610"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0048609"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007610"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048609"/>
         <obo:IAO_0000115>The specific behavior of an organism that is associated with reproduction.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/23491</obo:IAO_0000233>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
-        <obo:IAO_0000412>http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
+        <oboInOwl:creation_date>2012-09-19T16:01:37Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>GO:0033057</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044704</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044705</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>reproductive behavior in a multicellular organism</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>reproductive behaviour</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>multi-organism reproductive behavior</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>multicellular organism reproductive behavior</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>single-organism reproductive behavior</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0019098</oboInOwl:id>
         <rdfs:label>reproductive behavior</rdfs:label>
-        <rdfs:label xml:lang="en">reproductive behavior</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0019098"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The specific behavior of an organism that is associated with reproduction.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:jl</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pr</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0019953 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0019953">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0022414"/>
+        <obo:IAO_0000115>A type of reproduction that combines the genetic material of two gametes (such as a sperm or egg cell or fungal spores). The gametes have an haploid genome (with a single set of chromosomes, the product of a meiotic division) and combines with one another to produce a zygote (diploid).</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/22929</obo:IAO_0000233>
+        <oboInOwl:hasDbXref>Wikipedia:Sexual_reproduction</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0019953</oboInOwl:id>
+        <rdfs:comment>Note that gametes may come from two organisms or from a single organism in the case of self-fertilizing hermaphrodites, e.g. C. elegans, or self-fertilization in plants. Note also that sexual reproduction may be seen as the regular alternation, in the life cycle of haplontic, diplontic and diplohaplontic organisms, of meiosis and fertilization which provides for the production offspring. In diplontic organisms there is a life cycle in which the products of meiosis behave directly as gametes, fusing to form a zygote from which the diploid, or sexually reproductive polyploid, adult organism will develop. In diplohaplontic organisms a haploid phase (gametophyte) exists in the life cycle between meiosis and fertilization (e.g. higher plants, many algae and Fungi); the products of meiosis are spores that develop as haploid individuals from which haploid gametes develop to form a diploid zygote; diplohaplontic organisms show an alternation of haploid and diploid generations. In haplontic organisms meiosis occurs in the zygote, giving rise to four haploid cells (e.g. many algae and protozoa), only the zygote is diploid and this may form a resistant spore, tiding organisms over hard times.</rdfs:comment>
+        <rdfs:label>sexual reproduction</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0019953"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of reproduction that combines the genetic material of two gametes (such as a sperm or egg cell or fungal spores). The gametes have an haploid genome (with a single set of chromosomes, the product of a meiotic division) and combines with one another to produce a zygote (diploid).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>Wikipedia:Sexual_reproduction</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0019954 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0019954">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0022414"/>
+        <obo:IAO_0000115>A type of reproduction in which new individuals are produced from a single organism, either from an unfertilized egg or from a single cell or group of cells.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/22929</obo:IAO_0000233>
+        <oboInOwl:hasDbXref>Wikipedia:Asexual_reproduction</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>parthenogenesis</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0019954</oboInOwl:id>
+        <rdfs:label>asexual reproduction</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0019954"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of reproduction in which new individuals are produced from a single organism, either from an unfertilized egg or from a single cell or group of cells.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ISBN:0387520546</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:22977071</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:28779329</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:29559496</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0019954"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>parthenogenesis</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>Wikipedia:Parthenogenesis</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -22348,229 +22454,240 @@ Date accessed: 2015-04-13</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0022414">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>A biological process that directly contributes to the process of producing new individuals by one or two organisms. The new individuals inherit some proportion of their genetic material from the parent or parents.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/27054</obo:IAO_0000233>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
+        <oboInOwl:creation_date>2012-09-19T15:56:06Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>GO:0044702</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>Wikipedia:Reproduction</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>single organism reproductive process</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0022414</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gosubset_prok"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_agr"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant_ribbon"/>
         <rdfs:label>reproductive process</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0022414"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A biological process that directly contributes to the process of producing new individuals by one or two organisms. The new individuals inherit some proportion of their genetic material from the parent or parents.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:dph</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:isa_complete</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0032502 -->
+    <!-- http://purl.obolibrary.org/obo/GO_0032501 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0032502">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0032501">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
-        <obo:IAO_0000115>A biological process whose specific outcome is the progression of an integrated living unit: an anatomical structure (which may be a subcellular structure, cell, tissue, or organ), or organism over time from an initial condition to a later condition.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
-        <obo:IAO_0000412>http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
-        <oboInOwl:hasNarrowSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasNarrowSynonym>
+        <obo:IAO_0000115>Any biological process, occurring at the level of a multicellular organism, pertinent to its function.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/27189</obo:IAO_0000233>
+        <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2"/>
+        <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2157"/>
+        <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4896"/>
+        <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4932"/>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
+        <oboInOwl:creation_date>2012-09-19T16:07:47Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>GO:0044707</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0050874</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>organismal physiological process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_aspergillus"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#goslim_pir"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gosubset_prok"/>
-        <rdfs:label>developmental process</rdfs:label>
-        <rdfs:label xml:lang="en">developmental process</rdfs:label>
+        <oboInOwl:hasRelatedSynonym>single-multicellular organism process</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0032501</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
+        <rdfs:comment>Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.</rdfs:comment>
+        <rdfs:label>multicellular organismal process</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0032501"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any biological process, occurring at the level of a multicellular organism, pertinent to its function.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:dph</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:isa_complete</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:tb</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/GO_0032504 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0032504">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0000003"/>
-        <obo:IAO_0000115>The biological process in which new individuals are produced by one or two multicellular organisms. The new individuals inherit some proportion of their genetic material from the parent or parents.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <obo:IAO_0000115>OBSOLETE. The biological process in which new individuals are produced by one or two multicellular organisms. The new individuals inherit some proportion of their genetic material from the parent or parents.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/27054</obo:IAO_0000233>
+        <obo:IAO_0100001>GO:0048609</obo:IAO_0100001>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0032504</oboInOwl:id>
-        <rdfs:label>multicellular organism reproduction</rdfs:label>
+        <rdfs:comment>The reason for obsoletion is that this term is equivalent to multicellular organismal reproductive process.</rdfs:comment>
+        <rdfs:label>obsolete multicellular organism reproduction</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0032504"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>OBSOLETE. The biological process in which new individuals are produced by one or two multicellular organisms. The new individuals inherit some proportion of their genetic material from the parent or parents.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:isa_complete</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:jid</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0033057 -->
+    <!-- http://purl.obolibrary.org/obo/GO_0044403 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0033057">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019098"/>
-        <obo:IAO_0000412>http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">multicellular organismal reproductive behavior</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0035176 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0035176">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044403">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044419"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051705"/>
-        <obo:IAO_0000115>Behavior directed towards society, or taking place between members of the same species. Occurs predominantly, or only, in individuals that are part of a group.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>Wikipedia:Social_behavior</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>social behaviour</oboInOwl:hasExactSynonym>
+        <obo:IAO_0000115>A process carried out by gene products in an organism that enable the organism to engage in a symbiotic relationship, a more or less intimate association, with another organism. The various forms of symbiosis include parasitism, in which the association is disadvantageous or destructive to one of the organisms; mutualism, in which the association is advantageous, or often necessary to one or both and not harmful to either; and commensalism, in which one member of the association benefits while the other is not affected. However, mutualism, parasitism, and commensalism are often not discrete categories of interactions and should rather be perceived as a continuum of interaction ranging from parasitism to mutualism. In fact, the direction of a symbiotic interaction can change during the lifetime of the symbionts due to developmental changes as well as changes in the biotic/abiotic environment in which the interaction occurs. Microscopic symbionts are often referred to as endosymbionts.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/14807</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/20191</obo:IAO_0000233>
+        <oboInOwl:hasAlternativeId>GO:0043298</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044404</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0072519</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0085031</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasNarrowSynonym>commensalism</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>host-pathogen interaction</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>parasitism</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>cooperative behavior</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>GO:0035176</oboInOwl:id>
-        <rdfs:comment>Behavior such as predation which involves members of different species is not social. Communication between members of different species is also not social behavior.</rdfs:comment>
-        <rdfs:label>social behavior</rdfs:label>
+        <oboInOwl:hasRelatedSynonym>symbiosis</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>symbiosis, encompassing mutualism through parasitism</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>symbiotic interaction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>symbiotic interaction between host and organism</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>symbiotic interaction between organisms</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>symbiotic interaction between species</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>symbiotic process</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0044403</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
+        <rdfs:label>biological process involved in symbiotic interaction</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0035821 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0035821">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0065008"/>
-        <obo:IAO_0000115>The process in which an organism effects a change in the structure or processes of a second organism.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:created_by>rfoulger</oboInOwl:created_by>
-        <oboInOwl:creation_date>2011-04-21T01:31:51Z</oboInOwl:creation_date>
-        <oboInOwl:hasNarrowSynonym>regulation of morphology of other organism</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>regulation of physiological process of other organism</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>regulation of physiology of other organism</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>regulation of morphology or physiology of other organism</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>GO:0035821</oboInOwl:id>
-        <rdfs:label>modification of morphology or physiology of other organism</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0039651 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0039651">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019051"/>
-        <obo:IAO_0000115>Any process in which a virus increases the frequency, rate or extent of host cysteine-type endopeptidase activity (also called caspase activity) which contributes to the apoptotic process.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:created_by>rfoulger</oboInOwl:created_by>
-        <oboInOwl:creation_date>2012-10-09T15:44:29Z</oboInOwl:creation_date>
-        <oboInOwl:hasNarrowSynonym>activation of host caspases by virus</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>induction by virus of host caspase activity</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0039651</oboInOwl:id>
-        <rdfs:label>induction by virus of host cysteine-type endopeptidase activity involved in apoptotic process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0043067 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043067">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0010941"/>
-        <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of programmed cell death, cell death resulting from activation of endogenous cellular processes.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasAlternativeId>GO:0043070</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasNarrowSynonym>regulation of non-apoptotic programmed cell death</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0043067</oboInOwl:id>
-        <rdfs:label>regulation of programmed cell death</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0044003 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051817"/>
-        <obo:IAO_0000115>The process in which a symbiont organism effects a change in the structure or processes of its host organism.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0044003</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gosubset_prok"/>
-        <rdfs:label>modification by symbiont of host morphology or physiology</rdfs:label>
-    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044403"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A process carried out by gene products in an organism that enable the organism to engage in a symbiotic relationship, a more or less intimate association, with another organism. The various forms of symbiosis include parasitism, in which the association is disadvantageous or destructive to one of the organisms; mutualism, in which the association is advantageous, or often necessary to one or both and not harmful to either; and commensalism, in which one member of the association benefits while the other is not affected. However, mutualism, parasitism, and commensalism are often not discrete categories of interactions and should rather be perceived as a continuum of interaction ranging from parasitism to mutualism. In fact, the direction of a symbiotic interaction can change during the lifetime of the symbionts due to developmental changes as well as changes in the biotic/abiotic environment in which the interaction occurs. Microscopic symbionts are often referred to as endosymbionts.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:cc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:31257129</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/GO_0044409 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044409">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051701"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051704"/>
+        <obo:IAO_0000115>Entry of a symbiont into the body, tissues, or cells of a host organism as part of the symbiont life cycle. The host is defined as the larger of the organisms involved in a symbiotic interaction.</obo:IAO_0000115>
         <obo:IAO_0000115>Penetration by an organism into the body, tissues, or cells of the host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/18563</obo:IAO_0000233>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
+        <oboInOwl:hasAlternativeId>GO:0030260</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044411</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0051806</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0051828</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0051830</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0075052</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0085027</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0085028</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>entry into host</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>host invasion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>host penetration</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>invasion into host</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>invasion of host</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>penetration into host</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>entry into cell of other organism during symbiotic interaction</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>entry into host cell via penetration peg</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>entry into host via a specialized structure during symbiotic interaction</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>entry into host via enzymatic degradation of host anatomical structure</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>entry into host via enzymatic degradation of host cuticle</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>penetration into host via a specialized structure</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>penetration into host via a specialized structure during symbiotic interaction</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>entry into cell of other organism involved in symbiotic interaction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>entry into host through host barriers</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>entry into other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>entry into other organism involved in symbiotic interaction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>invasion into other organism</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>invasion of other organism</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>invasive growth</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>other organism invasion</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0044409</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_virus"/>
         <rdfs:label>entry into host</rdfs:label>
-        <rdfs:label xml:lang="en">entry into host</rdfs:label>
+        <rdfs:label>symbiont entry into host</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044409"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Entry of a symbiont into the body, tissues, or cells of a host organism as part of the symbiont life cycle. The host is defined as the larger of the organisms involved in a symbiotic interaction.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:vw</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044409"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>host penetration</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:vw</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044409"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>penetration into host</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:vw</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044409"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>entry into cell of other organism during symbiotic interaction</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:tb</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044409"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>penetration into host via a specialized structure</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:vw</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044409"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>penetration into host via a specialized structure during symbiotic interaction</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:vw</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044409"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>entry into other organism during symbiotic interaction</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:tb</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/GO_0044419 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044419">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051704"/>
-        <obo:IAO_0000115>Any process in which an organism has an effect on an organism of a different species.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">interspecies interaction between organisms</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0044531 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044531">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043067"/>
-        <obo:IAO_0000115>A process in which an organism modulates the frequency, rate or extent of programmed cell death in a second organism.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
-        <oboInOwl:creation_date>2012-03-20T04:48:41Z</oboInOwl:creation_date>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+        <obo:IAO_0000115>Any process evolved to enable an interaction with an organism of a different species.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/20191</obo:IAO_0000233>
+        <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4895"/>
+        <oboInOwl:hasExactSynonym>interaction with another species</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>interspecies interaction</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>interspecies interaction between organisms</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>interspecies interaction with other organisms</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0044531</oboInOwl:id>
-        <rdfs:label>modulation of programmed cell death in other organism</rdfs:label>
+        <oboInOwl:id>GO:0044419</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_candida"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
+        <rdfs:label>biological process involved in interspecies interaction between organisms</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0044703 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044703">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0022414"/>
-        <obo:IAO_0000115>A biological process that directly contributes to the process of producing new individuals, involving another organism.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
-        <oboInOwl:creation_date>2012-09-19T15:56:30Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0044703</oboInOwl:id>
-        <rdfs:label>multi-organism reproductive process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0044705 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044705">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019098"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051705"/>
-        <obo:IAO_0000115>The specific behavior of an organism that is associated with reproduction involving another organism of the same or different species.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
-        <oboInOwl:creation_date>2012-09-19T16:02:12Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0044705</oboInOwl:id>
-        <rdfs:label>multi-organism reproductive behavior</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0045297 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0045297">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019098"/>
-        <obo:IAO_0000115>The specific behavior of an organism following mating.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
-        <rdfs:label>post-mating behavior</rdfs:label>
-    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044419"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any process evolved to enable an interaction with an organism of a different species.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:cc</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -22579,66 +22696,23 @@ Date accessed: 2015-04-13</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0048609">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0022414"/>
         <obo:IAO_0000115>The process, occurring above the cellular level, that is pertinent to the reproductive function of a multicellular organism. This includes the integrated processes at the level of tissues and organs.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/27054</obo:IAO_0000233>
         <oboInOwl:hasBroadSynonym>organismal reproductive process</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym>reproductive process in a multicellular organism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0048609</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_drosophila"/>
         <rdfs:label>multicellular organismal reproductive process</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0050789 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050789">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0065007"/>
-        <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of a biological process. Biological processes are regulated by many means; examples include the control of gene expression, protein modification or interaction with a protein or substrate molecule.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasAlternativeId>GO:0050791</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasExactSynonym>regulation of physiological process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0050789</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_aspergillus"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_candida"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gosubset_prok"/>
-        <rdfs:label>regulation of biological process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0050794 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050794">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050789"/>
-        <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of a cellular process, any of those that are carried out at the cellular level, but are not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasAlternativeId>GO:0051244</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasExactSynonym>regulation of cellular physiological process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0050794</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gosubset_prok"/>
-        <rdfs:label>regulation of cellular process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0050896 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050896">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
-        <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus. The process begins with detection of the stimulus and ends with a change in state or activity or the cell or organism.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasAlternativeId>GO:0051869</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasExactSynonym>physiological response to stimulus</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0050896</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gosubset_prok"/>
-        <rdfs:comment>Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.</rdfs:comment>
-        <rdfs:label>response to stimulus</rdfs:label>
-    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0048609"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The process, occurring above the cellular level, that is pertinent to the reproductive function of a multicellular organism. This includes the integrated processes at the level of tissues and organs.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:dph</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:jid</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:tb</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -22646,14 +22720,10 @@ Date accessed: 2015-04-13</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051234">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
-        <obo:IAO_0000111 xml:lang="en">establishment of localization</obo:IAO_0000111>
         <obo:IAO_0000115>Any process that localizes a substance or cellular component. This may occur via movement, tethering or selective degradation.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">The directed movement of a cell, substance or cellular entity, such as a protein complex or organelle, to a specific location.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
         <obo:IAO_0000412>Gene Ontology: http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/ido.owl</obo:IAO_0000412>
         <rdfs:label>establishment of localization</rdfs:label>
-        <rdfs:label xml:lang="en">establishment of localization</rdfs:label>
     </owl:Class>
     
 
@@ -22661,14 +22731,31 @@ Date accessed: 2015-04-13</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/GO_0051701 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051701">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044419"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044403"/>
         <obo:IAO_0000115>An interaction between two organisms living together in more or less intimate association. The term host is used for the larger (macro) of the two members of a symbiosis; the various forms of symbiosis include parasitism, commensalism and mutualism.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/20191</obo:IAO_0000233>
+        <oboInOwl:hasAlternativeId>GO:0044112</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044116</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044117</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044119</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044121</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044123</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044125</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>interaction with host</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>growth of symbiont in host</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>growth of symbiont in host cell</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>growth of symbiont in host organelle</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>growth of symbiont in host vacuole</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0051701</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gosubset_prok"/>
-        <rdfs:label>interaction with host</rdfs:label>
+        <rdfs:label>biological process involved in interaction with host</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0051701"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An interaction between two organisms living together in more or less intimate association. The term host is used for the larger (macro) of the two members of a symbiosis; the various forms of symbiosis include parasitism, commensalism and mutualism.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:cc</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -22679,271 +22766,6 @@ Date accessed: 2015-04-13</obo:IAO_0000119>
         <obo:IAO_0000115>A biological process which involves another organism of the same or different species.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
         <rdfs:label>multi-organism process</rdfs:label>
-        <rdfs:label xml:lang="en">multi-organism process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0051705 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051705">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007610"/>
-        <obo:IAO_0000115>Any process in which an organism has a behavioral effect on another organism of the same or different species.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go/releases/2019-07-01/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasAlternativeId>GO:0023032</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>GO:0044709</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>behavioral interaction between organisms</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>behavioral interaction with other organism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>behavioural interaction between organisms</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>behavioural interaction with other organism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>behavioral signaling</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>behavioral signalling</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0051705</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
-        <rdfs:label>multi-organism behavior</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0051817 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051817">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0035821"/>
-        <obo:IAO_0000115>The process in which an organism effects a change in the structure or processes of a second organism, where the two organisms are in a symbiotic interaction.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasNarrowSynonym>regulation of morphology of other organism during symbiotic interaction</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>regulation of physiological process in other organism during symbiotic interaction</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>regulation of physiology of other organism during symbiotic interaction</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>modification of morphology or physiology of other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>modulation of morphology or physiology of other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>regulation of morphology or physiology of other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>GO:0051817</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gosubset_prok"/>
-        <rdfs:label>modification of morphology or physiology of other organism involved in symbiotic interaction</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0052040 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0052040">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0052248"/>
-        <obo:IAO_0000115>Any process in which an organism modulates the frequency, rate or extent of programmed cell death in the host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasAlternativeId>GO:0052152</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasExactSynonym>modulation of host PCD</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>modulation by symbiont of host non-apoptotic programmed cell death</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0052040</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gosubset_prok"/>
-        <rdfs:label>modulation by symbiont of host programmed cell death</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0052042 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0052042">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0052040"/>
-        <obo:IAO_0000115>Any process in which an organism activates, maintains or increases the frequency, rate or extent of programmed cell death in the host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasAlternativeId>GO:0012504</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>GO:0052044</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>GO:0052045</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>GO:0052153</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>GO:0052397</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>GO:0052400</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasExactSynonym>activation by organism of host programmed cell death</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>activation by organism of programmed cell death in other organism during symbiotic interaction</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>enhancement of host programmed cell death</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>enhancement of host programmed cell death by organism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>induction by organism of programmed cell death in other organism involved in symbiotic interaction</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>induction by symbiont of host programmed cell death</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>upregulation by symbiont of host programmed cell death</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>activation by organism of non-apoptotic programmed cell death in other organism</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>activation by symbiont of host programmed cell death</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>induction by organism of non-apoptotic programmed cell death in other organism during symbiotic interaction</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>positive regulation by symbiont of host non-apoptotic programmed cell death</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>stimulation by symbiont of host programmed cell death</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>induction by organism of programmed cell death in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>induction of non-apoptotic programmed cell death by other organism</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>GO:0052042</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gosubset_prok"/>
-        <rdfs:label>positive regulation by symbiont of host programmed cell death</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0052151 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0052151">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0052501"/>
-        <obo:IAO_0000115>Any process in which an organism activates, maintains or increases the frequency, rate or extent of programmed cell death in the host, where programmed cell death proceeds by apoptosis. The host is defined as the larger of the organisms involved in a symbiotic interaction.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasAlternativeId>GO:0033669</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>GO:0052030</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasExactSynonym>activation by organism of host apoptosis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>activation by organism of host apoptotic programmed cell death</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>induction by organism of host apoptotic programmed cell death</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>induction by symbiont of host apoptosis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>positive regulation by organism of host apoptotic programmed cell death</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>up regulation by organism of host apoptotic programmed cell death</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>up regulation by symbiont of host apoptosis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>up-regulation by organism of host apoptotic programmed cell death</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>up-regulation by symbiont of host apoptosis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>upregulation by organism of host apoptotic programmed cell death</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>upregulation by symbiont of host apoptosis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>activation by symbiont of host apoptosis</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>positive regulation by symbiont of host apoptosis</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>stimulation by symbiont of host apoptosis</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0052151</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gosubset_prok"/>
-        <rdfs:comment>Note that term is to be used to annotate gene products in the symbiont. To annotate host gene products, consider the biological process term &apos;positive regulation of apoptosis ; GO:0043065&apos;.</rdfs:comment>
-        <rdfs:label>positive regulation by symbiont of host apoptotic process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0052248 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0052248">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044531"/>
-        <obo:IAO_0000115>Any process in which an organism modulates the frequency, rate or extent of programmed cell death in a second organism, where the two organisms are in a symbiotic interaction.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasAlternativeId>GO:0052459</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasNarrowSynonym>modulation by organism of non-apoptotic programmed cell death in other organism during symbiotic interaction</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>modulation of programmed cell death in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>GO:0052248</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gosubset_prok"/>
-        <rdfs:label>modulation of programmed cell death in other organism involved in symbiotic interaction</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0052501 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0052501">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0052042"/>
-        <obo:IAO_0000115>Any process in which an organism activates, maintains or increases the frequency, rate or extent of programmed cell death by apoptosis in a second organism, where the two organisms are in a symbiotic interaction.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasAlternativeId>GO:0052388</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasExactSynonym>induction by organism of apoptosis in other organism involved in symbiotic interaction</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>activation by organism of apoptosis in other organism during symbiotic interaction</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>positive regulation by organism of apoptosis in other organism involved in symbiotic interaction</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>positive regulation by organism of apoptotic process in other organism involved in symbiotic interaction</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>stimulation by organism of apoptosis in other organism during symbiotic interaction</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>activation by organism of apoptotic programmed cell death in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>induction by organism of apoptosis in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>induction by organism of apoptotic programmed cell death in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>positive regulation by organism of apoptosis in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>positive regulation by organism of apoptotic programmed cell death in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>up regulation by organism of apoptosis in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>up-regulation by organism of apoptosis in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>upregulation by organism of apoptosis in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>GO:0052501</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gosubset_prok"/>
-        <rdfs:label>positive regulation by organism of apoptotic process in other organism involved in symbiotic interaction</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0060139 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0060139">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0052151"/>
-        <obo:IAO_0000115>Any viral process that activates or increases the frequency, rate or extent of cell death by apoptotic process.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasNarrowSynonym>positive regulation of apoptosis by virus</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0060139</oboInOwl:id>
-        <rdfs:label>positive regulation of apoptotic process by virus</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0060153 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0060153">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019054"/>
-        <obo:IAO_0000115>Any viral process that modulates the rate or extent of progression through the cell cycle.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>VZ:1636</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>modulation of host cell cycle by virus</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>regulation by virus of host cell cycle</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>regulation of host cell cycle by virus</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>viral process regulating host cell cycle</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0060153</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_virus"/>
-        <rdfs:label>modulation by virus of host cell cycle</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0060403 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0060403">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0018991"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0045297"/>
-        <obo:IAO_0000115>The deposition of eggs, either fertilized or not, upon a surface or into a medium, following mating.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
-        <obo:IAO_0000412>http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <rdfs:label>post-mating oviposition</rdfs:label>
-        <rdfs:label xml:lang="en">post-mating oviposition</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0065007 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0065007">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
-        <obo:IAO_0000115>Any process that modulates a measurable attribute of any biological process, quality or function.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasBroadSynonym>regulation</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0065007</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gosubset_prok"/>
-        <rdfs:label>biological regulation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0065008 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0065008">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0065007"/>
-        <obo:IAO_0000115>Any process that modulates a qualitative or quantitative trait of a biological quality. A biological quality is a measurable attribute of an organism or part of an organism, such as size, mass, shape, color, etc.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/go.owl</obo:IAO_0000412>
-        <oboInOwl:hasExactSynonym>regulation of biological attribute</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>regulation of biological characteristic</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0065008</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gosubset_prok"/>
-        <rdfs:label>regulation of biological quality</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0071684 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071684">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
-        <obo:IAO_0000412>http://purl.org/obo/owl/gene_ontology</obo:IAO_0000412>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">organism emergence from protective structure</rdfs:label>
     </owl:Class>
     
 
@@ -38304,6 +38126,7 @@ No imports</obo:IAO_0000115>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000111>planned process</obo:IAO_0000111>
         <obo:IAO_0000111 xml:lang="en">planned process</obo:IAO_0000111>
         <obo:IAO_0000112>Injecting mice with a vaccine in order to test its efficacy</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
@@ -38312,6 +38135,8 @@ No imports</obo:IAO_0000115>
         <obo:IAO_0000116>&apos;Plan&apos; includes a future direction sense. That can be problematic if plans are changed during their execution. There are however implicit contingencies for protocols that an agent has in his mind that can be considered part of the plan, even if the agent didn&apos;t have them in mind before. Therefore, a planned process can diverge from what the agent would have said the plan was before executing it, by adjusting to problems encountered during execution (e.g. choosing another reagent with equivalent properties, if the originally planned one has run out.)</obo:IAO_0000116>
         <obo:IAO_0000116>We are only considering successfully completed planned processes. A plan may be modified, and details added during execution. For a given planned process, the associated realized plan specification is the one encompassing all changes made during execution. This means that all processes in which an agent acts towards achieving some 
   objectives is a planned process.</obo:IAO_0000116>
+        <obo:IAO_0000116>We are only considering successfully completed planned processes. A plan may be modified, and details added during execution. For a given planned process, the associated realized plan specification is the one encompassing all changes made during execution. This means that all processes in which an agent acts towards achieving some 
+objectives is a planned process.</obo:IAO_0000116>
         <obo:IAO_0000117>Bjoern Peters</obo:IAO_0000117>
         <obo:IAO_0000119>branch derived</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
@@ -39584,7 +39409,13 @@ See vaccination and antiviral treatment.
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">An object aggregate of organisms.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">This term refers to a real population, such as the population of Allegheny County or of the U.S.   As a set, it could null (size zero), for example the population of people in Allegheny County older than 130 years of age.  It could also be a single organism. The population is not restricted to members of one species.</obo:IAO_0000600>
         <rdfs:comment xml:lang="en">Any arbitrary collection of organisms.  They need not be of the same taxonomic class.  </rdfs:comment>
@@ -40325,7 +40156,7 @@ Ditto for its current descendants.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PCO_0000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000000">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000022"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
         <obo:IAO_0000112 xml:lang="en">Examples include: population, community, species (meaning the collection of organisms that makes up a species, not the taxonomic rank), and family.</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">A material entity that consists of two or more organisms, viruses, or viroids.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">group of organisms</obo:IAO_0000118>
@@ -41847,13 +41678,13 @@ This interpretation is *not* the same as an at-all-times relation</obo:IAO_00001
     <rdf:Description rdf:about="urn:swrl:var#D">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#mf">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
     <rdf:Description rdf:about="urn:swrl:var#eff">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl:var#in">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl:var#mf">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl:var#mf2">
@@ -42534,9 +42365,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#eff"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#in"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002025"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#mf"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#eff"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -42545,9 +42376,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002025"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#mf"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#eff"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#eff"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#in"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -42579,9 +42410,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002025"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#mf"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#in"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#eff"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -42590,9 +42421,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002025"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#mf"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#eff"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#in"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -42624,9 +42455,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002025"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002578"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#mf"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#eff"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#mf2"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -42635,9 +42466,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002578"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002025"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#mf"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#mf2"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#eff"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -42669,9 +42500,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002629"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002025"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#mf"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#mf2"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#eff"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -42680,9 +42511,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002025"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002629"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#mf"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#eff"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#mf2"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -42714,9 +42545,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002025"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002630"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#mf"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#eff"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#mf2"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -42725,9 +42556,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002630"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002025"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#mf"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#mf2"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#eff"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -42759,7 +42590,7 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002404"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
                         <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
                     </rdf:Description>
@@ -42770,7 +42601,7 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002404"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
                                 <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
                             </rdf:Description>
@@ -42787,7 +42618,7 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -42797,7 +42628,7 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                 <swrl:classPredicate rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -42815,7 +42646,7 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
                         <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
                     </rdf:Description>
@@ -42826,7 +42657,7 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
                                 <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
                             </rdf:Description>
@@ -42843,7 +42674,7 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -42853,7 +42684,7 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                 <swrl:classPredicate rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -42870,7 +42701,7 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0012011"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
                         <swrl:argument2 rdf:resource="urn:swrl:var#q"/>
                     </rdf:Description>
@@ -42881,7 +42712,7 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0012011"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
                                 <swrl:argument2 rdf:resource="urn:swrl:var#q"/>
                             </rdf:Description>
@@ -42914,9 +42745,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -42925,9 +42756,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -42958,9 +42789,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0019002"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -42969,9 +42800,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0019002"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -43002,9 +42833,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -43013,9 +42844,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -43046,9 +42877,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002264"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -43057,9 +42888,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002264"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -43091,8 +42922,8 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#q"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#u"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#q"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -43102,8 +42933,8 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                 <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#q"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#q"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#u"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -43130,5 +42961,5 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
 
 
 
-<!-- Generated by the OWL API (version 4.5.26) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
 
