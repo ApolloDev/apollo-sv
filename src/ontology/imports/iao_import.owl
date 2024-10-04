@@ -1,4 +1,4 @@
-Prefix(:=<http://purl.obolibrary.org/obo/apollo_sv/imports/pno_import.owl#>)
+Prefix(:=<http://purl.obolibrary.org/obo/apollo_sv/imports/iao_import.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,10 +6,10 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<http://purl.obolibrary.org/obo/apollo_sv/imports/pno_import.owl>
-<http://purl.obolibrary.org/obo/apollo_sv/releases/2024-08-15/imports/pno_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/iao/pno/dev/pno.owl>)
-Annotation(owl:versionInfo "2024-08-15")
+Ontology(<http://purl.obolibrary.org/obo/apollo_sv/imports/iao_import.owl>
+<http://purl.obolibrary.org/obo/apollo_sv/releases/2024-08-17/imports/iao_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl>)
+Annotation(owl:versionInfo "2024-08-17")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/APOLLO_SV_00000008>))
 Declaration(Class(<http://purl.obolibrary.org/obo/APOLLO_SV_00000032>))
@@ -52,12 +52,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000146>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000147>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000148>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000182>))
-Declaration(Class(<http://purl.obolibrary.org/obo/FMA_49443>))
-Declaration(Class(<http://purl.obolibrary.org/obo/FMA_55457>))
-Declaration(Class(<http://purl.obolibrary.org/obo/FMA_64854>))
-Declaration(Class(<http://purl.obolibrary.org/obo/FMA_64989>))
-Declaration(Class(<http://purl.obolibrary.org/obo/FMA_67135>))
-Declaration(Class(<http://purl.obolibrary.org/obo/FMA_67165>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000005>))
@@ -240,16 +234,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000707>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000708>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020001>))
-Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020002>))
-Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020003>))
-Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020004>))
-Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020005>))
-Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020006>))
-Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020007>))
-Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020008>))
-Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020009>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020010>))
-Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020011>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020015>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020016>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0020017>))
@@ -275,18 +260,15 @@ Declaration(Class(<http://purl.obolibrary.org/obo/IAO_8000017>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_8000018>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_8000019>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_8000020>))
-Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_9606>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0000011>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0000066>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0000471>))
-Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0100026>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0200000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0500000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000051>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000122>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000125>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001018>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001025>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001241>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000002>))
@@ -316,10 +298,6 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000418>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000419>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000581>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000583>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0020012>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0020013>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0020014>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0020018>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/OBI_0000293>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/OBI_0000295>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/OBI_0000299>))
@@ -409,7 +387,6 @@ Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000700>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0006011>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0006012>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0010000>))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0020019>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0100001>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/OMO_0001001>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/OMO_0002000>))
@@ -422,7 +399,6 @@ Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/description>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/format>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/identifier>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/language>))
-Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/license>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/member>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/publisher>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/relation>))
@@ -435,12 +411,9 @@ Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#created_by>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#creation_date>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym>))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDefinition>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym>))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym>))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#inSubset>))
 Declaration(AnnotationProperty(rdfs:comment))
 Declaration(AnnotationProperty(rdfs:isDefinedBy))
 Declaration(AnnotationProperty(rdfs:label))
@@ -475,9 +448,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0000111> "PERSON:Daniel Schober"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0000111> "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en)
 AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/iao.owl>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000111> "editor preferred label"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000111> "editor preferred term"@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000111> "editor preferred term")
 
 # Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000112> (example of usage)
 
@@ -815,12 +786,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000600> <http://purl.ob
 AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0010000> <http://purl.obolibrary.org/obo/iao.owl>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0010000> "has axiom label"@en)
 
-# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0020019> (IUI)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/IAO_0020019> "instance unique identifier"@en)
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020019> "An annotation to be applied to individuals only.  Value is a GUID/UUID for use in a referent tracking system."@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020019> "IUI")
-
 # Annotation Property: <http://purl.obolibrary.org/obo/IAO_0100001> (term replaced by)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/IAO_0100001> "term replaced by"@en)
@@ -904,10 +869,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://www.gen
 AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "has related synonym"@en)
 AnnotationAssertion(rdfs:seeAlso <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "https://github.com/information-artifact-ontology/ontology-metadata/issues/21")
 SubAnnotationPropertyOf(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/IAO_0000118>)
-
-# Annotation Property: rdfs:label (label)
-
-AnnotationAssertion(rdfs:label rdfs:label "label")
 
 
 ############################
@@ -1240,43 +1201,6 @@ SubObjectPropertyOf(<http://purl.obolibrary.org/obo/IAO_0000583> <http://purl.ob
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/IAO_0000583> <http://purl.obolibrary.org/obo/IAO_0000582>)
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/IAO_0000583> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000109> ObjectComplementOf(<http://purl.obolibrary.org/obo/IAO_0000416>)))
 
-# Object Property: <http://purl.obolibrary.org/obo/IAO_0020012> (obsolete_designates)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020012> "x designates y, if for any given group of language users, x is an information content entity, is about y, and represents y in a linguistic context.."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000231> <http://purl.obolibrary.org/obo/IAO_0020012> <http://purl.obolibrary.org/obo/IAO_0000228>)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <http://purl.obolibrary.org/obo/IAO_0020012> <http://purl.obolibrary.org/obo/IAO_0000219>)
-AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/IAO_0020012> "Mathias Brochhausen")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020012> "obsolete_designates"@en)
-AnnotationAssertion(owl:deprecated <http://purl.obolibrary.org/obo/IAO_0020012> "true"^^xsd:boolean)
-SubObjectPropertyOf(<http://purl.obolibrary.org/obo/IAO_0020012> <http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty>)
-
-# Object Property: <http://purl.obolibrary.org/obo/IAO_0020013> (is_borrowed_reference_to)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020013> "x is_borrowed_reference_for y, if x is a proper name that is used to refer to one individual among a specific group after the dubbing process took place."@en)
-AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/IAO_0020013> "Mathias Brochhausen")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020013> "is_borrowed_reference_to"@en)
-SubObjectPropertyOf(<http://purl.obolibrary.org/obo/IAO_0020013> owl:topObjectProperty)
-AsymmetricObjectProperty(<http://purl.obolibrary.org/obo/IAO_0020013>)
-IrreflexiveObjectProperty(<http://purl.obolibrary.org/obo/IAO_0020013>)
-ObjectPropertyDomain(<http://purl.obolibrary.org/obo/IAO_0020013> <http://purl.obolibrary.org/obo/IAO_0020000>)
-ObjectPropertyRange(<http://purl.obolibrary.org/obo/IAO_0020013> <http://purl.obolibrary.org/obo/BFO_0000001>)
-
-# Object Property: <http://purl.obolibrary.org/obo/IAO_0020014> (is_fixing_reference_to)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020014> "x is_fixed_reference_for y, if x is an utterance or graphemes concretized as writing quality inhering in some independent continuant that is used to single out one individual and refer to the latter among a specific group after the."@en)
-AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/IAO_0020014> "Mathias Brochhausen")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020014> "is_fixing_reference_to"@en)
-AsymmetricObjectProperty(<http://purl.obolibrary.org/obo/IAO_0020014>)
-IrreflexiveObjectProperty(<http://purl.obolibrary.org/obo/IAO_0020014>)
-
-# Object Property: <http://purl.obolibrary.org/obo/IAO_0020018> (is designated by)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020018> "p1 is designated by p2, if p2 is an information content entity that represents p1 in a linguistic context."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020018> "Mathias Brochhausen")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020018> "is designated by"@en)
-AsymmetricObjectProperty(<http://purl.obolibrary.org/obo/IAO_0020018>)
-IrreflexiveObjectProperty(<http://purl.obolibrary.org/obo/IAO_0020018>)
-
 # Object Property: <http://purl.obolibrary.org/obo/OBI_0000293> (has_specified_input)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/OBI_0000293> "has_specified_input"@en)
@@ -1313,7 +1237,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.ob
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OBI_0000299> "has_specified_output"@en)
 EquivalentObjectProperties(<http://purl.obolibrary.org/obo/OBI_0000299> ObjectInverseOf(<http://purl.obolibrary.org/obo/OBI_0000312>))
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/OBI_0000299> <http://purl.obolibrary.org/obo/RO_0000057>)
-SubObjectPropertyOf(<http://purl.obolibrary.org/obo/OBI_0000299> owl:topObjectProperty)
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/OBI_0000299> <http://purl.obolibrary.org/obo/OBI_0000011>)
 
 # Object Property: <http://purl.obolibrary.org/obo/OBI_0000312> (is_specified_output_of)
@@ -1326,8 +1249,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/OBI_0000312> "PERSON:Bjoern Peters")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/OBI_0000312> <http://purl.obolibrary.org/obo/obi.owl>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OBI_0000312> "is_specified_output_of"@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OBI_0000312> "is_specified_output_of")
-EquivalentObjectProperties(<http://purl.obolibrary.org/obo/OBI_0000312> ObjectInverseOf(<http://purl.obolibrary.org/obo/OBI_0000299>))
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/OBI_0000312> <http://purl.obolibrary.org/obo/RO_0000056>)
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/OBI_0000312> <http://purl.obolibrary.org/obo/OBI_0000011>)
 
@@ -1344,7 +1265,7 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000052> "char
 InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/RO_0000053>)
 FunctionalObjectProperty(<http://purl.obolibrary.org/obo/RO_0000052>)
 
-# Object Property: <http://purl.obolibrary.org/obo/RO_0000053> (bearer_of)
+# Object Property: <http://purl.obolibrary.org/obo/RO_0000053> (has characteristic)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/RO_0000053> "bearer of"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0000053> "this apple is bearer of this red color"@en)
@@ -1354,7 +1275,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0000053> "bearer_of"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0000053> "is bearer of"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/RO_0001900> <http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/RO_0001901>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000053> "bearer_of"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000053> "has characteristic"@en)
 InverseFunctionalObjectProperty(<http://purl.obolibrary.org/obo/RO_0000053>)
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/BFO_0000020>)
@@ -1372,7 +1292,7 @@ InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/BFO_0000002>)
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/BFO_0000003>)
 
-# Object Property: <http://purl.obolibrary.org/obo/RO_0000057> (has_participant)
+# Object Property: <http://purl.obolibrary.org/obo/RO_0000057> (has participant)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/RO_0000057> "has participant"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0000057> "this blood coagulation has participant this blood clot"@en)
@@ -1383,32 +1303,25 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0000057> "has_participant"@en)
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/RO_0000057> "http://www.obofoundry.org/ro/#OBO_REL:has_participant")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000057> "has participant"@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000057> "has_participant")
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/BFO_0000003>)
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/BFO_0000002>)
 
 # Object Property: <http://purl.obolibrary.org/obo/RO_0000058> (is concretized as)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/RO_0000058> "is concretized as"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0000058> "A journal article is an information artifact that inheres in some number of printed journals. For each copy of the printed journal there is some quality that carries the journal article, such as a pattern of ink. The journal article (a generically dependent continuant) is concretized as the quality (a specifically dependent continuant), and both depend on that copy of the printed journal (an independent continuant)."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0000058> "An investigator reads a protocol and forms a plan to carry out an assay. The plan is a realizable entity (a specifically dependent continuant) that concretizes the protocol (a generically dependent continuant), and both depend on the investigator (an independent continuant). The plan is then realized by the assay (a process)."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0000058> "A relationship between a generically dependent continuant and a specifically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. A generically dependent continuant may be concretized as multiple specifically dependent continuants."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/RO_0000058> "http://purl.obolibrary.org/obo/obi.owl")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000058> "is concretized as"@en)
-SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0000058> owl:topObjectProperty)
 InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0000058> <http://purl.obolibrary.org/obo/RO_0000059>)
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0000058> <http://purl.obolibrary.org/obo/BFO_0000031>)
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0000058> <http://purl.obolibrary.org/obo/BFO_0000020>)
 
 # Object Property: <http://purl.obolibrary.org/obo/RO_0000059> (concretizes)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/RO_0000059> "concretizes"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0000059> "A journal article is an information artifact that inheres in some number of printed journals. For each copy of the printed journal there is some quality that carries the journal article, such as a pattern of ink. The quality (a specifically dependent continuant) concretizes the journal article (a generically dependent continuant), and both depend on that copy of the printed journal (an independent continuant)."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0000059> "An investigator reads a protocol and forms a plan to carry out an assay. The plan is a realizable entity (a specifically dependent continuant) that concretizes the protocol (a generically dependent continuant), and both depend on the investigator (an independent continuant). The plan is then realized by the assay (a process)."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0000059> "A relationship between a specifically dependent continuant and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. Multiple specifically dependent continuants can concretize the same generically dependent continuant."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/RO_0000059> "http://purl.obolibrary.org/obo/obi.owl")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000059> "concretizes"@en)
-SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0000059> owl:topObjectProperty)
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0000059> <http://purl.obolibrary.org/obo/BFO_0000020>)
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0000059> <http://purl.obolibrary.org/obo/BFO_0000031>)
 
@@ -2304,36 +2217,6 @@ AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/IAO_0010000> <htt
 AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/BFO_0000182> <http://purl.obolibrary.org/obo/bfo.owl>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000182> "history"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000182> <http://purl.obolibrary.org/obo/BFO_0000015>)
-
-# Class: <http://purl.obolibrary.org/obo/FMA_49443> (Anatomical cluster)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FMA_49443> "Anatomical cluster"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/FMA_49443> <http://purl.obolibrary.org/obo/FMA_67135>)
-
-# Class: <http://purl.obolibrary.org/obo/FMA_55457> (vocal fold)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FMA_55457> "vocal fold"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/FMA_55457> <http://purl.obolibrary.org/obo/FMA_64854>)
-
-# Class: <http://purl.obolibrary.org/obo/FMA_64854> (Subdivision of larynx)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FMA_64854> "Subdivision of larynx"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/FMA_64854> <http://purl.obolibrary.org/obo/FMA_64989>)
-
-# Class: <http://purl.obolibrary.org/obo/FMA_64989> (Heterogeneous cluster)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FMA_64989> "Heterogeneous cluster"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/FMA_64989> <http://purl.obolibrary.org/obo/FMA_49443>)
-
-# Class: <http://purl.obolibrary.org/obo/FMA_67135> (Anatomical structure)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FMA_67135> "Anatomical structure"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/FMA_67135> <http://purl.obolibrary.org/obo/FMA_67165>)
-
-# Class: <http://purl.obolibrary.org/obo/FMA_67165> (Material anatomical entity)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FMA_67165> "Material anatomical entity"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/FMA_67165> <http://purl.obolibrary.org/obo/BFO_0000040>)
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0000001> (conditional specification)
 
@@ -4700,24 +4583,20 @@ SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000708> <http://purl.obolibrary.
 # Class: <http://purl.obolibrary.org/obo/IAO_0020000> (identifier)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/IAO_0020000> "identifier"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020000> "An identifier is an information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020000> "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020000> "Justin Whorton"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020000> "Mathias Brochhausen"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020000> "Mathias Brochhausen")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0020000> "proper name"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/IAO_0020000> "https://github.com/information-artifact-ontology/IAO/issues/237"@en)
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/IAO_0020000> "Mathias Brochhausen")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020000> "Sep 29, 2016: The current definition has been amended from the previous version: \"A proper name is an information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity.\" to more accuratly reflect the necessary and sufficient condition on the class. (MB)"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020000> "identifier"@en)
 EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0020000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000030> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000219> <http://purl.obolibrary.org/obo/BFO_0000001>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> <http://purl.obolibrary.org/obo/IAO_0020010>)))
-EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0020000> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000219> <http://purl.obolibrary.org/obo/BFO_0000001>) ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> <http://purl.obolibrary.org/obo/IAO_0020010>)))
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020000> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0020001> (grapheme)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/IAO_0020001> "alphabetic letters, Chinese characters, numerical digits, punctuation marks, and the individual symbols of any of the world's writing systems"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020001> "A grapheme  is an information content entity that is a fundamental unit in a written language. "@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020001> "An information content entity that is a fundamental unit in a written language."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020001> "Justin Whorton"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0020001> "http://en.wikipedia.org/wiki/Grapheme")
@@ -4727,148 +4606,61 @@ AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020001> "G
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020001> "grapheme"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020001> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
-# Class: <http://purl.obolibrary.org/obo/IAO_0020002> (utterance)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020002> "An utterance is an information content entity that is a complete unit of speech in spoken language. "@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020002> "Mathias Brochhausen")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0020002> "Wikipedia: http://en.wikipedia.org/wiki/Utterance")
-AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/IAO_0020002> "Mathias Brochhausen")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020002> "utterance"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020002> <http://purl.obolibrary.org/obo/IAO_0000030>)
-
-# Class: <http://purl.obolibrary.org/obo/IAO_0020003> (mechanical wave quality)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020003> "An attributive collection of qualities inhering in energy when transported through a medium in a wave."@en)
-AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/IAO_0020003> "Mathias Brochhausen")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020003> "mechanical wave quality"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020003> <http://purl.obolibrary.org/obo/BFO_0000019>)
-
-# Class: <http://purl.obolibrary.org/obo/IAO_0020004> (writing quality)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020004> "is a quality that is the concretization of graphemes and inheres in a material object."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020004> "Mathias Brochhausen")
-AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/IAO_0020004> "Mathias Brochhausen")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020004> "writing quality"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020004> <http://purl.obolibrary.org/obo/BFO_0000019>)
-
-# Class: <http://purl.obolibrary.org/obo/IAO_0020005> (writing bearer)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/IAO_0020005> "pieces of paper, tables, walls, floors, driveways, highway signs, computer screens, skin, tablets of clay, rocks, sheets of metal (license plates), sheets of papyrus, etc.   clouds of smoke in skywriting,"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020005> "is a material information bearer that bears the concretization of graphemes."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020005> "Mathias Brochhausen")
-AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/IAO_0020005> "Mathias Brochhausen")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020005> "writing bearer")
-EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0020005> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000178> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000059> <http://purl.obolibrary.org/obo/IAO_0020001>))))
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020005> <http://purl.obolibrary.org/obo/IAO_0000178>)
-
-# Class: <http://purl.obolibrary.org/obo/IAO_0020006> (portion of energy)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020006> "portion of energy"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020006> <http://purl.obolibrary.org/obo/BFO_0000004>)
-
-# Class: <http://purl.obolibrary.org/obo/IAO_0020007> (sound energy)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020007> "Energy that is transported in a sound wave."@en)
-AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/IAO_0020007> "Mathias Brochhausen")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020007> "sound energy"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0020007> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0020006> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/IAO_0020003>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0020009> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000057> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000040> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001025>)))))))
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020007> <http://purl.obolibrary.org/obo/IAO_0020006>)
-
-# Class: <http://purl.obolibrary.org/obo/IAO_0020008> (utterance energy)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020008> "Sound energy bearing the concretization of an utterance and being the output of an uttering process. "@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020008> "utterance energy"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0020008> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0020007> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000059> <http://purl.obolibrary.org/obo/IAO_0020002>)) ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> <http://purl.obolibrary.org/obo/IAO_0020011>)))
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020008> <http://purl.obolibrary.org/obo/IAO_0020007>)
-
-# Class: <http://purl.obolibrary.org/obo/IAO_0020009> (oscillating)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020009> "Oscillating is a processual that shows repetitive variation, typically in time, of some measured quality about a central value (often a point of equilibrium) or between two or more different states."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0020009> "http://en.wikipedia.org/wiki/Oscillation")
-AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/IAO_0020009> "Mathias Brochhausen")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020009> "oscillating"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020009> <http://purl.obolibrary.org/obo/BFO_0000015>)
-
 # Class: <http://purl.obolibrary.org/obo/IAO_0020010> (identifier creating process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020010> "A dubbing process is a planned process that provides a reference to an individual entity shared by a group of subscribers to refer to that individual entity."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020010> "A planned process that provides a reference to an individual entity shared by a group of subscribers to refer to that individual entity."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020010> "Justin Whorton"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020010> "Mathias Brochhausen"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020010> "Mathias Brochhausen")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0020010> "dubbing process"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0020010> "naming"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/IAO_0020010> "https://github.com/information-artifact-ontology/IAO/issues/237"@en)
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/IAO_0020010> "Mathias Brochhausen")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020010> "identifier creating process"@en)
 EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0020010> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000011> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000299> <http://purl.obolibrary.org/obo/IAO_0020000>)))
-EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0020010> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000299> <http://purl.obolibrary.org/obo/IAO_0020000>))
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020010> <http://purl.obolibrary.org/obo/OBI_0000011>)
-
-# Class: <http://purl.obolibrary.org/obo/IAO_0020011> (utterance process)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020011> "is a planned process of making speech sounds which may or may not have an actual language involved. "@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020011> "Mathias Brochhausen")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0020011> "http://en.wiktionary.org/wiki/utter"@en)
-AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/IAO_0020011> "Mathias Brochhausen")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020011> "utterance process"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0020011> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000299> <http://purl.obolibrary.org/obo/IAO_0020008>))
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020011> <http://purl.obolibrary.org/obo/OBI_0000011>)
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0020015> (personal name)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020015> "A personal name is a proper name identifying an individual person."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020015> "An identifier referring to an individual entity that is ascribed personhood by the user of the identifier."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020015> "Justin Whorton"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020015> "Mathias Brochhausen"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020015> "Mathias Brochhausen")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0020015> "http://en.wikipedia.org/wiki/Personal_name")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/IAO_0020015> "https://github.com/information-artifact-ontology/IAO/issues/237"@en)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020015> "Personal names \"today usually comprises a given name bestowed at birth or at a young age plus a surname. It is nearly universal for a human to have a name; except in rare cases, for example feral children growing up in isolation, or infants orphaned by natural disaster for whom no written record survives.[citation needed] The Convention on the Rights of the Child specifies that a child has the right from birth to a name. Certain isolated tribes, such as the Machiguenga of the Amazon, also lack personal names.\" (http://en.wikipedia.org/wiki/Personal_name)"@en)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020015> "Personal names to not include names of fictional characters, e.g. Sherlock Holmes."@en)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020015> "Sep 29, 2016: The comment that including the wikipedia definition of personal name is not to be interpreted in a way that restricts this class to only contain strings of letters. A numerical or alphanumerical identifier that denotes a human is being is a personal name, too. (MB)"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020015> "personal name"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0020015> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0020000> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000219> <http://purl.obolibrary.org/obo/NCBITaxon_9606>)))
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020015> <http://purl.obolibrary.org/obo/IAO_0020000>)
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0020016> (given name)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020016> "A given name, in Western contexts often referred to as a first name, is a personal name that specifies and differentiates between members of a group of individuals, especially in a family, all of whose members usually share the same family name (surname). A given name is purposefully given, usually by a child's parents at or near birth, in contrast to an inherited one such as a family name"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020016> "A personal name that specifies and differentiates between members of a group of individuals, especially in a family, all of whose members usually share the same family name (surname). A given name is purposefully given, usually by a child's parents at or near birth, in contrast to an inherited one such as a family name"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020016> "Justin Whorton"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020016> "Mathias Brochhausen"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020016> "Mathias Brochhausen")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0020016> "first name"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0020016> "http://en.wikipedia.org/wiki/Given_name")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/IAO_0020016> "https://github.com/information-artifact-ontology/IAO/issues/237"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020016> "given name"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020016> <http://purl.obolibrary.org/obo/IAO_0020015>)
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020016> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/IAO_0020015>))
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0020017> (family name)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020017> "A family name (in Western contexts often referred to as a surname or last name) is typically a part of a person's name which has been passed, according to law or custom, from one or both parents to their children."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020017> "An identifier that is typically a part of a person's name which has been passed, according to law or custom, from one or both parents to their children."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020017> "Justin Whorton"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020017> "Mathias Brochhausen"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020017> "Mathias Brochhausen")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0020017> "last name"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0020017> "surname"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/IAO_0020017> "http://en.wikipedia.org/wiki/Family_name")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/IAO_0020017> "https://github.com/information-artifact-ontology/IAO/issues/237"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020017> "family name"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020017> <http://purl.obolibrary.org/obo/IAO_0020000>)
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020017> <http://purl.obolibrary.org/obo/IAO_0020015>)
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020017> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/IAO_0020015>))
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0020020> (code set)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020020> "An information content entity that is a collection of identifiers that has been created to identify and annotate core ideas of a specified domain, and where the intention of its creators is that the identifiers have a one-to-one correspondence with entities in reality outside the aggregate."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0020020> "An information content entity that is a collection of other information content entities that has been created to identify or annotate things in a specified domain, and where the intention of its creators is that the collection has a one-to-one correspondence with those things."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020020> "Alan Ruttenberg"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020020> "Justin Whorton"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020020> "Mathias Brochhausen"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0020020> "Mathias Brochhausen")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0020020> "code map"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0020020> "code system"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/IAO_0020020> "codeset"@en)
@@ -4883,18 +4675,12 @@ AnnotationAssertion(<http://purl.org/dc/elements/1.1/contributor> <http://purl.o
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020020> "Code sets might include non-entities/things (e.g. missing thumbs)."@en)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020020> "Does not imply absence vs. presence of any taxonomy."@en)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020020> "Does not imply that aggregated entities denote particulars, universals, or defined classes (a.k.a. attributive collections) or even that they denote only one of these three types of entities."@en)
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020020> "Does not imply that identifiers denote particulars, universals, or defined classes (a.k.a. attributive collections) or even that they denote only one of these three types of entities (e.g., SNOMED and even various OBO ontologies have identifiers that identify entities in all three categories)."@en)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020020> "Each aggregated entity is often (but not necessarily) associated with a text string—variously called a “description,” “name,” “title,” or “label”—that helps humans reach the target of denotation.
 
 When there is no such string, it is almost always because the entities take the form of human language words. For example, a “sex” or “gender” code set could contain “MALE” and “FEMALE,” or even “M” and “F” (by convention, we understand what these mean)."@en)
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020020> "Each identifier is often (but not necessarily) associated with a text string—variously called a “description,” “name,” “title,” or “label”—that helps humans reach the target of denotation.
-
-When there is no such string, it is almost always because the identifiers take the form of human language words. For example, a “sex” or “gender” code set could have identifiers “MALE” and “FEMALE,” or even “M” and “F” (by convention, we understand what these mean)."@en)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020020> "For National Drug Codes (NDCs) and similar code sets, there doesn’t even have to be a single, fully-concretized copy somewhere (for example, for NDCs there is no centralized database or repository where they all live as one instance of concretization of code set). The code set can be “distributively” concretized. This seems like an unusual exception, but it also likely applies to Universal Product Codes (UPCs) and their follow on Global Trade Item Numbers (GTINs)."@en)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020020> "For each given domain, there can potentially exist multiple code sets. The multiplicity of code sets is partially due to the different specific purposes of those code sets."@en)
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020020> "Many code sets are created for a specific purpose in addition to merely identifying and annotating core ideas of a specified domain."@en)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020020> "Many code sets are created for a specific purpose in addition to merely identifying or annotating core ideas of a specified domain."@en)
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020020> "The identifiers do not denote each other."@en)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0020020> "The information content entities do not denote each other."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0020020> "code set"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_0020020> <http://purl.obolibrary.org/obo/IAO_0000030>)
@@ -5082,14 +4868,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.ob
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_8000020> "EL++ ontology module"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/IAO_8000020> <http://purl.obolibrary.org/obo/IAO_8000019>)
 
-# Class: <http://purl.obolibrary.org/obo/NCBITaxon_9606> (Homo sapiens)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/NCBITaxon_9606> "Homo sapiens"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/NCBITaxon_9606> "human being")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/NCBITaxon_9606> <http://purl.obolibrary.org/obo/ncbitaxon.owl>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/NCBITaxon_9606> "Homo sapiens"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/NCBITaxon_9606> <http://purl.obolibrary.org/obo/OBI_0100026>)
-
 # Class: <http://purl.obolibrary.org/obo/OBI_0000011> (planned process)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/OBI_0000011> "planned process"@en)
@@ -5113,24 +4891,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/OBI_0000471> <http://purl.obolibrary.org/obo/obi.owl>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OBI_0000471> "study design execution")
 SubClassOf(<http://purl.obolibrary.org/obo/OBI_0000471> <http://purl.obolibrary.org/obo/OBI_0000011>)
-
-# Class: <http://purl.obolibrary.org/obo/OBI_0100026> (organism)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/OBI_0100026> "organism"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/OBI_0100026> "animal"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/OBI_0100026> "fungus"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/OBI_0100026> "plant"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/OBI_0100026> "virus"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/OBI_0100026> <http://purl.obolibrary.org/obo/IAO_0000121>)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OBI_0100026> "A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/OBI_0100026> "10/21/09: This is a placeholder term, that should ideally be imported from the NCBI taxonomy, but the high level hierarchy there does not suit our needs (includes plasmids and 'other organisms')")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/OBI_0100026> "13-02-2009:
-OBI doesn't take position as to  when an organism starts or ends being an organism - e.g. sperm, foetus.
-This issue is outside the scope of OBI.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/OBI_0100026> "GROUP: OBI Biomaterial Branch")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/OBI_0100026> "WEB: http://en.wikipedia.org/wiki/Organism"@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OBI_0100026> "organism"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/OBI_0100026> <http://purl.obolibrary.org/obo/BFO_0000040>)
 
 # Class: <http://purl.obolibrary.org/obo/OBI_0200000> (data transformation)
 
@@ -5179,14 +4939,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/PATO_0001018> <http://purl.obolibrary.org/obo/pato.owl>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0001018> "physical quality")
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001018> <http://purl.obolibrary.org/obo/PATO_0001241>)
-
-# Class: <http://purl.obolibrary.org/obo/PATO_0001025> (pressure)
-
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDefinition> <http://purl.obolibrary.org/obo/PATO_0001025> _:genid2147484058)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PATO_0001025> "quality")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/PATO_0001025> <http://purl.org/obo/owl/obo#attribute_slim>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0001025> "pressure"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001025> <http://purl.obolibrary.org/obo/BFO_0000019>)
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0001241> (physical object quality)
 
