@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2024-08-15
+data-version: releases/2024-12-24
 subsetdef: attribute_slim ""
 subsetdef: common_anatomy ""
 subsetdef: gocheck_do_not_annotate ""
@@ -48,11 +48,11 @@ property_value: dc:contributor "Mike Wagner" xsd:string
 property_value: dc:contributor "Shawn T. Brown" xsd:string
 property_value: dc:contributor "William R. Hogan" xsd:string
 property_value: dc:creator "Mathias Brochhausen" xsd:string
-property_value: dc:title "Apollo Structured Vocabulary (Apollo-SV)" xsd:string
-property_value: owl:versionInfo "2023-01-10" xsd:string
-property_value: owl:versionInfo "2024-08-15" xsd:string
+property_value: owl:versionInfo "2024-12-24" xsd:string
+property_value: terms:contributor "https://orcid.org/0000-0002-9881-1017" xsd:anyURI
 property_value: terms:description "An OWL2 ontology of phenomena in infectious disease epidemiology and population biology for use in epidemic simulation." xsd:string
 property_value: terms:license "https://creativecommons.org/licenses/by/4.0/" xsd:string
+property_value: terms:title "Apollo Structured Vocabulary (Apollo-SV)" xsd:string
 property_value: www:RTS_00000001 "C87985BA-6A8A-483A-A6B6-63975101F672" xsd:string
 property_value: www:RTS_00000002 "082D5D78-D916-457E-B4FD-365F86F45B30" xsd:string
 
@@ -6877,36 +6877,6 @@ is_a: IAO:0000310 ! document
 property_value: IAO:0000412 "http://purl.org/obo/owl/flybase_vocab" xsd:string
 
 [Term]
-id: FMA:49443
-name: Anatomical cluster
-is_a: FMA:67135 ! Anatomical structure
-
-[Term]
-id: FMA:55457
-name: vocal fold
-is_a: FMA:64854 ! Subdivision of larynx
-
-[Term]
-id: FMA:64854
-name: Subdivision of larynx
-is_a: FMA:64989 ! Heterogeneous cluster
-
-[Term]
-id: FMA:64989
-name: Heterogeneous cluster
-is_a: FMA:49443 ! Anatomical cluster
-
-[Term]
-id: FMA:67135
-name: Anatomical structure
-is_a: FMA:67165 ! Material anatomical entity
-
-[Term]
-id: FMA:67165
-name: Material anatomical entity
-is_a: BFO:0000040 ! material entity
-
-[Term]
 id: GEO:000000001
 name: geopolitical entity
 def: "An organization that governs the people living in a particular geographical region or aggregate of geographical regions.  The geographical region it governs can change over time (such as the westward expansion of the United States and the addition of Hawaii)" []
@@ -7321,7 +7291,6 @@ synonym: "virulence" RELATED []
 synonym: "virus process" EXACT [GOC:bf, GOC:jl]
 xref: Wikipedia:Viral_life_cycle
 is_a: GO:0008150 ! biological process
-property_value: RO:0002161 NCBITaxon:4896
 
 [Term]
 id: GO:0016301
@@ -7426,10 +7395,6 @@ synonym: "organismal physiological process" EXACT []
 synonym: "single-multicellular organism process" RELATED []
 is_a: GO:0008150 ! biological process
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/27189" xsd:anyURI
-property_value: RO:0002161 NCBITaxon:2
-property_value: RO:0002161 NCBITaxon:2157
-property_value: RO:0002161 NCBITaxon:4896
-property_value: RO:0002161 NCBITaxon:4932
 created_by: jl
 creation_date: 2012-09-19T16:07:47Z
 
@@ -7523,7 +7488,6 @@ synonym: "interspecies interaction between organisms" EXACT []
 synonym: "interspecies interaction with other organisms" EXACT []
 is_a: GO:0008150 ! biological process
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/20191" xsd:anyURI
-property_value: RO:0002161 NCBITaxon:4895
 
 [Term]
 id: GO:0048609
@@ -7589,7 +7553,6 @@ name: measurement unit label
 def: "A data item label that denotes a unit of measure." []
 def: "A measurement unit label is as a label that is part of a scalar measurement datum and denotes a unit of measure." []
 is_a: IAO:0000009 ! datum label
-property_value: APOLLO_SV:0000040 "unitId" xsd:string
 property_value: IAO:0000111 "measurement unit label" xsd:string
 property_value: IAO:0000112 "Examples of measurement unit labels are liters, inches, weight per volume." xsd:string
 property_value: IAO:0000114 IAO:0000122
@@ -7604,14 +7567,10 @@ property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
 id: IAO:0000005
 name: objective specification
 def: "A directive information entity that describes an intended process endpoint. When part of a plan specification the concretization is realized in a planned process in which the bearer tries to effect the world so that the process endpoint is achieved." []
-def: "a directive information entity that describes an intended process endpoint. When part of a plan specification the concretization is realized in a planned process in which the bearer tries to effect the world so that the process endpoint is achieved." []
 is_a: IAO:0000033 ! directive information entity
 property_value: IAO:0000111 "objective specification" xsd:string
 property_value: IAO:0000112 "In the protocol of a ChIP assay the objective specification says to identify protein and DNA interaction." xsd:string
-property_value: IAO:0000112 "purpose of a study; support of hypothesis, discovery of new information" xsd:string
 property_value: IAO:0000114 IAO:0000122
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000116 "2009-03-16: original definition when imported from OBI read: \"objective is an\nnon realizable information entity which can serve as that  proper part\nof a plan  towards which the realization of the plan is directed.\"" xsd:string
 property_value: IAO:0000116 "2009-03-16: original definition when imported from OBI read: \"objective is an non realizable information entity which can serve as that  proper part of a plan towards which the realization of the plan is directed.\"" xsd:string
 property_value: IAO:0000116 "2014-03-31: In the example of usage (\"In the protocol of a ChIP assay the objective specification says to identify protein and DNA interaction\") there is a protocol which is the ChIP assay protocol. In addition to being concretized on paper, the protocol can be concretized as a realizable entity, such as a plan that inheres in a person. The objective specification is the part that says that some protein and DNA interactions are identified. This is a specification of a process endpoint: the boundary in the process before which they are not identified and after which they are. During the realization of the plan, the goal is to get to the point of having the interactions, and participants in the realization of the plan try to do that." xsd:string
 property_value: IAO:0000116 "Answers the question, why did you do this experiment?" xsd:string
@@ -7640,12 +7599,10 @@ property_value: IAO:0000119 "OBI_0000013" xsd:string
 [Term]
 id: IAO:0000007
 name: action specification
-def: "a directive information entity that describes an action the bearer will take" []
 def: "A directive information entity that describes an action the bearer will take." []
 is_a: IAO:0000033 ! directive information entity
 property_value: IAO:0000112 "Pour the contents of flask 1 into flask 2" xsd:string
 property_value: IAO:0000114 IAO:0000122
-property_value: IAO:0000114 IAO:0000123
 property_value: IAO:0000117 "Alan Ruttenberg" xsd:string
 property_value: IAO:0000119 "OBI Plan and Planned Process branch" xsd:string
 
@@ -7663,10 +7620,8 @@ name: datum label
 def: "A label is a symbol that is part of some other datum and is used to either partially define  the denotation of that datum or to provide a means for identifying the datum as a member of the set of data with the same label" []
 def: "An information content entity that is part of some data item and is used to partially define the denotation of that data item." []
 is_a: IAO:0000030 ! information content entity
-property_value: APOLLO_SV:0000040 "label" xsd:string
 property_value: IAO:0000111 "data item label" xsd:string
 property_value: IAO:0000111 "datum label" xsd:string
-property_value: IAO:0000111 "label" xsd:string
 property_value: IAO:0000114 IAO:0000122
 property_value: IAO:0000114 IAO:0000123
 property_value: IAO:0000116 "http://www.golovchenko.org/cgi-bin/wnsearch?q=label#4n" xsd:string
@@ -7793,32 +7748,24 @@ property_value: IAO:0000119 "OBI_0000058" xsd:string
 [Term]
 id: IAO:0000027
 name: data item
-def: "a data item is an information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements." []
 def: "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements." []
 is_a: IAO:0000030 ! information content entity
-property_value: IAO:0000111 "data item" xsd:string
 property_value: IAO:0000111 "data item" xsd:string
 property_value: IAO:0000112 "Data items include counts of things, analyte concentrations, and statistical summaries." xsd:string
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000116 "2/2/2009 Alan and Bjoern discussing FACS run output data. This is a data item because it is about the cell population. Each element records an event and is typically further composed a set of measurment data items that record the fluorescent intensity stimulated by one of the lasers." xsd:string
 property_value: IAO:0000116 "2009-03-16: data item deliberatly ambiguous: we merged data set and datum to be one entity, not knowing how to define singular versus plural. So data item is more general than datum." xsd:string
-property_value: IAO:0000116 "2009-03-16: data item deliberatly ambiguous: we merged data set and datum to be one entity, not knowing how to define singular versus plural. So data item is more general than datum." xsd:string
-property_value: IAO:0000116 "2009-03-16: removed datum as alternative term as datum specifically refers to singular form, and is thus not an exact synonym." xsd:string
 property_value: IAO:0000116 "2009-03-16: removed datum as alternative term as datum specifically refers to singular form, and is thus not an exact synonym." xsd:string
 property_value: IAO:0000116 "2014-03-31: See discussion at http://odontomachus.wordpress.com/2014/03/30/aboutness-objects-propositions/" xsd:string
 property_value: IAO:0000116 "JAR: datum     -- well, this will be very tricky to define, but maybe some \ninformation-like stuff that might be put into a computer and that is \nmeant, by someone, to denote and/or to be interpreted by some \nprocess... I would include lists, tables, sentences... I think I might \ndefer to Barry, or to Brian Cantwell Smith\n\nJAR: A data item is an approximately justified approximately true approximate belief" xsd:string
 property_value: IAO:0000117 "PERSON: Alan Ruttenberg" xsd:string
-property_value: IAO:0000117 "PERSON: Alan Ruttenberg" xsd:string
 property_value: IAO:0000117 "PERSON: Chris Stoeckert" xsd:string
-property_value: IAO:0000117 "PERSON: Chris Stoeckert" xsd:string
-property_value: IAO:0000117 "PERSON: Jonathan Rees" xsd:string
 property_value: IAO:0000117 "PERSON: Jonathan Rees" xsd:string
 property_value: IAO:0000118 "data" xsd:string
 
 [Term]
 id: IAO:0000028
 name: symbol
-def: "a smallish, word-like datum..." []
 def: "An information content entity that is a mark(s) or character(s) used as a conventional representation of another entity." []
 is_a: IAO:0000030 ! information content entity
 property_value: IAO:0000111 "symbol" xsd:string
@@ -7845,18 +7792,14 @@ property_value: IAO:0000117 "PERSON: Jonathan Rees" xsd:string
 id: IAO:0000030
 name: information content entity
 def: "A generically dependent continuant that is about some thing." []
-def: "an information content entity is an entity that is generically dependent on some artifact and stands in relation of aboutness to some entity" []
 is_a: BFO:0000031 ! generically dependent continuant
 relationship: IAO:0000136 BFO:0000001 ! is about entity
 property_value: IAO:0000111 "information content entity" xsd:string
 property_value: IAO:0000112 "Examples of information content entites include journal articles, data, graphical layouts, and graphs." xsd:string
 property_value: IAO:0000114 IAO:0000122
-property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000116 "2014-03-10: The use of \"thing\" is intended to be general enough to include universals and configurations (see https://groups.google.com/d/msg/information-ontology/GBxvYZCk1oc/-L6B5fSBBTQJ)." xsd:string
 property_value: IAO:0000116 "information_content_entity 'is_encoded_in' some digital_entity in obi before split (040907). information_content_entity 'is_encoded_in' some physical_document in obi before split (040907).\n\nPrevious. An information content entity is a non-realizable information entity that 'is encoded in' some digital or physical entity." xsd:string
 property_value: IAO:0000117 "PERSON: Chris Stoeckert" xsd:string
-property_value: IAO:0000117 "PERSON: Chris Stoeckert" xsd:string
-property_value: IAO:0000119 "OBI_0000142" xsd:string
 property_value: IAO:0000119 "OBI_0000142" xsd:string
 
 [Term]
@@ -7890,8 +7833,6 @@ def: "An information content entity whose concretizations indicate to their bear
 is_a: IAO:0000030 ! information content entity
 relationship: IAO:0000136 BFO:0000017 ! is about realizable entity
 property_value: IAO:0000114 IAO:0000122
-property_value: IAO:0000114 IAO:0000123
-property_value: IAO:0000116 "2009-03-16: provenance: a term realizable information entity was proposed for OBI (OBI_0000337) , edited by the PlanAndPlannedProcess branch. Original definition was  \"is the specification of a process that can be\nconcretized and realized by an actor\" with alternative term  \"instruction\".It has been subsequently moved to IAO where the objective for which the original term was defined was satisfied with the definitionof this, different, term." xsd:string
 property_value: IAO:0000116 "2009-03-16: provenance: a term realizable information entity was proposed for OBI (OBI_0000337) , edited by the PlanAndPlannedProcess branch. Original definition was  \"is the specification of a process that can be concretized and realized by an actor\" with alternative term  \"instruction\".It has been subsequently moved to IAO where the objective for which the original term was defined was satisfied with the definitionof this, different, term." xsd:string
 property_value: IAO:0000116 "2013-05-30 Alan Ruttenberg: What differentiates a directive information entity from an information concretization is that it can have concretizations that are either qualities or realizable entities. The concretizations that are realizable entities are created when an individual chooses to take up the direction, i.e. has the intention to (try to) realize it." xsd:string
 property_value: IAO:0000116 "8/6/2009 Alan Ruttenberg: Changed label from \"information entity about a realizable\" after discussions at ICBO" xsd:string
@@ -7975,7 +7916,6 @@ is_a: IAO:0000001 ! conditional specification
 property_value: IAO:0000111 "rule" xsd:string
 property_value: IAO:0000112 "example to be added" xsd:string
 property_value: IAO:0000114 IAO:0000123
-property_value: IAO:0000114 IAO:0000124
 property_value: IAO:0000116 "MSI" xsd:string
 property_value: IAO:0000117 "PRS" xsd:string
 property_value: IAO:0000119 "OBI_0500021" xsd:string
@@ -8013,7 +7953,6 @@ is_obsolete: true
 [Term]
 id: IAO:0000064
 name: algorithm
-def: "A plan specification which describes inputs, output of mathematical functions as well as workflow of execution for achieving an predefined objective. Algorithms are realized usually by means of implementation as computer programs for execution by automata." []
 def: "A plan specification which describes the inputs and output of mathematical functions as well as workflow of execution for achieving an predefined objective. Algorithms are realized usually by means of implementation as computer programs for execution by automata." []
 is_a: IAO:0000104 ! plan specification
 property_value: IAO:0000111 "algorithm" xsd:string
@@ -8162,17 +8101,14 @@ id: IAO:0000100
 name: data set
 def: "A data item that is an aggregate of other data items of the same type that have something in common. Averages and distributions can be determined for data sets." []
 is_a: IAO:0000027 ! data item
-property_value: APOLLO_SV:0000040 "dataSets" xsd:string
 property_value: IAO:0000111 "data set" xsd:string
 property_value: IAO:0000112 "Intensity values in a CEL file or from multiple CEL files comprise a data set (as opposed to the CEL files themselves)." xsd:string
-property_value: IAO:0000114 IAO:0000120
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000116 "2009/10/23 Alan Ruttenberg. The intention is that this term represent collections of like data. So this isn't for, e.g. the whole contents of a cel file, which includes parameters, metadata etc. This is more like java arrays of a certain rather specific type" xsd:string
 property_value: IAO:0000116 "2014-05-05: Data sets are aggregates and thus must include two or more data items. We have chosen not to add logical axioms to make this restriction." xsd:string
 property_value: IAO:0000117 "person:Allyson Lister" xsd:string
 property_value: IAO:0000117 "person:Chris Stoeckert" xsd:string
 property_value: IAO:0000119 "group:OBI" xsd:string
-property_value: IAO:0000119 "OBI_0000042" xsd:string
 property_value: IAO:0000119 "OBI_0000042" xsd:string
 
 [Term]
@@ -8201,16 +8137,13 @@ property_value: IAO:0000117 "Person:Alan Ruttenberg" xsd:string
 [Term]
 id: IAO:0000104
 name: plan specification
-def: "a directive information entity that when concretized it is realized in a process in which the bearer tries to achieve the objectives, in part by taking the actions specified. Plan specifications includes parts such as objective specification, action specifications and conditional specifications." []
 def: "A directive information entity with action specifications and objective specifications as parts, and that may be concretized as a realizable entity that, if realized, is realized in a process in which the bearer tries to achieve the objectives by taking the actions specified." []
 comment: 2/3/2009 Comment from OBI review.\n\nAction specification not well enough specified.\nConditional specification not well enough specified.\nQuestion whether all plan specifications have objective specifications.\n\nRequest that IAO either clarify these or change definitions not to use them
-comment: 2/3/2009 Comment from OBI review.\n \n Action specification not well enough specified.\n Conditional specification not well enough specified.\n Question whether all plan specifications have objective specifications.\n \n Request that IAO either clarify these or change definitions not to use them
 is_a: IAO:0000033 ! directive information entity
 relationship: has_part IAO:0000005 ! objective specification
 relationship: has_part IAO:0000007 ! action specification
 property_value: IAO:0000111 "plan specification" xsd:string
 property_value: IAO:0000112 "PMID: 18323827.Nat Med. 2008 Mar;14(3):226.New plan proposed to help resolve conflicting medical advice." xsd:string
-property_value: IAO:0000114 IAO:0000120
 property_value: IAO:0000114 IAO:0000122
 property_value: IAO:0000116 "2009-03-16: provenance: a term a plan was proposed for OBI (OBI_0000344) , edited by the PlanAndPlannedProcess branch. Original definition was \" a plan is a specification of a process that is realized by an actor to achieve the objective specified as part of the plan\". It has been subsequently moved to IAO where the objective for which the original term was defined was satisfied with the definitionof this, different, term." xsd:string
 property_value: IAO:0000116 "2014-03-31: A plan specification can have other parts, such as conditional specifications." xsd:string
@@ -8242,7 +8175,6 @@ def: "A measurement datum is an information content entity that is a recording o
 is_a: IAO:0000027 ! data item
 property_value: IAO:0000111 "measurement datum" xsd:string
 property_value: IAO:0000112 "Examples of measurement data are the recoding of the weight of a mouse as {40,mass,\"grams\"}, the recording of an observation of the behavior of the mouse {,process,\"agitated\"}, the recording of the expression level of a gene as measured through the process of microarray experiment {3.4,luminosity,}." xsd:string
-property_value: IAO:0000114 IAO:0000120
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000116 "2/2/2009 is_specified_output of some assay?" xsd:string
 property_value: IAO:0000117 "person:Chris Stoeckert" xsd:string
@@ -8266,7 +8198,6 @@ def: "A version number is an information content entity which is a sequence of c
 is_a: IAO:0000028 ! symbol
 property_value: IAO:0000111 "version number" xsd:string
 property_value: IAO:0000114 IAO:0000123
-property_value: IAO:0000114 IAO:0000124
 property_value: IAO:0000116 "Note: we feel that at the moment we are happy with a general version number, and that we will subclass as needed in the future. For example, see 7. genome sequence version" xsd:string
 property_value: IAO:0000117 "GROUP: IAO" xsd:string
 
@@ -8329,7 +8260,6 @@ property_value: IAO:0000111 "material information bearer" xsd:string
 property_value: IAO:0000112 "a brain" xsd:string
 property_value: IAO:0000112 "a hard drive" xsd:string
 property_value: IAO:0000112 "A page of a paperback novel with writing on it. The paper itself is a material information bearer, the pattern of ink is the information carrier." xsd:string
-property_value: IAO:0000114 IAO:0000120
 property_value: IAO:0000114 IAO:0000122
 property_value: IAO:0000117 "GROUP: IAO" xsd:string
 
@@ -9886,7 +9816,6 @@ intersection_of: OBI:0000312 IAO:0020010 {all_only="true"} ! is_specified_output
 intersection_of: OBI:0000312 IAO:0020010 ! is_specified_output_of identifier creating process
 relationship: IAO:0000219 BFO:0000001 ! denotes entity
 relationship: OBI:0000312 IAO:0020010 ! is_specified_output_of identifier creating process
-property_value: APOLLO_SV:0000040 "name" xsd:string
 property_value: dc:creator "Mathias Brochhausen" xsd:string
 property_value: IAO:0000111 "identifier" xsd:string
 property_value: IAO:0000117 "Justin Whorton" xsd:string
@@ -9898,7 +9827,6 @@ property_value: IAO:0000233 "https://github.com/information-artifact-ontology/IA
 [Term]
 id: IAO:0020001
 name: grapheme
-def: "A grapheme  is an information content entity that is a fundamental unit in a written language. " []
 def: "An information content entity that is a fundamental unit in a written language." []
 comment: Grapheme is not about anything and hence is likely to not be an information content entity. If a new subclass of GDC for information structure entities is created it should move there.
 is_a: IAO:0000030 ! information content entity
@@ -9909,70 +9837,10 @@ property_value: IAO:0000119 "http://en.wikipedia.org/wiki/Grapheme" xsd:string
 property_value: IAO:0000233 "https://github.com/information-artifact-ontology/IAO/issues/237" xsd:string
 
 [Term]
-id: IAO:0020002
-name: utterance
-def: "An utterance is an information content entity that is a complete unit of speech in spoken language. " []
-is_a: IAO:0000030 ! information content entity
-property_value: dc:creator "Mathias Brochhausen" xsd:string
-property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000119 "Wikipedia: http://en.wikipedia.org/wiki/Utterance" xsd:string
-
-[Term]
-id: IAO:0020003
-name: mechanical wave quality
-def: "An attributive collection of qualities inhering in energy when transported through a medium in a wave." []
-is_a: BFO:0000019 ! quality
-property_value: dc:creator "Mathias Brochhausen" xsd:string
-
-[Term]
-id: IAO:0020004
-name: writing quality
-def: "is a quality that is the concretization of graphemes and inheres in a material object." []
-is_a: BFO:0000019 ! quality
-property_value: dc:creator "Mathias Brochhausen" xsd:string
-property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-
-[Term]
-id: IAO:0020005
-name: writing bearer
-def: "is a material information bearer that bears the concretization of graphemes." []
-is_a: IAO:0000178 ! material information bearer
-property_value: dc:creator "Mathias Brochhausen" xsd:string
-property_value: IAO:0000112 "pieces of paper, tables, walls, floors, driveways, highway signs, computer screens, skin, tablets of clay, rocks, sheets of metal (license plates), sheets of papyrus, etc.   clouds of smoke in skywriting," xsd:string
-property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-
-[Term]
-id: IAO:0020006
-name: portion of energy
-is_a: BFO:0000004 ! independent continuant
-
-[Term]
-id: IAO:0020007
-name: sound energy
-def: "Energy that is transported in a sound wave." []
-is_a: IAO:0020006 ! portion of energy
-relationship: RO:0000053 IAO:0020003 ! is bearer of mechanical wave quality
-property_value: dc:creator "Mathias Brochhausen" xsd:string
-
-[Term]
-id: IAO:0020008
-name: utterance energy
-def: "Sound energy bearing the concretization of an utterance and being the output of an uttering process. " []
-is_a: IAO:0020007 ! sound energy
-
-[Term]
-id: IAO:0020009
-name: oscillating
-def: "Oscillating is a processual that shows repetitive variation, typically in time, of some measured quality about a central value (often a point of equilibrium) or between two or more different states." []
-is_a: BFO:0000015 ! process
-property_value: dc:creator "Mathias Brochhausen" xsd:string
-property_value: IAO:0000119 "http://en.wikipedia.org/wiki/Oscillation" xsd:string
-
-[Term]
 id: IAO:0020010
 name: identifier creating process
-def: "A dubbing process is a planned process that provides a reference to an individual entity shared by a group of subscribers to refer to that individual entity." []
 def: "A planned process that provides a reference to an individual entity shared by a group of subscribers to refer to that individual entity." []
+def: "An identifier creating process is a planned process that provides a reference to an individual entity shared by a group of subscribers to refer to that individual entity." []
 is_a: OBI:0000011 ! planned process
 intersection_of: OBI:0000011 ! planned process
 intersection_of: OBI:0000299 IAO:0020000 ! has_specified_output identifier
@@ -9984,16 +9852,6 @@ property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000118 "dubbing process" xsd:string
 property_value: IAO:0000118 "naming" xsd:string
 property_value: IAO:0000233 "https://github.com/information-artifact-ontology/IAO/issues/237" xsd:string
-
-[Term]
-id: IAO:0020011
-name: utterance process
-def: "is a planned process of making speech sounds which may or may not have an actual language involved. " []
-is_a: OBI:0000011 ! planned process
-relationship: OBI:0000299 IAO:0020008 ! has_specified_output utterance energy
-property_value: dc:creator "Mathias Brochhausen" xsd:string
-property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000119 "http://en.wiktionary.org/wiki/utter" xsd:string
 
 [Term]
 id: IAO:0020015
@@ -10015,11 +9873,9 @@ property_value: IAO:0000233 "https://github.com/information-artifact-ontology/IA
 [Term]
 id: IAO:0020016
 name: given name
-def: "A given name, in Western contexts often referred to as a first name, is a personal name that specifies and differentiates between members of a group of individuals, especially in a family, all of whose members usually share the same family name (surname). A given name is purposefully given, usually by a child's parents at or near birth, in contrast to an inherited one such as a family name" []
 def: "A personal name that specifies and differentiates between members of a group of individuals, especially in a family, all of whose members usually share the same family name (surname). A given name is purposefully given, usually by a child's parents at or near birth, in contrast to an inherited one such as a family name" []
 is_a: IAO:0020015 ! personal name
 property_value: IAO:0000117 "Justin Whorton" xsd:string
-property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000118 "first name" xsd:string
 property_value: IAO:0000119 "http://en.wikipedia.org/wiki/Given_name" xsd:string
@@ -10028,11 +9884,9 @@ property_value: IAO:0000233 "https://github.com/information-artifact-ontology/IA
 [Term]
 id: IAO:0020017
 name: family name
-def: "A family name (in Western contexts often referred to as a surname or last name) is typically a part of a person's name which has been passed, according to law or custom, from one or both parents to their children." []
 def: "An identifier that is typically a part of a person's name which has been passed, according to law or custom, from one or both parents to their children." []
-is_a: IAO:0020015 ! personal name
+is_a: IAO:0020000 ! identifier
 property_value: IAO:0000117 "Justin Whorton" xsd:string
-property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000118 "last name" xsd:string
 property_value: IAO:0000118 "surname" xsd:string
@@ -10042,19 +9896,15 @@ property_value: IAO:0000233 "https://github.com/information-artifact-ontology/IA
 [Term]
 id: IAO:0020020
 name: code set
-def: "An information content entity that is a collection of identifiers that has been created to identify and annotate core ideas of a specified domain, and where the intention of its creators is that the identifiers have a one-to-one correspondence with entities in reality outside the aggregate." []
+def: "An information content entity that is a collection of other information content entities that has been created to identify or annotate core ideas of a specified domain, and where the intention of its creators is that the aggregated entities have a one-to-one correspondence with entities in reality outside the aggregate." []
 def: "An information content entity that is a collection of other information content entities that has been created to identify or annotate things in a specified domain, and where the intention of its creators is that the collection has a one-to-one correspondence with those things." []
 comment: Code sets might include non-entities/things (e.g. missing thumbs).
 comment: Does not imply absence vs. presence of any taxonomy.
 comment: Does not imply that aggregated entities denote particulars, universals, or defined classes (a.k.a. attributive collections) or even that they denote only one of these three types of entities.
-comment: Does not imply that identifiers denote particulars, universals, or defined classes (a.k.a. attributive collections) or even that they denote only one of these three types of entities (e.g., SNOMED and even various OBO ontologies have identifiers that identify entities in all three categories).
 comment: Each aggregated entity is often (but not necessarily) associated with a text string—variously called a “description,” “name,” “title,” or “label”—that helps humans reach the target of denotation.\n\nWhen there is no such string, it is almost always because the entities take the form of human language words. For example, a “sex” or “gender” code set could contain “MALE” and “FEMALE,” or even “M” and “F” (by convention, we understand what these mean).
-comment: Each identifier is often (but not necessarily) associated with a text string—variously called a “description,” “name,” “title,” or “label”—that helps humans reach the target of denotation.\n\nWhen there is no such string, it is almost always because the identifiers take the form of human language words. For example, a “sex” or “gender” code set could have identifiers “MALE” and “FEMALE,” or even “M” and “F” (by convention, we understand what these mean).
 comment: For each given domain, there can potentially exist multiple code sets. The multiplicity of code sets is partially due to the different specific purposes of those code sets.
 comment: For National Drug Codes (NDCs) and similar code sets, there doesn’t even have to be a single, fully-concretized copy somewhere (for example, for NDCs there is no centralized database or repository where they all live as one instance of concretization of code set). The code set can be “distributively” concretized. This seems like an unusual exception, but it also likely applies to Universal Product Codes (UPCs) and their follow on Global Trade Item Numbers (GTINs).
-comment: Many code sets are created for a specific purpose in addition to merely identifying and annotating core ideas of a specified domain.
 comment: Many code sets are created for a specific purpose in addition to merely identifying or annotating core ideas of a specified domain.
-comment: The identifiers do not denote each other.
 comment: The information content entities do not denote each other.
 is_a: IAO:0000030 ! information content entity
 relationship: has_part IAO:0020000 ! identifier
@@ -10073,6 +9923,22 @@ property_value: IAO:0000118 "codeset" xsd:string
 property_value: IAO:0000118 "coding system" xsd:string
 property_value: IAO:0000118 "controlled vocabulary" xsd:string
 property_value: IAO:0000233 "https://github.com/information-artifact-ontology/IAO/issues/237" xsd:string
+
+[Term]
+id: IAO:0021003
+name: social act
+def: "A planned process that is carried out by a conscious being or an organization, and is self-generated, directed towards another conscious being or an aggregate of conscious beings, an organization or an aggregate of organizations, and that is in need of being perceived." []
+comment: The phrase "in need of being perceived" does not imply that only planned processes that are in fact perceived can be social acts. Reinach clarifies that by exemplifying these matters for commands: "The command is according to its essence in need of being heard (vernehmungsbedürtig". It can of course happen that commands are given without being heard. Then they fail to fulfil their purpose. They are like thrown spears which fall to the ground without hitting their target." (A. Reinach: The Apriori Foundations of the Civil Law." Edited by J. Crosby, Heusenstamm: ontos Verlag, 2012).\nReinach clearly does not imply that a command that does not fulfill its prupose would not be a command.\nThanks to W.R. Hogan for finding the Reinach quote.
+is_a: OBI:0000011 ! planned process
+property_value: IAO:0000112 "Colonel Klink giving Sergeant Schultz an order, Jake promising Jill to take her to the junior prom" xsd:string
+property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
+
+[Term]
+id: IAO:0021009
+name: deontic declaration
+def: "A social act that creates or revokes a deontic role." []
+is_a: IAO:0021003 ! social act
+property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 
 [Term]
 id: IAO:8000000
@@ -10632,7 +10498,7 @@ property_value: IAO:0000117 "Lindsay Cowell" xsd:string
 id: IDO:0000629
 name: host role
 def: "A role borne by an organism in virtue of the fact that it's extended organism contains a material entity other than the organism." []
-is_a: BFO:0000023 ! role
+is_a: OMRSE:00000049 ! organism role
 property_value: IAO:0000117 "Albert Goldfain" xsd:string
 property_value: IAO:0000117 "Alexander Diehl" xsd:string
 property_value: IAO:0000117 "Lindsay Cowell" xsd:string
@@ -15421,6 +15287,8 @@ property_value: IAO:0000116 "We are only considering successfully completed plan
 property_value: IAO:0000116 "We are only considering successfully completed planned processes. A plan may be modified, and details added during execution. For a given planned process, the associated realized plan specification is the one encompassing all changes made during execution. This means that all processes in which an agent acts towards achieving some \nobjectives is a planned process." xsd:string
 property_value: IAO:0000117 "Bjoern Peters" xsd:string
 property_value: IAO:0000119 "branch derived" xsd:string
+property_value: IAO:0000232 "6/11/9: Edited at workshop. Used to include: is initiated by an agent" xsd:string
+property_value: IAO:0000232 "This class merges the previously separated objective driven process and planned process, as they the separation proved hard to maintain. (1/22/09, branch call)" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
 
 [Term]
@@ -15469,8 +15337,9 @@ property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
 [Term]
 id: OBI:0000245
 name: organization
+def: "An entity that can bear roles, has members, and has a set of organization rules. Members of organizations are either organizations themselves or individual people. Members can bear specific organization member roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the organization by the organization members." []
 def: "An organization is a continuant entity which can play roles,  has members, and has a set of organization rules.  Members of organizations are either organizations themselves or individual people. Members can bear specific organization member roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the organization by the organization members." []
-is_a: BFO:0000004 ! independent continuant
+is_a: BFO:0000040 ! material entity
 property_value: IAO:0000111 "organization" xsd:string
 property_value: IAO:0000112 "PMID: 16353909.AAPS J. 2005 Sep 22;7(2):E274-80. Review. The joint food and agriculture organization of the United Nations/World Health Organization Expert Committee on Food Additives and its role in the evaluation of the safety of veterinary drug residues in foods." xsd:string
 property_value: IAO:0000114 IAO:0000122
@@ -15829,6 +15698,7 @@ is_a: OBI:0000011 ! planned process
 relationship: OBI:0000417 OBI:0200166 ! achieves_planned_objective data transformation objective
 property_value: IAO:0000111 "data transformation" xsd:string
 property_value: IAO:0000112 "The application of a clustering protocol to microarray data or the application of a statistical testing method on a primary data set to determine a p-value." xsd:string
+property_value: IAO:0000114 IAO:0000122
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000117 "Elisabetta Manduchi" xsd:string
 property_value: IAO:0000117 "Helen Parkinson" xsd:string
@@ -16111,6 +15981,7 @@ property_value: IAO:0000412 "http://purl.obolibrary.org/obo/ogms.owl" xsd:string
 id: OGMS:0000097
 name: health care encounter
 def: "A temporally-connected health care process that has as participants an organization or person realizing the health care provider role and a person realizing the patient role.  The health care provider role and patient are realized during the health care encounter" []
+is_a: OBI:0000011 ! planned process
 is_a: OGMS:0000096 ! health care process
 property_value: IAO:0000117 "Albert Goldfain" xsd:string
 property_value: IAO:0000119 "http://groups.google.com/group/ogms-discuss/browse_thread/thread/a2dbc2ed1dff99d6" xsd:string
@@ -16139,6 +16010,7 @@ property_value: IAO:0000412 "http://purl.obolibrary.org/obo/ogms.owl" xsd:string
 [Term]
 id: OGMS:0000100
 name: inpatient encounter
+def: "A health care encounter involving a patient who has been admitted to a health care facility and remains in a hospital facility for at least one night." []
 is_a: OGMS:0000097 ! health care encounter
 property_value: IAO:0000117 "Albert Goldfain" xsd:string
 property_value: IAO:0000119 "http://groups.google.com/group/ogms-discuss/browse_thread/thread/a2dbc2ed1dff99d6" xsd:string
@@ -16179,100 +16051,63 @@ id: OMRSE:00000001
 name: human social role
 def: "A social role inhering in a human being." []
 is_a: OMRSE:00000026 ! organism social role
-relationship: RO:0000052 NCBITaxon:9606 ! inheres in Homo sapiens
-property_value: IAO:0000117 "Mathias Brochhausen\n" xsd:string
+is_a: OMRSE:00000050 ! Homo sapiens role
+property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
-
-[Term]
-id: OMRSE:00000007
-name: gender role
-def: "A human social role borne by a human being being realized in behaviour which is considered socially appropriate for individuals of a specific sex in the context of a specific culture." []
-is_a: BFO:0000023 ! role
-property_value: APOLLO_SV:0000040 "sex" xsd:string
-property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000119 "http://en.wikipedia.org/wiki/Gender_role" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
-
-[Term]
-id: OMRSE:00000008
-name: male gender role
-def: "A gender role borne by a human being that is realized in behaviour which is considered socially appropriate for individuals of the male sex in the context of the culture in question." []
-is_a: OMRSE:00000007 ! gender role
-property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000118 "male gender" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
-
-[Term]
-id: OMRSE:00000009
-name: female gender role
-def: "A gender role borne by a human being that is realized in behaviour which is considered socially appropriate for individuals of the female sex in the context of the culture in question." []
-is_a: OMRSE:00000007 ! gender role
-property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000118 "female gender" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
 
 [Term]
 id: OMRSE:00000010
 name: human health care role
-def: "A role in human social processes that is realized by health care processes such as seeking or providing treatment for disease and injury, diagnosing disease and injury, or undergoing diagnosis. " []
-comment: Mathias Brochhausen
+def: "A role in human social processes that is realized by health care processes such as seeking or providing treatment for disease and injury, diagnosing disease and injury, or undergoing diagnosis." []
 is_a: OMRSE:00002072 ! role in human social processes
+relationship: BFO:0000054 OGMS:0000097 ! is realized by health care encounter
+property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000118 "health care role" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
 
 [Term]
 id: OMRSE:00000011
 name: patient role
-def: "A human health care role that inheres in an organism [human?] as the recipient of a health care service." []
-def: "A role borne by an organism being as the recipient of a health care service." []
+def: "A role borne by an organism and that is realized by presenting to a health care provider in a clinical encounter." []
+comment: In order to avoid the presumption of the formal structures and institutions of Western civilization, bearing a patient role does not entail that the organism presents at an official place of business, with an organization formally and legally registered with various gov't entities, with a person endowed by the gov't with certain certifications.
 is_a: OMRSE:00000010 ! human health care role
+is_a: OMRSE:00000049 ! organism role
 property_value: IAO:0000117 "Amanda Hicks" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000118 "patient" xsd:string
-property_value: IAO:0000119 "http://en.wikipedia.org/wiki/Patient" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
+property_value: IAO:0000119 "CAFE domain expert working group." xsd:string
 
 [Term]
 id: OMRSE:00000015
 name: health care provider organization role
-comment: Definition needed, but the idea is that we want to differentiate between provider and payer organizations.  Some organizaitons have both roles (e.g., UPMC has a Hospital Division, a Physician Divison, and an Insurance Division).
+def: "A role that inheres in an organization and that is realized by the providing of services in a health care encounter." []
 is_a: OMRSE:00000027 ! organization health care role
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
+relationship: BFO:0000054 OGMS:0000097 ! is realized by health care encounter
+property_value: dc:contributor "Mathias Brochhausen" xsd:string
+property_value: dc:creator "Amanda Hicks" xsd:string
 
 [Term]
 id: OMRSE:00000022
-name: collection of organisms
-def: "An object aggregate of organisms." []
+name: aggregate of objectual organisms
+def: "An object aggregate of objectual organisms." []
 comment: Any arbitrary collection of organisms.  They need not be of the same taxonomic class.  
 is_a: BFO:0000027 ! object aggregate
-intersection_of: BFO:0000027 ! object aggregate
-intersection_of: RO:0002351 OBI:0100026 ! has member organism
-intersection_of: RO:0002351 OBI:0100026 {all_only="true"} ! has member organism
-equivalent_to: PCO:0000000 ! PCO:collection of organisms
-relationship: RO:0002351 OBI:0100026 ! has member organism
-property_value: IAO:0000600 "This term refers to a real population, such as the population of Allegheny County or of the U.S.   As a set, it could null (size zero), for example the population of people in Allegheny County older than 130 years of age.  It could also be a single organism. The population is not restricted to members of one species." xsd:string
 
 [Term]
 id: OMRSE:00000023
 name: collection of humans
-comment: An object aggregate all of whose components are human beings.
-is_a: PCO:0000018 ! collection of organisms of the same species
-intersection_of: OMRSE:00000022 ! collection of organisms
-intersection_of: RO:0002351 NCBITaxon:9606 ! has member Homo sapiens
-intersection_of: RO:0002351 NCBITaxon:9606 {all_only="true"} ! has member Homo sapiens
-relationship: RO:0002351 NCBITaxon:9606 ! has member Homo sapiens
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
+def: "An object aggregate all of whose components are human beings." []
+is_a: OMRSE:00000022 ! aggregate of objectual organisms
+relationship: RO:0002351 NCBITaxon:9606 {all_only="true"} ! has member Homo sapiens
 
 [Term]
 id: OMRSE:00000025
 name: organization social role
 def: "A role in human social processes that inheres in an organization." []
 comment: Defined class that we will ultimately move to an application ontology.  We are leaving here for now until we determine which application ontology: it is likely going to be an ontology that does not currently (2012-06-05) exist.\n\nDitto for its current descendants.
+is_a: OMRSE:00000051 ! organization role
 is_a: OMRSE:00002072 ! role in human social processes
 property_value: IAO:0000117 "William R. Hogan" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
 
 [Term]
 id: OMRSE:00000026
@@ -16281,62 +16116,91 @@ def: "A role in human social processes that inheres in an organism." []
 comment: Defined class that we will ultimately move to an application ontology.  We are leaving here for now until we determine which application ontology: it is likely going to be an ontology that does not currently (2012-06-05) exist.\n\nDitto for its current descendants.
 comment: Includes animals as well as humans.  For example, pet, assistance animal, animal grown for food, work animal, domesticated animal, K-9, etc.  Human roles include gender role, party to legal entities, health care provider roles like doctor, nurse, etc.
 comment: Previous definition: A role in human social processes played by an organism.
-is_a: BFO:0000023 ! role
-relationship: RO:0000052 OBI:0100026 ! inheres in organism
+is_a: OMRSE:00000049 ! organism role
+is_a: OMRSE:00002072 ! role in human social processes
 property_value: IAO:0000117 "William R. Hogan\nMathias Brochhausen" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
 
 [Term]
 id: OMRSE:00000027
 name: organization health care role
-def: "An organization social role that is realized by a health care process." []
+def: "An organization social role that, if realized, is realized by either a health care process or an ancillary health care process" []
 comment: Previous definition: An organization social role played by an organization in health care processes.
 is_a: OMRSE:00000025 ! organization social role
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
+
+[Term]
+id: OMRSE:00000030
+name: human patient role
+def: "A patient role that inheres in a human being." []
+is_a: OMRSE:00000011 ! patient role
+is_a: OMRSE:00000050 ! Homo sapiens role
+intersection_of: OMRSE:00000011 ! patient role
+intersection_of: RO:0000052 NCBITaxon:9606 ! inheres in Homo sapiens
 
 [Term]
 id: OMRSE:00000033
 name: aggregate of organizations
-def: "An aggregate of organizations that have some feature in common, but is not itself an organization." []
+def: "An object aggregate that is not itself an organization and whose members are only organizations that have some feature in common" []
 comment: It is often convenient to group organizations together that otherwise might not even interact with one another. 
-is_a: BFO:0000027 ! object aggregate
-intersection_of: BFO:0000027 ! object aggregate
-intersection_of: RO:0002351 OBI:0000245 ! has member organization
-intersection_of: RO:0002351 OBI:0000245 {all_only="true"} ! has member organization
+is_a: BFO:0000040 ! material entity
 relationship: RO:0002351 OBI:0000245 ! has member organization
-property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: IAO:0000117 "William R. Hogan\nAmanda Hicks" xsd:string
 
 [Term]
-id: OMRSE:00000052
-name: hospital function
-def: "A function inhering in a facility that manifests by the facility participating in providing inpatient and outpatient healthcare to a patient population." []
-is_a: BFO:0000034 ! function
-property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
+id: OMRSE:00000048
+name: material entity role
+is_a: BFO:0000023 ! role
+intersection_of: BFO:0000023 ! role
+intersection_of: RO:0000052 BFO:0000040 ! inheres in material entity
+relationship: RO:0000052 BFO:0000040 {all_only="true"} ! inheres in material entity
+relationship: RO:0000052 BFO:0000040 ! inheres in material entity
+
+[Term]
+id: OMRSE:00000049
+name: organism role
+is_a: OMRSE:00000048 ! material entity role
+intersection_of: OMRSE:00000048 ! material entity role
+intersection_of: RO:0000052 OBI:0100026 ! inheres in organism
+relationship: RO:0000052 OBI:0100026 {all_only="true"} ! inheres in organism
+relationship: RO:0000052 OBI:0100026 ! inheres in organism
+
+[Term]
+id: OMRSE:00000050
+name: Homo sapiens role
+is_a: OMRSE:00000049 ! organism role
+intersection_of: OMRSE:00000049 ! organism role
+intersection_of: RO:0000052 NCBITaxon:9606 ! inheres in Homo sapiens
+relationship: RO:0000052 NCBITaxon:9606 ! inheres in Homo sapiens
+relationship: RO:0000052 NCBITaxon:9606 {all_only="true"} ! inheres in Homo sapiens
+
+[Term]
+id: OMRSE:00000051
+name: organization role
+is_a: OMRSE:00000048 ! material entity role
+intersection_of: BFO:0000023 ! role
+intersection_of: RO:0000052 OBI:0000245 ! inheres in organization
+relationship: RO:0000052 OBI:0000245 ! inheres in organization
+relationship: RO:0000052 OBI:0000245 {all_only="true"} ! inheres in organization
 
 [Term]
 id: OMRSE:00000053
 name: school function
-def: "A function inhering in a facility that manifests by the facility participating in providing formal education to a student population." []
+def: "A function inhering in a material entity that, if realized, is realized by that material entity being the site at which formal education is provided to a student population." []
 is_a: BFO:0000034 ! function
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
 
 [Term]
 id: OMRSE:00000054
 name: hospital role
-def: "A healthcare provider role that inheres in an organization and is realized by providing inpatient and outpatient care." []
+def: "A healthcare provider role that inheres in an organization and is realized by providing inpatient care." []
 is_a: OMRSE:00000015 ! health care provider organization role
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
 
 [Term]
 id: OMRSE:00000055
 name: school role
-is_a: BFO:0000023 ! role
+is_a: OMRSE:00000025 ! organization social role
 property_value: IAO:0000117 "An organization social role that inheres in an organization and is realized by providing formal education to students." xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
 
 [Term]
 id: OMRSE:00000056
@@ -16347,7 +16211,6 @@ intersection_of: OBI:0000245 ! organization
 intersection_of: RO:0000053 OMRSE:00000054 ! is bearer of hospital role
 relationship: RO:0000053 OMRSE:00000054 ! is bearer of hospital role
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
 
 [Term]
 id: OMRSE:00000057
@@ -16358,33 +16221,24 @@ intersection_of: OBI:0000245 ! organization
 intersection_of: RO:0000053 OMRSE:00000055 ! is bearer of school role
 relationship: RO:0000053 OMRSE:00000055 ! is bearer of school role
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
 
 [Term]
 id: OMRSE:00000058
 name: student role
-def: "A human social role that is realized by the process of formal education that the bearer undergoes." []
-is_a: OMRSE:00000001 ! human social role
+def: "A human social role that, if realized, is realized by the process of formal education that the bearer undergoes." []
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
 
 [Term]
 id: OMRSE:00000059
 name: nursery school role
-comment: Key motivating use case was Synthia synthetic population data.\n
 is_a: OMRSE:00000055 ! school role
-property_value: APOLLO_SV:0000040 "preschool" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
 
 [Term]
 id: OMRSE:00000060
 name: primary school role
-comment: Key motivating use case was Synthia synthetic population data.
 is_a: OMRSE:00000055 ! school role
-property_value: APOLLO_SV:0000040 "primarySchool" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
 
 [Term]
 id: OMRSE:00000061
@@ -16395,111 +16249,68 @@ comment: This type of entity is referred to as "Bauwerk" or "Bauliche Anlage".
 is_a: BFO:0000040 ! material entity
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000119 "http://de.wikipedia.org/wiki/Bauwerk" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
 
 [Term]
 id: OMRSE:00000062
 name: facility
 def: "An architectural structure that bears some function." []
 is_a: OMRSE:00000061 ! architectural structure
+intersection_of: OMRSE:00000061 ! architectural structure
+intersection_of: RO:0000053 BFO:0000034 ! is bearer of function
+relationship: OMRSE:00000068 OBI:0000245 {owl:versionInfo="09/09/2017"} ! is administered by organization
+relationship: RO:0000053 BFO:0000034 ! is bearer of function
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
-
-[Term]
-id: OMRSE:00000063
-name: hospital facility
-def: "A facility that is run by a hospital organization and is the bearer of a hospital function." []
-is_a: OMRSE:00000102 ! health care facility
-property_value: APOLLO_SV:0000040 "HealthcareFacility" xsd:string
-property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
 
 [Term]
 id: OMRSE:00000064
 name: school facility
 def: "A facility that is run by a school organization and is the bearer of a school function." []
 is_a: OMRSE:00000062 ! facility
-property_value: APOLLO_SV:0000040 "SchoolFacility" xsd:string
+relationship: RO:0000053 OMRSE:00000053 ! is bearer of school function
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
 
 [Term]
 id: OMRSE:00000065
 name: secondary school role
-comment: Key motivating use case was Synthia synthetic population data.
 is_a: OMRSE:00000055 ! school role
-property_value: APOLLO_SV:0000040 "secondarySchool" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
 
 [Term]
-id: OMRSE:00000074
-name: housing unit
-def: "A material entity that has as parts one or more sites large enough to contain humans, has as part one or more material entities that separates it from other sites, and bears a residence function." []
-comment: Housing units are individuated by their residence functions.
-is_a: BFO:0000040 ! material entity
-property_value: APOLLO_SV:0000040 "houses" xsd:string
+id: OMRSE:00000086
+name: human role within an organization
+def: "A human social role that is created by a deontic declaration performed by an organization." []
 property_value: IAO:0000117 "Amanda Hicks" xsd:string
-property_value: IAO:0000119 "https://github.com/ufbmi/OMRSE/wiki/Housing-unit-and-Household" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
+property_value: IAO:0000118 "human organizational role" xsd:string
 
 [Term]
-id: OMRSE:00000076
-name: household
-def: "A human or collection of humans that occupies a housing unit by storing their possessions there and habitually sleeping there thereby participating in the realization of its residence function." []
-is_a: BFO:0000040 ! material entity
-property_value: APOLLO_SV:0000040 "Household" xsd:string
-property_value: IAO:0000117 "Amanda Hicks" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
-
-[Term]
-id: OMRSE:00000078
-name: workplace facility
-is_a: OMRSE:00000062 ! facility
-property_value: APOLLO_SV:0000040 "workplace" xsd:string
-property_value: IAO:0000117 "Amanda Hicks" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
-
-[Term]
-id: OMRSE:00000079
-name: workplace function
-def: "a function inhering in a material entity that is realized by that material entity being the site where the work of some organization is carried out" []
-is_a: BFO:0000034 ! function
-property_value: IAO:0000117 "Amanda Hicks" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
-
-[Term]
-id: OMRSE:00000098
-name: racial identity datum
-def: "A racial identity is an information content entity that is the output of some racial identitification process and is intended to be a truthful statement about the genetic or cultural race of a person.  Unlike data items they are not necessilary contributed or acquired by a reliable method." []
-is_a: OMRSE:00000132 ! identity datum
-property_value: APOLLO_SV:0000040 "race" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
-
-[Term]
-id: OMRSE:00000102
-name: health care facility
-is_a: OMRSE:00000062 ! facility
-property_value: IAO:0000117 "A facility that is administered by a health care organization for the purpose of providing health care to a patient or patient population." xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
-
-[Term]
-id: OMRSE:00000132
-name: identity datum
+id: OMRSE:00000142
+name: human traveling information
+def: "An information content entity that is about human travel." []
 is_a: IAO:0000030 ! information content entity
+intersection_of: IAO:0000030 ! information content entity
+intersection_of: IAO:0000136 APOLLO_SV:00000532 ! is about human travel
+relationship: IAO:0000136 APOLLO_SV:00000532 ! is about human travel
+property_value: dc:contributor "Jie Zheng" xsd:string
 property_value: dc:creator "Amanda Hicks" xsd:string
-property_value: dc:creator "An identity datum is an information content entity that is the output of some identitification process and is intended to be a truthful statement about a person's social identity.  Unlike data items they are not necessilary contributed or acquired by a reliable method." xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
+property_value: IAO:0000119 "https://github.com/ufbmi/OMRSE/issues/79" xsd:anyURI
+
+[Term]
+id: OMRSE:00000172
+name: health care function
+is_a: BFO:0000034 ! function
+intersection_of: BFO:0000034 ! function
+intersection_of: BFO:0000054 OGMS:0000097 ! is realized by health care encounter
+relationship: BFO:0000054 OGMS:0000097 ! is realized by health care encounter
 
 [Term]
 id: OMRSE:00002072
 name: role in human social processes
-def: "A role inhering in an entity realized by social interactions in human society." []
+def: "A role that inheres in some entity that is realized in a social act." []
 comment: Previous definition: A role played by an entity in human social processes.
-is_a: BFO:0000023 ! role
+is_a: OMRSE:00000048 ! material entity role
+relationship: RO:0000052 BFO:0000040 {all_only="true"} ! inheres in material entity
 property_value: dc:contributor "Mathias Brochhausen" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse/releases/2022-12-21/omrse.owl" xsd:string
 
 [Term]
 id: PATO:0000001
@@ -16620,13 +16431,6 @@ property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
 property_value: IAO:0000412 "http://purl.obolibrary.org/obo/pato.owl" xsd:string
 
 [Term]
-id: PATO:0001025
-name: pressure
-namespace: quality
-subset: attribute_slim
-is_a: BFO:0000019 ! quality
-
-[Term]
 id: PATO:0001241
 name: physical object quality
 namespace: quality
@@ -16729,7 +16533,6 @@ property_value: IAO:0000119 "ISBN:0878932739" xsd:string
 id: PCO:0000018
 name: collection of organisms of the same species
 def: "A material entity that has as parts two or more organisms, viruses, or viroids of the same species and no members of any other species." []
-is_a: OMRSE:00000022 ! collection of organisms
 is_a: PCO:0000000 ! PCO:collection of organisms
 
 [Term]
@@ -17994,41 +17797,6 @@ domain: IAO:0000582 ! time stamped measurement datum
 is_a: has_part ! has part
 
 [Typedef]
-id: IAO:0020012
-name: obsolete_designates
-def: "x designates y, if for any given group of language users, x is an information content entity, is about y, and represents y in a linguistic context.." []
-property_value: dc:creator "Mathias Brochhausen" xsd:string
-property_value: IAO:0000231 IAO:0000228
-is_a: oboInOwl:ObsoleteProperty ! ObsoleteProperty
-is_obsolete: true
-replaced_by: IAO:0000219
-
-[Typedef]
-id: IAO:0020013
-name: is_borrowed_reference_to
-def: "x is_borrowed_reference_for y, if x is a proper name that is used to refer to one individual among a specific group after the dubbing process took place." []
-property_value: dc:creator "Mathias Brochhausen" xsd:string
-domain: IAO:0020000 ! identifier
-range: BFO:0000001 ! entity
-is_asymmetric: true
-
-[Typedef]
-id: IAO:0020014
-name: is_fixing_reference_to
-def: "x is_fixed_reference_for y, if x is an utterance or graphemes concretized as writing quality inhering in some independent continuant that is used to single out one individual and refer to the latter among a specific group after the." []
-property_value: dc:creator "Mathias Brochhausen" xsd:string
-is_asymmetric: true
-
-[Typedef]
-id: IAO:0020018
-name: is designated by
-def: "p1 is designated by p2, if p2 is an information content entity that represents p1 in a linguistic context." []
-property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-is_a: oboInOwl:ObsoleteProperty ! ObsoleteProperty
-is_obsolete: true
-is_asymmetric: true
-
-[Typedef]
 id: IDO:0000660
 name: results_in
 
@@ -18076,6 +17844,7 @@ property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
 domain: OBI:0000011 ! planned process
 is_a: RO:0000057 ! has_participant
+inverse_of: OBI:0000312 ! is_specified_output_of
 
 [Typedef]
 id: OBI:0000308
@@ -18118,28 +17887,57 @@ property_value: IAO:0000119 "OBI" xsd:string
 property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
 
 [Typedef]
-id: OMIABIS:0000008
+id: OBIB:0000732
 name: owns
+property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
+property_value: IAO:0000600 "This is a primitive relation. This relation is the foundation to the owners right to have the owned entity at his/her full disposal." xsd:string
+inverse_of: OBIB:0000735 ! is owned by
+is_asymmetric: true
+
+[Typedef]
+id: OBIB:0000735
+name: is owned by
+def: "a is owned by b if b has complete power over a. All rights and obligations of ownership are grounded in this (primitive) relation. The claims and obligations of ownership can be partially transferred to a third party by the owner, b." []
+property_value: IAO:0000119 "Reinach, A. Sämtliche Werke. Texkritische Ausgabe, München: Philosophia Verlag, 1989, p.189-204." xsd:string
+is_asymmetric: true
+
+[Typedef]
+id: OMIABIS:0000008
+name: obsolete owns
+name: owns
+property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000119 "Reinach, A. Sämtliche Werke. Texkritische Ausgabe, München: Philosophia Verlag, 1989, p.189-204." xsd:string
 property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
 property_value: IAO:0000600 "This is a primitive relation. This relation is the foundation to the owners right to have the owned entity at his/her full disposal. " xsd:string
+is_a: oboInOwl:ObsoleteProperty ! ObsoleteProperty
+is_obsolete: true
+replaced_by: OBIB:0000732
 
 [Typedef]
 id: OMIABIS:0000048
 name: is owned by
+name: obsolete is owned by
 def: "a is owned by b if b has complete power over a. All rights and obligations of ownership are grounded in this (primitive) relation. The claims and obligations of ownership can be partially transferred to a third party by the owner, b." []
 property_value: IAO:0000119 "Reinach, A. Sämtliche Werke. Texkritische Ausgabe, München: Philosophia Verlag, 1989, p.189-204." xsd:string
+property_value: IAO:0000119 "Reinach, A. S�mtliche Werke. Texkritische Ausgabe, M�nchen: Philosophia Verlag, 1989, p.189-204." xsd:string
 property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
+replaced_by: OBIB:0000735
+
+[Typedef]
+id: OMRSE:00000068
+name: is administered by
+is_asymmetric: true
 
 [Typedef]
 id: OMRSE:00000070
 name: is enrolled in school
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
+range: OMRSE:00000057 ! school organization
+is_asymmetric: true
 
 [Typedef]
 id: OMRSE:00000071
 name: is admitted to hospital
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
+range: OMRSE:00000056 ! hospital organization
 
 [Typedef]
 id: RO:0000052
