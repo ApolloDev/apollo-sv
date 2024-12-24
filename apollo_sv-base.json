@@ -27,17 +27,20 @@
         "pred" : "http://purl.org/dc/elements/1.1/creator",
         "val" : "Mathias Brochhausen"
       }, {
-        "pred" : "http://purl.org/dc/elements/1.1/title",
-        "val" : "Apollo Structured Vocabulary (Apollo-SV)"
-      }, {
         "pred" : "http://purl.org/dc/elements/1.1/type",
         "val" : "http://purl.obolibrary.org/obo/IAO_8000001"
+      }, {
+        "pred" : "http://purl.org/dc/terms/contributor",
+        "val" : "https://orcid.org/0000-0002-9881-1017"
       }, {
         "pred" : "http://purl.org/dc/terms/description",
         "val" : "An OWL2 ontology of phenomena in infectious disease epidemiology and population biology for use in epidemic simulation."
       }, {
         "pred" : "http://purl.org/dc/terms/license",
         "val" : "https://creativecommons.org/licenses/by/4.0/"
+      }, {
+        "pred" : "http://purl.org/dc/terms/title",
+        "val" : "Apollo Structured Vocabulary (Apollo-SV)"
       }, {
         "pred" : "http://www.referent-tracking.com/RTS_00000001",
         "val" : "C87985BA-6A8A-483A-A6B6-63975101F672"
@@ -49,12 +52,9 @@
         "val" : "When citing Apollo-SV, use the permanent URL of the ontology: http://purl.obolibrary.org/obo/apollo_sv.owl.  When referencing a specific component of the Apollo-SV such as a class, object property, annotation property, or individual, use the component's Uniform Resource Identifier (URI)."
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2023-01-10"
-      }, {
-        "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2024-08-15"
+        "val" : "2024-12-24"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/apollo_sv/releases/2024-08-15/apollo_sv-base.json"
+      "version" : "http://purl.obolibrary.org/obo/apollo_sv/releases/2024-12-24/apollo_sv-base.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000000",
@@ -12310,11 +12310,11 @@
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
-      "id" : "http://purl.org/dc/elements/1.1/title",
+      "id" : "http://purl.org/dc/elements/1.1/type",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
-      "id" : "http://purl.org/dc/elements/1.1/type",
+      "id" : "http://purl.org/dc/terms/contributor",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
@@ -12323,6 +12323,10 @@
       "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://purl.org/dc/terms/license",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/title",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {

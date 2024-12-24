@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: apollo_sv/releases/2024-08-15/apollo_sv-base.owl
+data-version: apollo_sv/releases/2024-12-24/apollo_sv-base.owl
 idspace: ace_lexicon http://attempto.ifi.uzh.ch/ace_lexicon# 
 idspace: dc http://purl.org/dc/elements/1.1/ 
 idspace: doap http://usefulinc.com/ns/doap# 
@@ -20,12 +20,12 @@ property_value: dc:contributor "Mike Wagner" xsd:string
 property_value: dc:contributor "Shawn T. Brown" xsd:string
 property_value: dc:contributor "William R. Hogan" xsd:string
 property_value: dc:creator "Mathias Brochhausen" xsd:string
-property_value: dc:title "Apollo Structured Vocabulary (Apollo-SV)" xsd:string
 property_value: dc:type IAO:8000001
-property_value: owl:versionInfo "2023-01-10" xsd:string
-property_value: owl:versionInfo "2024-08-15" xsd:string
+property_value: owl:versionInfo "2024-12-24" xsd:string
+property_value: terms:contributor "https://orcid.org/0000-0002-9881-1017" xsd:anyURI
 property_value: terms:description "An OWL2 ontology of phenomena in infectious disease epidemiology and population biology for use in epidemic simulation." xsd:string
 property_value: terms:license "https://creativecommons.org/licenses/by/4.0/" xsd:string
+property_value: terms:title "Apollo Structured Vocabulary (Apollo-SV)" xsd:string
 property_value: www:RTS_00000001 "C87985BA-6A8A-483A-A6B6-63975101F672" xsd:string
 property_value: www:RTS_00000002 "082D5D78-D916-457E-B4FD-365F86F45B30" xsd:string
 

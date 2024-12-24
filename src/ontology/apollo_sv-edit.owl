@@ -27,10 +27,11 @@
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/apollo_sv.owl">
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/apollo_sv/imports/geo_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/apollo_sv/imports/go_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/apollo_sv/imports/iao_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/apollo_sv/imports/ido_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/apollo_sv/imports/mf_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/apollo_sv/imports/ro_import.owl"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/apollo_sv/imports/iao_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/apollo_sv/imports/omrse_import.owl"/>
         <dc:contributor>Amanda Hicks</dc:contributor>
         <dc:contributor>John Levander</dc:contributor>
         <dc:contributor>Josh Hanna</dc:contributor>
@@ -39,13 +40,13 @@
         <dc:contributor>Shawn T. Brown</dc:contributor>
         <dc:contributor>William R. Hogan</dc:contributor>
         <dc:creator>Mathias Brochhausen</dc:creator>
-        <dc:title xml:lang="en">Apollo Structured Vocabulary (Apollo-SV)</dc:title>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0002-9881-1017</terms:contributor>
         <terms:description xml:lang="en">An OWL2 ontology of phenomena in infectious disease epidemiology and population biology for use in epidemic simulation.</terms:description>
         <terms:license>https://creativecommons.org/licenses/by/4.0/</terms:license>
+        <terms:title xml:lang="en">Apollo Structured Vocabulary (Apollo-SV)</terms:title>
         <www:RTS_00000001>C87985BA-6A8A-483A-A6B6-63975101F672</www:RTS_00000001>
         <www:RTS_00000002>082D5D78-D916-457E-B4FD-365F86F45B30</www:RTS_00000002>
         <rdfs:comment xml:lang="en">When citing Apollo-SV, use the permanent URL of the ontology: http://purl.obolibrary.org/obo/apollo_sv.owl.  When referencing a specific component of the Apollo-SV such as a class, object property, annotation property, or individual, use the component&apos;s Uniform Resource Identifier (URI).</rdfs:comment>
-        <owl:versionInfo>2023-01-10</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -177,6 +178,7 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
         <rdfs:label xml:lang="en">hasURL</rdfs:label>
     </owl:AnnotationProperty>
     
+
 
     <!-- http://purl.obolibrary.org/obo/OBI_0001847 -->
 
@@ -1037,6 +1039,7 @@ For example, the disposition of a piece of glass to bend light and the lattice s
     </owl:ObjectProperty>
     
 
+
     <!-- http://purl.obolibrary.org/obo/OBI_0000293 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000293"/>
@@ -1101,28 +1104,6 @@ For example, the disposition of a piece of glass to bend light and the lattice s
         <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
         <rdfs:label xml:lang="en">is owned by</rdfs:label>
     </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000070 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000070">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:label xml:lang="en">is enrolled in school</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000071 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000071">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:label xml:lang="en">is admitted to hospital</rdfs:label>
-    </owl:ObjectProperty>
-    
-
 
     <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
 
@@ -1549,6 +1530,7 @@ For example, the disposition of a piece of glass to bend light and the lattice s
         <rdfs:label xml:lang="en">is expressed as</rdfs:label>
     </owl:DatatypeProperty>
     
+
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -13866,6 +13848,7 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GEO_000000788"/>
     
 
+
     <!-- http://purl.obolibrary.org/obo/NBO_0000034 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NBO_0000034">
@@ -24729,541 +24712,6 @@ See vaccination and antiviral treatment.
         <apollo_sv:APOLLO_SV_0000040>url</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">unique resource locator</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000001 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000001">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000026"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A social role inhering in a human being.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen
-</obo:IAO_0000117>
-        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:label xml:lang="en">human social role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000007 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000007">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
-        <obo:IAO_0000115 xml:lang="en">A human social role borne by a human being being realized in behaviour which is considered socially appropriate for individuals of a specific sex in the context of a specific culture.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">http://en.wikipedia.org/wiki/Gender_role</obo:IAO_0000119>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <apollo_sv:APOLLO_SV_0000040>sex</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:label xml:lang="en">gender role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000008 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000008">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000007"/>
-        <obo:IAO_0000115 xml:lang="en">A gender role borne by a human being that is realized in behaviour which is considered socially appropriate for individuals of the male sex in the context of the culture in question.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">male gender</obo:IAO_0000118>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:label xml:lang="en">male gender role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000009 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000009">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000007"/>
-        <obo:IAO_0000115 xml:lang="en">A gender role borne by a human being that is realized in behaviour which is considered socially appropriate for individuals of the female sex in the context of the culture in question.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">female gender</obo:IAO_0000118>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:label xml:lang="en">female gender role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000010 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000010">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00002072"/>
-        <obo:IAO_0000115 xml:lang="en">A role in human social processes that is realized by health care processes such as seeking or providing treatment for disease and injury, diagnosing disease and injury, or undergoing diagnosis. </obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">health care role</obo:IAO_0000118>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:comment>Mathias Brochhausen</rdfs:comment>
-        <rdfs:label xml:lang="en">human health care role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000011 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000011">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000010"/>
-        <obo:IAO_0000115 xml:lang="en">A human health care role that inheres in an organism [human?] as the recipient of a health care service.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">A role borne by an organism being as the recipient of a health care service.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Amanda Hicks</obo:IAO_0000117>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">patient</obo:IAO_0000118>
-        <obo:IAO_0000119 xml:lang="en">http://en.wikipedia.org/wiki/Patient</obo:IAO_0000119>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:label xml:lang="en">patient role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000015 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000015">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000027"/>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:comment xml:lang="en">Definition needed, but the idea is that we want to differentiate between provider and payer organizations.  Some organizaitons have both roles (e.g., UPMC has a Hospital Division, a Physician Divison, and an Insurance Division).</rdfs:comment>
-        <rdfs:label xml:lang="en">health care provider organization role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000022 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000022">
-        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/PCO_0000000"/>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000027"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
-        <obo:IAO_0000115 xml:lang="en">An object aggregate of organisms.</obo:IAO_0000115>
-        <obo:IAO_0000600 xml:lang="en">This term refers to a real population, such as the population of Allegheny County or of the U.S.   As a set, it could null (size zero), for example the population of people in Allegheny County older than 130 years of age.  It could also be a single organism. The population is not restricted to members of one species.</obo:IAO_0000600>
-        <rdfs:comment xml:lang="en">Any arbitrary collection of organisms.  They need not be of the same taxonomic class.  </rdfs:comment>
-        <rdfs:label xml:lang="en">collection of organisms</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000023 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000023">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000022"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000018"/>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:comment xml:lang="en">An object aggregate all of whose components are human beings.</rdfs:comment>
-        <rdfs:label xml:lang="en">collection of humans</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000025 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000025">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00002072"/>
-        <obo:IAO_0000115 xml:lang="en">A role in human social processes that inheres in an organization.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:comment xml:lang="en">Defined class that we will ultimately move to an application ontology.  We are leaving here for now until we determine which application ontology: it is likely going to be an ontology that does not currently (2012-06-05) exist.
-
-Ditto for its current descendants.</rdfs:comment>
-        <rdfs:label xml:lang="en">organization social role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000026 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000026">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A role in human social processes that inheres in an organism.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">William R. Hogan
-Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:comment xml:lang="en">Defined class that we will ultimately move to an application ontology.  We are leaving here for now until we determine which application ontology: it is likely going to be an ontology that does not currently (2012-06-05) exist.
-
-Ditto for its current descendants.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Includes animals as well as humans.  For example, pet, assistance animal, animal grown for food, work animal, domesticated animal, K-9, etc.  Human roles include gender role, party to legal entities, health care provider roles like doctor, nurse, etc.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Previous definition: A role in human social processes played by an organism.</rdfs:comment>
-        <rdfs:label xml:lang="en">organism social role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000027 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000027">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000025"/>
-        <obo:IAO_0000115 xml:lang="en">An organization social role that is realized by a health care process.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:comment xml:lang="en">Previous definition: An organization social role played by an organization in health care processes.</rdfs:comment>
-        <rdfs:label xml:lang="en">organization health care role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000033 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000033">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000027"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000245"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000245"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
-        <obo:IAO_0000115 xml:lang="en">An aggregate of organizations that have some feature in common, but is not itself an organization.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
-        <rdfs:comment xml:lang="en">It is often convenient to group organizations together that otherwise might not even interact with one another. </rdfs:comment>
-        <rdfs:label xml:lang="en">aggregate of organizations</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000052 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000052">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
-        <obo:IAO_0000115 xml:lang="en">A function inhering in a facility that manifests by the facility participating in providing inpatient and outpatient healthcare to a patient population.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:label xml:lang="en">hospital function</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000053 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000053">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
-        <obo:IAO_0000115 xml:lang="en">A function inhering in a facility that manifests by the facility participating in providing formal education to a student population.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:label xml:lang="en">school function</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000054 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000054">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000015"/>
-        <obo:IAO_0000115 xml:lang="en">A healthcare provider role that inheres in an organization and is realized by providing inpatient and outpatient care.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:label xml:lang="en">hospital role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000055 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000055">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
-        <obo:IAO_0000117 xml:lang="en">An organization social role that inheres in an organization and is realized by providing formal education to students.</obo:IAO_0000117>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:label xml:lang="en">school role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000056 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000056">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000245"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000054"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000245"/>
-        <obo:IAO_0000115 xml:lang="en">An organization that is the bearer of a hospital role.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:label xml:lang="en">hospital organization</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000057 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000057">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000245"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000055"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000245"/>
-        <obo:IAO_0000115 xml:lang="en">An organization that is the bearer of a school role.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:label xml:lang="en">school organization</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000058 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000058">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000001"/>
-        <obo:IAO_0000115 xml:lang="en">A human social role that is realized by the process of formal education that the bearer undergoes.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:label xml:lang="en">student role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000059 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000059">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000055"/>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <apollo_sv:APOLLO_SV_0000040>preschool</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:comment xml:lang="en">Key motivating use case was Synthia synthetic population data.
-</rdfs:comment>
-        <rdfs:label xml:lang="en">nursery school role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000060 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000060">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000055"/>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <apollo_sv:APOLLO_SV_0000040>primarySchool</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:comment xml:lang="en">Key motivating use case was Synthia synthetic population data.</rdfs:comment>
-        <rdfs:label xml:lang="en">primary school role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000061 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000061">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <obo:IAO_0000115 xml:lang="en">A material entity that is a human made strcuture with firm connection between its foundation and the ground.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">http://de.wikipedia.org/wiki/Bauwerk</obo:IAO_0000119>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:comment xml:lang="en">&quot;Building&quot; is a subclass of this. </rdfs:comment>
-        <rdfs:comment xml:lang="en">This type of entity is referred to as &quot;Bauwerk&quot; or &quot;Bauliche Anlage&quot;.</rdfs:comment>
-        <rdfs:label xml:lang="en">architectural structure</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000062 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000062">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000061"/>
-        <obo:IAO_0000115 xml:lang="en">An architectural structure that bears some function.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:label xml:lang="en">facility</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000063 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000063">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000102"/>
-        <obo:IAO_0000115 xml:lang="en">A facility that is run by a hospital organization and is the bearer of a hospital function.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <apollo_sv:APOLLO_SV_0000040>HealthcareFacility</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:label xml:lang="en">hospital facility</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000064 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000064">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000062"/>
-        <obo:IAO_0000115 xml:lang="en">A facility that is run by a school organization and is the bearer of a school function.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <apollo_sv:APOLLO_SV_0000040>SchoolFacility</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:label xml:lang="en">school facility</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000065 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000065">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000055"/>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <apollo_sv:APOLLO_SV_0000040>secondarySchool</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:comment xml:lang="en">Key motivating use case was Synthia synthetic population data.</rdfs:comment>
-        <rdfs:label xml:lang="en">secondary school role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000074 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000074">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <obo:IAO_0000115 xml:lang="en">A material entity that has as parts one or more sites large enough to contain humans, has as part one or more material entities that separates it from other sites, and bears a residence function.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Amanda Hicks</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">https://github.com/ufbmi/OMRSE/wiki/Housing-unit-and-Household</obo:IAO_0000119>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <apollo_sv:APOLLO_SV_0000040>houses</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:comment xml:lang="en">Housing units are individuated by their residence functions.</rdfs:comment>
-        <rdfs:label xml:lang="en">housing unit</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000076 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000076">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <obo:IAO_0000115 xml:lang="en">A human or collection of humans that occupies a housing unit by storing their possessions there and habitually sleeping there thereby participating in the realization of its residence function.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Amanda Hicks</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <apollo_sv:APOLLO_SV_0000040>Household</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:label xml:lang="en">household</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000078 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000078">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000062"/>
-        <obo:IAO_0000117 xml:lang="en">Amanda Hicks</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <apollo_sv:APOLLO_SV_0000040>workplace</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:label xml:lang="en">workplace facility</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000079 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000079">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
-        <obo:IAO_0000115 xml:lang="en">a function inhering in a material entity that is realized by that material entity being the site where the work of some organization is carried out</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Amanda Hicks</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:label xml:lang="en">workplace function</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000098 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000098">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000132"/>
-        <obo:IAO_0000115 xml:lang="en">A racial identity is an information content entity that is the output of some racial identitification process and is intended to be a truthful statement about the genetic or cultural race of a person.  Unlike data items they are not necessilary contributed or acquired by a reliable method.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <apollo_sv:APOLLO_SV_0000040>race</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:label xml:lang="en">racial identity datum</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000102 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000102">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000062"/>
-        <obo:IAO_0000117 xml:lang="en">A facility that is administered by a health care organization for the purpose of providing health care to a patient or patient population.</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <rdfs:label xml:lang="en">health care facility</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000132 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000132">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse.owl</obo:IAO_0000412>
-        <dc:creator>Amanda Hicks</dc:creator>
-        <dc:creator>An identity datum is an information content entity that is the output of some identitification process and is intended to be a truthful statement about a person&apos;s social identity.  Unlike data items they are not necessilary contributed or acquired by a reliable method.</dc:creator>
-        <rdfs:label xml:lang="en">identity datum</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00002072 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00002072">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
-        <obo:IAO_0000115 xml:lang="en">A role inhering in an entity realized by social interactions in human society.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Matthew Diller</obo:IAO_0000117>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/omrse/releases/2022-12-21/omrse.owl</obo:IAO_0000412>
-        <dc:contributor xml:lang="en">Mathias Brochhausen</dc:contributor>
-        <rdfs:comment xml:lang="en">Previous definition: A role played by an entity in human social processes.</rdfs:comment>
-        <rdfs:label xml:lang="en">role in human social processes</rdfs:label>
-    </owl:Class>
-    
-
 
     <!-- http://purl.obolibrary.org/obo/PATO_0000040 -->
 
@@ -26265,5 +25713,5 @@ np.average(range(1,11), weights=range(10,0,-1))</obo:STATO_0000391>
 
 
 
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
