@@ -37,6 +37,9 @@ import_group:
       slme_individuals: exclude
     - id: iao
       module_type: mirror
+    - id: omrse
+      module_type: slme
+      slme_individuals: exclude
 use_custom_import_module: TRUE
 robot_java_args: '-Xmx8G'
 custom_makefile_header: |
