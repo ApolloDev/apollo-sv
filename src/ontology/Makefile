@@ -16,7 +16,7 @@
 # 3. [Update repo to latest ODK](update_repo)
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                7d55a5e64bbf9602fbe7499e16bf6dd530f9b45764e7a5ae10cabe071b633897
+CONFIG_HASH=                f10687d13b9fb4d82c6a832e60b296d76dadc31432fe22bb1f06ab3cc66d4a02
 
 
 # ----------------------------------------
@@ -193,7 +193,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  ro geo ido mf go iao omrse dron
+IMPORTS =  ro geo ido mf go iao omrse dron ogms
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -637,6 +637,14 @@ mirror-omrse: | $(TMPDIR)
 mirror-dron: | $(TMPDIR)
 	curl -L $(OBOBASE)/dron.owl.gz --create-dirs -o $(MIRRORDIR)/dron.owl.gz --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(MIRRORDIR)/dron.owl.gz -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: ogms
+.PHONY: mirror-ogms
+.PRECIOUS: $(MIRRORDIR)/ogms.owl
+mirror-ogms: | $(TMPDIR)
+	curl -L $(OBOBASE)/ogms.owl --create-dirs -o $(TMPDIR)/ogms-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) remove -i $(TMPDIR)/ogms-download.owl --base-iri http://purl.obolibrary.org/obo/OGMS_ --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)

@@ -20,7 +20,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0019953>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0019954>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0022414>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0032501>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0032504>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0044403>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0044409>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0044419>))
@@ -426,15 +425,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0032501> "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0032501> "multicellular organismal process")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0032501> <http://purl.obolibrary.org/obo/GO_0008150>)
-
-# Class: <http://purl.obolibrary.org/obo/GO_0032504> (obsolete multicellular organism reproduction)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:isa_complete") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:jid") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0032504> "OBSOLETE. The biological process in which new individuals are produced by one or two multicellular organisms. The new individuals inherit some proportion of their genetic material from the parent or parents.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <http://purl.obolibrary.org/obo/GO_0032504> <http://purl.obolibrary.org/obo/GO_0048609>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0032504> "biological_process")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0032504> "GO:0032504")
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0032504> "The reason for obsoletion is that this term is equivalent to multicellular organismal reproductive process.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0032504> "obsolete multicellular organism reproduction")
 
 # Class: <http://purl.obolibrary.org/obo/GO_0044403> (biological process involved in symbiotic interaction)
 

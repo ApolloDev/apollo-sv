@@ -45,6 +45,11 @@ import_group:
       use_gzipped: TRUE
       base_iris: 
         - http://purl.obolibrary.org/obo/DRON_
+    - id: ogms
+      module_type: filter
+      make_base: true
+      base_iris:
+        - http://purl.obolibrary.org/obo/OGMS_
 use_custom_import_module: TRUE
 robot_java_args: '-Xmx16G'
 custom_makefile_header: |
