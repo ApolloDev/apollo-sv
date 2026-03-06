@@ -1531,8 +1531,7 @@ Declaration(AnnotationProperty(rdfs:label))
 
 # Annotation Property: obo:APOLLO_SV_00000319 (NLM ID)
 
-AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000319 "National Library of Medicine Identifier
-"@en)
+AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000319 "National Library of Medicine Identifier"@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000319 "This identifier is the one that the National Library of Medicine uses to identify journals uniquely in PubMed."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000319 "NLM ID"@en)
 
@@ -1665,7 +1664,7 @@ AnnotationAssertion(rdfs:label dc:type "dc:type")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasAlternativeId "has_alternative_id")
 
-# Annotation Property: oboInOwl:hasBroadSynonym (has_broad_synonym)
+# Annotation Property: oboInOwl:hasBroadSynonym (has broad synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
@@ -1673,11 +1672,11 @@ AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
-# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
+# Annotation Property: oboInOwl:hasExactSynonym (has exact synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
 
-# Annotation Property: oboInOwl:hasNarrowSynonym (has_narrow_synonym)
+# Annotation Property: oboInOwl:hasNarrowSynonym (has narrow synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasNarrowSynonym "has_narrow_synonym")
 
@@ -1685,7 +1684,7 @@ AnnotationAssertion(rdfs:label oboInOwl:hasNarrowSynonym "has_narrow_synonym")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasOBONamespace "has_obo_namespace")
 
-# Annotation Property: oboInOwl:hasRelatedSynonym (has_related_synonym)
+# Annotation Property: oboInOwl:hasRelatedSynonym (has related synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasRelatedSynonym "has_related_synonym")
 
@@ -1729,7 +1728,7 @@ SubObjectPropertyOf(obo:APOLLO_SV_00000004 oboInOwl:ObsoleteProperty)
 
 # Object Property: obo:APOLLO_SV_00000028 (obsolete is based on)
 
-AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000028 "p is based on e, if p is a purely intentional entity, e is an entity and p assumption/simulation that e exists regardless of the truth of this assumption. "@en)
+AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000028 "p is based on e, if p is a purely intentional entity, e is an entity and p assumption/simulation that e exists regardless of the truth of this assumption."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000028 "obsolete is based on"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000028 "true"^^xsd:boolean)
 SubObjectPropertyOf(obo:APOLLO_SV_00000028 oboInOwl:ObsoleteProperty)
@@ -1747,7 +1746,7 @@ ObjectPropertyRange(obo:APOLLO_SV_00000037 ObjectUnionOf(obo:BFO_0000004 obo:BFO
 
 # Object Property: obo:APOLLO_SV_00000057 (instantiates)
 
-AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000057 "A relation between to particulars such that aRb where b can be any kind of entity while the second is a universal. b instantiates a at some times. "@en)
+AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000057 "A relation between to particulars such that aRb where b can be any kind of entity while the second is a universal. b instantiates a at some times."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000057 "Barry Smith, Waclaw Kusnierczyk, Daniel Schober, Werner Ceusters, “Towards a Reference Terminology for Ontology Research and Development in the Biomedical Domain”, O. Bodenreider, ed., Proceedings of KR-MED, 2006, 57-66. Also available online at: http://ceur-ws.org/Vol-222.")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000057 "instantiates"@en)
 AsymmetricObjectProperty(obo:APOLLO_SV_00000057)
@@ -2129,7 +2128,7 @@ AnnotationAssertion(obo:IAO_0000412 obo:OMIABIS_0000048 "http://purl.obolibrary.
 AnnotationAssertion(rdfs:label obo:OMIABIS_0000048 "is owned by"@en)
 SubObjectPropertyOf(obo:OMIABIS_0000048 owl:topObjectProperty)
 
-# Object Property: obo:RO_0000053 (bearer of)
+# Object Property: obo:RO_0000053 (has characteristic)
 
 AnnotationAssertion(obo:IAO_0000118 obo:RO_0000053 "bearer of"@en)
 AnnotationAssertion(obo:IAO_0000118 obo:RO_0000053 "bearer_of"@en)
@@ -2506,10 +2505,7 @@ AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000011 "true"^^xsd:boolean)
 # Class: obo:APOLLO_SV_00000012 (simulation time step value)
 
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000012 "A numeral that is part of a simulation time step action specification."@en)
-AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000012 "A number of time step units in a time step of a simulation.  
-
-For example, if the time step is 6 hours, then this value is 6.
-"@en)
+AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000012 "A number of time step units in a time step of a simulation.  For example, if the time step is 6 hours, then this value is 6."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000012 "numberOfUnitsOfTimeInOneSimulatorStep")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000012 "simulation time step value"@en)
 SubClassOf(obo:APOLLO_SV_00000012 obo:IAO_0000029)
@@ -2533,10 +2529,7 @@ SubClassOf(obo:APOLLO_SV_00000014 obo:UO_0000003)
 # Class: obo:APOLLO_SV_00000015 (simulation run length)
 
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000015 "The action specification that specifies the number of time steps a simulation is going to run."@en)
-AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000015 "The number of time steps in a simulator run.
-
-For example, if run length is 10 and the time step is 6 hours, then the simulator will simulate a 60-hour period that begins at simulator time zero.
-"@en)
+AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000015 "The number of time steps in a simulator run. For example, if run length is 10 and the time step is 6 hours, then the simulator will simulate a 60-hour period that begins at simulator time zero."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000015 "runLength")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000015 "simulation run length"@en)
 SubClassOf(obo:APOLLO_SV_00000015 obo:APOLLO_SV_00000793)
@@ -2559,11 +2552,7 @@ SubClassOf(obo:APOLLO_SV_00000016 ObjectSomeValuesFrom(obo:IAO_0000136 ObjectInt
 
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000017 "A duration of the time interval between the host acquiring an infection and the host bearing a contagiousness disposition during the same disease course within a population of hosts."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000017 "Mathias Brochhausen")
-AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000017 "A period during which an organism of a particular species, who is infected with a particular pathogen, is not yet able to infect susceptible organisms of a particular species.  
-
-Note that the susceptible and infected organisms can be of different species.
-
-"@en)
+AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000017 "A period during which an organism of a particular species, who is infected with a particular pathogen, is not yet able to infect susceptible organisms of a particular species.  Note that the susceptible and infected organisms can be of different species."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000017 "latentPeriodDuration")
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000017 "MB: In order to get the temporal occupation relations I added properties that I renamed with BFO2 URIs"@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000017 "The duration of the period between when an organism becomes infected and when it becomes infectious."@en)
@@ -2599,11 +2588,10 @@ SubClassOf(obo:APOLLO_SV_00000021 obo:APOLLO_SV_00000617)
 
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000022 "The count of (simulated organisms) in a simulated population."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000022 "Mathias Brochhausen")
-AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000022 "The number of simulated organisms in a simulated population.  The number does not have to be an integer.  "@en)
+AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000022 "The number of simulated organisms in a simulated population.  The number does not have to be an integer."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000022 "MW: I know this causes problems with our set-theoretic definition.  Unfortunately the compartmental models produce fractional counts at each of their time steps, including the final step.  
 
-Any ideas?  I’ve considered and rejected allowing individual organisms to be fractional.  Perhaps if we just replace the term “cardinality” in the definition with ‘computed size’
-"@en)
+Any ideas?  I’ve considered and rejected allowing individual organisms to be fractional.  Perhaps if we just replace the term “cardinality” in the definition with ‘computed size’"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000022 "count of simulated population"@en)
 SubClassOf(obo:APOLLO_SV_00000022 obo:APOLLO_SV_00000617)
 SubClassOf(obo:APOLLO_SV_00000022 ObjectIntersectionOf(obo:APOLLO_SV_00000617 ObjectSomeValuesFrom(obo:IAO_0000136 obo:APOLLO_SV_00000031)))
@@ -2611,7 +2599,7 @@ SubClassOf(obo:APOLLO_SV_00000022 ObjectIntersectionOf(obo:APOLLO_SV_00000617 Ob
 # Class: obo:APOLLO_SV_00000023 (vaccination dose schedule)
 
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000023 "An action specification comprising the number of doses and their timing for a vaccination of an individual organism against a specific infectious agent."@en)
-AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000023 "A vaccination schedule specifies the intended timing of initial and subsequent booster doses of vaccine for an individual organism. "@en)
+AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000023 "A vaccination schedule specifies the intended timing of initial and subsequent booster doses of vaccine for an individual organism."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000023 "vaccination dose schedule"@en)
 SubClassOf(obo:APOLLO_SV_00000023 obo:APOLLO_SV_00000084)
 
@@ -2622,8 +2610,7 @@ AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000024 "The fraction of indi
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000024 "MB: This class is still awaiting its class restriction. It should be restricted as being about a population that has members that are eligible for a vaccination against the members that are eligible and consented the vaccination. There is a class \"eligibility rule\" in OBI (http://purl.obolibrary.org/obo/OBI_0500026), but it is restricted by definition to studies. I put in an issue in the OBI issue tracker. The consenting process and its specified outcome should be done in d-acts, but needs to be done properly."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000024 "MW: I still see enough similarities at the abstract level among some control measures that we might add the concepts “Control measure compliance”, “Control measure efficacy”  and “control measure efficacy delay.”    We could then post-coordinate particular control measures such as vaccine.
 
-It is worth noting that there are control measures such as closing schools that are not applied at the individual level.   We have not represented those control measures yet.
-"@en)
+It is worth noting that there are control measures such as closing schools that are not applied at the individual level.   We have not represented those control measures yet."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000024 "vaccination compliance"@en)
 SubClassOf(obo:APOLLO_SV_00000024 obo:OBI_0302867)
 
@@ -2662,8 +2649,8 @@ SubClassOf(obo:APOLLO_SV_00000027 obo:APOLLO_SV_00000173)
 
 # Class: obo:APOLLO_SV_00000029 (infectious disease control strategy execution)
 
-AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000029 "A process that is applied to a population with the goal of preventing, or mitigating the severity of an infectious disease.  "@en)
-AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000029 "A process that is applied to a population with the goal of preventing, or mitigating the severity of an infectious disease.  "@en)
+AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000029 "A process that is applied to a population with the goal of preventing, or mitigating the severity of an infectious disease."@en)
+AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000029 "A process that is applied to a population with the goal of preventing, or mitigating the severity of an infectious disease."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000029 "infectious disease control strategy execution"@en)
 EquivalentClasses(obo:APOLLO_SV_00000029 ObjectIntersectionOf(obo:OBI_0000011 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:IAO_0000104 ObjectSomeValuesFrom(obo:BFO_0000051 obo:APOLLO_SV_00000075))))))
 SubClassOf(obo:APOLLO_SV_00000029 obo:OBI_0000011)
@@ -2742,10 +2729,9 @@ SubClassOf(obo:APOLLO_SV_00000040 obo:APOLLO_SV_00000034)
 
 # Class: obo:APOLLO_SV_00000041 (simulation of recovered organism)
 
-AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000041 "A simulated organism in a simulated population that is not susceptible. "@en)
+AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000041 "A simulated organism in a simulated population that is not susceptible."@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000041 "A simulated organism in a simulated population that is neither susceptible, exposed, nor infectious for a particular simulated disease. 
-Note that the name for this concept, were it to be named based on its intent, would be ‘immune.’  However, in the practice domain of epidemiology this concept is traditionally termed ‘recovered.’  The problem with the traditional name is that organisms can be considered ‘recovered’ by virtue of having been vaccinated, which differs from lay usage.
-"@en)
+Note that the name for this concept, were it to be named based on its intent, would be ‘immune.’  However, in the practice domain of epidemiology this concept is traditionally termed ‘recovered.’  The problem with the traditional name is that organisms can be considered ‘recovered’ by virtue of having been vaccinated, which differs from lay usage."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000041 "simulation of recovered organism"@en)
 EquivalentClasses(obo:APOLLO_SV_00000041 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:APOLLO_SV_00000067 ObjectIntersectionOf(obo:OBI_0100026 ObjectComplementOf(ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000172)))) ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000005)))
 SubClassOf(obo:APOLLO_SV_00000041 obo:APOLLO_SV_00000034)
@@ -2762,7 +2748,7 @@ SubClassOf(obo:APOLLO_SV_00000042 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectInt
 
 # Class: obo:APOLLO_SV_00000043 (reproduction number)
 
-AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000043 "The average value of transmissions of the infectious agent from one infected organism to another, resulting in an infection. "@en)
+AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000043 "The average value of transmissions of the infectious agent from one infected organism to another, resulting in an infection."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000043 "Mathias Brochhausen")
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000043 "The number of susceptible organisms that each infected organism infects.  ‘Infects’ carries the same meaning as ‘exposes’ in epidemic simulations such as SEIR simulation."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000043 "ReproductionNumber")
@@ -2814,15 +2800,15 @@ SubClassOf(obo:APOLLO_SV_00000048 obo:APOLLO_SV_00000227)
 
 # Class: obo:APOLLO_SV_00000049 (antiviral efficacy delay)
 
-AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000049 "The value of the time interval between an organism's taking antivirals against a specific infectious agent and the organism’s losing its infectious agent host role. "@en)
-AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000049 "The duration of time (expressed in time steps) between initiation of a particular antiviral treatment to an organism and when the organism becomes non infectious or, if the antiviral is being administered prophylactically, protected from infection. "@en)
+AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000049 "The value of the time interval between an organism's taking antivirals against a specific infectious agent and the organism’s losing its infectious agent host role."@en)
+AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000049 "The duration of time (expressed in time steps) between initiation of a particular antiviral treatment to an organism and when the organism becomes non infectious or, if the antiviral is being administered prophylactically, protected from infection."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000049 "antiviral efficacy delay"@en)
 SubClassOf(obo:APOLLO_SV_00000049 obo:APOLLO_SV_00000243)
 
 # Class: obo:APOLLO_SV_00000050 (antiviral compliance)
 
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000050 "The fraction expressing the probability that an organism will be consented to receive antiviral treatment when eligible."@en)
-AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000050 "The fraction of individuals in a simulated population that will accept antiviral treatment if offered. "@en)
+AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000050 "The fraction of individuals in a simulated population that will accept antiviral treatment if offered."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000050 "antiviral cm compliance")
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000050 "MB: This class is still awaiting its class restriction. It should be restricted as being about a population that has members that are eligible for an antiviral treatment against the members that are eligible and consented the antiviral treatment. There is a class \"eligibility rule\" in OBI (http://purl.obolibrary.org/obo/OBI_0500026), but it is restricted by definition to studies. I put in an issue in the OBI issue tracker. The consenting process and its specified outcome should be done in d-acts, but needs to be done properly."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000050 "MW: Since the estimates that modelers use are from real populations, I have two questions:
@@ -2835,7 +2821,7 @@ SubClassOf(obo:APOLLO_SV_00000050 obo:OBI_0302867)
 
 # Class: obo:APOLLO_SV_00000051 (antiviral supply schedule)
 
-AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000051 "An action specification giving the number of doses of an antiviral to be made available during a specific time interval. "@en)
+AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000051 "An action specification giving the number of doses of an antiviral to be made available during a specific time interval."@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000051 "Counts of antiviral doses that become available in a specific location per time step unit."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000051 "antiviral supply schedule"@en)
 SubClassOf(obo:APOLLO_SV_00000051 obo:APOLLO_SV_00000795)
@@ -2903,13 +2889,12 @@ SubClassOf(obo:APOLLO_SV_00000059 obo:APOLLO_SV_00000034)
 
 # Class: obo:APOLLO_SV_00000060 (simulation of antiviral control measure)
 
-AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000060 "The simulation of an antiviral control measure. ")
+AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000060 "The simulation of an antiviral control measure."@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000060 "A type of control measure based on administration of chemotherapeutic agents to an infected or high-risk organism that kill or inhibit replication of viruses within a simulated organism."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000060 "antiviral control measure")
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000060 "MB: For all the antiviral-related classes I referred to ChEBI: Antiviral class. I wasn't able to use the plug-in though (there was a JAVA heap space error, probably due to the size of ChEBI).
 AND (more importantly) I did not re-use any of the ChEBI hierarchy which, even in the BFO version is a mess.
-Maybe we need to discuss this.
-"@en)
+Maybe we need to discuss this."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000060 "simulation of antiviral control measure"@en)
 SubClassOf(obo:APOLLO_SV_00000060 obo:APOLLO_SV_00000070)
 
@@ -2944,8 +2929,7 @@ AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000064 "MB: The ontological sta
 
 One property that seems to be common among simulations in comparison to many other fictions is the fact that the chronological order of the simulated purely intentional entities is not changed in the process of simulating.
 
-While in many pieces of fiction the order in which the purely intentional entities are created can vary, this is not the case for simulations.
-"@en)
+While in many pieces of fiction the order in which the purely intentional entities are created can vary, this is not the case for simulations."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000064 "simulation time series"@en)
 SubClassOf(obo:APOLLO_SV_00000064 obo:IAO_0000584)
 
@@ -2992,12 +2976,8 @@ SubClassOf(obo:APOLLO_SV_00000069 obo:IAO_0000029)
 
 # Class: obo:APOLLO_SV_00000070 (simulation)
 
-AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000070 "A purely intentional entity that simulates an entity and its properties.
-
-"@en)
-AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000070 "A purely intentional entity that simulates an entity and its properties.
-
-"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000070 "A purely intentional entity that simulates an entity and its properties."@en)
+AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000070 "A purely intentional entity that simulates an entity and its properties."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000070 "simulation")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000070 "simulation"@en)
 EquivalentClasses(obo:APOLLO_SV_00000070 ObjectIntersectionOf(obo:APOLLO_SV_00000000 ObjectSomeValuesFrom(obo:APOLLO_SV_00000067 obo:BFO_0000001)))
@@ -3104,7 +3084,7 @@ SubClassOf(obo:APOLLO_SV_00000083 obo:APOLLO_SV_00001008)
 # Class: obo:APOLLO_SV_00000084 (control strategy dose schedule)
 
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000084 "An action specification comprising the number of doses and their timing for administering a substance to an individual organism to prevent the negative effects of a specific infectious agent to that organism."@en)
-AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000084 "A control strategy dose schedule specifies the intended timing of initial and subsequent doses of for example a vaccine or an antiviral for an individual organism. "@en)
+AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000084 "A control strategy dose schedule specifies the intended timing of initial and subsequent doses of for example a vaccine or an antiviral for an individual organism."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000084 "control strategy dose schedule"@en)
 SubClassOf(obo:APOLLO_SV_00000084 obo:APOLLO_SV_00000795)
 SubClassOf(obo:APOLLO_SV_00000084 ObjectSomeValuesFrom(obo:BFO_0000050 obo:APOLLO_SV_00000086))
@@ -3149,8 +3129,7 @@ AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000089 "A vaccination effica
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000089 "VaccinationEfficacyMeasured")
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000089 "1. Apollo-SV does not distinguish between ‘vaccine efficacy’ and ‘vaccine effectiveness.’
 
-2. Apollo-SV also considers the use of ‘vaccine’ in both terms a misnomer.
-"@en)
+2. Apollo-SV also considers the use of ‘vaccine’ in both terms a misnomer."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000089 "measured vaccination efficacy"@en)
 SubClassOf(obo:APOLLO_SV_00000089 obo:IAO_0000109)
 SubClassOf(obo:APOLLO_SV_00000089 ObjectIntersectionOf(obo:IAO_0000109 ObjectSomeValuesFrom(obo:IAO_0000136 obo:APOLLO_SV_00000025) ObjectSomeValuesFrom(obo:IAO_0000136 ObjectIntersectionOf(obo:PCO_0000000 ObjectAllValuesFrom(obo:RO_0002351 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000142)))))))
@@ -3212,8 +3191,8 @@ AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000096 "true"^^xsd:boolean)
 
 # Class: obo:APOLLO_SV_00000097 (ecosystem)
 
-AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000097 "The sum of all biotic and abiotic entities in a geographical region. "@en)
-AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000097 "The sum of all biotic and abiotic entities in a geographical region. "@en)
+AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000097 "The sum of all biotic and abiotic entities in a geographical region."@en)
+AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000097 "The sum of all biotic and abiotic entities in a geographical region."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000097 "Ecosystem")
 AnnotationAssertion(dc:creator obo:APOLLO_SV_00000097 "William R. Hogan"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000097 "ecosystem"@en)
@@ -3356,19 +3335,16 @@ SubClassOf(obo:APOLLO_SV_00000114 ObjectSomeValuesFrom(obo:RO_0002087 obo:APOLLO
 
 # Class: obo:APOLLO_SV_00000115 (infection acquisition)
 
-AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000115 "The biological process of pathogen organism(s) of a particular biological taxon entering (the tissues of the body of) a host organism of another taxon from a contagious host or a contaminated thing and reproducing using host resources"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000115 "The biological process of pathogen organism(s) of a particular biological taxon entering (the tissues of the body of) a host organism of another taxon from a contagious host or a contaminated thing and reproducing using host resources."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000115 "Mathias Brochhausen"@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000115 "A process where a susceptible organism from a particular species becomes infected by a particular pathogen.  The infection is acquired from an infected organism of a particular species or from a contaminated thing.  
 
-Note that the susceptible and infectious organisms can be of different species.
-
-"@en)
+Note that the susceptible and infectious organisms can be of different species."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000115 "InfectionAcquisition")
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000115 "Apollo-SV defines infection acquisition rather than infection transmission, which is the direction of movement of a pathogen in current use.  The Apollo-SV conceptualization is simpler when accounting for infections acquired from contaminated things.
 The likelihood of acquisition is expressed by parameters such as the basic reproduction rate and transmission coefficient.   
-An infection is acquired from an infectious organism or a contaminated thing. 
-"@en)
-AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000115 "Cannot acquire from colonized host directly - contamination results from colonized or contaminated thing and new host picks it up from contaminated thing"@en)
+An infection is acquired from an infectious organism or a contaminated thing."@en)
+AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000115 "Cannot acquire from colonized host directly - contamination results from colonized or contaminated thing and new host picks it up from contaminated thing."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000115 "infection acquisition"@en)
 EquivalentClasses(obo:APOLLO_SV_00000115 ObjectIntersectionOf(obo:GO_0044409 ObjectSomeValuesFrom(obo:BFO_0000066 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000172))) ObjectSomeValuesFrom(obo:RO_0000057 ObjectUnionOf(obo:APOLLO_SV_00000166 ObjectIntersectionOf(obo:APOLLO_SV_00000238 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000182)))) ObjectSomeValuesFrom(obo:RO_0002411 obo:APOLLO_SV_00000114)))
 SubClassOf(obo:APOLLO_SV_00000115 obo:GO_0044409)
@@ -3482,8 +3458,7 @@ SubClassOf(obo:APOLLO_SV_00000130 obo:IAO_0000001)
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000131 "A data item that specifies the fraction of the population known to have undergone a specific event that results in starting or stopping an infectious disease control strategy."@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000131 "A fraction of the population known to have undergone a specific event that results in starting or stopping an infectious disease control strategy.
 
-The event could be infection acquisition, vaccination, antiviral treatment, etc.
-"@en)
+The event could be infection acquisition, vaccination, antiviral treatment, etc."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000131 "reactiveControlMeasureThreshold")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000131 "reactive control strategy threshold"@en)
 SubClassOf(obo:APOLLO_SV_00000131 obo:IAO_0000027)
@@ -3529,7 +3504,7 @@ SubClassOf(obo:APOLLO_SV_00000136 obo:APOLLO_SV_00000194)
 
 # Class: obo:APOLLO_SV_00000137 (vaccine valence)
 
-AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000137 "the number of distinct antigenic strains in a vaccine product "@en)
+AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000137 "The number of distinct antigenic strains in a vaccine product."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000137 "valence")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000137 "vaccine valence"@en)
 SubClassOf(obo:APOLLO_SV_00000137 obo:APOLLO_SV_00000032)
@@ -3782,7 +3757,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000166 "An independent conti
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000166 "Mathias Brochhausen"@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000166 "An independent continuant that is the localization of a pathogen, but is not undergoing an infection."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000166 "ContaminatedThing")
-AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000166 "A contaminated thing is an entity that contains a pathogen (either internal to itself or on its surface) that is not undergoing an infection.    "@en)
+AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000166 "A contaminated thing is an entity that contains a pathogen (either internal to itself or on its surface) that is not undergoing an infection."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000166 "contaminated thing"@en)
 EquivalentClasses(obo:APOLLO_SV_00000166 ObjectIntersectionOf(obo:BFO_0000004 ObjectSomeValuesFrom(obo:RO_0001015 ObjectIntersectionOf(obo:APOLLO_SV_00000237 ObjectComplementOf(ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000114))))))
 SubClassOf(obo:APOLLO_SV_00000166 obo:BFO_0000004)
@@ -3968,7 +3943,7 @@ SubClassOf(obo:APOLLO_SV_00000187 obo:APOLLO_SV_00000173)
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000188 "A census that represents the biotic and abiotic elements of an ecosystem at simulator time zero."@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000188 "A census that represents the biotic and abiotic elements of an ecosystem at simulator time zero."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000188 "Class was originally created to correspond with a complex type from Apollo XSD v3.1.0."@en)
-AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000188 "This census should exclude infection, immunity, treatment, or contamination.  "@en)
+AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000188 "This census should exclude infection, immunity, treatment, or contamination."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000188 "population and environment census"@en)
 SubClassOf(obo:APOLLO_SV_00000188 obo:APOLLO_SV_00000173)
 
@@ -4038,7 +4013,7 @@ SubClassOf(obo:APOLLO_SV_00000196 obo:APOLLO_SV_00000136)
 
 # Class: obo:APOLLO_SV_00000197 (agent level population and environment census)
 
-AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000197 "An instance of the an AgentLevel PopulationAndEnvironmentCensus type comprises an AgentLevel PopulationAndEnvironmentCensus Description, which describes the biotic and abiotic ecosystems elements that are counted by the census, and a URL where the census (the counts) can be retrieved. "@en)
+AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000197 "An instance of the an AgentLevel PopulationAndEnvironmentCensus type comprises an AgentLevel PopulationAndEnvironmentCensus Description, which describes the biotic and abiotic ecosystems elements that are counted by the census, and a URL where the census (the counts) can be retrieved."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000197 "agent level population and environment census"@en)
 SubClassOf(obo:APOLLO_SV_00000197 obo:APOLLO_SV_00000188)
 
@@ -4071,7 +4046,7 @@ SubClassOf(obo:APOLLO_SV_00000201 obo:APOLLO_SV_00000173)
 # Class: obo:APOLLO_SV_00000202 (indexable Apollo item)
 
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000202 "ApolloIndexableItem")
-AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000202 "A class representing an abstract type. This class has no attributes and programmers should use it to determine whether an instance should be saved or can be retrieved. "@en)
+AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000202 "A class representing an abstract type. This class has no attributes and programmers should use it to determine whether an instance should be saved or can be retrieved."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000202 "indexable Apollo item"@en)
 SubClassOf(obo:APOLLO_SV_00000202 obo:IAO_0000030)
 
@@ -4192,9 +4167,9 @@ SubClassOf(obo:APOLLO_SV_00000214 obo:IAO_0000030)
 
 # Class: obo:APOLLO_SV_00000215 (probability distribution)
 
-AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000215 "An information content entity that assigns a probability to each measurable subset of the possible outcomes of a random experiment, survey, or procedure of statistical inference. "@en)
+AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000215 "An information content entity that assigns a probability to each measurable subset of the possible outcomes of a random experiment, survey, or procedure of statistical inference."@en)
 AnnotationAssertion(obo:IAO_0000119 obo:APOLLO_SV_00000215 "http://en.wikipedia.org/wiki/Probability_distribution"@en)
-AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000215 "An information content entity that assigns a probability to each measurable subset of the possible outcomes of a random experiment, survey, or procedure of statistical inference. "@en)
+AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000215 "An information content entity that assigns a probability to each measurable subset of the possible outcomes of a random experiment, survey, or procedure of statistical inference."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000215 "ProbabilityDistribution")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000215 "probability distribution"@en)
 SubClassOf(obo:APOLLO_SV_00000215 obo:IAO_0000030)
@@ -4644,8 +4619,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000265 "An infection acquisi
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000265 "William R. Hogan"@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000265 "An infection acquisition from an individual who is infectious.
 
-The individual acquiring the infection can be of a different species than the one who is infectious.
-"@en)
+The individual acquiring the infection can be of a different species than the one who is infectious."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000265 "InfectionAcquisitionFromInfectedHost")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000265 "infection acquisition from infectious host"@en)
 EquivalentClasses(obo:APOLLO_SV_00000265 ObjectIntersectionOf(obo:GO_0044409 ObjectSomeValuesFrom(obo:BFO_0000066 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000172))) ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:APOLLO_SV_00000238 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000182))) ObjectSomeValuesFrom(obo:RO_0002411 obo:APOLLO_SV_00000114)))
@@ -4676,8 +4650,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000268 "An identifier that d
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000268 "William R. Hogan"@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000268 "A system of measurement of time with respect to an arbitrary reference point or event, which typically has a measured value of zero elapsed time.
 
-In epidemic simulation, it can be 'simulator time' where time zero is the starting point of an infectious disease scenario, or it can be 'control strategy time' where time zero is the time at which the control strategy is initiated.
-"@en)
+In epidemic simulation, it can be 'simulator time' where time zero is the starting point of an infectious disease scenario, or it can be 'control strategy time' where time zero is the time at which the control strategy is initiated."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000268 "timeScale")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000268 "time scale name"@en)
 SubClassOf(obo:APOLLO_SV_00000268 obo:IAO_0020000)
@@ -4878,8 +4851,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000292 "The unit of measure 
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000292 "William R. Hogan"@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000292 "The unit of measure for the supply schedule of an individual treatment.
 
-For example, 'daily dose'.
-"@en)
+For example, 'daily dose'."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000292 "supplyScheduleUnits")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000292 "individual treatment strategy supply schedule unit of measure"@en)
 SubClassOf(obo:APOLLO_SV_00000292 obo:UO_0000000)
@@ -4916,8 +4888,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000296 "An information conte
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000296 "William R. Hogan"@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000296 "A specification of the criteria an organism must meet to be considered to be in some abnormal state.
 
-The abnormal state could be having a disease, carrier status, a syndrome, a structural abnormality (e.g., congenital heart defect), and so on.
-"@en)
+The abnormal state could be having a disease, carrier status, a syndrome, a structural abnormality (e.g., congenital heart defect), and so on."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000296 "CaseDefinition")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000296 "case definition"@en)
 SubClassOf(obo:APOLLO_SV_00000296 obo:IAO_0000030)
@@ -7745,7 +7716,6 @@ AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000595 "A census that counts
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000595 "William R. Hogan"@en)
 AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000595 "census of treatment facilities"@en)
 AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000595 "treatment facilities census"@en)
-AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000595 "treatment facility census"@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000595 "A census that counts the number of treatment facilities of some kind in a particular geographical region."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000595 "NOTE: this class counts the facilities themselves, not patients (people) in those facilities.  For example, how many hospitals in a state.  Not how many patients are in a hospital or hospitals in a state."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000595 "treatment facility census"@en)
@@ -8668,7 +8638,7 @@ AnnotationAssertion(obo:IAO_0000118 obo:NCBITaxon_10090 "House mouse"@en)
 AnnotationAssertion(rdfs:label obo:NCBITaxon_10090 "Mus musculus")
 SubClassOf(obo:NCBITaxon_10090 obo:NCBITaxon_2759)
 
-# Class: obo:NCBITaxon_10239 (Viruses)
+# Class: obo:NCBITaxon_10239 (Virus)
 
 AnnotationAssertion(rdfs:label obo:NCBITaxon_10239 "Virus"@en)
 SubClassOf(obo:NCBITaxon_10239 obo:OBI_0100026)
@@ -14771,7 +14741,7 @@ AnnotationAssertion(rdfs:label <http://www.ebi.ac.uk/efo/EFO_0004600> "genomic d
 SubClassOf(<http://www.ebi.ac.uk/efo/EFO_0004600> obo:IAO_0000100)
 SubClassOf(<http://www.ebi.ac.uk/efo/EFO_0004600> ObjectSomeValuesFrom(obo:IAO_0000136 obo:OBI_0100026))
 
-# Class: oboInOwl:ObsoleteClass (Obsolete Class)
+# Class: oboInOwl:ObsoleteClass (obsolete_class)
 
 AnnotationAssertion(rdfs:label oboInOwl:ObsoleteClass "Obsolete Class"@en)
 
