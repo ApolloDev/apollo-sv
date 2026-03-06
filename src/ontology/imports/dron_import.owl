@@ -1,0 +1,61 @@
+Prefix(:=<http://purl.obolibrary.org/obo/apollo_sv/imports/dron_import.owl#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(go:=<http://purl.obolibrary.org/obo/go#>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(pato:=<http://purl.obolibrary.org/obo/pato#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(swrl:=<http://www.w3.org/2003/11/swrl#>)
+Prefix(chebi:=<http://purl.obolibrary.org/obo/chebi/2>)
+Prefix(swrlb:=<http://www.w3.org/2003/11/swrlb#>)
+Prefix(chebi1:=<http://purl.obolibrary.org/obo/chebi/3>)
+Prefix(chebi2:=<http://purl.obolibrary.org/obo/chebi/1>)
+Prefix(dcterms:=<http://purl.org/dc/terms/>)
+Prefix(protege:=<http://protege.stanford.edu/plugins/owl/protege#>)
+Prefix(subsets:=<http://purl.obolibrary.org/obo/ro/subsets#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/apollo_sv/imports/dron_import.owl>
+<http://purl.obolibrary.org/obo/apollo_sv/releases/2026-03-06/imports/dron_import.owl>
+Annotation(dc:source <http://purl.obolibrary.org/obo/dron/releases/2025-12-19/dron.owl>)
+Annotation(owl:versionInfo "2026-03-06")
+
+Declaration(Class(obo:BFO_0000040))
+Declaration(Class(obo:DRON_00000005))
+Declaration(Class(obo:DRON_00000074))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(obo:IAO_0000117))
+Declaration(AnnotationProperty(dc:source))
+Declaration(AnnotationProperty(dcterms:contributor))
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:DRON_00000005 (clinical drug product)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DRON_00000005 "A drug product that is bearer of a clinical drug role."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:DRON_00000005 "William Hogan"@en)
+AnnotationAssertion(rdfs:comment obo:DRON_00000005 "We changed the label to 'clinical drug product' because it was clear that the part of the definition re: bearer of a \"clinical drug role\" made it such. Other drugs don't have clinical drug roles, especially illicit ones. Therefore we changed the label here, as well as the subClassOf. Now it is subClassOf \"drug product\", which also required changing the definition here."@en)
+AnnotationAssertion(rdfs:label obo:DRON_00000005 "clinical drug product"@en)
+SubClassOf(obo:DRON_00000005 obo:DRON_00000074)
+
+# Class: obo:DRON_00000074 (drug product)
+
+AnnotationAssertion(obo:IAO_0000115 obo:DRON_00000074 "A material entity that (1) contains at least one scattered molecular aggregate as part and (2) is intended, when administered to an organism, to produce some therapeutic and/or psychoactive effect."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:DRON_00000074 "William R. Hogan"@en)
+AnnotationAssertion(dcterms:contributor obo:DRON_00000074 <https://orcid.org/0000-0001-6378-1703>)
+AnnotationAssertion(dcterms:contributor obo:DRON_00000074 <https://orcid.org/0000-0002-5039-2052>)
+AnnotationAssertion(rdfs:comment obo:DRON_00000074 "The \"intention\" part is important because of situations, such as that with phenylephrine, where it was not effective for the labeled use. Even when a drug is proven effective for a particular indication, it might not be therapeutic for every indivdiual to whom it is administered."@en)
+AnnotationAssertion(rdfs:comment obo:DRON_00000074 "The psychoactive effect is added for illicit drugs such as crack cocaine."@en)
+AnnotationAssertion(rdfs:comment obo:DRON_00000074 "We are including prophylactic and diagnostic effects / usage under the more general heading of 'therapeutic'."@en)
+AnnotationAssertion(rdfs:label obo:DRON_00000074 "drug product"@en)
+SubClassOf(obo:DRON_00000074 obo:BFO_0000040)
+
+
+)
