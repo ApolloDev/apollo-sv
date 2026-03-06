@@ -16,7 +16,7 @@
 # 3. [Update repo to latest ODK](update_repo)
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                f10687d13b9fb4d82c6a832e60b296d76dadc31432fe22bb1f06ab3cc66d4a02
+CONFIG_HASH=                0625a31aff99dcab0d48bca6e3dddd2614c7f65055668a9ae139332d9e4f5f5f
 
 
 # ----------------------------------------
@@ -193,7 +193,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  ro geo ido mf go iao omrse dron ogms
+IMPORTS =  ro geo ido mf go iao omrse dron ogms uberon
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -645,6 +645,14 @@ mirror-dron: | $(TMPDIR)
 mirror-ogms: | $(TMPDIR)
 	curl -L $(OBOBASE)/ogms.owl --create-dirs -o $(TMPDIR)/ogms-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) remove -i $(TMPDIR)/ogms-download.owl --base-iri http://purl.obolibrary.org/obo/OGMS_ --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: uberon
+.PHONY: mirror-uberon
+.PRECIOUS: $(MIRRORDIR)/uberon.owl
+mirror-uberon: | $(TMPDIR)
+	curl -L $(OBOBASE)/uberon.owl --create-dirs -o $(TMPDIR)/uberon-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) remove -i $(TMPDIR)/uberon-download.owl --base-iri http://purl.obolibrary.org/obo/UBERON_ --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)
