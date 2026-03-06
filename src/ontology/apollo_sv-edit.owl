@@ -1720,9 +1720,9 @@ AnnotationAssertion(rdfs:label rdfs:label "label"@en)
 #   Object Properties
 ############################
 
-# Object Property: obo:APOLLO_SV_00000004 (basis of)
+# Object Property: obo:APOLLO_SV_00000004 (obsolete basis of)
 
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000004 "basis of"@en)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000004 "obsolete basis of"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000004 "true"^^xsd:boolean)
 SubObjectPropertyOf(obo:APOLLO_SV_00000004 oboInOwl:ObsoleteProperty)
 
@@ -1762,10 +1762,10 @@ IrreflexiveObjectProperty(obo:APOLLO_SV_00000067)
 ObjectPropertyDomain(obo:APOLLO_SV_00000067 obo:APOLLO_SV_00000070)
 ObjectPropertyRange(obo:APOLLO_SV_00000067 obo:BFO_0000001)
 
-# Object Property: obo:APOLLO_SV_00000116 (causally_precedes)
+# Object Property: obo:APOLLO_SV_00000116 (obsolete causally_precedes)
 
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000116 "Mathias Brochhausen"@en)
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000116 "causally_precedes"@en)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000116 "obsolete causally_precedes"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000116 "true"^^xsd:boolean)
 SubObjectPropertyOf(obo:APOLLO_SV_00000116 oboInOwl:ObsoleteProperty)
 
@@ -2494,12 +2494,12 @@ EquivalentClasses(obo:APOLLO_SV_00000010 ObjectIntersectionOf(obo:IAO_0020000 Ob
 SubClassOf(obo:APOLLO_SV_00000010 obo:IAO_0020000)
 SubClassOf(obo:APOLLO_SV_00000010 ObjectSomeValuesFrom(obo:BFO_0000050 obo:APOLLO_SV_00000054))
 
-# Class: obo:APOLLO_SV_00000011 (control strategy reactive start time information)
+# Class: obo:APOLLO_SV_00000011 (obsolete control strategy reactive start time information)
 
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000011 "A control strategy start time information item that is based on a condition that triggers the control strategy."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000011 "Mathias Brochhausen"@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000011 "A control strategy start time information item that is based on a condition that triggers the control strategy."@en)
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000011 "control strategy reactive start time information"@en)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000011 "obsolete control strategy reactive start time information"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000011 "true"^^xsd:boolean)
 
 # Class: obo:APOLLO_SV_00000012 (simulation time step value)
@@ -3023,19 +3023,19 @@ AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000075 "typically, the process 
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000075 "infectious disease control objective specification"@en)
 SubClassOf(obo:APOLLO_SV_00000075 obo:IAO_0000005)
 
-# Class: obo:APOLLO_SV_00000076 (μ)
+# Class: obo:APOLLO_SV_00000076 (obsolete μ)
 
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000076 "the mean or expectation of a distribution"@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000076 "μ")
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000076 "μ"@en)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000076 "obsolete μ"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000076 "true"^^xsd:boolean)
 SubClassOf(obo:APOLLO_SV_00000076 oboInOwl:ObsoleteClass)
 
-# Class: obo:APOLLO_SV_00000077 (σ)
+# Class: obo:APOLLO_SV_00000077 (obsolete σ)
 
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000077 "standard deviation"@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000077 "sigma")
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000077 "σ"@en)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000077 "obsolete σ"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000077 "true"^^xsd:boolean)
 SubClassOf(obo:APOLLO_SV_00000077 oboInOwl:ObsoleteClass)
 
@@ -3046,10 +3046,10 @@ AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000078 "beta dis
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000078 "beta distribution"@en)
 SubClassOf(obo:APOLLO_SV_00000078 obo:APOLLO_SV_00000251)
 
-# Class: obo:APOLLO_SV_00000079 (deprecated log normal distribution)
+# Class: obo:APOLLO_SV_00000079 (obsolete log normal distribution)
 
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000079 "a continuous probability distribution over variable X whose parameters denoted μ and σ are, respectively, the mean and standard deviation of the variable’s natural logarithm"@en)
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000079 "deprecated log normal distribution"@en)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000079 "obsolete log normal distribution"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000079 "true"^^xsd:boolean)
 SubClassOf(obo:APOLLO_SV_00000079 oboInOwl:ObsoleteClass)
 
@@ -3175,11 +3175,11 @@ AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000094 "community"@en)
 SubClassOf(obo:APOLLO_SV_00000094 obo:BFO_0000027)
 SubClassOf(obo:APOLLO_SV_00000094 ObjectIntersectionOf(obo:BFO_0000027 ObjectSomeValuesFrom(obo:RO_0002351 obo:PCO_0000001) ObjectAllValuesFrom(obo:RO_0002351 obo:PCO_0000001)))
 
-# Class: obo:APOLLO_SV_00000095 (deprecated discrete probability distribution)
+# Class: obo:APOLLO_SV_00000095 (obsolete discrete probability distribution)
 
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000095 "a probability distribution over a discrete random variable"@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000095 "discrete probability distribution")
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000095 "deprecated discrete probability distribution")
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000095 "obsolete discrete probability distribution")
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000095 "true"^^xsd:boolean)
 SubClassOf(obo:APOLLO_SV_00000095 oboInOwl:ObsoleteClass)
 
@@ -3410,10 +3410,10 @@ AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000124 "school c
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000124 "school closure duration"@en)
 SubClassOf(obo:APOLLO_SV_00000124 obo:APOLLO_SV_00000794)
 
-# Class: obo:APOLLO_SV_00000125 (school calendar)
+# Class: obo:APOLLO_SV_00000125 (obsolete school calendar)
 
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000125 "The time steps that a school will be in session."@en)
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000125 "school calendar"@en)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000125 "obsolete school calendar"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000125 "true"^^xsd:boolean)
 
 # Class: obo:APOLLO_SV_00000126 (control strategy target facilities)
@@ -3550,11 +3550,11 @@ AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000142 "vaccination"@en)
 EquivalentClasses(obo:APOLLO_SV_00000142 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:IAO_0000104 ObjectSomeValuesFrom(obo:BFO_0000051 obo:APOLLO_SV_00000141)))) ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:BFO_0000040 ObjectSomeValuesFrom(obo:RO_0000053 obo:VO_0000278))) ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000172)))))
 SubClassOf(obo:APOLLO_SV_00000142 obo:OGMS_0000090)
 
-# Class: obo:APOLLO_SV_00000143 (vaccine disposition)
+# Class: obo:APOLLO_SV_00000143 (obsolete vaccine disposition)
 
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000143 "Mathias Brochhausen"@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000143 "replaced with VO 'vaccine function'"@en)
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000143 "vaccine disposition"@en)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000143 "obsolete vaccine disposition"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000143 "true"^^xsd:boolean)
 
 # Class: obo:APOLLO_SV_00000144 (disposition to become contaminated with a pathogen)
@@ -3578,11 +3578,11 @@ AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000145 "The dispostion of an
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000145 "resistance to infection"@en)
 SubClassOf(obo:APOLLO_SV_00000145 obo:BFO_0000016)
 
-# Class: obo:APOLLO_SV_00000146 (beta)
+# Class: obo:APOLLO_SV_00000146 (obsolete beta)
 
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000146 "Transmission parameter (sometime known as Ptrans). This value is multiplied by the inter-personal contact probability to determine the transmission probability between infected and susceptible persons."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000146 "it is the same thing as transmission coefficient"@en)
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000146 "beta"@en)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000146 "obsolete beta"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000146 "true"^^xsd:boolean)
 
 # Class: obo:APOLLO_SV_00000147 (inter-personal contact probability)
@@ -3592,10 +3592,10 @@ AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000147 "inter-pe
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000147 "inter-personal contact probability"@en)
 SubClassOf(obo:APOLLO_SV_00000147 obo:APOLLO_SV_00001008)
 
-# Class: obo:APOLLO_SV_00000148 (random number seed)
+# Class: obo:APOLLO_SV_00000148 (obsolete random number seed)
 
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000148 "random number seed"@en)
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000148 "random number seed"@en)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000148 "obsolete random number seed"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000148 "true"^^xsd:boolean)
 
 # Class: obo:APOLLO_SV_00000149 (susceptibility measurement datum)
@@ -3704,12 +3704,12 @@ AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000160 "obsolete contamination"@e
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000160 "true"^^xsd:boolean)
 SubClassOf(obo:APOLLO_SV_00000160 oboInOwl:ObsoleteClass)
 
-# Class: obo:APOLLO_SV_00000161 (MIDAS scenario)
+# Class: obo:APOLLO_SV_00000161 (obsolete MIDAS scenario)
 
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000161 "An ecosystem in which a population of hosts is undergoing at least one infection."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000161 "Mathias Brochhausen"@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000161 "An ecosystem in which a population of hosts is undergoing at least one infection."@en)
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000161 "MIDAS scenario"@en)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000161 "obsolete MIDAS scenario"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000161 "true"^^xsd:boolean)
 
 # Class: obo:APOLLO_SV_00000162 (MIDAS scenario representation)
@@ -4017,16 +4017,16 @@ AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000197 "An instance of the an A
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000197 "agent level population and environment census"@en)
 SubClassOf(obo:APOLLO_SV_00000197 obo:APOLLO_SV_00000188)
 
-# Class: obo:APOLLO_SV_00000198 (agent model ecosystem census description)
+# Class: obo:APOLLO_SV_00000198 (obsolete agent model ecosystem census description)
 
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000198 "At present, this class corresponds with an XSD type that contains authentication plus information needed to generate a Synthia synthetic population dataset including (1) geographical location and (2) a list of household characteristics."@en)
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000198 "agent model ecosystem census description"@en)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000198 "obsolete agent model ecosystem census description"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000198 "true"^^xsd:boolean)
 
-# Class: obo:APOLLO_SV_00000199 (compartment model population and environment census)
+# Class: obo:APOLLO_SV_00000199 (obsolete compartment model population and environment census)
 
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000199 "The Apollo XSD allows us to specify counts of certain subpopulations and abiotic ecosystem elements for a compartmental model (vs. specifying each individual in the population as in agent model population and environment census)."@en)
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000199 "compartment model population and environment census"@en)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000199 "obsolete compartment model population and environment census"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000199 "true"^^xsd:boolean)
 
 # Class: obo:APOLLO_SV_00000200 (population strata definition)
@@ -4474,12 +4474,12 @@ AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000248 "Parametr
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000248 "obsolete parametric probability distribution"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000248 "true"^^xsd:boolean)
 
-# Class: obo:APOLLO_SV_00000249 (nonparametric probability distribution)
+# Class: obo:APOLLO_SV_00000249 (obsolete nonparametric probability distribution)
 
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000249 "Mathias Brochhausen"@en)
 AnnotationAssertion(obo:IAO_0100001 obo:APOLLO_SV_00000249 "http://purl.obolibrary.org/obo/STATO_0000321")
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000249 "NonparametricProbabilityDistribution")
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000249 "nonparametric probability distribution"@en)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000249 "obsolete nonparametric probability distribution"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000249 "true"^^xsd:boolean)
 
 # Class: obo:APOLLO_SV_00000250 (discrete parametric probability distribution)
@@ -5589,13 +5589,13 @@ AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000369 "obligatory endosymbiotic 
 EquivalentClasses(obo:APOLLO_SV_00000369 ObjectIntersectionOf(obo:APOLLO_SV_00000367 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:BFO_0000034 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:BFO_0000137 obo:OBI_0100026) ObjectSomeValuesFrom(obo:RO_0000052 obo:UBERON_0000061))))))
 SubClassOf(obo:APOLLO_SV_00000369 obo:APOLLO_SV_00000367)
 
-# Class: obo:APOLLO_SV_00000370 (deprecated homeostasis)
+# Class: obo:APOLLO_SV_00000370 (obsolete homeostasis)
 
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000370 "A disposition of the whole organism (or of some causally relatively isolated part of the organism, such as a single cell) to regulate its bodily processes in such a way as (1) to maintain bodily qualities within a certain range or profile and (2) to respond successfully to departures from this range caused by internal influences or environmental influences such as poisoning."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000370 "Matthew Diller")
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000370 "William R. Hogan")
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000370 "A disposition of the whole organism (or of some causally relatively isolated part of the organism, such as a single cell) to regulate its bodily processes in such a way as (1) to maintain bodily qualities within a certain range or profile and (2) to respond successfully to departures from this range caused by internal influences or environmental influences such as poisoning."@en)
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000370 "deprecated homeostasis"@en)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000370 "obsolete homeostasis"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000370 "true"^^xsd:boolean)
 
 # Class: obo:APOLLO_SV_00000371 (bodily harm)
@@ -5855,13 +5855,13 @@ AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000398 "infection case record"@en
 EquivalentClasses(obo:APOLLO_SV_00000398 ObjectExactCardinality(1 obo:IAO_0000136 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000114))))
 SubClassOf(obo:APOLLO_SV_00000398 obo:IAO_0000100)
 
-# Class: obo:APOLLO_SV_00000399 (deprecated infection case count)
+# Class: obo:APOLLO_SV_00000399 (obsolete infection case count)
 
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000399 "A count of individuals in a population who meet an infection case definition during a particular time interval."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000399 "Matthew Diller")
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000399 "William R. Hogan")
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000399 "A count of individuals in a population who meet an infection case definition during a particular time interval."@en)
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000399 "deprecated infection case count"@en)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000399 "obsolete infection case count"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000399 "true"^^xsd:boolean)
 
 # Class: obo:APOLLO_SV_00000400 (epidemic interval)
@@ -6215,13 +6215,13 @@ AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000434 "confiden
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000434 "statistical confidence"@en)
 SubClassOf(obo:APOLLO_SV_00000434 obo:OBI_0302867)
 
-# Class: obo:APOLLO_SV_00000435 (closure period)
+# Class: obo:APOLLO_SV_00000435 (obsolete closure period)
 
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000435 "A one-dimensional temporal region occupied by a place closure control strategy."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000435 "Matthew Diller")
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000435 "William R. Hogan")
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000435 "A one-dimensional temporal region occupied by a place closure control strategy."@en)
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000435 "closure period"@en)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000435 "obsolete closure period"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000435 "true"^^xsd:boolean)
 
 # Class: obo:APOLLO_SV_00000436 (lower bound)
@@ -6617,13 +6617,13 @@ AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000474 "reactive
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000474 "reactive control measure operator"@en)
 SubClassOf(obo:APOLLO_SV_00000474 obo:APOLLO_SV_00000793)
 
-# Class: obo:APOLLO_SV_00000475 (gonotrophic period duration)
+# Class: obo:APOLLO_SV_00000475 (obsolete gonotrophic period duration)
 
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000475 "A time measurement datum of the length of the temporal interval occupied by a gonotropic period."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000475 "Matthew Diller")
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000475 "William R. Hogan")
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000475 "A time measurement datum of the length of the temporal interval occupied by a gonotropic period."@en)
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000475 "gonotrophic period duration"@en)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000475 "obsolete gonotrophic period duration"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000475 "true"^^xsd:boolean)
 
 # Class: obo:APOLLO_SV_00000476 (description)
@@ -6808,7 +6808,7 @@ AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000495 "pubMedId
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000495 "PubMed identifier"@en)
 SubClassOf(obo:APOLLO_SV_00000495 obo:IAO_0020000)
 
-# Class: obo:APOLLO_SV_00000496 (ORCID)
+# Class: obo:APOLLO_SV_00000496 (obsolete ORCID)
 
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000496 "An identifier curated by ORCID, Inc. to denote some academic author."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000496 "Matthew Diller")
@@ -6816,7 +6816,7 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000496 "William R. Hogan")
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000496 "An identifier curated by ORCID, Inc. to denote some academic author."@en)
 AnnotationAssertion(obo:IAO_0100001 obo:APOLLO_SV_00000496 "http://purl.obolibrary.org/obo/IAO_0000708"^^xsd:anyURI)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000496 "orcId")
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000496 "ORCID"@en)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000496 "obsolete ORCID"@en)
 AnnotationAssertion(owl:deprecated obo:APOLLO_SV_00000496 "true"^^xsd:boolean)
 
 # Class: obo:APOLLO_SV_00000497 (count of disease cases)
