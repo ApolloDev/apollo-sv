@@ -64,7 +64,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_9443>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_9606>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0000245>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0200000>))
-Declaration(Class(<http://purl.obolibrary.org/obo/OGMS_0000045>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OGMS_0000096>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OGMS_0000097>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OGMS_0000100>))
@@ -2554,15 +2553,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/OBI_0200000> "Branch editors"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OBI_0200000> "data transformation"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/OBI_0200000> <http://purl.obolibrary.org/obo/COB_0000035>)
-
-# Class: <http://purl.obolibrary.org/obo/OGMS_0000045> (disorder)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OGMS_0000045> "A material entity which is clinically abnormal and part of an extended organism. Disorders are the physical basis of disease."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/OGMS_0000045> "Albert Goldfain")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/OGMS_0000045> "http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000232> <http://purl.obolibrary.org/obo/OGMS_0000045> "creation date: 2009-06-23T11:39:44Z")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OGMS_0000045> "disorder")
-SubClassOf(<http://purl.obolibrary.org/obo/OGMS_0000045> <http://purl.obolibrary.org/obo/BFO_0000040>)
 
 # Class: <http://purl.obolibrary.org/obo/OGMS_0000096> (health care process)
 
