@@ -3,6 +3,12 @@
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
 
+
+.PHONY: mirror-bcio
+.PRECIOUS: $(MIRRORDIR)/bcio.owl
+mirror-bcio: | $(TMPDIR)
+        $(ROBOT) convert -I http://humanbehaviourchange.org/ontology/bcio.owl -o $(TMPDIR)/$@.owl
+
 $(IMPORTDIR)/bcio_import.owl: $(MIRRORDIR)/bcio.owl $(IMPORTDIR)/bcio_terms.txt \
 				$(IMPORTSEED) | all_robot_plugins
 	$(ROBOT) merge --input $< \
