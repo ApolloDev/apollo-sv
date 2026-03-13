@@ -3,6 +3,7 @@
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
 
+ifeq ($(IMP),true)
 
 .PHONY: mirror-bcio
 .PRECIOUS: $(MIRRORDIR)/bcio.owl
@@ -24,3 +25,5 @@ $(IMPORTDIR)/bcio_import.owl: $(MIRRORDIR)/bcio.owl $(IMPORTDIR)/bcio_terms.txt 
 			--subset-decls true --synonym-decls true \
 		repair --merge-axiom-annotations true \
 		$(ANNOTATE_CONVERT_FILE)
+
+endif
