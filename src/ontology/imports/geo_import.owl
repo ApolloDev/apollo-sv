@@ -13,10 +13,10 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/apollo_sv/imports/geo_import.owl>
-<http://purl.obolibrary.org/obo/apollo_sv/releases/2026-03-06/imports/geo_import.owl>
+<http://purl.obolibrary.org/obo/apollo_sv/releases/2026-03-13/imports/geo_import.owl>
 Import(<http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl>)
 Import(<http://purl.obolibrary.org/obo/ro/core.owl>)
-Annotation(owl:versionInfo "2026-03-06")
+Annotation(owl:versionInfo "2026-03-13")
 
 Declaration(Class(obo:BFO_0000004))
 Declaration(Class(obo:BFO_0000027))
@@ -672,7 +672,7 @@ AnnotationAssertion(rdfs:label obo:GEO_000000007 "group of major administrative 
 EquivalentClasses(obo:GEO_000000007 ObjectIntersectionOf(ObjectComplementOf(obo:GEO_000000005) ObjectAllValuesFrom(obo:BFO_0000075 obo:GEO_000000005) ObjectMinCardinality(2 obo:BFO_0000075 obo:GEO_000000005)))
 SubClassOf(obo:GEO_000000007 obo:GEO_000000337)
 
-# Class: obo:GEO_000000008 (group of dependencies)
+# Class: obo:GEO_000000008 (aggregate of dependencies)
 
 AnnotationAssertion(obo:IAO_0000115 obo:GEO_000000008 "An aggregate of governmental organizations that is not itself a geopolitical dependency and whose members are only geopolitical dependencies that have some feature in common."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:GEO_000000008 "Amanda Hicks"@en)
