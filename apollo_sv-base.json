@@ -52,9 +52,9 @@
         "val" : "When citing Apollo-SV, use the permanent URL of the ontology: http://purl.obolibrary.org/obo/apollo_sv.owl.  When referencing a specific component of the Apollo-SV such as a class, object property, annotation property, or individual, use the component's Uniform Resource Identifier (URI)."
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2024-12-24"
+        "val" : "2026-03-13"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/apollo_sv/releases/2024-12-24/apollo_sv-base.json"
+      "version" : "http://purl.obolibrary.org/obo/apollo_sv/releases/2026-03-13/apollo_sv-base.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000000",
@@ -144,7 +144,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "a planned process that (1) has at least one process part that has as participants representations of participants (in place of those participants) of processes of type X, and where all such process parts substitute for parts of processes of type X, and (2) is carried out for the purpose of planning for processes of type X, learning more about processes of type X, or teaching about processes of type X."
+          "val" : "A planned process that (1) has at least one process part that has as participants representations of participants (in place of those participants) of processes of type X, and where all such process parts substitute for parts of processes of type X, and (2) is carried out for the purpose of planning for processes of type X, learning more about processes of type X, or teaching about processes of type X."
         },
         "comments" : [ "For example, in a simulated volcano eruption, representations of lava, lava tubes, vents, etc. take the place of actual lava, lava tubes, vents, etc.\n\nEven in the case of a simulated disaster scenario where actual ambulances, fire trucks, and people participate, representations of catastrophic events and injuries, etc. take the place of real ones." ],
         "basicPropertyValues" : [ {
@@ -238,7 +238,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000011",
-      "lbl" : "control strategy reactive start time information",
+      "lbl" : "obsolete control strategy reactive start time information",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -263,7 +263,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "A number of time step units in a time step of a simulation.  \n\nFor example, if the time step is 6 hours, then this value is 6.\n"
+          "val" : "A number of time step units in a time step of a simulation.  For example, if the time step is 6 hours, then this value is 6."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "numberOfUnitsOfTimeInOneSimulatorStep"
@@ -308,7 +308,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "The number of time steps in a simulator run.\n\nFor example, if run length is 10 and the time step is 6 hours, then the simulator will simulate a 60-hour period that begins at simulator time zero.\n"
+          "val" : "The number of time steps in a simulator run. For example, if run length is 10 and the time step is 6 hours, then the simulator will simulate a 60-hour period that begins at simulator time zero."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "runLength"
@@ -348,7 +348,7 @@
           "val" : "Mathias Brochhausen"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "A period during which an organism of a particular species, who is infected with a particular pathogen, is not yet able to infect susceptible organisms of a particular species.  \n\nNote that the susceptible and infected organisms can be of different species.\n\n"
+          "val" : "A period during which an organism of a particular species, who is infected with a particular pathogen, is not yet able to infect susceptible organisms of a particular species.  Note that the susceptible and infected organisms can be of different species."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "latentPeriodDuration"
@@ -402,13 +402,13 @@
         "definition" : {
           "val" : "The count of (simulated organisms) in a simulated population."
         },
-        "comments" : [ "MW: I know this causes problems with our set-theoretic definition.  Unfortunately the compartmental models produce fractional counts at each of their time steps, including the final step.  \n\nAny ideas?  I’ve considered and rejected allowing individual organisms to be fractional.  Perhaps if we just replace the term “cardinality” in the definition with ‘computed size’\n" ],
+        "comments" : [ "MW: I know this causes problems with our set-theoretic definition.  Unfortunately the compartmental models produce fractional counts at each of their time steps, including the final step.  \n\nAny ideas?  I’ve considered and rejected allowing individual organisms to be fractional.  Perhaps if we just replace the term “cardinality” in the definition with ‘computed size’" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Mathias Brochhausen"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "The number of simulated organisms in a simulated population.  The number does not have to be an integer.  "
+          "val" : "The number of simulated organisms in a simulated population.  The number does not have to be an integer."
         } ]
       }
     }, {
@@ -421,7 +421,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "A vaccination schedule specifies the intended timing of initial and subsequent booster doses of vaccine for an individual organism. "
+          "val" : "A vaccination schedule specifies the intended timing of initial and subsequent booster doses of vaccine for an individual organism."
         } ]
       }
     }, {
@@ -432,7 +432,7 @@
         "definition" : {
           "val" : "The fraction expressing the probability that an organism who is eligible according to a particular vaccination policy will be consented for that vaccination."
         },
-        "comments" : [ "MB: This class is still awaiting its class restriction. It should be restricted as being about a population that has members that are eligible for a vaccination against the members that are eligible and consented the vaccination. There is a class \"eligibility rule\" in OBI (http://purl.obolibrary.org/obo/OBI_0500026), but it is restricted by definition to studies. I put in an issue in the OBI issue tracker. The consenting process and its specified outcome should be done in d-acts, but needs to be done properly.", "MW: I still see enough similarities at the abstract level among some control measures that we might add the concepts “Control measure compliance”, “Control measure efficacy”  and “control measure efficacy delay.”    We could then post-coordinate particular control measures such as vaccine.\n\nIt is worth noting that there are control measures such as closing schools that are not applied at the individual level.   We have not represented those control measures yet.\n" ],
+        "comments" : [ "MB: This class is still awaiting its class restriction. It should be restricted as being about a population that has members that are eligible for a vaccination against the members that are eligible and consented the vaccination. There is a class \"eligibility rule\" in OBI (http://purl.obolibrary.org/obo/OBI_0500026), but it is restricted by definition to studies. I put in an issue in the OBI issue tracker. The consenting process and its specified outcome should be done in d-acts, but needs to be done properly.", "MW: I still see enough similarities at the abstract level among some control measures that we might add the concepts “Control measure compliance”, “Control measure efficacy”  and “control measure efficacy delay.”    We could then post-coordinate particular control measures such as vaccine.\n\nIt is worth noting that there are control measures such as closing schools that are not applied at the individual level.   We have not represented those control measures yet." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
           "val" : "The fraction of individuals in a population who are eligible according to a particular vaccination policy and will accept vaccination assuming no supply constraint."
@@ -485,11 +485,11 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A process that is applied to a population with the goal of preventing, or mitigating the severity of an infectious disease.  "
+          "val" : "A process that is applied to a population with the goal of preventing, or mitigating the severity of an infectious disease."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "A process that is applied to a population with the goal of preventing, or mitigating the severity of an infectious disease.  "
+          "val" : "A process that is applied to a population with the goal of preventing, or mitigating the severity of an infectious disease."
         } ]
       }
     }, {
@@ -565,7 +565,7 @@
       "lbl" : "simulation of organism",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "a simulation that is about an organism" ]
+        "comments" : [ "A simulation that is about an organism" ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000036",
@@ -631,11 +631,11 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A simulated organism in a simulated population that is not susceptible. "
+          "val" : "A simulated organism in a simulated population that is not susceptible."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "A simulated organism in a simulated population that is neither susceptible, exposed, nor infectious for a particular simulated disease. \nNote that the name for this concept, were it to be named based on its intent, would be ‘immune.’  However, in the practice domain of epidemiology this concept is traditionally termed ‘recovered.’  The problem with the traditional name is that organisms can be considered ‘recovered’ by virtue of having been vaccinated, which differs from lay usage.\n"
+          "val" : "A simulated organism in a simulated population that is neither susceptible, exposed, nor infectious for a particular simulated disease. \nNote that the name for this concept, were it to be named based on its intent, would be ‘immune.’  However, in the practice domain of epidemiology this concept is traditionally termed ‘recovered.’  The problem with the traditional name is that organisms can be considered ‘recovered’ by virtue of having been vaccinated, which differs from lay usage."
         } ]
       }
     }, {
@@ -663,7 +663,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The average value of transmissions of the infectious agent from one infected organism to another, resulting in an infection. "
+          "val" : "The average value of transmissions of the infectious agent from one infected organism to another, resulting in an infection."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -753,11 +753,11 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The value of the time interval between an organism's taking antivirals against a specific infectious agent and the organism’s losing its infectious agent host role. "
+          "val" : "The value of the time interval between an organism's taking antivirals against a specific infectious agent and the organism’s losing its infectious agent host role."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "The duration of time (expressed in time steps) between initiation of a particular antiviral treatment to an organism and when the organism becomes non infectious or, if the antiviral is being administered prophylactically, protected from infection. "
+          "val" : "The duration of time (expressed in time steps) between initiation of a particular antiviral treatment to an organism and when the organism becomes non infectious or, if the antiviral is being administered prophylactically, protected from infection."
         } ]
       }
     }, {
@@ -771,7 +771,7 @@
         "comments" : [ "MB: This class is still awaiting its class restriction. It should be restricted as being about a population that has members that are eligible for an antiviral treatment against the members that are eligible and consented the antiviral treatment. There is a class \"eligibility rule\" in OBI (http://purl.obolibrary.org/obo/OBI_0500026), but it is restricted by definition to studies. I put in an issue in the OBI issue tracker. The consenting process and its specified outcome should be done in d-acts, but needs to be done properly.", "MW: Since the estimates that modelers use are from real populations, I have two questions:\n1. Should we distinguish between real and simulated population?\n2.  If so, do we want to represent a ‘measured’ antiviral compliance number that is a property of a real population and distinguish it from this number that we are using to study what might happen in a simulated population?\n\nMB: This issue will need to be taken care of in the axiomatization of simulated population" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "The fraction of individuals in a simulated population that will accept antiviral treatment if offered. "
+          "val" : "The fraction of individuals in a simulated population that will accept antiviral treatment if offered."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "antiviral cm compliance"
@@ -783,7 +783,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An action specification giving the number of doses of an antiviral to be made available during a specific time interval. "
+          "val" : "An action specification giving the number of doses of an antiviral to be made available during a specific time interval."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
@@ -847,7 +847,7 @@
           "val" : "Mathias Brochhausen"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "the process of simulating a disease epidemic or pandemic. This term is not currently used in Apollo-WS."
+          "val" : "A process of simulating a disease epidemic or pandemic. This term is not currently used in Apollo-WS."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "epidemic simulation"
@@ -897,9 +897,9 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The simulation of an antiviral control measure. "
+          "val" : "The simulation of an antiviral control measure."
         },
-        "comments" : [ "MB: For all the antiviral-related classes I referred to ChEBI: Antiviral class. I wasn't able to use the plug-in though (there was a JAVA heap space error, probably due to the size of ChEBI).\nAND (more importantly) I did not re-use any of the ChEBI hierarchy which, even in the BFO version is a mess.\nMaybe we need to discuss this.\n" ],
+        "comments" : [ "MB: For all the antiviral-related classes I referred to ChEBI: Antiviral class. I wasn't able to use the plug-in though (there was a JAVA heap space error, probably due to the size of ChEBI).\nAND (more importantly) I did not re-use any of the ChEBI hierarchy which, even in the BFO version is a mess.\nMaybe we need to discuss this." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
           "val" : "A type of control measure based on administration of chemotherapeutic agents to an infected or high-risk organism that kill or inhibit replication of viruses within a simulated organism."
@@ -952,7 +952,7 @@
         "definition" : {
           "val" : "A time sampled measurement data set, where the position in the sequence of each data item corresponds to a specific time_step of the simulation."
         },
-        "comments" : [ "MB: The ontological status of simulations (Thoughts)\n\nOne property that seems to be common among simulations in comparison to many other fictions is the fact that the chronological order of the simulated purely intentional entities is not changed in the process of simulating.\n\nWhile in many pieces of fiction the order in which the purely intentional entities are created can vary, this is not the case for simulations.\n" ],
+        "comments" : [ "MB: The ontological status of simulations (Thoughts)\n\nOne property that seems to be common among simulations in comparison to many other fictions is the fact that the chronological order of the simulated purely intentional entities is not changed in the process of simulating.\n\nWhile in many pieces of fiction the order in which the purely intentional entities are created can vary, this is not the case for simulations." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
           "val" : "A sequence of data points, where the position in the sequence of each data point corresponds to a specific time_step of the simulation."
@@ -1027,11 +1027,11 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A purely intentional entity that simulates an entity and its properties.\n\n"
+          "val" : "A purely intentional entity that simulates an entity and its properties."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "A purely intentional entity that simulates an entity and its properties.\n\n"
+          "val" : "A purely intentional entity that simulates an entity and its properties."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "simulation"
@@ -1104,17 +1104,17 @@
         "comments" : [ "typically, the process endpoint is achievement of R0 < 1" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "an objective of achieving satisfactory control of epidemic spread through a population"
+          "val" : "An objective of achieving satisfactory control of epidemic spread through a population"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000076",
-      "lbl" : "μ",
+      "lbl" : "obsolete μ",
       "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "the mean or expectation of a distribution"
+          "val" : "A mean or expectation of a distribution"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "μ"
@@ -1123,7 +1123,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000077",
-      "lbl" : "σ",
+      "lbl" : "obsolete σ",
       "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -1150,12 +1150,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000079",
-      "lbl" : "deprecated log normal distribution",
+      "lbl" : "obsolete log normal distribution",
       "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "a continuous probability distribution over variable X whose parameters denoted μ and σ are, respectively, the mean and standard deviation of the variable’s natural logarithm"
+          "val" : "A continuous probability distribution over variable X whose parameters denoted μ and σ are, respectively, the mean and standard deviation of the variable’s natural logarithm"
         } ],
         "deprecated" : true
       }
@@ -1179,7 +1179,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "a continuous probability distribution with lower limit a, upper limit b and mode c, where a < b and a <= c <= b."
+          "val" : "A continuous probability distribution with lower limit a, upper limit b and mode c, where a < b and a <= c <= b."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "triangular distribution"
@@ -1192,7 +1192,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "a discrete probability distribution"
+          "val" : "A discrete probability distribution"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "BayesianNetwork"
@@ -1205,7 +1205,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "a discrete probability distribution that conditions on time"
+          "val" : "A discrete probability distribution that conditions on time"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "temporal Bayesian network"
@@ -1221,7 +1221,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "A control strategy dose schedule specifies the intended timing of initial and subsequent doses of for example a vaccine or an antiviral for an individual organism. "
+          "val" : "A control strategy dose schedule specifies the intended timing of initial and subsequent doses of for example a vaccine or an antiviral for an individual organism."
         } ]
       }
     }, {
@@ -1291,7 +1291,7 @@
         "definition" : {
           "val" : "A measurement datum that is about a vaccination efficacy and is the specified output of a vaccination efficacy study."
         },
-        "comments" : [ "1. Apollo-SV does not distinguish between ‘vaccine efficacy’ and ‘vaccine effectiveness.’\n\n2. Apollo-SV also considers the use of ‘vaccine’ in both terms a misnomer.\n" ],
+        "comments" : [ "1. Apollo-SV does not distinguish between ‘vaccine efficacy’ and ‘vaccine effectiveness.’\n\n2. Apollo-SV also considers the use of ‘vaccine’ in both terms a misnomer." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
           "val" : "A vaccination efficacy that results from a vaccination efficacy study."
@@ -1306,11 +1306,11 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "a study design execution that has as its specified output one or more measured vaccination efficacy data items"
+          "val" : "A study design execution that has as its specified output one or more measured vaccination efficacy data items"
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "an experiment that measures vaccination efficacy from a sample of vaccinated and possibly unvaccinated individuals"
+          "val" : "An experiment that measures vaccination efficacy from a sample of vaccinated and possibly unvaccinated individuals"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "VaccinationEfficacyStudy"
@@ -1323,7 +1323,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "an organism that has the property of being immune to a specific disease agent"
+          "val" : "An organism that has the property of being immune to a specific disease agent"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "immune"
@@ -1337,7 +1337,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "a type of interval estimate of a population parameter used to indicate the reliability of an estimate.  How frequently the observed interval contains the parameter is determined by the confidence level or confidence coefficient, in this type the confidence level is 95%"
+          "val" : "A type of interval estimate of a population parameter used to indicate the reliability of an estimate.  How frequently the observed interval contains the parameter is determined by the confidence level or confidence coefficient, in this type the confidence level is 95%"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "95% confidence interval"
@@ -1350,7 +1350,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "a type of interval estimate of a population parameter that has the property that the true value of the estimated populatin parameter has a (specified) particular probability of being in the confidence interval given the data on which the estimate is derived."
+          "val" : "A type of interval estimate of a population parameter that has the property that the true value of the estimated populatin parameter has a (specified) particular probability of being in the confidence interval given the data on which the estimate is derived."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "Baysesian credible interval"
@@ -1377,12 +1377,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000095",
-      "lbl" : "deprecated discrete probability distribution",
+      "lbl" : "obsolete discrete probability distribution",
       "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "a probability distribution over a discrete random variable"
+          "val" : "A probability distribution over a discrete random variable"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "discrete probability distribution"
@@ -1406,11 +1406,11 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The sum of all biotic and abiotic entities in a geographical region. "
+          "val" : "The sum of all biotic and abiotic entities in a geographical region."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "The sum of all biotic and abiotic entities in a geographical region. "
+          "val" : "The sum of all biotic and abiotic entities in a geographical region."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "Ecosystem"
@@ -1553,12 +1553,12 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "a fiat object part that is in gaseous phase and that is the outer layer of an object in space and is held to the object by gravitational force"
+          "val" : "A fiat object part that is in gaseous phase and that is the outer layer of an object in space and is held to the object by gravitational force"
         },
         "comments" : [ "atmosphere of Earth, Earth's moon, Saturn, Titan, etc.", "outer, gaseous layers of exoplanets are called extraterrestrial atmosphere." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "a fiat object part that is in gaseous phase and that is the outer layer of an object in space and is held to the object by gravitational force"
+          "val" : "A fiat object part that is in gaseous phase and that is the outer layer of an object in space and is held to the object by gravitational force"
         }, {
           "pred" : "http://purl.org/dc/elements/1.1/creator",
           "val" : "William R. Hogan"
@@ -1662,15 +1662,15 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The biological process of pathogen organism(s) of a particular biological taxon entering (the tissues of the body of) a host organism of another taxon from a contagious host or a contaminated thing and reproducing using host resources"
+          "val" : "The biological process of pathogen organism(s) of a particular biological taxon entering (the tissues of the body of) a host organism of another taxon from a contagious host or a contaminated thing and reproducing using host resources."
         },
-        "comments" : [ "Apollo-SV defines infection acquisition rather than infection transmission, which is the direction of movement of a pathogen in current use.  The Apollo-SV conceptualization is simpler when accounting for infections acquired from contaminated things.\nThe likelihood of acquisition is expressed by parameters such as the basic reproduction rate and transmission coefficient.   \nAn infection is acquired from an infectious organism or a contaminated thing. \n", "Cannot acquire from colonized host directly - contamination results from colonized or contaminated thing and new host picks it up from contaminated thing" ],
+        "comments" : [ "Apollo-SV defines infection acquisition rather than infection transmission, which is the direction of movement of a pathogen in current use.  The Apollo-SV conceptualization is simpler when accounting for infections acquired from contaminated things.\nThe likelihood of acquisition is expressed by parameters such as the basic reproduction rate and transmission coefficient.   \nAn infection is acquired from an infectious organism or a contaminated thing.", "Cannot acquire from colonized host directly - contamination results from colonized or contaminated thing and new host picks it up from contaminated thing." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Mathias Brochhausen"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "A process where a susceptible organism from a particular species becomes infected by a particular pathogen.  The infection is acquired from an infected organism of a particular species or from a contaminated thing.  \n\nNote that the susceptible and infectious organisms can be of different species.\n\n"
+          "val" : "A process where a susceptible organism from a particular species becomes infected by a particular pathogen.  The infection is acquired from an infected organism of a particular species or from a contaminated thing.  \n\nNote that the susceptible and infectious organisms can be of different species."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "InfectionAcquisition"
@@ -1708,7 +1708,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "a unique identifier that refers to a protocol for vaccinating one person"
+          "val" : "A unique identifier that refers to a protocol for vaccinating one person"
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
@@ -1722,7 +1722,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "the number of doses of vaccine that are recommended to achieve immunity"
+          "val" : "A number of doses of vaccine that are recommended to achieve immunity"
         } ]
       }
     }, {
@@ -1732,7 +1732,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "an interbreeding population"
+          "val" : "An interbreeding population"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "species"
@@ -1744,7 +1744,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "a unique identifier that refers to an antiviral drug product"
+          "val" : "A unique identifier that refers to an antiviral drug product"
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
@@ -1785,7 +1785,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000125",
-      "lbl" : "school calendar",
+      "lbl" : "obsolete school calendar",
       "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -1825,7 +1825,7 @@
       "lbl" : "control strategy target population fraction",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "a specification of a population that a control strategy applies to.  It is intended to apply to a real population, so I don’t know whether you would consider it a simulated thing.  I don’t." ],
+        "comments" : [ "A specification of a population that a control strategy applies to.  It is intended to apply to a real population, so I don’t know whether you would consider it a simulated thing.  I don’t." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
           "val" : "Fraction of organisms in a target population that a control strategy program seeks to enroll or prioritize"
@@ -1837,11 +1837,11 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "an epidemic control measure plan specification that has a conditional specification as part"
+          "val" : "An epidemic control measure plan specification that has a conditional specification as part"
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "a control measure (program) that is initiated or modified by an epidemic-related event (or if you prefer, an event occurring within/during the simulation)"
+          "val" : "A control measure (program) that is initiated or modified by an epidemic-related event (or if you prefer, an event occurring within/during the simulation)"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "Reactive control measure"
@@ -1871,7 +1871,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "A fraction of the population known to have undergone a specific event that results in starting or stopping an infectious disease control strategy.\n\nThe event could be infection acquisition, vaccination, antiviral treatment, etc.\n"
+          "val" : "A fraction of the population known to have undergone a specific event that results in starting or stopping an infectious disease control strategy.\n\nThe event could be infection acquisition, vaccination, antiviral treatment, etc."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "reactiveControlMeasureThreshold"
@@ -1945,7 +1945,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "the number of distinct antigenic strains in a vaccine product "
+          "val" : "The number of distinct antigenic strains in a vaccine product."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "valence"
@@ -1972,7 +1972,7 @@
         "definition" : {
           "val" : "A measurement datum about the fraction of individuals in a population that elect to participate in a control strategy when offered."
         },
-        "comments" : [ "the class restriction can be made more precise AH", "the fraction of some population that is targeted for a control strategy that accepts it.  It can obviously also be interpreted as a probability that the average individual in the targeted population accepts/complies with the control strategy.  It is not simulated" ],
+        "comments" : [ "A class restriction can be made more precise AH", "A fraction of some population that is targeted for a control strategy that accepts it.  It can obviously also be interpreted as a probability that the average individual in the targeted population accepts/complies with the control strategy.  It is not simulated" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
           "val" : "A fraction of eligible individuals in a population who receive an intervention or participate in a control strategy."
@@ -2025,7 +2025,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000143",
-      "lbl" : "vaccine disposition",
+      "lbl" : "obsolete vaccine disposition",
       "type" : "CLASS",
       "meta" : {
         "comments" : [ "replaced with VO 'vaccine function'" ],
@@ -2069,7 +2069,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000146",
-      "lbl" : "beta",
+      "lbl" : "obsolete beta",
       "type" : "CLASS",
       "meta" : {
         "comments" : [ "it is the same thing as transmission coefficient" ],
@@ -2094,7 +2094,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000148",
-      "lbl" : "random number seed",
+      "lbl" : "obsolete random number seed",
       "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -2120,7 +2120,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "a fraction of the target population, that once vaccinated, results in stopping further vaccination in the population"
+          "val" : "A fraction of the target population, that once vaccinated, results in stopping further vaccination in the population"
         } ]
       }
     }, {
@@ -2272,7 +2272,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000161",
-      "lbl" : "MIDAS scenario",
+      "lbl" : "obsolete MIDAS scenario",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -2372,7 +2372,7 @@
         "definition" : {
           "val" : "An independent continuant that is the localization of a pathogen, but is not undergoing an infection."
         },
-        "comments" : [ "A contaminated thing is an entity that contains a pathogen (either internal to itself or on its surface) that is not undergoing an infection.    " ],
+        "comments" : [ "A contaminated thing is an entity that contains a pathogen (either internal to itself or on its surface) that is not undergoing an infection." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Mathias Brochhausen"
@@ -2652,7 +2652,7 @@
         "definition" : {
           "val" : "The process of existence without reproduction of a pathogen of a particular biological taxon in or on some material entity or the process of reproduction of a pathogen in or on a material entity that is not an organism."
         },
-        "comments" : [ "the preferred term is biological contamination to distinguish from things like radiological contamination, contamination of the Gulf of Mexico with oil, the contamination of air with pollution, etc." ],
+        "comments" : [ "The preferred term is biological contamination to distinguish from things like radiological contamination, contamination of the Gulf of Mexico with oil, the contamination of air with pollution, etc." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "biological contamination"
@@ -2691,7 +2691,7 @@
         "definition" : {
           "val" : "A census that represents the biotic and abiotic elements of an ecosystem at simulator time zero."
         },
-        "comments" : [ "Class was originally created to correspond with a complex type from Apollo XSD v3.1.0.", "This census should exclude infection, immunity, treatment, or contamination.  " ],
+        "comments" : [ "Class was originally created to correspond with a complex type from Apollo XSD v3.1.0.", "This census should exclude infection, immunity, treatment, or contamination." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
           "val" : "A census that represents the biotic and abiotic elements of an ecosystem at simulator time zero."
@@ -2819,11 +2819,11 @@
       "lbl" : "agent level population and environment census",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "An instance of the an AgentLevel PopulationAndEnvironmentCensus type comprises an AgentLevel PopulationAndEnvironmentCensus Description, which describes the biotic and abiotic ecosystems elements that are counted by the census, and a URL where the census (the counts) can be retrieved. " ]
+        "comments" : [ "An instance of the an AgentLevel PopulationAndEnvironmentCensus type comprises an AgentLevel PopulationAndEnvironmentCensus Description, which describes the biotic and abiotic ecosystems elements that are counted by the census, and a URL where the census (the counts) can be retrieved." ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000198",
-      "lbl" : "agent model ecosystem census description",
+      "lbl" : "obsolete agent model ecosystem census description",
       "type" : "CLASS",
       "meta" : {
         "comments" : [ "At present, this class corresponds with an XSD type that contains authentication plus information needed to generate a Synthia synthetic population dataset including (1) geographical location and (2) a list of household characteristics." ],
@@ -2831,7 +2831,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000199",
-      "lbl" : "compartment model population and environment census",
+      "lbl" : "obsolete compartment model population and environment census",
       "type" : "CLASS",
       "meta" : {
         "comments" : [ "The Apollo XSD allows us to specify counts of certain subpopulations and abiotic ecosystem elements for a compartmental model (vs. specifying each individual in the population as in agent model population and environment census)." ],
@@ -2868,7 +2868,7 @@
       "lbl" : "indexable Apollo item",
       "type" : "CLASS",
       "meta" : {
-        "comments" : [ "A class representing an abstract type. This class has no attributes and programmers should use it to determine whether an instance should be saved or can be retrieved. " ],
+        "comments" : [ "A class representing an abstract type. This class has no attributes and programmers should use it to determine whether an instance should be saved or can be retrieved." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "ApolloIndexableItem"
@@ -2954,7 +2954,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "an organism that is the bearer of resistance to infection"
+          "val" : "An organism that is the bearer of resistance to infection"
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -3100,14 +3100,14 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An information content entity that assigns a probability to each measurable subset of the possible outcomes of a random experiment, survey, or procedure of statistical inference. "
+          "val" : "An information content entity that assigns a probability to each measurable subset of the possible outcomes of a random experiment, survey, or procedure of statistical inference."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "http://en.wikipedia.org/wiki/Probability_distribution"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "An information content entity that assigns a probability to each measurable subset of the possible outcomes of a random experiment, survey, or procedure of statistical inference. "
+          "val" : "An information content entity that assigns a probability to each measurable subset of the possible outcomes of a random experiment, survey, or procedure of statistical inference."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "ProbabilityDistribution"
@@ -3119,11 +3119,11 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "a probability distribution over a discrete random variable"
+          "val" : "A probability distribution over a discrete random variable"
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "a probability distribution over a discrete random variable"
+          "val" : "A probability distribution over a discrete random variable"
         } ]
       }
     }, {
@@ -3354,7 +3354,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "an infectious disease control strategy that has an action specification that is realized in closing facilities where organisms congregate during times when the facilities normally would be open."
+          "val" : "An infectious disease control strategy that has an action specification that is realized in closing facilities where organisms congregate during times when the facilities normally would be open."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -3373,7 +3373,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "an infectious disease control strategy that has an action specification that is realized in isolating organsims who are infectious."
+          "val" : "An infectious disease control strategy that has an action specification that is realized in isolating organsims who are infectious."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -3599,7 +3599,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "a unique identifier that refers to a disease."
+          "val" : "A unique identifier that refers to a disease."
         },
         "comments" : [ "This class is different from its superclass, in that the identifier is non-redundant with other identifiers in its context (such as a coding system or terminology or ontology).  The superclass admits of natural langugage names of diseases, whereas this one typically does not.", "We still need to decide which coding schema to adopt.-MB" ],
         "basicPropertyValues" : [ {
@@ -3686,7 +3686,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000249",
-      "lbl" : "nonparametric probability distribution",
+      "lbl" : "obsolete nonparametric probability distribution",
       "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -3766,7 +3766,7 @@
           "val" : "http://en.wikipedia.org/w/index.php?title=Log-normal_distribution&oldid=601643223"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "a log-normal (or lognormal) distribution is a continuous probability distribution of a random variable whose logarithm is normally distributed."
+          "val" : "A log-normal (or lognormal) distribution is a continuous probability distribution of a random variable whose logarithm is normally distributed."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "LogNormalDistribution"
@@ -3778,7 +3778,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "the gamma distribution is a two-parameter family of continuous probability distributions"
+          "val" : "A gamma distribution is a two-parameter family of continuous probability distributions"
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -3788,7 +3788,7 @@
           "val" : "http://en.wikipedia.org/w/index.php?title=Gamma_distribution&oldid=602019254"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "the gamma distribution is a two-parameter family of continuous probability distributions"
+          "val" : "A gamma distribution is a two-parameter family of continuous probability distributions"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "GammaDistribution"
@@ -3819,7 +3819,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "the continuous uniform distribution or rectangular distribution is a family of symmetric probability distributions such that for each member of the family, all intervals of the same length on the distribution's support are equally probable."
+          "val" : "A continuous uniform distribution or rectangular distribution is a family of symmetric probability distributions such that for each member of the family, all intervals of the same length on the distribution's support are equally probable."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -3829,7 +3829,7 @@
           "val" : "http://en.wikipedia.org/w/index.php?title=Uniform_distribution_(continuous)&oldid=597643343"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "the continuous uniform distribution or rectangular distribution is a family of symmetric probability distributions such that for each member of the family, all intervals of the same length on the distribution's support are equally probable."
+          "val" : "A continuous uniform distribution or rectangular distribution is a family of symmetric probability distributions such that for each member of the family, all intervals of the same length on the distribution's support are equally probable."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "ContinuousUniformDistribution"
@@ -3978,7 +3978,7 @@
           "val" : "William R. Hogan"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "An infection acquisition from an individual who is infectious.\n\nThe individual acquiring the infection can be of a different species than the one who is infectious.\n"
+          "val" : "An infection acquisition from an individual who is infectious.\n\nThe individual acquiring the infection can be of a different species than the one who is infectious."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "InfectionAcquisitionFromInfectedHost"
@@ -4036,7 +4036,7 @@
           "val" : "William R. Hogan"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "A system of measurement of time with respect to an arbitrary reference point or event, which typically has a measured value of zero elapsed time.\n\nIn epidemic simulation, it can be 'simulator time' where time zero is the starting point of an infectious disease scenario, or it can be 'control strategy time' where time zero is the time at which the control strategy is initiated.\n"
+          "val" : "A system of measurement of time with respect to an arbitrary reference point or event, which typically has a measured value of zero elapsed time.\n\nIn epidemic simulation, it can be 'simulator time' where time zero is the starting point of an infectious disease scenario, or it can be 'control strategy time' where time zero is the time at which the control strategy is initiated."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "timeScale"
@@ -4102,7 +4102,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "the duration of time that has elapsed from the zero reference point to a later time on the time scale"
+          "val" : "A duration of time that has elapsed from the zero reference point to a later time on the time scale"
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
@@ -4429,7 +4429,7 @@
           "val" : "William R. Hogan"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "The unit of measure for the supply schedule of an individual treatment.\n\nFor example, 'daily dose'.\n"
+          "val" : "The unit of measure for the supply schedule of an individual treatment.\n\nFor example, 'daily dose'."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "supplyScheduleUnits"
@@ -4496,7 +4496,7 @@
           "val" : "William R. Hogan"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "A specification of the criteria an organism must meet to be considered to be in some abnormal state.\n\nThe abnormal state could be having a disease, carrier status, a syndrome, a structural abnormality (e.g., congenital heart defect), and so on.\n"
+          "val" : "A specification of the criteria an organism must meet to be considered to be in some abnormal state.\n\nThe abnormal state could be having a disease, carrier status, a syndrome, a structural abnormality (e.g., congenital heart defect), and so on."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "CaseDefinition"
@@ -4986,7 +4986,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "a reproduction of a pathogen of a particular biological taxon inside a host organism of another taxon, without invasion of the tissues of the host."
+          "val" : "A reproduction of a pathogen of a particular biological taxon inside a host organism of another taxon, without invasion of the tissues of the host."
         },
         "comments" : [ "Primary use case is colonization of humans, animals with Staph aureus, but it also covers bacteriuria, transient bactermia, and normal gut flora." ],
         "basicPropertyValues" : [ {
@@ -4997,7 +4997,7 @@
           "val" : "William R. Hogan"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "a reproduction of a pathogen of a particular biological taxon inside a host organism of another taxon, without invasion of the tissues of the host."
+          "val" : "A reproduction of a pathogen of a particular biological taxon inside a host organism of another taxon, without invasion of the tissues of the host."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "Colonization"
@@ -5009,7 +5009,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "an infection in an ecosystem occurring in one population of organisms"
+          "val" : "An infection in an ecosystem occurring in one population of organisms"
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
@@ -5019,7 +5019,7 @@
           "val" : "William R. Hogan"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "an infection in an ecosystem occurring in one population of organisms"
+          "val" : "An infection in an ecosystem occurring in one population of organisms"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "Infection"
@@ -5031,9 +5031,9 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "a biological process where a pathogen organism of a particular biological taxon enters into a host organism of a particular taxon and begins to undergo reproduction in a location external to tissues of the host"
+          "val" : "A biological process where a pathogen organism of a particular biological taxon enters into a host organism of a particular taxon and begins to undergo reproduction in a location external to tissues of the host"
         },
-        "comments" : [ "the host organism was not colonized wtih the pathogen prior to the colonization acquisition" ],
+        "comments" : [ "The host organism was not colonized wtih the pathogen prior to the colonization acquisition" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "colonization acquisition"
@@ -5042,7 +5042,7 @@
           "val" : "William R. Hogan"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "a biological process where a pathogen organism of a particular biological taxon enters into a host organism of a particular taxon and begins to undergo reproduction in a location external to tissues of the host"
+          "val" : "A biological process where a pathogen organism of a particular biological taxon enters into a host organism of a particular taxon and begins to undergo reproduction in a location external to tissues of the host"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "ColonizationAcquisition"
@@ -5054,7 +5054,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "an indivdiual treatment control strategy that prevents infectious disease by treating indivdiuals colonized with a pathogen of a particular species to limit or end the colonization"
+          "val" : "An indivdiual treatment control strategy that prevents infectious disease by treating indivdiuals colonized with a pathogen of a particular species to limit or end the colonization"
         },
         "comments" : [ "typically the pathogen is a bacterium" ],
         "basicPropertyValues" : [ {
@@ -5065,7 +5065,7 @@
           "val" : "William R. Hogan"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "an indivdiual treatment control strategy that prevents infectious disease by treating indivdiuals colonized with a pathogen of a particular species to limit or end the colonization"
+          "val" : "An indivdiual treatment control strategy that prevents infectious disease by treating indivdiuals colonized with a pathogen of a particular species to limit or end the colonization"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "DecolonizationControlMeasure"
@@ -5867,7 +5867,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000370",
-      "lbl" : "deprecated homeostasis",
+      "lbl" : "obsolete homeostasis",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -6426,7 +6426,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000399",
-      "lbl" : "deprecated infection case count",
+      "lbl" : "obsolete infection case count",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -7201,7 +7201,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000435",
-      "lbl" : "closure period",
+      "lbl" : "obsolete closure period",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -8070,7 +8070,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000475",
-      "lbl" : "gonotrophic period duration",
+      "lbl" : "obsolete gonotrophic period duration",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -8482,7 +8482,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000496",
-      "lbl" : "ORCID",
+      "lbl" : "obsolete ORCID",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -10250,7 +10250,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "an individual treatment control strategy that is realized by one or more intensive care unit encounters for infected individuals in the population"
+          "val" : "An individual treatment control strategy that is realized by one or more intensive care unit encounters for infected individuals in the population"
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
@@ -10260,7 +10260,7 @@
           "val" : "William R. Hogan"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "an individual treatment control strategy that is realized by treating one or more infected individuals in an intensive care unit"
+          "val" : "An individual treatment control strategy that is realized by treating one or more infected individuals in an intensive care unit"
         } ]
       }
     }, {
@@ -10381,9 +10381,6 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "treatment facilities census"
         }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
-          "val" : "treatment facility census"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
           "val" : "A census that counts the number of treatment facilities of some kind in a particular geographical region."
         } ]
@@ -10433,7 +10430,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "an identifier that denotes a disease."
+          "val" : "An identifier that denotes a disease."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
@@ -10458,7 +10455,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "a dataset that is about infectious disease acquisitions at particular times and particular places."
+          "val" : "A dataset that is about infectious disease acquisitions at particular times and particular places."
         },
         "comments" : [ "The dataset may include sites (e.g. types of facilities, rooms), events (e.g., church service whether in or outdoors), dates, times, geographical regions, etc. in which the sites/events are located, and so on." ],
         "basicPropertyValues" : [ {
@@ -10484,7 +10481,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "a dataset that is about two or more hospital stays involving two or more patients."
+          "val" : "A dataset that is about two or more hospital stays involving two or more patients."
         },
         "comments" : [ "The dataset may be limited to stays in one hospital, but hospital discharge datasets as compiled by state departments of health typically contain stays from multiple hospitals (typically every hospital) in the geographical region over which they have jurisdiction" ],
         "basicPropertyValues" : [ {
@@ -10516,7 +10513,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "an individual human behavior that is the movements from one location to another throughout the day (e.g., work, home, stores, church, relatives' homes) in the areas adjacent to where the human lives at the time."
+          "val" : "An individual human behavior that is the movements from one location to another throughout the day (e.g., work, home, stores, church, relatives' homes) in the areas adjacent to where the human lives at the time."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
@@ -10538,7 +10535,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "a data set that is about the human daily movement behavior of the individual huamns in a given population."
+          "val" : "A data set that is about the human daily movement behavior of the individual huamns in a given population."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
@@ -10563,7 +10560,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "a data set that is about one or more potentially infectious contact processes in a population of host organisms."
+          "val" : "A data set that is about one or more potentially infectious contact processes in a population of host organisms."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
@@ -10588,7 +10585,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "a census of infectious disease control strategies put into place to reduce infection acquisitions that are part of an infection in an ecosystem."
+          "val" : "A census of infectious disease control strategies put into place to reduce infection acquisitions that are part of an infection in an ecosystem."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
@@ -10610,7 +10607,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "an infectious disease control strategy census that is about school closure infectious disease control strategies implemented in a particular geographical region."
+          "val" : "An infectious disease control strategy census that is about school closure infectious disease control strategies implemented in a particular geographical region."
         },
         "comments" : [ "This class represents datasets about strategies for school closure.  Datasets about individual actual school closures go elsewhere." ],
         "basicPropertyValues" : [ {
@@ -10653,7 +10650,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "a population treatment census that is about one or more vaccinations of organisms in a population."
+          "val" : "A population treatment census that is about one or more vaccinations of organisms in a population."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
@@ -11592,6 +11589,9 @@
       "id" : "http://purl.obolibrary.org/obo/CHEBI_36044",
       "type" : "CLASS"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/COB_0000035",
+      "type" : "CLASS"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_3292",
       "type" : "CLASS"
     }, {
@@ -11631,13 +11631,13 @@
       "id" : "http://purl.obolibrary.org/obo/GO_0019954",
       "type" : "CLASS"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/GO_0032504",
-      "type" : "CLASS"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0044409",
       "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0044419",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0048609",
       "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0051701",
@@ -11847,13 +11847,13 @@
       "id" : "http://purl.obolibrary.org/obo/UBERON_0000061",
       "type" : "CLASS"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/UBERON_0000071",
+      "type" : "CLASS"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/UBERON_0000479",
       "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/UBERON_0002405",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/UBERON_0035944",
       "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/UO_0000000",
@@ -11872,7 +11872,7 @@
       "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000004",
-      "lbl" : "basis of",
+      "lbl" : "obsolete basis of",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
@@ -11884,7 +11884,7 @@
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
-        "comments" : [ "p is based on e, if p is a purely intentional entity, e is an entity and p assumption/simulation that e exists regardless of the truth of this assumption. " ],
+        "comments" : [ "p is based on e, if p is a purely intentional entity, e is an entity and p assumption/simulation that e exists regardless of the truth of this assumption." ],
         "deprecated" : true
       }
     }, {
@@ -11911,7 +11911,7 @@
       "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
-          "val" : "A relation between to particulars such that aRb where b can be any kind of entity while the second is a universal. b instantiates a at some times. "
+          "val" : "A relation between to particulars such that aRb where b can be any kind of entity while the second is a universal. b instantiates a at some times."
         },
         "comments" : [ "Barry Smith, Waclaw Kusnierczyk, Daniel Schober, Werner Ceusters, “Towards a Reference Terminology for Ontology Research and Development in the Biomedical Domain”, O. Bodenreider, ed., Proceedings of KR-MED, 2006, 57-66. Also available online at: http://ceur-ws.org/Vol-222." ]
       }
@@ -11927,7 +11927,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000116",
-      "lbl" : "causally_precedes",
+      "lbl" : "obsolete causally_precedes",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
@@ -12153,7 +12153,7 @@
         "comments" : [ "This identifier is the one that the National Library of Medicine uses to identify journals uniquely in PubMed." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
-          "val" : "National Library of Medicine Identifier\n"
+          "val" : "National Library of Medicine Identifier"
         } ]
       }
     }, {
@@ -12212,7 +12212,7 @@
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION",
       "meta" : {
-        "comments" : [ "an annotation property for capturing the list of authors on the publication or other document to which the entity to which the annotation is attached refers.  That is, this annotation should be attached only to individuals that represent information content entities, and its values must denote the people that authored the ICE." ],
+        "comments" : [ "An annotation property for capturing the list of authors on the publication or other document to which the entity to which the annotation is attached refers.  That is, this annotation should be attached only to individuals that represent information content entities, and its values must denote the people that authored the ICE." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "author list"
@@ -12365,6 +12365,10 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000008",
       "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000008",
+      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000009",
@@ -12486,6 +12490,10 @@
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000032",
       "pred" : "http://purl.obolibrary.org/obo/OBI_0000312",
       "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000033"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000033",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000033",
       "pred" : "is_a",
@@ -12623,6 +12631,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000070"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000066",
+      "pred" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000067",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000038"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000068",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000793"
@@ -12731,6 +12743,14 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000109"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000089",
+      "pred" : "http://purl.obolibrary.org/obo/IAO_0000136",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000025"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000090",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000090",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/OBI_0000471"
@@ -12758,6 +12778,10 @@
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000094",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000027"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000094",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "obj" : "http://purl.obolibrary.org/obo/PCO_0000001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000095",
       "pred" : "is_a",
@@ -13179,6 +13203,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000793"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000183",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000015"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000184",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000100"
@@ -13222,6 +13250,10 @@
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000193",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000027"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000194",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000086"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000195",
       "pred" : "is_a",
@@ -13729,7 +13761,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000312",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0032504"
+      "obj" : "http://purl.obolibrary.org/obo/GO_0048609"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000312",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002218",
@@ -15157,11 +15189,19 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000796",
       "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000796",
+      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000796",
       "pred" : "http://purl.obolibrary.org/obo/OBI_0000299",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000100"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000797",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000797",
       "pred" : "is_a",
