@@ -1,0 +1,11 @@
+http://purl.obolibrary.org/obo/UBERON_0000061
+http://purl.obolibrary.org/obo/UBERON_0000071
+http://purl.obolibrary.org/obo/UBERON_0000105
+http://purl.obolibrary.org/obo/UBERON_0000465
+http://purl.obolibrary.org/obo/UBERON_0000467
+http://purl.obolibrary.org/obo/UBERON_0000479
+http://purl.obolibrary.org/obo/UBERON_0000480
+http://purl.obolibrary.org/obo/UBERON_0002405
+http://purl.obolibrary.org/obo/UBERON_0010000
+http://purl.obolibrary.org/obo/UBERON_0035943
+

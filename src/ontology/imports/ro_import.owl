@@ -36,7 +36,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000061>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000465>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0001062>))
-Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0010000>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000054>))
@@ -211,9 +210,7 @@ Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/uberon/core#commo
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/uberon/core#human_subset>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/uberon/core#mouse_subset>))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/uberon/core#uberon_slim>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/uberon/core#upper_level>))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/uberon/core#vertebrate_core>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/contributor>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/contributor>))
@@ -450,7 +447,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://www.gen
 AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> "has broad synonym"@en)
 AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> "has_broad_synonym")
 
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasDbXref> (database_cross_reference)
+# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasDbXref> (has cross-reference)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "disease characteristic (MONDO:0021125) has cross-reference (http://www.geneontology.org/formats/oboInOwl#hasDbXref) \"NCIT:C41009\"^^xsd:string")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "An annotation property that links an ontology entity or a statement to a prefixed identifier or URI.")
@@ -2248,19 +2245,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UBERON_0001062> "anatomical entity")
 EquivalentClasses(<http://purl.obolibrary.org/obo/UBERON_0001062> ObjectHasSelf(<http://purl.obolibrary.org/obo/RO_0020105>))
 SubClassOf(<http://purl.obolibrary.org/obo/UBERON_0001062> <http://purl.obolibrary.org/obo/BFO_0000004>)
-
-# Class: <http://purl.obolibrary.org/obo/UBERON_0010000> (multicellular anatomical structure)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "CARO:0010000") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/UBERON_0010000> "An anatomical structure that has more than one cell as a part.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/UBERON_0010000> "CARO:0010000")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBbt:00100313") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UBERON_0010000> "multicellular structure")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/UBERON_0010000> "UBERON:0010000")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/UBERON_0010000> <http://purl.obolibrary.org/obo/uberon/core#common_anatomy>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/UBERON_0010000> <http://purl.obolibrary.org/obo/uberon/core#human_subset>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/UBERON_0010000> <http://purl.obolibrary.org/obo/uberon/core#mouse_subset>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/UBERON_0010000> <http://purl.obolibrary.org/obo/uberon/core#upper_level>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UBERON_0010000> "multicellular anatomical structure")
-SubClassOf(<http://purl.obolibrary.org/obo/UBERON_0010000> <http://purl.obolibrary.org/obo/UBERON_0000061>)
 
 
 ############################
