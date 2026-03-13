@@ -25,7 +25,7 @@
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#"
      xmlns:ace_lexicon="http://attempto.ifi.uzh.ch/ace_lexicon#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/apollo_sv/apollo_sv-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/apollo_sv/releases/2024-12-24/apollo_sv-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/apollo_sv/releases/2026-03-13/apollo_sv-base.owl"/>
         <dc:contributor>Amanda Hicks</dc:contributor>
         <dc:contributor>John Levander</dc:contributor>
         <dc:contributor>Josh Hanna</dc:contributor>
@@ -42,7 +42,7 @@
         <www:RTS_00000001>C87985BA-6A8A-483A-A6B6-63975101F672</www:RTS_00000001>
         <www:RTS_00000002>082D5D78-D916-457E-B4FD-365F86F45B30</www:RTS_00000002>
         <rdfs:comment xml:lang="en">When citing Apollo-SV, use the permanent URL of the ontology: http://purl.obolibrary.org/obo/apollo_sv.owl.  When referencing a specific component of the Apollo-SV such as a class, object property, annotation property, or individual, use the component&apos;s Uniform Resource Identifier (URI).</rdfs:comment>
-        <owl:versionInfo>2024-12-24</owl:versionInfo>
+        <owl:versionInfo>2026-03-13</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -61,8 +61,7 @@
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000319 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000319">
-        <obo:IAO_0000118 xml:lang="en">National Library of Medicine Identifier
-</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">National Library of Medicine Identifier</obo:IAO_0000118>
         <rdfs:comment xml:lang="en">This identifier is the one that the National Library of Medicine uses to identify journals uniquely in PubMed.</rdfs:comment>
         <rdfs:label xml:lang="en">NLM ID</rdfs:label>
     </owl:AnnotationProperty>
@@ -291,7 +290,7 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000004">
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty"/>
-        <rdfs:label xml:lang="en">basis of</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete basis of</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
@@ -301,7 +300,7 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000028">
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty"/>
-        <rdfs:comment xml:lang="en">p is based on e, if p is a purely intentional entity, e is an entity and p assumption/simulation that e exists regardless of the truth of this assumption. </rdfs:comment>
+        <rdfs:comment xml:lang="en">p is based on e, if p is a purely intentional entity, e is an entity and p assumption/simulation that e exists regardless of the truth of this assumption.</rdfs:comment>
         <rdfs:label xml:lang="en">obsolete is based on</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
@@ -344,7 +343,7 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
-        <obo:IAO_0000115 xml:lang="en">A relation between to particulars such that aRb where b can be any kind of entity while the second is a universal. b instantiates a at some times. </obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A relation between to particulars such that aRb where b can be any kind of entity while the second is a universal. b instantiates a at some times.</obo:IAO_0000115>
         <rdfs:comment>Barry Smith, Waclaw Kusnierczyk, Daniel Schober, Werner Ceusters, “Towards a Reference Terminology for Ontology Research and Development in the Biomedical Domain”, O. Bodenreider, ed., Proceedings of KR-MED, 2006, 57-66. Also available online at: http://ceur-ws.org/Vol-222.</rdfs:comment>
         <rdfs:label xml:lang="en">instantiates</rdfs:label>
     </owl:ObjectProperty>
@@ -369,7 +368,7 @@ For the 1982-10-17 date, we suggest the dc:created annotation.</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000116">
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty"/>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">causally_precedes</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete causally_precedes</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
@@ -882,6 +881,7 @@ Even in the case of a simulated disaster scenario where actual ambulances, fire 
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/COB_0000035"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1024,7 +1024,7 @@ Even in the case of a simulated disaster scenario where actual ambulances, fire 
         <obo:IAO_0000115 xml:lang="en">A control strategy start time information item that is based on a condition that triggers the control strategy.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">A control strategy start time information item that is based on a condition that triggers the control strategy.</obo:IAO_0000600>
-        <rdfs:label xml:lang="en">control strategy reactive start time information</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete control strategy reactive start time information</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -1035,10 +1035,7 @@ Even in the case of a simulated disaster scenario where actual ambulances, fire 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000012">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000029"/>
         <obo:IAO_0000115 xml:lang="en">A numeral that is part of a simulation time step action specification.</obo:IAO_0000115>
-        <obo:IAO_0000600 xml:lang="en">A number of time step units in a time step of a simulation.  
-
-For example, if the time step is 6 hours, then this value is 6.
-</obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">A number of time step units in a time step of a simulation.  For example, if the time step is 6 hours, then this value is 6.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>numberOfUnitsOfTimeInOneSimulatorStep</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">simulation time step value</rdfs:label>
     </owl:Class>
@@ -1085,10 +1082,7 @@ For example, if the time step is 6 hours, then this value is 6.
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">The action specification that specifies the number of time steps a simulation is going to run.</obo:IAO_0000115>
-        <obo:IAO_0000600 xml:lang="en">The number of time steps in a simulator run.
-
-For example, if run length is 10 and the time step is 6 hours, then the simulator will simulate a 60-hour period that begins at simulator time zero.
-</obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">The number of time steps in a simulator run. For example, if run length is 10 and the time step is 6 hours, then the simulator will simulate a 60-hour period that begins at simulator time zero.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>runLength</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">simulation run length</rdfs:label>
     </owl:Class>
@@ -1149,11 +1143,7 @@ Note that the susceptible and infectious organisms can be of different species.<
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A duration of the time interval between the host acquiring an infection and the host bearing a contagiousness disposition during the same disease course within a population of hosts.</obo:IAO_0000115>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">A period during which an organism of a particular species, who is infected with a particular pathogen, is not yet able to infect susceptible organisms of a particular species.  
-
-Note that the susceptible and infected organisms can be of different species.
-
-</obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">A period during which an organism of a particular species, who is infected with a particular pathogen, is not yet able to infect susceptible organisms of a particular species.  Note that the susceptible and infected organisms can be of different species.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>latentPeriodDuration</apollo_sv:APOLLO_SV_0000040>
         <rdfs:comment xml:lang="en">MB: In order to get the temporal occupation relations I added properties that I renamed with BFO2 URIs</rdfs:comment>
         <rdfs:comment xml:lang="en">The duration of the period between when an organism becomes infected and when it becomes infectious.</rdfs:comment>
@@ -1218,11 +1208,10 @@ Note that the susceptible and infected organisms can be of different species.
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">The count of (simulated organisms) in a simulated population.</obo:IAO_0000115>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000600 xml:lang="en">The number of simulated organisms in a simulated population.  The number does not have to be an integer.  </obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">The number of simulated organisms in a simulated population.  The number does not have to be an integer.</obo:IAO_0000600>
         <rdfs:comment xml:lang="en">MW: I know this causes problems with our set-theoretic definition.  Unfortunately the compartmental models produce fractional counts at each of their time steps, including the final step.  
 
-Any ideas?  I’ve considered and rejected allowing individual organisms to be fractional.  Perhaps if we just replace the term “cardinality” in the definition with ‘computed size’
-</rdfs:comment>
+Any ideas?  I’ve considered and rejected allowing individual organisms to be fractional.  Perhaps if we just replace the term “cardinality” in the definition with ‘computed size’</rdfs:comment>
         <rdfs:label xml:lang="en">count of simulated population</rdfs:label>
     </owl:Class>
     
@@ -1233,7 +1222,7 @@ Any ideas?  I’ve considered and rejected allowing individual organisms to be f
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000023">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000084"/>
         <obo:IAO_0000115 xml:lang="en">An action specification comprising the number of doses and their timing for a vaccination of an individual organism against a specific infectious agent.</obo:IAO_0000115>
-        <obo:IAO_0000600 xml:lang="en">A vaccination schedule specifies the intended timing of initial and subsequent booster doses of vaccine for an individual organism. </obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">A vaccination schedule specifies the intended timing of initial and subsequent booster doses of vaccine for an individual organism.</obo:IAO_0000600>
         <rdfs:label xml:lang="en">vaccination dose schedule</rdfs:label>
     </owl:Class>
     
@@ -1248,8 +1237,7 @@ Any ideas?  I’ve considered and rejected allowing individual organisms to be f
         <rdfs:comment xml:lang="en">MB: This class is still awaiting its class restriction. It should be restricted as being about a population that has members that are eligible for a vaccination against the members that are eligible and consented the vaccination. There is a class &quot;eligibility rule&quot; in OBI (http://purl.obolibrary.org/obo/OBI_0500026), but it is restricted by definition to studies. I put in an issue in the OBI issue tracker. The consenting process and its specified outcome should be done in d-acts, but needs to be done properly.</rdfs:comment>
         <rdfs:comment xml:lang="en">MW: I still see enough similarities at the abstract level among some control measures that we might add the concepts “Control measure compliance”, “Control measure efficacy”  and “control measure efficacy delay.”    We could then post-coordinate particular control measures such as vaccine.
 
-It is worth noting that there are control measures such as closing schools that are not applied at the individual level.   We have not represented those control measures yet.
-</rdfs:comment>
+It is worth noting that there are control measures such as closing schools that are not applied at the individual level.   We have not represented those control measures yet.</rdfs:comment>
         <rdfs:label xml:lang="en">vaccination compliance</rdfs:label>
     </owl:Class>
     
@@ -1381,8 +1369,8 @@ can&apos;t recall whether we should use process or processual_entity for future 
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A process that is applied to a population with the goal of preventing, or mitigating the severity of an infectious disease.  </obo:IAO_0000115>
-        <obo:IAO_0000600 xml:lang="en">A process that is applied to a population with the goal of preventing, or mitigating the severity of an infectious disease.  </obo:IAO_0000600>
+        <obo:IAO_0000115 xml:lang="en">A process that is applied to a population with the goal of preventing, or mitigating the severity of an infectious disease.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">A process that is applied to a population with the goal of preventing, or mitigating the severity of an infectious disease.</obo:IAO_0000600>
         <rdfs:label xml:lang="en">infectious disease control strategy execution</rdfs:label>
     </owl:Class>
     
@@ -1508,6 +1496,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/COB_0000035"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1663,10 +1652,9 @@ can&apos;t recall whether we should use process or processual_entity for future 
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A simulated organism in a simulated population that is not susceptible. </obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A simulated organism in a simulated population that is not susceptible.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A simulated organism in a simulated population that is neither susceptible, exposed, nor infectious for a particular simulated disease. 
-Note that the name for this concept, were it to be named based on its intent, would be ‘immune.’  However, in the practice domain of epidemiology this concept is traditionally termed ‘recovered.’  The problem with the traditional name is that organisms can be considered ‘recovered’ by virtue of having been vaccinated, which differs from lay usage.
-</obo:IAO_0000600>
+Note that the name for this concept, were it to be named based on its intent, would be ‘immune.’  However, in the practice domain of epidemiology this concept is traditionally termed ‘recovered.’  The problem with the traditional name is that organisms can be considered ‘recovered’ by virtue of having been vaccinated, which differs from lay usage.</obo:IAO_0000600>
         <rdfs:label xml:lang="en">simulation of recovered organism</rdfs:label>
     </owl:Class>
     
@@ -1735,7 +1723,7 @@ Note that the name for this concept, were it to be named based on its intent, wo
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">The average value of transmissions of the infectious agent from one infected organism to another, resulting in an infection. </obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">The average value of transmissions of the infectious agent from one infected organism to another, resulting in an infection.</obo:IAO_0000115>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">The number of susceptible organisms that each infected organism infects.  ‘Infects’ carries the same meaning as ‘exposes’ in epidemic simulations such as SEIR simulation.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>ReproductionNumber</apollo_sv:APOLLO_SV_0000040>
@@ -1845,8 +1833,8 @@ Preventable outcomes include but are not limited to infection, infectiousness, s
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000049">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000243"/>
-        <obo:IAO_0000115 xml:lang="en">The value of the time interval between an organism&apos;s taking antivirals against a specific infectious agent and the organism’s losing its infectious agent host role. </obo:IAO_0000115>
-        <obo:IAO_0000600 xml:lang="en">The duration of time (expressed in time steps) between initiation of a particular antiviral treatment to an organism and when the organism becomes non infectious or, if the antiviral is being administered prophylactically, protected from infection. </obo:IAO_0000600>
+        <obo:IAO_0000115 xml:lang="en">The value of the time interval between an organism&apos;s taking antivirals against a specific infectious agent and the organism’s losing its infectious agent host role.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">The duration of time (expressed in time steps) between initiation of a particular antiviral treatment to an organism and when the organism becomes non infectious or, if the antiviral is being administered prophylactically, protected from infection.</obo:IAO_0000600>
         <rdfs:label xml:lang="en">antiviral efficacy delay</rdfs:label>
     </owl:Class>
     
@@ -1857,7 +1845,7 @@ Preventable outcomes include but are not limited to infection, infectiousness, s
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000050">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0302867"/>
         <obo:IAO_0000115 xml:lang="en">The fraction expressing the probability that an organism will be consented to receive antiviral treatment when eligible.</obo:IAO_0000115>
-        <obo:IAO_0000600 xml:lang="en">The fraction of individuals in a simulated population that will accept antiviral treatment if offered. </obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">The fraction of individuals in a simulated population that will accept antiviral treatment if offered.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>antiviral cm compliance</apollo_sv:APOLLO_SV_0000040>
         <rdfs:comment xml:lang="en">MB: This class is still awaiting its class restriction. It should be restricted as being about a population that has members that are eligible for an antiviral treatment against the members that are eligible and consented the antiviral treatment. There is a class &quot;eligibility rule&quot; in OBI (http://purl.obolibrary.org/obo/OBI_0500026), but it is restricted by definition to studies. I put in an issue in the OBI issue tracker. The consenting process and its specified outcome should be done in d-acts, but needs to be done properly.</rdfs:comment>
         <rdfs:comment xml:lang="en">MW: Since the estimates that modelers use are from real populations, I have two questions:
@@ -1874,7 +1862,7 @@ MB: This issue will need to be taken care of in the axiomatization of simulated 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000051">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000795"/>
-        <obo:IAO_0000115 xml:lang="en">An action specification giving the number of doses of an antiviral to be made available during a specific time interval. </obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An action specification giving the number of doses of an antiviral to be made available during a specific time interval.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">Counts of antiviral doses that become available in a specific location per time step unit.</obo:IAO_0000600>
         <rdfs:label xml:lang="en">antiviral supply schedule</rdfs:label>
     </owl:Class>
@@ -2029,13 +2017,12 @@ MB: This issue will need to be taken care of in the axiomatization of simulated 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000060">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000070"/>
-        <obo:IAO_0000115>The simulation of an antiviral control measure. </obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">The simulation of an antiviral control measure.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A type of control measure based on administration of chemotherapeutic agents to an infected or high-risk organism that kill or inhibit replication of viruses within a simulated organism.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>antiviral control measure</apollo_sv:APOLLO_SV_0000040>
         <rdfs:comment xml:lang="en">MB: For all the antiviral-related classes I referred to ChEBI: Antiviral class. I wasn&apos;t able to use the plug-in though (there was a JAVA heap space error, probably due to the size of ChEBI).
 AND (more importantly) I did not re-use any of the ChEBI hierarchy which, even in the BFO version is a mess.
-Maybe we need to discuss this.
-</rdfs:comment>
+Maybe we need to discuss this.</rdfs:comment>
         <rdfs:label xml:lang="en">simulation of antiviral control measure</rdfs:label>
     </owl:Class>
     
@@ -2160,8 +2147,7 @@ Maybe we need to discuss this.
 
 One property that seems to be common among simulations in comparison to many other fictions is the fact that the chronological order of the simulated purely intentional entities is not changed in the process of simulating.
 
-While in many pieces of fiction the order in which the purely intentional entities are created can vary, this is not the case for simulations.
-</rdfs:comment>
+While in many pieces of fiction the order in which the purely intentional entities are created can vary, this is not the case for simulations.</rdfs:comment>
         <rdfs:label xml:lang="en">simulation time series</rdfs:label>
     </owl:Class>
     
@@ -2222,6 +2208,12 @@ While in many pieces of fiction the order in which the purely intentional entiti
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000067"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A purely intentional entity that simulates a temporal interval of pre-specified length.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A purely intentional entity that simulates a temporal interval of pre-specified length.</obo:IAO_0000600>
@@ -2320,12 +2312,8 @@ The time step value and unit are specified using a scalar value specification.</
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A purely intentional entity that simulates an entity and its properties.
-
-</obo:IAO_0000115>
-        <obo:IAO_0000600 xml:lang="en">A purely intentional entity that simulates an entity and its properties.
-
-</obo:IAO_0000600>
+        <obo:IAO_0000115 xml:lang="en">A purely intentional entity that simulates an entity and its properties.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">A purely intentional entity that simulates an entity and its properties.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>simulation</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">simulation</rdfs:label>
     </owl:Class>
@@ -2456,7 +2444,7 @@ The time step value and unit are specified using a scalar value specification.</
         <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000600 xml:lang="en">the mean or expectation of a distribution</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>μ</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:label xml:lang="en">μ</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete μ</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -2468,7 +2456,7 @@ The time step value and unit are specified using a scalar value specification.</
         <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000600 xml:lang="en">standard deviation</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>sigma</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:label xml:lang="en">σ</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete σ</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -2490,7 +2478,7 @@ The time step value and unit are specified using a scalar value specification.</
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000079">
         <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000600 xml:lang="en">a continuous probability distribution over variable X whose parameters denoted μ and σ are, respectively, the mean and standard deviation of the variable’s natural logarithm</obo:IAO_0000600>
-        <rdfs:label xml:lang="en">deprecated log normal distribution</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete log normal distribution</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -2551,7 +2539,7 @@ The time step value and unit are specified using a scalar value specification.</
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">An action specification comprising the number of doses and their timing for administering a substance to an individual organism to prevent the negative effects of a specific infectious agent to that organism.</obo:IAO_0000115>
-        <obo:IAO_0000600 xml:lang="en">A control strategy dose schedule specifies the intended timing of initial and subsequent doses of for example a vaccine or an antiviral for an individual organism. </obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">A control strategy dose schedule specifies the intended timing of initial and subsequent doses of for example a vaccine or an antiviral for an individual organism.</obo:IAO_0000600>
         <rdfs:label xml:lang="en">control strategy dose schedule</rdfs:label>
     </owl:Class>
     
@@ -2592,6 +2580,33 @@ The time step value and unit are specified using a scalar value specification.</
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000109"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000038"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000156"/>
+                                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/BFO_0000182"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000111 xml:lang="en">age structure data set</obo:IAO_0000111>
         <obo:IAO_0000115>A data set consisting of measurements of age organized in age brackets.</obo:IAO_0000115>
@@ -2692,13 +2707,44 @@ The time step value and unit are specified using a scalar value specification.</
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000025"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PCO_0000000"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                                <owl:allValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000142"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:allValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A measurement datum that is about a vaccination efficacy and is the specified output of a vaccination efficacy study.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A vaccination efficacy that results from a vaccination efficacy study.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>VaccinationEfficacyMeasured</apollo_sv:APOLLO_SV_0000040>
         <rdfs:comment xml:lang="en">1. Apollo-SV does not distinguish between ‘vaccine efficacy’ and ‘vaccine effectiveness.’
 
-2. Apollo-SV also considers the use of ‘vaccine’ in both terms a misnomer.
-</rdfs:comment>
+2. Apollo-SV also considers the use of ‘vaccine’ in both terms a misnomer.</rdfs:comment>
         <rdfs:label xml:lang="en">measured vaccination efficacy</rdfs:label>
     </owl:Class>
     
@@ -2722,6 +2768,7 @@ The time step value and unit are specified using a scalar value specification.</
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/COB_0000035"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000471"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -2796,6 +2843,12 @@ The time step value and unit are specified using a scalar value specification.</
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PCO_0000001"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Two or more distinct populations that are part of the same biotic ecosystem.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">Two or more distinct populations that are part of the same biotic ecosystem.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>community</apollo_sv:APOLLO_SV_0000040>
@@ -2811,7 +2864,7 @@ The time step value and unit are specified using a scalar value specification.</
         <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000600 xml:lang="en">a probability distribution over a discrete random variable</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>discrete probability distribution</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:label>deprecated discrete probability distribution</rdfs:label>
+        <rdfs:label>obsolete discrete probability distribution</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -2831,8 +2884,8 @@ The time step value and unit are specified using a scalar value specification.</
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000097">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <obo:IAO_0000115 xml:lang="en">The sum of all biotic and abiotic entities in a geographical region. </obo:IAO_0000115>
-        <obo:IAO_0000600 xml:lang="en">The sum of all biotic and abiotic entities in a geographical region. </obo:IAO_0000600>
+        <obo:IAO_0000115 xml:lang="en">The sum of all biotic and abiotic entities in a geographical region.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">The sum of all biotic and abiotic entities in a geographical region.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>Ecosystem</apollo_sv:APOLLO_SV_0000040>
         <dc:creator xml:lang="en">William R. Hogan</dc:creator>
         <rdfs:label xml:lang="en">ecosystem</rdfs:label>
@@ -3292,19 +3345,16 @@ The concept derives from the epidemiological notion of ‘herd immunity,’ whic
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000114"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">The biological process of pathogen organism(s) of a particular biological taxon entering (the tissues of the body of) a host organism of another taxon from a contagious host or a contaminated thing and reproducing using host resources</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">The biological process of pathogen organism(s) of a particular biological taxon entering (the tissues of the body of) a host organism of another taxon from a contagious host or a contaminated thing and reproducing using host resources.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">A process where a susceptible organism from a particular species becomes infected by a particular pathogen.  The infection is acquired from an infected organism of a particular species or from a contaminated thing.  
 
-Note that the susceptible and infectious organisms can be of different species.
-
-</obo:IAO_0000600>
+Note that the susceptible and infectious organisms can be of different species.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>InfectionAcquisition</apollo_sv:APOLLO_SV_0000040>
         <rdfs:comment xml:lang="en">Apollo-SV defines infection acquisition rather than infection transmission, which is the direction of movement of a pathogen in current use.  The Apollo-SV conceptualization is simpler when accounting for infections acquired from contaminated things.
 The likelihood of acquisition is expressed by parameters such as the basic reproduction rate and transmission coefficient.   
-An infection is acquired from an infectious organism or a contaminated thing. 
-</rdfs:comment>
-        <rdfs:comment xml:lang="en">Cannot acquire from colonized host directly - contamination results from colonized or contaminated thing and new host picks it up from contaminated thing</rdfs:comment>
+An infection is acquired from an infectious organism or a contaminated thing.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Cannot acquire from colonized host directly - contamination results from colonized or contaminated thing and new host picks it up from contaminated thing.</rdfs:comment>
         <rdfs:label xml:lang="en">infection acquisition</rdfs:label>
     </owl:Class>
     
@@ -3475,7 +3525,7 @@ An infection is acquired from an infectious organism or a contaminated thing.
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000125">
         <obo:IAO_0000600 xml:lang="en">The time steps that a school will be in session.</obo:IAO_0000600>
-        <rdfs:label xml:lang="en">school calendar</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete school calendar</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -3545,8 +3595,7 @@ An infection is acquired from an infectious organism or a contaminated thing.
         <obo:IAO_0000115 xml:lang="en">A data item that specifies the fraction of the population known to have undergone a specific event that results in starting or stopping an infectious disease control strategy.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A fraction of the population known to have undergone a specific event that results in starting or stopping an infectious disease control strategy.
 
-The event could be infection acquisition, vaccination, antiviral treatment, etc.
-</obo:IAO_0000600>
+The event could be infection acquisition, vaccination, antiviral treatment, etc.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>reactiveControlMeasureThreshold</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">reactive control strategy threshold</rdfs:label>
     </owl:Class>
@@ -3651,7 +3700,7 @@ For example, once a vaccination control strategy starts, individual vaccinations
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000137">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000032"/>
-        <obo:IAO_0000600 xml:lang="en">the number of distinct antigenic strains in a vaccine product </obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">The number of distinct antigenic strains in a vaccine product.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>valence</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">vaccine valence</rdfs:label>
     </owl:Class>
@@ -3904,7 +3953,7 @@ For example, once a vaccination control strategy starts, individual vaccinations
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000143">
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
         <rdfs:comment xml:lang="en">replaced with VO &apos;vaccine function&apos;</rdfs:comment>
-        <rdfs:label xml:lang="en">vaccine disposition</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete vaccine disposition</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -3968,7 +4017,7 @@ Somehow, it&apos;s not innate and it&apos;s temporary, ie, the body will eventua
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000146">
         <obo:IAO_0000600 xml:lang="en">Transmission parameter (sometime known as Ptrans). This value is multiplied by the inter-personal contact probability to determine the transmission probability between infected and susceptible persons.</obo:IAO_0000600>
         <rdfs:comment xml:lang="en">it is the same thing as transmission coefficient</rdfs:comment>
-        <rdfs:label xml:lang="en">beta</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete beta</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -3989,7 +4038,7 @@ Somehow, it&apos;s not innate and it&apos;s temporary, ie, the body will eventua
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000148">
         <obo:IAO_0000600 xml:lang="en">random number seed</obo:IAO_0000600>
-        <rdfs:label xml:lang="en">random number seed</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete random number seed</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4444,7 +4493,7 @@ I checked because an infection and immunity census would involve two different c
         <obo:IAO_0000115 xml:lang="en">An ecosystem in which a population of hosts is undergoing at least one infection.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An ecosystem in which a population of hosts is undergoing at least one infection.</obo:IAO_0000600>
-        <rdfs:label xml:lang="en">MIDAS scenario</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete MIDAS scenario</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4674,7 +4723,7 @@ I checked because an infection and immunity census would involve two different c
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An independent continuant that is the localization of a pathogen, but is not undergoing an infection.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>ContaminatedThing</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:comment xml:lang="en">A contaminated thing is an entity that contains a pathogen (either internal to itself or on its surface) that is not undergoing an infection.    </rdfs:comment>
+        <rdfs:comment xml:lang="en">A contaminated thing is an entity that contains a pathogen (either internal to itself or on its surface) that is not undergoing an infection.</rdfs:comment>
         <rdfs:label xml:lang="en">contaminated thing</rdfs:label>
     </owl:Class>
     
@@ -5100,6 +5149,12 @@ I checked because an infection and immunity census would involve two different c
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000015"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">An information content entity that specifies the length in time of a single simulator step (e.g., 1 day) and the requested run length of the simulation (number of steps).</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">An information content entity that specifies the length in time of a single simulator step (e.g., 1 day) and the requested run length of the simulation (number of steps).</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>SimulatorTimeSpecification</apollo_sv:APOLLO_SV_0000040>
@@ -5217,7 +5272,7 @@ The infectious disease scenario typically also includes a lot of additional data
         <obo:IAO_0000115 xml:lang="en">A census that represents the biotic and abiotic elements of an ecosystem at simulator time zero.</obo:IAO_0000115>
         <obo:IAO_0000600 xml:lang="en">A census that represents the biotic and abiotic elements of an ecosystem at simulator time zero.</obo:IAO_0000600>
         <rdfs:comment xml:lang="en">Class was originally created to correspond with a complex type from Apollo XSD v3.1.0.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This census should exclude infection, immunity, treatment, or contamination.  </rdfs:comment>
+        <rdfs:comment xml:lang="en">This census should exclude infection, immunity, treatment, or contamination.</rdfs:comment>
         <rdfs:label xml:lang="en">population and environment census</rdfs:label>
     </owl:Class>
     
@@ -5303,6 +5358,7 @@ Note that the infected and susceptible organisms may be of different species.</o
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000194 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000194">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000086"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -5328,6 +5384,27 @@ Note that the infected and susceptible organisms may be of different species.</o
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000007"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                                <owl:someValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000090"/>
+                                    </owl:Restriction>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000112 xml:lang="en">vaccination control strategy, antiviral control strategy</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">An infectious disease control strategy that immediately targets individuals.</obo:IAO_0000115>
@@ -5364,7 +5441,7 @@ Note that the infected and susceptible organisms may be of different species.</o
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000197">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000188"/>
-        <rdfs:comment xml:lang="en">An instance of the an AgentLevel PopulationAndEnvironmentCensus type comprises an AgentLevel PopulationAndEnvironmentCensus Description, which describes the biotic and abiotic ecosystems elements that are counted by the census, and a URL where the census (the counts) can be retrieved. </rdfs:comment>
+        <rdfs:comment xml:lang="en">An instance of the an AgentLevel PopulationAndEnvironmentCensus type comprises an AgentLevel PopulationAndEnvironmentCensus Description, which describes the biotic and abiotic ecosystems elements that are counted by the census, and a URL where the census (the counts) can be retrieved.</rdfs:comment>
         <rdfs:label xml:lang="en">agent level population and environment census</rdfs:label>
     </owl:Class>
     
@@ -5374,7 +5451,7 @@ Note that the infected and susceptible organisms may be of different species.</o
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000198">
         <rdfs:comment xml:lang="en">At present, this class corresponds with an XSD type that contains authentication plus information needed to generate a Synthia synthetic population dataset including (1) geographical location and (2) a list of household characteristics.</rdfs:comment>
-        <rdfs:label xml:lang="en">agent model ecosystem census description</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete agent model ecosystem census description</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5384,7 +5461,7 @@ Note that the infected and susceptible organisms may be of different species.</o
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000199">
         <rdfs:comment xml:lang="en">The Apollo XSD allows us to specify counts of certain subpopulations and abiotic ecosystem elements for a compartmental model (vs. specifying each individual in the population as in agent model population and environment census).</rdfs:comment>
-        <rdfs:label xml:lang="en">compartment model population and environment census</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete compartment model population and environment census</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5417,7 +5494,7 @@ Note that the infected and susceptible organisms may be of different species.</o
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000202">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <apollo_sv:APOLLO_SV_0000040>ApolloIndexableItem</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:comment xml:lang="en">A class representing an abstract type. This class has no attributes and programmers should use it to determine whether an instance should be saved or can be retrieved. </rdfs:comment>
+        <rdfs:comment xml:lang="en">A class representing an abstract type. This class has no attributes and programmers should use it to determine whether an instance should be saved or can be retrieved.</rdfs:comment>
         <rdfs:label xml:lang="en">indexable Apollo item</rdfs:label>
     </owl:Class>
     
@@ -5665,9 +5742,9 @@ Note that the infected and sucseptible organisms may be of different species.</o
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000215">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115 xml:lang="en">An information content entity that assigns a probability to each measurable subset of the possible outcomes of a random experiment, survey, or procedure of statistical inference. </obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An information content entity that assigns a probability to each measurable subset of the possible outcomes of a random experiment, survey, or procedure of statistical inference.</obo:IAO_0000115>
         <obo:IAO_0000119 xml:lang="en">http://en.wikipedia.org/wiki/Probability_distribution</obo:IAO_0000119>
-        <obo:IAO_0000600 xml:lang="en">An information content entity that assigns a probability to each measurable subset of the possible outcomes of a random experiment, survey, or procedure of statistical inference. </obo:IAO_0000600>
+        <obo:IAO_0000600 xml:lang="en">An information content entity that assigns a probability to each measurable subset of the possible outcomes of a random experiment, survey, or procedure of statistical inference.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>ProbabilityDistribution</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">probability distribution</rdfs:label>
     </owl:Class>
@@ -6251,7 +6328,7 @@ can&apos;t recall whether we should use process or processual_entity for future 
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0100001>http://purl.obolibrary.org/obo/STATO_0000321</obo:IAO_0100001>
         <apollo_sv:APOLLO_SV_0000040>NonparametricProbabilityDistribution</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:label xml:lang="en">nonparametric probability distribution</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete nonparametric probability distribution</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -6545,8 +6622,7 @@ For example, it may take time to communicate to workers to stop vaccinating and 
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">An infection acquisition from an individual who is infectious.
 
-The individual acquiring the infection can be of a different species than the one who is infectious.
-</obo:IAO_0000600>
+The individual acquiring the infection can be of a different species than the one who is infectious.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>InfectionAcquisitionFromInfectedHost</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">infection acquisition from infectious host</rdfs:label>
     </owl:Class>
@@ -6588,8 +6664,7 @@ The individual acquiring the infection can be of a different species than the on
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">A system of measurement of time with respect to an arbitrary reference point or event, which typically has a measured value of zero elapsed time.
 
-In epidemic simulation, it can be &apos;simulator time&apos; where time zero is the starting point of an infectious disease scenario, or it can be &apos;control strategy time&apos; where time zero is the time at which the control strategy is initiated.
-</obo:IAO_0000600>
+In epidemic simulation, it can be &apos;simulator time&apos; where time zero is the starting point of an infectious disease scenario, or it can be &apos;control strategy time&apos; where time zero is the time at which the control strategy is initiated.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>timeScale</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">time scale name</rdfs:label>
     </owl:Class>
@@ -6906,8 +6981,7 @@ For example, the trigger could occur once the incidence or prevalence of the inf
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">The unit of measure for the supply schedule of an individual treatment.
 
-For example, &apos;daily dose&apos;.
-</obo:IAO_0000600>
+For example, &apos;daily dose&apos;.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>supplyScheduleUnits</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">individual treatment strategy supply schedule unit of measure</rdfs:label>
     </owl:Class>
@@ -6960,8 +7034,7 @@ For example, &apos;daily dose&apos;.</obo:IAO_0000600>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">A specification of the criteria an organism must meet to be considered to be in some abnormal state.
 
-The abnormal state could be having a disease, carrier status, a syndrome, a structural abnormality (e.g., congenital heart defect), and so on.
-</obo:IAO_0000600>
+The abnormal state could be having a disease, carrier status, a syndrome, a structural abnormality (e.g., congenital heart defect), and so on.</obo:IAO_0000600>
         <apollo_sv:APOLLO_SV_0000040>CaseDefinition</apollo_sv:APOLLO_SV_0000040>
         <rdfs:label xml:lang="en">case definition</rdfs:label>
     </owl:Class>
@@ -7291,7 +7364,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000651"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032504"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048609"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002218"/>
@@ -7988,7 +8061,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
                                         <owl:complementOf>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0035944"/>
+                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000071"/>
                                             </owl:Restriction>
                                         </owl:complementOf>
                                     </owl:Class>
@@ -8011,7 +8084,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
                                 <owl:complementOf>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0035944"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000071"/>
                                     </owl:Restriction>
                                 </owl:complementOf>
                             </owl:Class>
@@ -8663,7 +8736,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
                                         <owl:complementOf>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0035944"/>
+                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000071"/>
                                             </owl:Restriction>
                                         </owl:complementOf>
                                     </owl:Class>
@@ -8686,7 +8759,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
                                 <owl:complementOf>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0035944"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000071"/>
                                     </owl:Restriction>
                                 </owl:complementOf>
                             </owl:Class>
@@ -8736,7 +8809,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
                                         <owl:someValuesFrom>
                                             <owl:Class>
                                                 <owl:intersectionOf rdf:parseType="Collection">
-                                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0035944"/>
+                                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0000071"/>
                                                     <owl:Restriction>
                                                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
                                                         <owl:someValuesFrom>
@@ -8775,7 +8848,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0035944"/>
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0000071"/>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
                                                 <owl:someValuesFrom>
@@ -8826,7 +8899,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
                                         <owl:complementOf>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0035944"/>
+                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000071"/>
                                             </owl:Restriction>
                                         </owl:complementOf>
                                     </owl:Class>
@@ -8849,7 +8922,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
                                 <owl:complementOf>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0035944"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000071"/>
                                     </owl:Restriction>
                                 </owl:complementOf>
                             </owl:Class>
@@ -9011,7 +9084,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
                                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000371"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0035944"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000071"/>
                                     </owl:Restriction>
                                 </owl:intersectionOf>
                             </owl:Class>
@@ -9030,7 +9103,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000371"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0035944"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000071"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -9522,7 +9595,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">A disposition of the whole organism (or of some causally relatively isolated part of the organism, such as a single cell) to regulate its bodily processes in such a way as (1) to maintain bodily qualities within a certain range or profile and (2) to respond successfully to departures from this range caused by internal influences or environmental influences such as poisoning.</obo:IAO_0000600>
-        <rdfs:label xml:lang="en">deprecated homeostasis</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete homeostasis</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -9936,7 +10009,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">A count of individuals in a population who meet an infection case definition during a particular time interval.</obo:IAO_0000600>
-        <rdfs:label xml:lang="en">deprecated infection case count</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete infection case count</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -10492,7 +10565,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">A one-dimensional temporal region occupied by a place closure control strategy.</obo:IAO_0000600>
-        <rdfs:label xml:lang="en">closure period</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete closure period</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -11054,7 +11127,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <obo:IAO_0000117>Matthew Diller</obo:IAO_0000117>
         <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000600 xml:lang="en">A time measurement datum of the length of the temporal interval occupied by a gonotropic period.</obo:IAO_0000600>
-        <rdfs:label xml:lang="en">gonotrophic period duration</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete gonotrophic period duration</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -11327,7 +11400,7 @@ The constant rate may be zero.  The period of an epidemic may be defined using s
         <obo:IAO_0000600 xml:lang="en">An identifier curated by ORCID, Inc. to denote some academic author.</obo:IAO_0000600>
         <obo:IAO_0100001 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/IAO_0000708</obo:IAO_0100001>
         <apollo_sv:APOLLO_SV_0000040>orcId</apollo_sv:APOLLO_SV_0000040>
-        <rdfs:label xml:lang="en">ORCID</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete ORCID</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -12922,7 +12995,6 @@ has specified input some case definition.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">census of treatment facilities</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">treatment facilities census</obo:IAO_0000118>
-        <obo:IAO_0000118 xml:lang="en">treatment facility census</obo:IAO_0000118>
         <obo:IAO_0000600 xml:lang="en">A census that counts the number of treatment facilities of some kind in a particular geographical region.</obo:IAO_0000600>
         <rdfs:comment xml:lang="en">NOTE: this class counts the facilities themselves, not patients (people) in those facilities.  For example, how many hospitals in a state.  Not how many patients are in a hospital or hospitals in a state.</rdfs:comment>
         <rdfs:label xml:lang="en">treatment facility census</rdfs:label>
@@ -14046,6 +14118,7 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/COB_0000035"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -14077,6 +14150,7 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/COB_0000035"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -14241,6 +14315,12 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     
 
 
+    <!-- http://purl.obolibrary.org/obo/COB_0000035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/COB_0000035"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/DOID_3292 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3292"/>
@@ -14319,12 +14399,6 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0032504 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0032504"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0044409 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044409"/>
@@ -14334,6 +14408,12 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     <!-- http://purl.obolibrary.org/obo/GO_0044419 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044419"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0048609 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0048609"/>
     
 
 
@@ -14751,6 +14831,12 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     
 
 
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000071 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000071"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/UBERON_0000479 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000479"/>
@@ -14760,12 +14846,6 @@ By &quot;similar vaccines&quot; we typically mean same pathogen, but could be si
     <!-- http://purl.obolibrary.org/obo/UBERON_0002405 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002405"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/UBERON_0035944 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0035944"/>
     
 
 

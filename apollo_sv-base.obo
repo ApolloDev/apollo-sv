@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: apollo_sv/releases/2024-12-24/apollo_sv-base.owl
+data-version: apollo_sv/releases/2026-03-13/apollo_sv-base.owl
 idspace: ace_lexicon http://attempto.ifi.uzh.ch/ace_lexicon# 
 idspace: dc http://purl.org/dc/elements/1.1/ 
 idspace: doap http://usefulinc.com/ns/doap# 
@@ -21,7 +21,7 @@ property_value: dc:contributor "Shawn T. Brown" xsd:string
 property_value: dc:contributor "William R. Hogan" xsd:string
 property_value: dc:creator "Mathias Brochhausen" xsd:string
 property_value: dc:type IAO:8000001
-property_value: owl:versionInfo "2024-12-24" xsd:string
+property_value: owl:versionInfo "2026-03-13" xsd:string
 property_value: terms:contributor "https://orcid.org/0000-0002-9881-1017" xsd:anyURI
 property_value: terms:description "An OWL2 ontology of phenomena in infectious disease epidemiology and population biology for use in epidemic simulation." xsd:string
 property_value: terms:license "https://creativecommons.org/licenses/by/4.0/" xsd:string
@@ -98,6 +98,7 @@ property_value: IAO:0000600 "A software application that provides a model of a r
 id: APOLLO_SV:00000008
 name: software development
 def: "A planned process that has specified output a software product and that involves the creation of source code." []
+is_a: COB:0000035
 is_a: OBI:0000011
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -124,7 +125,7 @@ property_value: IAO:0000600 "An identifier that refers to all versions of a spec
 
 [Term]
 id: APOLLO_SV:00000011
-name: control strategy reactive start time information
+name: obsolete control strategy reactive start time information
 def: "A control strategy start time information item that is based on a condition that triggers the control strategy." []
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000600 "A control strategy start time information item that is based on a condition that triggers the control strategy." xsd:string
@@ -136,7 +137,7 @@ name: simulation time step value
 def: "A numeral that is part of a simulation time step action specification." []
 is_a: IAO:0000029
 property_value: APOLLO_SV:0000040 "numberOfUnitsOfTimeInOneSimulatorStep" xsd:string
-property_value: IAO:0000600 "A number of time step units in a time step of a simulation.  \n\nFor example, if the time step is 6 hours, then this value is 6.\n" xsd:string
+property_value: IAO:0000600 "A number of time step units in a time step of a simulation.  For example, if the time step is 6 hours, then this value is 6." xsd:string
 
 [Term]
 id: APOLLO_SV:00000013
@@ -161,7 +162,7 @@ def: "The action specification that specifies the number of time steps a simulat
 is_a: APOLLO_SV:00000793 ! epidemic simulator action specification
 relationship: BFO:0000051 APOLLO_SV:00000068 ! simulation time step action specification
 property_value: APOLLO_SV:0000040 "runLength" xsd:string
-property_value: IAO:0000600 "The number of time steps in a simulator run.\n\nFor example, if run length is 10 and the time step is 6 hours, then the simulator will simulate a 60-hour period that begins at simulator time zero.\n" xsd:string
+property_value: IAO:0000600 "The number of time steps in a simulator run. For example, if run length is 10 and the time step is 6 hours, then the simulator will simulate a 60-hour period that begins at simulator time zero." xsd:string
 
 [Term]
 id: APOLLO_SV:00000016
@@ -178,11 +179,10 @@ id: APOLLO_SV:00000017
 name: latent period duration
 def: "A duration of the time interval between the host acquiring an infection and the host bearing a contagiousness disposition during the same disease course within a population of hosts." []
 comment: MB: In order to get the temporal occupation relations I added properties that I renamed with BFO2 URIs
-comment: The duration of the period between when an organism becomes infected and when it becomes infectious.
 is_a: APOLLO_SV:00000243 ! duration
 property_value: APOLLO_SV:0000040 "latentPeriodDuration" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000600 "A period during which an organism of a particular species, who is infected with a particular pathogen, is not yet able to infect susceptible organisms of a particular species.  \n\nNote that the susceptible and infected organisms can be of different species.\n\n" xsd:string
+property_value: IAO:0000600 "A period during which an organism of a particular species, who is infected with a particular pathogen, is not yet able to infect susceptible organisms of a particular species.  Note that the susceptible and infected organisms can be of different species." xsd:string
 
 [Term]
 id: APOLLO_SV:00000018
@@ -212,23 +212,22 @@ property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 id: APOLLO_SV:00000022
 name: count of simulated population
 def: "The count of (simulated organisms) in a simulated population." []
-comment: MW: I know this causes problems with our set-theoretic definition.  Unfortunately the compartmental models produce fractional counts at each of their time steps, including the final step.  \n\nAny ideas?  I’ve considered and rejected allowing individual organisms to be fractional.  Perhaps if we just replace the term “cardinality” in the definition with ‘computed size’\n
+comment: MW: I know this causes problems with our set-theoretic definition.  Unfortunately the compartmental models produce fractional counts at each of their time steps, including the final step.  \n\nAny ideas?  I’ve considered and rejected allowing individual organisms to be fractional.  Perhaps if we just replace the term “cardinality” in the definition with ‘computed size’
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000600 "The number of simulated organisms in a simulated population.  The number does not have to be an integer.  " xsd:string
+property_value: IAO:0000600 "The number of simulated organisms in a simulated population.  The number does not have to be an integer." xsd:string
 
 [Term]
 id: APOLLO_SV:00000023
 name: vaccination dose schedule
 def: "An action specification comprising the number of doses and their timing for a vaccination of an individual organism against a specific infectious agent." []
 is_a: APOLLO_SV:00000084 ! control strategy dose schedule
-property_value: IAO:0000600 "A vaccination schedule specifies the intended timing of initial and subsequent booster doses of vaccine for an individual organism. " xsd:string
+property_value: IAO:0000600 "A vaccination schedule specifies the intended timing of initial and subsequent booster doses of vaccine for an individual organism." xsd:string
 
 [Term]
 id: APOLLO_SV:00000024
 name: vaccination compliance
 def: "The fraction expressing the probability that an organism who is eligible according to a particular vaccination policy will be consented for that vaccination." []
 comment: MB: This class is still awaiting its class restriction. It should be restricted as being about a population that has members that are eligible for a vaccination against the members that are eligible and consented the vaccination. There is a class "eligibility rule" in OBI (http://purl.obolibrary.org/obo/OBI_0500026), but it is restricted by definition to studies. I put in an issue in the OBI issue tracker. The consenting process and its specified outcome should be done in d-acts, but needs to be done properly.
-comment: MW: I still see enough similarities at the abstract level among some control measures that we might add the concepts “Control measure compliance”, “Control measure efficacy”  and “control measure efficacy delay.”    We could then post-coordinate particular control measures such as vaccine.\n\nIt is worth noting that there are control measures such as closing schools that are not applied at the individual level.   We have not represented those control measures yet.\n
 is_a: OBI:0302867
 property_value: IAO:0000600 "The fraction of individuals in a population who are eligible according to a particular vaccination policy and will accept vaccination assuming no supply constraint." xsd:string
 
@@ -236,7 +235,6 @@ property_value: IAO:0000600 "The fraction of individuals in a population who are
 id: APOLLO_SV:00000025
 name: vaccination efficacy
 def: "The infectious disease treatment efficacy of a vaccine." []
-comment: need to generate class restriction.  Something like:\n\n'is realized by' some (processual_entity and (has_participant some ('Anatomical structure' and ('is physical basis of' some 'protective resistance'))\n\nwe'd also like to say that the protective resistance disposition began to exist during the process.  \n\ncan't recall whether we should use process or processual_entity for future BFO compatibility.
 comment: Notes: \n1. Apollo-SV does not distinguish between ‘vaccine efficacy’ and ‘vaccine effectiveness.’\n2. Apollo-SV also considers the use of ‘vaccine’ in both terms a misnomer
 is_a: APOLLO_SV:00000227 ! infectious disease treatment efficacy
 property_value: APOLLO_SV:0000040 "vaccinationEfficacies" xsd:string
@@ -265,9 +263,9 @@ property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 [Term]
 id: APOLLO_SV:00000029
 name: infectious disease control strategy execution
-def: "A process that is applied to a population with the goal of preventing, or mitigating the severity of an infectious disease.  " []
+def: "A process that is applied to a population with the goal of preventing, or mitigating the severity of an infectious disease." []
 is_a: OBI:0000011
-property_value: IAO:0000600 "A process that is applied to a population with the goal of preventing, or mitigating the severity of an infectious disease.  " xsd:string
+property_value: IAO:0000600 "A process that is applied to a population with the goal of preventing, or mitigating the severity of an infectious disease." xsd:string
 
 [Term]
 id: APOLLO_SV:00000030
@@ -305,6 +303,7 @@ property_value: IAO:0000600 "A measurement datum that is the output of counting.
 id: APOLLO_SV:00000033
 name: counting
 def: "The planned process of finding the number of elements in a finite set of objects." []
+is_a: COB:0000035
 is_a: OBI:0000011
 intersection_of: OBI:0000011
 intersection_of: OBI:0000299 APOLLO_SV:00000032 ! count
@@ -356,9 +355,9 @@ property_value: IAO:0000600 "A simulated organism in a simulated population that
 [Term]
 id: APOLLO_SV:00000041
 name: simulation of recovered organism
-def: "A simulated organism in a simulated population that is not susceptible. " []
+def: "A simulated organism in a simulated population that is not susceptible." []
 is_a: APOLLO_SV:00000034 ! simulation of organism
-property_value: IAO:0000600 "A simulated organism in a simulated population that is neither susceptible, exposed, nor infectious for a particular simulated disease. \nNote that the name for this concept, were it to be named based on its intent, would be ‘immune.’  However, in the practice domain of epidemiology this concept is traditionally termed ‘recovered.’  The problem with the traditional name is that organisms can be considered ‘recovered’ by virtue of having been vaccinated, which differs from lay usage.\n" xsd:string
+property_value: IAO:0000600 "A simulated organism in a simulated population that is neither susceptible, exposed, nor infectious for a particular simulated disease. \nNote that the name for this concept, were it to be named based on its intent, would be ‘immune.’  However, in the practice domain of epidemiology this concept is traditionally termed ‘recovered.’  The problem with the traditional name is that organisms can be considered ‘recovered’ by virtue of having been vaccinated, which differs from lay usage." xsd:string
 
 [Term]
 id: APOLLO_SV:00000042
@@ -372,7 +371,7 @@ property_value: IAO:0000600 "The disease being simulated." xsd:string
 [Term]
 id: APOLLO_SV:00000043
 name: reproduction number
-def: "The average value of transmissions of the infectious agent from one infected organism to another, resulting in an infection. " []
+def: "The average value of transmissions of the infectious agent from one infected organism to another, resulting in an infection." []
 property_value: APOLLO_SV:0000040 "ReproductionNumber" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000600 "The number of susceptible organisms that each infected organism infects.  ‘Infects’ carries the same meaning as ‘exposes’ in epidemic simulations such as SEIR simulation." xsd:string
@@ -419,24 +418,23 @@ property_value: IAO:0000600 "The degree to which a particular antiviral drug red
 [Term]
 id: APOLLO_SV:00000049
 name: antiviral efficacy delay
-def: "The value of the time interval between an organism's taking antivirals against a specific infectious agent and the organism’s losing its infectious agent host role. " []
+def: "The value of the time interval between an organism's taking antivirals against a specific infectious agent and the organism’s losing its infectious agent host role." []
 is_a: APOLLO_SV:00000243 ! duration
-property_value: IAO:0000600 "The duration of time (expressed in time steps) between initiation of a particular antiviral treatment to an organism and when the organism becomes non infectious or, if the antiviral is being administered prophylactically, protected from infection. " xsd:string
+property_value: IAO:0000600 "The duration of time (expressed in time steps) between initiation of a particular antiviral treatment to an organism and when the organism becomes non infectious or, if the antiviral is being administered prophylactically, protected from infection." xsd:string
 
 [Term]
 id: APOLLO_SV:00000050
 name: antiviral compliance
 def: "The fraction expressing the probability that an organism will be consented to receive antiviral treatment when eligible." []
 comment: MB: This class is still awaiting its class restriction. It should be restricted as being about a population that has members that are eligible for an antiviral treatment against the members that are eligible and consented the antiviral treatment. There is a class "eligibility rule" in OBI (http://purl.obolibrary.org/obo/OBI_0500026), but it is restricted by definition to studies. I put in an issue in the OBI issue tracker. The consenting process and its specified outcome should be done in d-acts, but needs to be done properly.
-comment: MW: Since the estimates that modelers use are from real populations, I have two questions:\n1. Should we distinguish between real and simulated population?\n2.  If so, do we want to represent a ‘measured’ antiviral compliance number that is a property of a real population and distinguish it from this number that we are using to study what might happen in a simulated population?\n\nMB: This issue will need to be taken care of in the axiomatization of simulated population
 is_a: OBI:0302867
 property_value: APOLLO_SV:0000040 "antiviral cm compliance" xsd:string
-property_value: IAO:0000600 "The fraction of individuals in a simulated population that will accept antiviral treatment if offered. " xsd:string
+property_value: IAO:0000600 "The fraction of individuals in a simulated population that will accept antiviral treatment if offered." xsd:string
 
 [Term]
 id: APOLLO_SV:00000051
 name: antiviral supply schedule
-def: "An action specification giving the number of doses of an antiviral to be made available during a specific time interval. " []
+def: "An action specification giving the number of doses of an antiviral to be made available during a specific time interval." []
 is_a: APOLLO_SV:00000795 ! individual treatment control strategy action specification
 property_value: IAO:0000600 "Counts of antiviral doses that become available in a specific location per time step unit." xsd:string
 
@@ -452,7 +450,6 @@ id: APOLLO_SV:00000053
 name: simulation of organism awaiting control measure
 def: "A simulated organism that is assumed “eligible, willing and able” to participate with a particular control measure." []
 comment: MB: APOLLO_SV_00000053 and APOLLO_SV_00000058 have not been given a class restriction, since they are not expressible in BFO right now, due to their referring to "will". Both classes have been made disjoint in the OWL file, though.
-comment: This class will need more ontological reasoning, since the "willing" part of the definition is not representable in BFO to date.
 is_a: APOLLO_SV:00000034 ! simulation of organism
 disjoint_from: APOLLO_SV:00000058 ! simulation of organism not awaiting control measure
 property_value: IAO:0000600 "A simulated organism in a simulated population that is “eligible, willing and able” to participate with a particular simulated control measure." xsd:string
@@ -492,7 +489,6 @@ id: APOLLO_SV:00000058
 name: simulation of organism not awaiting control measure
 def: "A simulated organism that is assumed “ineligible, unwilling or unable” to participate with a particular control measure." []
 comment: MB: APOLLO_SV_00000053 and APOLLO_SV_00000058 have not been given a class restriction, since they are not expressible in BFO right now, due to their referring to "will". Both classes have been made disjoint in the OWL file, though.
-comment: This class will need more ontological reasoning, since the "unwilling" part of the definition is not representable in BFO to date.
 property_value: IAO:0000600 "A simulated organism in a simulated population that is “ineligible, unwilling or unable” to participate with a particular simulated control measure." xsd:string
 
 [Term]
@@ -505,8 +501,8 @@ property_value: IAO:0000600 "This concept represents a simulated organism that h
 [Term]
 id: APOLLO_SV:00000060
 name: simulation of antiviral control measure
-def: "The simulation of an antiviral control measure. " []
-comment: MB: For all the antiviral-related classes I referred to ChEBI: Antiviral class. I wasn't able to use the plug-in though (there was a JAVA heap space error, probably due to the size of ChEBI).\nAND (more importantly) I did not re-use any of the ChEBI hierarchy which, even in the BFO version is a mess.\nMaybe we need to discuss this.\n
+def: "The simulation of an antiviral control measure." []
+comment: MB: For all the antiviral-related classes I referred to ChEBI: Antiviral class. I wasn't able to use the plug-in though (there was a JAVA heap space error, probably due to the size of ChEBI).\nAND (more importantly) I did not re-use any of the ChEBI hierarchy which, even in the BFO version is a mess.\nMaybe we need to discuss this.
 is_a: APOLLO_SV:00000070 ! simulation
 property_value: APOLLO_SV:0000040 "antiviral control measure" xsd:string
 property_value: IAO:0000600 "A type of control measure based on administration of chemotherapeutic agents to an infected or high-risk organism that kill or inhibit replication of viruses within a simulated organism." xsd:string
@@ -536,7 +532,7 @@ property_value: IAO:0000600 "A simulated organism in a simulated population has 
 id: APOLLO_SV:00000064
 name: simulation time series
 def: "A time sampled measurement data set, where the position in the sequence of each data item corresponds to a specific time_step of the simulation." []
-comment: MB: The ontological status of simulations (Thoughts)\n\nOne property that seems to be common among simulations in comparison to many other fictions is the fact that the chronological order of the simulated purely intentional entities is not changed in the process of simulating.\n\nWhile in many pieces of fiction the order in which the purely intentional entities are created can vary, this is not the case for simulations.\n
+comment: MB: The ontological status of simulations (Thoughts)\n\nOne property that seems to be common among simulations in comparison to many other fictions is the fact that the chronological order of the simulated purely intentional entities is not changed in the process of simulating.\n\nWhile in many pieces of fiction the order in which the purely intentional entities are created can vary, this is not the case for simulations.
 is_a: IAO:0000584
 property_value: IAO:0000600 "A sequence of data points, where the position in the sequence of each data point corresponds to a specific time_step of the simulation." xsd:string
 
@@ -557,6 +553,7 @@ id: APOLLO_SV:00000066
 name: simulation of time step
 def: "A purely intentional entity that simulates a temporal interval of pre-specified length." []
 is_a: APOLLO_SV:00000070 ! simulation
+relationship: APOLLO_SV:00000067 BFO:0000038 ! simulates
 property_value: APOLLO_SV:0000040 "simulation time step" xsd:string
 property_value: IAO:0000600 "A purely intentional entity that simulates a temporal interval of pre-specified length." xsd:string
 
@@ -587,13 +584,13 @@ property_value: IAO:0000600 "The time step number of a simulation." xsd:string
 [Term]
 id: APOLLO_SV:00000070
 name: simulation
-def: "A purely intentional entity that simulates an entity and its properties.\n\n" []
+def: "A purely intentional entity that simulates an entity and its properties." []
 is_a: APOLLO_SV:00000000 ! purely intentional entity
 intersection_of: APOLLO_SV:00000000 ! purely intentional entity
 intersection_of: APOLLO_SV:00000067 BFO:0000001 ! simulates
 relationship: APOLLO_SV:00000067 BFO:0000001 ! simulates
 property_value: APOLLO_SV:0000040 "simulation" xsd:string
-property_value: IAO:0000600 "A purely intentional entity that simulates an entity and its properties.\n\n" xsd:string
+property_value: IAO:0000600 "A purely intentional entity that simulates an entity and its properties." xsd:string
 
 [Term]
 id: APOLLO_SV:00000071
@@ -638,7 +635,7 @@ property_value: IAO:0000600 "an objective of achieving satisfactory control of e
 
 [Term]
 id: APOLLO_SV:00000076
-name: μ
+name: obsolete μ
 is_a: oboInOwl:ObsoleteClass
 property_value: APOLLO_SV:0000040 "μ" xsd:string
 property_value: IAO:0000600 "the mean or expectation of a distribution" xsd:string
@@ -646,7 +643,7 @@ is_obsolete: true
 
 [Term]
 id: APOLLO_SV:00000077
-name: σ
+name: obsolete σ
 is_a: oboInOwl:ObsoleteClass
 property_value: APOLLO_SV:0000040 "sigma" xsd:string
 property_value: IAO:0000600 "standard deviation" xsd:string
@@ -661,7 +658,7 @@ property_value: IAO:0000600 "A continuous probability distribution whose charact
 
 [Term]
 id: APOLLO_SV:00000079
-name: deprecated log normal distribution
+name: obsolete log normal distribution
 is_a: oboInOwl:ObsoleteClass
 property_value: IAO:0000600 "a continuous probability distribution over variable X whose parameters denoted μ and σ are, respectively, the mean and standard deviation of the variable’s natural logarithm" xsd:string
 is_obsolete: true
@@ -700,7 +697,7 @@ name: control strategy dose schedule
 def: "An action specification comprising the number of doses and their timing for administering a substance to an individual organism to prevent the negative effects of a specific infectious agent to that organism." []
 is_a: APOLLO_SV:00000795 ! individual treatment control strategy action specification
 relationship: BFO:0000050 APOLLO_SV:00000086 ! infectious disease control strategy
-property_value: IAO:0000600 "A control strategy dose schedule specifies the intended timing of initial and subsequent doses of for example a vaccine or an antiviral for an individual organism. " xsd:string
+property_value: IAO:0000600 "A control strategy dose schedule specifies the intended timing of initial and subsequent doses of for example a vaccine or an antiviral for an individual organism." xsd:string
 
 [Term]
 id: APOLLO_SV:00000085
@@ -740,8 +737,9 @@ property_value: IAO:0000600 "The count of individuals in an exposed population (
 id: APOLLO_SV:00000089
 name: measured vaccination efficacy
 def: "A measurement datum that is about a vaccination efficacy and is the specified output of a vaccination efficacy study." []
-comment: 1. Apollo-SV does not distinguish between ‘vaccine efficacy’ and ‘vaccine effectiveness.’\n\n2. Apollo-SV also considers the use of ‘vaccine’ in both terms a misnomer.\n
+comment: 1. Apollo-SV does not distinguish between ‘vaccine efficacy’ and ‘vaccine effectiveness.’\n\n2. Apollo-SV also considers the use of ‘vaccine’ in both terms a misnomer.
 is_a: IAO:0000109
+relationship: IAO:0000136 APOLLO_SV:00000025 ! vaccination efficacy
 property_value: APOLLO_SV:0000040 "VaccinationEfficacyMeasured" xsd:string
 property_value: IAO:0000600 "A vaccination efficacy that results from a vaccination efficacy study." xsd:string
 
@@ -749,6 +747,7 @@ property_value: IAO:0000600 "A vaccination efficacy that results from a vaccinat
 id: APOLLO_SV:00000090
 name: vaccination efficacy study design execution
 def: "a study design execution that has as its specified output one or more measured vaccination efficacy data items" []
+is_a: COB:0000035
 is_a: OBI:0000471
 intersection_of: OBI:0000471
 intersection_of: BFO:0000051 APOLLO_SV:00000142 ! vaccination
@@ -785,13 +784,14 @@ id: APOLLO_SV:00000094
 name: community
 def: "Two or more distinct populations that are part of the same biotic ecosystem." []
 is_a: BFO:0000027
+relationship: RO:0002351 PCO:0000001
 property_value: APOLLO_SV:0000040 "community" xsd:string
 property_value: dc:creator "William R. Hogan" xsd:string
 property_value: IAO:0000600 "Two or more distinct populations that are part of the same biotic ecosystem." xsd:string
 
 [Term]
 id: APOLLO_SV:00000095
-name: deprecated discrete probability distribution
+name: obsolete discrete probability distribution
 is_a: oboInOwl:ObsoleteClass
 property_value: APOLLO_SV:0000040 "discrete probability distribution" xsd:string
 property_value: IAO:0000600 "a probability distribution over a discrete random variable" xsd:string
@@ -806,11 +806,11 @@ is_obsolete: true
 [Term]
 id: APOLLO_SV:00000097
 name: ecosystem
-def: "The sum of all biotic and abiotic entities in a geographical region. " []
+def: "The sum of all biotic and abiotic entities in a geographical region." []
 is_a: BFO:0000040
 property_value: APOLLO_SV:0000040 "Ecosystem" xsd:string
 property_value: dc:creator "William R. Hogan" xsd:string
-property_value: IAO:0000600 "The sum of all biotic and abiotic entities in a geographical region. " xsd:string
+property_value: IAO:0000600 "The sum of all biotic and abiotic entities in a geographical region." xsd:string
 
 [Term]
 id: APOLLO_SV:00000098
@@ -885,7 +885,6 @@ id: APOLLO_SV:00000107
 name: atmosphere
 def: "a fiat object part that is in gaseous phase and that is the outer layer of an object in space and is held to the object by gravitational force" []
 comment: atmosphere of Earth, Earth's moon, Saturn, Titan, etc.
-comment: outer, gaseous layers of exoplanets are called extraterrestrial atmosphere.
 is_a: BFO:0000024
 property_value: dc:creator "William R. Hogan" xsd:string
 property_value: IAO:0000600 "a fiat object part that is in gaseous phase and that is the outer layer of an object in space and is held to the object by gravitational force" xsd:string
@@ -948,14 +947,13 @@ property_value: IAO:0000600 "A process of reproduction of a particular pathogen 
 [Term]
 id: APOLLO_SV:00000115
 name: infection acquisition
-def: "The biological process of pathogen organism(s) of a particular biological taxon entering (the tissues of the body of) a host organism of another taxon from a contagious host or a contaminated thing and reproducing using host resources" []
-comment: Apollo-SV defines infection acquisition rather than infection transmission, which is the direction of movement of a pathogen in current use.  The Apollo-SV conceptualization is simpler when accounting for infections acquired from contaminated things.\nThe likelihood of acquisition is expressed by parameters such as the basic reproduction rate and transmission coefficient.   \nAn infection is acquired from an infectious organism or a contaminated thing. \n
-comment: Cannot acquire from colonized host directly - contamination results from colonized or contaminated thing and new host picks it up from contaminated thing
+def: "The biological process of pathogen organism(s) of a particular biological taxon entering (the tissues of the body of) a host organism of another taxon from a contagious host or a contaminated thing and reproducing using host resources." []
+comment: Apollo-SV defines infection acquisition rather than infection transmission, which is the direction of movement of a pathogen in current use.  The Apollo-SV conceptualization is simpler when accounting for infections acquired from contaminated things.\nThe likelihood of acquisition is expressed by parameters such as the basic reproduction rate and transmission coefficient.   \nAn infection is acquired from an infectious organism or a contaminated thing.
 is_a: GO:0044409
 relationship: RO:0002411 APOLLO_SV:00000114 ! infection
 property_value: APOLLO_SV:0000040 "InfectionAcquisition" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
-property_value: IAO:0000600 "A process where a susceptible organism from a particular species becomes infected by a particular pathogen.  The infection is acquired from an infected organism of a particular species or from a contaminated thing.  \n\nNote that the susceptible and infectious organisms can be of different species.\n\n" xsd:string
+property_value: IAO:0000600 "A process where a susceptible organism from a particular species becomes infected by a particular pathogen.  The infection is acquired from an infected organism of a particular species or from a contaminated thing.  \n\nNote that the susceptible and infectious organisms can be of different species." xsd:string
 
 [Term]
 id: APOLLO_SV:00000117
@@ -1020,7 +1018,7 @@ property_value: IAO:0000600 "The number of time steps that a school closure cont
 
 [Term]
 id: APOLLO_SV:00000125
-name: school calendar
+name: obsolete school calendar
 property_value: IAO:0000600 "The time steps that a school will be in session." xsd:string
 is_obsolete: true
 
@@ -1067,7 +1065,7 @@ name: reactive control strategy threshold
 def: "A data item that specifies the fraction of the population known to have undergone a specific event that results in starting or stopping an infectious disease control strategy." []
 is_a: IAO:0000027
 property_value: APOLLO_SV:0000040 "reactiveControlMeasureThreshold" xsd:string
-property_value: IAO:0000600 "A fraction of the population known to have undergone a specific event that results in starting or stopping an infectious disease control strategy.\n\nThe event could be infection acquisition, vaccination, antiviral treatment, etc.\n" xsd:string
+property_value: IAO:0000600 "A fraction of the population known to have undergone a specific event that results in starting or stopping an infectious disease control strategy.\n\nThe event could be infection acquisition, vaccination, antiviral treatment, etc." xsd:string
 
 [Term]
 id: APOLLO_SV:00000132
@@ -1110,7 +1108,7 @@ id: APOLLO_SV:00000137
 name: vaccine valence
 is_a: APOLLO_SV:00000032 ! count
 property_value: APOLLO_SV:0000040 "valence" xsd:string
-property_value: IAO:0000600 "the number of distinct antigenic strains in a vaccine product " xsd:string
+property_value: IAO:0000600 "The number of distinct antigenic strains in a vaccine product." xsd:string
 
 [Term]
 id: APOLLO_SV:00000138
@@ -1124,7 +1122,6 @@ id: APOLLO_SV:00000139
 name: control strategy compliance
 def: "A measurement datum about the fraction of individuals in a population that elect to participate in a control strategy when offered." []
 comment: the class restriction can be made more precise AH
-comment: the fraction of some population that is targeted for a control strategy that accepts it.  It can obviously also be interpreted as a probability that the average individual in the targeted population accepts/complies with the control strategy.  It is not simulated
 property_value: APOLLO_SV:0000040 "compliance" xsd:string
 property_value: IAO:0000600 "A fraction of eligible individuals in a population who receive an intervention or participate in a control strategy." xsd:string
 
@@ -1154,7 +1151,7 @@ property_value: IAO:0000600 "A treatment of an individual with antigenic materia
 
 [Term]
 id: APOLLO_SV:00000143
-name: vaccine disposition
+name: obsolete vaccine disposition
 comment: replaced with VO 'vaccine function'
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 is_obsolete: true
@@ -1180,7 +1177,7 @@ property_value: IAO:0000600 "The dispostion of an organism of a particular biolo
 
 [Term]
 id: APOLLO_SV:00000146
-name: beta
+name: obsolete beta
 comment: it is the same thing as transmission coefficient
 property_value: IAO:0000600 "Transmission parameter (sometime known as Ptrans). This value is multiplied by the inter-personal contact probability to determine the transmission probability between infected and susceptible persons." xsd:string
 is_obsolete: true
@@ -1194,7 +1191,7 @@ property_value: IAO:0000600 "Transmission parameter" xsd:string
 
 [Term]
 id: APOLLO_SV:00000148
-name: random number seed
+name: obsolete random number seed
 property_value: IAO:0000600 "random number seed" xsd:string
 is_obsolete: true
 
@@ -1253,7 +1250,6 @@ id: APOLLO_SV:00000155
 name: population infection survey
 def: "A population survey that counts the number of individuals in the population who are infected with a particular pathogen." []
 comment: Comment from Mike (to do!):\nI checked because an infection and immunity census would involve two different census methods.   One would be some kind of disease surveillance that counts infections.  The other is some kind of immunity census process based on seroprevalence studies or vaccination registries.
-comment: Equivalent class was:\n'population survey' and (has_part some \n(counting and (has_specified_output some \n(count and ('is about' some 'exposed population'))) and (has_specified_output some \n(count and ('is about' some 'infectious population'))) and (has_specified_output some \n(count and ('is about' some 'susceptible population'))) and (has_specified_output some \n(count and ('is about' some 'immune population')))))
 is_a: APOLLO_SV:00000152 ! population survey
 property_value: APOLLO_SV:0000040 "PopulationInfectionSurvey" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
@@ -1307,7 +1303,7 @@ is_obsolete: true
 
 [Term]
 id: APOLLO_SV:00000161
-name: MIDAS scenario
+name: obsolete MIDAS scenario
 def: "An ecosystem in which a population of hosts is undergoing at least one infection." []
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000600 "An ecosystem in which a population of hosts is undergoing at least one infection." xsd:string
@@ -1354,7 +1350,7 @@ property_value: IAO:0000600 "A census that is the specified output of a agent-le
 id: APOLLO_SV:00000166
 name: contaminated thing
 def: "An independent continuant that is the localization of a pathogen, but is not undergoing an infection." []
-comment: A contaminated thing is an entity that contains a pathogen (either internal to itself or on its surface) that is not undergoing an infection.    
+comment: A contaminated thing is an entity that contains a pathogen (either internal to itself or on its surface) that is not undergoing an infection.
 is_a: BFO:0000004
 property_value: APOLLO_SV:0000040 "ContaminatedThing" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
@@ -1499,6 +1495,7 @@ name: simulator time specification
 def: "An information content entity that specifies the length in time of a single simulator step (e.g., 1 day) and the requested run length of the simulation (number of steps)." []
 is_a: APOLLO_SV:00000793 ! epidemic simulator action specification
 relationship: BFO:0000051 APOLLO_SV:00000015 ! simulation run length
+relationship: BFO:0000051 APOLLO_SV:00000015 ! simulation run length
 relationship: BFO:0000051 APOLLO_SV:00000068 ! simulation time step action specification
 property_value: APOLLO_SV:0000040 "SimulatorTimeSpecification" xsd:string
 property_value: IAO:0000600 "An information content entity that specifies the length in time of a single simulator step (e.g., 1 day) and the requested run length of the simulation (number of steps)." xsd:string
@@ -1546,7 +1543,6 @@ id: APOLLO_SV:00000188
 name: population and environment census
 def: "A census that represents the biotic and abiotic elements of an ecosystem at simulator time zero." []
 comment: Class was originally created to correspond with a complex type from Apollo XSD v3.1.0.
-comment: This census should exclude infection, immunity, treatment, or contamination.  
 is_a: APOLLO_SV:00000173 ! census
 property_value: IAO:0000600 "A census that represents the biotic and abiotic elements of an ecosystem at simulator time zero." xsd:string
 
@@ -1595,6 +1591,7 @@ property_value: IAO:0000600 "A data item inferring a vaccination efficacy based 
 id: APOLLO_SV:00000194
 name: individual treatment control strategy
 def: "An infectious disease control strategy that immediately targets individuals." []
+is_a: APOLLO_SV:00000086 ! infectious disease control strategy
 property_value: APOLLO_SV:0000040 "IndividualTreatmentControlMeasure" xsd:string
 property_value: IAO:0000112 "vaccination control strategy, antiviral control strategy" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
@@ -1616,18 +1613,18 @@ is_a: APOLLO_SV:00000136 ! vaccination control strategy
 [Term]
 id: APOLLO_SV:00000197
 name: agent level population and environment census
-comment: An instance of the an AgentLevel PopulationAndEnvironmentCensus type comprises an AgentLevel PopulationAndEnvironmentCensus Description, which describes the biotic and abiotic ecosystems elements that are counted by the census, and a URL where the census (the counts) can be retrieved. 
+comment: An instance of the an AgentLevel PopulationAndEnvironmentCensus type comprises an AgentLevel PopulationAndEnvironmentCensus Description, which describes the biotic and abiotic ecosystems elements that are counted by the census, and a URL where the census (the counts) can be retrieved.
 is_a: APOLLO_SV:00000188 ! population and environment census
 
 [Term]
 id: APOLLO_SV:00000198
-name: agent model ecosystem census description
+name: obsolete agent model ecosystem census description
 comment: At present, this class corresponds with an XSD type that contains authentication plus information needed to generate a Synthia synthetic population dataset including (1) geographical location and (2) a list of household characteristics.
 is_obsolete: true
 
 [Term]
 id: APOLLO_SV:00000199
-name: compartment model population and environment census
+name: obsolete compartment model population and environment census
 comment: The Apollo XSD allows us to specify counts of certain subpopulations and abiotic ecosystem elements for a compartmental model (vs. specifying each individual in the population as in agent model population and environment census).
 is_obsolete: true
 
@@ -1648,7 +1645,7 @@ property_value: IAO:0000600 "A census about contaminated things of a given type 
 [Term]
 id: APOLLO_SV:00000202
 name: indexable Apollo item
-comment: A class representing an abstract type. This class has no attributes and programmers should use it to determine whether an instance should be saved or can be retrieved. 
+comment: A class representing an abstract type. This class has no attributes and programmers should use it to determine whether an instance should be saved or can be retrieved.
 is_a: IAO:0000030
 property_value: APOLLO_SV:0000040 "ApolloIndexableItem" xsd:string
 
@@ -1770,11 +1767,11 @@ property_value: IAO:0000600 "An information content entity that specifies the va
 [Term]
 id: APOLLO_SV:00000215
 name: probability distribution
-def: "An information content entity that assigns a probability to each measurable subset of the possible outcomes of a random experiment, survey, or procedure of statistical inference. " []
+def: "An information content entity that assigns a probability to each measurable subset of the possible outcomes of a random experiment, survey, or procedure of statistical inference." []
 is_a: IAO:0000030
 property_value: APOLLO_SV:0000040 "ProbabilityDistribution" xsd:string
 property_value: IAO:0000119 "http://en.wikipedia.org/wiki/Probability_distribution" xsd:string
-property_value: IAO:0000600 "An information content entity that assigns a probability to each measurable subset of the possible outcomes of a random experiment, survey, or procedure of statistical inference. " xsd:string
+property_value: IAO:0000600 "An information content entity that assigns a probability to each measurable subset of the possible outcomes of a random experiment, survey, or procedure of statistical inference." xsd:string
 
 [Term]
 id: APOLLO_SV:00000216
@@ -2028,7 +2025,6 @@ id: APOLLO_SV:00000244
 name: disease unique identifier
 def: "a unique identifier that refers to a disease." []
 comment: This class is different from its superclass, in that the identifier is non-redundant with other identifiers in its context (such as a coding system or terminology or ontology).  The superclass admits of natural langugage names of diseases, whereas this one typically does not.
-comment: We still need to decide which coding schema to adopt.-MB
 is_a: APOLLO_SV:00000598 ! disease identifier
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000600 "A unique identifier that refers to a particular type of disease." xsd:string
@@ -2070,7 +2066,7 @@ is_obsolete: true
 
 [Term]
 id: APOLLO_SV:00000249
-name: nonparametric probability distribution
+name: obsolete nonparametric probability distribution
 property_value: APOLLO_SV:0000040 "NonparametricProbabilityDistribution" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 is_obsolete: true
@@ -2212,7 +2208,7 @@ def: "An infection acquisition whereby a susceptible host acquires an infection 
 is_a: APOLLO_SV:00000115 ! infection acquisition
 property_value: APOLLO_SV:0000040 "InfectionAcquisitionFromInfectedHost" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
-property_value: IAO:0000600 "An infection acquisition from an individual who is infectious.\n\nThe individual acquiring the infection can be of a different species than the one who is infectious.\n" xsd:string
+property_value: IAO:0000600 "An infection acquisition from an individual who is infectious.\n\nThe individual acquiring the infection can be of a different species than the one who is infectious." xsd:string
 
 [Term]
 id: APOLLO_SV:00000266
@@ -2240,7 +2236,7 @@ def: "An identifier that designates a scale according to which time is measured 
 is_a: IAO:0020000
 property_value: APOLLO_SV:0000040 "timeScale" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
-property_value: IAO:0000600 "A system of measurement of time with respect to an arbitrary reference point or event, which typically has a measured value of zero elapsed time.\n\nIn epidemic simulation, it can be 'simulator time' where time zero is the starting point of an infectious disease scenario, or it can be 'control strategy time' where time zero is the time at which the control strategy is initiated.\n" xsd:string
+property_value: IAO:0000600 "A system of measurement of time with respect to an arbitrary reference point or event, which typically has a measured value of zero elapsed time.\n\nIn epidemic simulation, it can be 'simulator time' where time zero is the starting point of an infectious disease scenario, or it can be 'control strategy time' where time zero is the time at which the control strategy is initiated." xsd:string
 
 [Term]
 id: APOLLO_SV:00000269
@@ -2436,7 +2432,7 @@ def: "The unit of measure for the supply schedule of an individual treatment." [
 is_a: UO:0000000
 property_value: APOLLO_SV:0000040 "supplyScheduleUnits" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
-property_value: IAO:0000600 "The unit of measure for the supply schedule of an individual treatment.\n\nFor example, 'daily dose'.\n" xsd:string
+property_value: IAO:0000600 "The unit of measure for the supply schedule of an individual treatment.\n\nFor example, 'daily dose'." xsd:string
 
 [Term]
 id: APOLLO_SV:00000293
@@ -2469,7 +2465,7 @@ def: "An information content entity that specifies the criteria that an organism
 is_a: IAO:0000030
 property_value: APOLLO_SV:0000040 "CaseDefinition" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
-property_value: IAO:0000600 "A specification of the criteria an organism must meet to be considered to be in some abnormal state.\n\nThe abnormal state could be having a disease, carrier status, a syndrome, a structural abnormality (e.g., congenital heart defect), and so on.\n" xsd:string
+property_value: IAO:0000600 "A specification of the criteria an organism must meet to be considered to be in some abnormal state.\n\nThe abnormal state could be having a disease, carrier status, a syndrome, a structural abnormality (e.g., congenital heart defect), and so on." xsd:string
 
 [Term]
 id: APOLLO_SV:00000297
@@ -2611,7 +2607,7 @@ id: APOLLO_SV:00000312
 name: individual mosquito reproduction
 def: "A multicellular organism reproduction that has as its agent a mosquito (taxon Culicidae, ID 7157)" []
 is_a: APOLLO_SV:00000651 ! reproduction
-is_a: GO:0032504
+is_a: GO:0048609
 intersection_of: APOLLO_SV:00000651 ! reproduction
 intersection_of: RO:0002218 NCBITaxon:7157
 relationship: RO:0002218 NCBITaxon:7157
@@ -2776,7 +2772,6 @@ id: APOLLO_SV:00000335
 name: chemical resistance to infection
 def: "A resistance to infection that is conferred by the presence, in sufficient quantity, of a particular molecular entity that is not normally present in the organism." []
 comment: As with all dispositions, chemical resistance need not be realized to exist.  The presence of cholorquine confers this disposition even if the person is never bitten by a mosquito, let alone a malaria-laden mosquito.
-comment: Examples: chemoprophylaxis of malaria with chloroquine, treatment of infections with antibiotics, antiviral treatment
 property_value: IAO:0000111 "chemical resistance to infection" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000118 "chemoprotection" xsd:string
@@ -3150,7 +3145,7 @@ property_value: IAO:0000600 "An endosymbiotic mutualism that realizes a biologic
 
 [Term]
 id: APOLLO_SV:00000370
-name: deprecated homeostasis
+name: obsolete homeostasis
 def: "A disposition of the whole organism (or of some causally relatively isolated part of the organism, such as a single cell) to regulate its bodily processes in such a way as (1) to maintain bodily qualities within a certain range or profile and (2) to respond successfully to departures from this range caused by internal influences or environmental influences such as poisoning." []
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -3415,7 +3410,7 @@ property_value: IAO:0000600 "A data set whose data items are about a host and it
 
 [Term]
 id: APOLLO_SV:00000399
-name: deprecated infection case count
+name: obsolete infection case count
 def: "A count of individuals in a population who meet an infection case definition during a particular time interval." []
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -3457,7 +3452,6 @@ id: APOLLO_SV:00000403
 name: transmission tree
 def: "A data structure that represents, for a particular infection in ecosystem, a subset of infected organisms and for each infected organism in the subset except the first one infected temporally, its infection acquisition from an infected host as a machine-readable link to that infected host." []
 comment: Because a set A is a subset of itself, we capture the possibility that all infected organisms in the epidemic are represented in the tree.
-comment: This definition allows for multiple trees in an epidemic because we did not require that the first case infected temporally be the index case, although the ideal situation is that there is one tree for the epidemic that includes the index case.
 is_a: OBI:0000658
 property_value: APOLLO_SV:0000040 "TransmissionTree" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
@@ -3782,7 +3776,7 @@ property_value: IAO:0000600 "A predicted data item that estimates how reliable s
 
 [Term]
 id: APOLLO_SV:00000435
-name: closure period
+name: obsolete closure period
 def: "A one-dimensional temporal region occupied by a place closure control strategy." []
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -4184,7 +4178,7 @@ property_value: IAO:0000600 "An epidemic simulator action specification that spe
 
 [Term]
 id: APOLLO_SV:00000475
-name: gonotrophic period duration
+name: obsolete gonotrophic period duration
 def: "A time measurement datum of the length of the temporal interval occupied by a gonotropic period." []
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -4375,7 +4369,7 @@ property_value: IAO:0000600 "An identifier curated by the United States National
 
 [Term]
 id: APOLLO_SV:00000496
-name: ORCID
+name: obsolete ORCID
 def: "An identifier curated by ORCID, Inc. to denote some academic author." []
 property_value: APOLLO_SV:0000040 "orcId" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
@@ -4640,7 +4634,6 @@ id: APOLLO_SV:00000524
 name: compiling software
 def: "A planned process that converts human-written or curated software into a machine-executable or interpretable set of instructions." []
 comment: It's compiling "software" (scare quotes) and not "source code" because you can compile Java bytecode to machine code, and Java bytecode is not technically "source code".  Compiling source code would be a subclass of this class (as would compiling Java bytecode, etc.).
-comment: Source code can be automatically generated to some extent, but we're assuming humans still curate it minimally. Also, in the case of Java and its JVM, it's machine interpretable instructions, not directly executable. Ditto for other languages with intermediate form like Java byte code.
 is_a: APOLLO_SV:00000008 ! software development
 property_value: IAO:0000111 "process of compiling software" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -5286,7 +5279,6 @@ property_value: IAO:0000111 "census of treatment facility" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000118 "census of treatment facilities" xsd:string
 property_value: IAO:0000118 "treatment facilities census" xsd:string
-property_value: IAO:0000118 "treatment facility census" xsd:string
 property_value: IAO:0000600 "A census that counts the number of treatment facilities of some kind in a particular geographical region." xsd:string
 
 [Term]
@@ -5593,7 +5585,6 @@ id: APOLLO_SV:00000623
 name: incident epidemic case count
 def: "A count of cases in an epidemic that is about a proper part of the temporal interval occupied by the epidemic." []
 comment: Incident case counts are measured according to regular intervals, typically day or week.
-comment: The count is also nearly always geographically localized, for example, the case count for the state of Pennsylvania or the case count for Waukesha County, Wisconsin.
 is_a: APOLLO_SV:00000498 ! count of cases in an epidemic
 is_a: APOLLO_SV:00000649 ! incident case count
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -5858,6 +5849,7 @@ property_value: IAO:0000117 "William R. Hogan" xsd:string
 id: APOLLO_SV:00000796
 name: dataset creating
 def: "A planned process that has a data set as its specified output." []
+is_a: COB:0000035
 is_a: OBI:0000011
 intersection_of: OBI:0000011
 intersection_of: OBI:0000299 IAO:0000100
@@ -5872,6 +5864,7 @@ id: APOLLO_SV:00000797
 name: creating a copyright license
 def: "A planned process that has a copyright license as its specified output." []
 comment: Note: for less than 24 hours, this class was a bit more specific to software licenses, but it did not have the equivalent class axiom during that time.
+is_a: COB:0000035
 is_a: OBI:0000011
 intersection_of: OBI:0000011
 intersection_of: OBI:0000299 APOLLO_SV:00000798 ! copyright license
@@ -5911,14 +5904,14 @@ property_value: IAO:0000111 "facultative role" xsd:string
 
 [Typedef]
 id: APOLLO_SV:00000004
-name: basis of
+name: obsolete basis of
 is_a: oboInOwl:ObsoleteProperty
 is_obsolete: true
 
 [Typedef]
 id: APOLLO_SV:00000028
 name: obsolete is based on
-comment: p is based on e, if p is a purely intentional entity, e is an entity and p assumption/simulation that e exists regardless of the truth of this assumption. 
+comment: p is based on e, if p is a purely intentional entity, e is an entity and p assumption/simulation that e exists regardless of the truth of this assumption.
 is_a: oboInOwl:ObsoleteProperty
 is_obsolete: true
 
@@ -5933,7 +5926,7 @@ is_asymmetric: true
 [Typedef]
 id: APOLLO_SV:00000057
 name: instantiates
-def: "A relation between to particulars such that aRb where b can be any kind of entity while the second is a universal. b instantiates a at some times. " []
+def: "A relation between to particulars such that aRb where b can be any kind of entity while the second is a universal. b instantiates a at some times." []
 comment: Barry Smith, Waclaw Kusnierczyk, Daniel Schober, Werner Ceusters, “Towards a Reference Terminology for Ontology Research and Development in the Biomedical Domain”, O. Bodenreider, ed., Proceedings of KR-MED, 2006, 57-66. Also available online at: http://ceur-ws.org/Vol-222.
 domain: BFO:0000001
 is_asymmetric: true
@@ -5948,7 +5941,7 @@ is_asymmetric: true
 
 [Typedef]
 id: APOLLO_SV:00000116
-name: causally_precedes
+name: obsolete causally_precedes
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 is_a: oboInOwl:ObsoleteProperty
 is_obsolete: true
