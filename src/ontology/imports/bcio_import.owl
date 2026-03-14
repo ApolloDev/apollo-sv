@@ -1,0 +1,72 @@
+Prefix(:=<http://purl.obolibrary.org/obo/apollo_sv/imports/bcio_import.owl#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(sdg:=<http://purl.unep.org/sdg/>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(sssom:=<https://w3id.org/sssom/>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(schema:=<https://schema.org/>)
+Prefix(Property:=<https://www.wikidata.org/wiki/Property:>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+Prefix(owlready_ontology:=<http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/apollo_sv/imports/bcio_import.owl>
+<http://purl.obolibrary.org/obo/apollo_sv/releases/2026-03-13/imports/bcio_import.owl>
+Annotation(dc:source <http://humanbehaviourchange.org/ontology/bcio.owl/2025-12-05>)
+Annotation(owl:versionInfo "2026-03-13")
+
+Declaration(Class(<http://humanbehaviourchange.org/ontology/BCIO_006158>))
+Declaration(Class(<http://humanbehaviourchange.org/ontology/BCIO_036000>))
+Declaration(AnnotationProperty(obo:IAO_0000112))
+Declaration(AnnotationProperty(obo:IAO_0000114))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(obo:IAO_0000118))
+Declaration(AnnotationProperty(dc:source))
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://humanbehaviourchange.org/ontology/BCIO_006158> (habitual behaviour)
+
+AnnotationAssertion(obo:IAO_0000112 <http://humanbehaviourchange.org/ontology/BCIO_006158> " \"Habit\" in the  Theory of Interpersonal Behavior")
+AnnotationAssertion(obo:IAO_0000112 <http://humanbehaviourchange.org/ontology/BCIO_006158> "\"Habits\" in the Motivation-Opportunities-Abilities")
+AnnotationAssertion(obo:IAO_0000114 <http://humanbehaviourchange.org/ontology/BCIO_006158> "Published")
+AnnotationAssertion(obo:IAO_0000115 <http://humanbehaviourchange.org/ontology/BCIO_006158> "An <individual human behaviour> that results from a learnt stimulus-behaviour co-occurrence.")
+AnnotationAssertion(rdfs:comment <http://humanbehaviourchange.org/ontology/BCIO_006158> "A learnt stimulus-behaviour co-occurrence can lead to activation or execution of a habitual behaviour.
+
+Habitual behaviour can be an MoA or outcome depending on how 'habitual behaviour' is described in an intervention. The Behaviour Change-Intervention Ontology includes the class 'outcome behaviour' (definition: Human behavior that is an intervention outcome.), which would not be an MoA. When an intervention targets a habitual behaviour to achieve an outcome behaviour, the former qualifies as an MoA.")
+AnnotationAssertion(rdfs:label <http://humanbehaviourchange.org/ontology/BCIO_006158> "habitual behaviour")
+SubClassOf(<http://humanbehaviourchange.org/ontology/BCIO_006158> <http://humanbehaviourchange.org/ontology/BCIO_036000>)
+
+# Class: <http://humanbehaviourchange.org/ontology/BCIO_036000> (individual human behaviour)
+
+AnnotationAssertion(obo:IAO_0000112 <http://humanbehaviourchange.org/ontology/BCIO_036000> "Also referred to in definitions as human behaviour or just behaviour.")
+AnnotationAssertion(obo:IAO_0000112 <http://humanbehaviourchange.org/ontology/BCIO_036000> "walks for 15 mins/day, never eats meat, attends school daily")
+AnnotationAssertion(obo:IAO_0000114 <http://humanbehaviourchange.org/ontology/BCIO_036000> "Published")
+AnnotationAssertion(obo:IAO_0000115 <http://humanbehaviourchange.org/ontology/BCIO_036000> "A <bodily process> of a human that involves co-ordinated contraction of striated muscles controlled by the brain.")
+AnnotationAssertion(obo:IAO_0000115 <http://humanbehaviourchange.org/ontology/BCIO_036000> "A bodily process of a human that involves co-ordinated contraction of striated muscles controlled by the brain.")
+AnnotationAssertion(obo:IAO_0000118 <http://humanbehaviourchange.org/ontology/BCIO_036000> "human behaviour")
+AnnotationAssertion(rdfs:comment <http://humanbehaviourchange.org/ontology/BCIO_036000> " it is concerned with moving skeletal parts to which it is usually attached.' (https://www.collinsdictionary.com/dictionary/english/striped-muscle)")
+AnnotationAssertion(rdfs:comment <http://humanbehaviourchange.org/ontology/BCIO_036000> "The class human behaviour [BCIO:042000] has been made obsolete. If you want to refer to the behaviour of an individual, refer to individual human behaviour . If you want to refer to the behaviour of a group, refer to population behaviour.
+
+Striated muscles referred to in the definition do not ordinarily involve cardiac muscles.
+
+Behaviours are usually in response to an internal or external stimuli.
+
+Every behaviour is associated with mental processes, but not every mental process is associated with behaviour. For instance, a verbal communication behaviour will involve mental processes to produce speech. However, mental processes associated with listening can occur without a person performing a behaviour.
+
+'behaviours' can involve a series of activities (e.g., more granular behaviours).
+
+'A 'striated muscle' can defined as 'a type of contractile tissue that is marked by transverse striations")
+AnnotationAssertion(rdfs:label <http://humanbehaviourchange.org/ontology/BCIO_036000> "individual human behaviour")
+
+
+)

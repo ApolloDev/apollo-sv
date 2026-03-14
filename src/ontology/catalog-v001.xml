@@ -11,6 +11,7 @@
     <uri name="http://purl.obolibrary.org/obo/apollo_sv/imports/dron_import.owl" uri="imports/dron_import.owl" />
     <uri name="http://purl.obolibrary.org/obo/apollo_sv/imports/ogms_import.owl" uri="imports/ogms_import.owl" />
     <uri name="http://purl.obolibrary.org/obo/apollo_sv/imports/uberon_import.owl" uri="imports/uberon_import.owl" />
+    <uri name="http://purl.obolibrary.org/obo/apollo_sv/imports/bcio_import.owl" uri="imports/bcio_import.owl" />
   </group>
   <group id="Folder Repository, directory=, recursive=false, Auto-Update=false, version=2" prefer="public">
     <uri name="http://purl.obolibrary.org/obo/apollo_sv/imports/ro_import.obo" uri="imports/ro_import.obo" />

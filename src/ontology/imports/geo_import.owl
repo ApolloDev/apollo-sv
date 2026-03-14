@@ -662,7 +662,7 @@ AnnotationAssertion(rdfs:comment obo:GEO_000000006 "Typically, the common featur
 AnnotationAssertion(rdfs:label obo:GEO_000000006 "geopolitical dependency"@en)
 SubClassOf(obo:GEO_000000006 obo:GEO_000000004)
 
-# Class: obo:GEO_000000007 (group of major administrative subdivisions)
+# Class: obo:GEO_000000007 (aggregate of major administrative subdivisions)
 
 AnnotationAssertion(obo:IAO_0000115 obo:GEO_000000007 "An aggregate of governmental organizations that is not itself a major administrative subdivision and whose members are only major administrative subdivisions that have some feature in common."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:GEO_000000007 "Amanda Hicks"@en)
@@ -672,7 +672,7 @@ AnnotationAssertion(rdfs:label obo:GEO_000000007 "group of major administrative 
 EquivalentClasses(obo:GEO_000000007 ObjectIntersectionOf(ObjectComplementOf(obo:GEO_000000005) ObjectAllValuesFrom(obo:BFO_0000075 obo:GEO_000000005) ObjectMinCardinality(2 obo:BFO_0000075 obo:GEO_000000005)))
 SubClassOf(obo:GEO_000000007 obo:GEO_000000337)
 
-# Class: obo:GEO_000000008 (aggregate of dependencies)
+# Class: obo:GEO_000000008 (group of dependencies)
 
 AnnotationAssertion(obo:IAO_0000115 obo:GEO_000000008 "An aggregate of governmental organizations that is not itself a geopolitical dependency and whose members are only geopolitical dependencies that have some feature in common."@en)
 AnnotationAssertion(obo:IAO_0000117 obo:GEO_000000008 "Amanda Hicks"@en)

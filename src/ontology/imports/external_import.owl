@@ -8,6 +8,7 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 Ontology(<http://purl.obolibrary.org/obo/apollo_sv/external_import.owl>
 
+Declaration(Class(<http://humanbehaviourchange.org/ontology/BCIO_036000>))
 Declaration(Class(owl:Thing))
 
 )
