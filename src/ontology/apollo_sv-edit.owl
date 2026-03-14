@@ -687,6 +687,7 @@ Declaration(Class(obo:APOLLO_SV_00000649))
 Declaration(Class(obo:APOLLO_SV_00000650))
 Declaration(Class(obo:APOLLO_SV_00000651))
 Declaration(Class(obo:APOLLO_SV_00000652))
+Declaration(Class(obo:APOLLO_SV_00000653))
 Declaration(Class(obo:APOLLO_SV_00000793))
 Declaration(Class(obo:APOLLO_SV_00000794))
 Declaration(Class(obo:APOLLO_SV_00000795))
@@ -1740,11 +1741,11 @@ AnnotationAssertion(rdfs:label dc:type "dc:type")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasAlternativeId "has_alternative_id")
 
-# Annotation Property: oboInOwl:hasBroadSynonym (has_broad_synonym)
+# Annotation Property: oboInOwl:hasBroadSynonym (has broad synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -1760,7 +1761,7 @@ AnnotationAssertion(rdfs:label oboInOwl:hasNarrowSynonym "has_narrow_synonym")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasOBONamespace "has_obo_namespace")
 
-# Annotation Property: oboInOwl:hasRelatedSynonym (has_related_synonym)
+# Annotation Property: oboInOwl:hasRelatedSynonym (has related synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasRelatedSynonym "has_related_synonym")
 
@@ -2204,7 +2205,7 @@ AnnotationAssertion(obo:IAO_0000412 obo:OMIABIS_0000048 "http://purl.obolibrary.
 AnnotationAssertion(rdfs:label obo:OMIABIS_0000048 "is owned by"@en)
 SubObjectPropertyOf(obo:OMIABIS_0000048 owl:topObjectProperty)
 
-# Object Property: obo:RO_0000053 (bearer of)
+# Object Property: obo:RO_0000053 (has characteristic)
 
 AnnotationAssertion(obo:IAO_0000118 obo:RO_0000053 "bearer of"@en)
 AnnotationAssertion(obo:IAO_0000118 obo:RO_0000053 "bearer_of"@en)
@@ -8338,6 +8339,18 @@ AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000652 "The case of adult child
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000652 "intent to have a child vaccinated"@en)
 SubClassOf(obo:APOLLO_SV_00000652 obo:APOLLO_SV_00000650)
 
+# Class: obo:APOLLO_SV_00000653 (human-to-human communicability)
+
+AnnotationAssertion(obo:IAO_0000111 obo:APOLLO_SV_00000653 "communicability among human beings"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000653 "A communicability among human beings (homo sapiens)."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000653 "William R. Hogan"@en)
+AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000653 "The ability of a pathogen to transmit from one human host to another human host."@en)
+AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000653 "HumanToHumanCommunicability")
+AnnotationAssertion(terms:contributor obo:APOLLO_SV_00000653 <https://orcid.org/0000-0002-9881-1017>)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000653 "human-to-human communicability"@en)
+SubClassOf(obo:APOLLO_SV_00000653 obo:IDO_0000623)
+SubClassOf(obo:APOLLO_SV_00000653 ObjectSomeValuesFrom(obo:RO_0000057 obo:NCBITaxon_9606))
+
 # Class: obo:APOLLO_SV_00000793 (epidemic simulator action specification)
 
 AnnotationAssertion(obo:IAO_0000111 obo:APOLLO_SV_00000793 "epidemic simulator action specification"@en)
@@ -14430,7 +14443,7 @@ AnnotationAssertion(rdfs:label <http://www.ebi.ac.uk/efo/EFO_0004600> "genomic d
 SubClassOf(<http://www.ebi.ac.uk/efo/EFO_0004600> obo:IAO_0000100)
 SubClassOf(<http://www.ebi.ac.uk/efo/EFO_0004600> ObjectSomeValuesFrom(obo:IAO_0000136 obo:OBI_0100026))
 
-# Class: oboInOwl:ObsoleteClass (Obsolete Class)
+# Class: oboInOwl:ObsoleteClass (obsolete_class)
 
 AnnotationAssertion(rdfs:label oboInOwl:ObsoleteClass "Obsolete Class"@en)
 
