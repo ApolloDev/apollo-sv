@@ -8349,7 +8349,7 @@ AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000653 "HumanToH
 AnnotationAssertion(terms:contributor obo:APOLLO_SV_00000653 <https://orcid.org/0000-0002-9881-1017>)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000653 "human-to-human communicability"@en)
 SubClassOf(obo:APOLLO_SV_00000653 obo:IDO_0000623)
-SubClassOf(obo:APOLLO_SV_00000653 ObjectSomeValuesFrom(obo:RO_0000057 obo:NCBITaxon_9606))
+SubClassOf(obo:APOLLO_SV_00000653 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:RO_0000052 obo:BFO_0000040) ObjectAllValuesFrom(obo:BFO_0000054 ObjectIntersectionOf(obo:BFO_0000015 ObjectSomeValuesFrom(obo:RO_0000057 obo:NCBITaxon_9606)))))
 
 # Class: obo:APOLLO_SV_00000793 (epidemic simulator action specification)
 
