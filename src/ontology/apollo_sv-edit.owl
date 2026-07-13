@@ -689,7 +689,9 @@ Declaration(Class(obo:APOLLO_SV_00000651))
 Declaration(Class(obo:APOLLO_SV_00000652))
 Declaration(Class(obo:APOLLO_SV_00000653))
 Declaration(Class(obo:APOLLO_SV_00000654))
+Declaration(Class(obo:APOLLO_SV_00000655))
 Declaration(Class(obo:APOLLO_SV_00000656))
+Declaration(Class(obo:APOLLO_SV_00000657))
 Declaration(Class(obo:APOLLO_SV_00000793))
 Declaration(Class(obo:APOLLO_SV_00000794))
 Declaration(Class(obo:APOLLO_SV_00000795))
@@ -1746,11 +1748,11 @@ AnnotationAssertion(rdfs:label dc:type "dc:type")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasAlternativeId "has_alternative_id")
 
-# Annotation Property: oboInOwl:hasBroadSynonym (has broad synonym)
+# Annotation Property: oboInOwl:hasBroadSynonym (has_broad_synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
+# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -1766,7 +1768,7 @@ AnnotationAssertion(rdfs:label oboInOwl:hasNarrowSynonym "has_narrow_synonym")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasOBONamespace "has_obo_namespace")
 
-# Annotation Property: oboInOwl:hasRelatedSynonym (has related synonym)
+# Annotation Property: oboInOwl:hasRelatedSynonym (has_related_synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasRelatedSynonym "has_related_synonym")
 
@@ -2210,7 +2212,7 @@ AnnotationAssertion(obo:IAO_0000412 obo:OMIABIS_0000048 "http://purl.obolibrary.
 AnnotationAssertion(rdfs:label obo:OMIABIS_0000048 "is owned by"@en)
 SubObjectPropertyOf(obo:OMIABIS_0000048 owl:topObjectProperty)
 
-# Object Property: obo:RO_0000053 (has characteristic)
+# Object Property: obo:RO_0000053 (bearer of)
 
 AnnotationAssertion(obo:IAO_0000118 obo:RO_0000053 "bearer of"@en)
 AnnotationAssertion(obo:IAO_0000118 obo:RO_0000053 "bearer_of"@en)
@@ -8379,6 +8381,52 @@ AnnotationAssertion(terms:creator obo:APOLLO_SV_00000656 <https://orcid.org/0000
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000656 "antibody administration control strategy"@en)
 SubClassOf(obo:APOLLO_SV_00000656 obo:APOLLO_SV_00000194)
 
+# Class: obo:APOLLO_SV_00000654 (historical scenario)
+
+AnnotationAssertion(obo:IAO_0000111 obo:APOLLO_SV_00000654 "historical infectious disease scenario date"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000654 "An infectious disease scenario that represents or reconstructs an outbreak or epidemic that actually occurred, usually constrained by observed data."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000654 "William R. Hogan"@en)
+AnnotationAssertion(dc:contributor obo:APOLLO_SV_00000654 "John Levander"@en)
+AnnotationAssertion(terms:contributor obo:APOLLO_SV_00000654 <https://orcid.org/0000-0002-9881-1017>)
+AnnotationAssertion(terms:created obo:APOLLO_SV_00000654 "2026-04-04T19:36:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000654 "historical scenario"@en)
+SubClassOf(obo:APOLLO_SV_00000654 obo:APOLLO_SV_00000184)
+
+# Class: obo:APOLLO_SV_00000655 (hypothetical scenario)
+
+AnnotationAssertion(obo:IAO_0000111 obo:APOLLO_SV_00000655 "hypothetical infecctious disease scenario"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000655 "An infectious disease scenario that represents a possible, assumed, projected, or counterfactual outbreak or epidemic, and does not need to correspond to a specific observed event."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000655 "William R. Hogan"@en)
+AnnotationAssertion(dc:contributor obo:APOLLO_SV_00000655 "John Levander"@en)
+AnnotationAssertion(terms:contributor obo:APOLLO_SV_00000655 <https://orcid.org/0000-0002-9881-1017>)
+AnnotationAssertion(terms:created obo:APOLLO_SV_00000655 "2026-04-04T19:52:04Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000655 "hypothetical scenario"@en)
+SubClassOf(obo:APOLLO_SV_00000655 obo:APOLLO_SV_00000184)
+
+# Class: obo:APOLLO_SV_00000656 (antibody administration control strategy)
+
+AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000656 "An individual treatment control strategy that has as part an action specification that  (has a concretization that) is realized in an antibody injection process."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000656 "William R. Hogan"@en)
+AnnotationAssertion(obo:IAO_0000233 obo:APOLLO_SV_00000656 <https://github.com/ApolloDev/apollo-sv/issues/273>)
+AnnotationAssertion(dc:contributor obo:APOLLO_SV_00000656 "Lucie Contamin")
+AnnotationAssertion(terms:created obo:APOLLO_SV_00000656 "2026-07-13T14:13:40Z"^^xsd:dateTime)
+AnnotationAssertion(terms:creator obo:APOLLO_SV_00000656 <https://orcid.org/0000-0002-9881-1017>)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000656 "antibody administration control strategy"@en)
+SubClassOf(obo:APOLLO_SV_00000656 obo:APOLLO_SV_00000194)
+
+# Class: obo:APOLLO_SV_00000657 (antibody administration census)
+
+AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000657 "A population treatment census that is about one or more antibody administrations to organisms in a population."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000657 "William R. Hogan"@en)
+AnnotationAssertion(obo:IAO_0000233 obo:APOLLO_SV_00000657 <https://github.com/ApolloDev/apollo-sv/issues/273>)
+AnnotationAssertion(dc:contributor obo:APOLLO_SV_00000657 "Lucie Contamin")
+AnnotationAssertion(terms:created obo:APOLLO_SV_00000657 "2026-07-13T13:52:47Z"^^xsd:dateTime)
+AnnotationAssertion(terms:creator obo:APOLLO_SV_00000657 <https://orcid.org/0000-0002-9881-1017>)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000657 "antibody administration census"@en)
+SubClassOf(obo:APOLLO_SV_00000657 obo:APOLLO_SV_00000187)
+SubClassOf(obo:APOLLO_SV_00000657 ObjectSomeValuesFrom(obo:IAO_0000136 obo:DRON_00000031))
+
+
 # Class: obo:APOLLO_SV_00000793 (epidemic simulator action specification)
 
 AnnotationAssertion(obo:IAO_0000111 obo:APOLLO_SV_00000793 "epidemic simulator action specification"@en)
@@ -14471,7 +14519,7 @@ AnnotationAssertion(rdfs:label <http://www.ebi.ac.uk/efo/EFO_0004600> "genomic d
 SubClassOf(<http://www.ebi.ac.uk/efo/EFO_0004600> obo:IAO_0000100)
 SubClassOf(<http://www.ebi.ac.uk/efo/EFO_0004600> ObjectSomeValuesFrom(obo:IAO_0000136 obo:OBI_0100026))
 
-# Class: oboInOwl:ObsoleteClass (obsolete_class)
+# Class: oboInOwl:ObsoleteClass (Obsolete Class)
 
 AnnotationAssertion(rdfs:label oboInOwl:ObsoleteClass "Obsolete Class"@en)
 
@@ -14497,11 +14545,11 @@ ClassAssertion(obo:UO_0000003 obo:UO_0000034)
 
 # Individual: <https://orcid.org/0000-0002-9881-1017> (William R. Hogan)
 
-AnnotationAssertion(terms:created <https://orcid.org/0000-0002-9881-1017> "2026-07-13T13:59:59Z"^^xsd:dateTime)
 AnnotationAssertion(terms:creator <https://orcid.org/0000-0002-9881-1017> <https://orcid.org/0000-0002-9881-1017>)
+AnnotationAssertion(terms:created <https://orcid.org/0000-0002-9881-1017> "2026-04-04T19:54:38Z"^^xsd:dateTime)
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-9881-1017> "William R. Hogan"@en)
 ClassAssertion(obo:NCBITaxon_9606 <https://orcid.org/0000-0002-9881-1017>)
 
-
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:GEO_000000005 "administrativeLocations")
+
 )
