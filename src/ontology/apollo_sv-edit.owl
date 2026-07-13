@@ -8358,29 +8358,6 @@ AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000653 "human-to-human communicab
 SubClassOf(obo:APOLLO_SV_00000653 obo:IDO_0000623)
 SubClassOf(obo:APOLLO_SV_00000653 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:RO_0000052 obo:BFO_0000040) ObjectAllValuesFrom(obo:BFO_0000054 ObjectIntersectionOf(obo:BFO_0000015 ObjectSomeValuesFrom(obo:RO_0000057 obo:NCBITaxon_9606)))))
 
-# Class: obo:APOLLO_SV_00000654 (antibody administration census)
-
-AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000654 "A population treatment census that is about one or more antibody administrations to organisms in a population."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000654 "William R. Hogan"@en)
-AnnotationAssertion(obo:IAO_0000233 obo:APOLLO_SV_00000654 <https://github.com/ApolloDev/apollo-sv/issues/273>)
-AnnotationAssertion(dc:contributor obo:APOLLO_SV_00000654 "Lucie Contamin")
-AnnotationAssertion(terms:created obo:APOLLO_SV_00000654 "2026-07-13T13:52:47Z"^^xsd:dateTime)
-AnnotationAssertion(terms:creator obo:APOLLO_SV_00000654 <https://orcid.org/0000-0002-9881-1017>)
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000654 "antibody administration census"@en)
-SubClassOf(obo:APOLLO_SV_00000654 obo:APOLLO_SV_00000187)
-SubClassOf(obo:APOLLO_SV_00000654 ObjectSomeValuesFrom(obo:IAO_0000136 obo:DRON_00000031))
-
-# Class: obo:APOLLO_SV_00000656 (antibody administration control strategy)
-
-AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000656 "An individual treatment control strategy that has as part an action specification that  (has a concretization that) is realized in an antibody injection process."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000656 "William R. Hogan"@en)
-AnnotationAssertion(obo:IAO_0000233 obo:APOLLO_SV_00000656 <https://github.com/ApolloDev/apollo-sv/issues/273>)
-AnnotationAssertion(dc:contributor obo:APOLLO_SV_00000656 "Lucie Contamin")
-AnnotationAssertion(terms:created obo:APOLLO_SV_00000656 "2026-07-13T14:13:40Z"^^xsd:dateTime)
-AnnotationAssertion(terms:creator obo:APOLLO_SV_00000656 <https://orcid.org/0000-0002-9881-1017>)
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000656 "antibody administration control strategy"@en)
-SubClassOf(obo:APOLLO_SV_00000656 obo:APOLLO_SV_00000194)
-
 # Class: obo:APOLLO_SV_00000654 (historical scenario)
 
 AnnotationAssertion(obo:IAO_0000111 obo:APOLLO_SV_00000654 "historical infectious disease scenario date"@en)
