@@ -21,13 +21,15 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/apollo_sv/imports/dron_import.owl>
-<http://purl.obolibrary.org/obo/apollo_sv/releases/2026-03-13/imports/dron_import.owl>
-Annotation(dc:source <http://purl.obolibrary.org/obo/dron/releases/2026-03-04/dron.owl>)
-Annotation(owl:versionInfo "2026-03-13")
+<http://purl.obolibrary.org/obo/apollo_sv/releases/2026-07-13/imports/dron_import.owl>
+Annotation(dc:source <http://purl.obolibrary.org/obo/dron/releases/2026-06-04/dron.owl>)
+Annotation(owl:versionInfo "2026-07-13")
 
 Declaration(Class(obo:BFO_0000040))
 Declaration(Class(obo:DRON_00000005))
+Declaration(Class(obo:DRON_00000031))
 Declaration(Class(obo:DRON_00000074))
+Declaration(AnnotationProperty(obo:IAO_0000111))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:IAO_0000117))
 Declaration(AnnotationProperty(dc:source))
@@ -45,6 +47,13 @@ AnnotationAssertion(obo:IAO_0000117 obo:DRON_00000005 "William Hogan"@en)
 AnnotationAssertion(rdfs:comment obo:DRON_00000005 "We changed the label to 'clinical drug product' because it was clear that the part of the definition re: bearer of a \"clinical drug role\" made it such. Other drugs don't have clinical drug roles, especially illicit ones. Therefore we changed the label here, as well as the subClassOf. Now it is subClassOf \"drug product\", which also required changing the definition here."@en)
 AnnotationAssertion(rdfs:label obo:DRON_00000005 "clinical drug product"@en)
 SubClassOf(obo:DRON_00000005 obo:DRON_00000074)
+
+# Class: obo:DRON_00000031 (drug administration)
+
+AnnotationAssertion(obo:IAO_0000111 obo:DRON_00000031 "administration of a drug product to an organism"@en)
+AnnotationAssertion(obo:IAO_0000115 obo:DRON_00000031 "A treatment that has as participants an extended organism and a drug product and that results in part of the drug product being located in the extended organism."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:DRON_00000031 "William R. Hogan"@en)
+AnnotationAssertion(rdfs:label obo:DRON_00000031 "drug administration"@en)
 
 # Class: obo:DRON_00000074 (drug product)
 
