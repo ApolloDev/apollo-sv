@@ -49,11 +49,70 @@
         "val" : "When citing Apollo-SV, use the permanent URL of the ontology: http://purl.obolibrary.org/obo/apollo_sv.owl.  When referencing a specific component of the Apollo-SV such as a class, object property, annotation property, or individual, use the component's Uniform Resource Identifier (URI)."
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-03-13"
+        "val" : "2026-07-18"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/apollo_sv/releases/2026-03-13/apollo_sv.json"
+      "version" : "http://purl.obolibrary.org/obo/apollo_sv/releases/2026-07-18/apollo_sv.json"
     },
     "nodes" : [ {
+      "id" : "http://humanbehaviourchange.org/ontology/BCIO_006158",
+      "lbl" : "habitual behaviour",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An <individual human behaviour> that results from a learnt stimulus-behaviour co-occurrence."
+        },
+        "comments" : [ "A learnt stimulus-behaviour co-occurrence can lead to activation or execution of a habitual behaviour.\n\nHabitual behaviour can be an MoA or outcome depending on how 'habitual behaviour' is described in an intervention. The Behaviour Change-Intervention Ontology includes the class 'outcome behaviour' (definition: Human behavior that is an intervention outcome.), which would not be an MoA. When an intervention targets a habitual behaviour to achieve an outcome behaviour, the former qualifies as an MoA." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : " \"Habit\" in the  Theory of Interpersonal Behavior"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "\"Habits\" in the Motivation-Opportunities-Abilities"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
+          "val" : "Published"
+        } ]
+      }
+    }, {
+      "id" : "http://humanbehaviourchange.org/ontology/BCIO_026022",
+      "lbl" : "educational facility",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A facility in which formal education is provided to a student population."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
+          "val" : "Published"
+        } ]
+      }
+    }, {
+      "id" : "http://humanbehaviourchange.org/ontology/BCIO_036000",
+      "lbl" : "individual human behaviour",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A bodily process of a human that involves co-ordinated contraction of striated muscles controlled by the brain."
+        },
+        "comments" : [ " it is concerned with moving skeletal parts to which it is usually attached.' (https://www.collinsdictionary.com/dictionary/english/striped-muscle)", "The class human behaviour [BCIO:042000] has been made obsolete. If you want to refer to the behaviour of an individual, refer to individual human behaviour . If you want to refer to the behaviour of a group, refer to population behaviour.\n\nStriated muscles referred to in the definition do not ordinarily involve cardiac muscles.\n\nBehaviours are usually in response to an internal or external stimuli.\n\nEvery behaviour is associated with mental processes, but not every mental process is associated with behaviour. For instance, a verbal communication behaviour will involve mental processes to produce speech. However, mental processes associated with listening can occur without a person performing a behaviour.\n\n'behaviours' can involve a series of activities (e.g., more granular behaviours).\n\n'A 'striated muscle' can defined as 'a type of contractile tissue that is marked by transverse striations" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "Also referred to in definitions as human behaviour or just behaviour."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "walks for 15 mins/day, never eats meat, attends school daily"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
+          "val" : "Published"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "human behaviour"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
+          "val" : "HumanBehavior"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.obo/obo/NCBITaxon_7160",
       "lbl" : "Aedes albopictus",
       "type" : "CLASS",
@@ -6500,7 +6559,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000402",
-      "lbl" : "individual human behavior",
+      "lbl" : "obsolete individual human behavior",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -6516,9 +6575,10 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
           "val" : "An individual behavior of a human being."
         }, {
-          "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
-          "val" : "HumanBehavior"
-        } ]
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
+          "val" : "http://humanbehaviourchange.org/ontology/BCIO_036000"
+        } ],
+        "deprecated" : true
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000403",
@@ -11417,6 +11477,131 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000653",
+      "lbl" : "human-to-human communicability",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A communicability among human beings (homo sapiens)."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "communicability among human beings"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
+          "val" : "The ability of a pathogen to transmit from one human host to another human host."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
+          "val" : "HumanToHumanCommunicability"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-9881-1017"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000654",
+      "lbl" : "historical scenario",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An infectious disease scenario that represents or reconstructs an outbreak or epidemic that actually occurred, usually constrained by observed data."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "historical infectious disease scenario date"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/contributor",
+          "val" : "John Levander"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-9881-1017"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2026-04-04T19:36:00Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000655",
+      "lbl" : "hypothetical scenario",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An infectious disease scenario that represents a possible, assumed, projected, or counterfactual outbreak or epidemic, and does not need to correspond to a specific observed event."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "hypothetical infecctious disease scenario"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/contributor",
+          "val" : "John Levander"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-9881-1017"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2026-04-04T19:52:04Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000656",
+      "lbl" : "antibody administration control strategy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An individual treatment control strategy that has as part an action specification that  (has a concretization that) is realized in an antibody injection process."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/ApolloDev/apollo-sv/issues/273"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/contributor",
+          "val" : "Lucie Contamin"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2026-07-13T14:13:40Z"
+        }, {
+          "pred" : "http://purl.org/dc/terms/creator",
+          "val" : "https://orcid.org/0000-0002-9881-1017"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000657",
+      "lbl" : "antibody administration census",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A population treatment census that is about one or more antibody administrations to organisms in a population."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/ApolloDev/apollo-sv/issues/273"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/contributor",
+          "val" : "Lucie Contamin"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2026-07-13T13:52:47Z"
+        }, {
+          "pred" : "http://purl.org/dc/terms/creator",
+          "val" : "https://orcid.org/0000-0002-9881-1017"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000793",
       "lbl" : "epidemic simulator action specification",
       "type" : "CLASS",
@@ -12343,12 +12528,6 @@
           "val" : "An entity a is an object aggregate if and only if there is a mutually exhaustive and pairwise disjoint partition of a into objects "
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "An entity a is an object aggregate if and only if there is a mutually exhaustive and pairwise disjoint partition of a into objects "
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "An entity a is an object aggregate if and only if there is a mutually exhaustive and pairwise disjoint partition of a into objects "
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
           "val" : "BFO 2 Reference: object aggregates may gain and lose parts while remaining numerically identical (one and the same individual) over time. This holds both for aggregates whose membership is determined naturally (the aggregate of cells in your body) and aggregates determined by fiat (a baseball team, a congressional committee)."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -13038,7 +13217,32 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/COB_0000035",
       "lbl" : "completely executed planned process",
-      "type" : "CLASS"
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "completely executed planned process"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
+          "val" : "http://purl.obolibrary.org/obo/cob.owl"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/COB_0000082",
+      "lbl" : "planned process",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A process that is initiated by an agent who intends to carry out a plan to achieve an objective through one or more actions as described in a plan specification."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "planned process"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
+          "val" : "http://purl.obolibrary.org/obo/cob.owl"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/DOID_0060478",
       "lbl" : "Zika fever",
@@ -13262,6 +13466,25 @@
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "William Hogan"
+        }, {
+          "pred" : "http://purl.org/dc/terms/creator",
+          "val" : "https://orcid.org/0000-0002-9881-1017"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/DRON_00000031",
+      "lbl" : "drug administration",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A treatment that has as participants an extended organism and a drug product and that results in part of the drug product being located in the extended organism."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "administration of a drug product to an organism"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
         } ]
       }
     }, {
@@ -13282,6 +13505,9 @@
         }, {
           "pred" : "http://purl.org/dc/terms/contributor",
           "val" : "https://orcid.org/0000-0002-5039-2052"
+        }, {
+          "pred" : "http://purl.org/dc/terms/creator",
+          "val" : "http://orcid.org/0000-0002-9881-1017"
         } ]
       }
     }, {
@@ -13617,53 +13843,6 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000001",
-      "lbl" : "geopolitical entity",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An organization that governs the people living in a particular geographical region or aggregate of geographical regions.  The geographical region it governs can change over time (such as the westward expansion of the United States and the addition of Hawaii)"
-        },
-        "comments" : [ "In some cases, geopolitical entities possess uninhabited geographical regions.  However, it is that case that it controls the movement of people in and out of those regions, and its laws apply to those regions." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "William R. Hogan"
-        } ],
-        "deprecated" : true
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000002",
-      "lbl" : "obsolete group of governmental organizations",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An aggregate of geopoliticial entities.  Examples include the group of states of the United States, the nations of North America, and so on."
-        },
-        "comments" : [ "taken over by GEO_0000000401" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "obsolete aggregate of governmental organizations"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "William R. Hogan"
-        } ],
-        "deprecated" : true
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000003",
-      "lbl" : "nation",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A geopolitical entity that is self contained and recognizes no higher political authority than itself."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "William R. Hogan"
-        } ],
-        "deprecated" : true
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/GEO_000000004",
       "lbl" : "subnational entity",
       "type" : "CLASS",
@@ -13716,80 +13895,6 @@
           "val" : "William R. Hogan"
         } ]
       }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000007",
-      "lbl" : "group of major administrative subdivisions",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An aggregate of governmental organizations that is not itself a major administrative subdivision and whose members are only major administrative subdivisions that have some feature in common."
-        },
-        "comments" : [ "Examples: all the major administrative subdivisions of the United States (which is different from the U.S. itself), all the major administrative subdivisions with a bicameral legislature, all the major administrative subdivisions with a judiciary, etc." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Amanda Hicks"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000008",
-      "lbl" : "group of dependencies",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An aggregate of governmental organizations that is not itself a geopolitical dependency and whose members are only geopolitical dependencies that have some feature in common."
-        },
-        "comments" : [ "Examples: all the dependencies of the United States, all of the dependencies whose territory is located in the Carribean Sea, French Overseas Collectivities, Biritish Crown Dependencies." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Amanda Hicks"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000334",
-      "lbl" : "subcontinental land mass",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000335",
-      "lbl" : "contiguous land mass",
-      "type" : "CLASS",
-      "meta" : {
-        "comments" : [ "per the definition of 'contiguous' of \"being in actual contact :  touching along a boundary or at a point\", these land masses share boundaries with other land masses that are part of the same continent, and thus are not surrounded by water like an island.\n\nAt some point, we need an 'adjacent to' relation if BFO doesn't provide it.\n\nOne question is whether this class encompasses fiat parts of islands." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
-          "val" : "contiguous continental land mass"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000337",
-      "lbl" : "aggregate of governmental organizations",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An aggregate of organizations that is not itself a governmental organization, has only governmental organizations as members, and has at least two governmental organizations as members.\n"
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "William R. Hogan"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000357",
-      "lbl" : "contiguous island land mass",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A subcontinental land mass that is part of an island and includes part of the land surface of the island."
-        },
-        "comments" : [ "It cannot be a part of the island, for example, that is below water." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "William R. Hogan"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000369",
-      "lbl" : "aggregate of contiguous land masses",
-      "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/GEO_000000370",
       "lbl" : "geographical entity",
@@ -13856,39 +13961,6 @@
           "val" : "Location"
         } ]
       }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000373",
-      "lbl" : "body of water",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000374",
-      "lbl" : "continent",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000375",
-      "lbl" : "land mass",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000376",
-      "lbl" : "island",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000377",
-      "lbl" : "aggregate of geographical entities",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An object aggregate of geographical entities"
-        }
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000378",
-      "lbl" : "aggregate of geographical features",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000390",
-      "lbl" : "aggregate of islands",
-      "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/GEO_000000391",
       "lbl" : "geopoli organization",
@@ -14000,98 +14072,6 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000401",
-      "lbl" : "aggregate of geopolitical organizations",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An object aggregate that is not itself a geopolitical organization and whose members are only geopolitical organizations that have some feature in common"
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Amanda Hicks"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "William R. Hogan\n"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/omrse.owl"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000402",
-      "lbl" : "obsolete aggregate of dependencies",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An aggregate of governmental organizations that is not itself a geopolitical dependency and whose members are only geopolitical dependencies that have some feature in common."
-        },
-        "comments" : [ "Examples: all the dependencies of the United States, all of the dependencies whose territory is located in the Carribean Sea, French Overseas Collectivities, Biritish Crown Dependencies." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Amanda Hicks"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/omrse.owl"
-        } ],
-        "deprecated" : true
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000403",
-      "lbl" : "obsolete aggregate of major administrative subdivisions",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An aggregate of governmental organizations that is not itself a major administrative subdivision and whose members are only major administrative subdivisions that have some feature in common"
-        },
-        "comments" : [ "Examples: all the major administrative subdivisions of the United States (which is different from the U.S. itself), all the major administrative subdivisions with a bicameral legislature, all the major administrative subdivisions with a judiciary, etc." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Amanda Hicks"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/omrse.owl"
-        } ],
-        "deprecated" : true
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000404",
-      "lbl" : "aggregate of sovereign states",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An aggregate of governmental organizations that is not itself a sovereign state and whose members are only sovereign states that have some feature in common"
-        },
-        "comments" : [ "examples: all the sovereign states in North America, all the sovereign states with a GDP below or exceeding a particular quantity of money, all the sovereign states with a constitutional monarchy, all the sovereign states who belong to the U.N. (which is different than the U.N. itself), etc." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "William R. Hogan"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/omrse.owl"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000787",
-      "lbl" : "geodetic coordinate measurement datum",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A measurement of location on the Earth that uses a single number to specify a coordinate in a coordinate system known as a geodetic datum."
-        },
-        "comments" : [ "latitude and longitude are key subtypes" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "geodetic coordinate measurement datum"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Josh Hanna"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "William R. Hogan"
-        } ]
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/GEO_000000788",
       "lbl" : "geodetic datum",
       "type" : "CLASS",
@@ -14112,16 +14092,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "Wikipedia: https://en.wikipedia.org/wiki/Geodetic_datum\n\nDate accessed: 2015-04-13"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000789",
-      "lbl" : "plane angle measurement unit label",
-      "type" : "CLASS",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "planar angular measurement unit label"
         } ]
       }
     }, {
@@ -14250,6 +14220,9 @@
           "val" : "Wikipedia:Biological_process"
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/geneontology/go-ontology/issues/24968"
+        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
           "val" : "http://purl.obolibrary.org/obo/go.owl"
         }, {
@@ -14394,6 +14367,9 @@
           "val" : "single-organism reproductive behavior"
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/geneontology/go-ontology/issues/23491"
+        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
           "val" : "http://purl.obolibrary.org/obo/go.owl"
         }, {
@@ -14431,6 +14407,9 @@
           "val" : "Wikipedia:Sexual_reproduction"
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/geneontology/go-ontology/issues/22929"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         } ]
@@ -14453,6 +14432,9 @@
           "val" : "Wikipedia:Asexual_reproduction"
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/geneontology/go-ontology/issues/22929"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         } ]
@@ -14475,6 +14457,9 @@
           "val" : "Wikipedia:Reproduction"
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/geneontology/go-ontology/issues/27054"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "jl"
         }, {
@@ -14513,6 +14498,9 @@
           "val" : "single-multicellular organism process"
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/geneontology/go-ontology/issues/27189"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "jl"
         }, {
@@ -14570,7 +14558,16 @@
           "pred" : "hasRelatedSynonym",
           "val" : "symbiotic process"
         } ],
+        "xrefs" : [ {
+          "val" : "Reactome:R-HSA-9839923"
+        } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/geneontology/go-ontology/issues/14807"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/geneontology/go-ontology/issues/20191"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "GO:0043298"
         }, {
@@ -14670,6 +14667,9 @@
           "val" : "Reactome:R-HSA-173107"
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/geneontology/go-ontology/issues/18563"
+        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
           "val" : "http://purl.obolibrary.org/obo/go.owl"
         }, {
@@ -14728,6 +14728,9 @@
           "val" : "Reactome:R-HSA-9824443"
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/geneontology/go-ontology/issues/20191"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         } ]
@@ -14753,6 +14756,9 @@
           "val" : "Reactome:R-HSA-1474165"
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/geneontology/go-ontology/issues/27054"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         } ]
@@ -14801,9 +14807,14 @@
         "xrefs" : [ {
           "val" : "Reactome:R-HSA-9635486"
         }, {
+          "val" : "Reactome:R-HSA-9640148"
+        }, {
           "val" : "Reactome:R-HSA-9658195"
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/geneontology/go-ontology/issues/20191"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "GO:0044112"
         }, {
@@ -14883,9 +14894,6 @@
           "val" : "Examples of measurement unit labels are liters, inches, weight per volume."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
-          "val" : "http://purl.obolibrary.org/obo/IAO_0000122"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
           "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
@@ -14899,9 +14907,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "PERSON: Melanie Courtot"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/obi.owl"
         } ]
       }
     }, {
@@ -15026,17 +15031,11 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An information content entity that is part of some data item and is used to partially define the denotation of that data item."
+          "val" : "A label is a symbol that is part of some other datum and is used to either partially define  the denotation of that datum or to provide a means for identifying the datum as a member of the set of data with the same label"
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "data item label"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "datum label"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
-          "val" : "http://purl.obolibrary.org/obo/IAO_0000122"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
           "val" : "http://purl.obolibrary.org/obo/IAO_0000123"
@@ -15047,14 +15046,8 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "GROUP: IAO"
         }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
-          "val" : "datum label"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000232",
           "val" : "9/22/11 BP: changed the rdfs:label for this class from 'label' to 'datum label' to convey that this class is not intended to cover all kinds of labels (stickers, radiolabels, etc.), and not even all kind of textual labels, but rather the kind of labels occuring in a datum. \n"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/obi.owl"
         } ]
       }
     }, {
@@ -15310,9 +15303,12 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."
+          "val" : "An information content entity that is intended to be one or more truthful statement(s) about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."
         },
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "data entity"
+        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "data item"
         }, {
@@ -15348,6 +15344,9 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "data"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "data item"
         } ]
       }
     }, {
@@ -15465,12 +15464,9 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "a scalar measurement datum is a measurement datum that is composed of two parts, numerals and a unit label."
+          "val" : "A scalar measurement datum is a measurement datum that is composed of two parts, numerals and a unit label."
         },
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "scalar measurement datum"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
           "val" : "10 feet. 3 ml."
         }, {
@@ -15488,9 +15484,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "PERSON: Melanie Courtot"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/obi.owl"
         } ]
       }
     }, {
@@ -16134,11 +16127,14 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "OBI_0000187"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/IAO/issues/172"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000100",
-      "lbl" : "data set",
+      "lbl" : "homogenous data collection",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -16146,7 +16142,7 @@
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "data set"
+          "val" : "homogenous data collection"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
           "val" : "Intensity values in a CEL file or from multiple CEL files comprise a data set (as opposed to the CEL files themselves)."
@@ -16166,8 +16162,8 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "person:Chris Stoeckert"
         }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
-          "val" : "OBI_0000042"
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "data set"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "group:OBI"
@@ -16328,9 +16324,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "group:OBI"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/obi.owl"
         } ]
       }
     }, {
@@ -19662,6 +19655,25 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000651",
+      "lbl" : "title section",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "the section of the document where the title appears"
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
+          "val" : "This term should not be confused with dc:title - this term represents the component of the document where the title appears, and not the value of the title itself."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Charles Tapley Hoyt"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/IAO/issues/286"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000701",
       "lbl" : "descriptive data section",
       "type" : "CLASS",
@@ -19931,6 +19943,31 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
           "val" : "https://github.com/information-artifact-ontology/IAO/issues/259"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0001000",
+      "lbl" : "data collection",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A data entity that consists of multiple data entities."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "data collection"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Sebastian Duesing"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
+          "val" : "data set"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/IAO/issues/283"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/obi-ontology/obi/issues/1877"
         } ]
       }
     }, {
@@ -32006,74 +32043,6 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/OBI_0001620",
-      "lbl" : "latitude coordinate measurement datum",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A measurement datum that is the measure of the latitude coordinate of a site."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "latitude coordinate measurement datum"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
-          "val" : "http://purl.obolibrary.org/obo/IAO_0000120"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Person: Chris Stoeckert, Jie Zheng"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
-          "val" : "latitude"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
-          "val" : "NIAID GSCID-BRC metadata working group"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/obi.owl"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/OBI_0001886",
-          "val" : "Specimen Collection Location - Latitude"
-        }, {
-          "pred" : "http://purl.org/dc/elements/1.1/source",
-          "val" : "NIAID GSCID-BRC"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/OBI_0001621",
-      "lbl" : "longitude coordinate measurement datum",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A measurement datum that is the measure of the longitude coordinate of a site."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "longitude coordinate measurement datum"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
-          "val" : "http://purl.obolibrary.org/obo/IAO_0000120"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Person: Chris Stoeckert, Jie Zheng"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
-          "val" : "longitude"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
-          "val" : "NIAID GSCID-BRC metadata working group"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/obi.owl"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/OBI_0001886",
-          "val" : "Specimen Collection Location - Longitude"
-        }, {
-          "pred" : "http://purl.org/dc/elements/1.1/source",
-          "val" : "NIAID GSCID-BRC"
-        } ]
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/OBI_0001628",
       "lbl" : "investigation identifier",
       "type" : "CLASS",
@@ -32140,54 +32109,10 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/OBI_0001931",
-      "lbl" : "scalar value specification",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A value specification that consists of two parts: a numeral and a unit label"
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "scalar value specification"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
-          "val" : "http://purl.obolibrary.org/obo/IAO_0000123"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "PERSON:Bjoern Peters"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/obi.owl"
-        } ]
-      }
+      "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/OBI_0001933",
-      "lbl" : "value specification",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An information content entity that specifies a value within a classification scheme or on a quantitative scale."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "value specification"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "The value of 'positive' in a classification scheme of \"positive or negative\"; the value of '20g' on the quantitative scale of mass."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
-          "val" : "http://purl.obolibrary.org/obo/IAO_0000122"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "This term is currently a descendant of 'information content entity', which requires that it 'is about' something. A value specification of '20g' for a measurement data item of the mass of a particular mouse 'is about' the mass of that mouse. However there are cases where a value specification is not clearly about any particular. In the future we may change 'value specification' to remove the 'is about' requirement."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "PERSON:Bjoern Peters"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/obi.owl"
-        } ]
-      }
+      "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/OBI_0001958",
       "lbl" : "systematic review study design",
@@ -32275,7 +32200,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A planned process that produces output data from input data."
+          "val" : "A data transformation is a process which produces output data from input data"
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
@@ -32745,8 +32670,14 @@
         },
         "comments" : [ "From OGMS: http://purl.obolibrary.org/obo/OGMS_0000060" ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Albert Goldfain"
+        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "http://www.jbiomedsem.com/content/1/1/10"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000232",
+          "val" : "creation date: 2009-06-23T11:53:49Z"
         } ]
       }
     }, {
@@ -33302,11 +33233,14 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A facility that is run by a school organization and is the bearer of a school function."
+          "val" : "An educational facility that is run by a school organization and is the bearer of a school function."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Mathias Brochhausen"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-9881-1017"
         } ]
       }
     }, {
@@ -33455,21 +33389,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000117",
-      "lbl" : "size",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude."
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim", "http://purl.obolibrary.org/obo/pato#scalar_slim" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/pato.owl"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "quality"
-        } ]
-      }
+      "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000122",
       "lbl" : "length",
@@ -33675,24 +33595,6 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PATO_0001323",
-      "lbl" : "area",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A 2-D extent quality inhering in a bearer by virtue of the bearer's two dimensional extent."
-        },
-        "comments" : [ "MIREOT'd into GEO to represent the area quality of a geographical region, including land area and water area." ],
-        "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim", "http://purl.obolibrary.org/obo/pato#mpath_slim", "http://purl.obolibrary.org/obo/pato#scalar_slim" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/pato.owl"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "quality"
-        } ]
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0001708",
       "lbl" : "1-D extent",
       "type" : "CLASS",
@@ -33704,27 +33606,6 @@
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "1-D size"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/pato.owl"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "quality"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PATO_0001709",
-      "lbl" : "2-D extent",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A size quality inhering in an bearer by virtue of the bearer's extension in two dimensions."
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim" ],
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "2-D size"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
@@ -34228,7 +34109,7 @@
           "val" : "End of the life of an organism.",
           "xrefs" : [ "XAO:0000437" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/uberon/core#common_anatomy", "http://purl.obolibrary.org/obo/uberon/core#human_subset", "http://purl.obolibrary.org/obo/uberon/core#mouse_subset" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/uberon/core#common_anatomy" ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
           "val" : "death"
@@ -34248,7 +34129,7 @@
           "val" : "A spatiotemporal region encompassing some part of the life cycle of an organism.",
           "xrefs" : [ "https://orcid.org/0000-0002-6601-2165" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/uberon/core#common_anatomy", "http://purl.obolibrary.org/obo/uberon/core#efo_slim", "http://purl.obolibrary.org/obo/uberon/core#human_subset", "http://purl.obolibrary.org/obo/uberon/core#mouse_subset", "http://purl.obolibrary.org/obo/uberon/core#upper_level" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/uberon/core#common_anatomy", "http://purl.obolibrary.org/obo/uberon/core#efo_slim", "http://purl.obolibrary.org/obo/uberon/core#upper_level" ],
         "synonyms" : [ {
           "pred" : "hasNarrowSynonym",
           "val" : "developmental stage"
@@ -34619,7 +34500,7 @@
           "val" : "A temporal boundary connecting two life cycle stages that follow in immediate succession. A temporal boundary is an abstract, instantaneous entity.",
           "xrefs" : [ "https://orcid.org/0000-0002-6601-2165" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/uberon/core#common_anatomy", "http://purl.obolibrary.org/obo/uberon/core#human_subset", "http://purl.obolibrary.org/obo/uberon/core#mouse_subset", "http://purl.obolibrary.org/obo/uberon/core#upper_level" ]
+        "subsets" : [ "http://purl.obolibrary.org/obo/uberon/core#common_anatomy", "http://purl.obolibrary.org/obo/uberon/core#upper_level" ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/UO_0000000",
@@ -34639,6 +34520,9 @@
       "lbl" : "length unit",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "A unit which is a standard measure of the distance between two points."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "length unit"
@@ -34652,6 +34536,9 @@
       "lbl" : "mass unit",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "A unit which is a standard measure of the amount of matter/energy of a physical object."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "mass unit"
@@ -34665,6 +34552,9 @@
       "lbl" : "time unit",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "A unit which is a standard measure of the dimension in which events occur in sequence."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "time unit"
@@ -34677,26 +34567,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
           "val" : "unitOfTime"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/UO_0000047",
-      "lbl" : "area unit",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A unit which is a standard measure of the amount of a 2-dimensional flat surface."
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/uo#unit_group_slim" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/uo.owl"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "george gkoutos"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "unit.ontology"
         } ]
       }
     }, {
@@ -34954,17 +34824,6 @@
         "deprecated" : true
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/geo.owl/GEO_000000399",
-      "lbl" : "supranational entity",
-      "type" : "CLASS",
-      "meta" : {
-        "comments" : [ "e.g., the EU" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Amanda Hicks"
-        } ]
-      }
-    }, {
       "id" : "http://purl.org/obo/owl/FBcv#FBcv_0000209",
       "lbl" : "news article",
       "type" : "CLASS",
@@ -34994,17 +34853,8 @@
       }
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass",
-      "lbl" : "obsolete_class",
-      "type" : "CLASS",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://www.geneontology.org/formats/oboInOwl"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasDefinition",
-          "val" : "_:genid2147487145"
-        } ]
-      }
+      "lbl" : "Obsolete Class",
+      "type" : "CLASS"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#Subset",
       "type" : "CLASS"
@@ -35103,7 +34953,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000050",
-      "lbl" : "part_of",
+      "lbl" : "part of",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
@@ -35447,53 +35297,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
           "val" : "http://purl.obolibrary.org/obo/obi.owl"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/omrse.owl"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/BFO_0000083",
-      "lbl" : "occupies spatial region at some time",
-      "type" : "PROPERTY",
-      "propertyType" : "OBJECT",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/BFO_0000179",
-          "val" : "located-at-r_st"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/BFO_0000180",
-          "val" : "occupiesSpatialRegionAt"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "Alan Ruttenberg: This is a binary version of a ternary time-indexed, instance level, relation. The BFO reading of the binary relation 'occupies spatial region at some time@en' is: exists t,  exists_at(x,t) & exists_at(y,t) & 'occupies spatial region@en'(x,y,t)"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "BFO2 Reference: independent continuant"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "BFO2 Reference: spatial region"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "b occupies_spatial_region r at t means that r is a spatial region in which independent continuant b is exactly located (axiom label in BFO2 Reference: [041-002])"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000601",
-          "val" : "every region r is occupies_spatial_region r at all times. (axiom label in BFO2 Reference: [042-002])"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000601",
-          "val" : "if b occupies_spatial_region r at t & b continuant_part_of b at t, then there is some r which is continuant_part_of r at t such that b  occupies_spatial_region r at t. (axiom label in BFO2 Reference: [043-001])"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
-          "val" : "(forall (r t) (if (Region r) (occupiesSpatialRegionAt r r t))) // axiom label in BFO2 CLIF: [042-002] "
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
-          "val" : "(forall (x r t) (if (occupiesSpatialRegionAt x r t) (and (SpatialRegion r) (IndependentContinuant x)))) // axiom label in BFO2 CLIF: [041-002] "
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
-          "val" : "(forall (x y r_1 t) (if (and (occupiesSpatialRegionAt x r_1 t) (continuantPartOfAt y x t)) (exists (r_2) (and (continuantPartOfAt r_2 r_1 t) (occupiesSpatialRegionAt y r_2 t))))) // axiom label in BFO2 CLIF: [043-001] "
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
-          "val" : "http://purl.obolibrary.org/obo/bfo.owl"
         } ]
       }
     }, {
@@ -35505,60 +35308,12 @@
       "id" : "http://purl.obolibrary.org/obo/BFO_0000110",
       "lbl" : "has continuant part at all times",
       "type" : "PROPERTY",
-      "propertyType" : "OBJECT",
-      "meta" : {
-        "definition" : {
-          "val" : "b has_continuant_part c at t = Def. c continuant_part_of b at t. (axiom label in BFO2 Reference: [006-001])"
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/BFO_0000179",
-          "val" : "c-has-part_at"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/BFO_0000180",
-          "val" : "hasContinuantPartAt"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "Alan Ruttenberg: This is a binary version of a ternary time-indexed, instance-level, relation. The BFO reading of the binary relation 'has continuant part at all times@en' is: forall(t) exists_at(x,t) -> exists_at(y,t) and 'has continuant part@en(x,y,t)'."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "[copied from inverse property 'part of continuant at all times that whole exists'] This is a binary version of a ternary time-indexed, instance level, relation. Unlike the rest of the temporalized relations which temporally quantify over existence of the subject of the relation, this relation temporally quantifies over the existence of the object of the relation. The relation is provided tentatively, to assess whether the GO needs such a relation. It is inverse of 'has continuant part at all times'"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/bfo.owl"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
-          "val" : "(iff (hasContinuantPartAt a b t) (continuantPartOfAt b a t)) // axiom label in BFO2 CLIF: [006-001] "
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
-          "val" : "http://purl.obolibrary.org/obo/bfo.owl"
-        } ]
-      }
+      "propertyType" : "OBJECT"
     }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000111",
       "lbl" : "has proper continuant part at all times",
       "type" : "PROPERTY",
-      "propertyType" : "OBJECT",
-      "meta" : {
-        "definition" : {
-          "val" : "b has_proper_continuant_part c at t = Def. c proper_continuant_part_of b at t. [XXX-001"
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/BFO_0000179",
-          "val" : "c-has-ppart_at"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/BFO_0000180",
-          "val" : "hasProperContinuantPartAt"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "Alan Ruttenberg: This is a binary version of a ternary time-indexed, instance-level, relation. The BFO reading of the binary relation 'has proper continuant part at all times@en' is: forall(t) exists_at(x,t) -> exists_at(y,t) and 'has proper continuant part@en(x,y,t)'."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/bfo.owl"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
-          "val" : "http://purl.obolibrary.org/obo/bfo.owl"
-        } ]
-      }
+      "propertyType" : "OBJECT"
     }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000113",
       "lbl" : "has material basis at all times",
@@ -35691,32 +35446,6 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/BFO_0000123",
-      "lbl" : "has spatial occupant at some time",
-      "type" : "PROPERTY",
-      "propertyType" : "OBJECT",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/BFO_0000179",
-          "val" : "r-location-of_st"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "[copied from inverse property 'occupies spatial region at some time'] Alan Ruttenberg: This is a binary version of a ternary time-indexed, instance level, relation. The BFO reading of the binary relation 'occupies spatial region at some time@en' is: exists t,  exists_at(x,t) & exists_at(y,t) & 'occupies spatial region@en'(x,y,t)"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "[copied from inverse property 'occupies spatial region at some time'] BFO2 Reference: independent continuant"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "[copied from inverse property 'occupies spatial region at some time'] BFO2 Reference: spatial region"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "[copied from inverse property 'occupies spatial region at some time'] b occupies_spatial_region r at t means that r is a spatial region in which independent continuant b is exactly located (axiom label in BFO2 Reference: [041-002])"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
-          "val" : "http://purl.obolibrary.org/obo/bfo.owl"
-        } ]
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000132",
       "lbl" : "part of occurrent",
       "type" : "PROPERTY",
@@ -35809,33 +35538,8 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000137",
-      "lbl" : "proper part of continuant at all times",
       "type" : "PROPERTY",
-      "propertyType" : "OBJECT",
-      "meta" : {
-        "definition" : {
-          "val" : "b proper_continuant_part_of c at t =Def. b continuant_part_of c at t  & b and c are not identical. (axiom label in BFO2 Reference: [004-001])"
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/BFO_0000179",
-          "val" : "c-ppart-of_at"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/BFO_0000180",
-          "val" : "properContinuantPartOfAt"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "Alan Ruttenberg: This is a binary version of a ternary time-indexed, instance-level, relation. The BFO reading of the binary relation 'proper part of continuant at all times@en' is: forall(t) exists_at(x,t) -> exists_at(y,t) and 'proper part of continuant@en(x,y,t)'."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/bfo.owl"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
-          "val" : "(iff (properContinuantPartOfAt a b t) (and (continuantPartOfAt a b t) (not (= a b)))) // axiom label in BFO2 CLIF: [004-001] "
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
-          "val" : "http://purl.obolibrary.org/obo/bfo.owl"
-        } ]
-      }
+      "propertyType" : "OBJECT"
     }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000138",
       "lbl" : "proper part of occurrent",
@@ -36083,93 +35787,8 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000177",
-      "lbl" : "part of continuant at all times",
       "type" : "PROPERTY",
-      "propertyType" : "OBJECT",
-      "meta" : {
-        "definition" : {
-          "val" : "[copied from inverse property 'has continuant part at all times that part exists'] forall(t) exists_at(y,t) -> exists_at(x,t) and 'has continuant part'(x,y,t)"
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/BFO_0000179",
-          "val" : "c-part-of_at"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/BFO_0000180",
-          "val" : "continuantPartOfAt"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "Mary’s arm continuant_part_of Mary in the time of her life prior to her operation"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "the Northern hemisphere of the planet Earth is a part of the planet Earth at all times at which the planet Earth exists."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "Alan Ruttenberg: This is a binary version of a ternary time-indexed, instance-level, relation. The BFO reading of the binary relation 'part of continuant at all times@en' is: forall(t) exists_at(x,t) -> exists_at(y,t) and 'part of continuant@en(x,y,t)'."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "BFO 2 Reference: Immaterial entities are in some cases continuant parts of their material hosts. Thus the hold of a ship, for example, is a part of the ship; it may itself have parts, which may have names (used for example by ship stow planners, customs inspectors, and the like). Immaterial entities under both 1. and 2. can be of zero, one, two or three dimensions. We define:a(immaterial entity)[Definition: a is an immaterial entity = Def. a is an independent continuant that has no material entities as parts. (axiom label in BFO2 Reference: [028-001])"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "BFO 2 Reference: a (continuant or occurrent) part of itself. We appreciate that this is counterintuitive for some users, since it implies for example that President Obama is a part of himself. However it brings benefits in simplifying the logical formalism, and it captures an important feature of identity, namely that it is the limit case of mereological inclusion."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "BFO2 Reference: continuant"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "BFO2 Reference: continuantThe range for ‘t’ (as in all cases throughout this document unless otherwise specified) is: temporal region."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "[copied from inverse property 'has continuant part at all times that part exists'] This is a binary version of a ternary time-indexed, instance level, relation. Unlike the rest of the temporalized relations which temporally quantify over existence of the subject of the relation, this relation temporally quantifies over the existence of the object of the relation. The relation is provided tentatively, to assess whether the GO needs such a relation. It is inverse of 'part of continuant at all times'"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/bfo.owl"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "b continuant_part_of c at t =Def. b is a part of c at t & t is a time & b and c are continuants. (axiom label in BFO2 Reference: [002-001])"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000601",
-          "val" : "continuant_part_of is antisymmetric. (axiom label in BFO2 Reference: [120-001])"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000601",
-          "val" : "continuant_part_of is reflexive (every continuant entity is a continuant_part_of itself). (axiom label in BFO2 Reference: [111-002])"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000601",
-          "val" : "continuant_part_of is transitive. (axiom label in BFO2 Reference: [110-001])"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000601",
-          "val" : "continuant_part_of satisfies unique product. (axiom label in BFO2 Reference: [122-001])"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000601",
-          "val" : "continuant_part_of satisfies weak supplementation. (axiom label in BFO2 Reference: [121-001])"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000601",
-          "val" : "if b continuant_part_of c at t and b is an independent continuant, then b is located_in c at t. (axiom label in BFO2 Reference: [047-002])"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
-          "val" : "(forall (x t) (if (Continuant x) (continuantPartOfAt x x t))) // axiom label in BFO2 CLIF: [111-002] "
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
-          "val" : "(forall (x y t) (if (and (continuantPartOfAt x y t) (IndependentContinuant x)) (locatedInAt x y t))) // axiom label in BFO2 CLIF: [047-002] "
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
-          "val" : "(forall (x y t) (if (and (continuantPartOfAt x y t) (continuantPartOfAt y x t)) (= x y))) // axiom label in BFO2 CLIF: [120-001] "
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
-          "val" : "(forall (x y t) (if (and (continuantPartOfAt x y t) (not (= x y))) (exists (z) (and (continuantPartOfAt z y t) (not (exists (w) (and (continuantPartOfAt w x t) (continuantPartOfAt w z t)))))))) // axiom label in BFO2 CLIF: [121-001] "
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
-          "val" : "(forall (x y t) (if (exists (v) (and (continuantPartOfAt v x t) (continuantPartOfAt v y t))) (exists (z) (forall (u w) (iff (iff (continuantPartOfAt w u t) (and (continuantPartOfAt w x t) (continuantPartOfAt w y t))) (= z u)))))) // axiom label in BFO2 CLIF: [122-001] "
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
-          "val" : "(forall (x y z t) (if (and (continuantPartOfAt x y t) (continuantPartOfAt y z t)) (continuantPartOfAt x z t))) // axiom label in BFO2 CLIF: [110-001] "
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
-          "val" : "(iff (ImmaterialEntity a) (and (IndependentContinuant a) (not (exists (b t) (and (MaterialEntity b) (continuantPartOfAt b a t)))))) // axiom label in BFO2 CLIF: [028-001] "
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
-          "val" : "http://purl.obolibrary.org/obo/bfo.owl"
-        } ]
-      }
+      "propertyType" : "OBJECT"
     }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000181",
       "lbl" : "has proper temporal part",
@@ -36198,93 +35817,37 @@
       "type" : "PROPERTY",
       "propertyType" : "OBJECT"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/BFO_0000187",
-      "lbl" : "has continuant part at all times that part exists",
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000011",
+      "lbl" : "is directed towards",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
-          "val" : "forall(t) exists_at(y,t) -> exists_at(x,t) and 'has continuant part'(x,y,t)"
+          "val" : "A relationship between a quality and a portion of reality such that the quality refers to or is cognitively directed towards the portion of reality."
         },
+        "comments" : [ "In the definition source, the relation is called 'is_about'. To avoid confusion with the existing \"is about\" relation in IAO, we called it 'is directed towards' per Alan Ruttenberg's suggestion." ],
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/BFO_0000179",
-          "val" : "c-has-part-object_at"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "[copied from inverse property 'part of continuant at all times'] Mary’s arm continuant_part_of Mary in the time of her life prior to her operation"
+          "val" : "One of my mental representations is directed towards the Pacific Ocean."
         }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "[copied from inverse property 'part of continuant at all times'] the Northern hemisphere of the planet Earth is a part of the planet Earth at all times at which the planet Earth exists."
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
+          "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
         }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "This is a binary version of a ternary time-indexed, instance level, relation. Unlike the rest of the temporalized relations which temporally quantify over existence of the subject of the relation, this relation temporally quantifies over the existence of the object of the relation. The relation is provided tentatively, to assess whether the GO needs such a relation. It is inverse of 'part of continuant at all times'"
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "person: William Hogan"
         }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "[copied from inverse property 'part of continuant at all times'] Alan Ruttenberg: This is a binary version of a ternary time-indexed, instance-level, relation. The BFO reading of the binary relation 'part of continuant at all times@en' is: forall(t) exists_at(x,t) -> exists_at(y,t) and 'part of continuant@en(x,y,t)'."
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "https://ceur-ws.org/Vol-1515/regular10.pdf"
         }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "[copied from inverse property 'part of continuant at all times'] BFO 2 Reference: Immaterial entities are in some cases continuant parts of their material hosts. Thus the hold of a ship, for example, is a part of the ship; it may itself have parts, which may have names (used for example by ship stow planners, customs inspectors, and the like). Immaterial entities under both 1. and 2. can be of zero, one, two or three dimensions. We define:a(immaterial entity)[Definition: a is an immaterial entity = Def. a is an independent continuant that has no material entities as parts. (axiom label in BFO2 Reference: [028-001])"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "[copied from inverse property 'part of continuant at all times'] BFO 2 Reference: a (continuant or occurrent) part of itself. We appreciate that this is counterintuitive for some users, since it implies for example that President Obama is a part of himself. However it brings benefits in simplifying the logical formalism, and it captures an important feature of identity, namely that it is the limit case of mereological inclusion."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "[copied from inverse property 'part of continuant at all times'] BFO2 Reference: continuant"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "[copied from inverse property 'part of continuant at all times'] BFO2 Reference: continuantThe range for ‘t’ (as in all cases throughout this document unless otherwise specified) is: temporal region."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/bfo.owl"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "[copied from inverse property 'part of continuant at all times'] b continuant_part_of c at t =Def. b is a part of c at t & t is a time & b and c are continuants. (axiom label in BFO2 Reference: [002-001])"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
-          "val" : "http://purl.obolibrary.org/obo/bfo.owl"
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/IAO/issues/285"
         } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000328",
-      "lbl" : "is in aggregate",
-      "type" : "PROPERTY",
-      "propertyType" : "OBJECT"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000329",
-      "lbl" : "is subordinate authority of",
-      "type" : "PROPERTY",
-      "propertyType" : "OBJECT",
-      "meta" : {
-        "definition" : {
-          "val" : "A governing organization G1 is subordinate to another governing organization G2 iff there is some authority possessed by G2 that is not possessed by G1 and G1's jurisdiction falls within the relevant jurisdiction of G2."
-        },
-        "comments" : [ "\n'is subordinate authority of'\nDomain: governing organization\nRange: governing organization\nFormal properties: transitive, anti-symmetric, irreflexive\nNatural language definition: A governing organization G1 is subordinate to another governing organization G2 iff there is some authority possessed by G2 that is not possessed by G1 and G1 falls within the relevant jurisdiction of G2." ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000336",
-      "lbl" : "has jurisdiction in",
-      "type" : "PROPERTY",
-      "propertyType" : "OBJECT",
-      "meta" : {
-        "comments" : [ "It is not intended to be maximal, in the sense that if a has_jurisdiction_in b, and b is not part of c, then a NOT has_jurisdiction_in c.\n\nin other words, it is perfectly fine to say:\na disjoint b\nc has_jurisdiction_in a\nc has_jurisdiction_in b\n\notherwise, we'd end up creating some mereological sum of all the islands, contiguous land masses, etc. of the United States, calling it \"United States territory\", asserting United States has_jurisdiction_in United States territory, then figuring out all the parts of that territory like islands, etc.  We'd end up doing the same thing for every sovereign state, major administrative subdivision (at least those like Hawaii that are multiple), etc.  Seems like an unnecessary duplication of entities.", "a governmental organization has jurisdiction in particular territories (areas of land), which means that it can make and enforce laws that govern peoples living in those territories.", "if a has_jurisdiction_in b, then a has_jurisdiction_in all parts of b." ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000039",
       "lbl" : "has measurement unit label",
       "type" : "PROPERTY",
-      "propertyType" : "OBJECT",
-      "meta" : {
-        "definition" : {
-          "val" : "A relation between a value specification and its unit of measurement."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "has measurement unit label"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/obi.owl"
-        } ]
-      }
+      "propertyType" : "OBJECT"
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000135",
       "lbl" : "obsolete_specifically denotes",
@@ -36325,7 +35888,7 @@
       "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
-          "val" : "is_about is a (currently) primitive relation that relates an information artifact to an entity."
+          "val" : "A (currently) primitive relation that relates an information artifact to an entity."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
@@ -36342,9 +35905,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/iao.owl"
         } ]
       }
     }, {
@@ -36662,19 +36222,16 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/OBI_0000293",
-      "lbl" : "has_specified_input",
+      "lbl" : "has specified input",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
-          "val" : "The inverse property of is_specified_input_of"
+          "val" : "The inverse property of is specified input of"
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "has_specified_input"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "has_specified_input"
+          "val" : "has specified input"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
           "val" : "see is_input_of example_of_usage"
@@ -36699,55 +36256,25 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
           "val" : "http://purl.obolibrary.org/obo/obi.owl"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/obi.owl"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/OBI_0000295",
-      "lbl" : "is_specified_input_of",
+      "lbl" : "is specified input of",
       "type" : "PROPERTY",
-      "propertyType" : "OBJECT",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "is_specified_input_of"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "some Autologous EBV(Epstein-Barr virus)-transformed B-LCL (B lymphocyte cell line) is_input_for instance of Chromum Release Assay described at https://wiki.cbil.upenn.edu/obiwiki/index.php/Chromium_Release_assay"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
-          "val" : "http://purl.obolibrary.org/obo/IAO_0000122"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Alan Ruttenberg"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "PERSON:Bjoern Peters"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/obi.owl"
-        } ]
-      }
+      "propertyType" : "OBJECT"
     }, {
       "id" : "http://purl.obolibrary.org/obo/OBI_0000299",
-      "lbl" : "has_specified_output",
+      "lbl" : "has specified output",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
-          "val" : "The inverse property of is_specified_output_of"
+          "val" : "The inverse property of is specified output of"
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "has specified output"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "has_specified_output"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "has_specified_output"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
           "val" : "http://purl.obolibrary.org/obo/IAO_0000122"
@@ -36766,9 +36293,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
           "val" : "http://purl.obolibrary.org/obo/obi.owl"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/obi.owl"
         } ]
       }
     }, {
@@ -36780,22 +36304,16 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/OBI_0000312",
-      "lbl" : "is_specified_output_of",
+      "lbl" : "is specified output of",
       "type" : "PROPERTY",
       "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
-          "val" : "A relation between a planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."
+          "val" : "A relation between a completely executed planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "is specified output of"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "is_specified_output_of"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "is_specified_output_of"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
           "val" : "http://purl.obolibrary.org/obo/IAO_0000122"
@@ -36805,9 +36323,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "PERSON:Bjoern Peters"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/obi.owl"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
           "val" : "http://purl.obolibrary.org/obo/obi.owl"
@@ -36844,30 +36359,8 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/OBI_0001938",
-      "lbl" : "has value specification",
       "type" : "PROPERTY",
-      "propertyType" : "OBJECT",
-      "meta" : {
-        "definition" : {
-          "val" : "A relation between an information content entity and a value specification that specifies its value."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "has value specification"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
-          "val" : "http://purl.obolibrary.org/obo/IAO_0000120"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "PERSON: James A. Overton"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
-          "val" : "OBI"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/obi.owl"
-        } ]
-      }
+      "propertyType" : "OBJECT"
     }, {
       "id" : "http://purl.obolibrary.org/obo/OMIABIS_0000008",
       "lbl" : "owns",
@@ -37027,9 +36520,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "participates_in"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/obi.owl"
         } ]
       }
     }, {
@@ -37062,9 +36552,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "has_participant"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/obi.owl"
         }, {
           "pred" : "http://purl.org/dc/elements/1.1/source",
           "val" : "http://www.obofoundry.org/ro/#OBO_REL:has_participant"
@@ -38364,7 +37851,11 @@
           "val" : "p is causally upstream of, positive effect q iff p is casually upstream of q, and the execution of p is required for the execution of q."
         },
         "comments" : [ "holds between x and y if and only if x is causally upstream of y and the progression of x increases the frequency, rate or extent of y" ],
-        "subsets" : [ "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension", "http://purl.obolibrary.org/obo/valid_for_gocam" ]
+        "subsets" : [ "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension", "http://purl.obolibrary.org/obo/valid_for_gocam" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/creator",
+          "val" : "https://orcid.org/0000-0002-6601-2165"
+        } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002305",
@@ -38375,7 +37866,11 @@
         "definition" : {
           "val" : "p is causally upstream of, negative effect q iff p is casually upstream of q, and the execution of p decreases the execution of q."
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension", "http://purl.obolibrary.org/obo/valid_for_gocam" ]
+        "subsets" : [ "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension", "http://purl.obolibrary.org/obo/valid_for_gocam" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/creator",
+          "val" : "https://orcid.org/0000-0002-6601-2165"
+        } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002314",
@@ -40009,19 +39504,7 @@
       "id" : "http://purl.obolibrary.org/obo/IAO_0000004",
       "lbl" : "has measurement value",
       "type" : "PROPERTY",
-      "propertyType" : "DATA",
-      "meta" : {
-        "definition" : {
-          "val" : "A relation between a scalar measurement data item and a number that quantifies it."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "The range should probably not be restricted to \"float\". It makes sense to set it to \"real\". However we do not know how this change will affect SPARQL queries, so we have left the range as-is for now."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
-          "val" : "http://purl.obolibrary.org/obo/obi.owl"
-        } ]
-      }
+      "propertyType" : "DATA"
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000404",
       "lbl" : "has x coordinate value",
@@ -40053,37 +39536,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "angular degree"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000791",
-      "lbl" : "radian",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "definition" : {
-          "val" : "A unit of measurement of planar angles where a full circle is 2π.  Specifically the angle is the length of the arc subtended by the angle divided by the circumference of the circle."
-        },
-        "comments" : [ "Technically in the S.I. system it is a derived unit m•m^-1." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "radian"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "Josh Hanna"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "William R. Hogan"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000796",
-      "lbl" : "square mile",
-      "type" : "INDIVIDUAL",
-      "meta" : {
-        "comments" : [ "An area unit which is equal to the area enclosed by a square in a flat plane which is one mile on every side." ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "square mile"
         } ]
       }
     }, {
@@ -40490,6 +39942,28 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/OMO_0001002",
+      "lbl" : "domain entity does not exist",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "The term was added to the ontology on the assumption it was a valid domain entity, but it turns out the entity does not exist in reality."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
+          "val" : "This obsolesence reason should be used conservatively. For example: Obsoleting class that describes a breed of cow based on a record in an existing database, that was later retracted as faulty (breed does not exist). Do not use this term to obsolete a historic concept (that was once valid, but not anymore). "
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "http://orcid.org/0000-0002-4142-7153"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/ontology-metadata/issues/136"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000234",
+          "val" : "https://orcid.org/0000-0002-4142-7153"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/UO_0000034",
       "lbl" : "week",
       "type" : "INDIVIDUAL",
@@ -40497,11 +39971,17 @@
         "comments" : [ "\"A time unit which is equal to 7 days.\" [Wikipedia:Wikipedia]" ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/UO_0000080",
-      "lbl" : "square meter",
+      "id" : "https://orcid.org/0000-0002-9881-1017",
+      "lbl" : "William R. Hogan",
       "type" : "INDIVIDUAL",
       "meta" : {
-        "comments" : [ "\"An area unit which is equal to an area enclosed by a square with sides each 1 meter long.\" [NIST:NIST]" ]
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2026-04-04T19:54:38Z"
+        }, {
+          "pred" : "http://purl.org/dc/terms/creator",
+          "val" : "https://orcid.org/0000-0002-9881-1017"
+        } ]
       }
     }, {
       "id" : "http://protege.stanford.edu/plugins/owl/protege#defaultLanguage",
@@ -40660,108 +40140,8 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000009",
-      "lbl" : "US State Two Digit Identifier",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000010",
-      "lbl" : "US State Two Letter Abbreviation",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000011",
-      "lbl" : "US State Ens Identifier",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000021",
-      "lbl" : "UN Numerical Code",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000022",
-      "lbl" : "ISO 3166-1-alpha-3 code",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000023",
-      "lbl" : "ISO 3166-1-alpha-2 code",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000358",
-      "lbl" : "Proposed Apollo Location Code",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000000359",
-      "lbl" : "ISO 3166-2 code",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000035330",
-      "lbl" : "geonameid",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION",
-      "meta" : {
-        "comments" : [ "integer id of record in geonames database" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "geonameid"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000035331",
-      "lbl" : "admin1 code",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION",
-      "meta" : {
-        "comments" : [ "fipscode (subject to change to iso code), see exceptions below, see file admin1Codes.txt for display names of this code; varchar(20)" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "geonames admin1 code"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000035332",
-      "lbl" : "admin2 code",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION",
-      "meta" : {
-        "comments" : [ "code for the second administrative division, a county in the US, see file admin2Codes.txt; varchar(80)" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "geonames admin2 code"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000035333",
-      "lbl" : "admin3 code",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION",
-      "meta" : {
-        "comments" : [ "code for third level administrative division, varchar(20)" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "geonames admin3 code"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GEO_000035334",
-      "lbl" : "admin4 code",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION",
-      "meta" : {
-        "comments" : [ "code for fourth level administrative division, varchar(20)" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "geonames admin4 code"
-        } ]
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000111",
-      "lbl" : "editor preferred term~editor preferred label",
+      "lbl" : "editor preferred term",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION",
       "meta" : {
@@ -40975,6 +40355,9 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+          "val" : "http://purl.obolibrary.org/obo/iao.owl"
         } ]
       }
     }, {
@@ -41061,13 +40444,25 @@
         "definition" : {
           "val" : "An IRI or similar locator for a request or discussion of an ontology term."
         },
-        "comments" : [ "The 'tracker item' can associate a tracker with a specific ontology term." ],
+        "comments" : [ "The 'tracker item' can associate a tracker with a specific ontology term.", "The 'tracker item' can associate a tracker with a specific ontology term." ],
+        "xrefs" : [ {
+          "val" : "IAO:0000233"
+        } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "term tracker item"
+        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "term tracker item"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
           "val" : "the URI for an OBI Terms ticket at sourceforge, such as https://sourceforge.net/p/obi/obi-terms/772/"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "the URI for an OBI Terms ticket at sourceforge, such as https://sourceforge.net/p/obi/obi-terms/772/"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "the URL for an ontology term tracker issue, such as https://github.com/monarch-initiative/mondo/issues/7588"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
           "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
@@ -41075,8 +40470,20 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg"
         }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg"
+        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "external"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "term_tracker_item"
         } ]
       }
     }, {
@@ -41619,9 +41026,365 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/OMO_0003004",
+      "id" : "http://purl.obolibrary.org/obo/OMO_0002001",
+      "lbl" : "preferred label for community",
       "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "A provenance property that denotes a synonym to be the preferred one for a specific community."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "The property is intended to be used exclusively on synonym assertions, to express that the synonym in question is the preference of a specific community. For example, one community may prefer to say call a disease \"A\" and another one \"B\" (but they are the same thing)."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/ontology-metadata/issues/185"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-7356-1779"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2025-06-02"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMO_0003000",
+      "lbl" : "abbreviation",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "A synonym type for describing abbreviations or initialisms"
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "CHEBI:26523 (reactive oxygen species) has an exact synonym (ROS), which is of type OMO:0003000 (abbreviation)"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/ontology-metadata/issues/122"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0003-4423-4370"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2023-03-03"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMO_0003001",
+      "lbl" : "ambiguous synonym",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "A synonym type for describing ambiguous synonyms"
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/ontology-metadata/issues/122"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0003-4423-4370"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2023-03-03"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMO_0003002",
+      "lbl" : "dubious synonym",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "A synonym type for describing dubious synonyms"
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/ontology-metadata/issues/122"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0003-4423-4370"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2023-03-03"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMO_0003003",
+      "lbl" : "layperson synonym",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "A synonym type for describing layperson or colloquial synonyms"
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "EFO:0006346 (severe cutaneous adverse reaction) has an exact synonym (scar), which is of the type OMO:0003003 (layperson synonym)"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/ontology-metadata/issues/122"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0003-4423-4370"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2023-03-03"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMO_0003004",
+      "lbl" : "plural form",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "A synonym type for describing pluralization synonyms"
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "CHEBI:23367 (molecular entity) has an exact synonym (molecular entities), which is of the type OMO:0003004 (plural form)"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/ontology-metadata/issues/122"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0003-4423-4370"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2023-03-03"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMO_0003005",
+      "lbl" : "UK spelling synonym",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "A synonym type for describing UK spelling variants"
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "CHEBI:16189 (sulfate) has an exact synonym (sulphate), which is of the type OMO:0003005 (UK spelling synonym)"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/ontology-metadata/issues/122"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0003-4423-4370"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2023-03-03"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMO_0003006",
+      "lbl" : "misspelling",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "A synonym type for common misspellings"
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/ontology-metadata/issues/132"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0003-4423-4370"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2023-03-03"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMO_0003007",
+      "lbl" : "misnomer",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "A synonym type for misnomers, i.e., a synonym that is not technically correct but is commonly used anyway"
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/ontology-metadata/issues/133"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0003-4423-4370"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2023-03-03"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMO_0003008",
+      "lbl" : "previous name",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "A synonym type for names that have been used as primary labels in the past."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "MAPT, the gene that encodes the Tau protein, has a previous name DDPAC. Note: in this case, the name type is more specifically the gene symbol."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/ontology-metadata/issues/139"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0003-4423-4370"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2023-07-25"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMO_0003009",
+      "lbl" : "legal name",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "A synonym type for the legal entity name"
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "The legal name for Harvard University (https://ror.org/03vek6s52) is President and Fellows of Harvard College"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/ontology-metadata/issues/141"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0003-4423-4370"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2023-07-27"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMO_0003010",
+      "lbl" : "International Nonproprietary Name",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "The International Nonproprietary Name (INN) is a standardize name for a pharmaceutical drug or active ingredient issued by the World Health Organization (WHO) meant to address the issues with country- or language-specific brand names. These are issued in several languages, including English, Latin, French, Russian, Spanish, Arabic, and Chinese."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "INN"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "CHEBI:46195 has been assigned the english International Nonproproprietary Name (INN) \"paracetamol\". In some cases such as this one, the INN might be the same as the ontology's primary label"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/ontology-metadata/issues/149"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0003-4423-4370"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2023-09-30"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMO_0003011",
+      "lbl" : "latin term",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "A synonym type for describing Latin term synonyms."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "nasopharynx (UBERON:0001728) has the latin name \"pars nasalis pharyngis"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/ontology-metadata/issues/146"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-1773-2692"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2023-10-12"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMO_0003012",
+      "lbl" : "acronym",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "A synonym type for describing abbreviations that are a part of the full name's words, such as initialisms or alphabetisms."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "NASA is an word acronym for the US National Aeronautics and Space Administration because the acronym is pronounced. FBI is an initialism (also known as alphabetism) for the US Federal Bureau of Investigation since the letters are pronounced one at a time. JPEG is an acronym for Joint Photographic Experts Group but does not count as a word acronym nor an initialism since it is mixed how it is pronounced."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/ontology-metadata/issues/135"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0003-4423-4370"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2023-11-01"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMO_0003014",
+      "lbl" : "has ontology hierarchical property",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates an ontology to predicates/properties that should be used by user interfaces to render the hierarchical structure of the ontology. Typically, this is rdfs:subClassOf, but in ontologies that are partonomies, this might also include BFO:0000050 (part of). Tools like OLS can use predicates annotated with this property for rendering the ontology class hierarchy. There can be more than one hierarchical property. In the absence of any, it should be assumed that it is rdfs:subClassOf."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "The Developing Mouse Brain Atlas Ontology (DBMA) ontology uses part-of in its hierarchy, so this would correspond to the following turtle: `<https://purl.brain-bican.org/ontology/dmbao/dmbao.owl> a owl:Ontology; OMO:0003014 rdfs:subClassOf, BFO:0000050`."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/IAO/issues/292"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0003-4423-4370"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2025-09-17"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OMO_0004000",
+      "lbl" : "has symbol",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "An information content entity that is a mark(s) or character(s) used as a conventional representation of another entity."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "A serial number such as \"12324X\"; a stop sign; a written proper name such as \"OBI"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/ontology-metadata/issues/144"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6523-4866"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2024-03-25"
+        } ]
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0001900",
       "lbl" : "temporal interpretation",
@@ -41796,18 +41559,6 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/pato#attribute_slim",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/pato#mpath_slim",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/pato#scalar_slim",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/ro/subsets#ro-eco",
       "lbl" : "eco subset",
       "type" : "PROPERTY",
@@ -41846,10 +41597,6 @@
       "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://purl.obolibrary.org/obo/uberon/core#vertebrate_core",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/uo#unit_group_slim",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
@@ -41946,6 +41693,14 @@
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
+      "id" : "http://purl.org/dc/terms/created",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/creator",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
       "id" : "http://purl.org/dc/terms/description",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
@@ -42021,13 +41776,18 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
           "val" : "disease characteristic (MONDO:0021125) has cross-reference (http://www.geneontology.org/formats/oboInOwl#hasDbXref) \"NCIT:C41009\"^^xsd:string"
         }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/information-artifact-ontology/ontology-metadata/issues/123"
+        }, {
           "pred" : "http://purl.org/dc/terms/contributor",
           "val" : "https://orcid.org/0000-0002-7356-1779"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2024-03-18"
         } ]
       }
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasDefinition",
-      "lbl" : "has_definition",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
@@ -42178,6 +41938,18 @@
       }
     } ],
     "edges" : [ {
+      "sub" : "http://humanbehaviourchange.org/ontology/BCIO_006158",
+      "pred" : "is_a",
+      "obj" : "http://humanbehaviourchange.org/ontology/BCIO_036000"
+    }, {
+      "sub" : "http://humanbehaviourchange.org/ontology/BCIO_026022",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OMRSE_00000062"
+    }, {
+      "sub" : "http://humanbehaviourchange.org/ontology/BCIO_036000",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OGMS_0000060"
+    }, {
       "sub" : "http://purl.obolibrary.obo/obo/NCBITaxon_7160",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/NCBITaxon_53541"
@@ -42209,10 +41981,6 @@
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000008",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000008",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000009",
       "pred" : "is_a",
@@ -42337,10 +42105,6 @@
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000033",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000033",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000033",
       "pred" : "http://purl.obolibrary.org/obo/OBI_0000299",
@@ -42589,10 +42353,6 @@
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000089",
       "pred" : "http://purl.obolibrary.org/obo/IAO_0000136",
       "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000025"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000090",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000090",
       "pred" : "is_a",
@@ -43948,7 +43708,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000402",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0007610"
+      "obj" : "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000403",
       "pred" : "is_a",
@@ -44472,6 +44232,10 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000532",
       "pred" : "is_a",
+      "obj" : "http://humanbehaviourchange.org/ontology/BCIO_036000"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000532",
+      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000480"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000533",
@@ -44528,7 +44292,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000546",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000402"
+      "obj" : "http://humanbehaviourchange.org/ontology/BCIO_036000"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000547",
       "pred" : "is_a",
@@ -44577,6 +44341,10 @@
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000557",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000007"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000558",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000558",
       "pred" : "is_a",
@@ -44776,7 +44544,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000601",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000402"
+      "obj" : "http://humanbehaviourchange.org/ontology/BCIO_036000"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000602",
       "pred" : "is_a",
@@ -45018,6 +44786,30 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000650"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000653",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IDO_0000623"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000654",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000184"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000655",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000184"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000656",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000194"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000657",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000187"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000657",
+      "pred" : "http://purl.obolibrary.org/obo/IAO_0000136",
+      "obj" : "http://purl.obolibrary.org/obo/DRON_00000031"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000793",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000007"
@@ -45033,10 +44825,6 @@
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000796",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000796",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000796",
       "pred" : "http://purl.obolibrary.org/obo/OBI_0000299",
@@ -45220,6 +45008,10 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/COB_0000035",
       "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/COB_0000082"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/COB_0000082",
+      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DOID_0060478",
@@ -45245,6 +45037,10 @@
       "sub" : "http://purl.obolibrary.org/obo/DRON_00000005",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/DRON_00000074"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/DRON_00000031",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OGMS_0000090"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/DRON_00000074",
       "pred" : "is_a",
@@ -45314,25 +45110,9 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000001",
-      "pred" : "is_a",
-      "obj" : "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000002",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000004"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000003",
-      "pred" : "is_a",
-      "obj" : "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GEO_000000004",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GEO_000000400"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000004",
-      "pred" : "http://purl.obolibrary.org/obo/GEO_000000329",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000396"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GEO_000000005",
       "pred" : "is_a",
@@ -45341,58 +45121,6 @@
       "sub" : "http://purl.obolibrary.org/obo/GEO_000000006",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GEO_000000004"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000007",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000337"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000007",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000075",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000005"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000008",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000337"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000008",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000075",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000006"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000334",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000375"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000334",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000137",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000374"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000335",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000334"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000337",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000004"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000337",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000075",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000400"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000357",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000334"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000369",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000375"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000369",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000377"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000369",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000075",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000375"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GEO_000000370",
       "pred" : "is_a",
@@ -45405,46 +45133,6 @@
       "sub" : "http://purl.obolibrary.org/obo/GEO_000000372",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GEO_000000370"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000373",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000372"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000374",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000375"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000375",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000372"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000376",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000334"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000377",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000027"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000377",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000075",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000370"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000378",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000377"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000378",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000075",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000371"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000390",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000369"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000390",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000075",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000376"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GEO_000000391",
       "pred" : "is_a",
@@ -45470,41 +45158,9 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/OBI_0000245"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000401",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000004"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000401",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000075",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000391"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000402",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000337"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000403",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000337"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000404",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000337"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000404",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000075",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000396"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000787",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000109"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GEO_000000788",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000789",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000003"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GEO_000000797",
       "pred" : "is_a",
@@ -45800,7 +45456,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000100",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000027"
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0001000"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000101",
       "pred" : "is_a",
@@ -46139,10 +45795,6 @@
       "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000443",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/IAO_0000443",
       "pred" : "http://purl.obolibrary.org/obo/OBI_0000293",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000013"
     }, {
@@ -46152,7 +45804,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000444",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
+      "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000445",
       "pred" : "is_a",
@@ -46161,10 +45813,6 @@
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000572",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/IAO_0000572",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000572",
       "pred" : "http://purl.obolibrary.org/obo/OBI_0000293",
@@ -46183,10 +45831,6 @@
       "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000574",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/IAO_0000574",
       "pred" : "http://purl.obolibrary.org/obo/OBI_0000299",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000577"
     }, {
@@ -46196,7 +45840,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000575",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
+      "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000575",
       "pred" : "http://purl.obolibrary.org/obo/OBI_0000293",
@@ -46233,10 +45877,6 @@
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000580",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/IAO_0000580",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000580",
       "pred" : "http://purl.obolibrary.org/obo/OBI_0000293",
@@ -46559,16 +46199,16 @@
       "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000650",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/IAO_0000650",
       "pred" : "http://purl.obolibrary.org/obo/OBI_0000293",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000650",
       "pred" : "http://purl.obolibrary.org/obo/OBI_0000299",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0000651",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000314"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000701",
       "pred" : "is_a",
@@ -46602,6 +46242,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000578"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/IAO_0001000",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000027"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0020000",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
@@ -46621,10 +46265,6 @@
       "sub" : "http://purl.obolibrary.org/obo/IAO_0020010",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/IAO_0020010",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0020010",
       "pred" : "http://purl.obolibrary.org/obo/OBI_0000299",
@@ -49240,7 +48880,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/OBI_0000066",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
+      "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/OBI_0000115",
       "pred" : "is_a",
@@ -49260,7 +48900,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/OBI_0000471",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
+      "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/OBI_0000576",
       "pred" : "is_a",
@@ -49322,14 +48962,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000300"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/OBI_0001620",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000787"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/OBI_0001621",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000787"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/OBI_0001628",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000577"
@@ -49337,14 +48969,6 @@
       "sub" : "http://purl.obolibrary.org/obo/OBI_0001629",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0020000"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/OBI_0001931",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0001933"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/OBI_0001933",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/OBI_0001958",
       "pred" : "is_a",
@@ -49636,7 +49260,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/OMRSE_00000064",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OMRSE_00000062"
+      "obj" : "http://humanbehaviourchange.org/ontology/BCIO_026022"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/OMRSE_00000064",
       "pred" : "http://purl.obolibrary.org/obo/RO_0000053",
@@ -49722,15 +49346,7 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001323",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001709"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001708",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000117"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001709",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000117"
     }, {
@@ -49862,10 +49478,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000003"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/UO_0000047",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000003"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/UO_0000186",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000003"
@@ -49906,10 +49518,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/geo.owl/GEO_000000399",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000400"
-    }, {
       "sub" : "http://purl.org/obo/owl/FBcv#FBcv_0000209",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000310"
@@ -49929,18 +49537,6 @@
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000113",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000107"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000790",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000789"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000791",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000789"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GEO_000000796",
-      "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/UO_0000047"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000002",
       "pred" : "type",
@@ -50022,13 +49618,17 @@
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000225"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/OMO_0001002",
+      "pred" : "type",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000225"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/UO_0000034",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/UO_0000003"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/UO_0000080",
+      "sub" : "https://orcid.org/0000-0002-9881-1017",
       "pred" : "type",
-      "obj" : "http://purl.obolibrary.org/obo/UO_0000047"
+      "obj" : "http://purl.obolibrary.org/obo/NCBITaxon_9606"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000004",
       "pred" : "subPropertyOf",
@@ -50086,10 +49686,6 @@
       "pred" : "subPropertyOf",
       "obj" : "http://www.w3.org/2002/07/owl#topObjectProperty"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/BFO_0000110",
-      "pred" : "subPropertyOf",
-      "obj" : "http://www.w3.org/2002/07/owl#topObjectProperty"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000111",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000110"
@@ -50122,10 +49718,6 @@
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000139"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/BFO_0000137",
-      "pred" : "subPropertyOf",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000177"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000138",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000132"
@@ -50146,10 +49738,6 @@
       "pred" : "subPropertyOf",
       "obj" : "http://www.w3.org/2002/07/owl#topObjectProperty"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/BFO_0000177",
-      "pred" : "subPropertyOf",
-      "obj" : "http://www.w3.org/2002/07/owl#topObjectProperty"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000181",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000118"
@@ -50162,10 +49750,6 @@
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000066"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/BFO_0000187",
-      "pred" : "subPropertyOf",
-      "obj" : "http://www.w3.org/2002/07/owl#topObjectProperty"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000039",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000051"
@@ -50173,10 +49757,6 @@
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000135",
       "pred" : "subPropertyOf",
       "obj" : "http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/IAO_0000136",
-      "pred" : "subPropertyOf",
-      "obj" : "http://www.w3.org/2002/07/owl#topObjectProperty"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000142",
       "pred" : "subPropertyOf",
@@ -50230,10 +49810,6 @@
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0000057"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/OBI_0000295",
-      "pred" : "subPropertyOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0000056"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/OBI_0000299",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0000057"
@@ -50247,10 +49823,6 @@
       "obj" : "http://purl.obolibrary.org/obo/RO_0000056"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/OBI_0000417",
-      "pred" : "subPropertyOf",
-      "obj" : "http://www.w3.org/2002/07/owl#topObjectProperty"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/OBI_0001938",
       "pred" : "subPropertyOf",
       "obj" : "http://www.w3.org/2002/07/owl#topObjectProperty"
     }, {
@@ -50275,14 +49847,6 @@
       "obj" : "http://purl.obolibrary.org/obo/RO_0002314"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0000053",
-      "pred" : "subPropertyOf",
-      "obj" : "http://www.w3.org/2002/07/owl#topObjectProperty"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0000056",
-      "pred" : "subPropertyOf",
-      "obj" : "http://www.w3.org/2002/07/owl#topObjectProperty"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0000057",
       "pred" : "subPropertyOf",
       "obj" : "http://www.w3.org/2002/07/owl#topObjectProperty"
     }, {
@@ -50950,21 +50514,9 @@
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000067"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/BFO_0000075",
-      "pred" : "inverseOf",
-      "obj" : "http://purl.obolibrary.org/obo/GEO_000000328"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/BFO_0000083",
-      "pred" : "inverseOf",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000123"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000117",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000132"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/BFO_0000137",
-      "pred" : "inverseOf",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000187"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000142",
       "pred" : "inverseOf",
@@ -50985,6 +50537,10 @@
       "sub" : "http://purl.obolibrary.org/obo/OBIB_0000732",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/OBIB_0000735"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0000293",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0000295"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/OBI_0000299",
       "pred" : "inverseOf",
@@ -51119,7 +50675,7 @@
       "genusIds" : [ "http://purl.obolibrary.org/obo/IAO_0020000" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000008",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/COB_0000035" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000009",
       "genusIds" : [ "http://purl.obolibrary.org/obo/IAO_0020000" ]
@@ -51151,7 +50707,7 @@
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000033",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ],
+      "genusIds" : [ "http://purl.obolibrary.org/obo/COB_0000035" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/OBI_0000299",
         "fillerId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000032"
@@ -51588,7 +51144,7 @@
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000796",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ],
+      "genusIds" : [ "http://purl.obolibrary.org/obo/COB_0000035" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/OBI_0000299",
         "fillerId" : "http://purl.obolibrary.org/obo/IAO_0000100"
@@ -51600,16 +51156,6 @@
         "propertyId" : "http://purl.obolibrary.org/obo/OBI_0000299",
         "fillerId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000798"
       } ]
-    }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/GEO_000000004",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/GEO_000000400" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/GEO_000000329",
-        "fillerId" : "http://purl.obolibrary.org/obo/GEO_000000396"
-      } ]
-    }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/GEO_000000787",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/IAO_0000109" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/GO_0019098",
       "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0007610", "http://purl.obolibrary.org/obo/GO_0048609" ]
@@ -51638,7 +51184,7 @@
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/IAO_0020010",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ],
+      "genusIds" : [ "http://purl.obolibrary.org/obo/COB_0000035" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/OBI_0000299",
         "fillerId" : "http://purl.obolibrary.org/obo/IAO_0020000"
@@ -51792,7 +51338,7 @@
       } ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/OBI_0000312",
-      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/COB_0000035", "http://purl.obolibrary.org/obo/OBI_0000011" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/COB_0000035" ],
       "allValuesFromEdges" : [ {
         "sub" : "http://purl.obolibrary.org/obo/IAO_0000013",
         "pred" : "http://purl.obolibrary.org/obo/OBI_0000312",
@@ -51848,14 +51394,6 @@
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000003" ],
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000004" ]
     }, {
-      "predicateId" : "http://purl.obolibrary.org/obo/BFO_0000083",
-      "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000004" ],
-      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000006" ]
-    }, {
-      "predicateId" : "http://purl.obolibrary.org/obo/BFO_0000123",
-      "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000006" ],
-      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000004" ]
-    }, {
       "predicateId" : "http://purl.obolibrary.org/obo/BFO_0000155",
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000003" ],
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000008" ]
@@ -51871,14 +51409,6 @@
       "predicateId" : "http://purl.obolibrary.org/obo/BFO_0000185",
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000040" ],
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000015" ]
-    }, {
-      "predicateId" : "http://purl.obolibrary.org/obo/GEO_000000329",
-      "domainClassIds" : [ "http://purl.obolibrary.org/obo/GEO_000000400" ],
-      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/GEO_000000400" ]
-    }, {
-      "predicateId" : "http://purl.obolibrary.org/obo/GEO_000000336",
-      "domainClassIds" : [ "http://purl.obolibrary.org/obo/GEO_000000400" ],
-      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/GEO_000000375" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/IAO_0000136",
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/IAO_0000030" ]
@@ -51911,10 +51441,10 @@
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/IAO_0000582" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/OBI_0000293",
-      "domainClassIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ]
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/COB_0000035" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/OBI_0000299",
-      "domainClassIds" : [ "http://purl.obolibrary.org/obo/COB_0000035", "http://purl.obolibrary.org/obo/OBI_0000011" ]
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/COB_0000035" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0000056",
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000002" ],

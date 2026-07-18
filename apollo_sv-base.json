@@ -52,11 +52,14 @@
         "val" : "When citing Apollo-SV, use the permanent URL of the ontology: http://purl.obolibrary.org/obo/apollo_sv.owl.  When referencing a specific component of the Apollo-SV such as a class, object property, annotation property, or individual, use the component's Uniform Resource Identifier (URI)."
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-03-13"
+        "val" : "2026-07-18"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/apollo_sv/releases/2026-03-13/apollo_sv-base.json"
+      "version" : "http://purl.obolibrary.org/obo/apollo_sv/releases/2026-07-18/apollo_sv-base.json"
     },
     "nodes" : [ {
+      "id" : "http://humanbehaviourchange.org/ontology/BCIO_036000",
+      "type" : "CLASS"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000000",
       "lbl" : "purely intentional entity",
       "type" : "CLASS",
@@ -6490,7 +6493,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000402",
-      "lbl" : "individual human behavior",
+      "lbl" : "obsolete individual human behavior",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -6506,9 +6509,10 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
           "val" : "An individual behavior of a human being."
         }, {
-          "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
-          "val" : "HumanBehavior"
-        } ]
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
+          "val" : "http://humanbehaviourchange.org/ontology/BCIO_036000"
+        } ],
+        "deprecated" : true
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000403",
@@ -11407,6 +11411,131 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000653",
+      "lbl" : "human-to-human communicability",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A communicability among human beings (homo sapiens)."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "communicability among human beings"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
+          "val" : "The ability of a pathogen to transmit from one human host to another human host."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/apollo_sv.owl/APOLLO_SV_0000040",
+          "val" : "HumanToHumanCommunicability"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-9881-1017"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000654",
+      "lbl" : "historical scenario",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An infectious disease scenario that represents or reconstructs an outbreak or epidemic that actually occurred, usually constrained by observed data."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "historical infectious disease scenario date"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/contributor",
+          "val" : "John Levander"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-9881-1017"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2026-04-04T19:36:00Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000655",
+      "lbl" : "hypothetical scenario",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An infectious disease scenario that represents a possible, assumed, projected, or counterfactual outbreak or epidemic, and does not need to correspond to a specific observed event."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "hypothetical infecctious disease scenario"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/contributor",
+          "val" : "John Levander"
+        }, {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-9881-1017"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2026-04-04T19:52:04Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000656",
+      "lbl" : "antibody administration control strategy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An individual treatment control strategy that has as part an action specification that  (has a concretization that) is realized in an antibody injection process."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/ApolloDev/apollo-sv/issues/273"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/contributor",
+          "val" : "Lucie Contamin"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2026-07-13T14:13:40Z"
+        }, {
+          "pred" : "http://purl.org/dc/terms/creator",
+          "val" : "https://orcid.org/0000-0002-9881-1017"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000657",
+      "lbl" : "antibody administration census",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A population treatment census that is about one or more antibody administrations to organisms in a population."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "William R. Hogan"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/ApolloDev/apollo-sv/issues/273"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/contributor",
+          "val" : "Lucie Contamin"
+        }, {
+          "pred" : "http://purl.org/dc/terms/created",
+          "val" : "2026-07-13T13:52:47Z"
+        }, {
+          "pred" : "http://purl.org/dc/terms/creator",
+          "val" : "https://orcid.org/0000-0002-9881-1017"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000793",
       "lbl" : "epidemic simulator action specification",
       "type" : "CLASS",
@@ -11598,6 +11727,9 @@
       "id" : "http://purl.obolibrary.org/obo/DRON_00000005",
       "type" : "CLASS"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/DRON_00000031",
+      "type" : "CLASS"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/ENVO_01001079",
       "type" : "CLASS"
     }, {
@@ -11710,6 +11842,9 @@
       "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0020010",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IDO_0000623",
       "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MF_0000073",
@@ -12282,6 +12417,10 @@
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000233",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000600",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
@@ -12315,6 +12454,14 @@
       "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://purl.org/dc/terms/contributor",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/created",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/creator",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
@@ -12366,10 +12513,6 @@
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000008",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000008",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000009",
       "pred" : "is_a",
@@ -12494,10 +12637,6 @@
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000033",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000033",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000033",
       "pred" : "http://purl.obolibrary.org/obo/OBI_0000299",
@@ -12746,10 +12885,6 @@
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000089",
       "pred" : "http://purl.obolibrary.org/obo/IAO_0000136",
       "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000025"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000090",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000090",
       "pred" : "is_a",
@@ -14105,7 +14240,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000402",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0007610"
+      "obj" : "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000403",
       "pred" : "is_a",
@@ -14629,6 +14764,10 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000532",
       "pred" : "is_a",
+      "obj" : "http://humanbehaviourchange.org/ontology/BCIO_036000"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000532",
+      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000480"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000533",
@@ -14685,7 +14824,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000546",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000402"
+      "obj" : "http://humanbehaviourchange.org/ontology/BCIO_036000"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000547",
       "pred" : "is_a",
@@ -14734,6 +14873,10 @@
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000557",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000007"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000558",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000558",
       "pred" : "is_a",
@@ -14933,7 +15076,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000601",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000402"
+      "obj" : "http://humanbehaviourchange.org/ontology/BCIO_036000"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000602",
       "pred" : "is_a",
@@ -15175,6 +15318,30 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000650"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000653",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IDO_0000623"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000654",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000184"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000655",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000184"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000656",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000194"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000657",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000187"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000657",
+      "pred" : "http://purl.obolibrary.org/obo/IAO_0000136",
+      "obj" : "http://purl.obolibrary.org/obo/DRON_00000031"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000793",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000007"
@@ -15190,10 +15357,6 @@
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000796",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/COB_0000035"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000796",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OBI_0000011"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000796",
       "pred" : "http://purl.obolibrary.org/obo/OBI_0000299",
@@ -15252,7 +15415,7 @@
       "genusIds" : [ "http://purl.obolibrary.org/obo/IAO_0020000" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000008",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/COB_0000035" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000009",
       "genusIds" : [ "http://purl.obolibrary.org/obo/IAO_0020000" ]
@@ -15284,7 +15447,7 @@
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000033",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ],
+      "genusIds" : [ "http://purl.obolibrary.org/obo/COB_0000035" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/OBI_0000299",
         "fillerId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000032"
@@ -15721,7 +15884,7 @@
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/APOLLO_SV_00000796",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/OBI_0000011" ],
+      "genusIds" : [ "http://purl.obolibrary.org/obo/COB_0000035" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/OBI_0000299",
         "fillerId" : "http://purl.obolibrary.org/obo/IAO_0000100"

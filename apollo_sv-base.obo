@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: apollo_sv/releases/2026-03-13/apollo_sv-base.owl
+data-version: apollo_sv/releases/2026-07-18/apollo_sv-base.owl
 idspace: ace_lexicon http://attempto.ifi.uzh.ch/ace_lexicon# 
 idspace: dc http://purl.org/dc/elements/1.1/ 
 idspace: doap http://usefulinc.com/ns/doap# 
@@ -21,7 +21,7 @@ property_value: dc:contributor "Shawn T. Brown" xsd:string
 property_value: dc:contributor "William R. Hogan" xsd:string
 property_value: dc:creator "Mathias Brochhausen" xsd:string
 property_value: dc:type IAO:8000001
-property_value: owl:versionInfo "2026-03-13" xsd:string
+property_value: owl:versionInfo "2026-07-18" xsd:string
 property_value: terms:contributor "https://orcid.org/0000-0002-9881-1017" xsd:anyURI
 property_value: terms:description "An OWL2 ontology of phenomena in infectious disease epidemiology and population biology for use in epidemic simulation." xsd:string
 property_value: terms:license "https://creativecommons.org/licenses/by/4.0/" xsd:string
@@ -99,7 +99,6 @@ id: APOLLO_SV:00000008
 name: software development
 def: "A planned process that has specified output a software product and that involves the creation of source code." []
 is_a: COB:0000035
-is_a: OBI:0000011
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000119 "http://en.wikipedia.org/wiki/Software_development" xsd:string
@@ -304,8 +303,7 @@ id: APOLLO_SV:00000033
 name: counting
 def: "The planned process of finding the number of elements in a finite set of objects." []
 is_a: COB:0000035
-is_a: OBI:0000011
-intersection_of: OBI:0000011
+intersection_of: COB:0000035
 intersection_of: OBI:0000299 APOLLO_SV:00000032 ! count
 relationship: OBI:0000299 APOLLO_SV:00000032 ! count
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
@@ -747,7 +745,6 @@ property_value: IAO:0000600 "A vaccination efficacy that results from a vaccinat
 id: APOLLO_SV:00000090
 name: vaccination efficacy study design execution
 def: "A study design execution that has as its specified output one or more measured vaccination efficacy data items" []
-is_a: COB:0000035
 is_a: OBI:0000471
 intersection_of: OBI:0000471
 intersection_of: BFO:0000051 APOLLO_SV:00000142 ! vaccination
@@ -3439,13 +3436,14 @@ property_value: IAO:0000600 "An individual behavior of a mosquito (organism of f
 
 [Term]
 id: APOLLO_SV:00000402
-name: individual human behavior
+name: obsolete individual human behavior
 def: "An individual behavior of a human being." []
-is_a: GO:0007610
-property_value: APOLLO_SV:0000040 "HumanBehavior" xsd:string
+is_a: oboInOwl:ObsoleteClass
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000600 "An individual behavior of a human being." xsd:string
+is_obsolete: true
+replaced_by: BCIO:036000
 
 [Term]
 id: APOLLO_SV:00000403
@@ -4706,6 +4704,7 @@ id: APOLLO_SV:00000532
 name: human travel
 def: "A geographical migration of an organism belonging to the species Homo sapiens." []
 is_a: APOLLO_SV:00000480 ! geographical movement of organism
+is_a: BCIO:036000
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
@@ -4828,7 +4827,7 @@ property_value: IAO:0000600 "A planned process that is the realization of a dise
 id: APOLLO_SV:00000546
 name: self-initiated travel avoidance behavior
 def: "Individual human behavior that involves either 1) remaining in some susceptible population or some exposed population or 2) human movement away from or around an infectious population, in order to avoid being participant in some infection acquisition." []
-is_a: APOLLO_SV:00000402 ! individual human behavior
+is_a: BCIO:036000
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000600 "Individual human behavior that involves either 1) remaining in some susceptible population or some exposed population or 2) human movement away from or around an infectious population, in order to avoid being participant in some infection acquisition." xsd:string
@@ -4940,6 +4939,7 @@ property_value: IAO:0000118 "infectious disease forecasting software application
 id: APOLLO_SV:00000558
 name: case series
 def: "An investigation that realizes the concretization of some disease state design and that has as an occurrent part some population survey that\nhas specified input some case definition." []
+is_a: OBI:0000011
 is_a: OBI:0000066
 property_value: APOLLO_SV:0000040 "CaseSeries" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
@@ -5347,7 +5347,7 @@ property_value: IAO:0000118 "hospitalization dataset" xsd:string
 id: APOLLO_SV:00000601
 name: human daily movement
 def: "An individual human behavior that is the movements from one location to another throughout the day (e.g., work, home, stores, church, relatives' homes) in the areas adjacent to where the human lives at the time." []
-is_a: APOLLO_SV:00000402 ! individual human behavior
+is_a: BCIO:036000
 property_value: dc:creator http://orcid.org/0000-0002-9881-1017
 property_value: dc:date "2021-03-16T16:29:53Z" xsd:dateTime
 property_value: IAO:0000111 "human daily movement behavior" xsd:string
@@ -5825,6 +5825,62 @@ property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000600 "Intent to have one's child vaccinated." xsd:string
 
 [Term]
+id: APOLLO_SV:00000653
+name: human-to-human communicability
+def: "A communicability among human beings (homo sapiens)." []
+is_a: IDO:0000623
+property_value: APOLLO_SV:0000040 "HumanToHumanCommunicability" xsd:string
+property_value: IAO:0000111 "communicability among human beings" xsd:string
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: IAO:0000600 "The ability of a pathogen to transmit from one human host to another human host." xsd:string
+property_value: terms:contributor https://orcid.org/0000-0002-9881-1017
+
+[Term]
+id: APOLLO_SV:00000654
+name: historical scenario
+def: "An infectious disease scenario that represents or reconstructs an outbreak or epidemic that actually occurred, usually constrained by observed data." []
+is_a: APOLLO_SV:00000184 ! infectious disease scenario
+property_value: dc:contributor "John Levander" xsd:string
+property_value: IAO:0000111 "historical infectious disease scenario date" xsd:string
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: terms:contributor https://orcid.org/0000-0002-9881-1017
+property_value: terms:created "2026-04-04T19:36:00Z" xsd:dateTime
+
+[Term]
+id: APOLLO_SV:00000655
+name: hypothetical scenario
+def: "An infectious disease scenario that represents a possible, assumed, projected, or counterfactual outbreak or epidemic, and does not need to correspond to a specific observed event." []
+is_a: APOLLO_SV:00000184 ! infectious disease scenario
+property_value: dc:contributor "John Levander" xsd:string
+property_value: IAO:0000111 "hypothetical infecctious disease scenario" xsd:string
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: terms:contributor https://orcid.org/0000-0002-9881-1017
+property_value: terms:created "2026-04-04T19:52:04Z" xsd:dateTime
+
+[Term]
+id: APOLLO_SV:00000656
+name: antibody administration control strategy
+def: "An individual treatment control strategy that has as part an action specification that  (has a concretization that) is realized in an antibody injection process." []
+is_a: APOLLO_SV:00000194 ! individual treatment control strategy
+property_value: dc:contributor "Lucie Contamin" xsd:string
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: IAO:0000233 https://github.com/ApolloDev/apollo-sv/issues/273
+property_value: terms:created "2026-07-13T14:13:40Z" xsd:dateTime
+property_value: terms:creator https://orcid.org/0000-0002-9881-1017
+
+[Term]
+id: APOLLO_SV:00000657
+name: antibody administration census
+def: "A population treatment census that is about one or more antibody administrations to organisms in a population." []
+is_a: APOLLO_SV:00000187 ! population treatment census
+relationship: IAO:0000136 DRON:00000031
+property_value: dc:contributor "Lucie Contamin" xsd:string
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: IAO:0000233 https://github.com/ApolloDev/apollo-sv/issues/273
+property_value: terms:created "2026-07-13T13:52:47Z" xsd:dateTime
+property_value: terms:creator https://orcid.org/0000-0002-9881-1017
+
+[Term]
 id: APOLLO_SV:00000793
 name: epidemic simulator action specification
 is_a: IAO:0000007
@@ -5850,8 +5906,7 @@ id: APOLLO_SV:00000796
 name: dataset creating
 def: "A planned process that has a data set as its specified output." []
 is_a: COB:0000035
-is_a: OBI:0000011
-intersection_of: OBI:0000011
+intersection_of: COB:0000035
 intersection_of: OBI:0000299 IAO:0000100
 relationship: OBI:0000299 IAO:0000100
 property_value: IAO:0000111 "creating a data set" xsd:string

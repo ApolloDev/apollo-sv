@@ -1752,15 +1752,15 @@ AnnotationAssertion(rdfs:label oboInOwl:hasAlternativeId "has_alternative_id")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
-# Annotation Property: oboInOwl:hasExactSynonym (has exact synonym)
+# Annotation Property: oboInOwl:hasExactSynonym (has_exact_synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym")
 
-# Annotation Property: oboInOwl:hasNarrowSynonym (has narrow synonym)
+# Annotation Property: oboInOwl:hasNarrowSynonym (has_narrow_synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasNarrowSynonym "has_narrow_synonym")
 
@@ -2212,7 +2212,7 @@ AnnotationAssertion(obo:IAO_0000412 obo:OMIABIS_0000048 "http://purl.obolibrary.
 AnnotationAssertion(rdfs:label obo:OMIABIS_0000048 "is owned by"@en)
 SubObjectPropertyOf(obo:OMIABIS_0000048 owl:topObjectProperty)
 
-# Object Property: obo:RO_0000053 (bearer of)
+# Object Property: obo:RO_0000053 (has characteristic)
 
 AnnotationAssertion(obo:IAO_0000118 obo:RO_0000053 "bearer of"@en)
 AnnotationAssertion(obo:IAO_0000118 obo:RO_0000053 "bearer_of"@en)
@@ -7162,7 +7162,6 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000524 "William R. Hogan"@en
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000524 "It's compiling \"software\" (scare quotes) and not \"source code\" because you can compile Java bytecode to machine code, and Java bytecode is not technically \"source code\".  Compiling source code would be a subclass of this class (as would compiling Java bytecode, etc.)."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000524 "Source code can be automatically generated to some extent, but we're assuming humans still curate it minimally. Also, in the case of Java and its JVM, it's machine interpretable instructions, not directly executable. Ditto for other languages with intermediate form like Java byte code."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000524 "compiling software"@en)
-SubClassOf(obo:APOLLO_SV_00000524 obo:OBI_0000011)
 
 # Class: obo:APOLLO_SV_00000525 (compiled software code)
 
@@ -8403,7 +8402,6 @@ AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000657 "antibody administration c
 SubClassOf(obo:APOLLO_SV_00000657 obo:APOLLO_SV_00000187)
 SubClassOf(obo:APOLLO_SV_00000657 ObjectSomeValuesFrom(obo:IAO_0000136 obo:DRON_00000031))
 
-
 # Class: obo:APOLLO_SV_00000793 (epidemic simulator action specification)
 
 AnnotationAssertion(obo:IAO_0000111 obo:APOLLO_SV_00000793 "epidemic simulator action specification"@en)
@@ -8433,8 +8431,6 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000796 "William R. Hogan"@en
 AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000796 "data set creation"@en)
 AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000796 "dataset creation"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000796 "dataset creating"@en)
-EquivalentClasses(obo:APOLLO_SV_00000796 ObjectIntersectionOf(obo:OBI_0000011 ObjectSomeValuesFrom(obo:OBI_0000299 obo:IAO_0000100)))
-SubClassOf(obo:APOLLO_SV_00000796 obo:OBI_0000011)
 
 # Class: obo:APOLLO_SV_00000797 (creating a copyright license)
 
@@ -8598,6 +8594,10 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:DOID_8469 "disease_ontology")
 AnnotationAssertion(oboInOwl:id obo:DOID_8469 "DOID:8469")
 AnnotationAssertion(rdfs:label obo:DOID_8469 "influenza")
 SubClassOf(obo:DOID_8469 obo:APOLLO_SV_00000239)
+
+# Class: obo:DRON_00000031 (drug administration)
+
+SubClassOf(obo:DRON_00000031 obo:OGMS_0000090)
 
 # Class: obo:ENVO_00010483 (environmental material)
 
@@ -14043,7 +14043,7 @@ AnnotationAssertion(oboInOwl:inSubset obo:PATO_0000051 pato:attribute_slim)
 AnnotationAssertion(rdfs:label obo:PATO_0000051 "morphology")
 SubClassOf(obo:PATO_0000051 obo:PATO_0001241)
 
-# Class: obo:PATO_0000117 (size)
+# Class: obo:PATO_0000117 (obo:PATO_0000117)
 
 SubClassOf(obo:PATO_0000117 obo:PATO_0000051)
 
@@ -14522,11 +14522,11 @@ ClassAssertion(obo:UO_0000003 obo:UO_0000034)
 
 # Individual: <https://orcid.org/0000-0002-9881-1017> (William R. Hogan)
 
-AnnotationAssertion(terms:creator <https://orcid.org/0000-0002-9881-1017> <https://orcid.org/0000-0002-9881-1017>)
 AnnotationAssertion(terms:created <https://orcid.org/0000-0002-9881-1017> "2026-04-04T19:54:38Z"^^xsd:dateTime)
+AnnotationAssertion(terms:creator <https://orcid.org/0000-0002-9881-1017> <https://orcid.org/0000-0002-9881-1017>)
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-9881-1017> "William R. Hogan"@en)
 ClassAssertion(obo:NCBITaxon_9606 <https://orcid.org/0000-0002-9881-1017>)
 
-AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:GEO_000000005 "administrativeLocations")
 
+AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:GEO_000000005 "administrativeLocations")
 )

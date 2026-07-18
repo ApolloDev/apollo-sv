@@ -17,7 +17,7 @@ These are the current imports in APOLLO_SV
 | Import | URL | Type |
 | ------ | --- | ---- |
 | ro | http://purl.obolibrary.org/obo/ro.owl | slme |
-| geo | http://purl.obolibrary.org/obo/geo/dev/geo.owl | mirror |
+| geo | http://purl.obolibrary.org/obo/geo/dev/geo.owl | filter |
 | ido | http://purl.obolibrary.org/obo/ido.owl | slme |
 | mf | http://purl.obolibrary.org/obo/mf.owl | slme |
 | go | http://purl.obolibrary.org/obo/go.owl | slme |

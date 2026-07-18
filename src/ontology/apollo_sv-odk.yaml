@@ -24,8 +24,8 @@ import_group:
       module_type: slme
       slme_individuals: exclude
     - id: geo
+      make_base: true
       mirror_from: http://purl.obolibrary.org/obo/geo/dev/geo.owl
-      module_type: mirror
     - id: ido
       module_type: slme
       slme_individuals: exclude
