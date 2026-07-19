@@ -25,7 +25,7 @@
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#"
      xmlns:ace_lexicon="http://attempto.ifi.uzh.ch/ace_lexicon#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/apollo_sv/apollo_sv-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/apollo_sv/releases/2026-07-18/apollo_sv-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/apollo_sv/releases/2026-07-19/apollo_sv-base.owl"/>
         <dc:contributor>Amanda Hicks</dc:contributor>
         <dc:contributor>John Levander</dc:contributor>
         <dc:contributor>Josh Hanna</dc:contributor>
@@ -42,7 +42,7 @@
         <www:RTS_00000001>C87985BA-6A8A-483A-A6B6-63975101F672</www:RTS_00000001>
         <www:RTS_00000002>082D5D78-D916-457E-B4FD-365F86F45B30</www:RTS_00000002>
         <rdfs:comment xml:lang="en">When citing Apollo-SV, use the permanent URL of the ontology: http://purl.obolibrary.org/obo/apollo_sv.owl.  When referencing a specific component of the Apollo-SV such as a class, object property, annotation property, or individual, use the component&apos;s Uniform Resource Identifier (URI).</rdfs:comment>
-        <owl:versionInfo>2026-07-18</owl:versionInfo>
+        <owl:versionInfo>2026-07-19</owl:versionInfo>
     </owl:Ontology>
     
 

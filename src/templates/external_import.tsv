@@ -2,3 +2,8 @@ ID	Entity Type
 ID	TYPE
 owl:Thing	owl:Class
 http://humanbehaviourchange.org/ontology/BCIO_036000	owl:Class
+http://purl.obolibrary.org/obo/COB_0000082	owl:Class
+http://purl.obolibrary.org/obo/COB_0000026	owl:Class
+http://purl.obolibrary.org/obo/COB_0000022	owl:Class
+http://purl.obolibrary.org/obo/COB_0001300	owl:Class
+

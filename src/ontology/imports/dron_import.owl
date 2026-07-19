@@ -21,9 +21,9 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/apollo_sv/imports/dron_import.owl>
-<http://purl.obolibrary.org/obo/apollo_sv/releases/2026-07-18/imports/dron_import.owl>
+<http://purl.obolibrary.org/obo/apollo_sv/releases/2026-07-19/imports/dron_import.owl>
 Annotation(dc:source <http://purl.obolibrary.org/obo/dron/releases/2026-06-04/dron.owl>)
-Annotation(owl:versionInfo "2026-07-18")
+Annotation(owl:versionInfo "2026-07-19")
 
 Declaration(Class(obo:BFO_0000040))
 Declaration(Class(obo:DRON_00000005))

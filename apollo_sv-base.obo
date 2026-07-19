@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: apollo_sv/releases/2026-07-18/apollo_sv-base.owl
+data-version: apollo_sv/releases/2026-07-19/apollo_sv-base.owl
 idspace: ace_lexicon http://attempto.ifi.uzh.ch/ace_lexicon# 
 idspace: dc http://purl.org/dc/elements/1.1/ 
 idspace: doap http://usefulinc.com/ns/doap# 
@@ -21,7 +21,7 @@ property_value: dc:contributor "Shawn T. Brown" xsd:string
 property_value: dc:contributor "William R. Hogan" xsd:string
 property_value: dc:creator "Mathias Brochhausen" xsd:string
 property_value: dc:type IAO:8000001
-property_value: owl:versionInfo "2026-07-18" xsd:string
+property_value: owl:versionInfo "2026-07-19" xsd:string
 property_value: terms:contributor "https://orcid.org/0000-0002-9881-1017" xsd:anyURI
 property_value: terms:description "An OWL2 ontology of phenomena in infectious disease epidemiology and population biology for use in epidemic simulation." xsd:string
 property_value: terms:license "https://creativecommons.org/licenses/by/4.0/" xsd:string

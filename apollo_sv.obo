@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2026-07-18
+data-version: releases/2026-07-19
 subsetdef: common_anatomy ""
 subsetdef: efo_slim ""
 subsetdef: gocheck_do_not_annotate ""
@@ -64,7 +64,7 @@ property_value: dc:contributor "Mike Wagner" xsd:string
 property_value: dc:contributor "Shawn T. Brown" xsd:string
 property_value: dc:contributor "William R. Hogan" xsd:string
 property_value: dc:creator "Mathias Brochhausen" xsd:string
-property_value: owl:versionInfo "2026-07-18" xsd:string
+property_value: owl:versionInfo "2026-07-19" xsd:string
 property_value: terms:contributor "https://orcid.org/0000-0002-9881-1017" xsd:anyURI
 property_value: terms:description "An OWL2 ontology of phenomena in infectious disease epidemiology and population biology for use in epidemic simulation." xsd:string
 property_value: terms:license "https://creativecommons.org/licenses/by/4.0/" xsd:string
@@ -16225,8 +16225,8 @@ synonym: "relational physical quality" EXACT []
 xref: Wikipedia:Physical_property
 is_a: PATO:0001241 ! physical object quality
 property_value: IAO:0000111 "physical quality" xsd:string
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
 property_value: IAO:0000412 "http://purl.obolibrary.org/obo/pato.owl" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
 
 [Term]
 id: PATO:0001241

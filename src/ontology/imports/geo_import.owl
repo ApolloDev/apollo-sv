@@ -13,8 +13,8 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/apollo_sv/imports/geo_import.owl>
-<http://purl.obolibrary.org/obo/apollo_sv/releases/2026-07-18/imports/geo_import.owl>
-Annotation(owl:versionInfo "2026-07-18")
+<http://purl.obolibrary.org/obo/apollo_sv/releases/2026-07-19/imports/geo_import.owl>
+Annotation(owl:versionInfo "2026-07-19")
 
 Declaration(Class(obo:BFO_0000040))
 Declaration(Class(obo:GEO_000000004))

@@ -52,9 +52,9 @@
         "val" : "When citing Apollo-SV, use the permanent URL of the ontology: http://purl.obolibrary.org/obo/apollo_sv.owl.  When referencing a specific component of the Apollo-SV such as a class, object property, annotation property, or individual, use the component's Uniform Resource Identifier (URI)."
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-07-18"
+        "val" : "2026-07-19"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/apollo_sv/releases/2026-07-18/apollo_sv-base.json"
+      "version" : "http://purl.obolibrary.org/obo/apollo_sv/releases/2026-07-19/apollo_sv-base.json"
     },
     "nodes" : [ {
       "id" : "http://humanbehaviourchange.org/ontology/BCIO_036000",

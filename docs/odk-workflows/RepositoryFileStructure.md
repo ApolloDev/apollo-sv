@@ -18,7 +18,7 @@ These are the current imports in APOLLO_SV
 | ------ | --- | ---- |
 | ro | http://purl.obolibrary.org/obo/ro.owl | slme |
 | geo | http://purl.obolibrary.org/obo/geo/dev/geo.owl | filter |
-| ido | http://purl.obolibrary.org/obo/ido.owl | slme |
+| ido | http://purl.obolibrary.org/obo/ido.owl | filter |
 | mf | http://purl.obolibrary.org/obo/mf.owl | slme |
 | go | http://purl.obolibrary.org/obo/go.owl | slme |
 | iao | http://purl.obolibrary.org/obo/iao.owl | mirror |
@@ -27,6 +27,7 @@ These are the current imports in APOLLO_SV
 | ogms | http://purl.obolibrary.org/obo/ogms.owl | filter |
 | uberon | http://purl.obolibrary.org/obo/uberon.owl | filter |
 | bcio | http://humanbehaviourchange.org/ontology/bcio.owl | custom |
+| obi | http://purl.obolibrary.org/obo/obi.owl | filter |
 ## Components
 Components, in contrast to imports, are considered full members of the ontology. This means that any axiom in a component is also included in the ontology base - which means it is considered _native_ to the ontology. While this sounds complicated, consider this: conceptually, no component should be part of more than one ontology. If that seems to be the case, we are most likely talking about an import. Components are often not needed for ontologies, but there are some use cases:
 
