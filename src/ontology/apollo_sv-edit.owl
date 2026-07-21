@@ -32,6 +32,7 @@ Import(<http://purl.obolibrary.org/obo/apollo_sv/imports/go_import.owl>)
 Import(<http://purl.obolibrary.org/obo/apollo_sv/imports/iao_import.owl>)
 Import(<http://purl.obolibrary.org/obo/apollo_sv/imports/ido_import.owl>)
 Import(<http://purl.obolibrary.org/obo/apollo_sv/imports/mf_import.owl>)
+Import(<http://purl.obolibrary.org/obo/apollo_sv/imports/obi_import.owl>)
 Import(<http://purl.obolibrary.org/obo/apollo_sv/imports/ogms_import.owl>)
 Import(<http://purl.obolibrary.org/obo/apollo_sv/imports/omrse_import.owl>)
 Import(<http://purl.obolibrary.org/obo/apollo_sv/imports/ro_import.owl>)
@@ -690,6 +691,8 @@ Declaration(Class(obo:APOLLO_SV_00000652))
 Declaration(Class(obo:APOLLO_SV_00000653))
 Declaration(Class(obo:APOLLO_SV_00000654))
 Declaration(Class(obo:APOLLO_SV_00000655))
+Declaration(Class(obo:APOLLO_SV_00000656))
+Declaration(Class(obo:APOLLO_SV_00000657))
 Declaration(Class(obo:APOLLO_SV_00000793))
 Declaration(Class(obo:APOLLO_SV_00000794))
 Declaration(Class(obo:APOLLO_SV_00000795))
@@ -723,6 +726,7 @@ Declaration(Class(obo:BFO_0000040))
 Declaration(Class(obo:BFO_0000144))
 Declaration(Class(obo:BFO_0000182))
 Declaration(Class(obo:CHEBI_36044))
+Declaration(Class(obo:COB_0000026))
 Declaration(Class(obo:DOID_0060478))
 Declaration(Class(obo:DOID_12205))
 Declaration(Class(obo:DOID_12206))
@@ -1334,8 +1338,6 @@ Declaration(Class(obo:NCBITaxon_9935))
 Declaration(Class(obo:NCBITaxon_9940))
 Declaration(Class(obo:NCBITaxon_9963))
 Declaration(Class(obo:OAE_0000055))
-Declaration(Class(obo:OBI_0000011))
-Declaration(Class(obo:OBI_0000047))
 Declaration(Class(obo:OBI_0000066))
 Declaration(Class(obo:OBI_0000115))
 Declaration(Class(obo:OBI_0000227))
@@ -1347,7 +1349,6 @@ Declaration(Class(obo:OBI_0000658))
 Declaration(Class(obo:OBI_0000674))
 Declaration(Class(obo:OBI_0000679))
 Declaration(Class(obo:OBI_0000714))
-Declaration(Class(obo:OBI_0000968))
 Declaration(Class(obo:OBI_0001092))
 Declaration(Class(obo:OBI_0001173))
 Declaration(Class(obo:OBI_0001226))
@@ -1362,7 +1363,6 @@ Declaration(Class(obo:OBI_0001931))
 Declaration(Class(obo:OBI_0001933))
 Declaration(Class(obo:OBI_0001958))
 Declaration(Class(obo:OBI_0002110))
-Declaration(Class(obo:OBI_0100026))
 Declaration(Class(obo:OBI_0200000))
 Declaration(Class(obo:OBI_0200166))
 Declaration(Class(obo:OBI_0200170))
@@ -1583,6 +1583,7 @@ Declaration(AnnotationProperty(dc:source))
 Declaration(AnnotationProperty(dc:type))
 Declaration(AnnotationProperty(terms:contributor))
 Declaration(AnnotationProperty(terms:created))
+Declaration(AnnotationProperty(terms:creator))
 Declaration(AnnotationProperty(terms:description))
 Declaration(AnnotationProperty(terms:license))
 Declaration(AnnotationProperty(terms:title))
@@ -1745,11 +1746,11 @@ AnnotationAssertion(rdfs:label dc:type "dc:type")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasAlternativeId "has_alternative_id")
 
-# Annotation Property: oboInOwl:hasBroadSynonym (has_broad_synonym)
+# Annotation Property: oboInOwl:hasBroadSynonym (has broad synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym "has_broad_synonym")
 
-# Annotation Property: oboInOwl:hasDbXref (has cross-reference)
+# Annotation Property: oboInOwl:hasDbXref (database_cross_reference)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference")
 
@@ -1765,7 +1766,7 @@ AnnotationAssertion(rdfs:label oboInOwl:hasNarrowSynonym "has_narrow_synonym")
 
 AnnotationAssertion(rdfs:label oboInOwl:hasOBONamespace "has_obo_namespace")
 
-# Annotation Property: oboInOwl:hasRelatedSynonym (has_related_synonym)
+# Annotation Property: oboInOwl:hasRelatedSynonym (has related synonym)
 
 AnnotationAssertion(rdfs:label oboInOwl:hasRelatedSynonym "has_related_synonym")
 
@@ -2176,7 +2177,7 @@ AnnotationAssertion(rdfs:label obo:BFO_0000185 "has history"@en)
 ObjectPropertyDomain(obo:BFO_0000185 obo:BFO_0000040)
 ObjectPropertyRange(obo:BFO_0000185 obo:BFO_0000015)
 
-# Object Property: obo:OBI_0000308 (obo:OBI_0000308)
+# Object Property: obo:OBI_0000308 (obsolete_realizes)
 
 AnnotationAssertion(owl:deprecated obo:OBI_0000308 "true"^^xsd:boolean)
 SubObjectPropertyOf(obo:OBI_0000308 oboInOwl:ObsoleteProperty)
@@ -2209,7 +2210,7 @@ AnnotationAssertion(obo:IAO_0000412 obo:OMIABIS_0000048 "http://purl.obolibrary.
 AnnotationAssertion(rdfs:label obo:OMIABIS_0000048 "is owned by"@en)
 SubObjectPropertyOf(obo:OMIABIS_0000048 owl:topObjectProperty)
 
-# Object Property: obo:RO_0000053 (bearer of)
+# Object Property: obo:RO_0000053 (has characteristic)
 
 AnnotationAssertion(obo:IAO_0000118 obo:RO_0000053 "bearer of"@en)
 AnnotationAssertion(obo:IAO_0000118 obo:RO_0000053 "bearer_of"@en)
@@ -2522,7 +2523,7 @@ AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000002 "basicRep
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000002 "MB: Here we run into the well know DL problem that we cannot specify that the infectious agent that is transmitted is of the same type that the infectious agent the population is susceptible to."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000002 "basic reproduction number"@en)
 SubClassOf(obo:APOLLO_SV_00000002 obo:APOLLO_SV_00000043)
-SubClassOf(obo:APOLLO_SV_00000002 ObjectIntersectionOf(obo:APOLLO_SV_00000043 ObjectSomeValuesFrom(obo:IAO_0000136 ObjectIntersectionOf(obo:APOLLO_SV_00000115 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:BFO_0000137 obo:APOLLO_SV_00000234)))))))
+SubClassOf(obo:APOLLO_SV_00000002 ObjectIntersectionOf(obo:APOLLO_SV_00000043 ObjectSomeValuesFrom(obo:IAO_0000136 ObjectIntersectionOf(obo:APOLLO_SV_00000115 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:BFO_0000137 obo:APOLLO_SV_00000234)))))))
 
 # Class: obo:APOLLO_SV_00000003 (population immunity survey)
 
@@ -2543,7 +2544,7 @@ AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000005 "For example, in a simul
 
 Even in the case of a simulated disaster scenario where actual ambulances, fire trucks, and people participate, representations of catastrophic events and injuries, etc. take the place of real ones."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000005 "simulating of process of type X"@en)
-SubClassOf(obo:APOLLO_SV_00000005 obo:OBI_0000011)
+SubClassOf(obo:APOLLO_SV_00000005 obo:COB_0000082)
 
 # Class: obo:APOLLO_SV_00000006 (simulation requester identifier)
 
@@ -2723,7 +2724,7 @@ SubClassOf(obo:APOLLO_SV_00000025 obo:APOLLO_SV_00000227)
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000026 "A planned process involving counting numbers of facilities in a specific region."@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000026 "A planned process involving counting numbers of facilities in a specific region."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000026 "facility survey"@en)
-SubClassOf(obo:APOLLO_SV_00000026 obo:OBI_0000011)
+SubClassOf(obo:APOLLO_SV_00000026 obo:COB_0000082)
 
 # Class: obo:APOLLO_SV_00000027 (school facility census)
 
@@ -2738,8 +2739,8 @@ SubClassOf(obo:APOLLO_SV_00000027 obo:APOLLO_SV_00000173)
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000029 "A process that is applied to a population with the goal of preventing, or mitigating the severity of an infectious disease."@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000029 "A process that is applied to a population with the goal of preventing, or mitigating the severity of an infectious disease."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000029 "infectious disease control strategy execution"@en)
-EquivalentClasses(obo:APOLLO_SV_00000029 ObjectIntersectionOf(obo:OBI_0000011 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:IAO_0000104 ObjectSomeValuesFrom(obo:BFO_0000051 obo:APOLLO_SV_00000075))))))
-SubClassOf(obo:APOLLO_SV_00000029 obo:OBI_0000011)
+EquivalentClasses(obo:APOLLO_SV_00000029 ObjectIntersectionOf(obo:COB_0000082 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:IAO_0000104 ObjectSomeValuesFrom(obo:BFO_0000051 obo:APOLLO_SV_00000075))))))
+SubClassOf(obo:APOLLO_SV_00000029 obo:COB_0000082)
 
 # Class: obo:APOLLO_SV_00000030 (hospital patient population)
 
@@ -2769,19 +2770,11 @@ AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000032 "count"@en)
 EquivalentClasses(obo:APOLLO_SV_00000032 ObjectIntersectionOf(obo:IAO_0000027 ObjectSomeValuesFrom(obo:OBI_0000312 obo:APOLLO_SV_00000033)))
 SubClassOf(obo:APOLLO_SV_00000032 obo:IAO_0000109)
 
-# Class: obo:APOLLO_SV_00000033 (counting)
-
-AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000033 "The planned process of finding the number of elements in a finite set of objects."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000033 "Mathias Brochhausen")
-AnnotationAssertion(obo:IAO_0000119 obo:APOLLO_SV_00000033 "http://en.wikipedia.org/wiki/Counting")
-AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000033 "The planned process of finding the number of elements in a finite set of objects."@en)
-AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000033 "counting"@en)
-
 # Class: obo:APOLLO_SV_00000034 (simulation of organism)
 
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000034 "A simulation that is about an organism")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000034 "simulation of organism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000034 ObjectIntersectionOf(ObjectIntersectionOf(obo:APOLLO_SV_00000070 ObjectSomeValuesFrom(obo:APOLLO_SV_00000067 obo:OBI_0100026)) ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000005)))
+EquivalentClasses(obo:APOLLO_SV_00000034 ObjectIntersectionOf(ObjectIntersectionOf(obo:APOLLO_SV_00000070 ObjectSomeValuesFrom(obo:APOLLO_SV_00000067 obo:COB_0000022)) ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000005)))
 
 # Class: obo:APOLLO_SV_00000036 (normal distribution)
 
@@ -2819,7 +2812,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000041 "A simulated organism
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000041 "A simulated organism in a simulated population that is neither susceptible, exposed, nor infectious for a particular simulated disease. 
 Note that the name for this concept, were it to be named based on its intent, would be ‘immune.’  However, in the practice domain of epidemiology this concept is traditionally termed ‘recovered.’  The problem with the traditional name is that organisms can be considered ‘recovered’ by virtue of having been vaccinated, which differs from lay usage."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000041 "simulation of recovered organism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000041 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:APOLLO_SV_00000067 ObjectIntersectionOf(obo:OBI_0100026 ObjectComplementOf(ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000172)))) ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000005)))
+EquivalentClasses(obo:APOLLO_SV_00000041 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:APOLLO_SV_00000067 ObjectIntersectionOf(obo:COB_0000022 ObjectComplementOf(ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000172)))) ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000005)))
 SubClassOf(obo:APOLLO_SV_00000041 obo:APOLLO_SV_00000034)
 
 # Class: obo:APOLLO_SV_00000042 (simulation of disease)
@@ -2840,7 +2833,7 @@ AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000043 "The number of suscep
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000043 "ReproductionNumber")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000043 "reproduction number"@en)
 SubClassOf(obo:APOLLO_SV_00000043 obo:OBI_0000679)
-SubClassOf(obo:APOLLO_SV_00000043 ObjectIntersectionOf(obo:OBI_0000679 ObjectSomeValuesFrom(obo:IAO_0000136 ObjectIntersectionOf(obo:APOLLO_SV_00000115 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:BFO_0000137 obo:PCO_0000001)))))))
+SubClassOf(obo:APOLLO_SV_00000043 ObjectIntersectionOf(obo:OBI_0000679 ObjectSomeValuesFrom(obo:IAO_0000136 ObjectIntersectionOf(obo:APOLLO_SV_00000115 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:BFO_0000137 obo:PCO_0000001)))))))
 
 # Class: obo:APOLLO_SV_00000044 (nursery school student population)
 
@@ -3004,7 +2997,7 @@ SubClassOf(obo:APOLLO_SV_00000062 obo:APOLLO_SV_00000178)
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000063 "A simulation of an organism in a simulated population that has participated in an epidemic control measure."@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000063 "A simulated organism in a simulated population has participated in a particular simulated control measure. (e.g. an organism received antiviral treatment)"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000063 "simulation of control measure participant"@en)
-EquivalentClasses(obo:APOLLO_SV_00000063 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:APOLLO_SV_00000067 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000029))) ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000005)))
+EquivalentClasses(obo:APOLLO_SV_00000063 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:APOLLO_SV_00000067 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000029))) ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000005)))
 SubClassOf(obo:APOLLO_SV_00000063 obo:APOLLO_SV_00000034)
 
 # Class: obo:APOLLO_SV_00000064 (simulation time series)
@@ -3083,7 +3076,7 @@ SubClassOf(obo:APOLLO_SV_00000071 oboInOwl:ObsoleteClass)
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000072 "A simulation of a susceptible organism in a simulated population."@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000072 "A simulated organism in a simulated population that is capable of acquiring a particular simulated disease."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000072 "simulation of susceptible organism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000072 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:APOLLO_SV_00000067 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000172))) ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000005)))
+EquivalentClasses(obo:APOLLO_SV_00000072 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:APOLLO_SV_00000067 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000172))) ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000005)))
 SubClassOf(obo:APOLLO_SV_00000072 obo:APOLLO_SV_00000034)
 
 # Class: obo:APOLLO_SV_00000073 (simulation of symptomatic organism)
@@ -3218,7 +3211,7 @@ AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000089 "1. Apollo-SV does not d
 2. Apollo-SV also considers the use of ‘vaccine’ in both terms a misnomer."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000089 "measured vaccination efficacy"@en)
 SubClassOf(obo:APOLLO_SV_00000089 obo:IAO_0000109)
-SubClassOf(obo:APOLLO_SV_00000089 ObjectIntersectionOf(obo:IAO_0000109 ObjectSomeValuesFrom(obo:IAO_0000136 obo:APOLLO_SV_00000025) ObjectSomeValuesFrom(obo:IAO_0000136 ObjectIntersectionOf(obo:PCO_0000000 ObjectAllValuesFrom(obo:RO_0002351 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000142)))))))
+SubClassOf(obo:APOLLO_SV_00000089 ObjectIntersectionOf(obo:IAO_0000109 ObjectSomeValuesFrom(obo:IAO_0000136 obo:APOLLO_SV_00000025) ObjectSomeValuesFrom(obo:IAO_0000136 ObjectIntersectionOf(obo:PCO_0000000 ObjectAllValuesFrom(obo:RO_0002351 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000142)))))))
 
 # Class: obo:APOLLO_SV_00000090 (vaccination efficacy study design execution)
 
@@ -3415,7 +3408,7 @@ AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000114 "A process of reprodu
 AnnotationAssertion(dc:creator obo:APOLLO_SV_00000114 "M. Brochhausen"@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000114 "infection is reproduction of a pathogen inside some tissue of a host.  By associating infection with the classes latent period and infectious period, which are associated with specific pathogen species and host species, Apollo-SV defines infection further as reproduction of a particular pathogen taxon inside some tissue of a particular host taxon."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000114 "infection"@en)
-EquivalentClasses(obo:APOLLO_SV_00000114 ObjectIntersectionOf(obo:APOLLO_SV_00000651 ObjectSomeValuesFrom(obo:BFO_0000066 ObjectIntersectionOf(obo:UBERON_0000479 ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026)))))
+EquivalentClasses(obo:APOLLO_SV_00000114 ObjectIntersectionOf(obo:APOLLO_SV_00000651 ObjectSomeValuesFrom(obo:BFO_0000066 ObjectIntersectionOf(obo:UBERON_0000479 ObjectSomeValuesFrom(obo:BFO_0000050 obo:COB_0000022)))))
 SubClassOf(obo:APOLLO_SV_00000114 obo:APOLLO_SV_00000651)
 SubClassOf(obo:APOLLO_SV_00000114 ObjectSomeValuesFrom(obo:RO_0002087 obo:APOLLO_SV_00000115))
 
@@ -3432,7 +3425,7 @@ The likelihood of acquisition is expressed by parameters such as the basic repro
 An infection is acquired from an infectious organism or a contaminated thing."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000115 "Cannot acquire from colonized host directly - contamination results from colonized or contaminated thing and new host picks it up from contaminated thing."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000115 "infection acquisition"@en)
-EquivalentClasses(obo:APOLLO_SV_00000115 ObjectIntersectionOf(obo:GO_0044409 ObjectSomeValuesFrom(obo:BFO_0000066 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000172))) ObjectSomeValuesFrom(obo:RO_0000057 ObjectUnionOf(obo:APOLLO_SV_00000166 ObjectIntersectionOf(obo:APOLLO_SV_00000238 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000182)))) ObjectSomeValuesFrom(obo:RO_0002411 obo:APOLLO_SV_00000114)))
+EquivalentClasses(obo:APOLLO_SV_00000115 ObjectIntersectionOf(obo:GO_0044409 ObjectSomeValuesFrom(obo:BFO_0000066 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000172))) ObjectSomeValuesFrom(obo:RO_0000057 ObjectUnionOf(obo:APOLLO_SV_00000166 ObjectIntersectionOf(obo:APOLLO_SV_00000238 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000182)))) ObjectSomeValuesFrom(obo:RO_0002411 obo:APOLLO_SV_00000114)))
 SubClassOf(obo:APOLLO_SV_00000115 obo:GO_0044409)
 
 # Class: obo:APOLLO_SV_00000117 (vaccine identifier)
@@ -3633,7 +3626,7 @@ AnnotationAssertion(obo:IAO_0000119 obo:APOLLO_SV_00000142 "http://en.wikipedia.
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000142 "A treatment of an individual with antigenic material from a pathogen that has the goal of inducing resistance of the individual to infection with the pathogen."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000142 "Vaccination")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000142 "vaccination"@en)
-EquivalentClasses(obo:APOLLO_SV_00000142 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:IAO_0000104 ObjectSomeValuesFrom(obo:BFO_0000051 obo:APOLLO_SV_00000141)))) ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:BFO_0000040 ObjectSomeValuesFrom(obo:RO_0000053 obo:VO_0000278))) ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000172)))))
+EquivalentClasses(obo:APOLLO_SV_00000142 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:IAO_0000104 ObjectSomeValuesFrom(obo:BFO_0000051 obo:APOLLO_SV_00000141)))) ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:BFO_0000040 ObjectSomeValuesFrom(obo:RO_0000053 obo:VO_0000278))) ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000172)))))
 SubClassOf(obo:APOLLO_SV_00000142 obo:OGMS_0000090)
 
 # Class: obo:APOLLO_SV_00000143 (obsolete vaccine disposition)
@@ -3712,8 +3705,8 @@ AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000152 "A planned process in
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000152 "Mathias Brochhausen"@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000152 "A planned process involving counting numbers of a organism population, possibly including counting sub-populations fulfilling specific criteria."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000152 "population survey"@en)
-EquivalentClasses(obo:APOLLO_SV_00000152 ObjectIntersectionOf(obo:OBI_0000011 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:APOLLO_SV_00000033 ObjectSomeValuesFrom(obo:OBI_0000299 ObjectIntersectionOf(obo:APOLLO_SV_00000032 ObjectSomeValuesFrom(obo:IAO_0000136 obo:PCO_0000001)))))))
-SubClassOf(obo:APOLLO_SV_00000152 obo:OBI_0000011)
+EquivalentClasses(obo:APOLLO_SV_00000152 ObjectIntersectionOf(obo:COB_0000082 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:APOLLO_SV_00000033 ObjectSomeValuesFrom(obo:OBI_0000299 ObjectIntersectionOf(obo:APOLLO_SV_00000032 ObjectSomeValuesFrom(obo:IAO_0000136 obo:PCO_0000001)))))))
+SubClassOf(obo:APOLLO_SV_00000152 obo:COB_0000082)
 
 # Class: obo:APOLLO_SV_00000153 (population census)
 
@@ -3895,7 +3888,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000172 "The ability to parti
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000172 "Mathias Brochhausen"@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000172 "The ability to participate in infection acquisition as a host."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000172 "susceptibility"@en)
-EquivalentClasses(obo:APOLLO_SV_00000172 ObjectIntersectionOf(obo:BFO_0000016 ObjectAllValuesFrom(obo:BFO_0000054 obo:APOLLO_SV_00000115) ObjectAllValuesFrom(obo:RO_0000052 ObjectIntersectionOf(obo:OBI_0100026 ObjectComplementOf(obo:APOLLO_SV_00000238)))))
+EquivalentClasses(obo:APOLLO_SV_00000172 ObjectIntersectionOf(obo:BFO_0000016 ObjectAllValuesFrom(obo:BFO_0000054 obo:APOLLO_SV_00000115) ObjectAllValuesFrom(obo:RO_0000052 ObjectIntersectionOf(obo:COB_0000022 ObjectComplementOf(obo:APOLLO_SV_00000238)))))
 SubClassOf(obo:APOLLO_SV_00000172 obo:BFO_0000016)
 
 # Class: obo:APOLLO_SV_00000173 (census)
@@ -4013,7 +4006,7 @@ AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000186 "The process of exist
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000186 "Contamination")
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000186 "The preferred term is biological contamination to distinguish from things like radiological contamination, contamination of the Gulf of Mexico with oil, the contamination of air with pollution, etc."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000186 "contamination"@en)
-EquivalentClasses(obo:APOLLO_SV_00000186 ObjectUnionOf(ObjectIntersectionOf(obo:APOLLO_SV_00000651 ObjectSomeValuesFrom(obo:RO_0000057 obo:APOLLO_SV_00000237) ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:BFO_0000040 ObjectComplementOf(obo:OBI_0100026)))) ObjectIntersectionOf(obo:GO_0008150 ObjectSomeValuesFrom(obo:RO_0000057 obo:APOLLO_SV_00000237) ObjectSomeValuesFrom(obo:RO_0000057 obo:BFO_0000040))))
+EquivalentClasses(obo:APOLLO_SV_00000186 ObjectUnionOf(ObjectIntersectionOf(obo:APOLLO_SV_00000651 ObjectSomeValuesFrom(obo:RO_0000057 obo:APOLLO_SV_00000237) ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:BFO_0000040 ObjectComplementOf(obo:COB_0000022)))) ObjectIntersectionOf(obo:GO_0008150 ObjectSomeValuesFrom(obo:RO_0000057 obo:APOLLO_SV_00000237) ObjectSomeValuesFrom(obo:RO_0000057 obo:BFO_0000040))))
 SubClassOf(obo:APOLLO_SV_00000186 obo:GO_0008150)
 
 # Class: obo:APOLLO_SV_00000187 (population treatment census)
@@ -4164,8 +4157,8 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000205 "William R. Hogan"@en
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000205 "An organism of a particular species that can undergo infection with a particular pathogen."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000205 "susceptible")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000205 "susceptible organism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000205 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000172)))
-SubClassOf(obo:APOLLO_SV_00000205 obo:OBI_0100026)
+EquivalentClasses(obo:APOLLO_SV_00000205 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000172)))
+SubClassOf(obo:APOLLO_SV_00000205 obo:COB_0000022)
 
 # Class: obo:APOLLO_SV_00000206 (immune organism)
 
@@ -4174,8 +4167,8 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000206 "William R. Hogan"@en
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000206 "An organism of a particular species that has developed immune resistance to infection with a pathogen of a particular species."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000206 "immune")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000206 "immune organism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000206 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000151)))
-SubClassOf(obo:APOLLO_SV_00000206 obo:OBI_0100026)
+EquivalentClasses(obo:APOLLO_SV_00000206 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000151)))
+SubClassOf(obo:APOLLO_SV_00000206 obo:COB_0000022)
 
 # Class: obo:APOLLO_SV_00000207 (resistant organism)
 
@@ -4184,8 +4177,8 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000207 "William R. Hogan"@en
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000207 "An organism of a particular species that is unable to undergo infection with a particular pathogen."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000207 "resistant")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000207 "resistant organism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000207 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000145)))
-SubClassOf(obo:APOLLO_SV_00000207 obo:OBI_0100026)
+EquivalentClasses(obo:APOLLO_SV_00000207 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000145)))
+SubClassOf(obo:APOLLO_SV_00000207 obo:COB_0000022)
 
 # Class: obo:APOLLO_SV_00000208 (control strategy start time information)
 
@@ -4303,7 +4296,7 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000220 "Mathias Brochhausen"
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000220 "A material entity that is part of an abiotic ecosystem."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000220 "Class was originally created to correspond with an element from Apollo XSD v3.1.0."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000220 "abiotic ecosystem element"@en)
-EquivalentClasses(obo:APOLLO_SV_00000220 ObjectIntersectionOf(ObjectIntersectionOf(obo:BFO_0000040 ObjectComplementOf(obo:OBI_0100026)) ObjectSomeValuesFrom(obo:BFO_0000050 obo:APOLLO_SV_00000100)))
+EquivalentClasses(obo:APOLLO_SV_00000220 ObjectIntersectionOf(ObjectIntersectionOf(obo:BFO_0000040 ObjectComplementOf(obo:COB_0000022)) ObjectSomeValuesFrom(obo:BFO_0000050 obo:APOLLO_SV_00000100)))
 SubClassOf(obo:APOLLO_SV_00000220 obo:BFO_0000040)
 
 # Class: obo:APOLLO_SV_00000221 (immune population acting like immune)
@@ -4426,7 +4419,7 @@ SubClassOf(obo:APOLLO_SV_00000232 obo:APOLLO_SV_00000509)
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000233 "A population of only infected members of one species."@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000233 "A population of only infected members of one species."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000233 "infected population"@en)
-EquivalentClasses(obo:APOLLO_SV_00000233 ObjectIntersectionOf(obo:APOLLO_SV_00000516 ObjectAllValuesFrom(obo:RO_0002351 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:BFO_0000067 obo:APOLLO_SV_00000114)))))
+EquivalentClasses(obo:APOLLO_SV_00000233 ObjectIntersectionOf(obo:APOLLO_SV_00000516 ObjectAllValuesFrom(obo:RO_0002351 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:BFO_0000067 obo:APOLLO_SV_00000114)))))
 SubClassOf(obo:APOLLO_SV_00000233 obo:APOLLO_SV_00000516)
 
 # Class: obo:APOLLO_SV_00000234 (susceptible population)
@@ -4434,7 +4427,7 @@ SubClassOf(obo:APOLLO_SV_00000233 obo:APOLLO_SV_00000516)
 AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000234 "A population of organisms that are all susceptible."@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000234 "A population of organisms that are all susceptible."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000234 "susceptible population"@en)
-EquivalentClasses(obo:APOLLO_SV_00000234 ObjectIntersectionOf(obo:APOLLO_SV_00000516 ObjectAllValuesFrom(obo:RO_0002351 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000172)))))
+EquivalentClasses(obo:APOLLO_SV_00000234 ObjectIntersectionOf(obo:APOLLO_SV_00000516 ObjectAllValuesFrom(obo:RO_0002351 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000172)))))
 SubClassOf(obo:APOLLO_SV_00000234 obo:APOLLO_SV_00000516)
 
 # Class: obo:APOLLO_SV_00000235 (immune population)
@@ -4455,8 +4448,8 @@ AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000237 "An organism of a par
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000237 "An organism, virus, or prion that can infect another organism."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000237 "pathogen")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000237 "pathogen"@en)
-EquivalentClasses(obo:APOLLO_SV_00000237 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000404)))
-SubClassOf(obo:APOLLO_SV_00000237 obo:OBI_0100026)
+EquivalentClasses(obo:APOLLO_SV_00000237 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000404)))
+SubClassOf(obo:APOLLO_SV_00000237 obo:COB_0000022)
 
 # Class: obo:APOLLO_SV_00000238 (host organism)
 
@@ -4464,8 +4457,8 @@ AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000238 "An organism of a par
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000238 "An organism of a particular biological taxon that is the site of reproduction of an organism of a different taxon."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000238 "host"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000238 "host organism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000238 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:BFO_0000067 obo:APOLLO_SV_00000651)))
-SubClassOf(obo:APOLLO_SV_00000238 obo:OBI_0100026)
+EquivalentClasses(obo:APOLLO_SV_00000238 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:BFO_0000067 obo:APOLLO_SV_00000651)))
+SubClassOf(obo:APOLLO_SV_00000238 obo:COB_0000022)
 
 # Class: obo:APOLLO_SV_00000239 (infectious disease)
 
@@ -4696,7 +4689,7 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000264 "William R. Hogan"@en
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000264 "An infection acquisition from a contaminated thing."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000264 "InfectionAcquisitionFromContaminatedAbioticThing")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000264 "infection acquisition from contaminated thing"@en)
-EquivalentClasses(obo:APOLLO_SV_00000264 ObjectIntersectionOf(obo:GO_0044409 ObjectSomeValuesFrom(obo:BFO_0000066 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000172))) ObjectSomeValuesFrom(obo:RO_0000057 obo:APOLLO_SV_00000166) ObjectSomeValuesFrom(obo:RO_0002411 obo:APOLLO_SV_00000114)))
+EquivalentClasses(obo:APOLLO_SV_00000264 ObjectIntersectionOf(obo:GO_0044409 ObjectSomeValuesFrom(obo:BFO_0000066 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000172))) ObjectSomeValuesFrom(obo:RO_0000057 obo:APOLLO_SV_00000166) ObjectSomeValuesFrom(obo:RO_0002411 obo:APOLLO_SV_00000114)))
 SubClassOf(obo:APOLLO_SV_00000264 obo:GO_0044409)
 
 # Class: obo:APOLLO_SV_00000265 (infection acquisition from infectious host)
@@ -4708,7 +4701,7 @@ AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000265 "An infection acquisi
 The individual acquiring the infection can be of a different species than the one who is infectious."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000265 "InfectionAcquisitionFromInfectedHost")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000265 "infection acquisition from infectious host"@en)
-EquivalentClasses(obo:APOLLO_SV_00000265 ObjectIntersectionOf(obo:GO_0044409 ObjectSomeValuesFrom(obo:BFO_0000066 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000172))) ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:APOLLO_SV_00000238 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000182))) ObjectSomeValuesFrom(obo:RO_0002411 obo:APOLLO_SV_00000114)))
+EquivalentClasses(obo:APOLLO_SV_00000265 ObjectIntersectionOf(obo:GO_0044409 ObjectSomeValuesFrom(obo:BFO_0000066 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000172))) ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:APOLLO_SV_00000238 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000182))) ObjectSomeValuesFrom(obo:RO_0002411 obo:APOLLO_SV_00000114)))
 SubClassOf(obo:APOLLO_SV_00000265 obo:GO_0044409)
 
 # Class: obo:APOLLO_SV_00000266 (disease surveillance capability)
@@ -5033,8 +5026,8 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000302 "William R. Hogan"@en
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000302 "An organism that has recovered from infection with a particular pathogen, is no longer infectious to other organisms of any species, and is not able to be infected again with that pathogen."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000302 "recovered"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000302 "recovered organism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000302 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000301)))
-SubClassOf(obo:APOLLO_SV_00000302 obo:OBI_0100026)
+EquivalentClasses(obo:APOLLO_SV_00000302 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000301)))
+SubClassOf(obo:APOLLO_SV_00000302 obo:COB_0000022)
 
 # Class: obo:APOLLO_SV_00000303 (compartmental disease transmission model)
 
@@ -5233,7 +5226,7 @@ AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000330 "A reproduction of a 
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000330 "Colonization")
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000330 "Primary use case is colonization of humans, animals with Staph aureus, but it also covers bacteriuria, transient bactermia, and normal gut flora."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000330 "colonization"@en)
-EquivalentClasses(obo:APOLLO_SV_00000330 ObjectIntersectionOf(obo:APOLLO_SV_00000651 ObjectSomeValuesFrom(obo:BFO_0000066 ObjectIntersectionOf(ObjectComplementOf(obo:UBERON_0000479) ObjectSomeValuesFrom(obo:BFO_0000050 obo:OBI_0100026)))))
+EquivalentClasses(obo:APOLLO_SV_00000330 ObjectIntersectionOf(obo:APOLLO_SV_00000651 ObjectSomeValuesFrom(obo:BFO_0000066 ObjectIntersectionOf(ObjectComplementOf(obo:UBERON_0000479) ObjectSomeValuesFrom(obo:BFO_0000050 obo:COB_0000022)))))
 SubClassOf(obo:APOLLO_SV_00000330 obo:APOLLO_SV_00000651)
 
 # Class: obo:APOLLO_SV_00000331 (infection in population)
@@ -5312,7 +5305,7 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000337 "William R. Hogan")
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000337 "A symbiosis where the organisms that are interacting remain physically external to one another."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000337 "It includes situations where one organism lives on the surface of the other organism."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000337 "ectosymbiosis"@en)
-EquivalentClasses(obo:APOLLO_SV_00000337 ObjectIntersectionOf(obo:APOLLO_SV_00000596 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0002163 obo:OBI_0100026)))))
+EquivalentClasses(obo:APOLLO_SV_00000337 ObjectIntersectionOf(obo:APOLLO_SV_00000596 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0002163 obo:COB_0000022)))))
 SubClassOf(obo:APOLLO_SV_00000337 obo:APOLLO_SV_00000596)
 
 # Class: obo:APOLLO_SV_00000338 (antagonism)
@@ -5333,7 +5326,7 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000339 "William R. Hogan")
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000339 "An ectosymbiosis that results in harm to one of the participating organisms but neither harms nor benefits the other participating organisms."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000339 "Example: Spanish ibex and weevils of the genus Timarcha"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000339 "amensalism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000339 ObjectIntersectionOf(obo:APOLLO_SV_00000337 ObjectComplementOf(ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:OGMS_0000032 ObjectSomeValuesFrom(obo:RO_0000052 obo:OBI_0100026)))) ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000371)))))
+EquivalentClasses(obo:APOLLO_SV_00000339 ObjectIntersectionOf(obo:APOLLO_SV_00000337 ObjectComplementOf(ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:OGMS_0000032 ObjectSomeValuesFrom(obo:RO_0000052 obo:COB_0000022)))) ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000371)))))
 SubClassOf(obo:APOLLO_SV_00000339 obo:APOLLO_SV_00000337)
 
 # Class: obo:APOLLO_SV_00000340 (agonism)
@@ -5343,7 +5336,7 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000340 "Matthew Diller")
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000340 "William R. Hogan")
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000340 "An ectosymbiosis that results in harm to one of the participating organisms and benefit to another participating organism."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000340 "agonism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000340 ObjectIntersectionOf(obo:APOLLO_SV_00000337 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000371))) ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000372)))))
+EquivalentClasses(obo:APOLLO_SV_00000340 ObjectIntersectionOf(obo:APOLLO_SV_00000337 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000371))) ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000372)))))
 SubClassOf(obo:APOLLO_SV_00000340 obo:APOLLO_SV_00000337)
 
 # Class: obo:APOLLO_SV_00000341 (intimate agonism)
@@ -5376,7 +5369,7 @@ AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000343 "facultative ectopara
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000343 "An ectosymbiotic parasitism that realizes a disposition of the parasite that is not one of its biological functions."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000343 "Example: Armillaria (type of wood fungus) and trees"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000343 "facultative ectosymbiotic parasitism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000343 ObjectIntersectionOf(obo:APOLLO_SV_00000342 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:APOLLO_SV_00002024 ObjectSomeValuesFrom(obo:BFO_0000054 obo:APOLLO_SV_00000372) ObjectSomeValuesFrom(obo:RO_0000052 obo:OBI_0100026)))))
+EquivalentClasses(obo:APOLLO_SV_00000343 ObjectIntersectionOf(obo:APOLLO_SV_00000342 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:APOLLO_SV_00002024 ObjectSomeValuesFrom(obo:BFO_0000054 obo:APOLLO_SV_00000372) ObjectSomeValuesFrom(obo:RO_0000052 obo:COB_0000022)))))
 SubClassOf(obo:APOLLO_SV_00000343 obo:APOLLO_SV_00000342)
 
 # Class: obo:APOLLO_SV_00000344 (obligatory ectosymbiotic parasitism)
@@ -5432,7 +5425,7 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000348 "William R. Hogan")
 AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000348 "ectocommensalism"@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000348 "An ectosymbiosis that results in benefit to one participating organism and neither harm nor benefit to the other participating organisms."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000348 "ectosymbiotic commensalism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000348 ObjectIntersectionOf(obo:APOLLO_SV_00000337 ObjectComplementOf(ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:OGMS_0000032 ObjectSomeValuesFrom(obo:RO_0000052 obo:OBI_0100026)))) ObjectSomeValuesFrom(obo:BFO_0000051 obo:APOLLO_SV_00000372)))
+EquivalentClasses(obo:APOLLO_SV_00000348 ObjectIntersectionOf(obo:APOLLO_SV_00000337 ObjectComplementOf(ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:OGMS_0000032 ObjectSomeValuesFrom(obo:RO_0000052 obo:COB_0000022)))) ObjectSomeValuesFrom(obo:BFO_0000051 obo:APOLLO_SV_00000372)))
 SubClassOf(obo:APOLLO_SV_00000348 obo:APOLLO_SV_00000337)
 
 # Class: obo:APOLLO_SV_00000349 (facultative ectosymbiotic commensalism)
@@ -5444,7 +5437,7 @@ AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000349 "facultative ectocomm
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000349 "An ectosymbiotic commensalism that realizes a dispostion of the organism that benefits that is not one of its biological functions."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000349 "Example: Ophiodromus pugettensis and Patiria miniata"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000349 "facultative ectosymbiotic commensalism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000349 ObjectIntersectionOf(obo:APOLLO_SV_00000348 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:APOLLO_SV_00002024 ObjectSomeValuesFrom(obo:BFO_0000054 obo:APOLLO_SV_00000372) ObjectSomeValuesFrom(obo:RO_0000052 obo:OBI_0100026)))))
+EquivalentClasses(obo:APOLLO_SV_00000349 ObjectIntersectionOf(obo:APOLLO_SV_00000348 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:APOLLO_SV_00002024 ObjectSomeValuesFrom(obo:BFO_0000054 obo:APOLLO_SV_00000372) ObjectSomeValuesFrom(obo:RO_0000052 obo:COB_0000022)))))
 SubClassOf(obo:APOLLO_SV_00000349 obo:APOLLO_SV_00000348)
 
 # Class: obo:APOLLO_SV_00000350 (obligatory ectosymbiotic commensalism)
@@ -5456,7 +5449,7 @@ AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000350 "obligatory ectocomme
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000350 "An ectosymbiotic commensalism that realizes a biological function that inheres in some proper part of the commensal organism that benefits."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000350 "Example: Basicladia algae and sea turtles"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000350 "obligatory ectosymbiotic commensalism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000350 ObjectIntersectionOf(obo:APOLLO_SV_00000348 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:BFO_0000034 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:BFO_0000137 obo:OBI_0100026) ObjectSomeValuesFrom(obo:RO_0000052 obo:UBERON_0000061))))))
+EquivalentClasses(obo:APOLLO_SV_00000350 ObjectIntersectionOf(obo:APOLLO_SV_00000348 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:BFO_0000034 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:BFO_0000137 obo:COB_0000022) ObjectSomeValuesFrom(obo:RO_0000052 obo:UBERON_0000061))))))
 SubClassOf(obo:APOLLO_SV_00000350 obo:APOLLO_SV_00000348)
 
 # Class: obo:APOLLO_SV_00000351 (ectosymbiotic mutualism)
@@ -5479,7 +5472,7 @@ AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000352 "facultative ectomutu
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000352 "An ectosymbiotic mutualism that realizes one or more dispositions of one or both organisms and these dispostions are not biological functions of either organism."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000352 "Example: ants that feed off of honeydew from aphids, and in turn protect the aphids"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000352 "facultative ectosymbiotic mutualism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000352 ObjectIntersectionOf(obo:APOLLO_SV_00000351 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:APOLLO_SV_00002024 ObjectSomeValuesFrom(obo:BFO_0000054 obo:APOLLO_SV_00000372) ObjectSomeValuesFrom(obo:RO_0000052 obo:OBI_0100026)))))
+EquivalentClasses(obo:APOLLO_SV_00000352 ObjectIntersectionOf(obo:APOLLO_SV_00000351 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:APOLLO_SV_00002024 ObjectSomeValuesFrom(obo:BFO_0000054 obo:APOLLO_SV_00000372) ObjectSomeValuesFrom(obo:RO_0000052 obo:COB_0000022)))))
 SubClassOf(obo:APOLLO_SV_00000352 obo:APOLLO_SV_00000351)
 
 # Class: obo:APOLLO_SV_00000353 (obligatory ectosymbiotic mutualism)
@@ -5491,7 +5484,7 @@ AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000353 "obligatory ectomutua
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000353 "An ectosymbiotic mutualism that realizes a biological function that inheres in some proper part of at least one of the organisms participating."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000353 "Example: bees and flowers"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000353 "obligatory ectosymbiotic mutualism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000353 ObjectIntersectionOf(obo:APOLLO_SV_00000351 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:BFO_0000034 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:BFO_0000137 obo:OBI_0100026) ObjectSomeValuesFrom(obo:RO_0000052 obo:UBERON_0000061))))))
+EquivalentClasses(obo:APOLLO_SV_00000353 ObjectIntersectionOf(obo:APOLLO_SV_00000351 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:BFO_0000034 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:BFO_0000137 obo:COB_0000022) ObjectSomeValuesFrom(obo:RO_0000052 obo:UBERON_0000061))))))
 SubClassOf(obo:APOLLO_SV_00000353 obo:APOLLO_SV_00000351)
 
 # Class: obo:APOLLO_SV_00000354 (endosymbiosis)
@@ -5501,7 +5494,7 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000354 "Matthew Diller")
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000354 "William R. Hogan")
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000354 "A symbiosis where one organism is physically contained within another organism (called the 'host')."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000354 "endosymbiosis"@en)
-EquivalentClasses(obo:APOLLO_SV_00000354 ObjectIntersectionOf(obo:APOLLO_SV_00000596 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0001025 obo:OBI_0100026)))))
+EquivalentClasses(obo:APOLLO_SV_00000354 ObjectIntersectionOf(obo:APOLLO_SV_00000596 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0001025 obo:COB_0000022)))))
 SubClassOf(obo:APOLLO_SV_00000354 obo:APOLLO_SV_00000596)
 
 # Class: obo:APOLLO_SV_00000355 (endosymbiotic parasitism)
@@ -5532,7 +5525,7 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000357 "William R. Hogan")
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000357 "A non-intimate agonism in which the harm is fatal."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000357 "Example: lion and gazel"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000357 "predation"@en)
-EquivalentClasses(obo:APOLLO_SV_00000357 ObjectIntersectionOf(obo:APOLLO_SV_00000356 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:APOLLO_SV_00000371 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:UBERON_0000071 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:OBI_0100026 ObjectAllValuesFrom(obo:RO_0002350 obo:NCBITaxon_33208)))))))))
+EquivalentClasses(obo:APOLLO_SV_00000357 ObjectIntersectionOf(obo:APOLLO_SV_00000356 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:APOLLO_SV_00000371 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:UBERON_0000071 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:COB_0000022 ObjectAllValuesFrom(obo:RO_0002350 obo:NCBITaxon_33208)))))))))
 SubClassOf(obo:APOLLO_SV_00000357 obo:APOLLO_SV_00000356)
 
 # Class: obo:APOLLO_SV_00000358 (grazing)
@@ -5555,7 +5548,7 @@ AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000359 "facultative endopara
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000359 "An endosymbiotic parasitism that realizes a disposition of the parasite that is not one of its biological functions."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000359 "Example: Strongyloides stercoralis (roundworm) and humans"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000359 "facultative endosymbiotic parasitism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000359 ObjectIntersectionOf(obo:APOLLO_SV_00000355 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:APOLLO_SV_00002024 ObjectSomeValuesFrom(obo:BFO_0000054 obo:APOLLO_SV_00000372) ObjectSomeValuesFrom(obo:RO_0000052 obo:OBI_0100026)))))
+EquivalentClasses(obo:APOLLO_SV_00000359 ObjectIntersectionOf(obo:APOLLO_SV_00000355 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:APOLLO_SV_00002024 ObjectSomeValuesFrom(obo:BFO_0000054 obo:APOLLO_SV_00000372) ObjectSomeValuesFrom(obo:RO_0000052 obo:COB_0000022)))))
 SubClassOf(obo:APOLLO_SV_00000359 obo:APOLLO_SV_00000355)
 
 # Class: obo:APOLLO_SV_00000360 (obligatory endosymbiotic parasitism)
@@ -5590,7 +5583,7 @@ AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000362 "facultative endopara
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000362 "An endosymbiotic parasitoidism that realizes a disposition of the parasitoid that is not one of its biological functions."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000362 "Example: Naegleria fowleri (brain-eating amoeba) and humans"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000362 "facultative endosymbiotic parasitoidism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000362 ObjectIntersectionOf(obo:APOLLO_SV_00000361 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:APOLLO_SV_00002024 ObjectSomeValuesFrom(obo:BFO_0000054 obo:APOLLO_SV_00000372) ObjectSomeValuesFrom(obo:RO_0000052 obo:OBI_0100026)))))
+EquivalentClasses(obo:APOLLO_SV_00000362 ObjectIntersectionOf(obo:APOLLO_SV_00000361 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:APOLLO_SV_00002024 ObjectSomeValuesFrom(obo:BFO_0000054 obo:APOLLO_SV_00000372) ObjectSomeValuesFrom(obo:RO_0000052 obo:COB_0000022)))))
 SubClassOf(obo:APOLLO_SV_00000362 obo:APOLLO_SV_00000361)
 
 # Class: obo:APOLLO_SV_00000363 (obligatory endosymbiotic parasitoidism)
@@ -5613,7 +5606,7 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000364 "William R. Hogan")
 AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000364 "endocommensalism"@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000364 "An endosymbiosis that results in benefit to one participating organism and neither harm nor benefit to the other participating organisms."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000364 "endosymbiotic commensalism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000364 ObjectIntersectionOf(obo:APOLLO_SV_00000354 ObjectComplementOf(ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:OGMS_0000032 ObjectSomeValuesFrom(obo:RO_0000052 obo:OBI_0100026)))) ObjectSomeValuesFrom(obo:BFO_0000051 obo:APOLLO_SV_00000372)))
+EquivalentClasses(obo:APOLLO_SV_00000364 ObjectIntersectionOf(obo:APOLLO_SV_00000354 ObjectComplementOf(ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:OGMS_0000032 ObjectSomeValuesFrom(obo:RO_0000052 obo:COB_0000022)))) ObjectSomeValuesFrom(obo:BFO_0000051 obo:APOLLO_SV_00000372)))
 SubClassOf(obo:APOLLO_SV_00000364 obo:APOLLO_SV_00000354)
 
 # Class: obo:APOLLO_SV_00000365 (facultative endosymbiotic commensalism)
@@ -5625,7 +5618,7 @@ AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000365 "facultative endocomm
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000365 "An endosymbiotic commensalism that realizes a dispostion of the non-host organism that benefits that is not one of its biological functions."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000365 "Example: Malaria and mosquito vector"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000365 "facultative endosymbiotic commensalism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000365 ObjectIntersectionOf(obo:APOLLO_SV_00000364 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:APOLLO_SV_00002024 ObjectSomeValuesFrom(obo:BFO_0000054 obo:APOLLO_SV_00000372) ObjectSomeValuesFrom(obo:RO_0000052 obo:OBI_0100026)))))
+EquivalentClasses(obo:APOLLO_SV_00000365 ObjectIntersectionOf(obo:APOLLO_SV_00000364 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:APOLLO_SV_00002024 ObjectSomeValuesFrom(obo:BFO_0000054 obo:APOLLO_SV_00000372) ObjectSomeValuesFrom(obo:RO_0000052 obo:COB_0000022)))))
 SubClassOf(obo:APOLLO_SV_00000365 obo:APOLLO_SV_00000364)
 
 # Class: obo:APOLLO_SV_00000366 (obligatory endosymbiotic commensalism)
@@ -5637,7 +5630,7 @@ AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000366 "obligatory endocomme
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000366 "An endosymbiotic commensalism that realizes a biological function that inheres in some proper part of the commensal organism that benefits."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000366 "Example: Passalurus ambiguus (nematode) and rabbits"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000366 "obligatory endosymbiotic commensalism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000366 ObjectIntersectionOf(obo:APOLLO_SV_00000364 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:BFO_0000034 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:BFO_0000137 obo:OBI_0100026) ObjectSomeValuesFrom(obo:RO_0000052 obo:UBERON_0000061))))))
+EquivalentClasses(obo:APOLLO_SV_00000366 ObjectIntersectionOf(obo:APOLLO_SV_00000364 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:BFO_0000034 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:BFO_0000137 obo:COB_0000022) ObjectSomeValuesFrom(obo:RO_0000052 obo:UBERON_0000061))))))
 SubClassOf(obo:APOLLO_SV_00000366 obo:APOLLO_SV_00000364)
 
 # Class: obo:APOLLO_SV_00000367 (endosymbiotic mutualism)
@@ -5660,7 +5653,7 @@ AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000368 "facultative endomutu
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000368 "An endosymbiotic mutualism that realizes one or more dispositions of one or both organisms and these dispostions are not biological functions of either organism."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000368 "Example: Hamiltonella defensa and aphids"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000368 "facultative endosymbiotic mutualism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000368 ObjectIntersectionOf(obo:APOLLO_SV_00000367 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:APOLLO_SV_00002024 ObjectSomeValuesFrom(obo:BFO_0000054 obo:APOLLO_SV_00000372) ObjectSomeValuesFrom(obo:RO_0000052 obo:OBI_0100026)))))
+EquivalentClasses(obo:APOLLO_SV_00000368 ObjectIntersectionOf(obo:APOLLO_SV_00000367 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:APOLLO_SV_00002024 ObjectSomeValuesFrom(obo:BFO_0000054 obo:APOLLO_SV_00000372) ObjectSomeValuesFrom(obo:RO_0000052 obo:COB_0000022)))))
 SubClassOf(obo:APOLLO_SV_00000368 obo:APOLLO_SV_00000367)
 
 # Class: obo:APOLLO_SV_00000369 (obligatory endosymbiotic mutualism)
@@ -5672,7 +5665,7 @@ AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000369 "obligatory endomutua
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000369 "An endosymbiotic mutualism that realizes a biological function that inheres in some proper part of at least one of the organisms participating."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000369 "Example: marine worms of genus Riftia and their endosymbiotic bacteria"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000369 "obligatory endosymbiotic mutualism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000369 ObjectIntersectionOf(obo:APOLLO_SV_00000367 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:BFO_0000034 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:BFO_0000137 obo:OBI_0100026) ObjectSomeValuesFrom(obo:RO_0000052 obo:UBERON_0000061))))))
+EquivalentClasses(obo:APOLLO_SV_00000369 ObjectIntersectionOf(obo:APOLLO_SV_00000367 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectIntersectionOf(obo:BFO_0000034 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:BFO_0000137 obo:COB_0000022) ObjectSomeValuesFrom(obo:RO_0000052 obo:UBERON_0000061))))))
 SubClassOf(obo:APOLLO_SV_00000369 obo:APOLLO_SV_00000367)
 
 # Class: obo:APOLLO_SV_00000370 (obsolete homeostasis)
@@ -5709,7 +5702,7 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000373 "Matthew Diller")
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000373 "William R. Hogan")
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000373 "An organism participating in an ectosymbiotic or endosymbiotic parasitism as the organism that benefits."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000373 "parasite"@en)
-SubClassOf(obo:APOLLO_SV_00000373 obo:OBI_0100026)
+SubClassOf(obo:APOLLO_SV_00000373 obo:COB_0000022)
 
 # Class: obo:APOLLO_SV_00000374 (parasitoid)
 
@@ -5718,7 +5711,7 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000374 "Matthew Diller")
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000374 "William R. Hogan")
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000374 "An organism participating in an ectosymbiotic or endosymbiotic parasitoidism as the organism that benefits."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000374 "parasitoid"@en)
-SubClassOf(obo:APOLLO_SV_00000374 obo:OBI_0100026)
+SubClassOf(obo:APOLLO_SV_00000374 obo:COB_0000022)
 
 # Class: obo:APOLLO_SV_00000375 (target population definition)
 
@@ -5853,7 +5846,7 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000389 "William R. Hogan")
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000389 "A planned process that realizes a census plan specification."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000389 "Census")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000389 "census taking"@en)
-SubClassOf(obo:APOLLO_SV_00000389 obo:OBI_0000011)
+SubClassOf(obo:APOLLO_SV_00000389 obo:COB_0000082)
 
 # Class: obo:APOLLO_SV_00000390 (Wolbachia vector control strategy)
 
@@ -5938,7 +5931,7 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000398 "William R. Hogan")
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000398 "A data set whose data items are about a host and its participation in an infection and potentially other activities occuring in the same time interval as the infection."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000398 "CaseRecord")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000398 "infection case record"@en)
-EquivalentClasses(obo:APOLLO_SV_00000398 ObjectExactCardinality(1 obo:IAO_0000136 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000114))))
+EquivalentClasses(obo:APOLLO_SV_00000398 ObjectExactCardinality(1 obo:IAO_0000136 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0000056 obo:APOLLO_SV_00000114))))
 SubClassOf(obo:APOLLO_SV_00000398 obo:IAO_0000100)
 
 # Class: obo:APOLLO_SV_00000399 (obsolete infection case count)
@@ -6001,7 +5994,7 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000404 "William R. Hogan"@en
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000404 "A disposition inhering in an organism of a particular biological taxon that is realized only by the organism participating in an infection as the reproducing organism inside another organism of a different particular biological taxon."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000404 "The disposition of Influenza A virus H3N2 subtype to infect human beings, the disposition of Plasmodium vivax to infect mosquitos and humans, the disposition of foot and mouth disease virus to infect cloven-hooved animals (sheep, cows, pigs, etc.)."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000404 "infectiousness"@en)
-EquivalentClasses(obo:APOLLO_SV_00000404 ObjectIntersectionOf(obo:BFO_0000016 ObjectSomeValuesFrom(obo:RO_0000052 obo:OBI_0100026) ObjectAllValuesFrom(obo:BFO_0000054 obo:APOLLO_SV_00000114)))
+EquivalentClasses(obo:APOLLO_SV_00000404 ObjectIntersectionOf(obo:BFO_0000016 ObjectSomeValuesFrom(obo:RO_0000052 obo:COB_0000022) ObjectAllValuesFrom(obo:BFO_0000054 obo:APOLLO_SV_00000114)))
 SubClassOf(obo:APOLLO_SV_00000404 obo:BFO_0000016)
 
 # Class: obo:APOLLO_SV_00000405 (potentially infectious contacting)
@@ -6034,8 +6027,8 @@ AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000407 "An organism that is 
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000407 "William R. Hogan"@en)
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000407 "An organism that has been exposed to a pathogen by coming into close physical proximity with either an infectious host or a contaminated thing."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000407 "contacted organism"@en)
-EquivalentClasses(obo:APOLLO_SV_00000407 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000406)))
-SubClassOf(obo:APOLLO_SV_00000407 obo:OBI_0100026)
+EquivalentClasses(obo:APOLLO_SV_00000407 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0000053 obo:APOLLO_SV_00000406)))
+SubClassOf(obo:APOLLO_SV_00000407 obo:COB_0000022)
 
 # Class: obo:APOLLO_SV_00000408 (contact definition)
 
@@ -7159,7 +7152,6 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000524 "William R. Hogan"@en
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000524 "It's compiling \"software\" (scare quotes) and not \"source code\" because you can compile Java bytecode to machine code, and Java bytecode is not technically \"source code\".  Compiling source code would be a subclass of this class (as would compiling Java bytecode, etc.)."@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000524 "Source code can be automatically generated to some extent, but we're assuming humans still curate it minimally. Also, in the case of Java and its JVM, it's machine interpretable instructions, not directly executable. Ditto for other languages with intermediate form like Java byte code."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000524 "compiling software"@en)
-SubClassOf(obo:APOLLO_SV_00000524 obo:OBI_0000011)
 
 # Class: obo:APOLLO_SV_00000525 (compiled software code)
 
@@ -7346,7 +7338,7 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000545 "Matthew Diller")
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000545 "William R. Hogan")
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000545 "A planned process that is the realization of a disease surveillance objective specification."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000545 "disease surveillance"@en)
-SubClassOf(obo:APOLLO_SV_00000545 obo:OBI_0000011)
+SubClassOf(obo:APOLLO_SV_00000545 obo:COB_0000082)
 
 # Class: obo:APOLLO_SV_00000546 (self-initiated travel avoidance behavior)
 
@@ -7572,7 +7564,7 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000569 "William R. Hogan")
 AnnotationAssertion(obo:IAO_0000600 obo:APOLLO_SV_00000569 "The total number of diseased individuals in a population at a point in time."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:APOLLO_SV_00000569 "totalCaseCount")
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000569 "total disease cases"@en)
-EquivalentClasses(obo:APOLLO_SV_00000569 ObjectIntersectionOf(obo:APOLLO_SV_00000617 ObjectSomeValuesFrom(obo:IAO_0000136 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000053 obo:OGMS_0000031))) ObjectSomeValuesFrom(obo:OBI_0000312 obo:APOLLO_SV_00000155)))
+EquivalentClasses(obo:APOLLO_SV_00000569 ObjectIntersectionOf(obo:APOLLO_SV_00000617 ObjectSomeValuesFrom(obo:IAO_0000136 ObjectIntersectionOf(obo:COB_0000022 ObjectSomeValuesFrom(obo:RO_0000053 obo:OGMS_0000031))) ObjectSomeValuesFrom(obo:OBI_0000312 obo:APOLLO_SV_00000155)))
 SubClassOf(obo:APOLLO_SV_00000569 obo:APOLLO_SV_00000617)
 
 # Class: obo:APOLLO_SV_00000570 (employment status data item)
@@ -7665,7 +7657,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000579 "A planned process th
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000579 "Matthew Diller"@en)
 AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000579 "William R. Hogan"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000579 "infectious disease forecast"@en)
-SubClassOf(obo:APOLLO_SV_00000579 obo:OBI_0000011)
+SubClassOf(obo:APOLLO_SV_00000579 obo:COB_0000082)
 
 # Class: obo:APOLLO_SV_00000580 (infectious disease nowcast)
 
@@ -8377,6 +8369,29 @@ AnnotationAssertion(terms:created obo:APOLLO_SV_00000655 "2026-04-04T19:52:04Z"^
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000655 "hypothetical scenario"@en)
 SubClassOf(obo:APOLLO_SV_00000655 obo:APOLLO_SV_00000184)
 
+# Class: obo:APOLLO_SV_00000656 (antibody administration control strategy)
+
+AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000656 "An individual treatment control strategy that has as part an action specification that  (has a concretization that) is realized in an antibody injection process."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000656 "William R. Hogan"@en)
+AnnotationAssertion(obo:IAO_0000233 obo:APOLLO_SV_00000656 <https://github.com/ApolloDev/apollo-sv/issues/273>)
+AnnotationAssertion(dc:contributor obo:APOLLO_SV_00000656 "Lucie Contamin")
+AnnotationAssertion(terms:created obo:APOLLO_SV_00000656 "2026-07-13T14:13:40Z"^^xsd:dateTime)
+AnnotationAssertion(terms:creator obo:APOLLO_SV_00000656 <https://orcid.org/0000-0002-9881-1017>)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000656 "antibody administration control strategy"@en)
+SubClassOf(obo:APOLLO_SV_00000656 obo:APOLLO_SV_00000194)
+
+# Class: obo:APOLLO_SV_00000657 (antibody administration census)
+
+AnnotationAssertion(obo:IAO_0000115 obo:APOLLO_SV_00000657 "A population treatment census that is about one or more antibody administrations to organisms in a population."@en)
+AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000657 "William R. Hogan"@en)
+AnnotationAssertion(obo:IAO_0000233 obo:APOLLO_SV_00000657 <https://github.com/ApolloDev/apollo-sv/issues/273>)
+AnnotationAssertion(dc:contributor obo:APOLLO_SV_00000657 "Lucie Contamin")
+AnnotationAssertion(terms:created obo:APOLLO_SV_00000657 "2026-07-13T13:52:47Z"^^xsd:dateTime)
+AnnotationAssertion(terms:creator obo:APOLLO_SV_00000657 <https://orcid.org/0000-0002-9881-1017>)
+AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000657 "antibody administration census"@en)
+SubClassOf(obo:APOLLO_SV_00000657 obo:APOLLO_SV_00000187)
+SubClassOf(obo:APOLLO_SV_00000657 ObjectSomeValuesFrom(obo:IAO_0000136 obo:DRON_00000031))
+
 # Class: obo:APOLLO_SV_00000793 (epidemic simulator action specification)
 
 AnnotationAssertion(obo:IAO_0000111 obo:APOLLO_SV_00000793 "epidemic simulator action specification"@en)
@@ -8406,8 +8421,6 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000796 "William R. Hogan"@en
 AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000796 "data set creation"@en)
 AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000796 "dataset creation"@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000796 "dataset creating"@en)
-EquivalentClasses(obo:APOLLO_SV_00000796 ObjectIntersectionOf(obo:OBI_0000011 ObjectSomeValuesFrom(obo:OBI_0000299 obo:IAO_0000100)))
-SubClassOf(obo:APOLLO_SV_00000796 obo:OBI_0000011)
 
 # Class: obo:APOLLO_SV_00000797 (creating a copyright license)
 
@@ -8417,8 +8430,8 @@ AnnotationAssertion(obo:IAO_0000117 obo:APOLLO_SV_00000797 "William R. Hogan"@en
 AnnotationAssertion(obo:IAO_0000118 obo:APOLLO_SV_00000797 "copyright license creation"@en)
 AnnotationAssertion(rdfs:comment obo:APOLLO_SV_00000797 "Note: for less than 24 hours, this class was a bit more specific to software licenses, but it did not have the equivalent class axiom during that time."@en)
 AnnotationAssertion(rdfs:label obo:APOLLO_SV_00000797 "creating a copyright license"@en)
-EquivalentClasses(obo:APOLLO_SV_00000797 ObjectIntersectionOf(obo:OBI_0000011 ObjectSomeValuesFrom(obo:OBI_0000299 obo:APOLLO_SV_00000798)))
-SubClassOf(obo:APOLLO_SV_00000797 obo:OBI_0000011)
+EquivalentClasses(obo:APOLLO_SV_00000797 ObjectIntersectionOf(obo:COB_0000082 ObjectSomeValuesFrom(obo:OBI_0000299 obo:APOLLO_SV_00000798)))
+SubClassOf(obo:APOLLO_SV_00000797 obo:COB_0000082)
 
 # Class: obo:APOLLO_SV_00000798 (copyright license)
 
@@ -8572,6 +8585,10 @@ AnnotationAssertion(oboInOwl:id obo:DOID_8469 "DOID:8469")
 AnnotationAssertion(rdfs:label obo:DOID_8469 "influenza")
 SubClassOf(obo:DOID_8469 obo:APOLLO_SV_00000239)
 
+# Class: obo:DRON_00000031 (drug administration)
+
+SubClassOf(obo:DRON_00000031 obo:OGMS_0000090)
+
 # Class: obo:ENVO_00010483 (environmental material)
 
 AnnotationAssertion(obo:IAO_0000115 obo:ENVO_00010483 "A portion of environmental material is a fiat object which forms the medium or part of the medium of an environmental system.")
@@ -8710,7 +8727,7 @@ AnnotationAssertion(obo:IAO_0000118 obo:ERO_0000657 "environmental genomic analy
 AnnotationAssertion(obo:IAO_0000119 obo:ERO_0000657 "http://en.wikipedia.org/wiki/Metagenomics")
 AnnotationAssertion(obo:IAO_0000412 obo:ERO_0000657 "http://purl.obolibrary.org/obo/ero.owl")
 AnnotationAssertion(rdfs:label obo:ERO_0000657 "metagenomics analysis")
-SubClassOf(obo:ERO_0000657 obo:OBI_0000011)
+SubClassOf(obo:ERO_0000657 obo:COB_0000082)
 
 # Class: obo:FBcv_0000667 (website)
 
@@ -8742,6 +8759,10 @@ AnnotationAssertion(obo:IAO_0000117 obo:GEO_000000372 "William R. Hogan")
 AnnotationAssertion(obo:IAO_0000600 obo:GEO_000000372 "An arbitrary part of the Earth defined by human-made boundaries and/or natural features such as rivers."@en)
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:GEO_000000372 "Location")
 
+# Class: obo:IDO_0000623 (communicability)
+
+SubClassOf(obo:IDO_0000623 obo:BFO_0000016)
+
 # Class: obo:NBO_0000034 (sexual activity)
 
 AnnotationAssertion(obo:IAO_0000412 obo:NBO_0000034 "http://purl.obolibrary.org/obo/MF.owl")
@@ -8760,10 +8781,10 @@ AnnotationAssertion(obo:IAO_0000118 obo:NCBITaxon_10090 "House mouse"@en)
 AnnotationAssertion(rdfs:label obo:NCBITaxon_10090 "Mus musculus")
 SubClassOf(obo:NCBITaxon_10090 obo:NCBITaxon_2759)
 
-# Class: obo:NCBITaxon_10239 (Viruses)
+# Class: obo:NCBITaxon_10239 (Virus)
 
 AnnotationAssertion(rdfs:label obo:NCBITaxon_10239 "Virus"@en)
-SubClassOf(obo:NCBITaxon_10239 obo:OBI_0100026)
+SubClassOf(obo:NCBITaxon_10239 obo:COB_0000022)
 
 # Class: obo:NCBITaxon_10240 (Poxviridae)
 
@@ -10516,7 +10537,7 @@ SubClassOf(obo:NCBITaxon_199306 obo:NCBITaxon_5500)
 # Class: obo:NCBITaxon_2 (Bacteria)
 
 AnnotationAssertion(rdfs:label obo:NCBITaxon_2 "Bacteria"@en)
-SubClassOf(obo:NCBITaxon_2 obo:OBI_0100026)
+SubClassOf(obo:NCBITaxon_2 obo:COB_0000022)
 
 # Class: obo:NCBITaxon_201174 (Actinobacteria <phylum>)
 
@@ -10689,7 +10710,7 @@ SubClassOf(obo:NCBITaxon_27319 obo:NCBITaxon_4892)
 # Class: obo:NCBITaxon_2759 (Eukaryota)
 
 AnnotationAssertion(rdfs:label obo:NCBITaxon_2759 "Eukaryota"@en)
-SubClassOf(obo:NCBITaxon_2759 obo:OBI_0100026)
+SubClassOf(obo:NCBITaxon_2759 obo:COB_0000022)
 
 # Class: obo:NCBITaxon_27592 (Bovinae)
 
@@ -13459,491 +13480,13 @@ AnnotationAssertion(obo:IAO_0000412 obo:OAE_0000055 "http://purl.obolibrary.org/
 AnnotationAssertion(rdfs:label obo:OAE_0000055 "contraindication"@en)
 SubClassOf(obo:OAE_0000055 obo:BFO_0000016)
 
-# Class: obo:OBI_0000011 (planned process)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0000011 "planned process"@en)
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0000011 "Injecting mice with a vaccine in order to test its efficacy")
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0000011 obo:IAO_0000122)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000011 "A processual entity that realizes a plan which is the concretization of a plan specification."@en)
-AnnotationAssertion(obo:IAO_0000116 obo:OBI_0000011 "'Plan' includes a future direction sense. That can be problematic if plans are changed during their execution. There are however implicit contingencies for protocols that an agent has in his mind that can be considered part of the plan, even if the agent didn't have them in mind before. Therefore, a planned process can diverge from what the agent would have said the plan was before executing it, by adjusting to problems encountered during execution (e.g. choosing another reagent with equivalent properties, if the originally planned one has run out.)")
-AnnotationAssertion(obo:IAO_0000116 obo:OBI_0000011 "We are only considering successfully completed planned processes. A plan may be modified, and details added during execution. For a given planned process, the associated realized plan specification is the one encompassing all changes made during execution. This means that all processes in which an agent acts towards achieving some 
-  objectives is a planned process.")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000011 "Bjoern Peters")
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0000011 "branch derived")
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0000011 obo:obi.owl)
-AnnotationAssertion(rdfs:label obo:OBI_0000011 "planned process"@en)
-EquivalentClasses(obo:OBI_0000011 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:IAO_0000104 ObjectSomeValuesFrom(obo:BFO_0000051 obo:IAO_0000005)))))
-SubClassOf(obo:OBI_0000011 obo:BFO_0000015)
-
-# Class: obo:OBI_0000047 (processed material)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0000047 "processed material"@en)
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0000047 "Examples include gel matrices, filter paper, parafilm and buffer solutions, mass spectrometer, tissue samples"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0000047 obo:IAO_0000122)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000047 "Is a material entity that is created or changed during material processing."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000047 "PERSON: Alan Ruttenberg"@en)
-AnnotationAssertion(rdfs:label obo:OBI_0000047 "processed material"@en)
-SubClassOf(obo:OBI_0000047 obo:BFO_0000040)
-
-# Class: obo:OBI_0000066 (investigation)
-
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0000066 obo:obi.owl)
-
-# Class: obo:OBI_0000115 (intervention design)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0000115 "intervention design"@en)
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0000115 "PMID: 18208636.Br J Nutr. 2008 Jan 22;:1-11.Effect of vitamin D supplementation on bone and vitamin D status among Pakistani immigrants in Denmark: a randomised double-blinded placebo-controlled intervention study."@en)
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0000115 obo:IAO_0000125)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000115 "An intervention design is a study design in which a controlled process applied to the subjects (the intervention) serves as the independent variable manipulated by the experimentalist. The treatment (perturbation or intervention) defined can be defined as a combination of values taken by independent variable manipulated by the experimentalists are applied to the recruited subjects assigned (possibly by applying specific methods) to treatment groups. The specificity of intervention design is the fact that independent variables are being manipulated and a response of the biological system is evaluated via response variables as monitored by possibly a series of assays."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000115 "Philppe Rocca-Serra"@en)
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0000115 "OBI branch derived"@en)
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0000115 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:label obo:OBI_0000115 "intervention design"@en)
-SubClassOf(obo:OBI_0000115 obo:OBI_0500000)
-
-# Class: obo:OBI_0000227 (data encoding)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0000227 "data encoding"@en)
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0000227 "storage of measurement results from an assay into a text file, such as"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0000227 obo:IAO_0000120)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000227 "A documenting process to encode an information entity into a digital document"@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000227 "PlanAndPlannedProcess Branch"@en)
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0000227 "OBI branch derived"@en)
-AnnotationAssertion(obo:IAO_0000232 obo:OBI_0000227 "We (protocol application branch) placed this term because it kept getting bounced from data transformation and DENRIE"@en)
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0000227 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:label obo:OBI_0000227 "data encoding"@en)
-SubClassOf(obo:OBI_0000227 obo:IAO_0000572)
-
-# Class: obo:OBI_0000245 (organization)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0000245 "organization"@en)
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0000245 "PMID: 16353909.AAPS J. 2005 Sep 22;7(2):E274-80. Review. The joint food and agriculture organization of the United Nations/World Health Organization Expert Committee on Food Additives and its role in the evaluation of the safety of veterinary drug residues in foods."@en)
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0000245 obo:IAO_0000122)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000245 "An organization is a continuant entity which can play roles,  has members, and has a set of organization rules.  Members of organizations are either organizations themselves or individual people. Members can bear specific organization member roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the organization by the organization members."@en)
-AnnotationAssertion(obo:IAO_0000116 obo:OBI_0000245 "BP: The definition summarizes long email discussions on the OBI developer, roles, biomaterial and denrie branches. It leaves open if an organization is a material entity or a dependent continuant, as no consensus was reached on that.  The current placement as material is therefore temporary, in order to move forward with development. Here is the entire email summary, on which the definition is based:
-
-1) there are organization_member_roles (president, treasurer, branch
-editor), with individual persons as bearers
-
-2) there are organization_roles (employer, owner, vendor, patent holder)
-
-3) an organization has a charter / rules / bylaws, which specify what roles
-there are, how they should be realized, and how to modify the
-charter/rules/bylaws themselves.
-
-It is debatable what the organization itself is (some kind of dependent
-continuant or an aggregate of people). This also determines who/what the
-bearer of organization_roles' are. My personal favorite is still to define
-organization as a kind of 'legal entity', but thinking it through leads to
-all kinds of questions that are clearly outside the scope of OBI.
-
-Interestingly enough, it does not seem to matter much where we place
-organization itself, as long as we can subclass it (University, Corporation,
-Government Agency, Hospital), instantiate it (Affymetrix, NCBI, NIH, ISO,
-W3C, University of Oklahoma), and have it play roles.
-
-This leads to my proposal: We define organization through the statements 1 -
-3 above, but without an 'is a' statement for now. We can leave it in its
-current place in the is_a hierarchy (material entity) or move it up to
-'continuant'. We leave further clarifications to BFO, and close this issue
-for now."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000245 "PERSON: Alan Ruttenberg")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000245 "PERSON: Bjoern Peters")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000245 "PERSON: Philippe Rocca-Serra")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000245 "PERSON: Susanna Sansone")
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0000245 "GROUP: OBI")
-AnnotationAssertion(rdfs:label obo:OBI_0000245 "organization"@en)
-
-# Class: obo:OBI_0000425 (averaging objective)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0000425 "averaging objective"@en)
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0000425 "A mean calculation which has averaging objective is a descriptive statistics calculation in which the mean is calculated by taking the sum of all of the observations in a data set divided by the total number of observations. It gives a measure of the 'center of gravity' for the data set. It is also known as the first moment."@en)
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0000425 obo:IAO_0000122)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000425 "An averaging objective is a data transformation objective where the aim is to perform mean calculations on the input of the data transformation."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000425 "Elisabetta Manduchi")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000425 "James Malone"@en)
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0000425 "PERSON: Elisabetta Manduchi")
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0000425 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:label obo:OBI_0000425 "averaging objective"@en)
-SubClassOf(obo:OBI_0000425 obo:OBI_0200166)
-
-# Class: obo:OBI_0000471 (study design execution)
-
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0000471 obo:obi.owl)
-
-# Class: obo:OBI_0000576 (scattered molecular aggregate)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0000576 "scattered molecular aggregate"@en)
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0000576 "The sodium and chloride ions in a glass of salt water")
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0000576 obo:IAO_0000123)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000576 "A material entity that consists of all the molecules of a specific type that are located in some bounded region and which is part of a more massive material entity that has parts that are other such aggregates"@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000576 "PERSON: Alan Ruttenberg"@en)
-AnnotationAssertion(obo:IAO_0000118 obo:OBI_0000576 "Collective"@en)
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0000576 "Discussion in Karslruhe with, among others, Alan Rector, Stefan Schulz, Marijke Keet, Melanie Courtot, and Alan Ruttenberg. With inspiration from the paper Granularity, scale and collectivity: When size does and does not matter, Alan Recto, Jeremy Rogers, Thomas Bittner, Journal of Biomedical Informatics 39 (2006) 333-349"@en)
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0000576 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:label obo:OBI_0000576 "scattered molecular aggregate"@en)
-SubClassOf(obo:OBI_0000576 obo:BFO_0000027)
-
-# Class: obo:OBI_0000658 (data representational model)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0000658 "data representational model")
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0000658 "gene regulatory graph model")
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0000658 "phylogenetic tree")
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0000658 "protein interaction network")
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0000658 obo:IAO_0000120)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000658 "Data representational model is an information content entity of the  relationships between data items. A data representational model is encoded in a data format specification such as for cytoscape or biopax.")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000658 "Melanie Courtot")
-AnnotationAssertion(obo:IAO_0000118 obo:OBI_0000658 "data structure")
-AnnotationAssertion(obo:IAO_0000118 obo:OBI_0000658 "data structure specification")
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0000658 "GROUP: OBI")
-AnnotationAssertion(obo:IAO_0000232 obo:OBI_0000658 "2009-02-28: work on this term has been finalized during the OBI workshop winter 2009")
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0000658 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:label obo:OBI_0000658 "data representational model")
-SubClassOf(obo:OBI_0000658 obo:IAO_0000033)
-
-# Class: obo:OBI_0000674 (center value)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0000674 "center value"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0000674 obo:IAO_0000125)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000674 "A data item that is produced as the output of a center calculation data transformation and represents the center value of the input data."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000674 "PERSON: James Malone")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000674 "PERSON: Monnie McGee")
-AnnotationAssertion(obo:IAO_0000118 obo:OBI_0000674 "median")
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0000674 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:OBI_0000674 "median")
-AnnotationAssertion(rdfs:label obo:OBI_0000674 "center value"@en)
-SubClassOf(obo:OBI_0000674 obo:IAO_0000027)
-
-# Class: obo:OBI_0000679 (average value)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0000679 "average value")
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0000679 obo:IAO_0000125)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000679 "A  data item that is produced as the output of an averaging data transformation and represents the average value of the input data."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000679 "PERSON: James Malone")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000679 "PERSON: Monnie McGee")
-AnnotationAssertion(obo:IAO_0000118 obo:OBI_0000679 "arithmetic mean")
-AnnotationAssertion(obo:IAO_0000118 obo:OBI_0000679 "false"^^xsd:boolean)
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0000679 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(obo:IAO_0000600 obo:OBI_0000679 "A  data item that is produced as the output of an averaging data transformation and represents the average value of the input data."@en)
-AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:OBI_0000679 "mean")
-AnnotationAssertion(rdfs:label obo:OBI_0000679 "average value"@en)
-EquivalentClasses(obo:OBI_0000679 ObjectIntersectionOf(obo:IAO_0000027 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0200170)))
-SubClassOf(obo:OBI_0000679 obo:IAO_0000027)
-
-# Class: obo:OBI_0000714 (graph of vertices)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0000714 "graph of vertices")
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0000714 "For example, if the nodes are cities, then the edges may have numerical values that correspond to the distances between the cities.")
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0000714 obo:IAO_0000123)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000714 "A construct that consists of many nodes connected with edges. The edges represent a relationship between the objects represented by the nodes.  A graph can be equivalently represented as a matrix.")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000714 "Bjoern Peters")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000714 "Chris Stoeckert")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000714 "James Malone")
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0000714 "WEB: http://mitpress.mit.edu/books/FLAOH/cbnhtml/glossary-G.html")
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0000714 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:label obo:OBI_0000714 "graph of vertices")
-SubClassOf(obo:OBI_0000714 obo:IAO_0000038)
-
-# Class: obo:OBI_0000968 (device)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0000968 "device")
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0000968 "A voltmeter is a measurement device which is intended to perform some measure function.")
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0000968 obo:IAO_0000123)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000968 "A device is a processed material which is designed to perform some function or functions")
-AnnotationAssertion(obo:IAO_0000116 obo:OBI_0000968 "food should not classify as a device - counter example for using manufacturer and not device. macroscopic only")
-AnnotationAssertion(obo:IAO_0000116 obo:OBI_0000968 "if we keep this exploratory term we could reinstate the old device class which is obsolete_device. didn't work before as we had manufacturing as part of  the definition. device was needed, but couldn't define in Philadelphia. If we decide  that in addition to function there are also capabilities for which a device is created we will include these in the definition.")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0000968 "PERSON: Helen Parkinson")
-AnnotationAssertion(obo:IAO_0000118 obo:OBI_0000968 "instrument")
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0000968 "OBI Vancouver workshop 2010")
-AnnotationAssertion(rdfs:comment obo:OBI_0000968 "would include reagents")
-AnnotationAssertion(rdfs:label obo:OBI_0000968 "device")
-SubClassOf(obo:OBI_0000968 obo:OBI_0000047)
-
-# Class: obo:OBI_0001092 (computer cluster)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0001092 "computer cluster")
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0001092 obo:IAO_0000120)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001092 "A group of linked computers, working together closely so that in many respects they form a single computer.")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0001092 "PERSON: Erik Segerdell")
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0001092 "http://en.wikipedia.org/wiki/Cluster_(computing)")
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0001092 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:label obo:OBI_0001092 "computer cluster")
-SubClassOf(obo:OBI_0001092 obo:OBI_0400107)
-
 # Class: obo:OBI_0001173 (service)
 
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0001173 "service")
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0001173 "providing a training course for UCSD employees how to run a DNA sequencer; sequencing a DNA sample provided by a service consumer restricted to non-human samples; giving access to tissue samples in a biobank within OHSU; JAX shipping mice from their colony ")
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0001173 obo:IAO_0000120)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001173 "A planned process in which a service provider performs a task (i.e. a planned process) for a service consumer.")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0001173 "Carlo; Matt")
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0001173 "OBI workshop San Diego 2011")
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0001173 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:label obo:OBI_0001173 "service")
-SubClassOf(obo:OBI_0001173 obo:OBI_0000011)
-
-# Class: obo:OBI_0001226 (environmental history design)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0001226 "environmental history design"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0001226 obo:IAO_0000120)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001226 "A study design in which some aspect of the organism's environmental history is studied, such as exposure to teratogen, radiation, climate etc."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0001226 "Person: Chris Stoeckert, Jie Zheng")
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0001226 "MO_698 environmental_history_design")
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0001226 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:label obo:OBI_0001226 "environmental history design"@en)
-SubClassOf(obo:OBI_0001226 obo:OBI_0500000)
-
-# Class: obo:OBI_0001293 (disease state design)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0001293 "disease state design"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0001293 obo:IAO_0000120)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001293 "A study design in which the pathological condition of a part, organ, or system of an organism is studied. The etiology may be from infection, genetic defect, or environmental stress."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0001293 "Person: Chris Stoeckert, Jie Zheng")
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0001293 "MO_902 disease_state_design"@en)
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0001293 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:label obo:OBI_0001293 "disease state design"@en)
-SubClassOf(obo:OBI_0001293 obo:OBI_0500000)
-
-# Class: obo:OBI_0001454 (pathogenicity design)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0001454 "pathogenicity design"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0001454 obo:IAO_0000120)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001454 "A study design in which an infective agent such as a bacterium, virus, protozoan, fungus etc. infects a host organism(s) and the infective agent is assayed."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0001454 "Person: Chris Stoeckert, Jie Zheng")
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0001454 "MO_807 pathogenicity_design"@en)
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0001454 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:label obo:OBI_0001454 "pathogenicity design"@en)
-SubClassOf(obo:OBI_0001454 obo:OBI_0500000)
-
-# Class: obo:OBI_0001530 (data service)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0001530 "data service")
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0001530 "Data analysis service such statistical abalysis or storage service such data  backup.")
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0001530 obo:IAO_0000125)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001530 "A service that has some information content entity as input and output.")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0001530 "PERSON: Carlo Torniai")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0001530 "PERSON: Matthew Brush")
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0001530 "PERSON: Carlo Torniai")
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0001530 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:comment obo:OBI_0001530 "Information content entity was used as specified input and output since it was more appropriate then data item or dataset.")
-AnnotationAssertion(rdfs:label obo:OBI_0001530 "data service")
-EquivalentClasses(obo:OBI_0001530 ObjectIntersectionOf(obo:OBI_0001173 ObjectSomeValuesFrom(obo:OBI_0000417 ObjectUnionOf(obo:APOLLO_SV_00000799 ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:APOLLO_SV_00000524 ObjectSomeValuesFrom(obo:OBI_0000293 obo:APOLLO_SV_00000799)))))))
-SubClassOf(obo:OBI_0001530 obo:OBI_0001173)
-
-# Class: obo:OBI_0001554 (rate measurement datum)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0001554 "rate measurement datum")
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0001554 "The rate of disassociation of a peptide from a complex with an MHC molecule measured by the ratio of bound and unbound peptide per unit of time.")
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0001554 obo:IAO_0000120)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001554 "A scalar measurement datum that represents the number of events occuring over a time interval")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0001554 "PERSON: Bjoern Peters, Randi Vita")
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0001554 "IEDB")
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0001554 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:label obo:OBI_0001554 "rate measurement datum")
-SubClassOf(obo:OBI_0001554 obo:IAO_0000032)
+SubClassOf(obo:OBI_0001173 obo:COB_0000082)
 
 # Class: obo:OBI_0001615 (investigation description)
 
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0001615 "investigation description"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0001615 obo:IAO_0000120)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001615 "A textual entity that describes an investigation."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0001615 "Person: Chris Stoeckert, Jie Zheng"@en)
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0001615 "NIAID GSCID-BRC metadata working group"@en)
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0001615 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(obo:OBI_0001847 obo:OBI_0001615 "study description")
-AnnotationAssertion(obo:OBI_0001886 obo:OBI_0001615 "project description"@en)
-AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:OBI_0001615 "investigationDescription")
-AnnotationAssertion(dc:source obo:OBI_0001615 "NIAID GSCID-BRC")
-AnnotationAssertion(rdfs:label obo:OBI_0001615 "investigation description"@en)
 SubClassOf(obo:OBI_0001615 obo:IAO_0000300)
-
-# Class: obo:OBI_0001628 (investigation identifier)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0001628 "investigation identifier"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0001628 obo:IAO_0000120)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001628 "A CRID symbol used to identify an investigation."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0001628 "Person: Chris Stoeckert, Jie Zhneg"@en)
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0001628 "NIAID GSCID-BRC metadata working group"@en)
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0001628 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(obo:OBI_0001886 obo:OBI_0001628 "project ID"@en)
-AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:OBI_0001628 "investigationLabel")
-AnnotationAssertion(dc:source obo:OBI_0001628 "NIAID GSCID-BRC")
-AnnotationAssertion(rdfs:label obo:OBI_0001628 "investigation identifier"@en)
-SubClassOf(obo:OBI_0001628 obo:IAO_0000577)
-
-# Class: obo:OBI_0001629 (grant identifier)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0001629 "grant identifier"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0001629 obo:IAO_0000120)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001629 "A CRID symbol used to identify a grant."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0001629 "Person: Chris Stoeckert, Jie Zheng"@en)
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0001629 "NIAID GSCID-BRC metadata working group"@en)
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0001629 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(obo:OBI_0001886 obo:OBI_0001629 "grant ID"@en)
-AnnotationAssertion(dc:source obo:OBI_0001629 "NIAID GSCID-BRC")
-AnnotationAssertion(rdfs:label obo:OBI_0001629 "grant identifier"@en)
-SubClassOf(obo:OBI_0001629 obo:IAO_0020000)
-
-# Class: obo:OBI_0001958 (systematic review study design)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0001958 "systematic review study design")
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0001958 "Red blood cell transfusion in patients with traumatic brain injury: a systematic review protocol. http://www.ncbi.nlm.nih.gov/pmc/ar\\
-ticles/PMC4090399/")
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0001958 "The effect of moderate gestational alcohol consumption during pregnancy on speech and language outcomes in children: a systematic re\\
-view. http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3892059/")
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0001958 obo:IAO_0000120)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001958 "A study design for identifying in the literature prior studies of a pre-determined phenomenon or set of related phenomena according \\
-to certain criteria, extracting findings from these studies, and summarizing these findings and/or attempting to draw new conclusions from them which were no\\
-t justified by any of the individual, prior studies. Many systematic reviews also assess the quality of the studies so reviewed.")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0001958 "PERSON: Bill Hogan")
-AnnotationAssertion(rdfs:label obo:OBI_0001958 "systematic review study design")
-SubClassOf(obo:OBI_0001958 obo:OBI_0500000)
-
-# Class: obo:OBI_0002110 (digital object identifier)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0002110 "digital object identifier"@en)
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0002110 "The doi symbol: \"10.1109/5.771073\" resolves to ieee website: http://ieeexplore.ieee.org/xpl/articleDetails.jsp?reload=true&arnumber=771073")
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0002110 obo:IAO_0000120)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0002110 "A centrally registered identifier symbol used to uniquely identify objects given by International DOI Foundation. The DOI system is particularly used for electronic documents such as journal articles.")
-AnnotationAssertion(obo:IAO_0000116 obo:OBI_0002110 "Discussed on Aug 22, 2016 OBI dev call. Details see tracker:
-https://sourceforge.net/p/obi/obi-terms/818/")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0002110 "OBI developers")
-AnnotationAssertion(obo:IAO_0000118 obo:OBI_0002110 "DOI")
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0002110 "https://en.wikipedia.org/wiki/Digital_object_identifier
-https://www.doi.org/")
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0002110 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:label obo:OBI_0002110 "digital object identifier"@en)
-SubClassOf(obo:OBI_0002110 obo:IAO_0020000)
-
-# Class: obo:OBI_0100026 (organism)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0100026 "organism"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0100026 obo:IAO_0000121)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0100026 "A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs."@en)
-AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:OBI_0100026 "Individual")
-AnnotationAssertion(rdfs:label obo:OBI_0100026 "organism"@en)
-
-# Class: obo:OBI_0200000 (data transformation)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0200000 "data transformation"@en)
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0200000 "The application of a clustering protocol to microarray data or the application of a statistical testing method on a primary data set to determine a p-value.")
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0200000 obo:IAO_0000125)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0200000 "A data transformation is a process which produces output data from input data"@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0200000 "Elisabetta Manduchi"@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0200000 "Helen Parkinson"@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0200000 "James Malone"@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0200000 "Melanie Courtot"@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0200000 "Philippe Rocca-Serra")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0200000 "Richard Scheuermann"@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0200000 "Ryan Brinkman"@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0200000 "Tina Hernandez-Boussard"@en)
-AnnotationAssertion(obo:IAO_0000118 obo:OBI_0200000 "data analysis"@en)
-AnnotationAssertion(obo:IAO_0000118 obo:OBI_0200000 "data processing"@en)
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0200000 "Branch editors"@en)
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0200000 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:label obo:OBI_0200000 "data transformation"@en)
-SubClassOf(obo:OBI_0200000 obo:OBI_0000011)
-SubClassOf(obo:OBI_0200000 ObjectSomeValuesFrom(obo:OBI_0000417 obo:OBI_0200166))
-
-# Class: obo:OBI_0200166 (data transformation objective)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0200166 "data transformation objective"@en)
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0200166 "normalize objective"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0200166 obo:IAO_0000122)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0200166 "A data transformation objective is an objective specification that a data transformation may have towards which the realization of that transformation is directed."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0200166 "James Malone"@en)
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0200166 "PERSON: James Malone"@en)
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0200166 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:label obo:OBI_0200166 "data transformation objective"@en)
-SubClassOf(obo:OBI_0200166 obo:IAO_0000005)
-
-# Class: obo:OBI_0200170 (averaging data transformation)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0200170 "averaging data transformation"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0200170 obo:IAO_0000123)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0200170 "An averaging data transformation is a data transformation that has objective averaging."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0200170 "James Malone")
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0200170 "PERSON: James Malone"@en)
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0200170 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:label obo:OBI_0200170 "averaging data transformation"@en)
-EquivalentClasses(obo:OBI_0200170 ObjectUnionOf(ObjectSomeValuesFrom(obo:OBI_0000299 obo:OBI_0000679) ObjectSomeValuesFrom(obo:OBI_0000417 obo:OBI_0000425)))
-SubClassOf(obo:OBI_0200170 obo:OBI_0200000)
-
-# Class: obo:OBI_0300311 (observation design)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0300311 "observation design"@en)
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0300311 "PMID: 12387964.Lancet. 2002 Oct 12;360(9340):1144-9.Deficiency of antibacterial peptides in patients with morbus Kostmann: an observation study."@en)
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0300311 obo:IAO_0000125)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0300311 "observation design is a study design in which subjects are monitored in the absence of any active intervention by experimentalists."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0300311 "Philippe Rocca-Serra"@en)
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0300311 "OBI branch derived"@en)
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0300311 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:label obo:OBI_0300311 "observation design"@en)
-SubClassOf(obo:OBI_0300311 obo:OBI_0500000)
-
-# Class: obo:OBI_0302867 (predicted data item)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0302867 "predicted data item")
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0302867 obo:IAO_0000120)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0302867 "A data item that was generated on the basis of a calculation or logical reasoning"@en)
-AnnotationAssertion(obo:IAO_0000116 obo:OBI_0302867 "BP 12/21: Edited the incomplete definition from Philippe. It is still unclear to me if this should be a data item at all, or an information content entity. This will be important, because if we exclude predictions from data items, we will run into issues that we willl have to duplicate things like 'weight datum' etc. all of which can be predicted. ")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0302867 "Philippe Rocca-Serra; Bjoern Peters")
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0302867 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:comment obo:OBI_0302867 "APOLLO DEVELOPERS: We need to check whether OBI changes the label and the hierarchical place of this class."@en)
-AnnotationAssertion(rdfs:label obo:OBI_0302867 "calculated datum"@en)
-AnnotationAssertion(rdfs:label obo:OBI_0302867 "predicted data item"@en)
-SubClassOf(obo:OBI_0302867 obo:IAO_0000109)
-
-# Class: obo:OBI_0302914 (digital curation)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0302914 "digital curation"@en)
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0302914 "PMID: 16901087. Supporting the curation of biological databases with reusable text mining.Genome Inform. 2005;16(2):32-44."@en)
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0302914 obo:IAO_0000120)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0302914 "Digital curation is the process of establishing and developing long term repositories of digital assets for current and future reference by researchers, scientists, and historians, and scholars generally."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0302914 "Philippe Rocca-Serra")
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0302914 "wikipedia")
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0302914 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:label obo:OBI_0302914 "digital curation"@en)
-SubClassOf(obo:OBI_0302914 obo:IAO_0000572)
-
-# Class: obo:OBI_0400107 (computer)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0400107 "computer"@en)
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0400107 "Apple PowerBook, Dell OptiPlex"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0400107 obo:IAO_0000122)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0400107 "A computer is an instrument which manipulates (stores, retrieves, and processes) data according to a list of instructions."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0400107 "Melanie Courtot"@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0400107 "Trish Whetzel"@en)
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0400107 "http://en.wikipedia.org/wiki/Computer"@en)
-AnnotationAssertion(rdfs:label obo:OBI_0400107 "computer"@en)
-SubClassOf(obo:OBI_0400107 obo:OBI_0000968)
-
-# Class: obo:OBI_0500000 (study design)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0500000 "study design"@en)
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0500000 "A matched pairs study design describes criteria by which subjects are identified as pairs which then undergo the same protocols, and the data generated is analyzed by comparing the differences between the paired subjects, which constitute the results of the executed study design."@en)
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0500000 obo:IAO_0000122)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0500000 "A plan specification comprised of protocols (which may specify how and what kinds of data will be gathered) that are executed as part of an investigation and is realized during a study design execution.")
-AnnotationAssertion(obo:IAO_0000116 obo:OBI_0500000 "Editor note: there is at least an implicit restriction on the kind of data transformations that can be done based on the measured data available.")
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0500000 "PERSON: Chris Stoeckert")
-AnnotationAssertion(obo:IAO_0000118 obo:OBI_0500000 "experimental design"@en)
-AnnotationAssertion(obo:IAO_0000232 obo:OBI_0500000 "rediscussed at length (MC/JF/BP). 12/9/08). The definition was clarified to differentiate it from protocol."@en)
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0500000 obo:obi.owl)
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0500000 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:label obo:OBI_0500000 "study design"@en)
-SubClassOf(obo:OBI_0500000 obo:IAO_0000104)
-
-# Class: obo:OBI_0500020 (time series design)
-
-AnnotationAssertion(obo:IAO_0000111 obo:OBI_0500020 "time series design"@en)
-AnnotationAssertion(obo:IAO_0000112 obo:OBI_0500020 "PMID: 14744830-Microarrays are powerful tools for surveying the expression levels of many thousands of genes simultaneously. They belong to the new genomics technologies which have important applications in the biological, agricultural and pharmaceutical sciences. There are myriad sources of uncertainty in microarray experiments, and rigorous experimental design is essential for fully realizing the potential of these valuable resources. Two questions frequently asked by biologists on the brink of conducting cDNA or two-colour, spotted microarray experiments are 'Which mRNA samples should be competitively hybridized together on the same slide?' and 'How many times should each slide be replicated?' Early experience has shown that whilst the field of classical experimental design has much to offer this emerging multi-disciplinary area, new approaches which accommodate features specific to the microarray context are needed. In this paper, we propose optimal designs for factorial and time course experiments, which are special designs arising quite frequently in microarray experimentation. Our criterion for optimality is statistical efficiency based on a new notion of admissible designs; our approach enables efficient designs to be selected subject to the information available on the effects of most interest to biologists, the number of arrays available for the experiment, and other resource or practical constraints, including limitations on the amount of mRNA probe. We show that our designs are superior to both the popular reference designs, which are highly inefficient, and to designs incorporating all possible direct pairwise comparisons. Moreover, our proposed designs represent a substantial practical improvement over classical experimental designs which work in terms of standard interactions and main effects. The latter do not provide a basis for meaningful inference on the effects of most interest to biologists, nor make the most efficient use of valuable and limited resources."@en)
-AnnotationAssertion(obo:IAO_0000114 obo:OBI_0500020 obo:IAO_0000125)
-AnnotationAssertion(obo:IAO_0000115 obo:OBI_0500020 "Groups of assays that are related as part of a time series."@en)
-AnnotationAssertion(obo:IAO_0000117 obo:OBI_0500020 "Philippe Rocca-Serra on behalf of MO"@en)
-AnnotationAssertion(obo:IAO_0000119 obo:OBI_0500020 "MO_887"@en)
-AnnotationAssertion(obo:IAO_0000412 obo:OBI_0500020 "http://purl.obolibrary.org/obo/obi.owl")
-AnnotationAssertion(rdfs:label obo:OBI_0500020 "time series design"@en)
-SubClassOf(obo:OBI_0500020 obo:OBI_0500000)
 
 # Class: obo:OBIws_0000050 (software execution)
 
@@ -13953,7 +13496,7 @@ AnnotationAssertion(obo:IAO_0000118 obo:OBIws_0000050 "operation")
 AnnotationAssertion(obo:IAO_0000119 obo:OBIws_0000050 "ITPPR")
 AnnotationAssertion(obo:IAO_0000412 obo:OBIws_0000050 "http://purl.obolibrary.org/obo/OBIws.owl")
 AnnotationAssertion(rdfs:label obo:OBIws_0000050 "software execution"@en)
-SubClassOf(obo:OBIws_0000050 obo:OBI_0000011)
+SubClassOf(obo:OBIws_0000050 obo:COB_0000082)
 
 # Class: obo:OBIws_0000104 (web service execution)
 
@@ -14016,7 +13559,7 @@ AnnotationAssertion(oboInOwl:inSubset obo:PATO_0000051 pato:attribute_slim)
 AnnotationAssertion(rdfs:label obo:PATO_0000051 "morphology")
 SubClassOf(obo:PATO_0000051 obo:PATO_0001241)
 
-# Class: obo:PATO_0000117 (size)
+# Class: obo:PATO_0000117 (obo:PATO_0000117)
 
 SubClassOf(obo:PATO_0000117 obo:PATO_0000051)
 
@@ -14390,8 +13933,8 @@ AnnotationAssertion(obo:IAO_0000412 obo:VO_0000001 "http://purl.obolibrary.org/o
 AnnotationAssertion(apollo_sv:APOLLO_SV_0000040 obo:VO_0000001 "Vaccine")
 AnnotationAssertion(rdfs:label obo:VO_0000001 "vaccine")
 AnnotationAssertion(rdfs:seeAlso obo:VO_0000001 "MeSH: D014612")
-EquivalentClasses(obo:VO_0000001 ObjectIntersectionOf(obo:OBI_0000047 ObjectSomeValuesFrom(obo:OBI_0000312 obo:VO_0000590) ObjectSomeValuesFrom(obo:RO_0000053 ObjectIntersectionOf(obo:VO_0000278 ObjectSomeValuesFrom(obo:BFO_0000054 obo:APOLLO_SV_00000142)))))
-SubClassOf(obo:VO_0000001 obo:OBI_0000047)
+EquivalentClasses(obo:VO_0000001 ObjectIntersectionOf(obo:COB_0000026 ObjectSomeValuesFrom(obo:OBI_0000312 obo:VO_0000590) ObjectSomeValuesFrom(obo:RO_0000053 ObjectIntersectionOf(obo:VO_0000278 ObjectSomeValuesFrom(obo:BFO_0000054 obo:APOLLO_SV_00000142)))))
+SubClassOf(obo:VO_0000001 obo:COB_0000026)
 
 # Class: obo:VO_0000207 (vaccine contraindication)
 
@@ -14420,7 +13963,7 @@ AnnotationAssertion(obo:IAO_0000118 obo:VO_0000590 "vaccine generation")
 AnnotationAssertion(obo:IAO_0000118 obo:VO_0000590 "vaccine production")
 AnnotationAssertion(obo:IAO_0000412 obo:VO_0000590 "http://purl.obolibrary.org/obo/vo.owl")
 AnnotationAssertion(rdfs:label obo:VO_0000590 "vaccine preparation")
-SubClassOf(obo:VO_0000590 obo:OBI_0000011)
+SubClassOf(obo:VO_0000590 obo:COB_0000082)
 
 # Class: <http://purl.obolibrary.org/obo/apollo_sv/dev/apollo_sv.owl#APOLLO_SV_00000001> (obsolete specificity of case detection)
 
@@ -14467,7 +14010,7 @@ AnnotationAssertion(obo:IAO_0000115 <http://www.ebi.ac.uk/efo/EFO_0004600> "Geno
 AnnotationAssertion(obo:IAO_0000117 <http://www.ebi.ac.uk/efo/EFO_0004600> "James Malone")
 AnnotationAssertion(rdfs:label <http://www.ebi.ac.uk/efo/EFO_0004600> "genomic data")
 SubClassOf(<http://www.ebi.ac.uk/efo/EFO_0004600> obo:IAO_0000100)
-SubClassOf(<http://www.ebi.ac.uk/efo/EFO_0004600> ObjectSomeValuesFrom(obo:IAO_0000136 obo:OBI_0100026))
+SubClassOf(<http://www.ebi.ac.uk/efo/EFO_0004600> ObjectSomeValuesFrom(obo:IAO_0000136 obo:COB_0000022))
 
 # Class: oboInOwl:ObsoleteClass (Obsolete Class)
 
@@ -14496,6 +14039,7 @@ ClassAssertion(obo:UO_0000003 obo:UO_0000034)
 # Individual: <https://orcid.org/0000-0002-9881-1017> (William R. Hogan)
 
 AnnotationAssertion(terms:created <https://orcid.org/0000-0002-9881-1017> "2026-04-04T19:54:38Z"^^xsd:dateTime)
+AnnotationAssertion(terms:creator <https://orcid.org/0000-0002-9881-1017> <https://orcid.org/0000-0002-9881-1017>)
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-9881-1017> "William R. Hogan"@en)
 ClassAssertion(obo:NCBITaxon_9606 <https://orcid.org/0000-0002-9881-1017>)
 

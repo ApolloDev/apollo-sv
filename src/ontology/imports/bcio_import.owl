@@ -8,21 +8,24 @@ Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
 Prefix(sssom:=<https://w3id.org/sssom/>)
 Prefix(terms:=<http://purl.org/dc/terms/>)
 Prefix(schema:=<https://schema.org/>)
 Prefix(Property:=<https://www.wikidata.org/wiki/Property:>)
+Prefix(metadata:=<http://data.bioontology.org/metadata/>)
 Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 Prefix(owlready_ontology:=<http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/apollo_sv/imports/bcio_import.owl>
-<http://purl.obolibrary.org/obo/apollo_sv/releases/2026-03-13/imports/bcio_import.owl>
-Annotation(dc:source <http://humanbehaviourchange.org/ontology/bcio.owl/2025-12-05>)
-Annotation(owl:versionInfo "2026-03-13")
+<http://purl.obolibrary.org/obo/apollo_sv/releases/2026-07-19/imports/bcio_import.owl>
+Annotation(dc:source <http://humanbehaviourchange.org/ontology/bcio.owl/2026-06-16>)
+Annotation(owl:versionInfo "2026-07-19")
 
 Declaration(Class(<http://humanbehaviourchange.org/ontology/BCIO_006158>))
 Declaration(Class(<http://humanbehaviourchange.org/ontology/BCIO_036000>))
+Declaration(Class(obo:OGMS_0000060))
 Declaration(AnnotationProperty(obo:IAO_0000112))
 Declaration(AnnotationProperty(obo:IAO_0000114))
 Declaration(AnnotationProperty(obo:IAO_0000115))
@@ -67,6 +70,7 @@ Every behaviour is associated with mental processes, but not every mental proces
 
 'A 'striated muscle' can defined as 'a type of contractile tissue that is marked by transverse striations")
 AnnotationAssertion(rdfs:label <http://humanbehaviourchange.org/ontology/BCIO_036000> "individual human behaviour")
+SubClassOf(<http://humanbehaviourchange.org/ontology/BCIO_036000> obo:OGMS_0000060)
 
 
 )

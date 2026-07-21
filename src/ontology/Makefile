@@ -16,7 +16,7 @@
 # 3. [Update repo to latest ODK](update_repo)
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                6ee100eeff7bea98a4fcb53394f21f836ae9386cecca6a38ef47b0c9c6a71fd0
+CONFIG_HASH=                afc55bca35421dc2b7d1273d293169c08e8e8eaa6c54c5adbafd71494b774668
 
 
 # ----------------------------------------
@@ -193,7 +193,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  ro geo ido mf go iao omrse dron ogms uberon bcio
+IMPORTS =  ro geo ido mf go iao omrse dron ogms uberon bcio obi
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -449,34 +449,6 @@ $(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl $(IMPORTDIR)/ro_terms.txt $(IMPO
 		 repair --merge-axiom-annotations true \
 		 $(ANNOTATE_CONVERT_FILE)
 
-## Module for ontology: geo (mirror)
-$(IMPORTDIR)/geo_import.owl: $(MIRRORDIR)/geo.owl | all_robot_plugins
-	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri http://purl.obolibrary.org/obo \
-		               --subset-decls true --synonym-decls true \
-		               --add-source true \
-		 repair --merge-axiom-annotations true \
-		 $(ANNOTATE_CONVERT_FILE)
-
-## Module for ontology: ido (slme)
-$(IMPORTDIR)/ido_import.owl: $(MIRRORDIR)/ido.owl $(IMPORTDIR)/ido_terms.txt $(IMPORTSEED) | all_robot_plugins
-	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --add-source true \
-		 extract --term-file $(IMPORTDIR)/ido_terms.txt $(T_IMPORTSEED) \
-		         --copy-ontology-annotations true --force true \
-		         --individuals exclude \
-		         --method BOT \
-		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
-		        --term rdfs:label \
-		        --term IAO:0000115 \
-		        --term OMO:0002000 \
-		        --term-file $(IMPORTDIR)/ido_terms.txt $(T_IMPORTSEED) \
-		        --select complement --select annotation-properties \
-		 odk:normalize --base-iri http://purl.obolibrary.org/obo \
-		               --subset-decls true --synonym-decls true \
-		 repair --merge-axiom-annotations true \
-		 $(ANNOTATE_CONVERT_FILE)
-
 ## Module for ontology: mf (slme)
 $(IMPORTDIR)/mf_import.owl: $(MIRRORDIR)/mf.owl $(IMPORTDIR)/mf_terms.txt $(IMPORTSEED) | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
@@ -594,7 +566,7 @@ mirror-ro: | $(TMPDIR)
 .PHONY: mirror-geo
 .PRECIOUS: $(MIRRORDIR)/geo.owl
 mirror-geo: | $(TMPDIR)
-	$(ROBOT) convert -I http://purl.obolibrary.org/obo/geo/dev/geo.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) remove -I http://purl.obolibrary.org/obo/geo/dev/geo.owl --base-iri http://purl.obolibrary.org/obo/GEO  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: ido
@@ -602,7 +574,7 @@ mirror-geo: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/ido.owl
 mirror-ido: | $(TMPDIR)
 	curl -L $(OBOBASE)/ido.owl --create-dirs -o $(TMPDIR)/ido-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/ido-download.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) remove -i $(TMPDIR)/ido-download.owl --base-iri http://purl.obolibrary.org/obo/IDO_ --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: mf
@@ -666,6 +638,14 @@ mirror-uberon: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/bcio.owl
 mirror-bcio: | $(TMPDIR)
 	$(ROBOT) convert -I http://humanbehaviourchange.org/ontology/bcio.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: obi
+.PHONY: mirror-obi
+.PRECIOUS: $(MIRRORDIR)/obi.owl
+mirror-obi: | $(TMPDIR)
+	curl -L $(OBOBASE)/obi.owl --create-dirs -o $(TMPDIR)/obi-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) remove -i $(TMPDIR)/obi-download.owl --base-iri http://purl.obolibrary.org/obo/COB_ --base-iri http://purl.obolibrary.org/obo/IAO_ --base-iri http://purl.obolibrary.org/obo/OBI_ --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)

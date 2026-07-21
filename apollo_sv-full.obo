@@ -1,6 +1,5 @@
 format-version: 1.2
-data-version: apollo_sv/releases/2026-03-13/apollo_sv-full.owl
-subsetdef: attribute_slim ""
+data-version: apollo_sv/releases/2026-07-19/apollo_sv-full.owl
 subsetdef: common_anatomy ""
 subsetdef: efo_slim ""
 subsetdef: gocheck_do_not_annotate ""
@@ -24,16 +23,25 @@ subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
 subsetdef: human_reference_atlas ""
 subsetdef: human_subset ""
 subsetdef: mouse_subset ""
-subsetdef: mpath_slim ""
 subsetdef: pheno_slim ""
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
-subsetdef: scalar_slim ""
 subsetdef: uberon_slim ""
-subsetdef: unit_group_slim ""
 subsetdef: upper_level ""
 subsetdef: vertebrate_core ""
-synonymtypedef: OMO:0003004 ""
+synonymtypedef: OMO:0003000 "abbreviation"
+synonymtypedef: OMO:0003001 "ambiguous synonym"
+synonymtypedef: OMO:0003002 "dubious synonym"
+synonymtypedef: OMO:0003003 "layperson synonym"
+synonymtypedef: OMO:0003004 "plural form"
+synonymtypedef: OMO:0003005 "UK spelling synonym"
+synonymtypedef: OMO:0003006 "misspelling"
+synonymtypedef: OMO:0003007 "misnomer"
+synonymtypedef: OMO:0003008 "previous name"
+synonymtypedef: OMO:0003009 "legal name"
+synonymtypedef: OMO:0003010 "International Nonproprietary Name"
+synonymtypedef: OMO:0003011 "latin term"
+synonymtypedef: OMO:0003012 "acronym"
 idspace: ace_lexicon http://attempto.ifi.uzh.ch/ace_lexicon# 
 idspace: dc http://purl.org/dc/elements/1.1/ 
 idspace: doap http://usefulinc.com/ns/doap# 
@@ -56,7 +64,7 @@ property_value: dc:contributor "Mike Wagner" xsd:string
 property_value: dc:contributor "Shawn T. Brown" xsd:string
 property_value: dc:contributor "William R. Hogan" xsd:string
 property_value: dc:creator "Mathias Brochhausen" xsd:string
-property_value: owl:versionInfo "2026-03-13" xsd:string
+property_value: owl:versionInfo "2026-07-19" xsd:string
 property_value: terms:contributor "https://orcid.org/0000-0002-9881-1017" xsd:anyURI
 property_value: terms:description "An OWL2 ontology of phenomena in infectious disease epidemiology and population biology for use in epidemic simulation." xsd:string
 property_value: terms:license "https://creativecommons.org/licenses/by/4.0/" xsd:string
@@ -134,7 +142,6 @@ id: APOLLO_SV:00000008
 name: software development
 def: "A planned process that has specified output a software product and that involves the creation of source code." []
 is_a: COB:0000035 ! completely executed planned process
-is_a: OBI:0000011 ! planned process
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000119 "http://en.wikipedia.org/wiki/Software_development" xsd:string
@@ -327,7 +334,7 @@ id: APOLLO_SV:00000032
 name: count
 def: "A measurement datum that is the output of counting." []
 is_a: IAO:0000109 ! measurement datum
-intersection_of: IAO:0000027 ! data item
+intersection_of: IAO:0000027 ! data entity
 intersection_of: OBI:0000312 APOLLO_SV:00000033 ! is specified output of counting
 relationship: OBI:0000312 APOLLO_SV:00000033 ! is specified output of counting
 property_value: APOLLO_SV:0000040 "count" xsd:string
@@ -339,8 +346,7 @@ id: APOLLO_SV:00000033
 name: counting
 def: "The planned process of finding the number of elements in a finite set of objects." []
 is_a: COB:0000035 ! completely executed planned process
-is_a: OBI:0000011 ! planned process
-intersection_of: OBI:0000011 ! planned process
+intersection_of: COB:0000035 ! completely executed planned process
 intersection_of: OBI:0000299 APOLLO_SV:00000032 ! has specified output count
 relationship: OBI:0000299 APOLLO_SV:00000032 ! has specified output count
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
@@ -599,7 +605,7 @@ def: "An action specification that specifies the length of the time steps interv
 comment: simulation time step value\nsimulation time step unit\nsimulation run length\n\nThe time step value and unit are specified using a scalar value specification.
 is_a: APOLLO_SV:00000793 ! epidemic simulator action specification
 relationship: IAO:0000136 APOLLO_SV:00000066 ! is about simulation of time step
-relationship: OBI:0001938 OBI:0001931 ! has value specification scalar value specification
+relationship: OBI:0001938 OBI:0001931
 relationship: part_of APOLLO_SV:00000007 ! simulation software application
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000600 "An action specification that specifies the length of the time steps interval assumed in a simulation." xsd:string
@@ -738,7 +744,7 @@ property_value: IAO:0000600 "A control strategy dose schedule specifies the inte
 id: APOLLO_SV:00000085
 name: age data in age brackets data set
 def: "A data set consisting of measurements of age organized in age brackets." []
-is_a: IAO:0000100 ! data set
+is_a: IAO:0000100 ! homogenous data collection
 property_value: IAO:0000111 "age structure data set" xsd:string
 property_value: IAO:0000600 "A data set consisting of measurements of age organized in age brackets." xsd:string
 
@@ -782,7 +788,6 @@ property_value: IAO:0000600 "A vaccination efficacy that results from a vaccinat
 id: APOLLO_SV:00000090
 name: vaccination efficacy study design execution
 def: "A study design execution that has as its specified output one or more measured vaccination efficacy data items" []
-is_a: COB:0000035 ! completely executed planned process
 is_a: OBI:0000471 ! study design execution
 intersection_of: OBI:0000471 ! study design execution
 intersection_of: has_part APOLLO_SV:00000142 ! vaccination
@@ -1098,7 +1103,7 @@ property_value: IAO:0000600 "An event in the ecosystem that triggers the startin
 id: APOLLO_SV:00000131
 name: reactive control strategy threshold
 def: "A data item that specifies the fraction of the population known to have undergone a specific event that results in starting or stopping an infectious disease control strategy." []
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 property_value: APOLLO_SV:0000040 "reactiveControlMeasureThreshold" xsd:string
 property_value: IAO:0000600 "A fraction of the population known to have undergone a specific event that results in starting or stopping an infectious disease control strategy.\n\nThe event could be infection acquisition, vaccination, antiviral treatment, etc." xsd:string
 
@@ -1127,7 +1132,7 @@ property_value: IAO:0000600 "Number of time steps it takes medical personnel to 
 id: APOLLO_SV:00000135
 name: ascertainment fraction
 comment: fraction of organisms (usually infected) that a surveillance system detects out of the total population
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 property_value: APOLLO_SV:0000040 "fractionInState" xsd:string
 property_value: IAO:0000600 "Fraction of all symptomatic individuals who will be ascertained" xsd:string
 
@@ -1437,8 +1442,8 @@ name: antiviral treatment
 def: "A treatment with an antiviral drug." []
 is_a: APOLLO_SV:00000318 ! drug treatment
 intersection_of: APOLLO_SV:00000318 ! drug treatment
-intersection_of: OBI:0000293 CHEBI:36044 ! has_specified_input antiviral drug
-relationship: OBI:0000293 CHEBI:36044 ! has_specified_input antiviral drug
+intersection_of: OBI:0000293 CHEBI:36044 ! has specified input antiviral drug
+relationship: OBI:0000293 CHEBI:36044 ! has specified input antiviral drug
 property_value: APOLLO_SV:0000040 "AntiviralTreatment" xsd:string
 property_value: IAO:0000600 "A treatment of a particular host with a particular antiviral drug with activity against a particular viral pathogen." xsd:string
 
@@ -1540,7 +1545,7 @@ id: APOLLO_SV:00000184
 name: infectious disease scenario
 def: "A dataset that represents at least one pathogen population (of a particular biological taxon) in one host population (of a particular biological taxon) in an ecosystem in a particular location at a particular point in time." []
 comment: An infectious disease scenario contains counts of infections of a particular pathogen in a particular host in a particular ecosystem at a particular point in time, minimally.  Agent-based ecosystems represent each host individually.  \n\nThe infectious disease scenario typically also includes a lot of additional data about the ecosystem, including data about things like transmission probabililites, control measures, the immunity or other resistance status of host individuals, and so on.
-is_a: IAO:0000100 ! data set
+is_a: IAO:0000100 ! homogenous data collection
 relationship: IAO:0000136 APOLLO_SV:00000097 ! is about ecosystem
 property_value: APOLLO_SV:0000040 "InfectiousDiseaseScenario" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -1618,7 +1623,7 @@ is_obsolete: true
 id: APOLLO_SV:00000193
 name: vaccination efficacy inferred
 def: "A data item inferring a vaccination efficacy based on epidemiological data." []
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 property_value: APOLLO_SV:0000040 "VaccinationEfficacyInferred" xsd:string
 property_value: IAO:0000600 "A data item inferring a vaccination efficacy based on epidemiological data." xsd:string
 
@@ -1819,7 +1824,7 @@ property_value: IAO:0000600 "A probability distribution over a discrete random v
 id: APOLLO_SV:00000217
 name: infection state data item
 def: "A data item that specifies the epidemiologically-relevant state of a host organism at a specific time with respect to infection with a particular pathogen." []
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 property_value: APOLLO_SV:0000040 "infectionState" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000600 "A data item that specifies the epidemiologically-relevant state of a host organism at a specific time with respect to infection with a particular pathogen." xsd:string
@@ -2031,7 +2036,7 @@ property_value: IAO:0000600 "A information content entity that specifies the dat
 id: APOLLO_SV:00000241
 name: age range category
 def: "An information content entity specifying the upper and lower limit of a range of ages of continuants." []
-is_a: OBI:0001931 ! scalar value specification
+is_a: OBI:0001931
 property_value: APOLLO_SV:0000040 "AgeRangeCategoryDefinition" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000600 "An information content entity specifying the upper and lower limit of a range of ages of continuants." xsd:string
@@ -2700,8 +2705,8 @@ name: drug treatment
 def: "A treatment with a drug product." []
 is_a: OGMS:0000090 ! treatment
 intersection_of: OGMS:0000090 ! treatment
-intersection_of: OBI:0000293 DRON:00000005 ! has_specified_input clinical drug product
-relationship: OBI:0000293 DRON:00000005 ! has_specified_input clinical drug product
+intersection_of: OBI:0000293 DRON:00000005 ! has specified input clinical drug product
+relationship: OBI:0000293 DRON:00000005 ! has specified input clinical drug product
 property_value: APOLLO_SV:0000040 "DrugTreatment" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000600 "Treatment with a drug." xsd:string
@@ -3427,7 +3432,7 @@ property_value: IAO:0000600 "A population survey that assesses the presence (plu
 id: APOLLO_SV:00000397
 name: infection case list
 def: "A data set that is a collection of case records." []
-is_a: IAO:0000100 ! data set
+is_a: IAO:0000100 ! homogenous data collection
 property_value: APOLLO_SV:0000040 "CaseList" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -3437,7 +3442,7 @@ property_value: IAO:0000600 "A data set that is a collection of case records." x
 id: APOLLO_SV:00000398
 name: infection case record
 def: "A data set whose data items are about a host and its participation in an infection and potentially other activities occuring in the same time interval as the infection." []
-is_a: IAO:0000100 ! data set
+is_a: IAO:0000100 ! homogenous data collection
 property_value: APOLLO_SV:0000040 "CaseRecord" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -3474,13 +3479,14 @@ property_value: IAO:0000600 "An individual behavior of a mosquito (organism of f
 
 [Term]
 id: APOLLO_SV:00000402
-name: individual human behavior
+name: obsolete individual human behavior
 def: "An individual behavior of a human being." []
-is_a: GO:0007610 ! behavior
-property_value: APOLLO_SV:0000040 "HumanBehavior" xsd:string
+is_a: oboInOwl:ObsoleteClass ! Obsolete Class
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000600 "An individual behavior of a human being." xsd:string
+is_obsolete: true
+replaced_by: BCIO:036000
 
 [Term]
 id: APOLLO_SV:00000403
@@ -3687,7 +3693,7 @@ property_value: IAO:0000600 "A process of change in fecundity of females in a mo
 id: APOLLO_SV:00000422
 name: confidence interval
 def: "A data item that specifies both an interval estimate centered around some sample statistic, and the probability that the process/method of obtaining the interval estimate's range of values will generate an interval that contains some unobserved population parameter of interest." []
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
@@ -3763,7 +3769,7 @@ property_value: IAO:0000600 "A name of a temporal region that is systematized ac
 id: APOLLO_SV:00000430
 name: ring diameter in meters
 def: "A scalar value specification that gives the diameter in meters of the circular area around which all organisms in a population are living will receive a vaccination as part of a ring vaccination control measure." []
-is_a: OBI:0001931 ! scalar value specification
+is_a: OBI:0001931
 property_value: APOLLO_SV:0000040 "ringDiameterInMeters" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -3783,7 +3789,7 @@ property_value: IAO:0000600 "An epidemic simulator actions specification that sp
 id: APOLLO_SV:00000432
 name: minimum value
 def: "A data item that specifies the smallest numerical value in a data set of scalar measurement data items." []
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 property_value: APOLLO_SV:0000040 "minimumValue" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -3793,7 +3799,7 @@ property_value: IAO:0000600 "A data item that specifies the smallest numerical v
 id: APOLLO_SV:00000433
 name: maximum value
 def: "A data item that specifies the largest numerical value in a data set of scalar measurement data itmes." []
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 property_value: APOLLO_SV:0000040 "maximumValue" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -3922,7 +3928,7 @@ property_value: IAO:0000600 "A rate measurement datum that specifies the percent
 id: APOLLO_SV:00000446
 name: ratio of outdoor to indoor ovisites
 def: "A data item that specifies, as a ratio, the total count of oviposition sites located externally to all places in a geographic region relative to the total count of oviposition sites located internally to some place in that geographic region." []
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 property_value: APOLLO_SV:0000040 "ratioOfOutdoorToIndoorOvisites" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -3942,7 +3948,7 @@ property_value: IAO:0000600 "An information content entity that delimits an inte
 id: APOLLO_SV:00000448
 name: standard deviation
 def: "A data item that specifies the dispersion of values around some parameter in a set of data, and whose values are standardized to express the same unit of measure as the parameter of interest." []
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 property_value: APOLLO_SV:0000040 "standardDeviation" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -4164,7 +4170,7 @@ id: APOLLO_SV:00000470
 name: probability
 def: "A data item that is about a proposition and has a numeric value between 0 and 1, inclusive, that is the output of some process of inference, such that 1) logical falsehoods and logical truths are assigned a value of 0 and 1, respectively, while contingent propositions are assigned some intermediate value; and 2) the process of inference conforms with rules for the calculation of probabilities, and that any interpretation of probability must specify the extent to which probabilities might be used to constrain the degrees of belief of rational agents." []
 comment: The first criterion is derived from Kolmogorov's Probability Calculus, while the second is derived from Salmon's Admissibility and Applicability Criteria of Adequacy. Salmon's ascertainability criterion is subsumed by the definition for 'data item'.
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 property_value: APOLLO_SV:0000040 "Probability" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -4658,7 +4664,7 @@ id: APOLLO_SV:00000522
 name: source code repository
 def: "A document that comprises at least one source code module and provenance data about who contributed the set of files making up the module(s), and optionally comprises also multiple versions of files with detailed change history about who committed files and when, a license for the software, readme files, documentation, executables, etc." []
 comment: Refers to the stuff that lives on GitHub, not to GitHub or the git software on which it is based
-is_a: IAO:0000100 ! data set
+is_a: IAO:0000100 ! homogenous data collection
 is_a: IAO:0000310 ! document
 relationship: has_part IAO:0000096 ! source code module
 property_value: IAO:0000111 "software source code version control repository" xsd:string
@@ -4702,7 +4708,7 @@ id: APOLLO_SV:00000528
 name: synthetic ecosystem data set
 def: "A data set that represents 1) one or more collections of organisms at some time and some geographical region; and optionally 2) the school facilities, workplace facilities, and health care facilities in that region." []
 comment: The interactions between each organism as they move between these facilities may also be included in the data set.
-is_a: IAO:0000100 ! data set
+is_a: IAO:0000100 ! homogenous data collection
 relationship: IAO:0000136 APOLLO_SV:00000097 ! is about ecosystem
 property_value: APOLLO_SV:0000040 "SyntheticEcosystem" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
@@ -4732,7 +4738,7 @@ property_value: IAO:0000600 "A conditional probability whose value is dependent 
 id: APOLLO_SV:00000531
 name: epidemic threshold
 def: "A data item that specifies the number of susceptible organisms necessary for an epidemic to occur within a population." []
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
@@ -4741,6 +4747,7 @@ id: APOLLO_SV:00000532
 name: human travel
 def: "A geographical migration of an organism belonging to the species Homo sapiens." []
 is_a: APOLLO_SV:00000480 ! geographical movement of organism
+is_a: BCIO:036000 ! individual human behaviour
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
@@ -4756,7 +4763,7 @@ property_value: IAO:0000117 "William R. Hogan" xsd:string
 id: APOLLO_SV:00000534
 name: human mobility data item
 def: "A data item that is about one or more instances of human travel, and that specifies the geographical start location, geographical end location, and the geographical regions visited throughout the process." []
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
@@ -4833,7 +4840,7 @@ property_value: IAO:0000600 "An objective specification whose endpoint is human 
 id: APOLLO_SV:00000542
 name: mortality data
 def: "A data set that is about either some mortality rate or the death events themselves of some individuals of a given population of a particular biological taxon." []
-is_a: IAO:0000100 ! data set
+is_a: IAO:0000100 ! homogenous data collection
 relationship: IAO:0000136 PCO:0000001 ! is about population
 property_value: IAO:0000111 "population mortality data set" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
@@ -4863,7 +4870,7 @@ property_value: IAO:0000600 "A planned process that is the realization of a dise
 id: APOLLO_SV:00000546
 name: self-initiated travel avoidance behavior
 def: "Individual human behavior that involves either 1) remaining in some susceptible population or some exposed population or 2) human movement away from or around an infectious population, in order to avoid being participant in some infection acquisition." []
-is_a: APOLLO_SV:00000402 ! individual human behavior
+is_a: BCIO:036000 ! individual human behaviour
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000600 "Individual human behavior that involves either 1) remaining in some susceptible population or some exposed population or 2) human movement away from or around an infectious population, in order to avoid being participant in some infection acquisition." xsd:string
@@ -4872,7 +4879,7 @@ property_value: IAO:0000600 "Individual human behavior that involves either 1) r
 id: APOLLO_SV:00000547
 name: social interaction data item
 def: "A data item that is about one or more instances of social interaction between two or more individuals, and that specifies the temporal duration of interaction, spatial distance of individuals, geographical location of individuals, and the number of individuals participant in some social behavior(s)." []
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000600 "A data item that is about one or more instances of social interaction between two or more individuals, and that specifies the temporal duration of interaction, spatial distance of individuals, geographical location of individuals, and the number of individuals participant in some social behavior(s)." xsd:string
@@ -4935,7 +4942,7 @@ property_value: IAO:0000600 "A Susceptible-Infected-Resistant model that represe
 id: APOLLO_SV:00000554
 name: disease surveillance data
 def: "A data set that is about some disease surveillance." []
-is_a: IAO:0000100 ! data set
+is_a: IAO:0000100 ! homogenous data collection
 relationship: OBI:0000312 APOLLO_SV:00000545 ! is specified output of disease surveillance
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -4975,6 +4982,7 @@ property_value: IAO:0000118 "infectious disease forecasting software application
 id: APOLLO_SV:00000558
 name: case series
 def: "An investigation that realizes the concretization of some disease state design and that has as an occurrent part some population survey that\nhas specified input some case definition." []
+is_a: OBI:0000011 ! planned process
 is_a: OBI:0000066 ! investigation
 property_value: APOLLO_SV:0000040 "CaseSeries" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
@@ -4985,7 +4993,7 @@ property_value: IAO:0000600 "An investigation following a disease state study de
 id: APOLLO_SV:00000559
 name: case series data set
 def: "A data set that is the output of a case series investigation." []
-is_a: IAO:0000100 ! data set
+is_a: IAO:0000100 ! homogenous data collection
 relationship: OBI:0000312 APOLLO_SV:00000558 ! is specified output of case series
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -4995,7 +5003,7 @@ property_value: IAO:0000600 "A data set that is the output of a case series inve
 id: APOLLO_SV:00000560
 name: epidemic data set
 def: "A data set about an instance of an epidemic." []
-is_a: IAO:0000100 ! data set
+is_a: IAO:0000100 ! homogenous data collection
 relationship: IAO:0000136 APOLLO_SV:00000298 ! is about epidemic
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -5047,7 +5055,7 @@ id: APOLLO_SV:00000566
 name: data parsing
 def: "A data transformation that has a dataset, encoded in a particular data format specification, as input and extracts certain elements or parts of the dataset, typically into the volatile memory of a computer." []
 is_a: OBI:0200000 ! data transformation
-relationship: OBI:0000293 IAO:0000100 ! has_specified_input data set
+relationship: OBI:0000293 IAO:0000100 ! has specified input homogenous data collection
 property_value: IAO:0000111 "data parsing process" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000118 "data reading process" xsd:string
@@ -5067,7 +5075,7 @@ property_value: IAO:0000118 "software for creating a synthetic ecosystem dataset
 id: APOLLO_SV:00000568
 name: total fatal disease cases
 def: "A data item that is the output of some infection case count and that represents the number of infectious disease cases that ended in death." []
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 property_value: APOLLO_SV:0000040 "totalFatalCaseCount" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -5089,7 +5097,7 @@ id: APOLLO_SV:00000570
 name: employment status data item
 def: "A data item that denotes some context in which an individual realizes some employee role if he or she is a member of the labor force, or the context in which he or she is not a member of the labor force according to certain prespecified conditions." []
 comment: If an individual is a member of the labor force, the criteria that this status is selected from includes whether they are in the armed forces, employed and working, employed but absent from work for a week, and unemployed. The criteria for those not in the labor force includes whether the individual is a houseworker, suffering from a physical impairment that prevents them from working, in school, or other miscellaneous reasons.
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 property_value: APOLLO_SV:0000040 "employmentStatus" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -5136,7 +5144,7 @@ property_value: IAO:0000118 "influenza-like illness" xsd:string
 id: APOLLO_SV:00000575
 name: epidemic start week
 def: "A scalar value specification whose measurement unit label is 'week' and that is part of the first predicted data item that is greater than the epidemic threshold set for that data item." []
-is_a: OBI:0001931 ! scalar value specification
+is_a: OBI:0001931
 property_value: IAO:0000117 "Amanda Hicks" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -5145,7 +5153,7 @@ property_value: IAO:0000117 "William R. Hogan" xsd:string
 id: APOLLO_SV:00000576
 name: epidemic peak week
 def: "A scalar value specification whose measurement unit label is 'week', and that is part of the epidemic peak intensity." []
-is_a: OBI:0001931 ! scalar value specification
+is_a: OBI:0001931
 property_value: IAO:0000117 "Amanda Hicks" xsd:string
 property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -5262,8 +5270,8 @@ name: website with data
 comment: This class was created for use case for MIDAS Digital Repository to index websites that have useful data in them, albeit rarely as machine-interpretable, downloadable datasets.  Much of the data are locked in PDF or other text-based formats.
 is_a: FBcv:0000667 ! website
 intersection_of: FBcv:0000667 ! website
-intersection_of: BFO:0000111 IAO:0000027 ! has proper continuant part at all times data item
-relationship: BFO:0000111 IAO:0000027 ! has proper continuant part at all times data item
+intersection_of: BFO:0000111 IAO:0000027 ! has proper continuant part at all times data entity
+relationship: BFO:0000111 IAO:0000027 ! has proper continuant part at all times data entity
 property_value: IAO:0000111 "website that has data as a part" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
@@ -5271,7 +5279,7 @@ property_value: IAO:0000117 "William R. Hogan" xsd:string
 id: APOLLO_SV:00000591
 name: climate data set
 def: "A data set that is an aggregate of data items that are about an environmental system process (e.g., hydrological precipitation) or a participant in an environmental system process." []
-is_a: IAO:0000100 ! data set
+is_a: IAO:0000100 ! homogenous data collection
 property_value: IAO:0000111 "climate data set" xsd:string
 property_value: IAO:0000117 "Matt Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -5289,7 +5297,7 @@ property_value: IAO:0000117 "William R. Hogan" xsd:string
 id: APOLLO_SV:00000593
 name: abiotic ecosystem data set
 def: "A data set that is about some abiotic ecosystem or abiotic ecosystem element." []
-is_a: IAO:0000100 ! data set
+is_a: IAO:0000100 ! homogenous data collection
 property_value: IAO:0000111 "abiotic ecosystem data set" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000118 "abiotic ecosystem dataset" xsd:string
@@ -5354,8 +5362,8 @@ id: APOLLO_SV:00000599
 name: infection acquisition dataset
 def: "A dataset that is about infectious disease acquisitions at particular times and particular places." []
 comment: The dataset may include sites (e.g. types of facilities, rooms), events (e.g., church service whether in or outdoors), dates, times, geographical regions, etc. in which the sites/events are located, and so on.
-is_a: IAO:0000100 ! data set
-intersection_of: IAO:0000100 ! data set
+is_a: IAO:0000100 ! homogenous data collection
+intersection_of: IAO:0000100 ! homogenous data collection
 intersection_of: IAO:0000136 APOLLO_SV:00000115 ! is about infection acquisition
 relationship: IAO:0000136 APOLLO_SV:00000115 ! is about infection acquisition
 property_value: dc:creator http://orcid.org/0000-0002-9881-1017
@@ -5369,7 +5377,7 @@ id: APOLLO_SV:00000600
 name: hospital stay dataset
 def: "A dataset that is about two or more hospital stays involving two or more patients." []
 comment: The dataset may be limited to stays in one hospital, but hospital discharge datasets as compiled by state departments of health typically contain stays from multiple hospitals (typically every hospital) in the geographical region over which they have jurisdiction
-is_a: IAO:0000100 ! data set
+is_a: IAO:0000100 ! homogenous data collection
 property_value: dc:creator http://orcid.org/0000-0002-9881-1017
 property_value: dc:date "2021-03-16T16:20:48Z" xsd:dateTime
 property_value: IAO:0000111 "dataset about hospital stays" xsd:string
@@ -5382,7 +5390,7 @@ property_value: IAO:0000118 "hospitalization dataset" xsd:string
 id: APOLLO_SV:00000601
 name: human daily movement
 def: "An individual human behavior that is the movements from one location to another throughout the day (e.g., work, home, stores, church, relatives' homes) in the areas adjacent to where the human lives at the time." []
-is_a: APOLLO_SV:00000402 ! individual human behavior
+is_a: BCIO:036000 ! individual human behaviour
 property_value: dc:creator http://orcid.org/0000-0002-9881-1017
 property_value: dc:date "2021-03-16T16:29:53Z" xsd:dateTime
 property_value: IAO:0000111 "human daily movement behavior" xsd:string
@@ -5392,8 +5400,8 @@ property_value: IAO:0000117 "William R. Hogan" xsd:string
 id: APOLLO_SV:00000602
 name: human daily movement data set
 def: "A data set that is about the human daily movement behavior of the individual huamns in a given population." []
-is_a: IAO:0000100 ! data set
-intersection_of: IAO:0000100 ! data set
+is_a: IAO:0000100 ! homogenous data collection
+intersection_of: IAO:0000100 ! homogenous data collection
 intersection_of: IAO:0000136 APOLLO_SV:00000601 ! is about human daily movement
 relationship: IAO:0000136 APOLLO_SV:00000601 ! is about human daily movement
 property_value: dc:creator http://orcid.org/0000-0002-9881-1017
@@ -5406,8 +5414,8 @@ property_value: IAO:0000117 "William R. Hogan" xsd:string
 id: APOLLO_SV:00000603
 name: potentially infectious contact data set
 def: "A data set that is about one or more potentially infectious contact processes in a population of host organisms." []
-is_a: IAO:0000100 ! data set
-intersection_of: IAO:0000100 ! data set
+is_a: IAO:0000100 ! homogenous data collection
+intersection_of: IAO:0000100 ! homogenous data collection
 intersection_of: IAO:0000136 APOLLO_SV:00000405 ! is about potentially infectious contacting
 relationship: IAO:0000136 APOLLO_SV:00000405 ! is about potentially infectious contacting
 property_value: dc:creator http://orcid.org/0000-0002-9881-1017
@@ -5536,7 +5544,7 @@ property_value: IAO:0000117 "William R. Hogan" xsd:string
 id: APOLLO_SV:00000614
 name: weather data set
 def: "A data set about the Earth's atmospheric weather" []
-is_a: IAO:0000100 ! data set
+is_a: IAO:0000100 ! homogenous data collection
 property_value: dc:date "2022-09-18T18:34:00" xsd:string
 property_value: IAO:0000111 "data set about Earth's atmospheric weather" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
@@ -5860,6 +5868,62 @@ property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000600 "Intent to have one's child vaccinated." xsd:string
 
 [Term]
+id: APOLLO_SV:00000653
+name: human-to-human communicability
+def: "A communicability among human beings (homo sapiens)." []
+is_a: IDO:0000623 ! communicability
+property_value: APOLLO_SV:0000040 "HumanToHumanCommunicability" xsd:string
+property_value: IAO:0000111 "communicability among human beings" xsd:string
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: IAO:0000600 "The ability of a pathogen to transmit from one human host to another human host." xsd:string
+property_value: terms:contributor https://orcid.org/0000-0002-9881-1017
+
+[Term]
+id: APOLLO_SV:00000654
+name: historical scenario
+def: "An infectious disease scenario that represents or reconstructs an outbreak or epidemic that actually occurred, usually constrained by observed data." []
+is_a: APOLLO_SV:00000184 ! infectious disease scenario
+property_value: dc:contributor "John Levander" xsd:string
+property_value: IAO:0000111 "historical infectious disease scenario date" xsd:string
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: terms:contributor https://orcid.org/0000-0002-9881-1017
+property_value: terms:created "2026-04-04T19:36:00Z" xsd:dateTime
+
+[Term]
+id: APOLLO_SV:00000655
+name: hypothetical scenario
+def: "An infectious disease scenario that represents a possible, assumed, projected, or counterfactual outbreak or epidemic, and does not need to correspond to a specific observed event." []
+is_a: APOLLO_SV:00000184 ! infectious disease scenario
+property_value: dc:contributor "John Levander" xsd:string
+property_value: IAO:0000111 "hypothetical infecctious disease scenario" xsd:string
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: terms:contributor https://orcid.org/0000-0002-9881-1017
+property_value: terms:created "2026-04-04T19:52:04Z" xsd:dateTime
+
+[Term]
+id: APOLLO_SV:00000656
+name: antibody administration control strategy
+def: "An individual treatment control strategy that has as part an action specification that  (has a concretization that) is realized in an antibody injection process." []
+is_a: APOLLO_SV:00000194 ! individual treatment control strategy
+property_value: dc:contributor "Lucie Contamin" xsd:string
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: term_tracker_item https://github.com/ApolloDev/apollo-sv/issues/273
+property_value: terms:created "2026-07-13T14:13:40Z" xsd:dateTime
+property_value: terms:creator https://orcid.org/0000-0002-9881-1017
+
+[Term]
+id: APOLLO_SV:00000657
+name: antibody administration census
+def: "A population treatment census that is about one or more antibody administrations to organisms in a population." []
+is_a: APOLLO_SV:00000187 ! population treatment census
+relationship: IAO:0000136 DRON:00000031 ! is about drug administration
+property_value: dc:contributor "Lucie Contamin" xsd:string
+property_value: IAO:0000117 "William R. Hogan" xsd:string
+property_value: term_tracker_item https://github.com/ApolloDev/apollo-sv/issues/273
+property_value: terms:created "2026-07-13T13:52:47Z" xsd:dateTime
+property_value: terms:creator https://orcid.org/0000-0002-9881-1017
+
+[Term]
 id: APOLLO_SV:00000793
 name: epidemic simulator action specification
 is_a: IAO:0000007 ! action specification
@@ -5885,10 +5949,9 @@ id: APOLLO_SV:00000796
 name: dataset creating
 def: "A planned process that has a data set as its specified output." []
 is_a: COB:0000035 ! completely executed planned process
-is_a: OBI:0000011 ! planned process
-intersection_of: OBI:0000011 ! planned process
-intersection_of: OBI:0000299 IAO:0000100 ! has specified output data set
-relationship: OBI:0000299 IAO:0000100 ! has specified output data set
+intersection_of: COB:0000035 ! completely executed planned process
+intersection_of: OBI:0000299 IAO:0000100 ! has specified output homogenous data collection
+relationship: OBI:0000299 IAO:0000100 ! has specified output homogenous data collection
 property_value: IAO:0000111 "creating a data set" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000118 "data set creation" xsd:string
@@ -5966,6 +6029,35 @@ property_value: APOLLO_SV:0000040 "sensitivityOfTreatmentDetection" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000600 "The sensitivity of the process or system that detects organisms that have undergone a particular treatment" xsd:string
 is_obsolete: true
+
+[Term]
+id: BCIO:006158
+name: habitual behaviour
+def: "An <individual human behaviour> that results from a learnt stimulus-behaviour co-occurrence." []
+comment: A learnt stimulus-behaviour co-occurrence can lead to activation or execution of a habitual behaviour.\n\nHabitual behaviour can be an MoA or outcome depending on how 'habitual behaviour' is described in an intervention. The Behaviour Change-Intervention Ontology includes the class 'outcome behaviour' (definition: Human behavior that is an intervention outcome.), which would not be an MoA. When an intervention targets a habitual behaviour to achieve an outcome behaviour, the former qualifies as an MoA.
+is_a: BCIO:036000 ! individual human behaviour
+property_value: IAO:0000112 " \"Habit\" in the  Theory of Interpersonal Behavior" xsd:string
+property_value: IAO:0000112 "\"Habits\" in the Motivation-Opportunities-Abilities" xsd:string
+property_value: IAO:0000114 "Published" xsd:string
+
+[Term]
+id: BCIO:026022
+name: educational facility
+def: "A facility in which formal education is provided to a student population." []
+is_a: OMRSE:00000062 ! facility
+property_value: IAO:0000114 "Published" xsd:string
+
+[Term]
+id: BCIO:036000
+name: individual human behaviour
+def: "A <bodily process> of a human that involves co-ordinated contraction of striated muscles controlled by the brain." []
+comment:  it is concerned with moving skeletal parts to which it is usually attached.' (https://www.collinsdictionary.com/dictionary/english/striped-muscle)
+is_a: OGMS:0000060 ! bodily process
+property_value: APOLLO_SV:0000040 "HumanBehavior" xsd:string
+property_value: IAO:0000112 "Also referred to in definitions as human behaviour or just behaviour." xsd:string
+property_value: IAO:0000112 "walks for 15 mins/day, never eats meat, attends school daily" xsd:string
+property_value: IAO:0000114 "Published" xsd:string
+property_value: IAO:0000118 "human behaviour" xsd:string
 
 [Term]
 id: BFO:0000001
@@ -6303,9 +6395,7 @@ property_value: IAO:0000112 "the aggregate of blood cells in your body" xsd:stri
 property_value: IAO:0000112 "the nitrogen atoms in the atmosphere" xsd:string
 property_value: IAO:0000112 "the restaurants in Palo Alto" xsd:string
 property_value: IAO:0000112 "your collection of Meissen ceramic plates." xsd:string
-property_value: IAO:0000116 "An entity a is an object aggregate if and only if there is a mutually exhaustive and pairwise disjoint partition of a into objects " xsd:string {IAO:0010000="http://purl.obolibrary.org/obo/bfo/axiom/0000301"}
 property_value: IAO:0000116 "An entity a is an object aggregate if and only if there is a mutually exhaustive and pairwise disjoint partition of a into objects " xsd:string {IAO:0010000="http://purl.obolibrary.org/obo/bfo/axiom/0000011", IAO:0010000="http://purl.obolibrary.org/obo/bfo/axiom/0000301"}
-property_value: IAO:0000116 "An entity a is an object aggregate if and only if there is a mutually exhaustive and pairwise disjoint partition of a into objects " xsd:string {IAO:0010000="http://purl.obolibrary.org/obo/bfo/axiom/0000011"}
 property_value: IAO:0000116 "BFO 2 Reference: object aggregates may gain and lose parts while remaining numerically identical (one and the same individual) over time. This holds both for aggregates whose membership is determined naturally (the aggregate of cells in your body) and aggregates determined by fiat (a baseball team, a congressional committee)." xsd:string
 property_value: IAO:0000119 "ISBN:978-3-938793-98-5pp124-158#Thomas Bittner and Barry Smith, 'A Theory of Granular Partitions', in K. Munn and B. Smith (eds.), Applied Ontology: An Introduction, Frankfurt/Lancaster: ontos, 2008, 125-158." xsd:string {IAO:0010000="http://purl.obolibrary.org/obo/bfo/axiom/0000300"}
 property_value: IAO:0000600 "b is an object aggregate means: b is a material entity consisting exactly of a plurality of objects as member_parts at all times at which b exists. (axiom label in BFO2 Reference: [025-004])" xsd:string {IAO:0010000="http://purl.obolibrary.org/obo/bfo/axiom/025-004"}
@@ -6597,8 +6687,18 @@ property_value: IAO:0000116 "Includes virus - we will later have a class for cel
 [Term]
 id: COB:0000035
 name: completely executed planned process
-is_a: BFO:0000015 ! process
+is_a: COB:0000082 ! planned process
 disjoint_from: GO:0008150 ! biological_process
+property_value: IAO:0000111 "completely executed planned process" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/cob.owl
+
+[Term]
+id: COB:0000082
+name: planned process
+def: "A process that is initiated by an agent who intends to carry out a plan to achieve an objective through one or more actions as described in a plan specification." []
+is_a: BFO:0000015 ! process
+property_value: IAO:0000111 "planned process" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/cob.owl
 
 [Term]
 id: DOID:0060478
@@ -6703,6 +6803,15 @@ def: "A drug product that is bearer of a clinical drug role." []
 comment: We changed the label to 'clinical drug product' because it was clear that the part of the definition re: bearer of a "clinical drug role" made it such. Other drugs don't have clinical drug roles, especially illicit ones. Therefore we changed the label here, as well as the subClassOf. Now it is subClassOf "drug product", which also required changing the definition here.
 is_a: DRON:00000074 ! drug product
 property_value: IAO:0000117 "William Hogan" xsd:string
+property_value: terms:creator "https://orcid.org/0000-0002-9881-1017" xsd:anyURI
+
+[Term]
+id: DRON:00000031
+name: drug administration
+def: "A treatment that has as participants an extended organism and a drug product and that results in part of the drug product being located in the extended organism." []
+is_a: OGMS:0000090 ! treatment
+property_value: IAO:0000111 "administration of a drug product to an organism" xsd:string
+property_value: IAO:0000117 "William R. Hogan" xsd:string
 
 [Term]
 id: DRON:00000074
@@ -6713,12 +6822,13 @@ is_a: BFO:0000040 ! material entity
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: terms:contributor https://orcid.org/0000-0001-6378-1703
 property_value: terms:contributor https://orcid.org/0000-0002-5039-2052
+property_value: terms:creator "http://orcid.org/0000-0002-9881-1017" xsd:string
 
 [Term]
 id: EFO:0004600
 name: genomic data
 def: "Genomic data is data about the genomes of an organism." []
-is_a: IAO:0000100 ! data set
+is_a: IAO:0000100 ! homogenous data collection
 relationship: IAO:0000136 OBI:0100026 ! is about organism
 property_value: IAO:0000117 "James Malone" xsd:string
 
@@ -6889,40 +6999,10 @@ is_a: IAO:0000310 ! document
 property_value: IAO:0000412 "http://purl.org/obo/owl/flybase_vocab" xsd:string
 
 [Term]
-id: GEO:000000001
-name: geopolitical entity
-def: "An organization that governs the people living in a particular geographical region or aggregate of geographical regions.  The geographical region it governs can change over time (such as the westward expansion of the United States and the addition of Hawaii)" []
-comment: In some cases, geopolitical entities possess uninhabited geographical regions.  However, it is that case that it controls the movement of people in and out of those regions, and its laws apply to those regions.
-is_a: oboInOwl:ObsoleteClass ! Obsolete Class
-property_value: IAO:0000117 "William R. Hogan" xsd:string
-is_obsolete: true
-
-[Term]
-id: GEO:000000002
-name: obsolete group of governmental organizations
-def: "An aggregate of geopoliticial entities.  Examples include the group of states of the United States, the nations of North America, and so on." []
-comment: taken over by GEO_0000000401
-is_a: BFO:0000004 ! independent continuant
-property_value: IAO:0000111 "obsolete aggregate of governmental organizations" xsd:string
-property_value: IAO:0000117 "William R. Hogan" xsd:string
-is_obsolete: true
-
-[Term]
-id: GEO:000000003
-name: nation
-def: "A geopolitical entity that is self contained and recognizes no higher political authority than itself." []
-is_a: oboInOwl:ObsoleteClass ! Obsolete Class
-property_value: IAO:0000117 "William R. Hogan" xsd:string
-is_obsolete: true
-
-[Term]
 id: GEO:000000004
 name: subnational entity
 def: "a governmental organization that has a local, regional, or territorial government that recognizes a sovereign state as its higher political authority" []
 is_a: GEO:000000400 ! governmental organization
-intersection_of: GEO:000000400 ! governmental organization
-intersection_of: GEO:000000329 GEO:000000396 ! is subordinate authority of sovereign state
-relationship: GEO:000000329 GEO:000000396 ! is subordinate authority of sovereign state
 property_value: IAO:0000117 "Amanda Hicks" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 
@@ -6944,60 +7024,6 @@ comment: Typically, the common feature is that the dependency does not conduct f
 is_a: GEO:000000004 ! subnational entity
 property_value: IAO:0000117 "Amanda Hicks" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
-
-[Term]
-id: GEO:000000007
-name: aggregate of major administrative subdivisions
-def: "An aggregate of governmental organizations that is not itself a major administrative subdivision and whose members are only major administrative subdivisions that have some feature in common." []
-comment: Examples: all the major administrative subdivisions of the United States (which is different from the U.S. itself), all the major administrative subdivisions with a bicameral legislature, all the major administrative subdivisions with a judiciary, etc.
-is_a: GEO:000000337 ! aggregate of governmental organizations
-relationship: BFO:0000075 GEO:000000005 ! is aggregate of major administrative subdivision
-property_value: IAO:0000117 "Amanda Hicks" xsd:string
-
-[Term]
-id: GEO:000000008
-name: aggregate of dependencies
-def: "An aggregate of governmental organizations that is not itself a geopolitical dependency and whose members are only geopolitical dependencies that have some feature in common." []
-comment: Examples: all the dependencies of the United States, all of the dependencies whose territory is located in the Carribean Sea, French Overseas Collectivities, Biritish Crown Dependencies.
-is_a: GEO:000000337 ! aggregate of governmental organizations
-relationship: BFO:0000075 GEO:000000006 ! is aggregate of geopolitical dependency
-property_value: IAO:0000117 "Amanda Hicks" xsd:string
-
-[Term]
-id: GEO:000000334
-name: subcontinental land mass
-is_a: GEO:000000375 ! land mass
-relationship: BFO:0000137 GEO:000000374 ! proper part of continuant at all times continent
-
-[Term]
-id: GEO:000000335
-name: contiguous land mass
-comment: per the definition of 'contiguous' of "being in actual contact :  touching along a boundary or at a point", these land masses share boundaries with other land masses that are part of the same continent, and thus are not surrounded by water like an island.\n\nAt some point, we need an 'adjacent to' relation if BFO doesn't provide it.\n\nOne question is whether this class encompasses fiat parts of islands.
-is_a: GEO:000000334 ! subcontinental land mass
-property_value: IAO:0000118 "contiguous continental land mass" xsd:string
-
-[Term]
-id: GEO:000000337
-name: aggregate of governmental organizations
-def: "An aggregate of organizations that is not itself a governmental organization, has only governmental organizations as members, and has at least two governmental organizations as members.\n" []
-is_a: BFO:0000004 ! independent continuant
-relationship: BFO:0000075 GEO:000000400 ! is aggregate of governmental organization
-property_value: IAO:0000117 "William R. Hogan" xsd:string
-
-[Term]
-id: GEO:000000357
-name: contiguous island land mass
-def: "A subcontinental land mass that is part of an island and includes part of the land surface of the island." []
-comment: It cannot be a part of the island, for example, that is below water.
-is_a: GEO:000000334 ! subcontinental land mass
-property_value: IAO:0000117 "William R. Hogan" xsd:string
-
-[Term]
-id: GEO:000000369
-name: aggregate of contiguous land masses
-is_a: GEO:000000375 ! land mass
-is_a: GEO:000000377 ! aggregate of geographical entities
-relationship: BFO:0000075 GEO:000000375 ! is aggregate of land mass
 
 [Term]
 id: GEO:000000370
@@ -7029,45 +7055,6 @@ property_value: IAO:0000117 "Matthew Diller" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000600 "An arbitrary part of the Earth defined by human-made boundaries and/or natural features such as rivers." xsd:string
-
-[Term]
-id: GEO:000000373
-name: body of water
-is_a: GEO:000000372 ! geographical region
-
-[Term]
-id: GEO:000000374
-name: continent
-is_a: GEO:000000375 ! land mass
-
-[Term]
-id: GEO:000000375
-name: land mass
-is_a: GEO:000000372 ! geographical region
-
-[Term]
-id: GEO:000000376
-name: island
-is_a: GEO:000000334 ! subcontinental land mass
-
-[Term]
-id: GEO:000000377
-name: aggregate of geographical entities
-def: "An object aggregate of geographical entities" []
-is_a: BFO:0000027 ! object_aggregate
-relationship: BFO:0000075 GEO:000000370 ! is aggregate of geographical entity
-
-[Term]
-id: GEO:000000378
-name: aggregate of geographical features
-is_a: GEO:000000377 ! aggregate of geographical entities
-relationship: BFO:0000075 GEO:000000371 ! is aggregate of geographical feature
-
-[Term]
-id: GEO:000000390
-name: aggregate of islands
-is_a: GEO:000000369 ! aggregate of contiguous land masses
-relationship: BFO:0000075 GEO:000000376 ! is aggregate of island
 
 [Term]
 id: GEO:000000391
@@ -7118,69 +7105,12 @@ property_value: IAO:0000118 "nation state" xsd:string
 property_value: IAO:0000119 "http://en.wikipedia.org/wiki/Sovereign_state" xsd:string
 
 [Term]
-id: GEO:000000399
-name: supranational entity
-comment: e.g., the EU
-is_a: GEO:000000400 ! governmental organization
-property_value: IAO:0000117 "Amanda Hicks" xsd:string
-
-[Term]
 id: GEO:000000400
 name: governmental organization
 def: "An organization that governs the people living in a particular geographical region or aggregate of geographical regions.  The geographical region it governs can change over time (such as the westward expansion of the United States and the addition of Hawaii). \n\nNote: this definition was taken over from \"geopolitical organization\"." []
 comment: IMPORTANT: The label "geopolitical organization" was previously used for OMRSE_00000044 (governmental organization).  "geopoli organization" is a label for a new and different class.
 is_a: OBI:0000245 ! organization
 property_value: IAO:0000117 "Amanda Hicks" xsd:string
-
-[Term]
-id: GEO:000000401
-name: aggregate of geopolitical organizations
-def: "An object aggregate that is not itself a geopolitical organization and whose members are only geopolitical organizations that have some feature in common" []
-is_a: BFO:0000004 ! independent continuant
-relationship: BFO:0000075 GEO:000000391 ! is aggregate of geopoli organization
-property_value: IAO:0000117 "Amanda Hicks" xsd:string
-property_value: IAO:0000117 "William R. Hogan\n" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
-
-[Term]
-id: GEO:000000402
-name: obsolete aggregate of dependencies
-def: "An aggregate of governmental organizations that is not itself a geopolitical dependency and whose members are only geopolitical dependencies that have some feature in common." []
-comment: Examples: all the dependencies of the United States, all of the dependencies whose territory is located in the Carribean Sea, French Overseas Collectivities, Biritish Crown Dependencies.
-is_a: GEO:000000337 ! aggregate of governmental organizations
-property_value: IAO:0000117 "Amanda Hicks" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
-is_obsolete: true
-
-[Term]
-id: GEO:000000403
-name: obsolete aggregate of major administrative subdivisions
-def: "An aggregate of governmental organizations that is not itself a major administrative subdivision and whose members are only major administrative subdivisions that have some feature in common" []
-comment: Examples: all the major administrative subdivisions of the United States (which is different from the U.S. itself), all the major administrative subdivisions with a bicameral legislature, all the major administrative subdivisions with a judiciary, etc.
-is_a: GEO:000000337 ! aggregate of governmental organizations
-property_value: IAO:0000117 "Amanda Hicks" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
-is_obsolete: true
-
-[Term]
-id: GEO:000000404
-name: aggregate of sovereign states
-def: "An aggregate of governmental organizations that is not itself a sovereign state and whose members are only sovereign states that have some feature in common" []
-comment: examples: all the sovereign states in North America, all the sovereign states with a GDP below or exceeding a particular quantity of money, all the sovereign states with a constitutional monarchy, all the sovereign states who belong to the U.N. (which is different than the U.N. itself), etc.
-is_a: GEO:000000337 ! aggregate of governmental organizations
-relationship: BFO:0000075 GEO:000000396 ! is aggregate of sovereign state
-property_value: IAO:0000117 "William R. Hogan" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
-
-[Term]
-id: GEO:000000787
-name: geodetic coordinate measurement datum
-def: "A measurement of location on the Earth that uses a single number to specify a coordinate in a coordinate system known as a geodetic datum." []
-comment: latitude and longitude are key subtypes
-is_a: IAO:0000109 ! measurement datum
-property_value: IAO:0000111 "geodetic coordinate measurement datum" xsd:string
-property_value: IAO:0000117 "Josh Hanna" xsd:string
-property_value: IAO:0000117 "William R. Hogan" xsd:string
 
 [Term]
 id: GEO:000000788
@@ -7192,12 +7122,6 @@ property_value: IAO:0000111 "geodetic datum" xsd:string
 property_value: IAO:0000117 "Josh Hanna" xsd:string
 property_value: IAO:0000117 "William R. Hogan" xsd:string
 property_value: IAO:0000119 "Wikipedia: https://en.wikipedia.org/wiki/Geodetic_datum\n\nDate accessed: 2015-04-13" xsd:string
-
-[Term]
-id: GEO:000000789
-name: plane angle measurement unit label
-is_a: IAO:0000003 ! measurement unit label
-property_value: IAO:0000111 "planar angular measurement unit label" xsd:string
 
 [Term]
 id: GEO:000000797
@@ -7270,6 +7194,7 @@ synonym: "single-organism process" RELATED []
 xref: Wikipedia:Biological_process
 is_a: BFO:0000015 ! process
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+property_value: term_tracker_item "https://github.com/geneontology/go-ontology/issues/24968" xsd:anyURI
 created_by: jl
 creation_date: 2012-09-19T15:05:24Z
 
@@ -7335,6 +7260,7 @@ is_a: GO:0048609 ! multicellular organismal reproductive process
 intersection_of: GO:0007610 ! behavior
 intersection_of: GO:0048609 ! multicellular organismal reproductive process
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+property_value: term_tracker_item "https://github.com/geneontology/go-ontology/issues/23491" xsd:anyURI
 created_by: jl
 creation_date: 2012-09-19T16:01:37Z
 
@@ -7348,6 +7274,7 @@ subset: gocheck_do_not_annotate
 xref: Wikipedia:Sexual_reproduction
 is_a: APOLLO_SV:00000651 ! reproduction
 is_a: GO:0022414 ! reproductive process
+property_value: term_tracker_item "https://github.com/geneontology/go-ontology/issues/22929" xsd:anyURI
 
 [Term]
 id: GO:0019954
@@ -7358,6 +7285,7 @@ synonym: "parthenogenesis" RELATED [Wikipedia:Parthenogenesis]
 xref: Wikipedia:Asexual_reproduction
 is_a: APOLLO_SV:00000651 ! reproduction
 is_a: GO:0022414 ! reproductive process
+property_value: term_tracker_item "https://github.com/geneontology/go-ontology/issues/22929" xsd:anyURI
 
 [Term]
 id: GO:0022414
@@ -7378,6 +7306,7 @@ subset: goslim_plant_ribbon
 synonym: "single organism reproductive process" RELATED []
 xref: Wikipedia:Reproduction
 is_a: GO:0008150 ! biological_process
+property_value: term_tracker_item "https://github.com/geneontology/go-ontology/issues/27054" xsd:anyURI
 created_by: jl
 creation_date: 2012-09-19T15:56:06Z
 
@@ -7394,6 +7323,7 @@ subset: goslim_pir
 synonym: "organismal physiological process" EXACT []
 synonym: "single-multicellular organism process" RELATED []
 is_a: GO:0008150 ! biological_process
+property_value: term_tracker_item "https://github.com/geneontology/go-ontology/issues/27189" xsd:anyURI
 created_by: jl
 creation_date: 2012-09-19T16:07:47Z
 
@@ -7417,7 +7347,10 @@ synonym: "symbiotic interaction between host and organism" RELATED []
 synonym: "symbiotic interaction between organisms" RELATED []
 synonym: "symbiotic interaction between species" RELATED []
 synonym: "symbiotic process" RELATED []
+xref: Reactome:R-HSA-9839923 "Dengue Virus Infection"
 is_a: GO:0044419 ! biological process involved in interspecies interaction between organisms
+property_value: term_tracker_item "https://github.com/geneontology/go-ontology/issues/14807" xsd:anyURI
+property_value: term_tracker_item "https://github.com/geneontology/go-ontology/issues/20191" xsd:anyURI
 
 [Term]
 id: GO:0044409
@@ -7458,6 +7391,7 @@ xref: Reactome:R-HSA-173107 "Binding and entry of HIV virion"
 is_a: GO:0051701 ! biological process involved in interaction with host
 is_a: GO:0051704 ! multi-organism process
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+property_value: term_tracker_item "https://github.com/geneontology/go-ontology/issues/18563" xsd:anyURI
 
 [Term]
 id: GO:0044419
@@ -7473,6 +7407,7 @@ synonym: "interspecies interaction between organisms" EXACT []
 synonym: "interspecies interaction with other organisms" EXACT []
 xref: Reactome:R-HSA-9824443 "Parasitic Infection Pathways"
 is_a: GO:0008150 ! biological_process
+property_value: term_tracker_item "https://github.com/geneontology/go-ontology/issues/20191" xsd:anyURI
 
 [Term]
 id: GO:0048609
@@ -7485,6 +7420,7 @@ synonym: "organismal reproductive process" BROAD []
 synonym: "reproductive process in a multicellular organism" EXACT []
 xref: Reactome:R-HSA-1474165 "Reproduction"
 is_a: GO:0022414 ! reproductive process
+property_value: term_tracker_item "https://github.com/geneontology/go-ontology/issues/27054" xsd:anyURI
 
 [Term]
 id: GO:0051234
@@ -7512,8 +7448,10 @@ synonym: "growth of symbiont in host organelle" NARROW []
 synonym: "growth of symbiont in host vacuole" NARROW []
 synonym: "interaction with host" EXACT []
 xref: Reactome:R-HSA-9635486 "Infection with Mycobacterium tuberculosis"
+xref: Reactome:R-HSA-9640148 "Infection with Enterobacteria"
 xref: Reactome:R-HSA-9658195 "Leishmania infection"
 is_a: GO:0044403 ! biological process involved in symbiotic interaction
+property_value: term_tracker_item "https://github.com/geneontology/go-ontology/issues/20191" xsd:anyURI
 
 [Term]
 id: GO:0051704
@@ -7536,17 +7474,15 @@ property_value: IAO:0000119 "OBI_0000349" xsd:string
 [Term]
 id: IAO:0000003
 name: measurement unit label
-def: "A data item label that denotes a unit of measure." []
-is_a: IAO:0000009 ! data item label
+def: "A measurement unit label is as a label that is part of a scalar measurement datum and denotes a unit of measure." []
+is_a: IAO:0000009 ! datum label
 property_value: IAO:0000111 "measurement unit label" xsd:string
 property_value: IAO:0000112 "Examples of measurement unit labels are liters, inches, weight per volume." xsd:string
-property_value: IAO:0000114 IAO:0000122
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000116 "2009-03-16: provenance: a term measurement unit was\nproposed for OBI (OBI_0000176) , edited by Chris Stoeckert and\nCristian Cocos, and subsequently moved to IAO where the objective for\nwhich the original term was defined was satisfied with the definition\nof this, different, term." xsd:string
 property_value: IAO:0000116 "2009-03-16: review of this term done during during the OBI workshop winter 2009 and the current definition was considered acceptable for use in OBI. If there is a need to modify this definition please notify OBI." xsd:string
 property_value: IAO:0000117 "PERSON: Alan Ruttenberg" xsd:string
 property_value: IAO:0000117 "PERSON: Melanie Courtot" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
 
 [Term]
 id: IAO:0000005
@@ -7600,18 +7536,14 @@ is_obsolete: true
 
 [Term]
 id: IAO:0000009
-name: data item label
+name: datum label
 def: "A label is a symbol that is part of some other datum and is used to either partially define  the denotation of that datum or to provide a means for identifying the datum as a member of the set of data with the same label" []
 is_a: IAO:0000030 ! information content entity
-property_value: IAO:0000111 "data item label" xsd:string
 property_value: IAO:0000111 "datum label" xsd:string
-property_value: IAO:0000114 IAO:0000122
 property_value: IAO:0000114 IAO:0000123
 property_value: IAO:0000116 "http://www.golovchenko.org/cgi-bin/wnsearch?q=label#4n" xsd:string
 property_value: IAO:0000117 "GROUP: IAO" xsd:string
-property_value: IAO:0000118 "datum label" xsd:string
 property_value: IAO:0000232 "9/22/11 BP: changed the rdfs:label for this class from 'label' to 'datum label' to convey that this class is not intended to cover all kinds of labels (stickers, radiolabels, etc.), and not even all kind of textual labels, but rather the kind of labels occuring in a datum. \n" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
 
 [Term]
 id: IAO:0000010
@@ -7730,9 +7662,10 @@ property_value: IAO:0000119 "OBI_0000058" xsd:string
 
 [Term]
 id: IAO:0000027
-name: data item
-def: "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements." []
+name: data entity
+def: "An information content entity that is intended to be one or more truthful statement(s) about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements." []
 is_a: IAO:0000030 ! information content entity
+property_value: IAO:0000111 "data entity" xsd:string
 property_value: IAO:0000111 "data item" xsd:string
 property_value: IAO:0000112 "Data items include counts of things, analyte concentrations, and statistical summaries." xsd:string
 property_value: IAO:0000114 IAO:0000125
@@ -7745,6 +7678,7 @@ property_value: IAO:0000117 "PERSON: Alan Ruttenberg" xsd:string
 property_value: IAO:0000117 "PERSON: Chris Stoeckert" xsd:string
 property_value: IAO:0000117 "PERSON: Jonathan Rees" xsd:string
 property_value: IAO:0000118 "data" xsd:string
+property_value: IAO:0000118 "data item" xsd:string
 
 [Term]
 id: IAO:0000028
@@ -7799,14 +7733,12 @@ id: IAO:0000032
 name: scalar measurement datum
 def: "A scalar measurement datum is a measurement datum that is composed of two parts, numerals and a unit label." []
 is_a: IAO:0000109 ! measurement datum
-property_value: IAO:0000111 "scalar measurement datum" xsd:string
 property_value: IAO:0000112 "10 feet. 3 ml." xsd:string
 property_value: IAO:0000114 IAO:0000120
 property_value: IAO:0000116 "2009-03-16: we decided to keep datum singular in scalar measurement datum, as in\nthis case we explicitly refer to the singular form" xsd:string
 property_value: IAO:0000116 "Would write this as: has_part some 'measurement unit label' and has_part some numeral and has_part exactly 2, except for the fact that this won't let us take advantage of OWL reasoning over the numbers. Instead use has measurment value property to represent the same. Use has measurement unit label (subproperty of has_part) so we can easily say that there is only one of them." xsd:string
 property_value: IAO:0000117 "PERSON: Alan Ruttenberg" xsd:string
 property_value: IAO:0000117 "PERSON: Melanie Courtot" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
 
 [Term]
 id: IAO:0000033
@@ -8077,21 +8009,22 @@ property_value: IAO:0000117 "PERSON: Alan Ruttenberg" xsd:string
 property_value: IAO:0000117 "PlanAndPlannedProcess Branch" xsd:string
 property_value: IAO:0000119 "OBI branch derived" xsd:string
 property_value: IAO:0000119 "OBI_0000187" xsd:string
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/172
 
 [Term]
 id: IAO:0000100
-name: data set
+name: homogenous data collection
 def: "A data item that is an aggregate of other data items of the same type that have something in common. Averages and distributions can be determined for data sets." []
-is_a: IAO:0000027 ! data item
-property_value: IAO:0000111 "data set" xsd:string
+is_a: IAO:0001000 ! data collection
+property_value: IAO:0000111 "homogenous data collection" xsd:string
 property_value: IAO:0000112 "Intensity values in a CEL file or from multiple CEL files comprise a data set (as opposed to the CEL files themselves)." xsd:string
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000116 "2009/10/23 Alan Ruttenberg. The intention is that this term represent collections of like data. So this isn't for, e.g. the whole contents of a cel file, which includes parameters, metadata etc. This is more like java arrays of a certain rather specific type" xsd:string
 property_value: IAO:0000116 "2014-05-05: Data sets are aggregates and thus must include two or more data items. We have chosen not to add logical axioms to make this restriction." xsd:string
 property_value: IAO:0000117 "person:Allyson Lister" xsd:string
 property_value: IAO:0000117 "person:Chris Stoeckert" xsd:string
+property_value: IAO:0000118 "data set" xsd:string
 property_value: IAO:0000119 "group:OBI" xsd:string
-property_value: IAO:0000119 "OBI_0000042" xsd:string
 
 [Term]
 id: IAO:0000101
@@ -8110,7 +8043,7 @@ property_value: IAO:0000119 "OBI_0000030" xsd:string
 id: IAO:0000102
 name: data about an ontology part
 def: "Data about an ontology part is a data item about a part of an ontology, for example a term" []
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 property_value: IAO:0000111 "data about an ontology part" xsd:string
 property_value: IAO:0000117 "Person:Alan Ruttenberg" xsd:string
 property_value: IAO:0000117 "Person:Alan Ruttenberg" xsd:string
@@ -8153,7 +8086,7 @@ is_obsolete: true
 id: IAO:0000109
 name: measurement datum
 def: "A measurement datum is an information content entity that is a recording of the output of a measurement such as produced by a device." []
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 property_value: IAO:0000111 "measurement datum" xsd:string
 property_value: IAO:0000112 "Examples of measurement data are the recoding of the weight of a mouse as {40,mass,\"grams\"}, the recording of an observation of the behavior of the mouse {,process,\"agitated\"}, the recording of the expression level of a gene as measured through the process of microarray experiment {3.4,luminosity,}." xsd:string
 property_value: IAO:0000114 IAO:0000125
@@ -8161,7 +8094,6 @@ property_value: IAO:0000116 "2/2/2009 is_specified_output of some assay?" xsd:st
 property_value: IAO:0000117 "person:Chris Stoeckert" xsd:string
 property_value: IAO:0000119 "group:OBI" xsd:string
 property_value: IAO:0000119 "OBI_0000305" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
 
 [Term]
 id: IAO:0000128
@@ -8206,7 +8138,7 @@ property_value: IAO:0000118 "batch number" xsd:string
 id: IAO:0000140
 name: setting datum
 def: "A settings datum is a datum that denotes some configuration of an instrument." []
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 property_value: IAO:0000114 IAO:0000123
 property_value: IAO:0000116 "2/3/2009 Feedback from OBI\n\nThis should be a \"setting specification\". There is a question of whether it is information about a realizable or not.\n\nPro other specification are about realizables.\nCons sometimes specifies a quality which is not a realizable." xsd:string
 property_value: IAO:0000116 "Alan grouped these in placeholder for the moment. Name by analogy to measurement datum." xsd:string
@@ -8483,7 +8415,7 @@ property_value: IAO:0000117 "PERSON: Chris Stoeckert" xsd:string
 property_value: IAO:0000117 "PERSON: Jie Zheng" xsd:string
 property_value: IAO:0000117 "PERSON: Lawrence Hunter" xsd:string
 property_value: IAO:0000118 "published document" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/232
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/232
 
 [Term]
 id: IAO:0000312
@@ -8529,7 +8461,7 @@ property_value: IAO:0000112 "The profusion of high-throughput instruments and th
 property_value: IAO:0000114 IAO:0000120
 property_value: IAO:0000117 "PERSON: Lawrence Hunter" xsd:string
 property_value: IAO:0000118 "precis" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/234
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/234
 
 [Term]
 id: IAO:0000316
@@ -8544,7 +8476,7 @@ property_value: IAO:0000117 "PERSON: Lawrence Hunter" xsd:string
 property_value: IAO:0000118 "background" xsd:string
 property_value: IAO:0000118 "introduction" xsd:string
 property_value: IAO:0000118 "overview" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/234
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/234
 
 [Term]
 id: IAO:0000317
@@ -8563,7 +8495,7 @@ property_value: IAO:0000118 "experimental section" xsd:string
 property_value: IAO:0000118 "method" xsd:string
 property_value: IAO:0000118 "methodology" xsd:string
 property_value: IAO:0000118 "methods" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/234
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/234
 
 [Term]
 id: IAO:0000318
@@ -8588,7 +8520,7 @@ property_value: IAO:0000117 "PERSON: Lawrence Hunter" xsd:string
 property_value: IAO:0000118 "discussion" xsd:string
 property_value: IAO:0000118 "discussion section" xsd:string
 property_value: IAO:0000118 "discussions" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/234
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/234
 
 [Term]
 id: IAO:0000320
@@ -8604,7 +8536,7 @@ property_value: IAO:0000118 "literature cited" xsd:string
 property_value: IAO:0000118 "reference" xsd:string
 property_value: IAO:0000118 "reference list" xsd:string
 property_value: IAO:0000118 "references" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/234
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/234
 
 [Term]
 id: IAO:0000321
@@ -8643,7 +8575,7 @@ property_value: IAO:0000118 "authors' contributions" xsd:string
 property_value: IAO:0000118 "authors' roles" xsd:string
 property_value: IAO:0000118 "contributions by the authors" xsd:string
 property_value: IAO:0000118 "contributorship" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/234
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/234
 
 [Term]
 id: IAO:0000324
@@ -8658,7 +8590,7 @@ property_value: IAO:0000118 "acknowledgement" xsd:string
 property_value: IAO:0000118 "acknowledgements" xsd:string
 property_value: IAO:0000118 "acknowledgment" xsd:string
 property_value: IAO:0000118 "acknowledgments" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/234
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/234
 
 [Term]
 id: IAO:0000325
@@ -8672,7 +8604,7 @@ property_value: IAO:0000114 IAO:0000120
 property_value: IAO:0000117 "PERSON: Lawrence Hunter" xsd:string
 property_value: IAO:0000118 "endnote" xsd:string
 property_value: IAO:0000118 "footnotes" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/234
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/234
 
 [Term]
 id: IAO:0000326
@@ -8697,7 +8629,7 @@ property_value: IAO:0000118 "supplementary information" xsd:string
 property_value: IAO:0000118 "supplementary material" xsd:string
 property_value: IAO:0000118 "supplementary materials" xsd:string
 property_value: IAO:0000118 "supporting information" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/234
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/234
 
 [Term]
 id: IAO:0000327
@@ -8740,7 +8672,7 @@ property_value: IAO:0000117 "PERSON: Lawrence Hunter" xsd:string
 id: IAO:0000400
 name: cartesian spatial coordinate datum
 def: "A cartesian spatial coordinate datum is a representation of a point in a spatial region, in which equal changes in the magnitude of a coordinate value denote length qualities with the same magnitude" []
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 relationship: IAO:0000219 BFO:0000018 ! denotes zero-dimensional spatial region
 property_value: IAO:0000114 IAO:0000120
 property_value: IAO:0000116 "2009-08-18 Alan Ruttenberg - question to BFO list about whether the BFO sense of the lower dimensional regions is that they are always part of actual space (the three dimensional sort) http://groups.google.com/group/bfo-discuss/browse_thread/thread/9d04e717e39fb617" xsd:string
@@ -8861,9 +8793,8 @@ id: IAO:0000443
 name: data item extraction from journal article
 def: "A planned process in which journal articles are read or processed and data items are extracted, typically for further analysis or indexing" []
 is_a: COB:0000035 ! completely executed planned process
-is_a: OBI:0000011 ! planned process
-relationship: OBI:0000293 IAO:0000013 ! has_specified_input journal article
-relationship: OBI:0000299 IAO:0000027 ! has specified output data item
+relationship: OBI:0000293 IAO:0000013 ! has specified input journal article
+relationship: OBI:0000299 IAO:0000027 ! has specified output data entity
 property_value: IAO:0000114 IAO:0000120
 property_value: IAO:0000117 "Person:Alan Ruttenberg" xsd:string
 
@@ -8871,12 +8802,12 @@ property_value: IAO:0000117 "Person:Alan Ruttenberg" xsd:string
 id: IAO:0000444
 name: publishing process
 def: "A planned process of making information, such as literature, music, and software etc., available to the public for sale or for free." []
-is_a: OBI:0000011 ! planned process
+is_a: COB:0000035 ! completely executed planned process
 property_value: IAO:0000114 IAO:0000120
 property_value: IAO:0000117 "Person: Jie Zheng" xsd:string
 property_value: IAO:0000119 "https://en.wikipedia.org/wiki/Publishing" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/232
 property_value: IAO:0000234 "VEuPathDB" xsd:string
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/232
 
 [Term]
 id: IAO:0000445
@@ -8886,16 +8817,15 @@ is_a: IAO:0000310 ! document
 property_value: IAO:0000114 IAO:0000120
 property_value: IAO:0000117 "PERSON: Jie Zheng" xsd:string
 property_value: IAO:0000119 "EFO_0001795 in preparation" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/232
 property_value: IAO:0000234 "VEuPathDB" xsd:string
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/232
 
 [Term]
 id: IAO:0000572
 name: documenting
 def: "A planned process in which a document is created or added to by including the specified input in it." []
 is_a: COB:0000035 ! completely executed planned process
-is_a: OBI:0000011 ! planned process
-relationship: OBI:0000293 IAO:0000030 ! has_specified_input information content entity
+relationship: OBI:0000293 IAO:0000030 ! has specified input information content entity
 relationship: OBI:0000299 IAO:0000310 ! has specified output document
 property_value: IAO:0000112 "Recording the current temperature in a laboratory notebook. Writing a journal article. Updating a patient record in a database." xsd:string
 property_value: IAO:0000114 IAO:0000125
@@ -8921,7 +8851,6 @@ id: IAO:0000574
 name: assigning a centrally registered identifier
 def: "A planned process in which a new CRID is created, associated with an entity, and stored in the CRID registry thereby registering it as being associated with some entity" []
 is_a: COB:0000035 ! completely executed planned process
-is_a: OBI:0000011 ! planned process
 relationship: OBI:0000299 IAO:0000577 ! has specified output centrally registered identifier symbol
 relationship: RO:0000057 IAO:0000579 ! has participant centrally registered identifier registry
 property_value: IAO:0000112 "A new pubmed ID being created for a journal article, and the associated pubmed record containing information to the journal article. A license plate number registered at the DMV to be belonging to a specific vehicle and owner. Placing a barcode on a product and entering information in a database that this barcode is assigned." xsd:string
@@ -8936,8 +8865,8 @@ property_value: IAO:0000118 "assigning a CRID" xsd:string
 id: IAO:0000575
 name: associating information with a centrally registered identifier in its registry
 def: "A planned process in which a CRID registry associates an information content entity with a CRID symbol" []
-is_a: OBI:0000011 ! planned process
-relationship: OBI:0000293 IAO:0000577 ! has_specified_input centrally registered identifier symbol
+is_a: COB:0000035 ! completely executed planned process
+relationship: OBI:0000293 IAO:0000577 ! has specified input centrally registered identifier symbol
 relationship: RO:0000057 IAO:0000579 ! has participant centrally registered identifier registry
 property_value: IAO:0000112 "Articles in Pubmed are reviewed by curators who add MESH terms to the Pubmed records in order to categorize them better and improve the ability to search for them. " xsd:string
 property_value: IAO:0000114 IAO:0000120
@@ -9000,15 +8929,14 @@ property_value: IAO:0000117 "PERSON: Bjoern Peters" xsd:string
 property_value: IAO:0000117 "PERSON: Melanie Courtot" xsd:string
 property_value: IAO:0000118 "CRID registry" xsd:string
 property_value: IAO:0000119 "Original proposal from Bjoern, discussions at IAO calls" xsd:string
-property_value: IAO:0000233 "https://github.com/information-artifact-ontology/IAO/issues/237" xsd:string
+property_value: term_tracker_item "https://github.com/information-artifact-ontology/IAO/issues/237" xsd:string
 
 [Term]
 id: IAO:0000580
 name: looking up a centrally registered identifier
 def: "A planned process in which a request to a CRID registry is made to return the information associated with a CRID symbol" []
 is_a: COB:0000035 ! completely executed planned process
-is_a: OBI:0000011 ! planned process
-relationship: OBI:0000293 IAO:0000577 ! has_specified_input centrally registered identifier symbol
+relationship: OBI:0000293 IAO:0000577 ! has specified input centrally registered identifier symbol
 relationship: OBI:0000299 IAO:0000030 ! has specified output information content entity
 relationship: RO:0000057 IAO:0000579 ! has participant centrally registered identifier registry
 property_value: IAO:0000112 "Going to the PubMed website and entering a PubMed ID in order to retrieve the Pubmed information associated with that ID. " xsd:string
@@ -9031,7 +8959,7 @@ property_value: IAO:0000114 IAO:0000123
 id: IAO:0000584
 name: time sampled measurement data set
 def: "A data set that is an aggregate of data recording some measurement at a number of time points. The time series data set is an ordered list of pairs of time measurement data and the corresponding measurement data acquired at that time." []
-is_a: IAO:0000100 ! data set
+is_a: IAO:0000100 ! homogenous data collection
 relationship: has_part IAO:0000582 ! time stamped measurement datum
 property_value: IAO:0000112 "pmid:20604925 - time-lapse live cell microscopy" xsd:string
 property_value: IAO:0000114 IAO:0000120
@@ -9110,7 +9038,7 @@ is_a: IAO:0000300 ! textual entity
 property_value: IAO:0000111 "abbreviation textual entity" xsd:string
 property_value: IAO:0000112 "From Shiba et al. Acta Neuropathol Commun. 2013; 1: 45. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3893467/):\n\nBAC: Bacterial artificial chromosome; CR: Calretinin; GFAP: Glial fibrillary acidic protein; MAP: Microtubule-associated protein; MRI: Magnetic resonance imaging; NSC: Neural stem cell; PDA: Patent ductus arteriosus; PMG: Polymicrogyria; PNH: Periventricular nodular heterotopia; VSD: Ventricular septal defect." xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000606
@@ -9133,8 +9061,8 @@ property_value: IAO:0000118 "list of abbreviations used" xsd:string
 property_value: IAO:0000118 "non-standard abbreviations" xsd:string
 property_value: IAO:0000118 "nonstandard abbreviations" xsd:string
 property_value: IAO:0000118 "nonstandard abbreviations and acronyms" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/234
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/234
 
 [Term]
 id: IAO:0000607
@@ -9149,8 +9077,8 @@ property_value: IAO:0000118 "author information" xsd:string
 property_value: IAO:0000118 "authors’ information" xsd:string
 property_value: IAO:0000118 "biographies" xsd:string
 property_value: IAO:0000118 "contributor information" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/234
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/234
 
 [Term]
 id: IAO:0000608
@@ -9160,7 +9088,7 @@ is_a: IAO:0000300 ! textual entity
 property_value: IAO:0000111 "author information textual entity" xsd:string
 property_value: IAO:0000112 "From Takon. Ann Gen Psychiatry. 2011; 10: 25. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3204268/):\n\nIT [the author] is the lead paediatrician for ADHD services in East Hertfordshire, UK, where she runs a weekly joint ADHD clinic with the Child and Adolescent psychiatrist and works within an ADHD specialist team. IT also sees children with other neurodisability issues who may have comorbid ADHD, where the presentation may be more complex and challenging to manage. IT has vast experience in managing children with complex ADHD. She has 18 years of experience in paediatrics and also has extensive experience in the use of psychopharmacologic agents in managing children with ADHD." xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000609
@@ -9175,7 +9103,7 @@ property_value: IAO:0000118 "author summary" xsd:string
 property_value: IAO:0000118 "summary" xsd:string
 property_value: IAO:0000118 "synopsis" xsd:string
 property_value: IAO:0000119 "Article submission guidelines for PLoS Genetics (http://journals.plos.org/plosgenetics/s/submission-guidelines)" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000610
@@ -9186,7 +9114,7 @@ property_value: IAO:0000111 "author summary textual entity" xsd:string
 property_value: IAO:0000112 "From Pendse et al. BMC Genomics. 2013; 14: 136. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3608171/):\n\n\nThe search for genetic risk factors for common human diseases often relies on the use of linkage and association studies to establish correlation between genomic markers and disease risk. These studies require additional functional evaluation of candidate genes, including their possible interaction with diet and environment. The number of candidate genes is typically large and the development of appropriate genetic tools in mammalian systems is slow. By contrast, large-scale genetic screens, using widely available genetic tools, are routinely conducted in the fruit fly Drosophila melanogaster. In this study, we used Drosophila to screen candidate genes identified in human genome-wide scans as associated with risk of metabolic abnormalities such as type 2 diabetes. We show that a number of human candidate genes have fly orthologs that play an important role in Drosophila tolerance to high dietary sucrose. We further explored some of the specific metabolic abnormalities that can result when these genes’ activities are reduced in flies, focusing on a gene we call dHHEX (CG7056), the fly ortholog of human HHEX." xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
 property_value: IAO:0000119 "Article submission guidelines for PLoS Genetics (http://journals.plos.org/plosgenetics/s/submission-guidelines)." xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000611
@@ -9203,8 +9131,8 @@ property_value: IAO:0000118 "data archiving" xsd:string
 property_value: IAO:0000118 "data availability" xsd:string
 property_value: IAO:0000118 "data availability statement" xsd:string
 property_value: IAO:0000118 "data sharing statement" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/234
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/234
 
 [Term]
 id: IAO:0000612
@@ -9214,7 +9142,7 @@ is_a: IAO:0000300 ! textual entity
 property_value: IAO:0000111 "availability textual entity" xsd:string
 property_value: IAO:0000112 "From Qi et al. BMC Bioinformatics. 2014; 15: 11. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3897912/):\n\nProject home page:http://krux.googlecode.com" xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000613
@@ -9227,7 +9155,7 @@ property_value: IAO:0000112 "The section labelled 'case report' in a typical sci
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
 property_value: IAO:0000118 "case presentation" xsd:string
 property_value: IAO:0000118 "case report" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000614
@@ -9237,7 +9165,7 @@ is_a: IAO:0000300 ! textual entity
 property_value: IAO:0000111 "case report textual entity" xsd:string
 property_value: IAO:0000112 "Excerpt from Taglia et al. Acta Myol. 2012 Dec; 31(3): 201–203. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3631801/):\n\nThe patient is a 50-year-old man. His medical history was not contributory. At the age of 37 years, he complained of persistent fatigue and dyspnoea even for modest efforts and oedema of lower limbs. The patient was examined at the department of internal medicine of the local hospital, and hospitalised with a diagnosis of dilated cardiomyopathy probably consequence of a myocarditis process. Soon after he was transferred to the cardiologic department of the regional hospital, and pharmacologically treated for heart failure and pulmonary hypertension." xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000615
@@ -9253,7 +9181,7 @@ property_value: IAO:0000118 "conclusion" xsd:string
 property_value: IAO:0000118 "conclusions" xsd:string
 property_value: IAO:0000118 "findings" xsd:string
 property_value: IAO:0000118 "summary" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000616
@@ -9279,8 +9207,8 @@ property_value: IAO:0000118 "disclosure of conflict of interest" xsd:string
 property_value: IAO:0000118 "disclosure of potential conflicts of interest" xsd:string
 property_value: IAO:0000118 "duality of interest" xsd:string
 property_value: IAO:0000118 "statement of interest" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/234
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/234
 
 [Term]
 id: IAO:0000617
@@ -9290,7 +9218,7 @@ is_a: IAO:0000300 ! textual entity
 property_value: IAO:0000111 "conflict of interest statement" xsd:string
 property_value: IAO:0000112 "SD [an author] is a Merck employee and Merck is the sponsor of this study. [Taken from 'Effects of obstructive sleep apnoea risk on postoperative respiratory complications: protocol for a hospital-based registry study' Shin et al. 2016  (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4735131/)] " xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000618
@@ -9302,7 +9230,7 @@ property_value: IAO:0000111 "consent section" xsd:string
 property_value: IAO:0000112 "The section labelled 'consent' in a typical scientific journal article, e.g. Shiba et al. Acta Neuropathol Commun. 2013; 1: 45. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3893467/)" xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
 property_value: IAO:0000118 "consent" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000619
@@ -9312,7 +9240,7 @@ is_a: IAO:0000300 ! textual entity
 property_value: IAO:0000111 "consent textual entity" xsd:string
 property_value: IAO:0000112 "From Shiba et al. Acta Neuropathol Commun. 2013; 1: 45. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3893467/):\n\nWritten informed consent was obtained from the patient’s parents for publication of this Case report and any accompanying images. A copy of the written consent is available for review by the Editor-in chief of this journal." xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000620
@@ -9327,8 +9255,8 @@ property_value: IAO:0000118 "ethical approval" xsd:string
 property_value: IAO:0000118 "ethical requirements" xsd:string
 property_value: IAO:0000118 "ethics" xsd:string
 property_value: IAO:0000118 "ethics statement" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/234
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/234
 
 [Term]
 id: IAO:0000621
@@ -9339,7 +9267,7 @@ relationship: IAO:0000136 OBI:0500000 ! is about study design
 property_value: IAO:0000111 "ethical approval textual entity" xsd:string
 property_value: IAO:0000112 "From McLean et al. Br J Gen Pract. 2014 Jul; 64(624): e440–e447 (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4073730/):\n\nThe NHS National Research Ethics Service had previously approved the use of these anonymised data for research purposes and this analysis did not require independent review." xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000622
@@ -9351,7 +9279,7 @@ property_value: IAO:0000111 "figures section" xsd:string
 property_value: IAO:0000112 "The section labelled 'figures' in a typical scientific journal article." xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
 property_value: IAO:0000118 "figures" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000623
@@ -9373,8 +9301,8 @@ property_value: IAO:0000118 "role of the funding source" xsd:string
 property_value: IAO:0000118 "source of funding" xsd:string
 property_value: IAO:0000118 "sources of funding" xsd:string
 property_value: IAO:0000118 "study funding" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/234
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/234
 
 [Term]
 id: IAO:0000624
@@ -9384,7 +9312,7 @@ is_a: IAO:0000300 ! textual entity
 property_value: IAO:0000111 "funding souce declaration textual entity" xsd:string
 property_value: IAO:0000112 "From Stephan et al. Accid Anal Prev. 2011 May; 43(3): 1062–1067. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3062852/):\n\nThis study was supported by the International Collaborative Research Grants Scheme with joint grants from the Wellcome Trust UK (GR071587MA) and the Australian NHMRC (268055). The funding sources played no role in study design, data collection, analysis or interpretation, writing the report, or the decision to submit the paper for publication." xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000625
@@ -9408,8 +9336,8 @@ property_value: IAO:0000118 "future research directions" xsd:string
 property_value: IAO:0000118 "future studies" xsd:string
 property_value: IAO:0000118 "future work" xsd:string
 property_value: IAO:0000118 "outlook" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/234
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/234
 
 [Term]
 id: IAO:0000626
@@ -9419,7 +9347,7 @@ is_a: IAO:0000300 ! textual entity
 property_value: IAO:0000111 "future directions textual entity" xsd:string
 property_value: IAO:0000112 "Excerpt from Wang and Li. Acta Pharmacol Sin. 2016 Jan; 37(1): 25–33. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4722976/):\n\nIn the future, several questions will need to be resolved regarding the physiological assembly of KCNQ channels and their functional implications in complex neural circuits. First, we still lack sufficiently selective inhibitors and activators among the KCNQ family members." xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000627
@@ -9431,7 +9359,7 @@ property_value: IAO:0000111 "genome announcement section" xsd:string
 property_value: IAO:0000112 "The section labelled 'genome announcement' in a typical scientific journal article, e.g. in Kim et al. J Bacteriol. 2011 Oct; 193(19): 5537. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3187466/)" xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
 property_value: IAO:0000118 "genome announcement" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000628
@@ -9441,7 +9369,7 @@ is_a: IAO:0000300 ! textual entity
 property_value: IAO:0000111 "genome announcement textual entity" xsd:string
 property_value: IAO:0000112 "Excerpt from Kim et al. J Bacteriol. 2011 Oct; 193(19): 5537. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3187466/):\n\nHere we report the genome sequence of Lactobacillus malefermentans KCTC 3548, which we obtained using a whole-genome shotgun strategy (4) with Roche 454 GS (FLX Titanium) pyrosequencing (257,559 reads totaling ∼89.8 Mb; ∼45-fold coverage of the genome) at the Genome Resource Center, Korea Research Institute of Bioscience and Biotechnology (KRIBB)." xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000629
@@ -9451,7 +9379,7 @@ is_a: IAO:0000300 ! textual entity
 property_value: IAO:0000111 "keyword textual entity" xsd:string
 property_value: IAO:0000112 "From: Fu and Lin. Identification of gene-oriented exon orthology between human and mouse. BMC Genomics. 2012; 13(Suppl 1): S10. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3303729/):\n\nExon orthology; alternative splicing; exon duplication; intron-exon structure." xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000630
@@ -9463,7 +9391,7 @@ property_value: IAO:0000111 "keywords section" xsd:string
 property_value: IAO:0000112 "The section labelled 'keywords' in a typical scientific journal article." xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
 property_value: IAO:0000118 "keywords" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000631
@@ -9478,7 +9406,7 @@ property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
 property_value: IAO:0000118 "limitations" xsd:string
 property_value: IAO:0000118 "study limitations" xsd:string
 property_value: IAO:0000119 "Author guidelines published by The Society for Academic Emergency Medicine. (http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1553-2712/homepage/ForAuthors.html)" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000632
@@ -9489,7 +9417,7 @@ property_value: IAO:0000111 "study limitations textual entity" xsd:string
 property_value: IAO:0000112 "Excerpt from the Limitations section of Fermann et al 2015, Acad Emerg Med. 2015 Mar; 22(3): 299–307 (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4405051/). \n\nOwing to the nature of a post hoc study, any significant values must be interpreted with caution. In the current analysis, no multiple testing was conducted and p-values remain unadjusted. Moreover, a selection bias arising from the randomized open-label design of the original EINSTEIN PE study cannot be ruled out." xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
 property_value: IAO:0000119 "Author guidelines published by The Society for Academic Emergency Medicine. (http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1553-2712/homepage/ForAuthors.html)" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000633
@@ -9500,7 +9428,7 @@ property_value: IAO:0000111 "materials section" xsd:string
 property_value: IAO:0000112 "The section labelled 'materials' in a typical scientific journal article, e.g. Nguyen et al. BMC Bioinformatics. 2010; 11: 279. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2889936/)" xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
 property_value: IAO:0000118 "materials" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000634
@@ -9511,7 +9439,7 @@ property_value: IAO:0000111 "notes section" xsd:string
 property_value: IAO:0000112 "The section labelled 'notes' in a typical scientific journal article, e.g. McLean et al. Br J Gen Pract. 2014 Jul; 64(624): e440–e447 (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4073730/):" xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
 property_value: IAO:0000118 "notes" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000635
@@ -9522,7 +9450,7 @@ relationship: has_part IAO:0000636 ! patients textual entity
 property_value: IAO:0000111 "patients section" xsd:string
 property_value: IAO:0000112 "The section labelled 'patients' in a typical scientific journal article, e.g. in Citak et al. Acta Orthop. 2013 Jun; 84(3): 326–327. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3715825/)" xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000636
@@ -9532,7 +9460,7 @@ is_a: IAO:0000300 ! textual entity
 property_value: IAO:0000111 "patients textual entity" xsd:string
 property_value: IAO:0000112 "Excerpt from Citak et al. Acta Orthop. 2013 Jun; 84(3): 326–327. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3715825/):\n\nBetween January 1996 and February 2012, we treated 4 patients with interprosthetic femoral fractures (3 of them women) (Figure 2) using a custom-made interposition device (Waldemar Link GmbH, Hamburg, Germany) (Figure 1). Mean age was 74 (59–86) years. The fractures occurred mean 18 (13–28) years after primary THA and mean 14 (10–17) years after primary TKA. At the latest follow-up, after mean 8 (0.5–16) years, revision surgery with a total femur replacement was required in 1 case due to aseptic loosening. No other complications requiring revision surgery occurred." xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000637
@@ -9545,7 +9473,7 @@ property_value: IAO:0000112 "The section labelled 'pre-publication history' in a
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
 property_value: IAO:0000118 "notice of republication" xsd:string
 property_value: IAO:0000118 "pre-publication history" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000638
@@ -9555,7 +9483,7 @@ is_a: IAO:0000300 ! textual entity
 property_value: IAO:0000111 "pre-publication history textual entity" xsd:string
 property_value: IAO:0000112 "From Xiao et al. BMC Anesthesiol. 2013; 13: 33. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4016475/):\n\nThe pre-publication history for this paper can be accessed here:\nhttp://www.biomedcentral.com/1471-2253/13/33/prepub" xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000639
@@ -9568,7 +9496,7 @@ property_value: IAO:0000112 "The section labelled 'related work' in a typical sc
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
 property_value: IAO:0000118 "related literature" xsd:string
 property_value: IAO:0000118 "related work" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000640
@@ -9578,7 +9506,7 @@ is_a: IAO:0000300 ! textual entity
 property_value: IAO:0000111 "related work textual entity" xsd:string
 property_value: IAO:0000112 "Excerpt from Žitnik and Zupan. Bioinformatics. 2015 Jun 15; 31(12): i230–i239. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4542780/):\n\nOur work presented here is similar in spirit to our recently developed methodology for data fusion via collective matrix factorization (Žitnik and Zupan, 2015).\n\n" xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000641
@@ -9590,7 +9518,7 @@ property_value: IAO:0000111 "requirements section" xsd:string
 property_value: IAO:0000112 "The section labelled 'availability and requirements' in a typical scientific journal article, e.g. Qi et al. BMC Bioinformatics. 2014; 15: 11. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3897912/)." xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
 property_value: IAO:0000118 "requirements" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000642
@@ -9600,7 +9528,7 @@ is_a: IAO:0000300 ! textual entity
 property_value: IAO:0000111 "requirements textual entity" xsd:string
 property_value: IAO:0000112 "From Qi et al. BMC Bioinformatics. 2014; 15: 11. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3897912/):\n\n• Operating systems: Platform independent\n\n• Programming language: Matlab, R, Python\n\n• Other requirements: None\n\n• License: GNU GPL v3\n\n• Any restrictions to use by non-academics: None" xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000643
@@ -9610,7 +9538,7 @@ is_a: IAO:0000300 ! textual entity
 property_value: IAO:0000111 "statistical analysis textual entity" xsd:string
 property_value: IAO:0000112 "From Mondo et al. Cardiovasc J Afr. 2013 Mar; 24(2): 28–33. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3734881/):\n\nData were captured into EPI-DATA (version 3.1), cleaned and then exported to Stata version 10 for analysis. Continuous variables were summarised as mean (± standard deviation) and median (inter-quartile range), and presented in the tables. Categorical data were analysed using frequency and percentages, and results are presented in frequency tables and bar charts. Test of significance (p-value) was determined using the chi-square test. A p-value of less than 0.05 was considered significant." xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000644
@@ -9622,7 +9550,7 @@ property_value: IAO:0000111 "statistical analysis section" xsd:string
 property_value: IAO:0000112 "The section labelled 'statistical analysis' in a typical scientific journal article, e.g. Mondo et al. Cardiovasc J Afr. 2013 Mar; 24(2): 28–33. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3734881/)" xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
 property_value: IAO:0000118 "statistical analysis" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000645
@@ -9634,7 +9562,7 @@ property_value: IAO:0000111 "tables section" xsd:string
 property_value: IAO:0000112 "The section labelled 'tables' in a typical scientific journal article." xsd:string
 property_value: IAO:0000117 "PERSON: Bill Baumgartner" xsd:string
 property_value: IAO:0000118 "tables" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/183
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/183
 
 [Term]
 id: IAO:0000646
@@ -9663,8 +9591,7 @@ id: IAO:0000650
 name: database extract, transform, and load process
 def: "A planned process which takes as input a database and fills another database by extracting concretizations of information entities from the first, transforming them, and loading the transformed concretizations into the second." []
 is_a: COB:0000035 ! completely executed planned process
-is_a: OBI:0000011 ! planned process
-relationship: OBI:0000293 IAO:0000030 ! has_specified_input information content entity
+relationship: OBI:0000293 IAO:0000030 ! has specified input information content entity
 relationship: OBI:0000299 IAO:0000030 ! has specified output information content entity
 property_value: foaf:page https://en.wikipedia.org/wiki/Extract,_transform,_load
 property_value: IAO:0000111 "database extract, transform, and load process" xsd:string
@@ -9673,8 +9600,17 @@ property_value: IAO:0000116 "Alan Ruttenberg 12/21/16: We don't define database 
 property_value: IAO:0000117 "PERSON:Alan Ruttenberg" xsd:string
 property_value: IAO:0000118 "ETL" xsd:string
 property_value: IAO:0000119 "WEB:https://en.wikipedia.org/wiki/Extract,_transform,_load" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/187
 property_value: isDefinedBy https://github.com/information-artifact-ontology/IAO
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/187
+
+[Term]
+id: IAO:0000651
+name: title section
+def: "the section of the document where the title appears" []
+is_a: IAO:0000314 ! document part
+property_value: IAO:0000116 "This term should not be confused with dc:title - this term represents the component of the document where the title appears, and not the value of the title itself." xsd:string
+property_value: IAO:0000117 "Charles Tapley Hoyt" xsd:string
+property_value: term_tracker_item "https://github.com/information-artifact-ontology/IAO/issues/286" xsd:anyURI
 
 [Term]
 id: IAO:0000701
@@ -9686,8 +9622,8 @@ property_value: IAO:0000114 IAO:0000120
 property_value: IAO:0000117 "PERSON: Chen Yang" xsd:string
 property_value: IAO:0000117 "PERSON: Jie Zheng" xsd:string
 property_value: IAO:0000119 "https://www.equator-network.org/reporting-guidelines/prisma/" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/235
 property_value: IAO:0000234 "ONE ontology" xsd:string
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/235
 
 [Term]
 id: IAO:0000702
@@ -9701,8 +9637,8 @@ property_value: IAO:0000117 "PERSON: Jie Zheng" xsd:string
 property_value: IAO:0000119 "https://www.equator-network.org/reporting-guidelines/consort/" xsd:string
 property_value: IAO:0000119 "https://www.equator-network.org/reporting-guidelines/prisma/" xsd:string
 property_value: IAO:0000119 "https://www.equator-network.org/reporting-guidelines/strobe/" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/235
 property_value: IAO:0000234 "ONE ontology" xsd:string
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/235
 
 [Term]
 id: IAO:0000703
@@ -9716,8 +9652,8 @@ property_value: IAO:0000117 "PERSON: Jie Zheng" xsd:string
 property_value: IAO:0000119 "https://www.equator-network.org/reporting-guidelines/consort/" xsd:string
 property_value: IAO:0000119 "https://www.equator-network.org/reporting-guidelines/prisma/" xsd:string
 property_value: IAO:0000119 "https://www.equator-network.org/reporting-guidelines/strobe-nut/" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/235
 property_value: IAO:0000234 "ONE ontology" xsd:string
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/235
 
 [Term]
 id: IAO:0000704
@@ -9729,8 +9665,8 @@ property_value: IAO:0000114 IAO:0000120
 property_value: IAO:0000117 "PERSON: Chen Yang" xsd:string
 property_value: IAO:0000117 "PERSON: Jie Zheng" xsd:string
 property_value: IAO:0000119 "https://www.equator-network.org/reporting-guidelines/strobe/" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/235
 property_value: IAO:0000234 "ONE ontology" xsd:string
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/235
 
 [Term]
 id: IAO:0000705
@@ -9742,8 +9678,8 @@ property_value: IAO:0000114 IAO:0000120
 property_value: IAO:0000117 "PERSON: Chen Yang" xsd:string
 property_value: IAO:0000117 "PERSON: Jie Zheng" xsd:string
 property_value: IAO:0000119 "https://www.ncbi.nlm.nih.gov/books/NBK262175/" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/235
 property_value: IAO:0000234 "ONE ontology" xsd:string
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/235
 
 [Term]
 id: IAO:0000706
@@ -9755,8 +9691,8 @@ property_value: IAO:0000114 IAO:0000120
 property_value: IAO:0000117 "PERSON: Chen Yang" xsd:string
 property_value: IAO:0000117 "PERSON: Jie Zheng" xsd:string
 property_value: IAO:0000119 "DOI: 10.1097/PRS.0b013e3181de24bc" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/235
 property_value: IAO:0000234 "ONE ontology" xsd:string
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/235
 
 [Term]
 id: IAO:0000707
@@ -9769,8 +9705,8 @@ property_value: IAO:0000117 "PERSON: Jie Zheng" xsd:string
 property_value: IAO:0000117 "PERSON: Tim Beck" xsd:string
 property_value: IAO:0000118 "visual abstract" xsd:string
 property_value: IAO:0000119 "https://www.elsevier.com/authors/journal-authors/graphical-abstract" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/234
 property_value: IAO:0000234 "Biomedical literature NLP project" xsd:string
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/234
 
 [Term]
 id: IAO:0000708
@@ -9786,7 +9722,18 @@ property_value: IAO:0000118 "Open Researcher and Contributor Identifier" xsd:str
 property_value: IAO:0000118 "ORCiD" xsd:string
 property_value: IAO:0000118 "ORCID ID" xsd:string
 property_value: IAO:0000119 "https://orcid.org/" xsd:string
-property_value: IAO:0000233 "https://github.com/information-artifact-ontology/IAO/issues/259" xsd:string
+property_value: term_tracker_item "https://github.com/information-artifact-ontology/IAO/issues/259" xsd:string
+
+[Term]
+id: IAO:0001000
+name: data collection
+def: "A data entity that consists of multiple data entities." []
+is_a: IAO:0000027 ! data entity
+property_value: IAO:0000111 "data collection" xsd:string
+property_value: IAO:0000117 "Sebastian Duesing" xsd:string
+property_value: IAO:0000118 "data set" xsd:string
+property_value: term_tracker_item "https://github.com/information-artifact-ontology/IAO/issues/283" xsd:string
+property_value: term_tracker_item "https://github.com/obi-ontology/obi/issues/1877" xsd:string
 
 [Term]
 id: IAO:0020000
@@ -9804,7 +9751,7 @@ property_value: IAO:0000111 "identifier" xsd:string
 property_value: IAO:0000117 "Justin Whorton" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000118 "proper name" xsd:string
-property_value: IAO:0000233 "https://github.com/information-artifact-ontology/IAO/issues/237" xsd:string
+property_value: term_tracker_item "https://github.com/information-artifact-ontology/IAO/issues/237" xsd:string
 
 [Term]
 id: IAO:0020001
@@ -9816,15 +9763,14 @@ property_value: dc:creator "Mathias Brochhausen" xsd:string
 property_value: IAO:0000112 "alphabetic letters, Chinese characters, numerical digits, punctuation marks, and the individual symbols of any of the world's writing systems" xsd:string
 property_value: IAO:0000117 "Justin Whorton" xsd:string
 property_value: IAO:0000119 "http://en.wikipedia.org/wiki/Grapheme" xsd:string
-property_value: IAO:0000233 "https://github.com/information-artifact-ontology/IAO/issues/237" xsd:string
+property_value: term_tracker_item "https://github.com/information-artifact-ontology/IAO/issues/237" xsd:string
 
 [Term]
 id: IAO:0020010
 name: identifier creating process
 def: "A planned process that provides a reference to an individual entity shared by a group of subscribers to refer to that individual entity." []
 is_a: COB:0000035 ! completely executed planned process
-is_a: OBI:0000011 ! planned process
-intersection_of: OBI:0000011 ! planned process
+intersection_of: COB:0000035 ! completely executed planned process
 intersection_of: OBI:0000299 IAO:0020000 ! has specified output identifier
 relationship: OBI:0000299 IAO:0020000 ! has specified output identifier
 property_value: dc:creator "Mathias Brochhausen" xsd:string
@@ -9832,7 +9778,7 @@ property_value: IAO:0000117 "Justin Whorton" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000118 "dubbing process" xsd:string
 property_value: IAO:0000118 "naming" xsd:string
-property_value: IAO:0000233 "https://github.com/information-artifact-ontology/IAO/issues/237" xsd:string
+property_value: term_tracker_item "https://github.com/information-artifact-ontology/IAO/issues/237" xsd:string
 
 [Term]
 id: IAO:0020015
@@ -9843,7 +9789,7 @@ is_a: IAO:0020000 ! identifier
 property_value: IAO:0000117 "Justin Whorton" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000119 "http://en.wikipedia.org/wiki/Personal_name" xsd:string
-property_value: IAO:0000233 "https://github.com/information-artifact-ontology/IAO/issues/237" xsd:string
+property_value: term_tracker_item "https://github.com/information-artifact-ontology/IAO/issues/237" xsd:string
 
 [Term]
 id: IAO:0020016
@@ -9854,7 +9800,7 @@ property_value: IAO:0000117 "Justin Whorton" xsd:string
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000118 "first name" xsd:string
 property_value: IAO:0000119 "http://en.wikipedia.org/wiki/Given_name" xsd:string
-property_value: IAO:0000233 "https://github.com/information-artifact-ontology/IAO/issues/237" xsd:string
+property_value: term_tracker_item "https://github.com/information-artifact-ontology/IAO/issues/237" xsd:string
 
 [Term]
 id: IAO:0020017
@@ -9866,7 +9812,7 @@ property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 property_value: IAO:0000118 "last name" xsd:string
 property_value: IAO:0000118 "surname" xsd:string
 property_value: IAO:0000119 "http://en.wikipedia.org/wiki/Family_name" xsd:string
-property_value: IAO:0000233 "https://github.com/information-artifact-ontology/IAO/issues/237" xsd:string
+property_value: term_tracker_item "https://github.com/information-artifact-ontology/IAO/issues/237" xsd:string
 
 [Term]
 id: IAO:0020020
@@ -9888,7 +9834,7 @@ property_value: IAO:0000118 "code system" xsd:string
 property_value: IAO:0000118 "codeset" xsd:string
 property_value: IAO:0000118 "coding system" xsd:string
 property_value: IAO:0000118 "controlled vocabulary" xsd:string
-property_value: IAO:0000233 "https://github.com/information-artifact-ontology/IAO/issues/237" xsd:string
+property_value: term_tracker_item "https://github.com/information-artifact-ontology/IAO/issues/237" xsd:string
 
 [Term]
 id: IAO:0021003
@@ -15250,7 +15196,7 @@ property_value: IAO:0000412 "http://purl.obolibrary.org/obo/dideo/dev/dideo.owl"
 [Term]
 id: OBI:0000011
 name: planned process
-def: "A process that realizes a plan which is the concretization of a plan specification." []
+def: "A processual entity that realizes a plan which is the concretization of a plan specification." []
 is_a: BFO:0000015 ! process
 property_value: IAO:0000111 "planned process" xsd:string
 property_value: IAO:0000112 "Injecting mice with a vaccine in order to test its efficacy" xsd:string
@@ -15275,7 +15221,7 @@ property_value: IAO:0000117 "PERSON: Alan Ruttenberg" xsd:string
 id: OBI:0000066
 name: investigation
 def: "a planned process that consists of parts: planning, study design execution, documentation and which produce conclusion(s)." []
-is_a: OBI:0000011 ! planned process
+is_a: COB:0000035 ! completely executed planned process
 property_value: IAO:0000111 "investigation" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
 
@@ -15336,7 +15282,7 @@ property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
 id: OBI:0000471
 name: study design execution
 def: "a planned process that carries out a study design" []
-is_a: OBI:0000011 ! planned process
+is_a: COB:0000035 ! completely executed planned process
 property_value: IAO:0000111 "study design execution" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
 
@@ -15374,7 +15320,7 @@ property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
 id: OBI:0000674
 name: center value
 def: "A data item that is produced as the output of a center calculation data transformation and represents the center value of the input data." []
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 property_value: APOLLO_SV:0000040 "median" xsd:string
 property_value: IAO:0000111 "center value" xsd:string
 property_value: IAO:0000114 IAO:0000125
@@ -15387,8 +15333,8 @@ property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
 id: OBI:0000679
 name: average value
 def: "A  data item that is produced as the output of an averaging data transformation and represents the average value of the input data." []
-is_a: IAO:0000027 ! data item
-intersection_of: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
+intersection_of: IAO:0000027 ! data entity
 intersection_of: OBI:0000312 OBI:0200170 ! is specified output of averaging data transformation
 relationship: OBI:0000312 OBI:0200170 ! is specified output of averaging data transformation
 property_value: APOLLO_SV:0000040 "mean" xsd:string
@@ -15528,34 +15474,6 @@ property_value: OBI:0001847 "study description" xsd:string
 property_value: OBI:0001886 "project description" xsd:string
 
 [Term]
-id: OBI:0001620
-name: latitude coordinate measurement datum
-def: "A measurement datum that is the measure of the latitude coordinate of a site." []
-is_a: GEO:000000787 ! geodetic coordinate measurement datum
-property_value: dc:source "NIAID GSCID-BRC" xsd:string
-property_value: IAO:0000111 "latitude coordinate measurement datum" xsd:string
-property_value: IAO:0000114 IAO:0000120
-property_value: IAO:0000117 "Person: Chris Stoeckert, Jie Zheng" xsd:string
-property_value: IAO:0000118 "latitude" xsd:string
-property_value: IAO:0000119 "NIAID GSCID-BRC metadata working group" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
-property_value: OBI:0001886 "Specimen Collection Location - Latitude" xsd:string
-
-[Term]
-id: OBI:0001621
-name: longitude coordinate measurement datum
-def: "A measurement datum that is the measure of the longitude coordinate of a site." []
-is_a: GEO:000000787 ! geodetic coordinate measurement datum
-property_value: dc:source "NIAID GSCID-BRC" xsd:string
-property_value: IAO:0000111 "longitude coordinate measurement datum" xsd:string
-property_value: IAO:0000114 IAO:0000120
-property_value: IAO:0000117 "Person: Chris Stoeckert, Jie Zheng" xsd:string
-property_value: IAO:0000118 "longitude" xsd:string
-property_value: IAO:0000119 "NIAID GSCID-BRC metadata working group" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
-property_value: OBI:0001886 "Specimen Collection Location - Longitude" xsd:string
-
-[Term]
 id: OBI:0001628
 name: investigation identifier
 def: "A CRID symbol used to identify an investigation." []
@@ -15581,28 +15499,6 @@ property_value: IAO:0000117 "Person: Chris Stoeckert, Jie Zheng" xsd:string
 property_value: IAO:0000119 "NIAID GSCID-BRC metadata working group" xsd:string
 property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
 property_value: OBI:0001886 "grant ID" xsd:string
-
-[Term]
-id: OBI:0001931
-name: scalar value specification
-def: "A value specification that consists of two parts: a numeral and a unit label" []
-is_a: OBI:0001933 ! value specification
-property_value: IAO:0000111 "scalar value specification" xsd:string
-property_value: IAO:0000114 IAO:0000123
-property_value: IAO:0000117 "PERSON:Bjoern Peters" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
-
-[Term]
-id: OBI:0001933
-name: value specification
-def: "An information content entity that specifies a value within a classification scheme or on a quantitative scale." []
-is_a: IAO:0000030 ! information content entity
-property_value: IAO:0000111 "value specification" xsd:string
-property_value: IAO:0000112 "The value of 'positive' in a classification scheme of \"positive or negative\"; the value of '20g' on the quantitative scale of mass." xsd:string
-property_value: IAO:0000114 IAO:0000122
-property_value: IAO:0000116 "This term is currently a descendant of 'information content entity', which requires that it 'is about' something. A value specification of '20g' for a measurement data item of the mass of a particular mouse 'is about' the mass of that mouse. However there are cases where a value specification is not clearly about any particular. In the future we may change 'value specification' to remove the 'is about' requirement." xsd:string
-property_value: IAO:0000117 "PERSON:Bjoern Peters" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
 
 [Term]
 id: OBI:0001958
@@ -15857,7 +15753,9 @@ def: "A process in which at least one bodily component of an organsim participat
 comment: From OGMS: http://purl.obolibrary.org/obo/OGMS_0000060
 is_a: BFO:0000015 ! process
 relationship: BFO:0000167 OGMS:0000087 ! has participant at all times extended organism
+property_value: IAO:0000117 "Albert Goldfain" xsd:string
 property_value: IAO:0000119 "http://www.jbiomedsem.com/content/1/1/10" xsd:string
+property_value: IAO:0000232 "creation date: 2009-06-23T11:53:49Z" xsd:string
 
 [Term]
 id: OGMS:0000063
@@ -16167,10 +16065,11 @@ property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
 [Term]
 id: OMRSE:00000064
 name: school facility
-def: "A facility that is run by a school organization and is the bearer of a school function." []
-is_a: OMRSE:00000062 ! facility
+def: "An educational facility that is run by a school organization and is the bearer of a school function." []
+is_a: BCIO:026022 ! educational facility
 relationship: RO:0000053 OMRSE:00000053 ! bearer of school function
 property_value: IAO:0000117 "Mathias Brochhausen" xsd:string
+property_value: terms:contributor https://orcid.org/0000-0002-9881-1017
 
 [Term]
 id: OMRSE:00000065
@@ -16257,13 +16156,7 @@ property_value: IAO:0000412 "http://purl.obolibrary.org/obo/pato.owl" xsd:string
 
 [Term]
 id: PATO:0000117
-name: size
-namespace: quality
-def: "A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude." []
-subset: attribute_slim
-subset: scalar_slim
 is_a: PATO:0000051 ! morphology
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/pato.owl" xsd:string
 
 [Term]
 id: PATO:0000122
@@ -16358,35 +16251,13 @@ property_value: IAO:0000412 http://purl.obolibrary.org/obo/pato.owl
 property_value: IAO:0000412 "http://purl.obolibrary.org/obo/pato.owl" xsd:string
 
 [Term]
-id: PATO:0001323
-name: area
-namespace: quality
-def: "A 2-D extent quality inhering in a bearer by virtue of the bearer's two dimensional extent." []
-comment: MIREOT'd into GEO to represent the area quality of a geographical region, including land area and water area.
-subset: attribute_slim
-subset: mpath_slim
-subset: scalar_slim
-is_a: PATO:0001709 ! 2-D extent
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/pato.owl" xsd:string
-
-[Term]
 id: PATO:0001708
 name: 1-D extent
 namespace: quality
 def: "A size quality inhering in an bearer by virtue of the bearer's extension in one dimension." []
 subset: attribute_slim
 synonym: "1-D size" EXACT []
-is_a: PATO:0000117 ! size
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/pato.owl" xsd:string
-
-[Term]
-id: PATO:0001709
-name: 2-D extent
-namespace: quality
-def: "A size quality inhering in an bearer by virtue of the bearer's extension in two dimensions." []
-subset: attribute_slim
-synonym: "2-D size" EXACT []
-is_a: PATO:0000117 ! size
+is_a: PATO:0000117
 property_value: IAO:0000412 "http://purl.obolibrary.org/obo/pato.owl" xsd:string
 
 [Term]
@@ -16429,7 +16300,7 @@ name: population
 def: "A collection of organisms, all of the same species, that live in the same place." []
 comment: It is sometimes difficult to define the physical boundaries of a population. In the case of sexually reproducing organisms, the individuals within a population have the potential to reproduce with one another during the course of their lifetimes. 'Community', as often used to describe a group of humans, is a type of population. Classes for population already exist in IDO ('organism population', IDO_0000509) and OBI ('population', OBI_0000181). The definitions should be standardized across ontologies and only one term used.
 is_a: PCO:0000018 ! collection of organisms of the same species
-relationship: BFO:0000177 APOLLO_SV:00000104 ! part of continuant at all times biotic ecosystem
+relationship: BFO:0000177 APOLLO_SV:00000104 ! biotic ecosystem
 property_value: APOLLO_SV:0000040 "Population" xsd:string
 property_value: IAO:0000116 "Still uncertain if this should include every organism of a species living in an area or any subset of them. For now make this a general term (unspecified) and then subclasses can be more specific." xsd:string
 property_value: IAO:0000119 "ISBN:0878932739" xsd:string
@@ -16529,7 +16400,7 @@ property_value: STATO:0000032 "" xsd:string
 id: STATO:0000258
 name: variable
 def: "A variable is a data item which can assume any of a set of values, either as determined by an agent or as randomly occuring through observation." []
-is_a: IAO:0000027 ! data item
+is_a: IAO:0000027 ! data entity
 property_value: APOLLO_SV:0000040 "variable" xsd:string
 property_value: IAO:0000114 IAO:0000122
 property_value: IAO:0000117 "Alejandra Gonzalez-Beltran" xsd:string
@@ -16617,8 +16488,6 @@ id: UBERON:0000071
 name: death stage
 def: "End of the life of an organism." [XAO:0000437]
 subset: common_anatomy
-subset: human_subset
-subset: mouse_subset
 synonym: "death" RELATED []
 xref: XAO:0000437
 xref: XtroDO:0000085
@@ -16630,8 +16499,6 @@ name: life cycle stage
 def: "A spatiotemporal region encompassing some part of the life cycle of an organism." [https://orcid.org/0000-0002-6601-2165]
 subset: common_anatomy
 subset: efo_slim
-subset: human_subset
-subset: mouse_subset
 subset: upper_level
 synonym: "developmental stage" NARROW []
 synonym: "stage" NARROW []
@@ -16840,8 +16707,6 @@ id: UBERON:0035943
 name: life cycle temporal boundary
 def: "A temporal boundary connecting two life cycle stages that follow in immediate succession. A temporal boundary is an abstract, instantaneous entity." [https://orcid.org/0000-0002-6601-2165]
 subset: common_anatomy
-subset: human_subset
-subset: mouse_subset
 subset: upper_level
 is_a: BFO:0000035 ! process boundary
 
@@ -16855,6 +16720,7 @@ property_value: IAO:0000412 "http://purl.org/obo/owl/unit" xsd:string
 [Term]
 id: UO:0000001
 name: length unit
+def: "A unit which is a standard measure of the distance between two points." []
 is_a: IAO:0000003 ! measurement unit label
 property_value: IAO:0000111 "length unit" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/uo.owl
@@ -16862,6 +16728,7 @@ property_value: IAO:0000412 http://purl.obolibrary.org/obo/uo.owl
 [Term]
 id: UO:0000002
 name: mass unit
+def: "A unit which is a standard measure of the amount of matter/energy of a physical object." []
 is_a: IAO:0000003 ! measurement unit label
 property_value: IAO:0000111 "mass unit" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/uo.owl
@@ -16869,21 +16736,12 @@ property_value: IAO:0000412 http://purl.obolibrary.org/obo/uo.owl
 [Term]
 id: UO:0000003
 name: time unit
+def: "A unit which is a standard measure of the dimension in which events occur in sequence." []
 is_a: IAO:0000003 ! measurement unit label
 property_value: APOLLO_SV:0000040 "unitOfTime" xsd:string
 property_value: IAO:0000111 "time unit" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/uo.owl
 property_value: IAO:0000412 http://purl.org/obo/owl/UO
-
-[Term]
-id: UO:0000047
-name: area unit
-namespace: unit.ontology
-def: "A unit which is a standard measure of the amount of a 2-dimensional flat surface." []
-subset: unit_group_slim
-is_a: IAO:0000003 ! measurement unit label
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/uo.owl" xsd:string
-created_by: george gkoutos
 
 [Term]
 id: UO:0000186
@@ -16980,7 +16838,6 @@ property_value: IAO:0000412 "http://purl.obolibrary.org/obo/vo.owl" xsd:string
 [Term]
 id: oboInOwl:ObsoleteClass
 name: Obsolete Class
-property_value: IAO:0000412 "http://www.geneontology.org/formats/oboInOwl" xsd:string
 
 [Term]
 id: oboInOwl:Subset
@@ -17138,27 +16995,6 @@ property_value: IAO:0000111 "is aggregate of" xsd:string
 property_value: IAO:0000118 "aggregate of" xsd:string
 property_value: IAO:0000118 "aggregate_of" xsd:string
 property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/omrse.owl" xsd:string
-inverse_of: GEO:000000328 ! is in aggregate
-
-[Typedef]
-id: BFO:0000083
-name: occupies spatial region at some time
-property_value: BFO:0000179 "located-at-r_st" xsd:string
-property_value: BFO:0000180 "occupiesSpatialRegionAt" xsd:string
-property_value: IAO:0000116 "Alan Ruttenberg: This is a binary version of a ternary time-indexed, instance level, relation. The BFO reading of the binary relation 'occupies spatial region at some time@en' is: exists t,  exists_at(x,t) & exists_at(y,t) & 'occupies spatial region@en'(x,y,t)" xsd:string
-property_value: IAO:0000116 "BFO2 Reference: independent continuant" xsd:string
-property_value: IAO:0000116 "BFO2 Reference: spatial region" xsd:string
-property_value: IAO:0000600 "b occupies_spatial_region r at t means that r is a spatial region in which independent continuant b is exactly located (axiom label in BFO2 Reference: [041-002])" xsd:string
-property_value: IAO:0000601 "every region r is occupies_spatial_region r at all times. (axiom label in BFO2 Reference: [042-002])" xsd:string
-property_value: IAO:0000601 "if b occupies_spatial_region r at t & b continuant_part_of b at t, then there is some r which is continuant_part_of r at t such that b  occupies_spatial_region r at t. (axiom label in BFO2 Reference: [043-001])" xsd:string
-property_value: IAO:0000602 "(forall (r t) (if (Region r) (occupiesSpatialRegionAt r r t))) // axiom label in BFO2 CLIF: [042-002] " xsd:string
-property_value: IAO:0000602 "(forall (x r t) (if (occupiesSpatialRegionAt x r t) (and (SpatialRegion r) (IndependentContinuant x)))) // axiom label in BFO2 CLIF: [041-002] " xsd:string
-property_value: IAO:0000602 "(forall (x y r_1 t) (if (and (occupiesSpatialRegionAt x r_1 t) (continuantPartOfAt y x t)) (exists (r_2) (and (continuantPartOfAt r_2 r_1 t) (occupiesSpatialRegionAt y r_2 t))))) // axiom label in BFO2 CLIF: [043-001] " xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
-domain: BFO:0000004 ! independent continuant
-range: BFO:0000006 ! spatial region
-inverse_of: BFO:0000123 ! has spatial occupant at some time
 
 [Typedef]
 id: BFO:0000108
@@ -17167,25 +17003,11 @@ name: exists at
 [Typedef]
 id: BFO:0000110
 name: has continuant part at all times
-def: "[copied from inverse property 'part of continuant at all times that whole exists'] forall(t) exists_at(y,t) -> exists_at(x,t) and 'part of continuant'(x,y,t)" []
-property_value: BFO:0000179 "c-has-part_at" xsd:string
-property_value: BFO:0000180 "hasContinuantPartAt" xsd:string
-property_value: IAO:0000116 "[copied from inverse property 'part of continuant at all times that whole exists'] This is a binary version of a ternary time-indexed, instance level, relation. Unlike the rest of the temporalized relations which temporally quantify over existence of the subject of the relation, this relation temporally quantifies over the existence of the object of the relation. The relation is provided tentatively, to assess whether the GO needs such a relation. It is inverse of 'has continuant part at all times'" xsd:string
-property_value: IAO:0000116 "Alan Ruttenberg: This is a binary version of a ternary time-indexed, instance-level, relation. The BFO reading of the binary relation 'has continuant part at all times@en' is: forall(t) exists_at(x,t) -> exists_at(y,t) and 'has continuant part@en(x,y,t)'." xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/bfo.owl" xsd:string
-property_value: IAO:0000602 "(iff (hasContinuantPartAt a b t) (continuantPartOfAt b a t)) // axiom label in BFO2 CLIF: [006-001] " xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 is_transitive: true
 
 [Typedef]
 id: BFO:0000111
 name: has proper continuant part at all times
-def: "b has_proper_continuant_part c at t = Def. c proper_continuant_part_of b at t. [XXX-001" []
-property_value: BFO:0000179 "c-has-ppart_at" xsd:string
-property_value: BFO:0000180 "hasProperContinuantPartAt" xsd:string
-property_value: IAO:0000116 "Alan Ruttenberg: This is a binary version of a ternary time-indexed, instance-level, relation. The BFO reading of the binary relation 'has proper continuant part at all times@en' is: forall(t) exists_at(x,t) -> exists_at(y,t) and 'has proper continuant part@en(x,y,t)'." xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/bfo.owl" xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 is_transitive: true
 is_a: BFO:0000110 ! has continuant part at all times
 
@@ -17244,18 +17066,6 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 is_a: BFO:0000117 ! has occurrent part
 
 [Typedef]
-id: BFO:0000123
-name: has spatial occupant at some time
-property_value: BFO:0000179 "r-location-of_st" xsd:string
-property_value: IAO:0000116 "[copied from inverse property 'occupies spatial region at some time'] Alan Ruttenberg: This is a binary version of a ternary time-indexed, instance level, relation. The BFO reading of the binary relation 'occupies spatial region at some time@en' is: exists t,  exists_at(x,t) & exists_at(y,t) & 'occupies spatial region@en'(x,y,t)" xsd:string
-property_value: IAO:0000116 "[copied from inverse property 'occupies spatial region at some time'] BFO2 Reference: independent continuant" xsd:string
-property_value: IAO:0000116 "[copied from inverse property 'occupies spatial region at some time'] BFO2 Reference: spatial region" xsd:string
-property_value: IAO:0000600 "[copied from inverse property 'occupies spatial region at some time'] b occupies_spatial_region r at t means that r is a spatial region in which independent continuant b is exactly located (axiom label in BFO2 Reference: [041-002])" xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
-domain: BFO:0000006 ! spatial region
-range: BFO:0000004 ! independent continuant
-
-[Typedef]
 id: BFO:0000132
 name: part of occurrent
 def: "[copied from inverse property 'has occurrent part'] b has_occurrent_part c = Def. c occurrent_part_of b. (axiom label in BFO2 Reference: [007-001])" []
@@ -17290,20 +17100,6 @@ property_value: IAO:0000412 "http://purl.obolibrary.org/obo/bfo.owl" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 is_a: BFO:0000138 ! proper part of occurrent
 is_a: BFO:0000139 ! temporal part of
-
-[Typedef]
-id: BFO:0000137
-name: proper part of continuant at all times
-def: "b proper_continuant_part_of c at t =Def. b continuant_part_of c at t  & b and c are not identical. (axiom label in BFO2 Reference: [004-001])" []
-property_value: BFO:0000179 "c-ppart-of_at" xsd:string
-property_value: BFO:0000180 "properContinuantPartOfAt" xsd:string
-property_value: IAO:0000116 "Alan Ruttenberg: This is a binary version of a ternary time-indexed, instance-level, relation. The BFO reading of the binary relation 'proper part of continuant at all times@en' is: forall(t) exists_at(x,t) -> exists_at(y,t) and 'proper part of continuant@en(x,y,t)'." xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/bfo.owl" xsd:string
-property_value: IAO:0000602 "(iff (properContinuantPartOfAt a b t) (and (continuantPartOfAt a b t) (not (= a b)))) // axiom label in BFO2 CLIF: [004-001] " xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
-is_transitive: true
-is_a: BFO:0000177 ! part of continuant at all times
-inverse_of: BFO:0000187 ! has continuant part at all times that part exists
 
 [Typedef]
 id: BFO:0000138
@@ -17407,39 +17203,6 @@ property_value: IAO:0000602 "(forall (x) (if (exists (y t) (specificallyDependsO
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 
 [Typedef]
-id: BFO:0000177
-name: part of continuant at all times
-def: "[copied from inverse property 'has continuant part at all times that part exists'] forall(t) exists_at(y,t) -> exists_at(x,t) and 'has continuant part'(x,y,t)" []
-property_value: BFO:0000179 "c-part-of_at" xsd:string
-property_value: BFO:0000180 "continuantPartOfAt" xsd:string
-property_value: IAO:0000112 "Mary’s arm continuant_part_of Mary in the time of her life prior to her operation" xsd:string
-property_value: IAO:0000112 "the Northern hemisphere of the planet Earth is a part of the planet Earth at all times at which the planet Earth exists." xsd:string
-property_value: IAO:0000116 "[copied from inverse property 'has continuant part at all times that part exists'] This is a binary version of a ternary time-indexed, instance level, relation. Unlike the rest of the temporalized relations which temporally quantify over existence of the subject of the relation, this relation temporally quantifies over the existence of the object of the relation. The relation is provided tentatively, to assess whether the GO needs such a relation. It is inverse of 'part of continuant at all times'" xsd:string
-property_value: IAO:0000116 "Alan Ruttenberg: This is a binary version of a ternary time-indexed, instance-level, relation. The BFO reading of the binary relation 'part of continuant at all times@en' is: forall(t) exists_at(x,t) -> exists_at(y,t) and 'part of continuant@en(x,y,t)'." xsd:string
-property_value: IAO:0000116 "BFO 2 Reference: a (continuant or occurrent) part of itself. We appreciate that this is counterintuitive for some users, since it implies for example that President Obama is a part of himself. However it brings benefits in simplifying the logical formalism, and it captures an important feature of identity, namely that it is the limit case of mereological inclusion." xsd:string
-property_value: IAO:0000116 "BFO 2 Reference: Immaterial entities are in some cases continuant parts of their material hosts. Thus the hold of a ship, for example, is a part of the ship; it may itself have parts, which may have names (used for example by ship stow planners, customs inspectors, and the like). Immaterial entities under both 1. and 2. can be of zero, one, two or three dimensions. We define:a(immaterial entity)[Definition: a is an immaterial entity = Def. a is an independent continuant that has no material entities as parts. (axiom label in BFO2 Reference: [028-001])" xsd:string
-property_value: IAO:0000116 "BFO2 Reference: continuant" xsd:string
-property_value: IAO:0000116 "BFO2 Reference: continuantThe range for ‘t’ (as in all cases throughout this document unless otherwise specified) is: temporal region." xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/bfo.owl" xsd:string
-property_value: IAO:0000600 "b continuant_part_of c at t =Def. b is a part of c at t & t is a time & b and c are continuants. (axiom label in BFO2 Reference: [002-001])" xsd:string
-property_value: IAO:0000601 "continuant_part_of is antisymmetric. (axiom label in BFO2 Reference: [120-001])" xsd:string
-property_value: IAO:0000601 "continuant_part_of is reflexive (every continuant entity is a continuant_part_of itself). (axiom label in BFO2 Reference: [111-002])" xsd:string
-property_value: IAO:0000601 "continuant_part_of is transitive. (axiom label in BFO2 Reference: [110-001])" xsd:string
-property_value: IAO:0000601 "continuant_part_of satisfies unique product. (axiom label in BFO2 Reference: [122-001])" xsd:string
-property_value: IAO:0000601 "continuant_part_of satisfies weak supplementation. (axiom label in BFO2 Reference: [121-001])" xsd:string
-property_value: IAO:0000601 "if b continuant_part_of c at t and b is an independent continuant, then b is located_in c at t. (axiom label in BFO2 Reference: [047-002])" xsd:string
-property_value: IAO:0000602 "(forall (x t) (if (Continuant x) (continuantPartOfAt x x t))) // axiom label in BFO2 CLIF: [111-002] " xsd:string
-property_value: IAO:0000602 "(forall (x y t) (if (and (continuantPartOfAt x y t) (continuantPartOfAt y x t)) (= x y))) // axiom label in BFO2 CLIF: [120-001] " xsd:string
-property_value: IAO:0000602 "(forall (x y t) (if (and (continuantPartOfAt x y t) (IndependentContinuant x)) (locatedInAt x y t))) // axiom label in BFO2 CLIF: [047-002] " xsd:string
-property_value: IAO:0000602 "(forall (x y t) (if (and (continuantPartOfAt x y t) (not (= x y))) (exists (z) (and (continuantPartOfAt z y t) (not (exists (w) (and (continuantPartOfAt w x t) (continuantPartOfAt w z t)))))))) // axiom label in BFO2 CLIF: [121-001] " xsd:string
-property_value: IAO:0000602 "(forall (x y t) (if (exists (v) (and (continuantPartOfAt v x t) (continuantPartOfAt v y t))) (exists (z) (forall (u w) (iff (iff (continuantPartOfAt w u t) (and (continuantPartOfAt w x t) (continuantPartOfAt w y t))) (= z u)))))) // axiom label in BFO2 CLIF: [122-001] " xsd:string
-property_value: IAO:0000602 "(forall (x y z t) (if (and (continuantPartOfAt x y t) (continuantPartOfAt y z t)) (continuantPartOfAt x z t))) // axiom label in BFO2 CLIF: [110-001] " xsd:string
-property_value: IAO:0000602 "(iff (ImmaterialEntity a) (and (IndependentContinuant a) (not (exists (b t) (and (MaterialEntity b) (continuantPartOfAt b a t)))))) // axiom label in BFO2 CLIF: [028-001] " xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
-is_reflexive: true
-is_transitive: true
-
-[Typedef]
 id: BFO:0000181
 name: has proper temporal part
 property_value: BFO:0000179 "has-t-ppart" xsd:string
@@ -17462,48 +17225,19 @@ domain: BFO:0000040 ! material entity
 range: BFO:0000015 ! process
 
 [Typedef]
-id: BFO:0000187
-name: has continuant part at all times that part exists
-def: "forall(t) exists_at(y,t) -> exists_at(x,t) and 'has continuant part'(x,y,t)" []
-property_value: BFO:0000179 "c-has-part-object_at" xsd:string
-property_value: IAO:0000112 "[copied from inverse property 'part of continuant at all times'] Mary’s arm continuant_part_of Mary in the time of her life prior to her operation" xsd:string
-property_value: IAO:0000112 "[copied from inverse property 'part of continuant at all times'] the Northern hemisphere of the planet Earth is a part of the planet Earth at all times at which the planet Earth exists." xsd:string
-property_value: IAO:0000116 "[copied from inverse property 'part of continuant at all times'] Alan Ruttenberg: This is a binary version of a ternary time-indexed, instance-level, relation. The BFO reading of the binary relation 'part of continuant at all times@en' is: forall(t) exists_at(x,t) -> exists_at(y,t) and 'part of continuant@en(x,y,t)'." xsd:string
-property_value: IAO:0000116 "[copied from inverse property 'part of continuant at all times'] BFO 2 Reference: a (continuant or occurrent) part of itself. We appreciate that this is counterintuitive for some users, since it implies for example that President Obama is a part of himself. However it brings benefits in simplifying the logical formalism, and it captures an important feature of identity, namely that it is the limit case of mereological inclusion." xsd:string
-property_value: IAO:0000116 "[copied from inverse property 'part of continuant at all times'] BFO 2 Reference: Immaterial entities are in some cases continuant parts of their material hosts. Thus the hold of a ship, for example, is a part of the ship; it may itself have parts, which may have names (used for example by ship stow planners, customs inspectors, and the like). Immaterial entities under both 1. and 2. can be of zero, one, two or three dimensions. We define:a(immaterial entity)[Definition: a is an immaterial entity = Def. a is an independent continuant that has no material entities as parts. (axiom label in BFO2 Reference: [028-001])" xsd:string
-property_value: IAO:0000116 "[copied from inverse property 'part of continuant at all times'] BFO2 Reference: continuant" xsd:string
-property_value: IAO:0000116 "[copied from inverse property 'part of continuant at all times'] BFO2 Reference: continuantThe range for ‘t’ (as in all cases throughout this document unless otherwise specified) is: temporal region." xsd:string
-property_value: IAO:0000116 "This is a binary version of a ternary time-indexed, instance level, relation. Unlike the rest of the temporalized relations which temporally quantify over existence of the subject of the relation, this relation temporally quantifies over the existence of the object of the relation. The relation is provided tentatively, to assess whether the GO needs such a relation. It is inverse of 'part of continuant at all times'" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/bfo.owl" xsd:string
-property_value: IAO:0000600 "[copied from inverse property 'part of continuant at all times'] b continuant_part_of c at t =Def. b is a part of c at t & t is a time & b and c are continuants. (axiom label in BFO2 Reference: [002-001])" xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
-
-[Typedef]
-id: GEO:000000328
-name: is in aggregate
-
-[Typedef]
-id: GEO:000000329
-name: is subordinate authority of
-def: "A governing organization G1 is subordinate to another governing organization G2 iff there is some authority possessed by G2 that is not possessed by G1 and G1's jurisdiction falls within the relevant jurisdiction of G2." []
-comment: \n'is subordinate authority of'\nDomain: governing organization\nRange: governing organization\nFormal properties: transitive, anti-symmetric, irreflexive\nNatural language definition: A governing organization G1 is subordinate to another governing organization G2 iff there is some authority possessed by G2 that is not possessed by G1 and G1 falls within the relevant jurisdiction of G2.
-domain: GEO:000000400 ! governmental organization
-range: GEO:000000400 ! governmental organization
-
-[Typedef]
-id: GEO:000000336
-name: has jurisdiction in
-comment: It is not intended to be maximal, in the sense that if a has_jurisdiction_in b, and b is not part of c, then a NOT has_jurisdiction_in c.\n\nin other words, it is perfectly fine to say:\na disjoint b\nc has_jurisdiction_in a\nc has_jurisdiction_in b\n\notherwise, we'd end up creating some mereological sum of all the islands, contiguous land masses, etc. of the United States, calling it "United States territory", asserting United States has_jurisdiction_in United States territory, then figuring out all the parts of that territory like islands, etc.  We'd end up doing the same thing for every sovereign state, major administrative subdivision (at least those like Hawaii that are multiple), etc.  Seems like an unnecessary duplication of entities.
-domain: GEO:000000400 ! governmental organization
-range: GEO:000000375 ! land mass
-is_asymmetric: true
+id: IAO:0000011
+name: is directed towards
+def: "A relationship between a quality and a portion of reality such that the quality refers to or is cognitively directed towards the portion of reality." []
+comment: In the definition source, the relation is called 'is_about'. To avoid confusion with the existing "is about" relation in IAO, we called it 'is directed towards' per Alan Ruttenberg's suggestion.
+property_value: IAO:0000112 "One of my mental representations is directed towards the Pacific Ocean." xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "person: William Hogan" xsd:string
+property_value: IAO:0000119 "https://ceur-ws.org/Vol-1515/regular10.pdf" xsd:string
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/285
 
 [Typedef]
 id: IAO:0000039
 name: has measurement unit label
-def: "A relation between a value specification and its unit of measurement." []
-property_value: IAO:0000111 "has measurement unit label" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
 range: IAO:0000003 ! measurement unit label
 is_functional: true
 is_a: has_part ! has part
@@ -17531,7 +17265,6 @@ property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000116 "7/6/2009 Alan Ruttenberg. Following discussion with Jonathan Rees, and introduction of \"mentions\" relation. Weaken the is_about relationship to be primitive. \n\nWe will try to build it back up by elaborating the various subproperties that are more precisely defined.\n\nSome currently missing phenomena that should be considered \"about\" are predications - \"The only person who knows the answer is sitting beside me\" , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic." xsd:string
 property_value: IAO:0000117 "person:Alan Ruttenberg" xsd:string
 property_value: IAO:0000119 "Smith, Ceusters, Ruttenberg, 2000 years of philosophy" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/iao.owl" xsd:string
 domain: IAO:0000030 ! information content entity
 
 [Typedef]
@@ -17552,7 +17285,7 @@ name: mentioned by
 def: "Inverse of the relation 'mentions'" []
 property_value: dc:date "2022-01-28T07:20:08Z" xsd:dateTime
 property_value: IAO:0000117 http://orcid.org/0000-0002-8844-9165
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/250
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/250
 
 [Typedef]
 id: IAO:0000219
@@ -17609,7 +17342,7 @@ id: IAO:0000235
 name: denoted by
 def: "inverse of the relation 'denotes'" []
 property_value: IAO:0000117 "Person: Jie Zheng, Chris Stoeckert, Mike Conlon" xsd:string
-property_value: IAO:0000233 https://github.com/information-artifact-ontology/IAO/issues/206
+property_value: term_tracker_item https://github.com/information-artifact-ontology/IAO/issues/206
 domain: BFO:0000001 ! entity
 range: IAO:0000030 ! information content entity
 
@@ -17685,10 +17418,9 @@ name: results_in
 
 [Typedef]
 id: OBI:0000293
-name: has_specified_input
-def: "The inverse property of is_specified_input_of" []
-property_value: IAO:0000111 "has_specified_input" xsd:string
-property_value: IAO:0000111 "has_specified_input" xsd:string
+name: has specified input
+def: "The inverse property of is specified input of" []
+property_value: IAO:0000111 "has specified input" xsd:string
 property_value: IAO:0000112 "see is_input_of example_of_usage" xsd:string
 property_value: IAO:0000114 IAO:0000122
 property_value: IAO:0000116 "8/17/09: specified inputs of one process are not necessarily specified inputs of a larger process that it is part of. This is in contrast to how 'has participant' works." xsd:string
@@ -17697,37 +17429,26 @@ property_value: IAO:0000117 "PERSON: Bjoern Peters" xsd:string
 property_value: IAO:0000117 "PERSON: Larry Hunter" xsd:string
 property_value: IAO:0000117 "PERSON: Melanie Coutot" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
-domain: OBI:0000011 ! planned process
+domain: COB:0000035 ! completely executed planned process
 is_a: RO:0000057 ! has participant
+inverse_of: OBI:0000295 ! is specified input of
 
 [Typedef]
 id: OBI:0000295
-name: is_specified_input_of
-property_value: IAO:0000111 "is_specified_input_of" xsd:string
-property_value: IAO:0000112 "some Autologous EBV(Epstein-Barr virus)-transformed B-LCL (B lymphocyte cell line) is_input_for instance of Chromum Release Assay described at https://wiki.cbil.upenn.edu/obiwiki/index.php/Chromium_Release_assay" xsd:string
-property_value: IAO:0000114 IAO:0000122
-property_value: IAO:0000117 "Alan Ruttenberg" xsd:string
-property_value: IAO:0000117 "PERSON:Bjoern Peters" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
-is_a: RO:0000056 ! participates in
+name: is specified input of
 
 [Typedef]
 id: OBI:0000299
 name: has specified output
 def: "The inverse property of is specified output of" []
 property_value: IAO:0000111 "has specified output" xsd:string
-property_value: IAO:0000111 "has_specified_output" xsd:string
-property_value: IAO:0000111 "has_specified_output" xsd:string
 property_value: IAO:0000114 IAO:0000122
 property_value: IAO:0000117 "PERSON: Alan Ruttenberg" xsd:string
 property_value: IAO:0000117 "PERSON: Bjoern Peters" xsd:string
 property_value: IAO:0000117 "PERSON: Larry Hunter" xsd:string
 property_value: IAO:0000117 "PERSON: Melanie Courtot" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
 domain: COB:0000035 ! completely executed planned process
-domain: OBI:0000011 ! planned process
 is_a: RO:0000057 ! has participant
 inverse_of: OBI:0000312 ! is specified output of
 
@@ -17741,15 +17462,11 @@ id: OBI:0000312
 name: is specified output of
 def: "A relation between a completely executed planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of." []
 property_value: IAO:0000111 "is specified output of" xsd:string
-property_value: IAO:0000111 "is_specified_output_of" xsd:string
-property_value: IAO:0000111 "is_specified_output_of" xsd:string
 property_value: IAO:0000114 IAO:0000122
 property_value: IAO:0000117 "Alan Ruttenberg" xsd:string
 property_value: IAO:0000117 "PERSON:Bjoern Peters" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
 range: COB:0000035 ! completely executed planned process
-range: OBI:0000011 ! planned process
 is_a: RO:0000056 ! participates in
 
 [Typedef]
@@ -17761,16 +17478,6 @@ property_value: IAO:0000112 "A cell sorting process achieves the objective speci
 property_value: IAO:0000117 "BP, AR, PPPB branch" xsd:string
 property_value: IAO:0000119 "PPPB branch derived" xsd:string
 property_value: IAO:0000232 "modified according to email thread from 1/23/09 in accordince with DT and PPPB branch" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
-
-[Typedef]
-id: OBI:0001938
-name: has value specification
-def: "A relation between an information content entity and a value specification that specifies its value." []
-property_value: IAO:0000111 "has value specification" xsd:string
-property_value: IAO:0000114 IAO:0000120
-property_value: IAO:0000117 "PERSON: James A. Overton" xsd:string
-property_value: IAO:0000119 "OBI" xsd:string
 property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
 
 [Typedef]
@@ -17866,7 +17573,6 @@ property_value: IAO:0000112 "this blood clot participates in this blood coagulat
 property_value: IAO:0000112 "this input material (or this output material) participates in this process" xsd:string
 property_value: IAO:0000112 "this investigator participates in this investigation" xsd:string
 property_value: IAO:0000118 "participates_in" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
 domain: BFO:0000002 ! continuant
 range: BFO:0000003 ! occurrent
 inverse_of: RO:0000057 ! has participant
@@ -17883,7 +17589,6 @@ property_value: IAO:0000112 "this investigation has participant this investigato
 property_value: IAO:0000112 "this process has participant this input material (or this output material)" xsd:string
 property_value: IAO:0000116 "Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time." xsd:string
 property_value: IAO:0000118 "has_participant" xsd:string
-property_value: IAO:0000412 "http://purl.obolibrary.org/obo/obi.owl" xsd:string
 property_value: terms:source "http://www.obofoundry.org/ro/#OBO_REL:has_participant" xsd:string
 domain: BFO:0000003 ! occurrent
 range: BFO:0000002 ! continuant
@@ -18448,6 +18153,7 @@ def: "p is causally upstream of, positive effect q iff p is casually upstream of
 comment: holds between x and y if and only if x is causally upstream of y and the progression of x increases the frequency, rate or extent of y
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
+property_value: terms:creator https://orcid.org/0000-0002-6601-2165
 is_a: RO:0002411 ! causally upstream of
 is_a: RO:0004047 ! causally upstream of or within, positive effect
 
@@ -18457,6 +18163,7 @@ name: causally upstream of, negative effect
 def: "p is causally upstream of, negative effect q iff p is casually upstream of q, and the execution of p decreases the execution of q." []
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
+property_value: terms:creator https://orcid.org/0000-0002-6601-2165
 is_a: RO:0002411 ! causally upstream of
 is_a: RO:0004046 ! causally upstream of or within, negative effect
 
