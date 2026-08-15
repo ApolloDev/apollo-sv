@@ -15,7 +15,7 @@ Ontology: <http://purl.obolibrary.org/obo/apollo_sv/apollo_sv-idranges.owl>
 
 
 Annotations: 
-    idsfor: "APOLLO_SV",
+    idsfor: "APOLLO_SV_",
     idprefix: "http://purl.obolibrary.org/obo/APOLLO_SV_",
     iddigits: 8 
 
